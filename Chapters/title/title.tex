@@ -48,4 +48,9 @@
 \section*{Acknowledgements}
     blah blah blah
 
+
+    \ifSubfilesClassLoaded{%
+        \bibliographystyle{IEEEtran}
+        \bibliography{../../../references.bib}%
+    }{} 
 \end{document}

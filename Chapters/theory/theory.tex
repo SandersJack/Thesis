@@ -1,5 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
- Start of theory
+    Start of theory
+    \ifSubfilesClassLoaded{%
+    \bibliographystyle{IEEEtran}
+    \bibliography{../../../references.bib}%
+    }{} 
 \end{document}

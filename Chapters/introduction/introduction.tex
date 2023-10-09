@@ -1,5 +1,10 @@
 \documentclass[../../main.tex]{subfiles}
 
 \begin{document}
-Hello Chapter!
+    Hello Chapter!
+
+    \ifSubfilesClassLoaded{%
+        \bibliographystyle{IEEEtran}
+        \bibliography{../../../references.bib}%
+    }{} 
 \end{document}
