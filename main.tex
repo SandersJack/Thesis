@@ -17,6 +17,8 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 
+%\usepackage{cite}
+
 \usepackage[dvipsnames]{xcolor}
 \pagecolor{Apricot}
 
@@ -26,11 +28,20 @@
 \subfile{Chapters/title/title.tex}
 \newpage
 \tableofcontents
+\newpage
 \listoffigures
+\newpage
 \listoftables
-
+\newpage
 \section{Introduction}
+
 \subfile{Chapters/introduction/introduction.tex}
 \section{Theoretical foundations}
 \subfile{Chapters/theory/theory.tex}
+\section{The NA62 Experiment}
+\subfile{Chapters/detector/detector.tex}
+kskskksk ~\cite{SERGI2012530}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references} 
 \end{document}
