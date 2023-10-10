@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
+print("Creating Plot")
 df = pd.read_csv('analysis/wordcount.csv')
 
 plt.rcParams['figure.constrained_layout.use'] = True

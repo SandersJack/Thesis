@@ -25,3 +25,12 @@ jobs:
       - name: Run Python Analysis
         working-directory: ./
         run: ./Scripts/runAnalysis.sh
+
+      - name: check for changes
+        run: git status
+
+      - name: stage changed files
+        run: git add analysis
+
+      - name: commit changed files
+        run: git commit -m "Auto updating wordcount"
