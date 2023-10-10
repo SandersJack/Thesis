@@ -1,6 +1,8 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
 \title{PhD Thesis}
 \author{Jack Sanders }
 \date{University of Birmingham - 2025}
@@ -15,6 +17,7 @@
 \usepackage{changepage}
 \usepackage{authblk}
 \usepackage{amsmath}
+\numberwithin{equation}{chapter}
 \usepackage{amsfonts}
 
 %\usepackage{cite}
@@ -33,12 +36,12 @@
 \newpage
 \listoftables
 \newpage
-\section{Introduction}
+\chapter{Introduction}
 
 \subfile{Chapters/introduction/introduction.tex}
-\section{Theoretical foundations}
+\chapter{Theoretical foundations}
 \subfile{Chapters/theory/theory.tex}
-\section{The NA62 Experiment}
+\chapter{The NA62 Experiment}
 \subfile{Chapters/detector/detector.tex}
 
 \bibliographystyle{IEEEtran}
