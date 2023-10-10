@@ -1,6 +1,7 @@
 from PyPDF2 import PdfReader
 import numpy as np
 
+print("Converting pdf to txt")
 reader = PdfReader('build/main.pdf')
 page = reader.pages
 extracted_text = ""
