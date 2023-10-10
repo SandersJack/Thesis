@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setting up git
-        run: git remote set-url origin ${{ secrets.ssh }}
+        run: |
+            git config --global user.email "git@workflows.com"
+            git config --global user.name "GitWorkflows"
       
       - name: Set up Python 3.11.2
         uses: actions/setup-python@v4
