@@ -6,3 +6,4 @@ echo "Running Script!"
 #source $parent_path/.venv/Scripts/activate
 python $parent_path/PDF2txt.py
 python $parent_path/wordCount.py
+python $parent_path/createPlot.py
