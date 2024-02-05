@@ -2,6 +2,7 @@
 
 
 \begin{document}
+    \section{Overview}
     The NA62 experiment is a fixed target experiment located in the north area of CERN with a high energy particle beam provided by the Super Proton Synchrotron. The main goal of the experiment is to measure the 
     branching fraction of the ultra-rare charged kaon decay $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ which is of the order of $10^-10$ to a 15\% precision. Alongside there is a expansive physics program of 
     precision and rare decay measurements as well as searches for forbidden processes and exotic particles.  
@@ -31,30 +32,37 @@
         \caption{X-Z diagram of NA62 detector setup for Run 1}
         \label{fig:na62-det}
     \end{figure}
-    \section{Beam-Line}\label{sec:BeamLine}
-    The NA62 experiment uses a beam extracted from the SPS with a nominal momentum of 400\,$GeV/c$ which is directed onto a 400\,mm long, 2\,mm diameter berylium rod that forms
-    the fixed target (T10) located at 0\,m in figure \ref{fig:beam-line}. The beam derived from the T10 target is a high-intensity hadron beam refered to as K12 has a momentum of
-    75\,$GeV/c$, which is chosen to maximise the fraction of kaons with respect to the other beam components. 
-    \newline\indent The first elements of the K12 beam-line are three quadrupole magnets (Q1, Q2 and Q3), which are used to focus the beam with a large solid angle acceptance of $\pm2.7$\,mrad 
-    horizontally and $\pm1.5$\,mrad vertically at a 75\,$GeV/c$ central momentum. Next follows an acromat (A1), which selects a beam of a 75\,$GeV/c$ momentum with a 1\,\% rms momentum bite. 
-    The A1 achromat comprises of four dipole magnets that vertically deflect the beam, the first two which deflect the beam 110\,mm downwards, while the final two deflet the beam upwards towards
+    \section{The NA62 Detector}
+    \subsection{Beam-Line}\label{sec:BeamLine}
+    The experiment at CERN uses a hadron beam extracted from the SPS with a nominal momentum of 400\,$GeV/c$, directed onto a 400\,mm long, 2\,mm diameter berylium rod that forms
+    the fixed target (T10) located at 0\,m in figure \ref{fig:beam-line}. The beam derived from the T10 target, referred to as K12, is a high-intensity unseparated hadron beam with a nominal momentum of
+    75\,$GeV/c$. The beam momenta was chosen to maximise the fraction of kaons with respect to the other beam components at the entrance to the detector. 
+    \newline\indent The elements of the K12 beam-line are shown in Figure \ref{fig:beam-line} and comprise a number of components. First are three quadrupole magnets (Q1, Q2 and Q3), used to focus the beam with a large solid angle acceptance of $\pm2.7$\,mrad 
+    horizontally and $\pm1.5$\,mrad vertically at a 75\,$GeV/c$ central momentum. Next follows an achromat (A1), which selects a beam of a 75\,$GeV/c$ momentum with a 1\,\% rms momentum. 
+    The A1 achromat comprises four dipole magnets that vertically deflect the beam, the first two which deflect the beam 110\,mm downwards, while the final two deflect the beam upwards towards
     the original axis. Between these pairs of magnets, there are a pair of water-cooled beam-dump units (TAX1 and TAX2) with a set of holes to select the required 75\,$GeV/c$ momentum beam, while  
-    absorbing unwanted secondary beam particles and remaining primary protons. TAX1\&2 can be closed to act as a secondary target or for saftey when access is required further upstream on K12 beam-line.
-    %The beam used in NA62 is produced from a 400\,GeV proton beam from the Super Proton Synchrotron (SPS) incident on a Beryllium target (T10), resulting in a secondary beam containing charged kaons. 
-    %The secondary beam produced has a momentum of 75\,GeV and has a composition of mostly pions (70\,\%), protons (23\,\%), kaons (6\,\%) and a small number of muons ($<$1\,\%). 
+    absorbing unwanted secondary beam particles and any remaining primary protons. TAX1\&2 can be closed to act as a secondary target for use in dump mode or for safety when access is required downstream. 
+    At the focus between the TAX1\&2, a radiator consisting of tungston plates with a thickness of up to 5\,mm is introduced into the path of beam. The radiator is optmised to reduce positron energy while 
+    minimising the loss of energy to hadrons.
+    A triplet of quadrupoles (Q4, Q5, Q6) follows, which refocuses the beam in the vertical dimension and produces a parallel beam in the horizontal dimension. The space between the quadrupoles are occupied by a pair of
+    collimators (C1, C2), which redefines the horizontal and vertical acceptance for the beam. The collimator after the Q6 quadrupole (C3) is employed to absorb positrons that had their momenta degraded by the radiator 
+    and again redefines the acceptance in the vertical dimension.
+    \newline\indent The beam next passes through a 40\,mm field-free hole in a set of iron plates, placed between three 2\,m dipole magnets (B3). The vertical magnetic field in the iron plates is used to deflect muons of both signs away from the beam.
+    Any deviation in the beam due to stray fields in the beam hole are canceled out by a pair of steering dipoles (TRIM2 and TRIM3). Two quadrupoles (Q7, Q8) follow and ensure that the beam is parallel before the KTAG which employs a differential Cherenkov counter (CEDAR), described in Section \ref{sec:KTAG},
+    which requires the beam to be parallel. Before the KTAG are a pair of collimators (C4 and C5) used to absorb particles in the tails of the beam.
+    \newline\indent For beam monitoring two pairs of filament scintillator counters (FISC 1, 3 and FISC 2, 4) are installed at either end of the KTAG. Used in coincidence the beam divergence can be measured and used to tune the divergence to zero.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=13cm]{imgs/BeamLine.png}
+        \includegraphics[width=\textwidth]{imgs/BeamLine.png}
         \caption{Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay region at 102.4m\cite{Gil_2017}.}
         \label{fig:beam-line}
     \end{figure}
-    \section{Sub Detectors}\label{sec:sub-det}
-    \subsection{KTAG}
+    \subsection{KTAG}\label{sec:KTAG}
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
     \subsection{RICH}
     \subsection{Photon Detection System}
-    \section{Triger and Data Acquisition Sytem (TDAQ)}\label{sec:TDAQ}
+    \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     \section{Things to be moved}
     \noindent From the T10 target, the charged kaon beam travels through the beam pipe to the experimental hall ECN3, where the first sub-detector is found. A differential Cherenkov detector tags the charged kaons in the beam. Cherenkov light is produced by charged particles passing through a CERN CEDAR vessel filled with Nitrogen gas at a pressure of around 1.75\,bar \cite{Bovet:1982xf}. 
     Due to the high intensity and tight time resolution requirements employed at NA62, the original photo-detectors (PMT's) and front-end electronics were inadequate. The KTAG has been developed for the NA62 to meet the high kaon rate requirements and time resolution requirements of $\mathcal{O}(100ps)$.
