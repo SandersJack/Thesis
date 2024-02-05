@@ -22,28 +22,29 @@ blah blah blah
 1 Introduction 5
 2 Theoretical foundations 6
 3 The NA62 Experiment 7
-3.1 Beam-Line . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
-3.2 Sub Detectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.2.1 KTAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.2.2 GigaTracker (GTK) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.2.3 Straw Spectrometer (Straw) . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.2.4 RICH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.2.5 Photon Detection System . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.3 Triger and Data Acquisition Sytem (TDAQ) . . . . . . . . . . . . . . . . . . . . . . 9
-3.4 Things to be moved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-4 CEDARH 13
-5 Flexible MC 14
-6 Dark Photon Analysis 15
+3.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+3.2 The NA62 Detector . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+3.2.1 Beam-Line . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+3.2.2 KTAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.2.3 GigaTracker (GTK) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.2.4 Straw Spectrometer (Straw) . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.2.5 RICH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.2.6 Photon Detection System . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.3 Triger and Data Acquisition System (TDAQ) . . . . . . . . . . . . . . . . . . . . . 10
+3.4 Things to be moved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+4 CEDARH 14
+5 Flexible MC 15
+6 Dark Photon Analysis 16
 2List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and K+→π+ν¯ν
 (scaled by 1010for for visability). The solid coloured areas show the signal regions
 used to kinematically reject the domiant kaon decays. . . . . . . . . . . . . . . . . 8
 3.2 X-Z diagram of NA62 detector setup for Run 1 . . . . . . . . . . . . . . . . . . . . 8
 3.3 Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay
-region at 102.4m(3). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.4 Diagram describing the CEDAR optics (1) . . . . . . . . . . . . . . . . . . . . . . . 11
-3.5 Photo of CEDAR and KTAG installed in the NA62 beamline . . . . . . . . . . . . 11
-3.6 Diagram of straw placement in each view (2) . . . . . . . . . . . . . . . . . . . . . 12
+region at 102.4m(3). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.4 Diagram describing the CEDAR optics (1) . . . . . . . . . . . . . . . . . . . . . . . 12
+3.5 Photo of CEDAR and KTAG installed in the NA62 beamline . . . . . . . . . . . . 12
+3.6 Diagram of straw placement in each view (2) . . . . . . . . . . . . . . . . . . . . . 13
 3List of Tables
 4Chapter 1
 Introduction
@@ -53,6 +54,7 @@ Theoretical foundations
 Start of theory
 6Chapter 3
 The NA62 Experiment
+3.1 Overview
 The NA62 experiment is a fixed target experiment located in the north area of CERN with a high
 energy particle beam provided by the Super Proton Synchrotron. The main goal of the experiment
 is to measure the branching fraction of the ultra-rare charged kaon decay K+→π+ν¯νwhich is of
@@ -66,56 +68,78 @@ energy-momentum carried away by the undetected neutrino-antinutrino pair. The me
 of the missing mass is used for kinematic rejection of the main background K+decays; K+→
 π+π0,K+→π+π−+π0andK+→µ+νµby selecting two regions shown in figure 3.1. The
 missing mass calculation requires precise timing and position measurement of the K+andπ+
-candidates, provided by beam (section 3.2.2) and secondary (section 3.2.3) particle spectrometers.
+candidates, provided by beam (section 3.2.3) and secondary (section 3.2.4) particle spectrometers.
 The measured 3-momenta of the candidates allows for the reconstruction of the 4-momenta of the
 Kaon PK+and the pion Pπ+which is used in equation 3.1
 m2
 miss= (PK+−Pπ+)2(3.1)
-73.1. BEAM-LINE CHAPTER 3. THE NA62 EXPERIMENT
+73.2. THE NA62 DETECTOR CHAPTER 3. THE NA62 EXPERIMENT
 Figure 3.1: Expected squared missing mass distributions of main kaon decays and K+→π+ν¯ν
 (scaled by 1010for for visability). The solid coloured areas show the signal regions used to kine-
 matically reject the domiant kaon decays.
 The rest of this chapter will cover how NA62 fulfills the abovementioned requirements. Section
-3.1 will describe the NA62 beam-line, upstream of the NA62 detector. The NA62 detector com-
-prises a number of sub-detectors, which will be described in Section 3.2, with the trigger and data
-acquisition system (TDAQ) following in Section 3.3
+3.2.1 will describe the NA62 beam-line, upstream of the NA62 detector. The NA62 detector
+comprises a number of sub-detectors, which will be described in Section ??, with the trigger and
+data acquisition system (TDAQ) following in Section 3.3
 Figure 3.2: X-Z diagram of NA62 detector setup for Run 1
-3.1 Beam-Line
-The NA62 experiment uses a beam extracted from the SPS with a nominal momentum of 400 GeV/c
-which is directed onto a 400 mm long, 2 mm diameter berylium rod that forms the fixed target
-(T10) located at 0 m in figure 3.3. The beam derived from the T10 target is a high-intensity hadron
-beam refered to as K12 has a momentum of 75 GeV/c , which is chosen to maximise the fraction
-of kaons with respect to the other beam components.
-The first elements of the K12 beam-line are three quadrupole magnets (Q1, Q2 and Q3), which
-are used to focus the beam with a large solid angle acceptance of ±2.7 mrad horizontally and
-±1.5 mrad vertically at a 75 GeV/c central momentum. Next follows an acromat (A1), which
-selects a beam of a 75 GeV/c momentum with a 1 % rms momentum bite. The A1 achromat
-comprises of four dipole magnets that vertically deflect the beam, the first two which deflect the
-83.2. SUB DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
-beam 110 mm downwards, while the final two deflet the beam upwards towards the original axis.
-Between these pairs of magnets, there are a pair of water-cooled beam-dump units (TAX1 and
-TAX2) with a set of holes to select the required 75 GeV/c momentum beam, while absorbing
-unwanted secondary beam particles and remaining primary protons. TAX1&2 can be closed to act
-as a secondary target or for saftey when access is required further upstream on K12 beam-line.
+3.2 The NA62 Detector
+3.2.1 Beam-Line
+The experiment at CERN uses a hadron beam extracted from the SPS with a nominal momentum
+of 400 GeV/c , directed onto a 400 mm long, 2 mm diameter berylium rod that forms the fixed tar-
+get (T10) located at 0 m in figure 3.3. The beam derived from the T10 target, referred to as K12,
+is a high-intensity unseparated hadron beam with a nominal momentum of 75 GeV/c . The beam
+momenta was chosen to maximise the fraction of kaons with respect to the other beam components
+at the entrance to the detector.
+The elements of the K12 beam-line are shown in Figure 3.3 and comprise a number of compo-
+nents. First are three quadrupole magnets (Q1, Q2 and Q3), used to focus the beam with a large
+83.2. THE NA62 DETECTOR CHAPTER 3. THE NA62 EXPERIMENT
+solid angle acceptance of ±2.7 mrad horizontally and ±1.5 mrad vertically at a 75 GeV/c central
+momentum. Next follows an achromat (A1), which selects a beam of a 75 GeV/c momentum with
+a 1 % rms momentum. The A1 achromat comprises four dipole magnets that vertically deflect
+the beam, the first two which deflect the beam 110 mm downwards, while the final two deflect
+the beam upwards towards the original axis. Between these pairs of magnets, there are a pair
+of water-cooled beam-dump units (TAX1 and TAX2) with a set of holes to select the required
+75GeV/c momentum beam, while absorbing unwanted secondary beam particles and any remain-
+ing primary protons. TAX1&2 can be closed to act as a secondary target for use in dump mode
+or for safety when access is required downstream. At the focus between the TAX1&2, a radiator
+consisting of tungston plates with a thickness of up to 5 mm is introduced into the path of beam.
+The radiator is optmised to reduce positron energy while minimising the loss of energy to hadrons.
+A triplet of quadrupoles (Q4, Q5, Q6) follows, which refocuses the beam in the vertical dimension
+and produces a parallel beam in the horizontal dimension. The space between the quadrupoles are
+occupied by a pair of collimators (C1, C2), which redefines the horizontal and vertical acceptance
+for the beam. The collimator after the Q6 quadrupole (C3) is employed to absorb positrons that
+had their momenta degraded by the radiator and again redefines the acceptance in the vertical
+dimension.
+The beam next passes through a 40 mm field-free hole in a set of iron plates, placed between
+three 2 m dipole magnets (B3). The vertical magnetic field in the iron plates is used to deflect
+muons of both signs away from the beam. Any deviation in the beam due to stray fields in the
+beam hole are canceled out by a pair of steering dipoles (TRIM2 and TRIM3). Two quadrupoles
+(Q7, Q8) follow and ensure that the beam is parallel before the KTAG which employs a differential
+Cherenkov counter (CEDAR), described in Section 3.2.2, which requires the beam to be parallel.
+Before the KTAG are a pair of collimators (C4 and C5) used to absorb particles in the tails of the
+beam.
+For beam monitoring two pairs of filament scintillator counters (FISC 1, 3 and FISC 2, 4) are
+installed at either end of the KTAG. Used in coincidence the beam divergence can be measured
+and used to tune the divergence to zero.
+93.3. TRIGER AND DATA ACQUISITION SYSTEM (TDAQ) CHAPTER 3. THE NA62 EXPERIMENT
 Figure 3.3: Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay
 region at 102.4m(3).
-3.2 Sub Detectors
-3.2.1 KTAG
-3.2.2 GigaTracker (GTK)
-3.2.3 Straw Spectrometer (Straw)
-3.2.4 RICH
-3.2.5 Photon Detection System
-3.3 Triger and Data Acquisition Sytem (TDAQ)
+3.2.2 KTAG
+3.2.3 GigaTracker (GTK)
+3.2.4 Straw Spectrometer (Straw)
+3.2.5 RICH
+3.2.6 Photon Detection System
+3.3 Triger and Data Acquisition System (TDAQ)
 3.4 Things to be moved
 From the T10 target, the charged kaon beam travels through the beam pipe to the experimen-
 tal hall ECN3, where the first sub-detector is found. A differential Cherenkov detector tags the
 charged kaons in the beam. Cherenkov light is produced by charged particles passing through a
 CERN CEDAR vessel filled with Nitrogen gas at a pressure of around 1.75 bar (1). Due to the high
-93.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 intensity and tight time resolution requirements employed at NA62, the original photo-detectors
 (PMT’s) and front-end electronics were inadequate. The KTAG has been developed for the NA62
 to meet the high kaon rate requirements and time resolution requirements of O(100ps).
 Downstream of the KTAG is the beam spectrometer named the Giga Tracker (GTK). The GTK
+103.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 comprises 4 silicon trackers stations to measure the beam’s position, time and momentum. As
 the GTK is directly in the beamline, vetoing any particles produced from inelastic interactions
 is essential. This is done by the Charged Anti-coincidence detector (CHANTI) located slightly
@@ -166,7 +190,7 @@ corrector lens that corrects for the dispersion caused by the gas. The diaphragm
 light of a certain radius to pass through, allowing the selection of certain particles corresponding
 light. The particle is selected by altering the pressure of the gas. After the diaphragm the light
 passes through several quartz windows into the KTAG enclosure.
-103.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
+113.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 Figure 3.4: Diagram describing the CEDAR optics (1)
 The light is reflected by eight spherical mirrors located around the beam pipe into eight light
 boxes, which are seen in figure 3.5. Each lightbox (commonly referred to as sectors) contains 48
@@ -190,15 +214,15 @@ diameter containing an ArCO 2gas mixture and are similar to proportional counter
 passes through the gas, it ionises the gas producing a signal in the central wire. This allows for
 a measurement of the spatial position of the particle, which, along with the MNP33 allows for
 momentum calculations of the particles.
-113.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
+123.4. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 Figure 3.6: Diagram of straw placement in each view (2)
-12Chapter 4
+13Chapter 4
 CEDARH
-13Chapter 5
+14Chapter 5
 Flexible MC
-14Chapter 6
+15Chapter 6
 Dark Photon Analysis
-15Bibliography
+16Bibliography
 [1] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar Counters for
 Particle Identification in the SPS Secondary Beams: A Description and an Operation Manual,”
 12 1982.
@@ -212,4 +236,4 @@ https://doi.org/10.1088%2F1748-0221%2F12%2F05%2Fp05025
 [4] H. Danielsson et al. , “New veto hodoscope ANTI-0 for the NA62 experiment at CERN,”
 JINST , vol. 15, p. C07007. 8 p, Jul 2020, iNSTR20: Instrumentation for Colliding Beam
 Physics. [Online]. Available: https://cds.cern.ch/record/2723429
-16
+17
