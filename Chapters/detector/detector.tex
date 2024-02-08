@@ -32,8 +32,7 @@
         \caption{X-Z diagram of NA62 detector setup for Run 1}
         \label{fig:na62-det}
     \end{figure}
-    \section{The NA62 Detector}
-    \subsection{Beam-Line}\label{sec:BeamLine}
+    \section{The NA62 Beam Line}\label{sec:BeamLine}
     \begin{figure}[t]
         \centering 
         \includegraphics[width=\textwidth]{imgs/BeamLine.png}
@@ -60,20 +59,26 @@
     \newline\indent Following the KTAG are two quadrupoles (Q9 and Q10), used to focus the beam before the beam tracking system (GTk). The GTk comprises four stations made up of silicon pixel detectors described in Section \ref{sec:GTK} installed in the beam vacuum. 
     The GTk stations are installed so that the space between GTK1 and GTk3 is occupied by a second achromat (A2), which comprises four dipole magnets that deflect the beam 60\,mm vertically, allowing for the beam particle momenta to be measured. 
     The return yokes of the third and fourth magnets and a magnetised iron collimator (SCR1), defocus beam muons which leave the beam between the second and third magnets. A pair of cleaning collimators (C6 and C7) used to absorb beam particles outside of the acceptance are located before the final GTk station (GTk3), 
-    which is at the entrance to the decay region ($Z = 102.4\,m$). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal dimension by an angle of +1.2\,mrad, so that combined with the -3.6\,mrad deflection from the spectrometer magnet (MNP33), the beam passes through the central aperture 
-    of the Liquid Krypton calorimeter (LKr).
-    \newline\indent At $Z = 102.4\,m$ begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo pumps along its length. The first section is defined as the decay region between $Z = 105\,m$ and $Z = 170\,m$. Further downstream, the Bluetube hosts a number of detectors: 
-    Eleven LAV stations used in the Photon detection system described in Section \ref{sec:PDS} and four STRAW spectrometer chambers provide kinematic measurements of the charged products of kaons decaying in the decay region, described in Section \ref{sec:STRAW}.
+    which is at the entrance to the decay region ($Z = 102.4\,m$). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal dimension by an angle of +1.2\,mrad.
+    \newline\indent At $Z = 102.4\,m$ begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo pumps along its length. The Bluetube is made up of 19 cylindrical sections ranging in diameter shown in Figure \ref{fig:na62-det}, from 1.92\,m in the first section after GTK3, to 2.4\,m in the middle section and then 2.8\,m
+    in the region containing the STRAW spectrometer.
+    The first section is defined as the decay region between $Z = 105\,m$ and $Z = 170\,m$. Further downstream, the Bluetube hosts a number of detectors: 
+    Eleven LAV stations used in the Photon detection system described in Section \ref{sec:PDS} and four STRAW spectrometer chambers coupled with a large aperture dipole magnet (MNP33), providing kinematic measurements of the charged products of kaons decaying in the decay region, described in Section \ref{sec:STRAW}.  
+    The MNP33 magnet provides a 270\,MeV/$c$ momentum kick in the horizontal dimension, deflecting the 75\,GeV/$c$ beam by -3.6\,mrad, so that combined with the TRIM5 deflection, the beam passes through the central aperture of the Liquid Krypton calorimeter (LKr). The path of the beam is shown in Figure \ref{fig:AFTER-GTK-beam-line}, showing the deflection in the horizontal dimension.
+    After the final STRAW spectrometer chamber (STRAW4), the Bluetube is closed off with a thin aluminum window (except for the hole for the beam to pass through), separating the vacuum from the 17\,m long, neon-filled Ring Imaging Cherenkov counter (RICH), designed to distinguish between pions and muons produced in kaon decays and is part of the Particle Identification system (PID) and is described in Section \ref{sec:RICH}. 
+    The beam is transported through the remaining downstream detectors in vacuum and is deflected -13.2\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the Small Angle Calorimeter (SAC) acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
+    \newline\indent 
     \begin{figure}[t]
         \centering 
         \includegraphics[width=\textwidth]{imgs/After_GTK3.png}
         \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}. \todo{REPLACE WITH OWN}}
         \label{fig:AFTER-GTK-beam-line}
     \end{figure}
+    \section{NA62 Detectors}
     \subsection{KTAG}\label{sec:KTAG}
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
-    \subsection{RICH}
+    \subsection{RICH}\label{sec:RICH}
     \subsection{Photon Detection System}\label{sec:PDS}
     \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     \section{Things to be moved}
