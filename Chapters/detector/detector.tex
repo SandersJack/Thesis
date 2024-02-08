@@ -16,7 +16,7 @@
     \begin{equation}\label{eq:missingmass}
         m_{miss}^2 = (P_{K^{+}} - P_{\pi^{+}})^2
     \end{equation}
-    \begin{figure}[H]
+    \begin{figure}[t]
         \centering
         \includegraphics[width=13cm]{imgs/missingmasss_signal.png}
         \caption{Expected squared missing mass distributions of main kaon decays and $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ (scaled by $10^{10}$ for for visability). The solid 
@@ -26,7 +26,7 @@
     The rest of this chapter will cover how NA62 fulfills the abovementioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line, upstream of the NA62 detector.
     The NA62 detector comprises a number of sub-detectors, which will be described in Section \ref{sec:sub-det}, with the trigger and data acquisition system (TDAQ) following in Section \ref{sec:TDAQ} 
     
-    \begin{figure}[H]
+    \begin{figure}[t]
         \centering
         \includegraphics[width=13cm]{imgs/na62DetDia.png}
         \caption{X-Z diagram of NA62 detector setup for Run 1}
@@ -34,6 +34,12 @@
     \end{figure}
     \section{The NA62 Detector}
     \subsection{Beam-Line}\label{sec:BeamLine}
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/BeamLine.png}
+        \caption{Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay region at 102.4m\cite{Gil_2017}.}
+        \label{fig:beam-line}
+    \end{figure}
     The experiment at CERN uses a hadron beam extracted from the SPS with a nominal momentum of 400\,$GeV/c$, directed onto a 400\,mm long, 2\,mm diameter berylium rod that forms
     the fixed target (T10) located at 0\,m in figure \ref{fig:beam-line}. The beam derived from the T10 target, referred to as K12, is a high-intensity unseparated hadron beam with a nominal momentum of
     75\,$GeV/c$. The beam momenta was chosen to maximise the fraction of kaons with respect to the other beam components at the entrance to the detector. 
@@ -54,19 +60,21 @@
     \newline\indent Following the KTAG are two quadrupoles (Q9 and Q10), used to focus the beam before the beam tracking system (GTk). The GTk comprises four stations made up of silicon pixel detectors described in Section \ref{sec:GTK} installed in the beam vacuum. 
     The GTk stations are installed so that the space between GTK1 and GTk3 is occupied by a second achromat (A2), which comprises four dipole magnets that deflect the beam 60\,mm vertically, allowing for the beam particle momenta to be measured. 
     The return yokes of the third and fourth magnets and a magnetised iron collimator (SCR1), defocus beam muons which leave the beam between the second and third magnets. A pair of cleaning collimators (C6 and C7) used to absorb beam particles outside of the acceptance are located before the final GTk station (GTk3), 
-    which is at the entrance to the decay region ($z = 102.4\,m$). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal dimension by an angle of +1.2\,mrad, so that combined with the -3.6\,mrad deflection from the spectrometer magnet (MNP33), the beam passes through the central aperture 
-    of the Liquid Krypton calorimeter (LKr)
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{imgs/BeamLine.png}
-        \caption{Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay region at 102.4m\cite{Gil_2017}.}
-        \label{fig:beam-line}
+    which is at the entrance to the decay region ($Z = 102.4\,m$). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal dimension by an angle of +1.2\,mrad, so that combined with the -3.6\,mrad deflection from the spectrometer magnet (MNP33), the beam passes through the central aperture 
+    of the Liquid Krypton calorimeter (LKr).
+    \newline\indent At $Z = 102.4\,m$ begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo pumps along its length. The first section is defined as the decay region between $Z = 105\,m$ and $Z = 170\,m$. Further downstream, the Bluetube hosts a number of detectors: 
+    Eleven LAV stations used in the Photon detection system described in Section \ref{sec:PDS} and four STRAW spectrometer chambers provide kinematic measurements of the charged products of kaons decaying in the decay region, described in Section \ref{sec:STRAW}.
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/After_GTK3.png}
+        \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}. \todo{REPLACE WITH OWN}}
+        \label{fig:AFTER-GTK-beam-line}
     \end{figure}
     \subsection{KTAG}\label{sec:KTAG}
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
     \subsection{RICH}
-    \subsection{Photon Detection System}
+    \subsection{Photon Detection System}\label{sec:PDS}
     \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     \section{Things to be moved}
     \noindent From the T10 target, the charged kaon beam travels through the beam pipe to the experimental hall ECN3, where the first sub-detector is found. A differential Cherenkov detector tags the charged kaons in the beam. Cherenkov light is produced by charged particles passing through a CERN CEDAR vessel filled with Nitrogen gas at a pressure of around 1.75\,bar \cite{Bovet:1982xf}. 
@@ -86,7 +94,7 @@
     \newline Two sub-detectors, KTAG and STRAW spectrometer, will be described in more detail due to their relevance to the studies that are planned for my PhD. The KTAG-CEDAR has been selected due to my involvement in the CEDAR-H test beam. The STRAW spectrometer has been selected due to my participation in the development of flexibility of the sub-detector and its subsequent use in the symmetric NA62 study later on in this report.
     \subsubsection{KTAG}\label{CEDAAR}
     As mentioned previously, kaons are identified in the beam by the CEDAR-KTAG subdetector. The charged beam produces  Cherenkov light when passing through the Nitrogen gas-filled CEDAR. The light produced is then reflected onto a ring-shaped diaphragm by the Mangin mirror, located at the end of the CEDAR vessel, which is a special geometry to produce the ring shape needed to distinguish particles. Between the mirror and the diaphragm, the light passes through a chromatic corrector lens that corrects for the dispersion caused by the gas. The diaphragm only allows the light of a certain radius to pass through, allowing the selection of certain particles corresponding light. The particle is selected by altering the pressure of the gas. After the diaphragm the light passes through several quartz windows into the KTAG enclosure. 
-    \begin{figure}[H]
+    \begin{figure}[t]
         \centering
         \includegraphics[width=10cm]{imgs/CedarOldDia.png}
         \caption{Diagram describing the CEDAR optics \cite{Bovet:1982xf}}
@@ -94,7 +102,7 @@
     \end{figure}
     \noindent The light is reflected by eight spherical mirrors located around the beam pipe into eight light boxes, which are seen in figure \ref{fig:Ktag}. Each lightbox (commonly referred to as sectors) contains 48 photomultipliers converting the light into electrical signals that are then collected by the front-end electronics. 
     \newline At the start of a data-taking period, a pressure scan is completed to isolate the kaon peak from the other constituents of the beam. Through tests and pressure scans, the optimal pressure for kaons is set at 1.75\,bar. Considering the quartz windows and the Nitrogen gas, the total material path of the beam is $3.5 \times 10^{-2} X_0$ \cite{Gil_2017}.
-    \begin{figure}[H]
+    \begin{figure}[t]
         \centering
         \includegraphics[width=7cm]{imgs/KtagOpenPic.png}
         \caption{Photo of CEDAR and KTAG installed in the NA62 beamline}
@@ -103,7 +111,7 @@
     \noindent Improving the material budget is possible by replacing Nitrogen with Hydrogen at a higher pressure of 3.9\,bar, resulting in a reduced material path of $7 \times 10^{-3} X_0$. 
     \subsubsection{STRAW Spectrometer}\label{STRAW}
     The STRAW Spectrometer is used for kinematic measurements of charged decay products and comprises of four separate chambers and one dipole magnet (MNP33). The chambers are located downstream from the decay region, with chambers 1 and 2 separated by 10\,m with the MNP33 magnet placed downstream of chamber 2. Chambers 3 and 4 are located downstream of the MNP33 with a separation of 14\,m. Each chamber comprises four views, containing four layers of straws in a pattern shown in figure \ref{fig:strawsp}. The straws are 2.1\,m long drift tubes that are about 9.75\,mm in diameter containing an $ArCO_2$ gas mixture and are similar to proportional counters. As a particle passes through the gas, it ionises the gas producing a signal in the central wire. This allows for a measurement of the spatial position of the particle, which, along with the MNP33 allows for momentum calculations of the particles.
-    \begin{figure}[H]
+    \begin{figure}[t]
         \centering
         \includegraphics[width=7cm]{imgs/straw_diagram.png} 
         \caption{Diagram of straw placement in each view \cite{SERGI2012530}}
