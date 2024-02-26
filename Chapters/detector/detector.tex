@@ -1,6 +1,4 @@
 \documentclass[../../main.tex]{subfiles}
-\linespread{1.5}
-
 
 \begin{document}
     \section{Overview}
@@ -30,6 +28,7 @@
     \begin{figure}[t]
         \centering
         \includegraphics[width=13cm]{imgs/na62DetDia.png}
+        \linespread{1.0}
         \caption{X-Z diagram of NA62 detector setup for Run 1}
         \label{fig:na62-det}
     \end{figure}
@@ -37,6 +36,7 @@
     \begin{figure}[t]
         \centering 
         \includegraphics[width=\textwidth]{imgs/BeamLine.png}
+        \linespread{1.0}
         \caption{Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay region at 102.4m\cite{Gil_2017}.}
         \label{fig:beam-line}
     \end{figure}
@@ -69,9 +69,10 @@
     After the final STRAW spectrometer chamber (STRAW4), the Bluetube is closed off with a thin aluminum window (except for the hole for the beam to pass through), separating the vacuum from the 17\,m long, neon-filled Ring Imaging Cherenkov counter (RICH), designed to distinguish between pions and muons produced in kaon decays and is part of the Particle Identification system (PID) and is described in Section \ref{sec:RICH}. 
     The beam is transported through the remaining downstream detectors in vacuum and is deflected -13.2\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the Small Angle Calorimeter (SAC) acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
     \newline\indent 
-    \begin{figure}[t]
+    \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/After_GTK3.png}
+        \linespread{1.0}
         \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}. \todo{REPLACE WITH OWN}}
         \label{fig:AFTER-GTK-beam-line}
     \end{figure}
@@ -85,9 +86,10 @@
     \end{equation}
     In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. The pressure is set at 1.7\,bar of Nitrogen in the CEDAR-W so that the light from the 
     kaon is focused by a set of lenses and mirrors onto arrays of photomultiplier tubes (PMTs). The light from the other beam components does not reach the PMT arrays. A diagram showing the internal optics of the CEDAR is shown in Figure \ref{fig:Cedar_dia}.
-    \begin{figure}[ht]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=10cm]{imgs/CedarOldDia.png}
+        \linespread{1.0}
         \caption{Diagram describing the CEDAR optics \cite{Bovet:1982xf}}
         \label{fig:Cedar_dia}
     \end{figure}
@@ -99,6 +101,57 @@
     which required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H can be found in Section \ref{sec:CEDARH}.
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
+    The STRAW Spectrometer provides kinematic measurements of charged decay products produced in $K^+$ decays within the decay volume. It comprises four chambers and a large aperture dipole magnet (MNP33), providing a momentum resloution of
+    \begin{equation}
+        \frac{\sigma(p)}{p} = 0.30\% \oplus 0.005\%
+    \end{equation} 
+    where $p$ is the track momentum in $GeV/c$.
+    The chambers are downstream from the decay region, with the first chamber located at $Z = 183$\,m and the second 10\,m further downstream.  The MNP33 magnet is situated downstream of chamber 2 at $Z=197.6$\,m and provides an integrated field of 0.9\,Tm. 
+    Chambers 3 and 4 are located downstream of the MNP33, $Z=204$\,m and $219$\,m respectively. 
+    \newline\indent Each chamber comprises four views (X, Y, V, and U) rotated at $0\deg$, $90\deg$, $+45\deg$, and $-45\deg$, each consisting of four layers of straws shown in Figures \ref{fig:straw_diagram} and \ref{fig:Straw_views}. The views have a gap near the center, of around 12\,cm with no straws, such that when they
+    are combined to form a chamber, an octagonal hole with an apothem of 6\,cm is produced for the beam to pass through. As shown in Figure \ref{fig:AFTER-GTK-beam-line}, the beam hole for each chamber is not centered to the angle of the beam before and after the MNP33
+    magnet, with the beam hole parameters defined in Table \ref{tab:chamber_info}.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ccccccc}
+            \toprule
+            \textbf{Chamber} & \textbf{Beam Hole Size (cm)} & \textbf{Beam Hole Offset (X, Y, Z)} \\
+            \midrule
+            1 & 6 & 101.2 mm, 0 mm, 183 m \\
+            2 & 6 & 114.4 mm, 0 mm, 193 m \\
+            MNP33 & - & -, -,198 m \\
+            3 & 6 & 92.4 mm, 0 mm, 204 m \\
+            4 & 6 & 52.8 mm, 0 mm, 218 m \\
+            \bottomrule
+        \end{tabular}
+        \linespread{1.0}
+        \caption{Straw spectrometer chamber beamhole positions}
+        \label{tab:chamber_info}
+    \end{table}
+    \indent The straws are 2.1\,m long drift tubes that are 9.82\,mm in diameter, made from $36\,\mu$m thick polyethylene terephthalate (PET), coated on the inside with 50,nm of
+    copper and 20\,nm of gold. The Straws are filled with a mixture of 70\% Argon and 30\% C$O_2$ at atmospheric pressure, and have a central gold-plated tungsten anode wire. The straws act like 
+    proportional counters, when a charged particle passes through the gas, it is ionised, creating electron-ion pairs that drift to the opposite electrodes inducing a charge on the anode wire. 
+    When the electron approaches the anode wire, the electric field strength increases dramatically, producing Townsend avalanches. This provides a large multiplication of the signal, producing a
+    charge pulse, which can be read out.
+    \begin{figure}[H]
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{imgs/straw_diagram.png}
+            \linespread{1.0}
+            \caption{Diagram of straw placement in each view \cite{SERGI2012530}}
+            \label{fig:straw_diagram}
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{imgs/Straw_views.png}
+            \linespread{1.0}
+            \caption{Diapgram showing placement of views in a straw chamber. Edited from \cite{SERGI2012530}}
+            \label{fig:Straw_views}
+        \end{minipage}
+        \label{fig:both_figures}
+    \end{figure}
+    
     \subsection{RICH}\label{sec:RICH}
     \subsection{Photon Detection System}\label{sec:PDS}
     \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
@@ -119,13 +172,7 @@
      A second detector system has been implemented between the GTK stations to veto any decay products of kaons decaying between the GTK stations, named the Veto Counter (VC), it is made up of three stations of scintillators between GTK stations 3 and 2.
     \newline Two sub-detectors, KTAG and STRAW spectrometer, will be described in more detail due to their relevance to the studies that are planned for my PhD. The KTAG-CEDAR has been selected due to my involvement in the CEDAR-H test beam. The STRAW spectrometer has been selected due to my participation in the development of flexibility of the sub-detector and its subsequent use in the symmetric NA62 study later on in this report.
     \subsubsection{STRAW Spectrometer}\label{STRAW}
-    The STRAW Spectrometer is used for kinematic measurements of charged decay products and comprises of four separate chambers and one dipole magnet (MNP33). The chambers are located downstream from the decay region, with chambers 1 and 2 separated by 10\,m with the MNP33 magnet placed downstream of chamber 2. Chambers 3 and 4 are located downstream of the MNP33 with a separation of 14\,m. Each chamber comprises four views, containing four layers of straws in a pattern shown in figure \ref{fig:strawsp}. The straws are 2.1\,m long drift tubes that are about 9.75\,mm in diameter containing an $ArCO_2$ gas mixture and are similar to proportional counters. As a particle passes through the gas, it ionises the gas producing a signal in the central wire. This allows for a measurement of the spatial position of the particle, which, along with the MNP33 allows for momentum calculations of the particles.
-    \begin{figure}[t]
-        \centering
-        \includegraphics[width=7cm]{imgs/straw_diagram.png} 
-        \caption{Diagram of straw placement in each view \cite{SERGI2012530}}
-        \label{fig:strawsp}
-    \end{figure}
+    
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}

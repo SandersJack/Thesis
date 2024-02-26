@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{fancyhdr}
@@ -19,6 +19,11 @@
 \usepackage{amsmath}
 \numberwithin{equation}{chapter}
 \usepackage{amsfonts}
+
+\linespread{2}
+\setcitestyle{square}
+
+\usepackage{booktabs}
 
 %\usepackage{cite}
 
@@ -55,6 +60,6 @@
 \chapter{Dark Photon Analysis}
 \subfile{Chapters/DarkP/DarkPhoton.tex}
 
-\bibliographystyle{IEEEtran}
+\bibliographystyle{ieeetr}
 \bibliography{references} 
 \end{document}
