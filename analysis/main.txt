@@ -26,12 +26,12 @@ blah blah blah
 3.2 The NA62 Beam Line . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
 3.3 NA62 Detectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
 3.3.1 KTAG . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-3.3.2 GigaTracker (GTK) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-3.3.3 Straw Spectrometer (Straw) . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-3.3.4 RICH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-3.3.5 Photon Detection System . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
-3.4 Triger and Data Acquisition System (TDAQ) . . . . . . . . . . . . . . . . . . . . . 10
-3.5 Things to be moved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+3.3.2 GigaTracker (GTK) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.3.3 Straw Spectrometer (Straw) . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.3.4 RICH . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.3.5 Photon Detection System . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3.4 Triger and Data Acquisition System (TDAQ) . . . . . . . . . . . . . . . . . . . . . 11
+3.5 Things to be moved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
 4 CEDARH 14
 5 Flexible MC 15
 6 Dark Photon Analysis 16
@@ -42,10 +42,9 @@ used to kinematically reject the domiant kaon decays. . . . . . . . . . . . . . 
 3.2 X-Z diagram of NA62 detector setup for Run 1 . . . . . . . . . . . . . . . . . . . . 8
 3.3 Schematic of K12 beamline from T10 target at 0m to the entence of the NA62 decay
 region at 102.4m(3). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
-3.4 Schematic of K12 beamline after GTK3 (3). . . . . . . . . . . . . . . . . . . . . . 12 REPLACE
+3.4 Schematic of K12 beamline after GTK3 (3). . . . . . . . . . . . . . . . . . . . . . 11 REPLACE
 WITH
-OWN3.5 Diagram describing the CEDAR optics (1) . . . . . . . . . . . . . . . . . . . . . . . 12
-3.6 Photo of CEDAR and KTAG installed in the NA62 beamline . . . . . . . . . . . . 13
+OWN3.5 Diagram describing the CEDAR optics (1) . . . . . . . . . . . . . . . . . . . . . . . 13
 3List of Tables
 4Chapter 1
 Introduction
@@ -160,6 +159,40 @@ REPLACE
 WITH
 OWN3.3 NA62 Detectors
 3.3.1 KTAG
+As the NA62 beam is unseparated and kaons only account for 6% of the beam components, the
+kaons must be identified. Kaon identification is provided by the KTAG and located at Z= 69.4m.
+It comprises a CEDAR vessel and a purpose-built photon detection system. Until the NA62 2023
+run, the CEDAR vessel used was a CEDAR-W filled with a Nitrogen radiator. CEDARs were
+developed at CERN in the 1970s (1) for secondary beam particle detection at the super proton
+synchrotron (SPS). The CEDAR is a differential Cherenkov Counter and exploits the dependence
+of the beam particle’s mass on the properties of the produced light, defined in equation 3.2 where
+β=p
+γm.
+cos(θ) =1
+βn(3.2)
+In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov
+light is only affected by the mass of the beam particle. The pressure is set at 1.7 bar of Nitrogen in
+the CEDAR-W so that the light from the kaon is focused by a set of lenses and mirrors onto arrays
+of photomultiplier tubes (PMTs). The light from the other beam components does not reach the
+PMT arrays. A diagram showing the internal optics of the CEDAR is shown in Figure 3.5.
+In the original CERN design, the Cherenkov light exiting each CEDAR exit window was de-
+tected by an ET-9820QB photomultiplier tube (PMT) placed directly on the exit window, with a
+particle identified if there was a coincidence of at least six PMTs. However, these PMTs would
+not fulfill the timing ( ≤100 ps) and rate requirements ( ˜45 MHz of kaons) at NA62. Instead, the
+light from the exit windows are reflected radially by eight spherical mirrors onto 8 PMT planes,
+referred to as sectors. The PMT planes are equipped with an array of 48 single-anode Hamamatsu
+PMTs of two types: 32 R9880-110 and 16 R7400. The KTAG photo-detection system allowed the
+use of at least five sectors for particle identification, resulting in an improved kaon identification
+efficiency compared to the original setup. A kaon time resolution of 70 ps and a kaon identification
+efficiency of 95% was achieved with the KTAG and CEDAR-W ( ?).
+In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62
+beamline after design at the Univeristy of Birmingham and testing at CERN. The new CEDAR
+uses the same basic principles as previous CEDARs but uses Hydrogen as a radiator gas, which
+required the design of new optical elements in the CEDAR and the photon detection system. A
+more detailed description of the CEDAR and its optical elements, along with the design, testing
+and installation of the new CEDAR-H can be found in Section ??.
+103.4. TRIGER AND DATA ACQUISITION SYSTEM (TDAQ) CHAPTER 3. THE NA62 EXPERIMENT
+Figure 3.4: Schematic of K12 beamline after GTK3 (3).
 3.3.2 GigaTracker (GTK)
 3.3.3 Straw Spectrometer (Straw)
 3.3.4 RICH
@@ -182,6 +215,7 @@ base scintillators.
 The main decay volume is located downstream of the CHANTI and is in a large vacuum tube
 shown in figure 3.2. This is where kaons are allowed to decay if they are to be within the ac-
 ceptance of the various sub-detectors. Downstream from this is the STRAW Spectrometer which
+113.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 provides kinematic measurements of the charged products of the kaon decays. It consists of four
 spectrometer chambers and a dipole magnet (MNP33) with two of the chambers located before
 the magnet and two after. A more detailed description of this detector is provided in section 3.5.
@@ -191,7 +225,6 @@ cation system (PID). This is also complemented by the Muon Veto (MUV) system com
 hadronic calorimeters (MUV1 and MUV2)
 A Photon-Veto system provides coverage of photons produced from the decay region up to 50 mrad
 with respect to the z-axis. This includes:
-103.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
 •12 Large Angle Vetos (LAVs) placed along the decay region, between STRAW spectrometer
 chambers and after the RICH. Providing coverage of photons emitted at angles from 8.5 to
 50 mrad (3).
@@ -215,24 +248,6 @@ relevance to the studies that are planned for my PhD. The KTAG-CEDAR has been se
 to my involvement in the CEDAR-H test beam. The STRAW spectrometer has been selected due
 to my participation in the development of flexibility of the sub-detector and its subsequent use in
 the symmetric NA62 study later on in this report.
-KTAG
-As mentioned previously, kaons are identified in the beam by the CEDAR-KTAG subdetector. The
-charged beam produces Cherenkov light when passing through the Nitrogen gas-filled CEDAR. The
-light produced is then reflected onto a ring-shaped diaphragm by the Mangin mirror, located at
-the end of the CEDAR vessel, which is a special geometry to produce the ring shape needed to
-distinguish particles. Between the mirror and the diaphragm, the light passes through a chromatic
-corrector lens that corrects for the dispersion caused by the gas. The diaphragm only allows the
-light of a certain radius to pass through, allowing the selection of certain particles corresponding
-light. The particle is selected by altering the pressure of the gas. After the diaphragm the light
-passes through several quartz windows into the KTAG enclosure. The light is reflected by eight
-spherical mirrors located around the beam pipe into eight light boxes, which are seen in figure 3.6.
-Each lightbox (commonly referred to as sectors) contains 48 photomultipliers converting the light
-into electrical signals that are then collected by the front-end electronics.
-At the start of a data-taking period, a pressure scan is completed to isolate the kaon peak from the
-other constituents of the beam. Through tests and pressure scans, the optimal pressure for kaons
-is set at 1.75 bar. Considering the quartz windows and the Nitrogen gas, the total material path
-of the beam is 3 .5×10−2X0(3). Improving the material budget is possible by replacing Nitrogen
-with Hydrogen at a higher pressure of 3.9 bar, resulting in a reduced material path of 7 ×10−3X0.
 STRAW Spectrometer
 The STRAW Spectrometer is used for kinematic measurements of charged decay products and
 comprises of four separate chambers and one dipole magnet (MNP33). The chambers are located
@@ -244,11 +259,8 @@ diameter containing an ArCO 2gas mixture and are similar to proportional counter
 passes through the gas, it ionises the gas producing a signal in the central wire. This allows for
 a measurement of the spatial position of the particle, which, along with the MNP33 allows for
 momentum calculations of the particles.
-113.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
-Figure 3.4: Schematic of K12 beamline after GTK3 (3).
-Figure 3.5: Diagram describing the CEDAR optics (1)
 123.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
-Figure 3.6: Photo of CEDAR and KTAG installed in the NA62 beamline
+Figure 3.5: Diagram describing the CEDAR optics (1)
 13Chapter 4
 CEDARH
 14Chapter 5
