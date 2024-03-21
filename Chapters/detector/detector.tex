@@ -100,8 +100,32 @@
     \newline\indent In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62 beamline after design at the Univeristy of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses Hydrogen as a radiator gas, 
     which required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H can be found in Section \ref{sec:CEDARH}.
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
+    The precise measurement of the beam momentum, time, and position is provided by the GigaTracker (GTk), a beam spectrometer comprising hybrid silicon trackers placed within the vacuum pipe along with an achromat upstream of the decay volume. 
+    As particles of differing momenta are deflected by different amounts in a magnetic field, the momentum of a particle can be measured by comparing the positions of the particles in each station. The resolution of the momentum measurement is,
+    \begin{equation}
+        \frac{\Delta p}{p} = 0.2\,\%
+    \end{equation}
+    and the resolution of the direction at the exit of the achromat is $16\,\mu rad$.
+    During run one data-taking period (2016-2018), three stations were employed and are shown in Figure \ref{fig:gtk_run1}. Another station was added (GTK0) for run2 data taking (2021-present) and placed in front of the first GTK station, increasing the tracking efficiency 
+    and reducing the backgrounds for the main decay mode. The layout of the GTK is shown in Figure \ref{fig:gtk_run2}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/gtk_run1.png}
+        \linespread{1.0}
+        \caption{Schematic of GTK stations within the acromat \cite{Gil_2017} for run 1. \todo{REPLACE WITH OWN}}
+        \label{fig:gtk_run1}
+    \end{figure}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/image.png}
+        \linespread{1.0}
+        \caption{Schematic of GTK stations within the acromat \cite{Gil_2017} for run 2. \todo{REPLACE WITH OWN}}
+        \label{fig:gtk_run2}
+    \end{figure}
+    \indent Each station consists of 18000 pixels of size $300\times300\,\mu m^2$ in a matrix of $200\times90$, covering a total area of  $62.8\times27\, mm^2$ and is read out by application-specific integrated circuits (ASIC). 
+    The tracker was placed within the beam, so the material has to be minimised to reduce the number of interactions with the beam and improve the angular resolution. The material budget for each station was set at $0.5\,\%$, corresponding to $500\,\mu m$ of Silicon.
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
-    The STRAW Spectrometer provides kinematic measurements of charged decay products produced in $K^+$ decays within the decay volume. It comprises four chambers and a large aperture dipole magnet (MNP33), providing a momentum resloution of
+    The STRAW Spectrometer provides kinematic measurements of charged decay products produced in $K^+$ decays within the decay volume. It comprises four chambers and a large aperture dipole magnet (MNP33), providing a momentum resolution of
     \begin{equation}
         \frac{\sigma(p)}{p} = 0.30\% \oplus 0.005\%
     \end{equation} 
