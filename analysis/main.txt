@@ -194,6 +194,7 @@ CEDAR and its optical elements, along with the design, testing and installation 
 153.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
 the new CEDAR-H can be found in Section ??.
 3.3.2 GigaTracker (GTK)
+Figure 3.6: Image of GTk station ?.
 The precise measurement of the beam momentum, time, and position is provided
 by the GigaTracker (GTk), a beam spectrometer comprising hybrid silicon track-
 ers placed within the vacuum pipe along with an achromat upstream of the decay
@@ -203,23 +204,23 @@ tions of the particles in each station. The resolution of the momentum measureme
 is,
 ∆p
 p= 0.2 % (3.3)
-and the resolution of the direction at the exit of the achromat is 16 µrad. During run
-one data-taking period (2016-2018), three stations were employed and are shown in
-Figure ??. Another station was added (GTK0) for run2 data taking (2021-present)
-and placed in front of the first GTK station, increasing the tracking efficiency and
-reducing the backgrounds for the main decay mode. The layout of the GTK is shown
-in Figure ??
-Figure 3.6: Schematic of GTK stations within the acromat ?for run 1.
+with a direction at the exit of the achromat is 16 µrad and a hit time resolution of
+200ps. During run one data-taking period (2016-2018), three stations were employed
+and are shown in Figure ??. Another station was added (GTK0) for run2 data taking
+(2021-present) and placed in front of the first GTK station, increasing the tracking
+efficiency and reducing the backgrounds for the main decay mode. The layout of
+the GTK is shown in Figure ??
 163.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
+Figure 3.7: Schematic of GTK stations within the acromat ?for run 1.
 imgs/image.png
-Figure 3.7: Schematic of GTK stations within the acromat ?for run 2.
+Figure 3.8: Schematic of GTK stations within the acromat ?for run 2.
 Each station consists of 18000 pixels of size 300 ×300µm2in a matrix of 200 ×
+173.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
 90, covering a total area of 62 .8×27mm2and is read out by application-specific
 integrated circuits (ASIC). The tracker was placed within the beam, so the material
 has to be minimised to reduce the number of interactions with the beam and improve
 the angular resolution. The material budget for each station was set at 0 .5 %,
 corresponding to 500 µmof Silicon.
-173.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
 3.3.3 Straw Spectrometer (Straw)
 The STRAW Spectrometer provides kinematic measurements of charged decay prod-
 ucts produced in K+decays within the decay volume. It comprises four chambers
@@ -256,81 +257,65 @@ electrodes inducing a charge on the anode wire. When the electron approaches the
 anode wire, the electric field strength increases dramatically, producing Townsend
 avalanches. This provides a large multiplication of the signal, producing a charge
 pulse, which can be read out.
-193.4. TRIGER AND DATA ACQUISITION SYSTEM (TDAQ) CHAPTER 3. THE NA62 EXPERIMENT
-Figure 3.8: Diagram of straw place-
+193.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
+Figure 3.9: Diagram of straw place-
 ment in each view ?
-Figure 3.9: Diapgram showing place-
+Figure 3.10: Diapgram showing place-
 ment of views in a straw chamber.
 Edited from ?
-3.3.4 RICH
+3.3.4 Ring Imaging Cherenkov counter (RICH)
+The Ring Imaging Cherenkov counter (RICH) was designed to separate secondary
+pion and muons within a momentum range of 15 - 35 GeV/c . The ability to sepa-
+rate the secondary particles is required as the largest background to K+→π+ν¯ν
+comes from the K+→µ+νµ, which has a BR 10 orders of magnitude greater. The
+majority of the suppression comes from kinematic selections and the response differ-
+ence between pions and muons in the calorimeters, however, another factor of 100
+is required in the momentum range 15 - 35 GeV/c was required, which the RICH
+satisfied.
+The RICH is a 17.5 m long cylindrical vessel comprising four steel sections with
+diameters gradually decreasing from 4.2 m at the upstream section to accommodate
+the PMT flanges to 3.2 m in the downstream end. The radiator vessel is separated
+from the vacuum decay tube by an aluminum window of 2 mm thickness and radius of
+203.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
+1.1 m at the upstream end, allowing minimal material in the path of particles enter-
+ing the detector. A lightweight aluminum pipe connected to the vacuum tube passes
+through the vessel, allowing the beam to pass through in a vacuum and continues
+through the 4 mm thick, 1.4 m radius aluminum exit window. The vessel contains
+Neon gas at a pressure of 900 mbar with a refractive index of n= 1 + 62 .8×10−6at
+a wavelength of 300 µm, corresponding to a Cherenkov threshold for charged pion
+of 12.5GeV/c .
+Figure 3.11: Schematic of RICH detector, showing the beam entering the upstream
+end on the left. A zoomed-in image of one of the two PMT flanges shows the layout
+of the PMT arrays. The mirrors are also shown at the dowstream end of the vessel
+?
+A mosaic of 20 spherical mirrors (18 hexagonal and 2 semi-hexagonal) with a
+focal length of 17 m are located at the downstream end of the vessel and is shown
+in Figure ??. This mirror system is used to reflect and focus the Cherenkov light
+toward two PMT arrays located at the upstream end of the vessel. The two PMT
+arrays are located on either side of the entrance window (see Figure ??), each consist
+of 976 Hamamatsu R7400-U03 PMTs. Each PMT has a 8 mm active area and are
+213.4. TRIGER AND DATA ACQUISITION SYSTEM (TDAQ) CHAPTER 3. THE NA62 EXPERIMENT
+packed into a hexagonal lattice, each with a Winston cone directing light onto the
+active area.
+The particles are identified (selected or rejected) using a cut on the particle’s
+mass, calculated from the particle velocity using the reconstructed Cherenkov ring
+radius shown in Figure ??and the momentum of the particle measured by the
+spectrometer. In Figure ??, it is clear that separating pions and muons within the
+desired momentum range is possible.
+Figure 3.12: Cherenkov ring radius as a function of the particle momentum ?
 3.3.5 Photon Detection System
 3.4 Triger and Data Acquisition System (TDAQ)
-3.5 Things to be moved
-From the T10 target, the charged kaon beam travels through the beam pipe to
-the experimental hall ECN3, where the first sub-detector is found. A differential
-Cherenkov detector tags the charged kaons in the beam. Cherenkov light is produced
-by charged particles passing through a CERN CEDAR vessel filled with Nitrogen
-gas at a pressure of around 1.75 bar ?. Due to the high intensity and tight time
-resolution requirements employed at NA62, the original photo-detectors (PMT’s)
-and front-end electronics were inadequate. The KTAG has been developed for the
-203.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
-NA62 to meet the high kaon rate requirements and time resolution requirements of
-O(100ps).
-Downstream of the KTAG is the beam spectrometer named the Giga Tracker (GTK).
-The GTK comprises 4 silicon trackers stations to measure the beam’s position, time
-and momentum. As the GTK is directly in the beamline, vetoing any particles
-produced from inelastic interactions is essential. This is done by the Charged Anti-
-coincidence detector (CHANTI) located slightly downstream of the final GTK sta-
-tion. The CHANTI detects charged particles using polystyrene base scintillators.
-The main decay volume is located downstream of the CHANTI and is in a large
-vacuum tube shown in figure ??. This is where kaons are allowed to decay if they
-are to be within the acceptance of the various sub-detectors. Downstream from this
-is the STRAW Spectrometer which provides kinematic measurements of the charged
-products of the kaon decays. It consists of four spectrometer chambers and a dipole
-magnet (MNP33) with two of the chambers located before the magnet and two after.
-A more detailed description of this detector is provided in section ??.
-The Ring Imaging Cherenkov (RICH) follows the last straw chamber and is a 17 m
-long neon-filled vessel. It is designed to distinguish between pions and muons and
-is part of the Particle Identification system (PID). This is also complemented by
-the Muon Veto (MUV) system comprising two hadronic calorimeters (MUV1 and
-MUV2)
-A Photon-Veto system provides coverage of photons produced from the decay region
-up to 50 mrad with respect to the z-axis. This includes:
-•12 Large Angle Vetos (LAVs) placed along the decay region, between STRAW
-spectrometer chambers and after the RICH. Providing coverage of photons
-213.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
-emitted at angles from 8.5 to 50 mrad ?.
-•Liquid Krypton calorimeter (LKr) which is located after the RICH and was
-used in the predecessor experiment NA48.
-•Small Angle Veto (SAV) system, comprising of two shashlyk calorimeters
-named the Small Angle Calorimeter (SAC) and the Intermediate-Ring Calorime-
-ter (IRC) which provides photon veto coverage for small angles.
-There are several other detectors, such as the MUV3, which provides fast signals for
-use in the L0 trigger system and a pair of Charged Particle Hodoscopes (CHODs),
-which also provide input to the L0 trigger system. Some additional veto detectors,
-such as MUV0 and the HASC are used to for analysis.
-For the new run (after LS2), there have been several additions to the detector
-setup. The ANTI-0 detector is a hodoscope placed downstream of the CHANTI
-before the decay volume, used to veto halo particles (mostly muons) that enter the
-decay volume ?. A second detector system has been implemented between the GTK
-stations to veto any decay products of kaons decaying between the GTK stations,
-named the Veto Counter (VC), it is made up of three stations of scintillators between
-GTK stations 3 and 2.
-Two sub-detectors, KTAG and STRAW spectrometer, will be described in more
-detail due to their relevance to the studies that are planned for my PhD. The KTAG-
-CEDAR has been selected due to my involvement in the CEDAR-H test beam. The
-STRAW spectrometer has been selected due to my participation in the development
-of flexibility of the sub-detector and its subsequent use in the symmetric NA62 study
-later on in this report.
-223.5. THINGS TO BE MOVED CHAPTER 3. THE NA62 EXPERIMENT
-STRAW Spectrometer
-23Chapter 4
+22Chapter 4
 CEDARH
-24Chapter 5
+23Chapter 5
 Flexible MC
-25Chapter 6
+24Chapter 6
+Flexible MC
+25Chapter 7
+Future Kaon Experiments
+26Chapter 8
 Dark Photon Analysis
-26Bibliography
+27Bibliography
 C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
 Counters for Particle Identification in the SPS Secondary Beams: A Description
 and an Operation Manual,” 12 1982.
@@ -345,4 +330,4 @@ CERN,” Journal of Instrumentation , vol. 12, no. 05, pp. P05 025–P05 025, ma
 H. Danielsson et al. , “New veto hodoscope ANTI-0 for the NA62 experiment at
 CERN,” JINST , vol. 15, p. C07007. 8 p, Jul 2020, iNSTR20: Instrumentation for
 Colliding Beam Physics. [Online]. Available: https://cds.cern.ch/record/2723429
-27
+28
