@@ -182,28 +182,37 @@
         \end{minipage}
         \label{fig:both_figures}
     \end{figure}
-    
-    \subsection{RICH}\label{sec:RICH}
+    \subsection{Ring Imaging Cherenkov counter (RICH)}\label{sec:RICH}
+    The Ring Imaging Cherenkov counter (RICH) was designed to separate secondary pion and muons within a momentum range of 15 - 35\,$GeV/c$. 
+    The ability to separate the secondary particles is required as the largest background to $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ comes from 
+    the $K^+ \rightarrow \mu^+ \nu_{\mu}$, which has a BR 10 orders of magnitude greater. The majority of the suppression comes from kinematic selections and the response difference between pions and muons in the calorimeters, 
+    however, another factor of 100 is required in the momentum range 15 - 35\,$GeV/c$ was required, which the RICH satisfied. 
+    \newline\indent The RICH is a 17.5\,m long cylindrical vessel comprising four steel sections with diameters gradually decreasing from 4.2\,m at the upstream section to accommodate the PMT flanges to 3.2\,m in the downstream end.
+    The radiator vessel is separated from the vacuum decay tube by an aluminum window of 2\,mm thickness and radius of 1.1\,m at the upstream end, allowing minimal material in the path of particles entering the detector. A lightweight aluminum pipe connected to the vacuum tube passes through the vessel, allowing the beam to pass through
+    in a vacuum and continues through the 4\,mm thick, 1.4\,m radius aluminum exit window.
+    The vessel contains Neon gas at a pressure of 900\,mbar with a refractive index of $n = 1 + 62.8 \times 10^{-6}$ at a wavelength of $300\,\mu m$, corresponding to a Cherenkov threshold for charged pion of $12.5 GeV/c$.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/RICH.png}
+        \linespread{1.0}
+        \caption{Schematic of RICH detector, showing the beam entering the upstream end on the left. A zoomed-in image of one of the two PMT flanges shows the 
+        layout of the PMT arrays. The mirrors are also shown at the dowstream end of the vessel \cite{Bizzeti:2017dqh}}
+        \label{fig:rich}
+    \end{figure}
+    \newline\indent A mosaic of 20 spherical mirrors (18 hexagonal and 2 semi-hexagonal) with a focal length of 17\,m are located at the downstream end of the vessel and is shown in Figure \ref{fig:rich}. This mirror system is used to 
+    reflect and focus the Cherenkov light toward two PMT arrays located at the upstream end of the vessel. The two PMT arrays are located on either side of the entrance window (see Figure \ref{fig:rich}), each consist of 
+    976 Hamamatsu R7400-U03 PMTs. Each PMT has a 8\,mm active area and are packed into a hexagonal lattice, each with a Winston cone directing light onto the active area. 
+    \newline\indent The particles are identified (selected or rejected) using a cut on the particle's mass, calculated from the particle velocity using the reconstructed Cherenkov ring radius shown in Figure \ref{fig:rich_ring} and 
+    the momentum of the particle measured by the spectrometer. In Figure \ref{fig:rich_ring}, it is clear that separating pions and muons within the desired momentum range is possible.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.6\textwidth]{imgs/rich_ring_radius.png}
+        \linespread{1.0}
+        \caption{Cherenkov ring radius as a function of the particle momentum \cite{Bizzeti:2017dqh}}
+        \label{fig:rich_ring}
+    \end{figure}
     \subsection{Photon Detection System}\label{sec:PDS}
     \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
-    \section{Things to be moved}
-    \noindent From the T10 target, the charged kaon beam travels through the beam pipe to the experimental hall ECN3, where the first sub-detector is found. A differential Cherenkov detector tags the charged kaons in the beam. Cherenkov light is produced by charged particles passing through a CERN CEDAR vessel filled with Nitrogen gas at a pressure of around 1.75\,bar \cite{Bovet:1982xf}. 
-    Due to the high intensity and tight time resolution requirements employed at NA62, the original photo-detectors (PMT's) and front-end electronics were inadequate. The KTAG has been developed for the NA62 to meet the high kaon rate requirements and time resolution requirements of $\mathcal{O}(100ps)$.
-    \newline Downstream of the KTAG is the beam spectrometer named the Giga Tracker (GTK). The GTK comprises 4 silicon trackers stations to measure the beam's position, time and momentum. As the GTK is directly in the beamline, vetoing any particles produced from inelastic interactions is essential. This is done by the Charged Anti-coincidence detector (CHANTI) located slightly downstream of the final GTK station. The CHANTI detects charged particles using polystyrene base scintillators.
-    \newline The main decay volume is located downstream of the CHANTI and is in a large vacuum tube shown in figure \ref{fig:na62-det}. This is where kaons are allowed to decay if they are to be within the acceptance of the various sub-detectors. Downstream from this is the STRAW Spectrometer which provides kinematic measurements of the charged products of the kaon decays. It consists of four spectrometer chambers and a dipole magnet (MNP33) with two of the chambers located before the magnet and two after. A more detailed description of this detector is provided in section \ref{STRAW}.
-    \newline The Ring Imaging Cherenkov (RICH) follows the last straw chamber and is a 17\,m long neon-filled vessel. It is designed to distinguish between pions and muons and is part of the Particle Identification system (PID). This is also complemented by the Muon Veto (MUV) system comprising two hadronic calorimeters (MUV1 and MUV2)
-    \newline A Photon-Veto system provides coverage of photons produced from the decay region up to 50\,mrad with respect to the z-axis. This includes:
-    \begin{itemize}
-        \item 12 Large Angle Vetos (LAVs) placed along the decay region, between STRAW spectrometer chambers and after the RICH. Providing coverage of photons emitted at angles from 8.5 to 50\,mrad \cite{Gil_2017}.
-        \item Liquid Krypton calorimeter (LKr) which is located after the RICH and was used in the predecessor experiment NA48. 
-        \item Small Angle Veto (SAV) system, comprising of two shashlyk calorimeters named the Small Angle Calorimeter (SAC) and the Intermediate-Ring Calorimeter (IRC) which provides photon veto coverage for  small angles.
-    \end{itemize}
-    There are several other detectors, such as the MUV3, which provides fast signals for use in the L0 trigger system and a pair of Charged Particle Hodoscopes (CHODs), which also provide input to the L0 trigger system. Some additional veto detectors, such as MUV0 and the HASC are used to for analysis. 
-    \newline For the new run (after LS2), there have been several additions to the detector setup. The ANTI-0 detector is a hodoscope placed downstream of the CHANTI before the decay volume, used to veto halo particles (mostly muons) that enter the decay volume \cite{Danielsson:2723429}.
-     A second detector system has been implemented between the GTK stations to veto any decay products of kaons decaying between the GTK stations, named the Veto Counter (VC), it is made up of three stations of scintillators between GTK stations 3 and 2.
-    \newline Two sub-detectors, KTAG and STRAW spectrometer, will be described in more detail due to their relevance to the studies that are planned for my PhD. The KTAG-CEDAR has been selected due to my involvement in the CEDAR-H test beam. The STRAW spectrometer has been selected due to my participation in the development of flexibility of the sub-detector and its subsequent use in the symmetric NA62 study later on in this report.
-    \subsubsection{STRAW Spectrometer}\label{STRAW}
-    
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
