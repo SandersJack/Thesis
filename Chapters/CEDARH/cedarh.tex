@@ -1,8 +1,141 @@
 \documentclass[../../main.tex]{subfiles}
 
+\newcommand{\NN}{\ensuremath{\mathrm{N}_{2}}}
+\newcommand{\HH}{\ensuremath{\mathrm{H}_{2}}}
+
+\newcommand{\CN}{\mbox{CEDAR-N}}
+\newcommand{\CW}{\mbox{CEDAR-W}}
+\newcommand{\CH}{\mbox{CEDAR-H}}
+
 
 \begin{document}
-    
+    CEDARs were designed and built at CERN to detect secondary beam particles at the Super Proton Synchrotron (SPS). Two types of CEDAR were developed at CERN:
+    CEDAR-W and CEDAR-N, corresponding to the areas of use. The two designs differ in terms of energy range in which they can detect beam particles, with CEDAR-N 
+    able to separate kaons and pions up to $300 GeV / c$ but not detect protons below $60 GeV / c$. Whereas CEDAR-W can detect protons down to $12 GeV / c$ 
+    and separate kaons and pions up to $150 GeV / c$. 
+    %% Describe the previous performace of CEDAR-W with Nitrogen
+    \newline\indent Described in section \_\_, NA62 has run with a CEDAR-W since 2016 filled with Nitrogen (\NN\) at a pressure of 1.71\,bar (absolute pressure).
+    In this configuration, the CEDAR contributed to the most significant amount of material in the path of the beam, introducing $39 \times 10^{-3}\,X_0$ of material, 
+    where $X_0$ is one radiation length. The aluminum windows of the CEDAR vessel contribute $3.9 \times 10^{-3}\,X_0$ and the \NN\ gas contributes $35 \times 10^{-3}\,X_0$.
+    The material from the \CW\ with \NN\ results in multiple scattering of beam particles, which introduces an angular divergence of $32\,\mu rad$. Scattered beam particles 
+    contribute to the backgrounds for the searches for ultra-rare decays, so it is imperative to reduce the amount of material in the beam to control these backgrounds. 
+    It was proposed that a CEDAR filled with Hydrogen (\HH) could reduce the material due to the radiator gas. Using \HH\ as a radiator gas would require a pressure of 3.8\,bar 
+    to produce a similar Cherenkov angle as \NN at 1.71\bar, which would instead introduce $3.4 \times 10^{-3}\,X_0$ of material. This would result in a $21\,\%$ reduction in total 
+    material to $7.3 \times 10^{-3}\,X_0$. Resulting in an anglar beam divergence of $13\,\mu rad$ in both the horizontal and vertical dimensions. 
+
+    \newline\indent Taking into account that the four GTk stations contribute $20 \times 10^{-3}\,X_0$, the total beam material along the beam-line reduces from $59 \times 10^{-3}\,X_0$ 
+    to $27 \times 10^{-3}\,X_0$. Using the full NA62 simulation based on GEANT4, it is possible to estimate that the number of particles interacting inelastically and elastically upstream 
+    of the decay volume would reduce from $2.1\,\%$ to $0.9\,\%$ (DO THIS YOUR SELF TO CHECK). This reduction in scattering would result in higher kaon transmission (number of kaons reaching the
+    decay volume) and reduce the signal rates in downstream detectors. %%% May be we can add things about trigger rates but I think we should do a quick study
+
+    \section{Development of CEDAR-H}
+
+    \subsection{Optical Paramters}
+    \begin{table}[p]
+        \linespread{1.0}
+        \centering
+        \small\caption{Optical and mechanical parameters of \CW\ and \CH. All values are dimensions in millimetres unless otherwise stated. 
+        Positions along the beam axis are quoted with respect to the upstream end of the CEDAR.}
+        \label{table:CedarParameterValues}
+        
+        \begin{tabular}{@{}llrr@{}}
+        \textbf{CEDAR type} &   & \textbf{\CW} & \textbf{\CH} \\ 
+        \bottomrule
+        
+        Nominal gas type &   & \NN & \HH \\
+        \multicolumn{2}{@{}l}{Nominal pressure [bar]} & 1.71 & 3.80 \\
+        \midrule
+        
+        \multirow{2}{*}{Gas vessel cylinder}       & Length      & 4500 & 4500 \\
+        & Inner radius & 267  & 267 \\
+        \midrule
+        
+        \multirow{2}{*}{Gas vessel cap}      & Length       & 339 & 280 \\
+        & Inner radius  & 139 & 139 \\
+        \midrule
+        
+        \multirow{5}{*}{Chromatic corrector} & Position along the beam axis& 1855 & 1902 \\
+        & Radius of curvature  & 1385 & 1307 \\
+        & Central thickness    & 20   & 20 \\
+        & Inner radius         & 75   & 75 \\
+        & Outer radius         & 160  & 160 \\
+        \midrule
+        
+        \multirow{6}{*}{Mangin mirror}       & Position along the beam axis& 5353 & 5362 \\
+        & Radius of curvature: & &  \\
+        & ~~~~~~~ - refracting surface & 6615 & 8994 \\
+        & ~~~~~~~ - reflecting surface & 8610 & 9770 \\
+        & Central thickness                & 40   & 40 \\
+        & Inner radius                     & 50   & 40 \\
+        & Outer radius                     & 150  & 150 \\
+        \midrule
+        
+        \multirow{2}{*}{Diaphragm}           & Position along the beam axis                 & 872 & 911 \\
+        & Aperture central radius & 100  & 100 \\
+        \midrule
+        
+        \multirow{3}{*}{Condensers}          & Position along the beam axis & 832 & 871 \\
+        & Maximum thickness    & 10   & 10 \\
+        & Radius of curvature  & 300  & 300 \\
+        \midrule
+        
+        \multirow{4}{*}{Quartz windows}      & Position along the beam axis    & 472 & 531 \\
+        & Thickness                 & 10  & 10 \\
+        & Radius                    & 22.5  & 22.5 \\
+        & Radial distance to window centre & 103 & 103 \\ 
+        \bottomrule\bottomrule
+        
+        \multirow{3}{*}{Optical caps}          & Position along the beam axis & 450 & 450 \\
+        & Maximum thickness    & 4.24   & 4.24 \\
+        & Radius of curvature  & 114.62  & 114.62 \\
+        \midrule
+        
+        \multirow{5}{*}{Spherical mirrors}   & Position along the beam axis             & 322 & 322 \\
+        & Radius of curvature           & 51.68 & 77.52\\
+        & Diameter                      & 50  & 50 \\
+        & Radial distance to mirror centre & 106 & 106 \\ 
+        \end{tabular}
+        
+    \end{table}
+        
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/ManginReflec.pdf}
+        \linespread{1.0}
+        \caption{Meausured reflectivity of CEDAR-H mangin mirror conducted by Winlight System}
+        \label{fig:ManginReflec}
+    \end{figure}
+
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/TranmitCL.pdf}
+        \linespread{1.0}
+        \caption{Meausured transmittance of CEDAR-H condenser lenses conducted by Thomas Schneider at CERN}
+        \label{fig:CLTransmit}
+    \end{figure}
+
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/TranmitQW.pdf}
+        \linespread{1.0}
+        \caption{Meausured transmittance of CEDAR-H quartz lenses conducted by Thomas Schneider at CERN}
+        \label{fig:QWTransmit}
+    \end{figure}
+
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/ReflectivitySM.pdf}
+        \linespread{1.0}
+        \caption{Meausured reflectivity of KTAG spherical mirror conducted by Thomas Schneider at CERN}
+        \label{fig:CLTransmit}
+    \end{figure}
+
+
+    \section{Test-beam at CERN}
+
+    \section{Comissioning at CERN}
+
+    \section{CEDAR-H Performance at NA62}
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
