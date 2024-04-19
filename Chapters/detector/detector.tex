@@ -19,7 +19,7 @@
         \centering
         \includegraphics[width=13cm]{imgs/missingmasss_signal.png}
         \caption{Expected squared missing mass distributions of main kaon decays and $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ (scaled by $10^{10}$ for for visability). The solid 
-        coloured areas show the signal regions used to kinematically reject the domiant kaon decays.}
+        coloured areas show the signal regions used to reject the domiant kaon decays kinematically.}
         \label{fig:missing-mass-signal}
     \end{figure}
     The rest of this chapter will cover how NA62 fulfills the abovementioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line, upstream of the NA62 detector.
@@ -73,7 +73,7 @@
         \centering 
         \includegraphics[width=\textwidth]{imgs/After_GTK3.png}
         \linespread{1.0}
-        \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}. \todo{REPLACE WITH OWN}}
+        \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}.}
         \label{fig:AFTER-GTK-beam-line}
     \end{figure}
     \section{NA62 Detectors}
@@ -94,8 +94,11 @@
         \label{fig:Cedar_dia}
     \end{figure}
     \newline\indent In the original CERN design, the Cherenkov light exiting each CEDAR exit window was detected by an ET-9820QB photomultiplier tube (PMT) placed directly on the exit window, with a particle identified if there was a coincidence of at least six PMTs. 
-    However, these PMTs would not fulfill the timing ($\leq 100$\,ps) and rate requirements (\~ 45\,MHz of kaons) at NA62. Instead, the light from the exit windows are reflected radially by eight spherical mirrors onto 8 PMT planes, referred to as sectors.  
-    The PMT planes are equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The KTAG photo-detection system allowed the use of at least five sectors for particle identification, resulting in an improved kaon identification efficiency compared to the original setup.
+    However, these PMTs would not fulfill the timing ($\leq 100$\,ps) and rate requirements (\~ 45\,MHz of kaons) at NA62. 
+    %% Describe the KTAG more in depth with photos and diagrams
+    \newline \indent For NA62, a purpose-built photon-detection system was designed, constructed and mounted to the upstream end of the CEDAR Vessel.
+    The photon light from the CEDAR exit windows are reflected radially 90 degrees by eight spherical mirrors onto 8 PMT planes, referred to as sectors.  
+    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The KTAG photo-detection system allowed the use of at least five sectors for particle identification, resulting in an improved kaon identification efficiency compared to the original setup.
     A kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
     \newline\indent In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62 beamline after design at the Univeristy of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses Hydrogen as a radiator gas, 
     which required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H can be found in Section \ref{sec:CEDARH}.
@@ -119,16 +122,10 @@
         \centering 
         \includegraphics[width=\textwidth]{imgs/gtk_run1.png}
         \linespread{1.0}
-        \caption{Schematic of GTK stations within the acromat \cite{Gil_2017} for run 1. \todo{REPLACE WITH OWN}}
+        \caption{Schematic of GTK stations within the acromat \cite{Gil_2017} for run 1.}
         \label{fig:gtk_run1}
     \end{figure}
-    \begin{figure}[H]
-        \centering 
-        \includegraphics[width=\textwidth]{imgs/image.png}
-        \linespread{1.0}
-        \caption{Schematic of GTK stations within the acromat \cite{Gil_2017} for run 2. \todo{REPLACE WITH OWN}}
-        \label{fig:gtk_run2}
-    \end{figure}
+    %
     \indent Each station consists of 18000 pixels of size $300\times300\,\mu m^2$ in a matrix of $200\times90$, covering a total area of  $62.8\times27\, mm^2$ and is read out by application-specific integrated circuits (ASIC). 
     The tracker was placed within the beam, so the material has to be minimised to reduce the number of interactions with the beam and improve the angular resolution. The material budget for each station was set at $0.5\,\%$, corresponding to $500\,\mu m$ of Silicon.
     \subsection{Straw Spectrometer (Straw)}\label{sec:STRAW}
@@ -215,7 +212,7 @@
     \section{Triger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
 
     \ifSubfilesClassLoaded{%
-        \bibliographystyle{IEEEtran}
+        \bibliographystyle{ieeetr}
         \bibliography{../../../references.bib}%
     }{} 
 \end{document}
