@@ -28,13 +28,88 @@
     of the decay volume would reduce from $2.1\,\%$ to $0.9\,\%$ (DO THIS YOUR SELF TO CHECK). This reduction in scattering would result in higher kaon transmission (number of kaons reaching the
     decay volume) and reduce the signal rates in downstream detectors. %%% May be we can add things about trigger rates but I think we should do a quick study
 
-    \section{Development of CEDAR-H}
+    \section{CEDAR description}
+    
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/cedar_diagram.png}
+        \linespread{1.0}
+        \caption{Diagram showing the optics of the CEDAR and KTAG in green as well as expected Cherenkov ring path in blue}
+        \label{fig:ManginReflec}
+    \end{figure}
+    A CEDAR comprises a thermally insulated gas vessel comprising of two sections: a 4.3\,m long cylinder with an inner diameter of 53\,cm and a vessel cap 
+    which can differ in length, depending on the CEDAR variant. The CEDAR-W has a vessel cap of 34\,cm long, with the CEDAR-N's being 28\,cm long and is attached to the main cylinder 
+    at the upstream end. The gas vessel is separated from the vacuum of the beam-pipe by two aluminum windows at the upstream and downstream end. 
+    \newline\indent The beam is designed to pass through the CEDAR vessel along the longitudinal access, passing through the radiator gas. When the beam passes through the vessel Cherenkov
+    light is produced with an angle dependent on the mass and momentum of the beam particle and is defined as equation \ref{eq:Cherenkov2}.
+    \begin{equation}\label{eq:Cherenkov2}
+        cos(\theta) = \frac{1}{\beta n}
+    \end{equation}
+    The CEDAR contains optics inside the vessel connected to supports to allow the focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm. 
+    The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}, which is a mirror comprising of two spherical surfaces with the dowstream lense cemented onto a concave mirror. The 
+    mirror was designed to reduce any spheical aberrations, which is an effect intrinsic to lenses and curved mirrors where the light that strikes the spherical surface off-center is refracted/reflected
+    vary compared to the light that strikes the center. After the mirror is a plano-convex lens called the Chromatic Corrector, which is designed in such a way that it corrects for the chromatic dispersion of the radiator gas
+    and directs the light towards the diaphragm.
+    This is where the different wavelengths of light refract differently in a medium, causing the ring to disperse, which would cause issues when it reaches the small diaphragm opening. Both the Mangin mirror and the 
+    Chromatic corrector have a hole in the center to allow for the beam to pass through without impacting the optics. 
+    
+    \newline\indent The diaphragm shown in figure \ref{fig:cedarpics}, is a disk with eight seperate aperatures. Each aperature has an inner and outer element which allows the aperture to open as wide as 
+    20\,mm and closed to 0\,mm. These elements can be seen in Figure \ref{fig:cedarpics} (right), where the aperture is set at a small value only to select a single Cherenkov ring of radius 100\,mm.  
+    The mechanism is operated by a stepper motor connected to the shaft shown in figure \ref{fig:cedarpics} (left), where turning the shaft clockwise opens the diaphragm and the opposite closes it. The 
+    shaft is also connected to a potentiometer that measures the rotation, which can then be converted to an aperture in millimeters. A pair of end switches are in place to alert the user if the aperture 
+    is fully open or fully closed, which is essential so as not to cause any damage to the mechanical system.
+    
+    \begin{figure}[t]
+        \centering
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{imgs/Diaphragm.png} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{imgs/Diaphragm_close.png} }}%
+        \linespread{1.0}
+        \caption{Photos showing the CEDAR diaphragm. In the left, a fully open diaphragm shown, with the nose of the CEDAR fully removed.
+        In the right, a slightly open diaphragm shown through one of the quartz exit windows.}%
+        \label{fig:cedarpics}%
+    \end{figure}
+    
+    The light that passes through the aperture of the diaphragm then traverses a condenser lens (one for each aperture), designed to direct the light out of the exit windows parallel to the horizontal axis. The placement
+    of the lenses are shown in Figure \ref{fig:condenser} and can be seen after the diaphragm in Figure \ref{fig:cedarpics} (right).
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/Condensor_drawing.png}
+        \linespread{1.0}
+        \caption{Drawing showing the placement of the CEDAR condenser lenses.}
+        \label{fig:condenser}
+    \end{figure}
+    
+    The light then exits the CEDAR through eight quartz exit windows placed around the beam pipe at the upstream end of the CEDAR, shown in Figure \ref{fig:exit-windows}. Attached to the exit windows are glass filters, designed to 
+    attenuate light below 240\,nm to remove light from unwanted particles.
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.5\textwidth]{imgs/exit_windows.png}
+        \linespread{1.0}
+        \caption{Image showing the exit windows at the upstream end of the CEDAR-W}
+        \label{fig:exit-windows}
+    \end{figure}
 
-    \subsection{Optical Paramters}
+    In the original CEDAR design \cite{Bovet:1982xf}, light exiting the CEDAR through the exit windows was detected by eight ET-9820QB photomultiplier tubes (PMTs), with one attached to each window. 
+    A particle was identified when there was a coincidence in at least six PMTs.
+    However, this setup would not be applicable for NA62, which requires strict timming requirements on the selection of kaons of less than 100\,ps, a kaon identification efficecy of greater than 95\,\% 
+    and a pion miss-identification probability of less than $10^{-4}$. To achieve these strict requirements, a purpose-built photon detection system was designed \cite{GOUDZOVSKI201586} and attached to the 
+    upstream end of the CEDAR. The light exiting the quartz windows traverses through optical caps attached to the windows, which focus the light onto spherical mirrors. The spherical mirrors, one for each exit 
+    window reflect the light 90 degrees into eight light boxes and boraden the light to increase the resultant light spot and are shown in Figure \ref{fig:spherical-mirror}. Each lightbox is defined as a sector 
+    that will be used from now on. Each sector contains a light guid before a PMT array equipped with 48 Hamamatsu PMTs (32 of type R9880U-110 and 16 of type R7400U-03). 
+    The light guide consists of a matrix of cones coated by aluminised mylar to maximise their reflectivity and direct the light onto the active area of each PMT. 
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.5\textwidth]{imgs/spherical_mirror.png}
+        \linespread{1.0}
+        \caption{Image showing each of the CEDAR-H spherical mirrors, before installation into the KTAG}
+        \label{fig:spherical-mirror}
+    \end{figure}    
+    % Explain how particles are detected
+    \section{Development of CEDAR-H}
     \begin{table}[p]
         \linespread{1.0}
         \centering
-        \small\caption{Optical and mechanical parameters of \CW\ and \CH. All values are dimensions in millimetres unless otherwise stated. 
+        \small\caption{Optical and mechanical parameters of \CW\ and \CH. All values are dimensions in millimeters unless otherwise stated. 
         Positions along the beam axis are quoted with respect to the upstream end of the CEDAR.}
         \label{table:CedarParameterValues}
         
