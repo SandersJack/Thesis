@@ -322,8 +322,6 @@ contributes 35 ×10−3X0. The material from the with results in multiple scatte
 of beam particles, which introduces an angular divergence of 32 µrad. Scattered
 beam particles contribute to the backgrounds for the searches for ultra-rare decays,
 224.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
-Figure 4.1: Diagram showing the optics of the CEDAR and KTAG in green as well
-as expected Cherenkov ring path in blue
 so it is imperative to reduce the amount of material in the beam to control these
 backgrounds. It was proposed that a CEDAR filled with Hydrogen () could reduce
 the material due to the radiator gas. Using as a radiator gas would require a
@@ -338,8 +336,10 @@ ber of particles interacting inelastically and elastically upstream of the decay
 would reduce from 2 .1 % to 0 .9 % (DO THIS YOUR SELF TO CHECK). This re-
 duction in scattering would result in higher kaon transmission (number of kaons
 reaching the decay volume) and reduce the signal rates in downstream detectors.
-234.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
 4.1 CEDAR description
+Figure 4.1: Diagram showing the optics of the CEDAR and KTAG in green as well
+as expected Cherenkov ring path in blue
+234.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
 A CEDAR comprises a thermally insulated gas vessel comprising of two sections:
 a 4.3 m long cylinder with an inner diameter of 53 cm and a vessel cap which can
 differ in length, depending on the CEDAR variant. The CEDAR-W has a vessel cap
@@ -364,11 +364,8 @@ the Chromatic Corrector, which is designed in such a way that it corrects for th
 chromatic dispersion of the radiator gas and directs the light towards the diaphragm.
 This is where the different wavelengths of light refract differently in a medium,
 causing the ring to disperse, which would cause issues when it reaches the small
-244.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
-Figure 4.2: Photos showing the CEDAR diaphragm. In the left, a fully open di-
-aphragm shown, with the nose of the CEDAR fully removed. In the right, a slightly
-open diaphragm shown through one of the quartz exit windows.
 diaphragm opening. Both the Mangin mirror and the Chromatic corrector have a
+244.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
 hole in the center to allow for the beam to pass through without impacting the
 optics.
 The diaphragm shown in figure ??, is a disk with eight seperate aperatures. Each
@@ -382,36 +379,131 @@ measures the rotation, which can then be converted to an aperture in millimeters
 A pair of end switches are in place to alert the user if the aperture is fully open
 or fully closed, which is essential so as not to cause any damage to the mechanical
 system.
+Figure 4.2: Photos showing the CEDAR diaphragm. In the left, a fully open di-
+aphragm shown, with the nose of the CEDAR fully removed. In the right, a slightly
+open diaphragm shown through one of the quartz exit windows.
 254.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
-Figure 4.3: Drawing showing the placement of the CEDAR condenser lenses.
 The light that passes through the aperture of the diaphragm then traverses a
 condenser lens (one for each aperture), designed to direct the light out of the exit
 windows parallel to the horizontal axis. The placement of the lenses are shown in
 Figure ??and can be seen after the diaphragm in Figure ??(right).
+Figure 4.3: Drawing showing the placement of the CEDAR condenser lenses.
 The light then exits the CEDAR through eight quartz exit windows placed
 around the beam pipe at the upstream end of the CEDAR, shown in Figure ??.
 Attached to the exit windows are glass filters, designed to attenuate light below
 240 nm to remove light from unwanted particles.
+264.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
+Figure 4.4: Image showing the exit windows at the upstream end of the CEDAR-W
 In the original CEDAR design [ ?], light exiting the CEDAR through the exit
 windows was detected by eight ET-9820QB photomultiplier tubes (PMTs), with one
 attached to each window. A particle was identified when there was a coincidence in
 at least six PMTs. However, this setup would not be applicable for NA62, which
 requires strict timming requirements on the selection of kaons of less than 100 ps,
 a kaon identification efficecy of greater than 95 % and a pion miss-identification
-264.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
-Figure 4.4: Image showing the exit windows at the upstream end of the CEDAR-W
 probability of less than 10−4. To achieve these strict requirements, a purpose-built
 photon detection system was designed [ ?] and attached to the upstream end of
 the CEDAR. The light exiting the quartz windows traverses through optical caps
 attached to the windows, which focus the light onto spherical mirrors. The spherical
 mirrors, one for each exit window reflect the light 90 degrees into eight light boxes
-and boraden the light to increase the resultant light spot and are shown in Figure
+and broaden the light to increase the resultant light spot and are shown in Figure
 ??. Each lightbox is defined as a sector that will be used from now on. Each sector
 contains a light guid before a PMT array equipped with 48 Hamamatsu PMTs (32
 of type R9880U-110 and 16 of type R7400U-03). The light guide consists of a matrix
+274.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
 of cones coated by aluminised mylar to maximise their reflectivity and direct the
 light onto the active area of each PMT.
-274.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
+Figure 4.5: Image showing each of the CEDAR-H spherical mirrors, before installa-
+tion into the KTAG
+As mentioned above, the angle of the produced Cherenkov light is defined by
+equation ??, which is related to the refractive index and the velocity of the particle.
+Asβis constant the radius of the Cherenkov rings is dependent on the density of the
+gas. As the pressure of the radiator gas is increased the refractive index increases
+which in turn increases the ring radius, allowing a pressure to be selected where a
+kaon at 75 Gev/c produces a ring radius of 100 mm at the diaphragm, matching the
+center of the aperture. Selecting a small aperture, less than 2.5 mm allows for only
+the light from the kaon to pass through, with the center of the pion ring being 2 mm
+larger and the center of the proton ring being 6 mm smaller, shown in Figure ??.
+Selection of a single particle’s Cherenkov ring depends on the beam divergence being
+less than 100 µmand the CEDAR vessel being aligned parallel to the beam. The
+alignment is performed using a pair of motors at the downstream end of the detector,
+which displaces the downstream end by ±5mmin both the XY dimension and the
+fact the CEDAR is fixed at the upstream end. At a temperature of 293 K, the gas
+pressure to select kaons at 75 Gev/c is 3.71barfor in CEDAR-W and 3 .85barfor
+in CEDAR-H, with these values fluctuating by 0.34 % for every 1 K of temperature
+284.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
+difference. The CEDAR vessel is sealed and insulated, allowing it to operate with a
+fixed amount of gas. It is also insensitive to any small fluctuations in environmental
+temperature.
+90 92 94 96 98100 102 104 106
+Radius at diaphragm [mm]200300400500600700Wavelength [nm]N2
+0.00.20.40.60.81.0
+Figure 4.6: Plot showing the the simulated Cherenkov ring radius vs wavelength at
+the diaphragm for CEDAR-W with at a pressure of 3.71 bar with the KTAG PMT
+effective quantum efficiency applied.
+294.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
+4.2 Development of CEDAR-H
+90 92 94 96 98100 102 104 106
+Radius at diaphragm [mm]200300400500600700Wavelength [nm]H2
+0.00.20.40.60.81.0
+Figure 4.7: Simulated Cherenkov ring radius aginst wavelength at the diaphragm for
+CEDAR-W with at a pressure of 3.67 bar with the KTAG PMT effective quantum
+efficiency applied.
+Due to the different chromatic dispersion effects in Hydrogen, it was not possible to
+use the CEDAR-W using ˙This is apparent in Figure ??, where the light is distorted
+when compared to the CEDAR-W with shown in Figure ??, where it is not feasible
+to only select the light of the kaon without sacrificing light yield. It was decided
+that new vessel would have to be developed with updated optics.
+An available CEDAR-N vessel was chosen to be used as the CEDAR-H structure.
+Most of the mechanical components, such as the diaphragm and mirror supports,
+were not envisioned to change due to their complexity. This reduced the degrees of
+304.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
+freedom for optimisation to two: the radius of curvature of the corrector lense and
+the two surfaces of the mirror. Initial parameters of the optical components were
+found using an analytical ray-tracing procedure that considered the point of origin
+of the Cherenkov light and the wavelength spectrum. The parameters were iterated
+to achieve a ring radius of 100 mm at the diapghram and to minimise the divergence
+of the light. Due to the pressure-dependent effects of the chromatic dispersion and
+spherical aberration, each computation was completed at pressures between 3.8 to
+4.1 bar in steps of 0.1 bar.
+Once the inital parameters had been found, a full GEANT4 simulation was
+employed to validate the results from the analytical computation. After some more
+optimisation, the simulation was then used to modify the optical parameters to
+maximise the number of photons reaching the KTAG PMTs. The radius of the beam
+hole of the Mangin mirror was reduced with respect to the original CEDAR design,
+resulting in a greater reflective surface and increasing the number of photons reaching
+the PMTs. The spherical mirrors were updated to improve the light distribution on
+the PMT arrays. It was found that using the condenser lenses from the CEDAR-W
+compared to the CEDAR-N resulted in more significant photon yield.
+During the optimization process, it was found that the results showed negligible
+differences between 3.8 and 4.1 bar as the increase of Cherenkov photons at high
+pressure was offset by the improved light distribution on the PMT array at low
+pressures. Due to safety considerations, the lower pressure of 3.8 bar was selected.
+The optics sufficiently correct the chromatic dispersion at this pressure setting,
+producing a Gaussian width of 0.4 mm for the kaon and pion rings. Allowing for
+the selection of the kaon with a 2,diaphragm shown in Figure ??with minimal light
+314.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
+from the pion passing through.
+92 94 96 98 100 102 104
+Radius at diaphragm [mm]0250005000075000100000125000150000175000200000Proton
+Kaon
+Pion
+90 92 94 96 98100 102 104 106
+Radius at diaphragm [mm]200300400500600700Wavelength [nm]
+0.00.20.40.60.81.0
+Figure 4.8: Simulated Cherenkov ring radius at the diaphragm of CEDAR-H with at
+3.8 bar for proton, kaon, and pion beam particles (left plot) and against wavelength
+(right plot). Both have the effective KTAG PMT Quantum efficiency applied
+The full simulation at a pressure of 3.8 bar at a diaphragm aperture of 2 mm
+with the optmised oprtical parameters lead to a kaon identification probability (5
+sectors) of 99.5 % and a pion misidentification probability of less than 10−4, which
+exceed the requirements set for operation at NA62.
+CEDAR-H was constructed at CERN in 2022 using the mechanical and optical
+parameters found in Table ??compared to CEDAR-W.
+The Mangin mirror and chromatic correctors were constructed using high-quality
+quartz blanks and tested by an outside company (Winlight) to sub-micron toler-
+ances. The reflectivity of the Mangin mirror was measured and is found in Figure
+??, peaking at just under 90˙% reflective at 300 nm.
+324.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 Table 4.1: Optical and mechanical parameters of and . All values are dimensions in
 millimeters unless otherwise stated. Positions along the beam axis are quoted with
 respect to the upstream end of the CEDAR.
@@ -450,20 +542,19 @@ Spherical mirrorsPosition along the beam axis 322 322
 Radius of curvature 51.68 77.52
 Diameter 50 50
 Radial distance to mirror centre 106 106
-284.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
-Figure 4.5: Image showing each of the CEDAR-H spherical mirrors, before installa-
-tion into the KTAG
-4.2 Development of CEDAR-H
-4.3 Test-beam at CERN
-4.4 Comissioning at CERN
-4.5 CEDAR-H Performance at NA62
-294.5. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
+334.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 200 300 400 500 600 700
 Wavelength [nm]0.7000.7250.7500.7750.8000.8250.8500.8750.900ReflectivityRelectivity of Mangin Mirror vs Photon Wavelength
 Measured Reflectvivty
-Figure 4.6: Meausured reflectivity of CEDAR-H mangin mirror conducted by Win-
+Figure 4.9: Meausured reflectivity of CEDAR-H mangin mirror conducted by Win-
 light System
-304.5. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
+During the construction process of CEDAR-H, each optical component was
+tested and measured to ensure that their performance would not impact the light
+yield seen in simulations. The transmittance of the condenser lenses is shown in Fig-
+ure??, with each lens having over 90 % transmittance for light over 240 nm, which
+is the limit for the glass filters attached to the exit windows. The transmittance of
+the quartz exit windows was also measured, and the results are shown in Figure ??.
+344.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 200 300 400 500 600 700
 Wavelength [nm]0.800.820.840.860.880.900.920.940.96TransmittanceCEDAR-H Condensor Lenses Transmittance
 Measured Transmittance C0
@@ -474,9 +565,8 @@ Measured Transmittance C4
 Measured Transmittance C5
 Measured Transmittance C6
 Measured Transmittance C7
-Figure 4.7: Meausured transmittance of CEDAR-H condenser lenses conducted by
+Figure 4.10: Meausured transmittance of CEDAR-H condenser lenses conducted by
 Thomas Schneider at CERN
-314.5. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
 200 300 400 500 600 700
 Wavelength [nm]0.00.20.40.60.8TransmittanceCEDAR-H Quartz Windows Transmittance
 Measured Transmittance QW0
@@ -487,28 +577,35 @@ Measured Transmittance QW4
 Measured Transmittance QW5
 Measured Transmittance QW6
 Measured Transmittance QW7
-Figure 4.8: Meausured transmittance of CEDAR-H quartz lenses conducted by
+Figure 4.11: Meausured transmittance of CEDAR-H quartz lenses conducted by
 Thomas Schneider at CERN
-324.5. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
+354.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+The spherical mirrors used in the KTAG to reflect the light into the eight light
+boxes were produced at CERN from off-the-shelf spherical lenses, which are the
+coated with a reflective aluminum surface at CERN. The reflectivity was measured
+at CERN and is found in Figure ??.
 200 300 400 500 600 700
 Wavelength [nm]0.600.650.700.750.800.850.90ReflectivityReflectivity of KTAG Spherical Mirrors
 Measured Reflectivity SM 0-3
 Measured Reflectivity SM 4-7
-Figure 4.9: Meausured reflectivity of KTAG spherical mirror conducted by Thomas
+Figure 4.12: Meausured reflectivity of KTAG spherical mirror conducted by Thomas
 Schneider at CERN
-33Chapter 5
+4.3 Test-beam at CERN
+4.4 Comissioning at CERN
+4.5 CEDAR-H Performance at NA62
+36Chapter 5
 Flexible MC
-34Chapter 6
+37Chapter 6
 Flexible MC
-35Chapter 7
+38Chapter 7
 Future Kaon Experiments
 7.1 High Intensity Kaon Experiments (HIKE)
 7.1.1 RICH upgrade design
 7.1.2 GTk upgrade design
 7.1.3 Detector Rates
-36Chapter 8
+39Chapter 8
 Dark Photon Analysis
-37Bibliography
+40Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -526,4 +623,4 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-38
+41
