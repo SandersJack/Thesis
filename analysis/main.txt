@@ -605,30 +605,142 @@ compared to 70 m when installed in NA62. Resulting in a slightly different beam
 composition when compared to NA62, with 4 % kaons, 25 % protons, and 71 % pions.
 The beam divergence at the entrance of the CEDAR was 80 µmin the H6 beamline
 compared to 70 µmin NA62, well within the operating divergence of the CEDAR.
-In the test beam, a ET 9820QB PMT was installed onto each exit window
+In the test beam, an ET 9820QB PMT was installed onto each exit window
 and operated at a voltage of 2 kV with a 30 mV discriminator voltage to achieve
-374.4. COMISSIONING AT CERN CHAPTER 4. CEDARH
+374.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
 single-photoelectron sensitivity. The setup is described in Figure ??where a pair of
 scintilating counters were installed at either end of the detector (one downstream
 and one upstream) to provide a trigger when each beam particle passed through the
 vessel. For a typical spill there were 2 .8×105particles and for each spill the six,
 seven and eight-fold coincidences were recorded in a database for later analysis.
 Figure 4.14: Diaphragm showing the CEDAR test-beam setup in H6
+After the installation, the first step of the test-beam were to conduct an alignment
+of the CEDAR vessel. As described in Section ??, the CEDAR is attached to XY
+motors which are used to align the vessel to the beam. The diagram in Figure ??
+depicts how moving the CEDAR vessel will impact the position of the Cherenkov
+ring at the diaphragm. The alignment aims to center the ring directly within the
+diaphragm aperture to maximise the light yield.
+384.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+Figure 4.15: Diaphragm depicting the impact of the Cherenkov at the diaphragm
+during an alignment. MAKE OWN
+It is possible to quantify the alignment in two ways: to maximise the number
+of photo-electrons per beam particle and to balance the number of photo-electrons
+per trigger on each PMT. For the first alignment, the pressure was set at 4.2 bar
+and the diaphragm was set at a wide aperture at 19 mm to allow the light from the
+kaon, pion and proton to pass through the diaphragm, with the results shown in
+Figure ??. The motors were moved until the counts on the PMT over triggers were
+around 100 and were balanced (shown on the right of Figure ??). A large aperture
+also allows for the rough calculation of the PMT efficiency, so most particles that
+produce a trigger should be selected. From Figure ??it is clear that the PMTs are
+at least 95 % efficiency with the average being 98.3 %.
+394.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+Figure 4.16: Output of data collection on CEDAR at the end of the first alignment
+showing the positions of the XY motors, the diaphragm aperature, pressure of the
+CEDAR, the average number of photo-electrons per PM and then the spacial align-
+ment of the PMTs.
+After the first alignment, doing another with a smaller diaphragm is essential to
+ensure that you are truly aligned, as the large diaphragm only allows for a rough
+alignment but provides a starting point. The second alignment was conducted at
+4.29 bar, where the pronton ring had a radius of 100 mm at the diaphragm, which
+had an aperture of 1.3 mm. The alignment results are shown in Figure ??and at
+three different aperture settings. The alignment was successful, with the counts on
+the PMTs being within a couple percent. It would also be expected that the counts
+per trigger would reperesnt the beam composiong of protons, which it did within a
+few percent. It is expected to lose light at small apertures due to the width of the
+Cherenkov ring being 0.4 mm for the kaon and slightly larger for the proton.
+404.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+Figure 4.17: Output of data collection on CEDAR at the end of the second align-
+ment showing the positions of the XY motors, the diaphragm aperture, pressure of
+the CEDAR, the average number of photo-electrons per PM and then the spacial
+alignment of the PMTs. Each entry is at a different diaphragm aperture of 0.79, 1
+and 2.02 mm.
+The next stage of the test beam was to conduct a pressure scan. Before the
+scan, the pressure of the CEDAR-H was set where there were no selected beam
+particles, where a selected beam particle is defined when there are at least 6 PMTs
+in coincidence, which was 4.4 bar. The scan consisted of reducing the pressure in
+small steps and collecting a number of bursts of data. This was completed at a
+diaphragm width of 2.3 mm, which was slightly larger than the standard operating
+setting used with the CEDAR-W at NA62. The aperture was chosen to maximise
+the light yield of the detector to compare the computed beam composition to the
+expected at the H6 beam line. The results of the pressure scan are found in Figure
+??, with the selection of each beam component visible in the plots. The protons
+have maximum light yield at 4.26 bar with 0.232 coincidences per trigger, with the
+build-up in coincidences caused by the gradual entrance of the Cherenkov ring into
+the aperture of the diaphragm. The kaon has a maxium light yield at 3.844, with
+0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69 bar,
+with 0.721 coincidences per trigger. With the fraction of triggers within 1-2 % of the
+414.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+expected beam composition, resulting in the selection of a particle in 99.1 % of the
+triggers. It was expected that not all light from the proton ring would pass through
+the 2.3 mm diaphragm due to its large gaussian width and distorted shape, shown
+in Figure ??
+3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3 4.4
+Pressure [bar]0.00.10.20.30.40.50.60.70.8Coincidences per trigger6-fold
+7-fold
+8-fold
+3.6 3.8 4.0 4.2 4.4
+Pressure [bar]106
+105
+104
+103
+102
+101
+100101Coincidences per trigger6-fold
+7-fold
+8-fold
+Figure 4.18: Results of the first pressure scan at the H6 test beam at a diaphragm
+aperture of 2.3 mm. On the left are coincidences per trigger against pressure, and
+on the right in log scale.
+The light yield of CEDAR-H can be computed from the 6, 7, and 8 coincidences
+per trigger shown in Figure ??. The light yeild can be computed using either of the
+two equations below,
+λ= ln
+1 +8
+η7/η8−1
+(4.2)
+and
+λ= ln"
+1 +14p
+4−7(1−η6/η8)−2#
+(4.3)
+with ηNdefined as the probability of an N-fold coincidence and λbeing the number
+of photo-electrons per PMT. The ratios η7/η8andη6/η8are shown in Figure ??. The
+two equations ??and??are used to cross-check the result and then averaged. At
+424.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
+the pion pressure (4.26 bar), η7/η8= 0.856 and η6/η8= 0.550 producing an average
+light yield of λ= 2.372. The proton yeilded slightly less light with η7/η8= 0.840
+andη6/η8= 0.528 producing an average yeild of λ= 2.293. At the kaon pressure
+(3.844 bar), the ratios of η7/η8= 0.869 and η6/η8= 0.574 producing an average yield
+ofλ= 2.454 which would result in a total of 19.63 photo-electrons per kaon. This
+was a positive sign that the optics had been correctly manufactured and installed,
+however the diagram was wide with respect to the normal NA62 setting. It is clear
+that the 2.3 mm diapgrham could not be used in NA62 due to the un-satisfactory
+kaon-pion separation seen in Figure ??, where the probability of misidentification
+of a pion at the kaon pressure is too high.
+3.6 3.8 4.0 4.2 4.4
+Pressure [bar]0.00.20.40.60.8RatioR76
+R87
+Figure 4.19: Ratios of η7/η8andη6/η8with respect to pressure at a diaphragm
+aperture of 2.3 mm. CREATE NEW ONE AS THIS HAS ERROR in labels
+434.4. COMISSIONING AT CERN CHAPTER 4. CEDARH
+Several pressure scans were completed at different diaphragm aperture to able to
+select a working point that had both great light yield and low pion misidentification
+(pion-kaon seperation)
 4.4 Comissioning at CERN
 4.5 CEDAR-H Performance at NA62
-38Chapter 5
+44Chapter 5
 Flexible MC
-39Chapter 6
+45Chapter 6
 Flexible MC
-40Chapter 7
+46Chapter 7
 Future Kaon Experiments
 7.1 High Intensity Kaon Experiments (HIKE)
 7.1.1 RICH upgrade design
 7.1.2 GTk upgrade design
 7.1.3 Detector Rates
-41Chapter 8
+47Chapter 8
 Dark Photon Analysis
-42Bibliography
+48Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -646,4 +758,4 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-43
+49
