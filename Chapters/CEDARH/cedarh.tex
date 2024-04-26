@@ -361,11 +361,50 @@
         \caption{Ratios of $\eta_{7}/\eta_{8}$ and $\eta_{6}/\eta_{8}$ with respect to pressure at a diaphragm aperture of 2.3\,mm. CREATE NEW ONE AS THIS HAS ERROR in labels}
         \label{fig:alignment_res2_ratio}
     \end{figure}
-    Several pressure scans were completed at different diaphragm aperture to able to select a working point that had both great light yield and low pion misidentification (pion-kaon seperation)
-    
-    %% 2x2 grid of the pressure scans at different diagrams
-    %% Then a table with the components, ratios and light yield
-    
+    Several pressure scans were completed at different diaphragm apertures to select a working point with great light yield and low pion misidentification (pion-kaon separation). The results are shown in Figure \ref{testbeamPresures} and the corresponding ratios and average number of photo-electrons be beam particle is 
+    described in Table \ref{tab:testbeam_val}. 
+    The pressure scan at 2\,mm is shown in the top left plot of Figure \ref{fig:testbeamPresures}; this provides a similar light yield as the 2.3,\mm but with greater separation between the pion and kaon peaks, however, there is no clear seperation in the six-fold coincidences. This is important as in 
+    NA62 was expected to continue the particle selection with at least five sectors, but unfortunately, this was unavailable at the test beam. The top right of \ref{fig:testbeamPresures} was at a similar diaphragm aperture as used at NA62 of 1.7\,mm. Compared to the 2,\mm pressure scan, the light yield decreased only by 1.7\,\% but the 
+    separation of the kaon-pion peak has increased dramatically, with the estimated six sector coincidences of the pion peak falling well below $10^{-6}$ at the kaon pressure. 
+    %% Maybe quantify the separation!
+    The final pressure scans at 1.2\,mm and 1\,mm, shown in the lower plots in Figure \ref{fig:testbeamPresures}, show complete separation between the kaon-pion peaks, however it is possible to see in the figure that the light yeild is being reduced at the particles pressures as the peaks no longer have a flat top. This suggests that at 
+    1.3,\mm the diagram aperture is narrower than the width of the Cherenkov ring. This is also clear in Table \ref{tab:testbeam_val} where at 1\,mm the average photo-electrons per kaon was 16.03, which would result in less than 95\,\% identification efficiency at five sectors so would not be acceptable for use in NA62.
+
+    \begin{figure}[H]
+        \centering
+        \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/2mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}\hfill
+        \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/17mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}\\
+        \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/12mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}\hfill
+        \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/1mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}
+        \linespread{1.0}
+        \caption{Results of the CEDAR-H pressure scans taken during the 2022 test beam. Top left was conducted with a diagram aperture of 2\,mm, top right with a diagram aperture of 1.7\,mm, 
+        bottom left with a diagram aperture of 1.2\,mm and bottom right with a diagram aperture of 1\,mm}
+        \label{fig:testbeamPresures}
+    \end{figure}
+
+    \begin{table}[H]
+        \linespread{1.0}
+        \centering
+        \small
+        \resizebox{\textwidth}{!}{%
+            \begin{tabular}{|c|cll|lll|lll|}
+            \hline
+            \multicolumn{1}{|l|}{\multirow{2}{*}{Diaphragm Aperture [mm]}} & \multicolumn{3}{l|}{Proton} & \multicolumn{3}{l|}{Kaon} & \multicolumn{3}{l|}{Pion} \\ \cline{2-10} 
+            \multicolumn{1}{|l|}{} & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE \\ \hline
+            2.0 & \multicolumn{1}{c|}{0.825} & \multicolumn{1}{l|}{0.510} & 17.84 & \multicolumn{1}{l|}{0.869} & \multicolumn{1}{l|}{0.568} & 19.46 & \multicolumn{1}{l|}{0.853} & \multicolumn{1}{l|}{0.544} & 18.83 \\ \hline
+            1.7 & \multicolumn{1}{c|}{0.790} & \multicolumn{1}{l|}{0.471} & 16.70 & \multicolumn{1}{l|}{0.859} & \multicolumn{1}{l|}{0.558} & 19.13 & \multicolumn{1}{l|}{0.843} & \multicolumn{1}{l|}{0.534} & 18.52 \\ \hline
+            1.2 & \multicolumn{1}{c|}{0.695} & \multicolumn{1}{l|}{0.388} & 14.37 & \multicolumn{1}{l|}{0.827} & \multicolumn{1}{l|}{0.517} & 18.00 & \multicolumn{1}{l|}{0.813} & \multicolumn{1}{l|}{0.500} & 17.54 \\ \hline
+            1.0 & \multicolumn{1}{c|}{0.581} & \multicolumn{1}{l|}{0.385} & 13.12 & \multicolumn{1}{l|}{0.759} & \multicolumn{1}{l|}{0.448} & 16.03 & \multicolumn{1}{l|}{0.757} & \multicolumn{1}{l|}{0.446} & 16.00 \\ \hline
+            \end{tabular}%
+        }
+        \caption{Table containing the ratios of $\eta_{6}/\eta_{8}$ and $\eta_{7}/\eta_{8}$, asweel as the photo-electrons per beam particle from the pressure scans at different diaphragm apertures. NEED TO CHECK THESE NUMBERS}
+        \label{tab:testbeam_val}
+    \end{table}
+    %% Dipaghram scans
+
+    %% Then comparison with 2011 test beam CEDAR-W
+
+    %% Then describe the selection and why it was chosen
     \section{Comissioning at CERN}
 
  
