@@ -28,7 +28,7 @@
     of the decay volume would reduce from $2.1\,\%$ to $0.9\,\%$ (DO THIS YOUR SELF TO CHECK). This reduction in scattering would result in higher kaon transmission (number of kaons reaching the
     decay volume) and reduce the signal rates in downstream detectors. %%% May be we can add things about trigger rates but I think we should do a quick study
 
-    \section{CEDAR description}
+    \section{CEDAR description}\label{sec:cedar_desc}
     
     \begin{figure}[H]
         \centering 
@@ -281,7 +281,7 @@
     CEDAR-H was installed 440\,m downstream of the target, compared to 70\,m when installed in NA62. Resulting in a slightly different beam composition when compared to NA62, with 4\,\% kaons, 25\,\% protons, and 71\,\% pions. 
     The beam divergence at the entrance of the CEDAR was $80\,\mu m$ in the H6 beamline compared to $70\,\mu m$ in NA62, well within the operating divergence of the CEDAR. 
 
-    In the test beam, a ET 9820QB PMT was installed onto each exit window and operated at a voltage of 2\,kV with a 30\,mV discriminator voltage to achieve single-photoelectron sensitivity. The setup is described in Figure \ref{fig:CEDARHTest_dia} where a pair of scintilating 
+    In the test beam, an ET 9820QB PMT was installed onto each exit window and operated at a voltage of 2\,kV with a 30\,mV discriminator voltage to achieve single-photoelectron sensitivity. The setup is described in Figure \ref{fig:CEDARHTest_dia} where a pair of scintilating 
     counters were installed at either end of the detector (one downstream and one upstream) to provide a trigger when each beam particle passed through the vessel. For a typical spill there were $2.8\times 10^{5}$ particles and for each spill the six, seven and eight-fold 
     coincidences were recorded in a database for later analysis.
     \begin{figure}[H]
@@ -291,8 +291,84 @@
         \caption{Diaphragm showing the CEDAR test-beam setup in H6}
         \label{fig:CEDARHTest_dia}
     \end{figure}
+
+    After the installation, the first step of the test-beam were to conduct an alignment of the CEDAR vessel. As described in Section \ref{sec:cedar_desc}, the CEDAR is attached to XY motors which are used to align the vessel to the beam. The diagram in Figure \ref{fig:alignment_dia}
+    depicts how moving the CEDAR vessel will impact the position of the Cherenkov ring at the diaphragm. The alignment aims to center the ring directly within the diaphragm aperture to maximise the light yield. 
+    
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/alingment_diagram.png}
+        \linespread{1.0}
+        \caption{Diaphragm depicting the impact of the Cherenkov at the diaphragm during an alignment. MAKE OWN}
+        \label{fig:alignment_dia}
+    \end{figure}
+    It is possible to quantify the alignment in two ways: to maximise the number of photo-electrons per beam particle and to balance the number of photo-electrons per trigger on each PMT. For the first alignment, the pressure was set at 4.2\,bar and the diaphragm was set at a wide aperture at 19\,mm to 
+    allow the light from the kaon, pion and proton to pass through the diaphragm, with the results shown in Figure \ref{fig:alignment_res1}. The motors were moved until the counts on the PMT over triggers were around 100 and were balanced (shown on the right of Figure \ref{fig:alignment_res1}).
+    A large aperture also allows for the rough calculation of the PMT efficiency, so most particles that produce a trigger should be selected. From Figure \ref{fig:alignment_res1}
+    it is clear that the PMTs are at least 95\,\% efficiency with the average being 98.3\,\%.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/test_beamalingment1.png}
+        \linespread{1.0}
+        \caption{Output of data collection on CEDAR at the end of the first alignment showing the positions of the XY motors, the diaphragm aperature, pressure of the CEDAR, the average number of 
+        photo-electrons per PM and then the spacial alignment of the PMTs.}
+        \label{fig:alignment_res1}
+    \end{figure}
+    After the first alignment, doing another with a smaller diaphragm is essential to ensure that you are truly aligned, as the large diaphragm only allows for a rough alignment but provides 
+    a starting point. The second alignment was conducted at 4.29\,bar, where the pronton ring had a radius of 100\,mm at the diaphragm, which had an aperture of 1.3\,mm. The alignment results are shown in Figure \ref{fig:alignment_res2} and  
+    at three different aperture settings. The alignment was successful, with the counts on the PMTs being within a couple percent. It would also be expected that the counts per trigger would reperesnt the beam composiong of protons, which it did within a few percent.
+    It is expected to lose light at small apertures due to the width of the Cherenkov ring being ~ 0.4\,mm for the kaon and slightly larger for the proton. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/test_beamalingment2.png}
+        \linespread{1.0}
+        \caption{Output of data collection on CEDAR at the end of the second alignment showing the positions of the XY motors, the diaphragm aperture, pressure of the CEDAR, the average number of 
+        photo-electrons per PM and then the spacial alignment of the PMTs. Each entry is at a different diaphragm aperture of 0.79, 1 and 2.02\,mm.}
+        \label{fig:alignment_res2}
+    \end{figure}
+
+    The next stage of the test beam was to conduct a pressure scan. Before the scan, the pressure of the CEDAR-H was set where there were no selected beam particles, where a selected beam particle is defined when there are at least 6 PMTs in coincidence, which was 4.4\,bar.
+    The scan consisted of reducing the pressure in small steps and collecting a number of bursts of data. This was completed at a diaphragm width of 2.3\,mm, which was slightly larger than the standard operating setting used with the CEDAR-W at NA62. The aperture was chosen to maximise the light yield of the detector to 
+    compare the computed beam composition to the expected at the H6 beam line. The results of the pressure scan are found in Figure \ref{fig:1presscan_testbeam}, with the selection of each beam component visible in the plots. The protons have maximum light yield at 4.26\,bar with 0.232 coincidences per trigger, with the build-up in coincidences caused by the gradual entrance of 
+    the Cherenkov ring into the aperture of the diaphragm. The kaon has a maxium light yield at 3.844, with 0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69\,bar, with 0.721 coincidences per trigger. With the fraction of triggers within 1-2\,\% of the expected beam composition, resulting in the selection of a particle in 99.1\,\% of the triggers.
+    It was expected that not all light from the proton ring would pass through the 2.3\,mm diaphragm due to its large gaussian width and distorted shape, shown in Figure \ref{fig:cedarHsim}
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/1Pres_testbeam_CoincidencesAvgPointspTrigger.pdf} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/1Pres_testbeam_LogCoincidencesAvgPointspTrigger.pdf} }}%
+        \linespread{1.0}
+        \caption{Results of the first pressure scan at the H6 test beam at a diaphragm aperture of 2.3\,mm. On the left are coincidences per trigger against pressure, and on the right in log scale.}%
+        \label{fig:1presscan_testbeam}%
+    \end{figure}
+    
+    The light yield of CEDAR-H can be computed from the 6, 7, and 8 coincidences per trigger shown in Figure \ref{fig:1presscan_testbeam}. The light yeild can be computed using either of the two equations below, 
+    \begin{equation}
+        \lambda= \ln \left[ 1+\frac{8}{\eta_{7}/\eta_{8}-1} \right]
+    \end{equation}
+    and
+    \begin{equation}\label{eq:lamb2}
+        \lambda= \ln \left[ 1 + \frac{14}{ \sqrt{4 - 7(1-\eta_{6}/\eta_{8})}-2} \right]
+    \end{equation}
+    with $\eta_{N}$ defined as the probability of an N-fold coincidence and $\lambda$ being the number of photo-electrons per PMT. The ratios $\eta_{7}/\eta_{8}$ and $\eta_{6}/\eta_{8}$ are shown in Figure \ref{fig:alignment_res2_ratio}. 
+    The two equations \ref{eq:Lamb1} and \ref{eq:Lamb2} are used to cross-check the result and then averaged. At the pion pressure (4.26\,bar), $\eta_{7}/\eta_{8} = 0.856$ and $\eta_{6}/\eta_{8} = 0.550$ producing an average light yield of $\lambda = 2.372$. 
+    The proton yeilded slightly less light with $\eta_{7}/\eta_{8} = 0.840$ and $\eta_{6}/\eta_{8} = 0.528$ producing an average yeild of $\lambda = 2.293$. At the kaon pressure (3.844\,bar), the ratios of $\eta_{7}/\eta_{8} = 0.869$ and $\eta_{6}/\eta_{8} = 0.574$ producing an average yield of $\lambda = 2.454$ which
+    would result in a total of 19.63 photo-electrons per kaon. This was a positive sign that the optics had been correctly manufactured and installed, however the diagram was wide with respect to the normal NA62 setting. It is clear that the 2.3\,mm diapgrham could not be used 
+    in NA62 due to the un-satisfactory kaon-pion separation seen in Figure \ref{fig:1presscan_testbeam}, where the probability of misidentification of a pion at the kaon pressure is too high. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/1Pres_testbeam_RatioPlot.pdf}
+        \linespread{1.0}
+        \caption{Ratios of $\eta_{7}/\eta_{8}$ and $\eta_{6}/\eta_{8}$ with respect to pressure at a diaphragm aperture of 2.3\,mm. CREATE NEW ONE AS THIS HAS ERROR in labels}
+        \label{fig:alignment_res2_ratio}
+    \end{figure}
+    Several pressure scans were completed at different diaphragm aperture to able to select a working point that had both great light yield and low pion misidentification (pion-kaon seperation)
+    
+    %% 2x2 grid of the pressure scans at different diagrams
+    %% Then a table with the components, ratios and light yield
+    
     \section{Comissioning at CERN}
 
+ 
     \section{CEDAR-H Performance at NA62}
 
     \ifSubfilesClassLoaded{%
