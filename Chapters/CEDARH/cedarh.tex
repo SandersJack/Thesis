@@ -368,7 +368,7 @@
     separation of the kaon-pion peak has increased dramatically, with the estimated six sector coincidences of the pion peak falling well below $10^{-6}$ at the kaon pressure. 
     %% Maybe quantify the separation!
     The final pressure scans at 1.2\,mm and 1\,mm, shown in the lower plots in Figure \ref{fig:testbeamPresures}, show complete separation between the kaon-pion peaks, however it is possible to see in the figure that the light yeild is being reduced at the particles pressures as the peaks no longer have a flat top. This suggests that at 
-    1.3,\mm the diagram aperture is narrower than the width of the Cherenkov ring. This is also clear in Table \ref{tab:testbeam_val} where at 1\,mm the average photo-electrons per kaon was 16.03, which would result in less than 95\,\% identification efficiency at five sectors so would not be acceptable for use in NA62.
+    1.3,\mm the diagram aperture was narrower than the width of the Cherenkov ring. This is also clear in Table \ref{tab:testbeam_val} where at 1\,mm the average photo-electrons per kaon was 16.03, which would result in less than 95\,\% identification efficiency at five sectors so would not be acceptable for use in NA62.
 
     \begin{figure}[H]
         \centering
@@ -401,10 +401,23 @@
         \label{tab:testbeam_val}
     \end{table}
     %% Dipaghram scans
-
+    A secondary test of the particle identification efficiency was conducted by scanning the diaphragm aperture at the kaon pressure of 3.851\,bar. The results are shown in Figure \ref{fig:Diascan}, where the number of photo-electrons per trigger is plotted against the diaphragm aperture. 
+    The scan was completed by shutting the diaphragm as much as possible and then slowly increasing the diaphragm aperture while taking data, measuring the 6, 7, and 8-fold coincidences. From Figure \ref{fig:Diascan}, it is clear that with a diagram aperture of less than 2,\mm the light yield is reduced, describing 
+    the effect shown by the reduction in light in the pressure scans below 2\,mm in Figure \ref{fig:testbeamPresures}. 
+    When the diaphragm was opened past 3,\mm the Cherenkov light from the pion starts to contribute to the 6-fold coincidences and then greater than 4,\mm the 7 and 8-fold coincidences are affected. At 11,\mm the light from the proton starts to enter the aperture with all light from the particle passing through the
+    aperture at 13,\mm. The scan continued till 19\,mm, which is the maximum aperture of the diaphragm, where the total six-fold coincidences per trigger were ~0.99, accounting for a particle identification efficiency of 99\,\%.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{plots/DiaScan_CoincidencesAvgPointspTrigger_log.pdf}
+        \linespread{1.0}
+        \caption{Plot showing the results of the diaphragm scan at the H6 test beam at a pressure of 3.851\,bar.}
+        \label{fig:Diascan}
+    \end{figure}
     %% Then comparison with 2011 test beam CEDAR-W
-
+    %% Possibly have the pion peak to calculate the ring width
     %% Then describe the selection and why it was chosen
+    Considering all of the pressure scans completed during the test beam, the optimal working point for CEDAR-H was found to be at a pressure of 3.851\,bar with a diaphragm aperture of 1.7\,mm. 
+    This setting was chosen as it provided the best light yield with an average 19.13 photo-electrons per kaon. The pion misidentification probability was estimated at less than $10^{-4}$, using the fitted dashed line on the six-fold coincidences of the pion peak and extrapolating up to the kaon pressure, shown in Figure \ref{fig:testbeamPresures} top right.
     \section{Comissioning at CERN}
 
  
