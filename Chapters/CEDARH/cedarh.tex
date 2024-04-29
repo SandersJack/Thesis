@@ -418,9 +418,58 @@
     %% Then describe the selection and why it was chosen
     Considering all of the pressure scans completed during the test beam, the optimal working point for CEDAR-H was found to be at a pressure of 3.851\,bar with a diaphragm aperture of 1.7\,mm. 
     This setting was chosen as it provided the best light yield with an average 19.13 photo-electrons per kaon. The pion misidentification probability was estimated at less than $10^{-4}$, using the fitted dashed line on the six-fold coincidences of the pion peak and extrapolating up to the kaon pressure, shown in Figure \ref{fig:testbeamPresures} top right.
-    \section{Comissioning at CERN}
+    \section{Installation at NA62}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/NA62_install.png}
+        \linespread{1.0}
+        \caption{Image of CEDAR-H being installed into the NA62 beamline in 2022}
+        \label{fig:cedarHinstall}
+    \end{figure}
+    CEDAR-H was installed into the NA62 beamline in 2022, involving several steps. First, the KTAG photon-detection system had to be disassembled from the CEDAR-W and set to one side, and then the CEDAR vessel was removed from the beamline. The CEDAR-H was brought to ECN3 and then installed into the beamline, shown in Figure \ref{fig:cedarHinstall}.
+    The new spherical mirrors were then aligned and attached to the support cylinder, shown in Figure \ref{fig:mirroralign}. The process of alignment started with collecting data from the MC simulation about the direction of light exiting the CEDAR-H vessel. A photon that hits the center of the spherical mirror was selected, and the positions 
+    at the exit windows and spherical mirror were recorded in XYZ. The vector was then calculated from the center of the mirror to the exit window and was used to set up the laser used for alignment. A target representing the PMT array, shown in Figure \ref{fig:mirrortarget}, was placed at the correct distance away from the spherical mirror. 
+    The spherical mirror was then adjusted so that the laser hit the center of the target, ensuring that the light would hit the center of the PMT array. This process was then repeated for all eight spherical mirrors. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/spherical_mirror_align.png}
+        \linespread{1.0}
+        \caption{Image of the spherical mirrors being aligned and attached to the support cylinder}
+        \label{fig:mirroralign}
+    \end{figure}    
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.8\textwidth]{imgs/alingment_target.png}
+        \linespread{1.0}
+        \caption{Image of the target used for the alignment of the spherical mirrors}
+        \label{fig:mirrortarget}
+    \end{figure}    
+    The mirror support cylinder was then attached to the nose of the CEDAR-H, and the KTAG photon-detection system was reassembled at the upstream end of the vessel and all connections were reconnected and tested.
 
- 
+    Compared to the setup of the CEDAR-W, several modifications were made due to the requirements for use of \HH\ within the ECN3 experimental hall. It is expected that some small amount of gas will leak from the CEDAR-H 
+    so all precautions had to be made in order to prevent the concentration of gas from reaching between the Lower Explosive Limit (LEL) of 4\,\% and Upper Explosive Limit of 75\,\% in air. Any area where there is potential 
+    for the \HH\ to leak is designated as an explosive atmosphere (ATEX) zone 2. In the ATEX zones, there are no electrical connectors, and all metal parts of the CEDAR-H are grounded to prevent any ignition sources. 
+    During \HH\ operation the diaphragm end switches are manually isolated though a switch located by the KTAG electronics barack, as these are not ATEX rated and have the potential to create a spark.
+    Any confined space where the \HH\, such as the KTAG enclosure and the box containing the diagram potentiometer and motor, is flushed with a constant supply of nitrogen to prevent the build-up of \HH. Interlocks were installed to turn off the electronics 
+    if this supply of nitrogen was interrupted. A second interlock is in place to turn off the electronics if there is a measured pressure drop in the CEDAR-H vessel. The sensor precision limits the defined pressure drop and is when 
+    there is a measured leak of 0.02\,mbar per minute measured by a rolling average across an hour. A major leak interlock, which would represent a rupture of the aluminum, will be triggered if the pressure drops by 0.1\,mbar per second. 
+    This major leak interlock will cut power to the area, turning off vacuum pumps and the GTk (CHECK THIS). To avoid this happening, the CEDAR-H has a safety valve attached the exausht which limits the pressure in the vessel to 5\,bar. 
+    The aluminum windows have been tested to withstand a pressure of 7.5\,bar before installation, so the safety valve will prevent any damage to the windows.
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[height=8cm, width=0.68\textwidth]{imgs/KTAG_CEDAR-H_comp.pdf} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.30\textwidth]{imgs/KTAG_CEDAR-H_comp.jpg} }}%
+        \caption{CEDAR-H installed in the NA62 beamline (left) and the KTAG photon-detection system reassembled at the upstream end of the vessel (right)}%
+        \label{fig:cedarpics}%
+    \end{figure}
+    Dedicated flammable gas detectors are installed on the top of the metal pavilions at both the upstream and downstream end of the CEDAR-H vessel, shown in Figure \ref{fig:cedarpics}, which monitor the concentration of \HH\ levels outside the vessel 
+    and produce an alarm if the concentration exceeds 10\,\% of the LEL. The gas detectors are connected to the CEDAR-H interlock system, which will cut the power in the area if the alarm is triggered, and the CERN fire brigade will be informed.
+    The main metal pavilion covers the upstream end of the CEDAR-H vessel, the KTAG photon-detection system, and the gas distribution panel, and it is designed to guide any leaking gas to the sensor. There is another smaller metal pavilion at the downstream end of the vessel.
+
+    During the installation, the CEDAR-H was leak tested at 3.85\,bar for 10 days where the leak rate was measured to be 0.2\,litres per day at standard pressure and temperature. This satisfied the safety requirements for use in ECN3 given the measured airflow from the ventilation.
+
+    %% Things to add: Maybe something about the gas system. And maybe something about the electronics? Maybe more about the KTAG
+    \section{Comissioning at CERN}
     \section{CEDAR-H Performance at NA62}
 
     \ifSubfilesClassLoaded{%
