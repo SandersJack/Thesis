@@ -832,21 +832,88 @@ yield with an average 19.13 photo-electrons per kaon. The pion misidentification
 probability was estimated at less than 10−4, using the fitted dashed line on the six-
 fold coincidences of the pion peak and extrapolating up to the kaon pressure, shown
 in Figure ??top right.
-474.4. COMISSIONING AT CERN CHAPTER 4. CEDARH
-4.4 Comissioning at CERN
-4.5 CEDAR-H Performance at NA62
-48Chapter 5
+474.4. INSTALLATION AT NA62 CHAPTER 4. CEDARH
+4.4 Installation at NA62
+Figure 4.22: Image of CEDAR-H being installed into the NA62 beamline in 2022
+CEDAR-H was installed into the NA62 beamline in 2022, involving several steps.
+First, the KTAG photon-detection system had to be disassembled from the CEDAR-
+W and set to one side, and then the CEDAR vessel was removed from the beamline.
+The CEDAR-H was brought to ECN3 and then installed into the beamline, shown in
+Figure ??. The new spherical mirrors were then aligned and attached to the support
+cylinder, shown in Figure ??. The process of alignment started with collecting data
+from the MC simulation about the direction of light exiting the CEDAR-H vessel.
+A photon that hits the center of the spherical mirror was selected, and the positions
+at the exit windows and spherical mirror were recorded in XYZ. The vector was
+then calculated from the center of the mirror to the exit window and was used to
+set up the laser used for alignment. A target representing the PMT array, shown in
+Figure ??, was placed at the correct distance away from the spherical mirror. The
+spherical mirror was then adjusted so that the laser hit the center of the target,
+ensuring that the light would hit the center of the PMT array. This process was
+484.4. INSTALLATION AT NA62 CHAPTER 4. CEDARH
+then repeated for all eight spherical mirrors.
+Figure 4.23: Image of the spherical mirrors being aligned and attached to the support
+cylinder
+494.4. INSTALLATION AT NA62 CHAPTER 4. CEDARH
+Figure 4.24: Image of the target used for the alignment of the spherical mirrors
+The mirror support cylinder was then attached to the nose of the CEDAR-H,
+and the KTAG photon-detection system was reassembled at the upstream end of
+the vessel and all connections were reconnected and tested.
+Compared to the setup of the CEDAR-W, several modifications were made due
+to the requirements for use of within the ECN3 experimental hall. It is expected
+that some small amount of gas will leak from the CEDAR-H so all precautions had
+to be made in order to prevent the concentration of gas from reaching between
+the Lower Explosive Limit (LEL) of 4 % and Upper Explosive Limit of 75 % in air.
+Any area where there is potential for the to leak is designated as an explosive
+atmosphere (ATEX) zone 2. In the ATEX zones, there are no electrical connectors,
+and all metal parts of the CEDAR-H are grounded to prevent any ignition sources.
+During operation the diaphragm end switches are manually isolated though a switch
+located by the KTAG electronics barack, as these are not ATEX rated and have the
+potential to create a spark. Any confined space where the such as the KTAG
+504.4. INSTALLATION AT NA62 CHAPTER 4. CEDARH
+enclosure and the box containing the diagram potentiometer and motor, is flushed
+with a constant supply of nitrogen to prevent the build-up of . Interlocks were
+installed to turn off the electronics if this supply of nitrogen was interrupted. A
+second interlock is in place to turn off the electronics if there is a measured pressure
+drop in the CEDAR-H vessel. The sensor precision limits the defined pressure drop
+and is when there is a measured leak of 0.02 mbar per minute measured by a rolling
+average across an hour. A major leak interlock, which would represent a rupture of
+the aluminum, will be triggered if the pressure drops by 0.1 mbar per second. This
+major leak interlock will cut power to the area, turning off vacuum pumps and the
+GTk (CHECK THIS). To avoid this happening, the CEDAR-H has a safety valve
+attached the exausht which limits the pressure in the vessel to 5 bar. The aluminum
+windows have been tested to withstand a pressure of 7.5 bar before installation, so
+the safety valve will prevent any damage to the windows.
+Figure 4.25: CEDAR-H installed in the NA62 beamline (left) and the KTAG photon-
+detection system reassembled at the upstream end of the vessel (right)
+514.5. COMISSIONING AT CERN CHAPTER 4. CEDARH
+Dedicated flammable gas detectors are installed on the top of the metal pavilions
+at both the upstream and downstream end of the CEDAR-H vessel, shown in Figure
+??, which monitor the concentration of levels outside the vessel and produce an
+alarm if the concentration exceeds 10 % of the LEL. The gas detectors are connected
+to the CEDAR-H interlock system, which will cut the power in the area if the alarm
+is triggered, and the CERN fire brigade will be informed. The main metal pavilion
+covers the upstream end of the CEDAR-H vessel, the KTAG photon-detection sys-
+tem, and the gas distribution panel, and it is designed to guide any leaking gas to
+the sensor. There is another smaller metal pavilion at the downstream end of the
+vessel.
+During the installation, the CEDAR-H was leak tested at 3.85 bar for 10 days
+where the leak rate was measured to be 0.2 litres per day at standard pressure
+and temperature. This satisfied the safety requirements for use in ECN3 given the
+measured airflow from the ventilation.
+4.5 Comissioning at CERN
+4.6 CEDAR-H Performance at NA62
+52Chapter 5
 Contribtions to NA62 Monte
 Carlo
-49Chapter 6
+53Chapter 6
 Future Kaon Experiments
 6.1 High Intensity Kaon Experiments (HIKE)
 6.1.1 RICH upgrade design
 6.1.2 GTk upgrade design
 6.1.3 Detector Rates
-50Chapter 7
+54Chapter 7
 Dark Photon Analysis
-51Bibliography
+55Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -864,4 +931,4 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-52
+56
