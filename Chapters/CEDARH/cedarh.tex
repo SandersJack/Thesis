@@ -469,7 +469,13 @@
     During the installation, the CEDAR-H was leak tested at 3.85\,bar for 10 days where the leak rate was measured to be 0.2\,litres per day at standard pressure and temperature. This satisfied the safety requirements for use in ECN3 given the measured airflow from the ventilation.
 
     %% Things to add: Maybe something about the gas system. And maybe something about the electronics? Maybe more about the KTAG
-    \section{Comissioning at CERN}
+    \section{Commissioning at CERN}
+    The commissioning of the cedar in the Naa62 beamline was conducted at the start of the 2023 run. After the beam group conducted the start of run activities and the beam was aligned through the CEDAR vessel, the beam intensity was set a 10\,\% of nominal value, corresponding to a particle rate 
+    of 60\,Hz. Periodic triggers were used, collecting $2 \times 10^{5}$ triggers per spill. For each trigger event, the KTAG data acquisition system records the time and the channel ID of each PMT signal within a 100\,ns time window defined by the trigger. The data collected ins then reconnected
+    and the individual PMT signals are clustered using an algorithm that clusters the signals within a 4\,ns time window into candidates. 
+
+    As each PMT signal was recorded, the light yield was defined using a different method. In the test beam, the ratios of the coincidences were used to calculate the light yield; however, in the commissioning, the light yield was defined as the number of photo-electrons per beam particle candidate.
+    The identification of the beam particle requires a 5-fold coincidence compared to 6-fold used in the test beam.
     \section{CEDAR-H Performance at NA62}
 
     \ifSubfilesClassLoaded{%
