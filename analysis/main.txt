@@ -645,7 +645,7 @@ alignment but provides a starting point. The second alignment was conducted at
 had an aperture of 1.3 mm. The alignment results are shown in Figure ??and at
 three different aperture settings. The alignment was successful, with the counts on
 the PMTs being within a couple percent. It would also be expected that the counts
-per trigger would reperesnt the beam composiong of protons, which it did within a
+per trigger would represent the beam composiong of protons, which it did within a
 few percent. It is expected to lose light at small apertures due to the width of the
 Cherenkov ring being 0.4 mm for the kaon and slightly larger for the proton.
 404.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
@@ -666,13 +666,13 @@ expected at the H6 beam line. The results of the pressure scan are found in Figu
 ??, with the selection of each beam component visible in the plots. The protons
 have maximum light yield at 4.26 bar with 0.232 coincidences per trigger, with the
 build-up in coincidences caused by the gradual entrance of the Cherenkov ring into
-the aperture of the diaphragm. The kaon has a maxium light yield at 3.844, with
+the aperture of the diaphragm. The kaon has a maximum light yield at 3.844, with
 0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69 bar,
 with 0.721 coincidences per trigger. With the fraction of triggers within 1-2 % of the
 414.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
 expected beam composition, resulting in the selection of a particle in 99.1 % of the
 triggers. It was expected that not all light from the proton ring would pass through
-the 2.3 mm diaphragm due to its large gaussian width and distorted shape, shown
+the 2.3 mm diaphragm due to its large Gaussian width and distorted shape, shown
 in Figure ??
 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3 4.4
 Pressure [bar]0.00.10.20.30.40.50.60.70.8Coincidences per trigger6-fold
@@ -896,39 +896,110 @@ covers the upstream end of the CEDAR-H vessel, the KTAG photon-detection sys-
 tem, and the gas distribution panel, and it is designed to guide any leaking gas to
 the sensor. There is another smaller metal pavilion at the downstream end of the
 vessel.
-During the installation, the CEDAR-H was leak tested at 3.85 bar for 10 days
+During the installation, the CEDAR-H was leak tested at 3.85 bar for 10 days,
 where the leak rate was measured to be 0.2 litres per day at standard pressure
 and temperature. This satisfied the safety requirements for use in ECN3 given the
 measured airflow from the ventilation.
 4.5 Commissioning at CERN
-The commissioning of the cedar in the Naa62 beamline was conducted at the start
+The commissioning of the cedar in the NA62 beamline was conducted at the start
 of the 2023 run. After the beam group conducted the start of run activities and the
-beam was aligned through the CEDAR vessel, the beam intensity was set a 10 %
-of nominal value, corresponding to a particle rate of 60 Hz. Periodic triggers were
-used, collecting 2 ×105triggers per spill. For each trigger event, the KTAG data
-acquisition system records the time and the channel ID of each PMT signal within a
-100 ns time window defined by the trigger. The data collected ins then reconnected
-and the individual PMT signals are clustered using an algorithm that clusters the
-524.6. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
-signals within a 4 ns time window into candidates.
-As each PMT signal was recorded, the light yield was defined using a different
-method. In the test beam, the ratios of the coincidences were used to calculate
-the light yield; however, in the commissioning, the light yield was defined as the
-number of photo-electrons per beam particle candidate. The identification of the
-beam particle requires a 5-fold coincidence compared to 6-fold used in the test beam.
+beam was aligned through the CEDAR vessel, the beam intensity was set a 10 % of
+nominal value, corresponding to a particle rate of 60 Hz. Periodic triggers were used
+during the commissioning, which is where a range of time is set between the start
+of burst (SoB) and End of Burst (EoB) and a period set at which data is collected.
+This period was then set to collecting 2 ×105triggers per spill, which is dependent on
+the intensity at the time. For each trigger event, the KTAG data acquisition system
+524.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+records the time and the channel ID of each PMT signal within a 100 ns time window
+defined by the trigger. The data collected was then reconstructed using the NA62
+framework and the individual PMT signals are clustered using an algorithm that
+clusters the signals within a 4 ns time window into candidates. As each PMT signal
+was recorded, the light yield was defined using a different method when compared
+to the test beam. In the test beam, the ratios of the coincidences were used to
+calculate the light yield using statistical equations; however, at NA62, the light
+yield was defined as the number of photo-electrons per beam particle candidate.
+The identification of the beam particle requires a 5-fold coincidence compared to
+6-fold used in the test beam due to the availability of data and the reduced noise
+level with the photon-detection system.
+As the CEDAR had been removed from H6, then moved to ECN3 and installed
+into the beam line, it was essential to validate that the detector was still functional
+before filling the vessel with Hydrogen. This is mainly because any work that could
+have been conducted would have been complicated by the presence of .It is im-
+portant to note however that any results would be preliminary due to the distorted
+nature of the Cherenkov light in the CEDAR-H with a radiator gas. The CEDAR-H
+vessel was filled with to 1.5 bar, where a pressure scan was then completed going up
+in the pressure to 2.12 bar, at a diaphragm aperture of 1.45 mm and the results are
+shown in Figure ??. The pressure scan in Figure ??showed that the aperture was
+too small, causing the peaks to be very narrow with no flat tops that were seen in
+the test beam. The peaks were also not separated, which is expected with a small
+diaphragm so it was assumed that the alignment was not correct.
+534.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+Figure 4.26: Pressure scan with CEDAR-H with going from a 1.5 bar to 2.12 bar
+The coarse alignment was conducted at a diaphragm aperture of 1.45 mm and
+a pressure of 2.031 bar, with the results shown in Figure ??. The alignment was
+completed in suboptimal conditions due to the small aperture as it is desired to first
+align with a large diaphragm. The detector started at Y=−1.943 and X=−2.219
+and an average of 20.6 photo-electrons per candidate. The alignment results are
+shown in Figure ??, where the Y motors were first moved in the positive direction
+which caused a decrease in the number of photo-electrons per candidate. The Y
+motors were then moved in the negative direction until the maximum was found at
+Y=−2.051. The large gaps in the figure show the instability of the motors, as it
+was not possible to return to the same point after moving the motors. The X motor
+was then modified until a maximum was found, which was at X=−2.155. The final
+position of the CEDAR-H with was X=−2.155 and Y=−2.051, with an average
+of 20.9 photo-electrons per candidate. However, the maximum was found at the
+edge of the usable range in the Y direction , as it was possible that the maximum
+544.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+light yield was not found and was further in negative Y. As this would of been much
+harder to conduct with in the CEDAR, the vessel was lowered 2 mm by reducing
+the height of the downstream feet. This would mean that Y motor values from now
+on are not comparable to this alignment results. From the tests with it was clear
+that the optics were still functional after being moved and installed in NA62, so the
+filling of the vessel with was conducted.
+Figure 4.27: Results of the alignment of CEDAR-H with at a diaphragm aperture
+of 1.45 mm and a pressure of 2.031 bar
+The CEDAR-H was first filled with to 4.3 bar where a small scan of the pressure
+was conducted to find the best pressure to collect light from the pion. The pressure
+was adjusted by ±0.2barand the light yield was recorded. The best pressure was
+found to be 4.3 bar.
+The first alignment of CEDAR-H with was conducted at 4.3 bar, which is where
+the proton peak was expected to be from the results at the test beam. The alignment
+was conducted at a diaphragm aperture of 6 mm which allows for a course alignment,
+554.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+in which the method involved balancing the number of hits on each sector. The
+results of the alignment is shown in Figure ??. The CEDAR was originally in the
+position of X=−2.144 and Y=−2.025 where a proton candidate had, on average,
+15.58 photo-electrons. This was much lower than what was expected from the test
+beam, so the alignment was definitely needed. The Y motors were first modified,
+increasing by around 0.1 mm and then stopping to take a number of bursts to increase
+the statistics. This was repeated, which resulted in the number of photo-electrons
+per proton candidate increasing, maximizing at an average of 21.07 at Y=−0.725,
+suggesting that at that point, the detector is aligned in the Y dimension. To ensure
+that this is the maximum point the Y motor continued to move until the number of
+photo-electrons decreased. This started to happen, and the previous maximum was
+taken. At this point, the detector was aligned in the Y dimension so the X motors
+was moved in both the positive and negative direction to again find the maximum
+number of photo-electrons. It was found that the detector was aligned in the X
+dimension in its original state, so the X motor was returned to its original position.
+The final position of the CEDAR-H was X=−2.144 and Y=−0.725, with the
+average number of photo-electrons per proton candidate being 21.07. This would of
+suggested that before lowering the CEDAR the maximum was at -2.725 mm, past
+the previous maximum of -2.051 mm, and that the lowering was required.
+564.6. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
+Figure 4.28: Results of the first coarse alignment of CEDAR-H at 4.3 bar (proton)
 4.6 CEDAR-H Performance at NA62
-53Chapter 5
+57Chapter 5
 Contribtions to NA62 Monte
 Carlo
-54Chapter 6
+58Chapter 6
 Future Kaon Experiments
 6.1 High Intensity Kaon Experiments (HIKE)
 6.1.1 RICH upgrade design
 6.1.2 GTk upgrade design
 6.1.3 Detector Rates
-55Chapter 7
+59Chapter 7
 Dark Photon Analysis
-56Bibliography
+60Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -946,4 +1017,4 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-57
+61
