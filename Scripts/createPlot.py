@@ -7,7 +7,7 @@ df = pd.read_csv('analysis/wordcount.csv')
 plt.rcParams['figure.constrained_layout.use'] = True
 
 df = df.drop_duplicates(subset='Date', keep="last")
-df['Date'] = pd.to_datetime(df['Date'])
+df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
 df.set_index('Date', inplace=True)
 
 ax = df.plot(x="Date", y="WC")
