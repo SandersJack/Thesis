@@ -985,21 +985,101 @@ The final position of the CEDAR-H was X=−2.144 and Y=−0.725, with the
 average number of photo-electrons per proton candidate being 21.07. This would of
 suggested that before lowering the CEDAR the maximum was at -2.725 mm, past
 the previous maximum of -2.051 mm, and that the lowering was required.
-564.6. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
+564.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
 Figure 4.28: Results of the first coarse alignment of CEDAR-H at 4.3 bar (proton)
+The first pressure scan was completed with a diaphragm aperture of approxi-
+mately 1.8 mm . The pressure was set just above the proton pressure at 4.4,nd the
+pressure was slowly decreased as data was taken. The data was reconstructed using
+again a 4 ns time window and the results are shown in Figure ??. Compared to the
+test beam, the y-axis of Figure ??is arbitrary as the total number of triggers was not
+recorded. Instead, the number of coincidences is normalised to the beam intensity,
+which in NA62 is called the Argonian. This makes the direct beam composition
+difficult to calculate, but the ratios of the three peaks can be used to check if the
+composition is what is expected. From the results, it’s clear that the proton pressure
+is 2.95 bar with the kaon pressure at 3.88 bar. The pion pressure is less clear due to
+the large flux of protons in the beam overwhelming the readout system, producing
+inconsistent results between 3.76 and 3.68 bar. However, the falling edge of the pion
+peak is important, allowing the estimation of the pion miss-identification probabil-
+ity. (Replace with numbers normalised to 1) At the kaon pressure of 3.88 bar the
+574.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+kaon 5-fold coincidences were at 0.0003664 where the pion was estimated using the
+fit procedure mentioned in the test beam section was 1 .29×10−06. This would result
+in a pion miss-identification of 4 ×10−4at the kaon pressure.
+The kaon pressure in NA62 was found to be higher, 3.88 bar compared to 3.85 bar
+in the test beam due to a 2 K temperature difference of the radiator gas.
+plots/H_PRES-__.Coin.png plots/H_PRES-__.Coin_log.png
+Figure 4.29: Pressure scan of CEDAR-H with at a diaphragm aperture of 1.8 mm
+(CHECK THIS).
+As the alignment had only been conducted at a wide diaphragm, the alignment
+could have been incorrect due to the size of the aperture. The diaphragm then was
+closed to 1.8 mm and the alignment procedure was repeated. The smaller diagram
+allowed for a tighter alignment as the diaphragm aperture was only big enough for
+the ring to pass through. The results of the alignment are shown in Figure ??, where
+the vessel was again vaired in both X and Y to produce a 2D map of motor positions
+and the average number of photo-electrons per candidate. The best position was
+found to be at X=−2.258 and Y=−0.591 with an average of 21.68 photo-electrons
+584.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+per kaon candidate. A diaphragm slightly bigger than the one set as the working
+point from the test beam resulted in an increase of just over 10 % by adding the
+KTAG compared to the single PMTs, which was predicted from the simulation.
+Figure 4.30: Results of alignment at kaon pressure of 3.88 bar with a aperture of
+1.5 mm (CHECK THIS)
+After the final alignment, a small pressure scan was completed at a diaphragm
+aperture of 1.5 mm to test the separation of the kaon and pion peaks and the results
+are shown in Figure ??. The separation compared to the previous pressure scan in
+Figure ??. Using the method of fitting the falling edge of the pion peak , the pion
+miss-identification was estimated to be ..... DO THE CALC.
+The results show that the CEDAR-H is operational in NA62 and is able to
+separate the kaon and pion peaks with a high level of confidence. However, there
+was a slight degradation of the light yield compared to the previous diaphragm
+aperture, and as the miss-identification was acceptable at the previous setting, this
+was chosen as the working point.
+594.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+plots/H_PRES-SmallerDia.Coin.pdf plots/H_PRES-SmallerDia.Coin_log.pdf
+Figure 4.31: Pressure scan of CEDAR-H with at a diaphragm aperture of 1.5 mm
+(CHECK THIS).
+A diagram scan was completed as a final test of the light yield with respect to
+the aperture. The results are shown in Figure ??, where the diaphragm was varied
+between 0 and 6.5 mm. As the the diaphragm was opened, the coincidences in-
+creased as the light from the kaon started to pass through the aperture, maximising
+at 1.75 mm, which is just lower than the decided working point set above. The co-
+incidences were stable up to 2.75 mm where the 5-fold coincidences became sensitve
+to the light from the pion ring and the othe coincidences started to increase after
+3.25 mm.
+604.5. COMMISSIONING AT CERN CHAPTER 4. CEDARH
+0 2 4 6
+Diaphragm aperture [mm]0.00.20.40.60.81.0Arbitrary scale5-fold
+6-fold
+7-fold
+8-fold
+Figure 4.32: Results of diaphragm scan taken at 3.88 bar
+After the successful commissioning of CEDAR-H in NA62 the working point for
+the 2023 run is as follows:
+•Alignment: X=−2.258 and Y=−0.591
+•Kaon Pressure: 3.88 bar
+•Diaphragm Aperture: 1.8 mm
+The commissioning procedure above was extensive but was required due to the new
+vessel installation in 2023. At the start of each year, the commissioning must be
+repeated with alignment and pressure scans to ensure the detector is still operational.
+Even though the detector does not move between years, the beam’s position can
+move compared to the previous years, as well as slight movements of the vessel
+due to the deformation of the beampipe when it is brought in and out of vacuum.
+Also, it is possible that the pressure set points for the particles can differ due to the
+environmental changes in ECN3.
+614.6. CEDAR-H PERFORMANCE AT NA62 CHAPTER 4. CEDARH
 4.6 CEDAR-H Performance at NA62
-57Chapter 5
+62Chapter 5
 Contribtions to NA62 Monte
 Carlo
-58Chapter 6
+63Chapter 6
 Future Kaon Experiments
 6.1 High Intensity Kaon Experiments (HIKE)
 6.1.1 RICH upgrade design
 6.1.2 GTk upgrade design
 6.1.3 Detector Rates
-59Chapter 7
+64Chapter 7
 Dark Photon Analysis
-60Bibliography
+65Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1017,4 +1097,4 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-61
+66
