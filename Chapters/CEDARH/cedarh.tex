@@ -524,8 +524,8 @@
     The kaon pressure in NA62 was found to be higher, 3.88\,bar compared to 3.85\,bar in the test beam due to a 2\,K temperature difference of the radiator gas.
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin.png} }}%
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin_log.png} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin.pdf} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin_log.pdf} }}%
         \caption{Pressure scan of CEDAR-H with \HH\ at a diaphragm aperture of 1.8\,mm (CHECK THIS).}%
         \label{fig:cedarH_1}%
     \end{figure}
@@ -544,8 +544,8 @@
     The results show that the CEDAR-H is operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. However, there was a slight degradation of the light yield compared to the previous diaphragm aperture, and as the miss-identification was acceptable at the previous setting, this was chosen as the working point. 
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-SmallerDia.Coin.pdf} }}%
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-SmallerDia.Coin_log.pdf} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-SmallerDia.Coin.png} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-SmallerDia.Coin_log.png} }}%
         \caption{Pressure scan of CEDAR-H with \HH\ at a diaphragm aperture of 1.5\,mm (CHECK THIS).}%
         \label{fig:cedarH_2}%
     \end{figure}
@@ -566,7 +566,16 @@
     The commissioning procedure above was extensive but was required due to the new vessel installation in 2023. At the start of each year, the commissioning must be repeated with alignment and pressure scans to ensure the detector is still operational. Even though the detector does not move between years, the beam's position can move compared to the previous years, as well as 
     slight movements of the vessel due to the deformation of the beampipe when it is brought in and out of vacuum. Also, it is possible that the pressure set points for the particles can differ due to the environmental changes in ECN3.
     %%% 2024 Commissioning?????
-    \section{CEDAR-H Performance at NA62}
+    
+    It was clear from the commissioning of the CEDAR-H in 2024, with the pressure scan of the kaon peak shown in Figure \ref{fig:cedarPres2024} that the enviromental changes in ECN3 impact the set pressure points for the particles. The kaon pressure was found to be 3.81\,bar, which is 0.07\,bar lower than the previous year. This is change is accpetable at the start of the run but 
+    during the data taking the conditions have to be monitored to ensure that the light yeild for the kaons is at its maximum. A new method was designed to monitor the CEDAR and is descibed in Section \label{sec:cedarHperformance}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm, width=0.68\textwidth]{plots/2024_pressure.png}
+        \caption{Results of CEDAR-H pressure scan at start of 2024 run at a diapgrham of 1.5\,mm}%
+        \label{fig:cedarPres2024}%
+    \end{figure}    
+    \section{CEDAR-H Performance at NA62} \label{sec:cedarHperformance}
 
 
     \ifSubfilesClassLoaded{%
