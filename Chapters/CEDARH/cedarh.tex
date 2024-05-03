@@ -572,11 +572,37 @@
     \begin{figure}[H]
         \centering
         \includegraphics[height=8cm, width=0.68\textwidth]{plots/2024_pressure.png}
-        \caption{Results of CEDAR-H pressure scan at start of 2024 run at a diapgrham of 1.5\,mm}%
+        \caption{Results of CEDAR-H pressure scan at the start of 2024 run at a diapgrham of 1.5\,mm}%
         \label{fig:cedarPres2024}%
     \end{figure}    
     \section{CEDAR-H Performance at NA62} \label{sec:cedarHperformance}
-
+    The performance of the CEDAR-H in standard NA62 tun conditions was assed using data collected in 2023 and compared to CEDAR-W with data collected in 2022. A sample of kaons was collected using a selection of $K^{+}\to\pi^{+}\pi^{+}\pi^{-}$ decays which were fully reconstructed using the STRAW spectrometer, desribed in Section \ref{sec:STRAW}. The KTAG was used to reconstruct the kaon candidates using 
+    the nominal 2\, clustering time window. The number of photo-electrons per kaon was measured from events that had at least a 5 secotor coincidence and the results are shown in Figure \ref{fig:NHitsCompare}. The light yeild is calculated by fitting a possionian distrbution on the distbutions between 4 and 24 photo-electrons. The smaller range is used to remove the contributions from large number of 
+    photo-electrons produced from secondary kaons in coincidence, reconstructed as a single kaon. The average light yeild for the CEDAR-H was 20.6 photo-electrons per kaon compared to 18.1 for CEDAR-W.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm, width=0.68\textwidth]{plots/CEDAR_NHits.pdf}
+        \caption{Comparison of the number of photo-electrons per kaon candate of CEDAR-H in 2023 and CEDAR-W in 2022}%
+        \label{fig:NHitsCompare}%
+    \end{figure}    
+    The time resolution of the KTAG + CEDAR-H was calculated as 66\,ps using the equation:
+    \begin{equation}
+        \sigma_{t} = \frac{\sigma_{PMT}}{\sqrt{N_{PE}}}
+    \end{equation}
+    where $\sigma_{PMT}$ is the single photo-electron time resolution of the PMTs of 300\,ps, and $N_{PE}$ is the number of photo-electrons per candidate. Which is compared to 71\,ps for CEDAR-W.
+    
+    The kaon tagging effciency is calculated by compareing the number of n-fold coincidences compared to the total number of events. The reuslts of the computation is shown in Figure \ref{fig:Effciency}, with CEDAR-H having a kaon identification effciency of 99.7\,\% compared to 99.5\,\% for CEDAR-W.
+    The identification effeciney is compared to the analytical expectation with the photo-electron yeild produced from Figure \ref{fig:NHitsCompare}, calculated assuming an ideal detector and a uniform photo-electrons across all eight sectors. The results from data show that the eight sector efficiencies 
+    are higher than the expectation due to the contribution from secondary kaons in coincidence. Due to the higher light yeild, the experiment had the option of changing the identification classificaiton to a 6-fold coincidence, which provides an identification greater than 95\,\% and would improve the pion missidentication probability.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[height=8cm, width=0.68\textwidth]{plots/CEDAR_Eff_new_2.pdf}
+        \caption{Comparison of the number of kaon identifaction effciency of CEDAR-H in 2023 and CEDAR-W in 2022 with the expectation for 
+        a given photo-electron yield.}%
+        \label{fig:Effciency}%
+    \end{figure}    
+    
+    \section{Summary}
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
