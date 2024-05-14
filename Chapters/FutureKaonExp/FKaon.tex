@@ -7,7 +7,7 @@
     work contributed to these experiments.
     \section{High Intensity Kaon Experiments (HIKE) Description}
     The High-intensity kaon experiments (HIKE) was a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represented a long-phased plan after LS3. HIKE would of profited from a four to six-fold increase in beam intensity compared to NA62 and included cutting-edge detector technologies that will be desicred in this 
-    section. There were three phases within the HIKE program with the first being a continuation of NA62's charged kaon physics with the high-intensity beam and detector upgrades. The second would have involved neural kaon physics with charged secondary particle tracking, and the third phase would have been designed to measure the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay. 
+    section. There were three phases within the HIKE program, the first being a continuation of NA62's charged kaon physics with the high-intensity beam and detector upgrades. The second would have involved neural kaon physics with charged secondary particle tracking, and the third phase would have been designed to measure the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay. 
     \subsection{Phase 1}
     The experimental design of NA62 has been proven as a successful setup for the precision measurement of the $K^{+} \to \pi^{+}\nu\bar{\nu}$ decay. The HIKE phase 1 detector setup is shown in figure \ref{fig:Phase1} with new and upgraded detectors with respect to the NA62 setup described in Section \ref{sec:na62}. The new and upgraded detectors are required due to the 
     four times greater particle rate with respect to NA62 equating to $1.2\, \times 10^{13}$ protons per spill on the target. Other than the intensity upgrade, the beam had similar characteristics to NA62 with a $75\,Gev / c$ secondary beam produced from the $400\,GeV / c$ primary beam from the SPS accelerator onto a target at an angle of $0\,rad$. 
@@ -17,18 +17,46 @@
         \caption{Diagram of HIKE phase 1 detector setup \cite{thehikecollaboration2023high}}%
         \label{fig:Phase1}%
     \end{figure}  
+    The upgraded detectors before the fiducial volume included an upgraded photon-detection system for the KTAG, described in section \ref{sec:ktag_upgrade} and a new GTk chip design described in section \ref{sec:gtk_upgrade}. It was proposed to upgrade the existing NA62 Vetocounter with scintillating fiber (SciFi) technologies to improve the granularity 
+    and to accommodate the increased beam intensity. 
+
+    Major upgrades were envisioned to the LAV and STRAW detectors within the fiducial volume. Some of the LAV stations would have been upgraded to a new design proposed for a lead scintillator design, similar to the Vacuum Veto System (VVS) planned to be used at the CKM experiment. The LAV detectors were important for the next phases of HIKE, especially for 
+    Phase 3 and would have been designed for the requirements of the $K_{L} \to \pi^{0}\nu\bar{\nu}$ measurement even when used in this Phase. The STRAW spectrometer would have been upgraded to use a new 5\,mm straw design shown in Figure \ref{fig:5mmstraw}. The reduction in straw diameter would have decreased drift times and increase granularity resulting in an 
+    expected improvement in the track angle and momentum resolution of 10-20\,\% compared to NA62.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/5mm_straw.png}
+        \caption{Diagram of the expected layout of the 5\,mm straws \cite{thehikecollaboration2023high}}%
+        \label{fig:5mmstraw}%
+    \end{figure} 
+    Downstream of the fiducial volume, the PMT arrays of the RICH detector would have been upgraded, which is described in Section \ref{sec:rich_upgrade}. The timing detector would profit from the current NA62-CHOD detector with upgraded PMTs, which would have been chosen from the number of 
+    studies from other detectors such as KTAG, RICH and MUV. For Phase 1, the primary electromagnetic calorimeter would have used the LKr from NA62, which had excellent energy resolution but was not satisfactory timing. The required timing resolution would have been achieved by upgrading 
+    the readout system. A number of other detectors would have been upgraded or replaced with higher granularity, such as the hadronic calorimeter, MUVs, IRC, and SAC.
+    \subsection{Phase 2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.99\textwidth]{imgs/Phase2.png}
+        \caption{Diagram of HIKE phase 2 detector setup \cite{thehikecollaboration2023high}}%
+        \label{fig:Phase2}%
+    \end{figure}  
+    \subsection{Phase 3 (KLEVER)}
+    \section{KTAG Photon Detection System upgrade} \label{sec:ktag_upgrade}
     To sustain the increased kaon rate, the KTAG required upgrades to the photon-detection system and data acquisition system, with an expected time resolution of 15 - 20\,ps and a kaon identification efficiency of greater than 95\,\%. The expected kaon rate was 200\,MHz which corresponds to a maximum particle rate $10\,MHz/cm^{2}$ of photons at the PMT arrays, taking into the 
     production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons. It was proposed that the PMT arrays would be replaced with arrays of micro-channel plate photomultipliers (MCP-PMTs), which provide a single photon time resolution of 50 - 70\,ps depending on the model, a low dark rate of $1\,kHz/cm^{2}$ and the ability to sustain the required photon rate.
-    The downside of te MCP-PMTs is their limited lifetime from the aging of the Photo-Cathode caused by heavy feedback ions from the residual gas. This results in the rapid degradation in the PMT quantum efficiency with the increasing integrated anode charge as it is used.
+    A downside of the MCP-PMTs is their limited lifetime from the aging of the Photo-Cathode caused by heavy feedback ions from the residual gas. This results in the rapid degradation of PMT quantum efficiency with the increasing integrated anode charge.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{imgs/mcp_pmt_dia.png}
+        \caption{Scematic of Photonics MCP-PMT. CITE!}%
+        \label{fig:mcppmt}%
+    \end{figure}  
     %%% KTAG PMT ARRAYS IMAGE
     %%% KTAG PMT ARRAYS LIGHT DISTRIBUTION
     %%% KTAG Time resolution
     %%% KTAG QUANTUM EFFICIENCY
-    \subsection{Phase 2}
-    \subsection{Phase 3}
-    \section{RICH upgrade design}
-    \section{GTk upgrade design}
-
+    \section{GTk upgrade design} \label{sec:gtk_upgrade}
+    \section{RICH upgrade design} \label{sec:rich_upgrade}
+    
     \section{Detector Rates}
     
 
