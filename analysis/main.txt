@@ -49,11 +49,11 @@ blah blah blah
 6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
 6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
 6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 76
-6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 76
-6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
-6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
-7 Dark Photon Analysis 78
+6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 77
+6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+7 Dark Photon Analysis 79
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -159,7 +159,8 @@ photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
 6.1 Diagram of HIKE phase 1 detector setup [7] . . . . . . . . . . . . . . 73
 6.2 Diagram of the expected layout of the 5 mm straws [7] . . . . . . . . 74
 6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 76
-6.4 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 77
+6.4 Diagram of HIKE phase 3 detector setup [7] . . . . . . . . . . . . . . 77
+6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 78
 8List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 23
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -1353,7 +1354,7 @@ the softer momentum of the secondary particles, and the chambers would have been
 reconfigured to have central beam holes to account for the neural beam. Due to the
 compact detector, the fiducial volume would have been increased to 90 m compared
 to 75 m in Phase 1.
-756.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
+756.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.3: Diagram of HIKE phase 2 detector setup [7]
 The design proposed a production angle of 2.4 mrad on the target producing an
 expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux of
@@ -1361,6 +1362,23 @@ expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux o
 volume per year. The mean momentum at the entry of the fiducial volume was
 expected to be 79 GeV/c with a mean momentum for KLwhich decay of 46 GeV/c .
 6.1.3 Phase 3 (KLEVER)
+HIKE phase 3, previously known as KLEVER [8], was an experiment designed to
+measure the KL→π0ν¯νdecay. The experimental setup is shown in Figure 6.4 and
+differs from the design used at NA62 and HIKE Phase1/2. The setup consists of
+a large number of photon-detectors, located around a 160 m long vacuum volume
+to produce a complete coverage of photons produced from KLdecays. The photon-
+detectors include coverage for photons emitted up to 100 mrad and allow for a free
+path of photons to the main electromagnetic calorimeter (MEC) emitted up to
+7.5 mrad.
+766.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
+Figure 6.4: Diagram of HIKE phase 3 detector setup [7]
+Due to the differing experimental setup, Phase 3 was separated from the HIKE
+proposal submitted in 2023. Still, some detectors would have been shared between
+the two experiments as the granularity and efficiency requirements for Phase 3 would
+have driven the detector requirements for the first two phases. The LAV’s, MEC,
+IRC and SAC and the hadronic calorimters designed an built for HIKE Phase 1 and
+2 would of been used in Phase 3. The upstream veto counter, charged particle veto,
+and the pre-shower detector are unique to Phase 3.
 6.2 KTAG Photon Detection System upgrade
 To sustain the increased kaon rate, the KTAG required upgrades to the photon-
 detection system and data acquisition system, with an expected time resolution of
@@ -1370,19 +1388,19 @@ of photons at the PMT arrays, taking into the production of Cherenkov photons in
 CEDAR-H and the resultant acceptance of the photons. It was proposed that the
 PMT arrays would be replaced with arrays of micro-channel plate photomultipliers
 (MCP-PMTs), which provide a single photon time resolution of 50 - 70 ps depending
+776.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 on the model, a low dark rate of 1 kHz/cm2and the ability to sustain the required
-766.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 photon rate. A downside of the MCP-PMTs is their limited lifetime from the aging
 of the Photo-Cathode caused by heavy feedback ions from the residual gas. This
 results in the rapid degradation of PMT quantum efficiency with the increasing
 integrated anode charge.
-Figure 6.4: Scematic of Photonics MCP-PMT. CITE!
+Figure 6.5: Scematic of Photonics MCP-PMT. CITE!
 6.3 GTk upgrade design
 6.4 RICH upgrade design
 6.5 Detector Rates
-77Chapter 7
+78Chapter 7
 Dark Photon Analysis
-78Bibliography
+79Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1400,9 +1418,24 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-79BIBLIOGRAPHY BIBLIOGRAPHY
+80BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] T. H. Collaboration, “High intensity kaon experiments (hike) at the cern sps
 proposal for phases 1 and 2,” 2023.
-80
+[8] F. Ambrosino, R. Ammendola, A. Antonelli, K. Ayers, D. Badoni, G. Bal-
+lerini, L. Bandiera, J. Bernhard, C. Biino, L. Bomben, V. Bonaiuto, A. Bradley,
+M. B. Brunetti, F. Bucci, A. Cassese, R. Camattari, M. Corvino, D. D. Sal-
+vador, D. D. Filippo, M. van Dijk, N. Doble, R. Fantechi, S. Fedotov, A. Fil-
+ippi, F. Fontana, L. Gatignon, G. Georgiev, A. Gerbershagen, A. Gianoli,
+E. Imbergamo, K. Kampf, M. Khabibullin, S. Kholodenko, A. Khotjantsev,
+V. Kozhuharov, Y. Kudenko, V. Kurochka, G. Lamanna, M. Lenti, L. Litov,
+E. Lutsenko, T. Maiolino, I. Mannelli, S. Martellotti, M. Martini, V. Mascagna,
+A. Maslenkina, P. Massarotti, A. Mazzolari, E. Menichetti, O. Mineev, M. Mirra,
+M. Moulson, I. Neri, M. Napolitano, V. Obraztsov, A. Ostankov, G. Paoluzzi,
+F. Petrucci, M. Prest, M. Romagnoni, M. Rosenthal, P. Rubin, A. Salamon,
+G. Salina, F. Sargeni, V. Semenov, A. Shaykhiev, A. Smirnov, M. Soldani,
+D. Soldi, M. Sozzi, V. Sugoniaev, A. Sytov, E. Vallazza, R. Volpe, R. Wanke,
+and N. Yershov, “Klever: An experiment to measure br( kl→π0ν¯ν) at the cern
+sps,” 2019.
+81
