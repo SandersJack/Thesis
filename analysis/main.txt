@@ -48,12 +48,12 @@ blah blah blah
 6.1 High Intensity Kaon Experiments (HIKE) Description . . . . . . . . . 72
 6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
 6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
-6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 75
-6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 75
-6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
-6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
-7 Dark Photon Analysis 77
+6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 76
+6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 76
+6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
+7 Dark Photon Analysis 78
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -158,8 +158,8 @@ H in 2023 and CEDAR-W in 2022 with the expectation for a given
 photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
 6.1 Diagram of HIKE phase 1 detector setup [7] . . . . . . . . . . . . . . 73
 6.2 Diagram of the expected layout of the 5 mm straws [7] . . . . . . . . 74
-6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 75
-6.4 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 76
+6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 76
+6.4 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 77
 8List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 23
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -1333,7 +1333,7 @@ track angle and momentum resolution of 10-20 % compared to NA62.
 Figure 6.2: Diagram of the expected layout of the 5 mm straws [7]
 Downstream of the fiducial volume, the PMT arrays of the RICH detector would
 have been upgraded, which is described in Section 6.4. The timing detector would
-746.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
+746.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 profit from the current NA62-CHOD detector with upgraded PMTs, which would
 have been chosen from the number of studies from other detectors such as KTAG,
 RICH and MUV. For Phase 1, the primary electromagnetic calorimeter would have
@@ -1343,19 +1343,35 @@ the readout system. A number of other detectors would have been upgraded or
 replaced with higher granularity, such as the hadronic calorimeter, MUVs, IRC, and
 SAC.
 6.1.2 Phase 2
+HIKE phase 2 would have been a multi-purpose neutral KLdecay experiment with
+the primary goal to measure the branching ratios of the KL→π0l+l−decays.
+The detector setup for phase 2, shown in Figure 6.3 would have involved minimal
+modification to the experimental setup of Phase 1, with the removal of detectors that
+were only applicable to the charge kaon beam. The KTAG, GTk, RICH, and SAC
+detectors would have been removed the straw spectrometer shortened to account for
+the softer momentum of the secondary particles, and the chambers would have been
+reconfigured to have central beam holes to account for the neural beam. Due to the
+compact detector, the fiducial volume would have been increased to 90 m compared
+to 75 m in Phase 1.
+756.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.3: Diagram of HIKE phase 2 detector setup [7]
+The design proposed a production angle of 2.4 mrad on the target producing an
+expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux of
+1.2×1019pot per year would have resulted in 3 .8×1013KLdecays in the fiducial
+volume per year. The mean momentum at the entry of the fiducial volume was
+expected to be 79 GeV/c with a mean momentum for KLwhich decay of 46 GeV/c .
 6.1.3 Phase 3 (KLEVER)
 6.2 KTAG Photon Detection System upgrade
 To sustain the increased kaon rate, the KTAG required upgrades to the photon-
 detection system and data acquisition system, with an expected time resolution of
 15 - 20 ps and a kaon identification efficiency of greater than 95 %. The expected
 kaon rate was 200 MHz which corresponds to a maximum particle rate 10 MHz/cm2
-756.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 of photons at the PMT arrays, taking into the production of Cherenkov photons in
 CEDAR-H and the resultant acceptance of the photons. It was proposed that the
 PMT arrays would be replaced with arrays of micro-channel plate photomultipliers
 (MCP-PMTs), which provide a single photon time resolution of 50 - 70 ps depending
 on the model, a low dark rate of 1 kHz/cm2and the ability to sustain the required
+766.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 photon rate. A downside of the MCP-PMTs is their limited lifetime from the aging
 of the Photo-Cathode caused by heavy feedback ions from the residual gas. This
 results in the rapid degradation of PMT quantum efficiency with the increasing
@@ -1364,9 +1380,9 @@ Figure 6.4: Scematic of Photonics MCP-PMT. CITE!
 6.3 GTk upgrade design
 6.4 RICH upgrade design
 6.5 Detector Rates
-76Chapter 7
+77Chapter 7
 Dark Photon Analysis
-77Bibliography
+78Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1384,9 +1400,9 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-78BIBLIOGRAPHY BIBLIOGRAPHY
+79BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] T. H. Collaboration, “High intensity kaon experiments (hike) at the cern sps
 proposal for phases 1 and 2,” 2023.
-79
+80
