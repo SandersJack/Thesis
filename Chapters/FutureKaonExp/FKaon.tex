@@ -71,7 +71,19 @@
     %%% KTAG QUANTUM EFFICIENCY
     \section{GTk upgrade design} \label{sec:gtk_upgrade}
     \section{RICH upgrade design} \label{sec:rich_upgrade}
-    
+    The overall design of the NA62 RICH described in section \ref{sec:RICH} was well suited for use within HIKE with an upgrade to the Cherenkov photon-detection system. The NA62 RICH photon detection system comprises two arrays on either side of the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern described in Figure \ref{fig:richPMTArray}. 
+    The PMTs have a single hit time resolution of 240\,ps and a quantum efficiency of 20\,\%. Due to the placement of the PMTs, the distance between the center of each PMT is 18\,mm, which is constrained by the sensor size and the geometry of PMT itself. This distance between sensors was the main contributor to the single hit position resolution of 4.7\,mm, 
+    resulting in an overall ring radius resolution of 1.5\,mm. The number of hits per ring candidate and the single hit time resolution produced a time resolution of 80\,ps. Due to the increased beam intensity, the main requirement of the RICH for HIKE was a time resolution of 20 - 30\,ps.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{plots/diagramRICH.png}
+        \caption{Diagram of RICH PMT array}%
+        \label{fig:richPMTArray}%
+    \end{figure}  
+    The proposed RICH photon detection system upgrade would replace the current PMTs with a smaller sensor size, allowing for a smaller distance between sensor centers and reducing the hit position resolution. An excellent candidate for a sensor replacement was silicon photomultipliers (SiPMs), with small sensor sizes, high quantum efficiency of 40\,\% and a single hit time resolution 
+    of at least 100\,ps were available from major manufacturers. Three sensor sizes were selected for further investigation, $9 \times 9\,mm$, $6 \times 6\,mm$, and $3 \times 3\,mm$. Each size had apparent benefits and downsides, but the smaller sensors would produce a better hit position resolution but at an increased cost and complexity.
+    A study was conducted to determine the optimal sensor size for the SiPMs, with the overall detector performance balanced with the cost and complexity. The study setout below.
+
     \section{Detector Rates}
     
 
