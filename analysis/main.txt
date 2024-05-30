@@ -52,8 +52,8 @@ blah blah blah
 6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 77
 6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
 6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
-7 Dark Photon Analysis 79
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+7 Dark Photon Analysis 81
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -161,6 +161,7 @@ photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
 6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 76
 6.4 Diagram of HIKE phase 3 detector setup [7] . . . . . . . . . . . . . . 77
 6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 78
+6.6 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 79
 8List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 23
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -1397,10 +1398,36 @@ integrated anode charge.
 Figure 6.5: Scematic of Photonics MCP-PMT. CITE!
 6.3 GTk upgrade design
 6.4 RICH upgrade design
+The overall design of the NA62 RICH described in section 3.3.4 was well suited
+for use within HIKE with an upgrade to the Cherenkov photon-detection system.
+The NA62 RICH photon detection system comprises two arrays on either side of
+the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern
+described in Figure 6.6. The PMTs have a single hit time resolution of 240 ps and a
+quantum efficiency of 20 %. Due to the placement of the PMTs, the distance between
+786.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+the center of each PMT is 18 mm, which is constrained by the sensor size and the
+geometry of PMT itself. This distance between sensors was the main contributor
+to the single hit position resolution of 4.7 mm, resulting in an overall ring radius
+resolution of 1.5 mm. The number of hits per ring candidate and the single hit time
+resolution produced a time resolution of 80 ps. Due to the increased beam intensity,
+the main requirement of the RICH for HIKE was a time resolution of 20 - 30 ps.
+Figure 6.6: Diagram of RICH PMT array
+The proposed RICH photon detection system upgrade would replace the current
+PMTs with a smaller sensor size, allowing for a smaller distance between sensor
+centers and reducing the hit position resolution. An excellent candidate for a sen-
+sor replacement was silicon photomultipliers (SiPMs), with small sensor sizes, high
+quantum efficiency of 40 % and a single hit time resolution of at least 100 ps were
+available from major manufacturers. Three sensor sizes were selected for further in-
+vestigation, 9 ×9mm, 6×6mm, and 3 ×3mm. Each size had apparent benefits and
+796.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+downsides, but the smaller sensors would produce a better hit position resolution
+but at an increased cost and complexity. A study was conducted to determine the
+optimal sensor size for the SiPMs, with the overall detector performance balanced
+with the cost and complexity. The study setout below.
 6.5 Detector Rates
-78Chapter 7
+80Chapter 7
 Dark Photon Analysis
-79Bibliography
+81Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1418,7 +1445,7 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-80BIBLIOGRAPHY BIBLIOGRAPHY
+82BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] T. H. Collaboration, “High intensity kaon experiments (hike) at the cern sps
@@ -1438,4 +1465,4 @@ G. Salina, F. Sargeni, V. Semenov, A. Shaykhiev, A. Smirnov, M. Soldani,
 D. Soldi, M. Sozzi, V. Sugoniaev, A. Sytov, E. Vallazza, R. Volpe, R. Wanke,
 and N. Yershov, “Klever: An experiment to measure br( kl→π0ν¯ν) at the cern
 sps,” 2019.
-81
+83
