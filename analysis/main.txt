@@ -53,6 +53,7 @@ blah blah blah
 6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
 6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
 6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
+7 Dark Photon Analysis 82
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -60,20 +61,20 @@ areas show the signal regions used to reject the domiant kaon decays
 kinematically. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
 3.2 X-Z diagram of NA62 detector setup for Run 1 . . . . . . . . . . . . 14
 3.3 Schematic of K12 beamline from T10 target at 0m to the entence of
-the NA62 decay region at 102.4m[ ?]. . . . . . . . . . . . . . . . . . . 15
-3.4 Schematic of K12 beamline after GTK3 [ ?]. . . . . . . . . . . . . . . 18
-3.5 Diagram describing the CEDAR optics [ ?] . . . . . . . . . . . . . . . 20
-3.6 Image of GTk station [ ?]. . . . . . . . . . . . . . . . . . . . . . . . . 21
-3.7 Schematic of GTK stations within the acromat [ ?] for run 1. . . . . 22
-3.8 Diagram of straw placement in each view [ ?] . . . . . . . . . . . . . 24
+the NA62 decay region at 102.4m[1]. . . . . . . . . . . . . . . . . . . 15
+3.4 Schematic of K12 beamline after GTK3 [1]. . . . . . . . . . . . . . . . 18
+3.5 Diagram describing the CEDAR optics [2] . . . . . . . . . . . . . . . 20
+3.6 Image of GTk station [1]. . . . . . . . . . . . . . . . . . . . . . . . . . 21
+3.7 Schematic of GTK stations within the acromat [1] for run 1. . . . . . 22
+3.8 Diagram of straw placement in each view [3] . . . . . . . . . . . . . . 24
 3.9 Diapgram showing placement of views in a straw chamber. Edited
-from [ ?] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
+from [3] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24
 3.10 Schematic of RICH detector, showing the beam entering the upstream
 end on the left. A zoomed-in image of one of the two PMT flanges
 shows the layout of the PMT arrays. The mirrors are also shown at
-the dowstream end of the vessel [ ?] . . . . . . . . . . . . . . . . . . . 25
+the dowstream end of the vessel [4] . . . . . . . . . . . . . . . . . . . 25
 4LIST OF FIGURES LIST OF FIGURES
-3.11 Cherenkov ring radius as a function of the particle momentum [ ?] . . 26
+3.11 Cherenkov ring radius as a function of the particle momentum [4] . . 26
 4.1 Diagram showing the optics of the CEDAR and KTAG in green as
 well as expected Cherenkov ring path in blue . . . . . . . . . . . . . . 28
 4.2 Photos showing the CEDAR diaphragm. In the left, a fully open
@@ -155,13 +156,15 @@ CEDAR-H in 2023 and CEDAR-W in 2022 . . . . . . . . . . . . . . . 68
 4.35 Comparison of the number of kaon identifaction effciency of CEDAR-
 H in 2023 and CEDAR-W in 2022 with the expectation for a given
 photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 69
-6.1 Diagram of HIKE phase 1 detector setup [ ?] . . . . . . . . . . . . . 73
-6.2 Diagram of the expected layout of the 5 mm straws [ ?] . . . . . . . . 74
-6.3 Diagram of HIKE phase 2 detector setup [ ?] . . . . . . . . . . . . . 76
-6.4 Diagram of HIKE phase 3 detector setup [ ?] . . . . . . . . . . . . . 77
+6.1 Diagram of HIKE phase 1 detector setup [5] . . . . . . . . . . . . . . 73
+6.2 Diagram of the expected layout of the 5 mm straws [5] . . . . . . . . 74
+6.3 Diagram of HIKE phase 2 detector setup [5] . . . . . . . . . . . . . . 76
+6.4 Diagram of HIKE phase 3 detector setup [5] . . . . . . . . . . . . . . 77
 6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 78
 6.6 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 79
 6.7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+6.8 Selected SiPM quantum efficiency taken from Hamamatsu S13360
+datasheet [6] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
 8List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 23
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -228,7 +231,7 @@ The A1 achromat comprises four dipole magnets that vertically deflect the beam,
 the first two which deflect the beam 110 mm downwards, while the final two deflect
 143.2. THE NA62 BEAM LINE CHAPTER 3. THE NA62 EXPERIMENT
 Figure 3.3: Schematic of K12 beamline from T10 target at 0m to the entence of the
-NA62 decay region at 102.4m[ ?].
+NA62 decay region at 102.4m[1].
 the beam upwards towards the original axis. Between these pairs of magnets, there
 are a pair of water-cooled beam-dump units (TAX1 and TAX2) with a set of holes to
 select the required 75 GeV/c momentum beam, while absorbing unwanted secondary
@@ -295,7 +298,7 @@ is transported through the remaining downstream detectors in vacuum and is de-
 flected -13.2 mrad in the negative direction by a dipole magnet (BEND) to sweep
 the beam away from the Small Angle Calorimeter (SAC) acceptance, located within
 the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
-Figure 3.4: Schematic of K12 beamline after GTK3 [ ?].
+Figure 3.4: Schematic of K12 beamline after GTK3 [1].
 183.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
 3.3 NA62 Detectors
 3.3.1 KTAG
@@ -304,7 +307,7 @@ components, the kaons must be identified. Kaon identification is provided by the
 KTAG and located at Z= 69.4m. It comprises a CEDAR vessel and a purpose-
 built photon detection system. Until the NA62 2023 run, the CEDAR vessel used
 was a CEDAR-W filled with a Nitrogen radiator. CEDARs were developed at
-CERN in the 1970s [ ?] for secondary beam particle detection at the super proton
+CERN in the 1970s [2] for secondary beam particle detection at the super proton
 synchrotron (SPS). The CEDAR is a differential Cherenkov Counter and exploits
 the dependence of the beam particle’s mass on the properties of the produced light,
 defined in equation 3.2 where β=p
@@ -318,7 +321,7 @@ kaon is focused by a set of lenses and mirrors onto arrays of photomultiplier tu
 (PMTs). The light from the other beam components does not reach the PMT arrays.
 A diagram showing the internal optics of the CEDAR is shown in Figure 3.5.
 193.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
-Figure 3.5: Diagram describing the CEDAR optics [ ?]
+Figure 3.5: Diagram describing the CEDAR optics [2]
 In the original CERN design, the Cherenkov light exiting each CEDAR exit
 window was detected by an ET-9820QB photomultiplier tube (PMT) placed directly
 on the exit window, with a particle identified if there was a coincidence of at least
@@ -332,7 +335,7 @@ CEDAR exit windows are reflected radially 90 degrees by eight spherical mirrors 
 KTAG photo-detection system allowed the use of at least five sectors for particle
 identification, resulting in an improved kaon identification efficiency compared to the
 original setup. A kaon time resolution of 70 ps and a kaon identification efficiency
-of 95% was achieved with the KTAG and CEDAR-W [ ?].
+of 95% was achieved with the KTAG and CEDAR-W [7].
 In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed
 in the NA62 beamline after design at the Univeristy of Birmingham and testing at
 CERN. The new CEDAR uses the same basic principles as previous CEDARs but
@@ -342,7 +345,7 @@ in the CEDAR and the photon detection system. A more detailed description of the
 CEDAR and its optical elements, along with the design, testing and installation of
 the new CEDAR-H can be found in Section ??.
 3.3.2 GigaTracker (GTK)
-Figure 3.6: Image of GTk station [ ?].
+Figure 3.6: Image of GTk station [1].
 The precise measurement of the beam momentum, time, and position is provided
 by the GigaTracker (GTk), a beam spectrometer comprising hybrid silicon track-
 ers placed within the vacuum pipe along with an achromat upstream of the decay
@@ -359,7 +362,7 @@ taking (2021-present) and placed in front of the first GTK station, increasing t
 213.3. NA62 DETECTORS CHAPTER 3. THE NA62 EXPERIMENT
 tracking efficiency and reducing the backgrounds for the main decay mode. The
 layout of the GTK is shown in Figure ??
-Figure 3.7: Schematic of GTK stations within the acromat [ ?] for run 1.
+Figure 3.7: Schematic of GTK stations within the acromat [1] for run 1.
 Each station consists of 18000 pixels of size 300 ×300µm2in a matrix of 200 ×
 90, covering a total area of 62 .8×27mm2and is read out by application-specific
 integrated circuits (ASIC). The tracker was placed within the beam, so the material
@@ -404,10 +407,10 @@ anode wire, the electric field strength increases dramatically, producing Townse
 avalanches. This provides a large multiplication of the signal, producing a charge
 pulse, which can be read out.
 Figure 3.8: Diagram of straw place-
-ment in each view [ ?]
+ment in each view [3]
 Figure 3.9: Diapgram showing place-
 ment of views in a straw chamber.
-Edited from [ ?]
+Edited from [3]
 3.3.4 Ring Imaging Cherenkov counter (RICH)
 The Ring Imaging Cherenkov counter (RICH) was designed to separate secondary
 pion and muons within a momentum range of 15 - 35 GeV/c . The ability to sepa-
@@ -432,7 +435,7 @@ of 12.5GeV/c .
 Figure 3.10: Schematic of RICH detector, showing the beam entering the upstream
 end on the left. A zoomed-in image of one of the two PMT flanges shows the layout
 of the PMT arrays. The mirrors are also shown at the dowstream end of the vessel
-[?]
+[4]
 A mosaic of 20 spherical mirrors (18 hexagonal and 2 semi-hexagonal) with a
 focal length of 17 m are located at the downstream end of the vessel and is shown
 in Figure 3.10. This mirror system is used to reflect and focus the Cherenkov light
@@ -447,7 +450,7 @@ mass, calculated from the particle velocity using the reconstructed Cherenkov ri
 radius shown in Figure 3.11 and the momentum of the particle measured by the
 spectrometer. In Figure 3.11, it is clear that separating pions and muons within the
 desired momentum range is possible.
-Figure 3.11: Cherenkov ring radius as a function of the particle momentum [ ?]
+Figure 3.11: Cherenkov ring radius as a function of the particle momentum [4]
 3.3.5 Photon Detection System
 3.4 Triger and Data Acquisition System (TDAQ)
 26Chapter 4
@@ -500,7 +503,7 @@ cos(θ) =1
 βn(4.1)
 The CEDAR contains optics inside the vessel connected to supports to allow the
 focusing of the produced Cherenkov light to reach the diaphragm at a radius of
-100 mm. The light produced is reflected back upstream by a Mangin mirror [ ?],
+100 mm. The light produced is reflected back upstream by a Mangin mirror [8],
 which is a mirror comprising of two spherical surfaces with the dowstream lense
 cemented onto a concave mirror. The mirror was designed to reduce any spheical
 aberrations, which is an effect intrinsic to lenses and curved mirrors where the light
@@ -540,14 +543,14 @@ Attached to the exit windows are glass filters, designed to attenuate light belo
 240 nm to remove light from unwanted particles.
 314.1. CEDAR DESCRIPTION CHAPTER 4. CEDARH
 Figure 4.4: Image showing the exit windows at the upstream end of the CEDAR-W
-In the original CEDAR design [ ?], light exiting the CEDAR through the exit
+In the original CEDAR design [2], light exiting the CEDAR through the exit
 windows was detected by eight ET-9820QB photomultiplier tubes (PMTs), with one
 attached to each window. A particle was identified when there was a coincidence in
 at least six PMTs. However, this setup would not be applicable for NA62, which
 requires strict timming requirements on the selection of kaons of less than 100 ps,
 a kaon identification efficecy of greater than 95 % and a pion miss-identification
 probability of less than 10−4. To achieve these strict requirements, a purpose-built
-photon detection system was designed [ ?] and attached to the upstream end of
+photon detection system was designed [7] and attached to the upstream end of
 the CEDAR. The light exiting the quartz windows traverses through optical caps
 attached to the windows, which focus the light onto spherical mirrors. The spherical
 mirrors, one for each exit window reflect the light 90 degrees into eight light boxes
@@ -1314,7 +1317,7 @@ protons per spill on the target. Other than the intensity upgrade, the beam had
 similar characteristics to NA62 with a 75 Gev/c secondary beam produced from the
 400GeV/c primary beam from the SPS accelerator onto a target at an angle of
 0rad.
-Figure 6.1: Diagram of HIKE phase 1 detector setup [ ?]
+Figure 6.1: Diagram of HIKE phase 1 detector setup [5]
 The upgraded detectors before the fiducial volume included an upgraded photon-
 736.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 detection system for the KTAG, described in section 6.2 and a new GTk chip design
@@ -1331,7 +1334,7 @@ The STRAW spectrometer would have been upgraded to use a new 5 mm straw
 design shown in Figure 6.2. The reduction in straw diameter would have decreased
 drift times and increase granularity resulting in an expected improvement in the
 track angle and momentum resolution of 10-20 % compared to NA62.
-Figure 6.2: Diagram of the expected layout of the 5 mm straws [ ?]
+Figure 6.2: Diagram of the expected layout of the 5 mm straws [5]
 Downstream of the fiducial volume, the PMT arrays of the RICH detector would
 have been upgraded, which is described in Section 6.4. The timing detector would
 746.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
@@ -1355,23 +1358,23 @@ reconfigured to have central beam holes to account for the neural beam. Due to t
 compact detector, the fiducial volume would have been increased to 90 m compared
 to 75 m in Phase 1.
 756.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
-Figure 6.3: Diagram of HIKE phase 2 detector setup [ ?]
+Figure 6.3: Diagram of HIKE phase 2 detector setup [5]
 The design proposed a production angle of 2.4 mrad on the target producing an
 expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux of
 1.2×1019pot per year would have resulted in 3 .8×1013KLdecays in the fiducial
 volume per year. The mean momentum at the entry of the fiducial volume was
 expected to be 79 GeV/c with a mean momentum for KLwhich decay of 46 GeV/c .
 6.1.3 Phase 3 (KLEVER)
-HIKE phase 3, previously known as KLEVER [ ?], was an experiment designed
-to measure the KL→π0ν¯νdecay. The experimental setup is shown in Figure
-6.4 and differs from the design used at NA62 and HIKE Phase1/2. The setup
-consists of a large number of photon-detectors, located around a 160 m long vacuum
-volume to produce a complete coverage of photons produced from KLdecays. The
-photon-detectors include coverage for photons emitted up to 100 mrad and allow for
-a free path of photons to the main electromagnetic calorimeter (MEC) emitted up
-to 7.5 mrad.
+HIKE phase 3, previously known as KLEVER [9], was an experiment designed to
+measure the KL→π0ν¯νdecay. The experimental setup is shown in Figure 6.4 and
+differs from the design used at NA62 and HIKE Phase1/2. The setup consists of
+a large number of photon-detectors, located around a 160 m long vacuum volume
+to produce a complete coverage of photons produced from KLdecays. The photon-
+detectors include coverage for photons emitted up to 100 mrad and allow for a free
+path of photons to the main electromagnetic calorimeter (MEC) emitted up to
+7.5 mrad.
 766.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
-Figure 6.4: Diagram of HIKE phase 3 detector setup [ ?]
+Figure 6.4: Diagram of HIKE phase 3 detector setup [5]
 Due to the differing experimental setup, Phase 3 was separated from the HIKE
 proposal submitted in 2023. Still, some detectors would have been shared between
 the two experiments as the granularity and efficiency requirements for Phase 3 would
@@ -1430,13 +1433,90 @@ NA62, the PMTs have been aligned on the vertical axis, and because of the geome-
 try of the new PMTs, the are of the light spot, shown in Figure 6.7 as a grey circle,
 is completely covered by the PMTs with no gaps between the sensors.
 Figure 6.7
-The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of
-at least 40 % [ ?]. The Hamamatsu S13360-**50CS series was selected as the
-preliminary candidate for the RICH PMT upgrade to achieve this requirement.
-Hamamatsu offers a number of SiPMs in the S13360 series with the **50CS selected
-for its imporved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40 %
-peak at 460 nm, shown in Figure 6.4.
+The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of at
+least 40 % [10]. The Hamamatsu S13360-**50CS series was selected as the prelimi-
+nary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu
+offers a number of SiPMs in the S13360 series with the **50CS selected for its im-
+porved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40 % peak at
+460 nm, shown in Figure 6.8.
 806.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
-beginfigure[H]
+Figure 6.8: Selected SiPM quantum efficiency taken from Hamamatsu S13360
+datasheet [6]
 6.5 Detector Rates
-81
+81Chapter 7
+Dark Photon Analysis
+82Bibliography
+[1] NA62Collaboration, “The beam and detector of the NA62 experiment at
+CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
+[2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
+Counters for Particle Identification in the SPS Secondary Beams: A Description
+and an Operation Manual,” 12 1982.
+[3] A. Sergi, “Na62 spectrometer: A low mass straw tracker,” Physics Procedia ,
+vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
+Technology and Instrumentation in Particle Physics (TIPP 2011).
+[4] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
+282, 2018.
+[5] T. H. Collaboration, “High intensity kaon experiments (hike) at the cern sps
+proposal for phases 1 and 2,” 2023.
+[6]
+[7] E. Goudzovski, M. Krivda, C. Lazzeroni, K. Massri, F. O. Newson, S. Py-
+att, A. Romano, X. Serghi, A. Sergi, R. J. Staley, H. F. Heath, R. F. Page,
+A. Cassese, P. A. Cooke, J. B. Dainton, J. R. Fry, L. D. Fulton, E. Jones,
+83BIBLIOGRAPHY BIBLIOGRAPHY
+T. J. Jones, K. J. McCormick, P. Sutcliffe, and B. Wrona, “Development of the
+kaon tagging system for the na62 experiment at cern,” Nuclear Instruments and
+Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors
+and Associated Equipment , vol. 801, pp. 86–94, 2015.
+[8] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
+vol. 13, pp. 1690–1694, Jul 1974.
+[9] F. Ambrosino, R. Ammendola, A. Antonelli, K. Ayers, D. Badoni, G. Ballerini,
+L. Bandiera, J. Bernhard, C. Biino, L. Bomben, V. Bonaiuto, A. Bradley,
+M. B. Brunetti, F. Bucci, A. Cassese, R. Camattari, M. Corvino, D. D.
+Salvador, D. D. Filippo, M. van Dijk, N. Doble, R. Fantechi, S. Fedotov,
+A. Filippi, F. Fontana, L. Gatignon, G. Georgiev, A. Gerbershagen, A. Gi-
+anoli, E. Imbergamo, K. Kampf, M. Khabibullin, S. Kholodenko, A. Khot-
+jantsev, V. Kozhuharov, Y. Kudenko, V. Kurochka, G. Lamanna, M. Lenti,
+L. Litov, E. Lutsenko, T. Maiolino, I. Mannelli, S. Martellotti, M. Martini,
+V. Mascagna, A. Maslenkina, P. Massarotti, A. Mazzolari, E. Menichetti,
+O. Mineev, M. Mirra, M. Moulson, I. Neri, M. Napolitano, V. Obraztsov,
+A. Ostankov, G. Paoluzzi, F. Petrucci, M. Prest, M. Romagnoni, M. Rosen-
+thal, P. Rubin, A. Salamon, G. Salina, F. Sargeni, V. Semenov, A. Shaykhiev,
+A. Smirnov, M. Soldani, D. Soldi, M. Sozzi, V. Sugoniaev, A. Sytov, E. Val-
+lazza, R. Volpe, R. Wanke, and N. Yershov, “Klever: An experiment to measure
+br(kl→π0ν¯ν) at the cern sps,” 2019.
+[10] E. Cortina Gil, J. Jerhot, N. Lurkin, T. Numao, B. Velghe, V. Wong, D. Bry-
+man, L. Bician, Z. Hives, T. Husek, K. Kampf, M. Koval, A. Akmete, R. Al-
+84BIBLIOGRAPHY BIBLIOGRAPHY
+iberti, V. B¨ uscher, L. Di Lella, N. Doble, L. Peruzzo, M. Schott, H. Wahl,
+R. Wanke, B. D¨ obrich, L. Montalto, D. Rinaldi, F. Dettori, A. Cardini, A. Lai,
+L. Bomben, S. Carsi, M. Prest, A. Selmi, G. Lezzani, P. Monti-Guarnieri,
+L. Perna, P. Dalpiaz, V. Guidi, A. Mazzolari, I. Neri, F. Petrucci, M. Sol-
+dani, L. Bandiera, A. Cotta Ramusino, A. Gianoli, M. Romagnoni, A. Sytov,
+M. Lenti, I. Panichi, G. Ruggiero, A. Bizzeti, F. Bucci, A. Antonelli, E. Di Meco,
+G. Lanfranchi, S. Martellotti, M. Martini, M. Moulson, D. Paesani, I. Sarra,
+T. Spadaro, G. Tinti, E. Vallazza, F. Ambrosino, R. Giordano, P. Massarotti,
+M. Napolitano, G. Saracino, C. Di Donato, G. D’Ambrosio, M. D’Errico,
+M. Mirra, S. Neshatpour, R. Fiorenza, I. Rosa, D. De Salvador, F. Sgar-
+bossa, G. Anzivino, S. Germani, R. Volpe, P. Cenci, S. Cutini, V. Duk, P. Lu-
+brano, M. Pepe, M. Piccini, F. Costantini, S. Donati, M. Giorgi, S. Giu-
+dici, G. Lamanna, E. Pedreschi, J. Pinzino, M. Sozzi, R. Fantechi, V. Giusti,
+F. Spinella, I. Mannelli, M. Raggi, A. Biagioni, P. Cretaro, O. Frezza, F. Lo Ci-
+cero, A. Lonardo, M. Turisini, P. Vicini, R. Ammendola, V. Bonaiuto, A. Fucci,
+A. Salamon, F. Sargeni, R. Arcidiacono, B. Bloch-Devaux, E. Menichetti,
+E. Migliore, C. Biino, F. Marchetto, D. Baigarashev, Y. Kambar, D. Kereibay,
+Y. Mukhamejanov, S. Sakhiyev, A. B. Olvera, J. Engelfried, N. Estrada-Tristan,
+R. Piandani, M. R. Santos, K. R. Rivera, P. Boboc, A. Bragadireanu, S. Ghi-
+nescu, O. Hutanu, T. Blazek, V. Cerny, A. Kleimenova, Z. Kucerova, D. Mar-
+tinez Santos, C. Prouve, M. Boretto, F. Brizioli, A. Ceccucci, M. Corvino,
+H. Danielsson, F. Duval, E. Gamberini, R. Guida, E. Holzer, B. Jenninger,
+G. Lehmann Miotto, P. Lichard, K. Massri, E. Minucci, M. Perrin-Terrin,
+V. Ryjov, J. Swallow, M. Van Dijk, M. Zamkovsky, R. Marchevski, A. Ger-
+85BIBLIOGRAPHY BIBLIOGRAPHY
+bershagen, J. Fry, F. Gonnella, E. Goudzovski, J. Henshaw, C. Kenworthy,
+C. Lazzeroni, C. Parkinson, A. Romano, J. Sanders, A. Shaikhiev, A. Tom-
+czak, H. Heath, D. Britton, A. Norton, D. Protopopescu, J. Dainton, R. Jones,
+A. De Santo, F. Salvatore, P. Cooper, D. Coward, and P. Rubin, “HIKE, High
+Intensity Kaon Experiments at the CERN SPS: Letter of Intent,” tech. rep.,
+CERN, Geneva, 2022. Letter of Intent submitted to CERN SPSC. Address all
+correspondence to hike-eb@cern.ch.
+86
