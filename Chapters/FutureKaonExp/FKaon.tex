@@ -107,16 +107,33 @@
         \caption{}
         \label{fig:RICH_PMTs}
     \end{figure}
-    The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of at least 40\,\% \cite{CortinaGil:2839661}. The Hamamatsu S13360-**50CS series was selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series with the **50CS selected for its imporved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40\,\% peak at 460\,nm, 
+    The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of at least 40\,\% \cite{CortinaGil:2839661}. The Hamamatsu S13360-**50CS series was selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected for its improved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40\,\% peak at 460\,nm, 
     shown in Figure \ref{fig:RICH_PMT_QE}. 
-
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{plots/PMT_QE.png}
         \caption{Selected SiPM quantum efficiency taken from Hamamatsu S13360 datasheet \cite{MPPC}}%
         \label{fig:RICH_PMT_QE}%
     \end{figure}  
-
+    Along with the QE efficiency requirement was a single hit time resolution of 100\,ps \cite{CortinaGil:2839661}. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value was given. The time resolution would also depend on the final design of the RICH readout electronics and would have to be measured in a test setup. A simple Gaussian time response curve with a sigma of 100\,ps was used for the simulations.
+    
+    The expected performance of the RICH detector with the new PMTs was compared to the current NA62 RICH detector in Table \ref{tab:hikeRICH}. With the increased quantum efficiency, the expected number hits per $\pi^{+}$ at 15 and 45\,$GeV/c$ increased by a factor of two. This, along with the improved time resolution of the new PMTs resulted in a time $\pi^+$ time resolution of 27\,ps at 15\,$GeV/c$ and 20\,ps at 45\,$GeV/c$.
+    \begin{table}[]
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+         & NA62 RICH & HIKE RICH \\ \hline
+        Sensor time resolution & 240ps & 100ps \\ \hline
+        Sensor quantum efficiency & 20\% & 40\% \\ \hline
+        Number of hit for $\pi^+$ at 15 $GeV/c$ & 7 & 14 \\ \hline
+        Number of hit for $\pi^+$ at 45 $GeV/c$ & 12 & 24 \\ \hline
+        Time resolution for $\pi^+$ at 15 $GeV/c$ & 90ps & 27ps \\ \hline
+        Time resolution for $\pi^+$ at 45 $GeV/c$ & 70ps & 20ps \\ \hline
+        \end{tabular}
+        \caption{Comparisons of the expected performance of the NA62 and HIKE RICH detectors \cite{thehikecollaboration2023high}}
+        \label{tab:hikeRICH}
+        \end{table}
+    
     \section{Detector Rates}
     
 
