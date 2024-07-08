@@ -132,8 +132,139 @@
         \end{tabular}
         \caption{Comparisons of the expected performance of the NA62 and HIKE RICH detectors \cite{thehikecollaboration2023high}}
         \label{tab:hikeRICH}
-        \end{table}
+    \end{table}
+    Using the implemented upgrades to the RICH detectors, the above expectations were confirmed by a Monte Carlo sample of $K^{+} \to \pi^{0}e^{+}{\nu}$ (Ke3).  
+
+    For the three sensor sizes, a test production of 1M Ke3 was used to determine the preliminary performance of the detector and compare this to the current NA62 setup. The plots in Figure \ref{fig:HikeRICHIlum} show the light distribution on the PMT arrays for the three sensor sizes: 3\,mm \ref{fig:HikeRICHIlum}(a,b), 6\,mm \ref{fig:HikeRICHIlum}(c,d), and 9\,mm \ref{fig:HikeRICHIlum}(e,f) compared to the illumination on the current NA62 PMT arrays \ref{fig:NA62RICHIlum}. 
+    Due to the better placement of the square sensors, it is possible to see a more uniform illumination of the PMT arrays and better coverage of the light ring, especially in the Jura side. It is clear to see that either sensor size would be an improvement on the current NA62 setup.
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/NA62_sal_ilum.png}
+            \caption*{(a) Light distribution for NA62 setup on the Salev side of the RICH detector.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/NA62_jur_ilum.png}
+            \caption*{(b) Light distribution for NA62 setup on the Jura side of the RICH detector.}
+        \end{minipage}
+        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays. The 
+        left column shows illumination on the Salev side of the RICH detector, and the right column shows the Jura side.}%
+        \label{fig:NA62RICHIlum}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_sal_ilum.png}
+            \caption*{(a) Light distribution for 3\,mm sensors on the Salev side of the RICH detector.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_jur_ilum.png}
+            \caption*{(b) Light distribution for 3\,mm sensors on the Jura side of the RICH detector.}
+        \end{minipage}
     
+        \vspace{0.5cm} % Adjust the vertical space between rows
+    
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_sal_ilum.png}
+            \caption*{(c) Light distribution for 6\,mm sensors on the Salev side of the RICH detector.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_jur_ilum.png}
+            \caption*{(d) Light distribution for 6\,mm sensors on the Jura side of the RICH detector.}
+        \end{minipage}
+    
+        \vspace{0.5cm} % Adjust the vertical space between rows
+    
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_sal_ilum.png}
+            \caption*{(e) Light distribution for 9\,mm sensors on the Salev side of the RICH detector.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_jur_ilum.png}
+            \caption*{(f) Light distribution for 9\,mm sensors on the Jura side of the RICH detector.}
+        \end{minipage}
+        
+        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensor sizes. The 
+        left column shows illumination on the Salev side of the RICH detector, and the right column shows the Jura side.}%
+        \label{fig:HikeRICHIlum}
+    \end{figure}
+
+    %%% Files /afs/cern.ch/work/j/jsanders/Software/na62fw/NA62Analysis/PathToUser
+    %%% N Hit in Ring candidate
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/sample-a}
+            \caption*{(a) Number of hits per ring candidate for NA62 PMT arrays.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_NHits_3mm.png}
+            \caption*{(b) Number of hits per ring candidate for 3\,mm SiPMs, $\simga = 28.86$.}
+        \end{minipage}
+
+        \vspace{0.5cm}
+
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_NHits_6mm.png}
+            \caption*{(a) Number of hits per ring candidate for 6\,mm SiPMs $\simga = 27.56$.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_NHits_9mm.png}
+            \caption*{(b) Number of hits per ring candidate for 9\,mm SiPMs $\simga = 26.36$.}
+        \end{minipage}
+
+        \caption{Number of hits per ring candidate for NA62 PMTs and the three possible HIKE SiPMs}%
+        \label{fig:NA62RICHNHITs}
+    \end{figure}
+
+
+    %%% Ring Radius Resolution
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/sample-a}
+            \caption*{(a) Time resolution for NA62 PMT arrays.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_sigma_3mm.png}
+            \caption*{(b) Time resolution for 3\,mm SiPMs.}
+        \end{minipage}
+
+        \vspace{0.5cm}
+
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_sigma_6mm.png}
+            \caption*{(a) Time resolution for 6\,mm SiPMs.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/ring_sigma_9mm.png}
+            \caption*{(b) Time resolution for 9\,mm SiPMs.}
+        \end{minipage}
+
+        \caption{Time resolution for NA62 PMTs and the three possible HIKE SiPMs, calculated from the time difference between two equally populated subset of hits within the ring candidate. 
+        A detailed description of the procedure is provided here \cite{Anzivino_2020}}%
+        \label{fig:NA62RICHNHITs}
+    \end{figure}
+
     \section{Detector Rates}
     
 
