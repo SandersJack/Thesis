@@ -51,9 +51,9 @@ blah blah blah
 6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 77
 6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 78
 6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
-6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
-7 Dark Photon Analysis 89
+6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+7 Dark Photon Analysis 90
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -161,23 +161,25 @@ photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
 6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 77
 6.4 Diagram of HIKE phase 3 detector setup [7] . . . . . . . . . . . . . . 78
 6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 79
-6.6 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 80
-6.7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81
-6.8 Selected SiPM quantum efficiency taken from Hamamatsu S13360
-datasheet [10] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
-6.9 Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
+6.6 Hit distribution of GTK station 0 from MC for NA62 on the left and
+HIKE on the right . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+6.7 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 81
+6.8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
+6.9 Selected SiPM quantum efficiency taken from Hamamatsu S13360
+datasheet [10] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+6.10 Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays. The left column shows illumination on the Salev side of the
-RICH detector, and the right column shows the Jura side. . . . . . . 84
+RICH detector, and the right column shows the Jura side. . . . . . . 85
 8LIST OF FIGURES LIST OF FIGURES
-6.10 Cherenkov light illumination of RICH PMT arrays for the three dif-
+6.11 Cherenkov light illumination of RICH PMT arrays for the three dif-
 ferent sensor sizes. The left column shows illumination on the Salev
-side of the RICH detector, and the right column shows the Jura side. 85
-6.11 Number of hits per ring candidate for NA62 PMTs and the three
-possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
-6.12 Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
+side of the RICH detector, and the right column shows the Jura side. 86
+6.12 Number of hits per ring candidate for NA62 PMTs and the three
+possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+6.13 Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated
 subset of hits within the ring candidate. A detailed description of the
-procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 88
+procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 89
 9List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 24
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -187,7 +189,7 @@ are quoted with respect to the upstream end of the CEDAR. . . . . . 39
 electrons per beam particle from the pressure scans at different di-
 aphragm apertures. NEED TO CHECK THESE NUMBERS . . . . . 51
 6.1 Comparisons of the expected performance of the NA62 and HIKE
-RICH detectors [7] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+RICH detectors [7] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
 10Chapter 1
 Introduction
 Hello Chapter!
@@ -1414,21 +1416,38 @@ results in the rapid degradation of PMT quantum efficiency with the increasing
 integrated anode charge.
 Figure 6.5: Scematic of Photonics MCP-PMT. CITE!
 6.3 GTk upgrade design
+The NA62 GTk described in section 3.3.2 would have required an upgrade to sustain
+the fourfold increase in intensity at HIKE, requiring the new detector to have a time
+resolution of 50 ps compared to 200 ps in NA62. The exact pixel technology was
+not specified and is not part of this study, with the upgrade being focused on the
+improved granularity. The current NA62 GTk has two different pixel sizes: small,
+which are 300x300x200 µm, and large, which are 400x150x200 µm. The large pixels
+are found on the edge of the 10 chips that make up each station, and the small
+pixels are found in the center. Two options were envisioned to fulfill requirements
+796.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+for HIKE, the first having a pixel size on half of NA62 and the second having a
+pixel size of a third of NA62. The NA62MC simulation and NA62 reconstruction
+software were upgraded to allow for a more flexible GTk design.
+For the HIKE simulations, the pixel size of one-third of NA62 was chosen to
+maximize the granularity of the GTk, with the small pixel size being 150x150x200 µm
+and the larger pixel size being 200x150x200 µm.
+Figure 6.6: Hit distribution of GTK station 0 from MC for NA62 on the left and
+HIKE on the right
 6.4 RICH upgrade design
 The overall design of the NA62 RICH described in section 3.3.4 was well suited
 for use within HIKE with an upgrade to the Cherenkov photon-detection system.
 The NA62 RICH photon detection system comprises two arrays on either side of
 the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern
-described in Figure 6.6. The PMTs have a single hit time resolution of 240 ps and a
+described in Figure 6.7. The PMTs have a single hit time resolution of 240 ps and a
 quantum efficiency of 20 %. Due to the placement of the PMTs, the distance between
-796.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 the center of each PMT is 18 mm, which is constrained by the sensor size and the
+806.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 geometry of PMT itself. This distance between sensors was the main contributor
 to the single hit position resolution of 4.7 mm, resulting in an overall ring radius
 resolution of 1.5 mm. The number of hits per ring candidate and the single hit time
 resolution produced a time resolution of 80 ps. Due to the increased beam intensity,
 the main requirement of the RICH for HIKE was a time resolution of 20 - 30 ps.
-Figure 6.6: Diagram of RICH PMT array
+Figure 6.7: Diagram of RICH PMT array
 The proposed RICH photon detection system upgrade would replace the current
 PMTs with a smaller sensor size, allowing for a smaller distance between sensor
 centers and reducing the hit position resolution. An excellent candidate for a sen-
@@ -1436,26 +1455,26 @@ sor replacement was silicon photomultipliers (SiPMs), with small sensor sizes, h
 quantum efficiency of 40 % and a single hit time resolution of at least 100 ps were
 available from major manufacturers. Three sensor sizes were selected for further in-
 vestigation, 9 ×9mm, 6×6mm, and 3 ×3mm. Each size had apparent benefits and
-806.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 downsides, but the smaller sensors would produce a better hit position resolution
+816.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 but at an increased cost and complexity. A study was conducted to determine the
 optimal sensor size for the SiPMs, with the overall detector performance balanced
 with the cost and complexity.
 Using the upgraded NA62 software package described in section 5, it was pos-
 sible to implement the new PMTs into the RICH Monte Carlo simulation with the
-implemented arrays shown in Figure 6.7. Compared to the arrays currently used in
+implemented arrays shown in Figure 6.8. Compared to the arrays currently used in
 NA62, the PMTs have been aligned on the vertical axis, and because of the geome-
-try of the new PMTs, the are of the light spot, shown in Figure 6.7 as a grey circle,
+try of the new PMTs, the are of the light spot, shown in Figure 6.8 as a grey circle,
 is completely covered by the PMTs with no gaps between the sensors.
-Figure 6.7
+Figure 6.8
 The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of at
 least 40 % [9]. The Hamamatsu S13360-**50CS series was selected as the preliminary
 candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu
 offers a number of SiPMs in the S13360 series, with the **50CS selected for its
 improved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40 % peak
-at 460 nm, shown in Figure 6.8.
-816.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
-Figure 6.8: Selected SiPM quantum efficiency taken from Hamamatsu S13360
+at 460 nm, shown in Figure 6.9.
+826.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+Figure 6.9: Selected SiPM quantum efficiency taken from Hamamatsu S13360
 datasheet [10]
 Along with the QE efficiency requirement was a single hit time resolution of
 100 ps [9]. The manufacturer stated the Hamamatsu S13360-**50CS series has ex-
@@ -1469,7 +1488,7 @@ efficiency, the expected number hits per π+at 15 and 45 GeV/c increased by a fa
 of two. This, along with the improved time resolution of the new PMTs resulted in
 a time π+time resolution of 27 ps at 15 GeV/c and 20 ps at 45 GeV/c . Using the im-
 plemented upgrades to the RICH detectors, the above expectations were confirmed
-826.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+836.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 NA62 RICH HIKE RICH
 Sensor time resolution 240ps 100ps
 Sensor quantum efficiency 20% 40%
@@ -1482,21 +1501,21 @@ detectors [7]
 by a Monte Carlo sample of K+→π0e+ν(Ke3).
 For the three sensor sizes, a test production of 1M Ke3 was used to determine
 the preliminary performance of the detector and compare this to the current NA62
-setup. The plots in Figure 6.10 show the light distribution on the PMT arrays for the
-three sensor sizes: 3 mm 6.10(a,b), 6 mm 6.10(c,d), and 9 mm 6.10(e,f) compared to
-the illumination on the current NA62 PMT arrays 6.9. Due to the better placement
+setup. The plots in Figure 6.11 show the light distribution on the PMT arrays for the
+three sensor sizes: 3 mm 6.11(a,b), 6 mm 6.11(c,d), and 9 mm 6.11(e,f) compared to
+the illumination on the current NA62 PMT arrays 6.10. Due to the better placement
 of the square sensors, it is possible to see a more uniform illumination of the PMT
 arrays and better coverage of the light ring, especially in the Jura side. It is clear
 to see that either sensor size would be an improvement on the current NA62 setup.
-836.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+846.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Light distribution for NA62 setup on
 the Salev side of the RICH detector.
 (b) Light distribution for NA62 setup on
 the Jura side of the RICH detector.
-Figure 6.9: Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
+Figure 6.10: Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays. The left column shows illumination on the Salev side of the RICH detector,
 and the right column shows the Jura side.
-846.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+856.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Light distribution for 3 mm sensors on
 the Salev side of the RICH detector.
 (b) Light distribution for 3 mm sensors
@@ -1509,16 +1528,16 @@ on the Jura side of the RICH detector.
 the Salev side of the RICH detector.
 (f) Light distribution for 9 mm sensors on
 the Jura side of the RICH detector.
-Figure 6.10: Cherenkov light illumination of RICH PMT arrays for the three differ-
+Figure 6.11: Cherenkov light illumination of RICH PMT arrays for the three differ-
 ent sensor sizes. The left column shows illumination on the Salev side of the RICH
 detector, and the right column shows the Jura side.
-856.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
-The number of reconstructed hits is shown in Figure 6.11, with the SiPM sensors
+866.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+The number of reconstructed hits is shown in Figure 6.12, with the SiPM sensors
 resulting in a two-times increase in the number of hits per ring candidate. The
 improved number of reconstructed hits is mainly due to the enhanced quantum
 efficiency of the SiPMs and the sensors’ better placement, reducing the probability
 of multiple photons hitting the same sensor. There are minimal differences between
-the three sensor sizes shown in Figure 6.11(b-d), with the 3 mm sensors having
+the three sensor sizes shown in Figure 6.12(b-d), with the 3 mm sensors having
 a slightly higher number of hits per ring candidate when compared to the 9 mm
 sensors.
 (a) Number of hits per ring candidate for
@@ -1529,13 +1548,13 @@ NA62 PMT arrays.
 6 mm SiPMs = 27 .56.
 (b) Number of hits per ring candidate for
 9 mm SiPMs = 26 .36.
-Figure 6.11: Number of hits per ring candidate for NA62 PMTs and the three
+Figure 6.12: Number of hits per ring candidate for NA62 PMTs and the three
 possible HIKE SiPMs
 The time resolution of the RICH detector was calculated using the Ke3 sample
-866.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+876.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 by equally splitting the reconstructed hits of the ring candidate into two sets and
 calculating the time difference between the two sets. The results are shown in
-Figure 6.12, with the 3x3 mm sensors producing the best time resolution of 20.04 ps
+Figure 6.13, with the 3x3 mm sensors producing the best time resolution of 20.04 ps
 compared to the 9x9 mm sensors with a time resolution of 21.22 ps. Each sensor size
 produced a time resolution of less than 30 ps, fulfilling the requirements of HIKE.
 The 9x9 mm sensor size was selected for future use in the HIKE RICH detector.
@@ -1543,20 +1562,20 @@ This size was chosen as it fulfills the HIKE requirements of time resolution wit
 the added complexity and cost of the smaller sensors, the 9x9 array has a total of
 8588 sensors on each of the Salev and Jura sides of the RICH detector compared to
 72780 for the 3x3 mm.
-876.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+886.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Time resolution for NA62 PMT ar-
 rays.
  (b) Time resolution for 3 mm SiPMs.
 (a) Time resolution for 6 mm SiPMs.
  (b) Time resolution for 9 mm SiPMs.
-Figure 6.12: Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
+Figure 6.13: Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated subset of hits
 within the ring candidate. A detailed description of the procedure is provided here
 [11]
 6.5 Detector Rates
-88Chapter 7
+89Chapter 7
 Dark Photon Analysis
-89Bibliography
+90Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1574,7 +1593,7 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-90BIBLIOGRAPHY BIBLIOGRAPHY
+91BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
@@ -1591,4 +1610,4 @@ E. Imbergamo, G. Latino, M. Lenti, R. Lollini, P. Lubrano, R. Piandani,
 M. Pepe, M. Piccini, A. Sergi, M. Turisini, and R. Volpe, “Light detection sys-
 tem and time resolution of the na62 rich,” Journal of Instrumentation , vol. 15,
 p. P10025, oct 2020.
-91
+92
