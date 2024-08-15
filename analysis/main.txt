@@ -52,8 +52,8 @@ blah blah blah
 6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 78
 6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
 6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
-7 Dark Photon Analysis 88
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
+7 Dark Photon Analysis 89
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -177,7 +177,7 @@ possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
 6.12 Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated
 subset of hits within the ring candidate. A detailed description of the
-procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 87
+procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 88
 9List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 24
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -1513,6 +1513,14 @@ Figure 6.10: Cherenkov light illumination of RICH PMT arrays for the three diffe
 ent sensor sizes. The left column shows illumination on the Salev side of the RICH
 detector, and the right column shows the Jura side.
 856.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+The number of reconstructed hits is shown in Figure 6.11, with the SiPM sensors
+resulting in a two-times increase in the number of hits per ring candidate. The
+improved number of reconstructed hits is mainly due to the enhanced quantum
+efficiency of the SiPMs and the sensors’ better placement, reducing the probability
+of multiple photons hitting the same sensor. There are minimal differences between
+the three sensor sizes shown in Figure 6.11(b-d), with the 3 mm sensors having
+a slightly higher number of hits per ring candidate when compared to the 9 mm
+sensors.
 (a) Number of hits per ring candidate for
 NA62 PMT arrays.
 (b) Number of hits per ring candidate for
@@ -1523,7 +1531,19 @@ NA62 PMT arrays.
 9 mm SiPMs = 26 .36.
 Figure 6.11: Number of hits per ring candidate for NA62 PMTs and the three
 possible HIKE SiPMs
-866.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+The time resolution of the RICH detector was calculated using the Ke3 sample
+866.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+by equally splitting the reconstructed hits of the ring candidate into two sets and
+calculating the time difference between the two sets. The results are shown in
+Figure 6.12, with the 3x3 mm sensors producing the best time resolution of 20.04 ps
+compared to the 9x9 mm sensors with a time resolution of 21.22 ps. Each sensor size
+produced a time resolution of less than 30 ps, fulfilling the requirements of HIKE.
+The 9x9 mm sensor size was selected for future use in the HIKE RICH detector.
+This size was chosen as it fulfills the HIKE requirements of time resolution without
+the added complexity and cost of the smaller sensors, the 9x9 array has a total of
+8588 sensors on each of the Salev and Jura sides of the RICH detector compared to
+72780 for the 3x3 mm.
+876.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Time resolution for NA62 PMT ar-
 rays.
  (b) Time resolution for 3 mm SiPMs.
@@ -1534,9 +1554,9 @@ calculated from the time difference between two equally populated subset of hits
 within the ring candidate. A detailed description of the procedure is provided here
 [11]
 6.5 Detector Rates
-87Chapter 7
+88Chapter 7
 Dark Photon Analysis
-88Bibliography
+89Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1554,7 +1574,7 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-89BIBLIOGRAPHY BIBLIOGRAPHY
+90BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
@@ -1571,4 +1591,4 @@ E. Imbergamo, G. Latino, M. Lenti, R. Lollini, P. Lubrano, R. Piandani,
 M. Pepe, M. Piccini, A. Sergi, M. Turisini, and R. Volpe, “Light detection sys-
 tem and time resolution of the na62 rich,” Journal of Instrumentation , vol. 15,
 p. P10025, oct 2020.
-90
+91
