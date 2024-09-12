@@ -53,7 +53,7 @@ blah blah blah
 6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
 6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
 6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
-7 Dark Photon Analysis 90
+7 Dark Photon Analysis 95
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -180,6 +180,13 @@ possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
 calculated from the time difference between two equally populated
 subset of hits within the ring candidate. A detailed description of the
 procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 89
+6.14 Production Z compared against production radius of particles produc-
+ing a hit in the Spectrometer with the fraction of particles produced
+before and after Z=210 m. Left, for the KL→π+π−π0decay and
+right, for the KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . 93
+6.15 Monte Carlo particle code for the particles producing a hit in the
+Spectrometer. Left, for the KL→π+π−π0decay and right, for the
+KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
 9List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 24
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -190,6 +197,12 @@ electrons per beam particle from the pressure scans at different di-
 aphragm apertures. NEED TO CHECK THESE NUMBERS . . . . . 51
 6.1 Comparisons of the expected performance of the NA62 and HIKE
 RICH detectors [7] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+6.2 Rates of the four main KLdecays in the HIKE phase 2 fiducial vol-
+ume. (ADD ERROR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+6.3 Total rates in the detectors for the four main KLdecays: KL→
+π±e∓νe(K0
+e3),KL→π±µ∓νµ(K0
+µ3),KL→π0π0π0andKL→π+π−π0.. 92
 10Chapter 1
 Introduction
 Hello Chapter!
@@ -1573,9 +1586,97 @@ calculated from the time difference between two equally populated subset of hits
 within the ring candidate. A detailed description of the procedure is provided here
 [11]
 6.5 Detector Rates
-89Chapter 7
+After the new GTk and RICH detectors were developed it was necessary to determine
+the expected particle rate in the upgraded detectors and the other detectors. For
+the expected rate for Phase 1, was possible to estimate by scaling the known NA62
+rates by the expected increase in beam intensity, by a factor of 4 compared to NA62.
+The rates for Phase 2 were calculated using the new simulation software described in
+the previous sections. A array of input files were produced in BDSIM by the CERN
+896.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+beam group which contained the simulated HIKE beam components at a Z of 120 m
+which is the start of the fiducial volume. The files are then taken by the NA62MC
+software and used as the primary beam instead of the turtle beam which is defult
+for NA62. Each file contained 10000 events which was equivalent to 10000 protons
+on target and there was 18K files prodcued in total which was equivalent to 1.8E8
+protons on target. As this wouldn’t be enough to get a good estimate of the rates,
+each files was used 11 times as an inuput to the simuation with random seeds to
+increase the statisitcs. The simulation was ran with the unforced flag which allows
+for four main KLdecays: KL→π±e∓νe(K0
+e3),KL→π±µ∓νµ(K0
+µ3),KL→π0π0π0
+andKL→π+π−π0. After simulation the files were then reconstructed using the
+NA62 reconstruction software and the rates wre calculated by scaling the numbers
+in the output by the expected HIKE phase 2 beam conditions which was a spill time
+of 4.8 seconds and a beam intensity of 2 ×1013protons per spill.
+TheKLrate at the entrance of the fiducial volume was calulcated to be 304.1
+MHz (ADD ERROR), with the rate of the four decays in the fiducial volume shown
+in Table 6.2.
+KL decay Rate [MHz]
+KL→π±e∓νe(K0
+e3)13.891
+KL→π±µ∓νµ(K0
+µ3)9.639
+KL→π0π0π06.602
+KL→π+π−π04.454
+Table 6.2: Rates of the four main KLdecays in the HIKE phase 2 fiducial volume.
+(ADD ERROR)
+906.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+The total rates from all particles in the events where the KLdecays are shown
+in Table 6.3. To calculate the rate all hits in all of the channels of each detector
+were colected and converted to the expected rate. The rates were large but this is
+to be expected with a high intenstity, however the rate in the spectrometer for the
+KL→π0π0π0decay was concering as one would expect a much lower rate compared
+to the other decays due to the lack of a charged daughter particle. Even with a lower
+branching ratio, it is expected that the KL→π+π−π0decay should have a higher
+rate in the spectrometer due to the charged pions.
+916.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+DetectorKLDecay [MHz]
+KL→π±e∓νe
+(40.55±0.11)%KL→π±µ∓νµ
+(27.04±0.07)%KL→π0π0π0
+(19.52±0.12)%KL→π+π−π0
+(12.54±0.05)%
+STRAW-1 126.8 79.9 50.5 49.2
+STRAW-2 162.8 85.1 80.7 58.0
+STRAW-3 165.7 89.3 67.7 56.1
+STRAW-4 189.2 93.6 87.5 64.4
+NCHOD 10.3 5.2 4.9 3.7
+CHOD 90.5 33.4 61.3 33.8
+IRC 3.8 1.2 4.2 2.0
+LKr 609.5 266.0 440.7 298.3
+MUV1 129.9 102.4 0.6 64.1
+MUV2 10.3 17.9 0.1 4.7
+MUV3 0.9 5.2 0.2 0.6
+HAC 10.0 11.5 0.3 6.1
+Table 6.3: Total rates in the detectors for the four main KLdecays: KL→π±e∓νe
+(K0
+e3),KL→π±µ∓νµ(K0
+µ3),KL→π0π0π0andKL→π+π−π0..
+Directly looking at the MC it was possible to find the origin of the particles
+producing the hits in the spectrometer. The production Z compared against the
+production radius of particles producing a hit in the Spectrometer is shown in Figure
+6.14. It is clear to see the for the KL→π0π0π0decay, the majority (80 %) of the
+particles are produced after Z=210 m in the walls of the vaccume decay tube and in
+the spectrometer chambers themselves, with only 20 % of particles producing hits in
+926.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+the spectrometer produced before Z=210 m which would be consistant with being
+produced in the decay.
+Figure 6.14: Production Z compared against production radius of particles produc-
+ing a hit in the Spectrometer with the fraction of particles produced before and after
+Z=210 m. Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0decay.
+Again this is clear in Figure 6.15 where the MC particle identification code of
+the particles producing hits in the spectrometer is shown. For the KL→π0π0π0
+the majority of the particles are electron/positron pairs, produced in interactions of
+photons in the walls of the vaccume decay tube and in the spectrometer chambers,
+compared to the KL→π+π−π0decay where the majority of the particles are pions
+produced in the decay.
+936.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+Figure 6.15: Monte Carlo particle code for the particles producing a hit in the
+Spectrometer. Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0
+decay.
+94Chapter 7
 Dark Photon Analysis
-90Bibliography
+95Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1593,7 +1694,7 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-91BIBLIOGRAPHY BIBLIOGRAPHY
+96BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
@@ -1610,4 +1711,4 @@ E. Imbergamo, G. Latino, M. Lenti, R. Lollini, P. Lubrano, R. Piandani,
 M. Pepe, M. Piccini, A. Sergi, M. Turisini, and R. Volpe, “Light detection sys-
 tem and time resolution of the na62 rich,” Journal of Instrumentation , vol. 15,
 p. P10025, oct 2020.
-92
+97
