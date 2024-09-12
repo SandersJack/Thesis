@@ -295,7 +295,95 @@
     \end{figure}
 
     \section{Detector Rates}
+    After the new GTk and RICH detectors were developed it was necessary to determine the expected particle rate in the upgraded detectors and the other detectors. 
+    For the expected rate for Phase 1, was possible to estimate by scaling the known NA62 rates by the expected increase in beam intensity, by a factor of 4 compared to NA62. 
+    The rates for Phase 2 were calculated using the new simulation software described in the previous sections. A array of input files were produced in BDSIM by the CERN beam group which contained the simulated HIKE beam components at a Z of 120\,m which is the start of the fiducial volume.
+    The files are then taken by the NA62MC software and used as the primary beam instead of the turtle beam which is defult for NA62. Each file contained 10000 events which was equivalent to 10000 protons on target and there was 18K files prodcued in total which was equivalent to 1.8E8 protons on target. 
+    As this wouldn't be enough to get a good estimate of the rates, each files was used 11 times as an inuput to the simuation with random seeds to increase the statisitcs. The simulation was ran with the unforced flag which allows for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
+    After simulation the files were then reconstructed using the NA62 reconstruction software and the rates wre calculated by scaling the numbers in the output by the expected HIKE phase 2 beam conditions which was a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
+
     
+    The $K_L$ rate at the entrance of the fiducial volume was calulcated to be 304.1 MHz (ADD ERROR), with the rate of the four decays in the fiducial volume shown in Table \ref{tab:hikeDecayRates}.
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        KL decay & Rate [MHz] \\ \hline
+        $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$) & 13.891 \\ \hline
+        $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$) & 9.639 \\ \hline
+        $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ & 6.602 \\ \hline
+        $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ & 4.454 \\ \hline
+        \end{tabular}
+        \caption{Rates of the four main $K_L$ decays in the HIKE phase 2 fiducial volume. (ADD ERROR)}%
+        \label{tab:hikeDecayRates}%
+    \end{table}
+
+    The total rates from all particles in the events where the $K_L$ decays are shown in Table \ref{tab:totalRatesInDetectors}. To calculate the rate all hits in all of the channels of each detector were colected and converted to the expected rate. The rates were large but this is to be expected with a high intenstity, however the rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay was concering as one would expect
+    a much lower rate compared to the other decays due to the lack of a charged daughter particle. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions.
+    
+    \begin{table}[H] 
+        \centering
+        \begin{tabular}{|c|ccll}
+        \hline
+        \multirow{2}{*}{Detector} & \multicolumn{4}{c|}{$K_L$ Decay [MHz]} \\ \cline{2-5} 
+        \rule{0pt}{4ex}
+         & \multicolumn{1}{c|}{{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} e^{\mp} \nu_{e}$ \\ $(40.55 \pm 0.11 ) \%$\end{tabular}} } & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} \mu^{\mp} \nu_{\mu}$ \\  $(27.04 \pm 0.07 ) \%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{0} \pi^{0} \pi^{0}$ \\ $(19.52 \pm 0.12 )\%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{+} \pi^{-} \pi^{0}$\\ $(12.54 \pm 0.05 )\%$\end{tabular}} \\ [2ex]\hline
+        STRAW-1 & \multicolumn{1}{c|}{126.8} & \multicolumn{1}{c|}{79.9} & \multicolumn{1}{c|}{50.5} & \multicolumn{1}{c|}{49.2} \\ \hline
+        STRAW-2 & \multicolumn{1}{c|}{162.8} & \multicolumn{1}{c|}{85.1} & \multicolumn{1}{c|}{80.7} & \multicolumn{1}{c|}{58.0} \\ \hline
+        STRAW-3 & \multicolumn{1}{c|}{165.7} & \multicolumn{1}{c|}{89.3} & \multicolumn{1}{c|}{67.7} & \multicolumn{1}{c|}{56.1} \\ \hline
+        STRAW-4 & \multicolumn{1}{c|}{189.2} & \multicolumn{1}{c|}{93.6} & \multicolumn{1}{c|}{87.5} & \multicolumn{1}{c|}{64.4} \\ \hline
+        NCHOD & \multicolumn{1}{c|}{10.3} & \multicolumn{1}{c|}{5.2} & \multicolumn{1}{c|}{4.9} & \multicolumn{1}{c|}{3.7} \\ \hline
+        CHOD & \multicolumn{1}{c|}{90.5} & \multicolumn{1}{c|}{33.4} & \multicolumn{1}{c|}{61.3} & \multicolumn{1}{c|}{33.8} \\ \hline
+        IRC & \multicolumn{1}{c|}{3.8} & \multicolumn{1}{c|}{1.2} & \multicolumn{1}{c|}{4.2} & \multicolumn{1}{c|}{2.0} \\ \hline
+        LKr & \multicolumn{1}{c|}{609.5} & \multicolumn{1}{c|}{266.0} & \multicolumn{1}{c|}{440.7} & \multicolumn{1}{c|}{298.3} \\ \hline
+        MUV1 & \multicolumn{1}{c|}{129.9} & \multicolumn{1}{c|}{102.4} & \multicolumn{1}{c|}{0.6} & \multicolumn{1}{c|}{64.1} \\ \hline
+        MUV2 & \multicolumn{1}{c|}{10.3} & \multicolumn{1}{c|}{17.9} & \multicolumn{1}{c|}{0.1} & \multicolumn{1}{c|}{4.7} \\ \hline
+        MUV3 & \multicolumn{1}{c|}{0.9} & \multicolumn{1}{c|}{5.2} & \multicolumn{1}{c|}{0.2} & \multicolumn{1}{c|}{0.6} \\ \hline
+        HAC & \multicolumn{1}{c|}{10.0} & \multicolumn{1}{c|}{11.5} & \multicolumn{1}{c|}{0.3} & \multicolumn{1}{c|}{6.1} \\ \hline
+        \end{tabular}
+        \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$..}%
+        \label{tab:totalRatesInDetectors}
+    \end{table}
+
+    Directly looking at the MC it was possible to find the origin of the particles producing the hits in the spectrometer. The production Z compared against the production radius of particles producing a hit in the Spectrometer is shown in Figure \ref{fig:SpectroCheck}. 
+    It is clear to see the for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles are produced after Z=210\,m in the walls of the vaccume decay tube and in the spectrometer chambers themselves, with only 20\,\% of particles producing hits in the spectrometer produced before Z=210\,m which would be consistant with being produced in the decay.
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/spectroCheckpiPLus.png}
+            \caption*{}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/spectroCheckpi0.png}
+            \caption*{}
+        \end{minipage}
+        \caption{Production Z compared against production radius of particles producing a hit in the Spectrometer with the fraction of particles produced before and after Z=210\,m. Left, for the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay and right, for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay.}%
+        \label{fig:SpectroCheck}
+    \end{figure}
+
+    Again this is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vaccume decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
+
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/spectroCheckpiPLus_pdg.png}
+            \caption*{}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/spectroCheckpi0_pdg.png}
+            \caption*{}
+        \end{minipage}
+        \caption{Monte Carlo particle code for the particles producing a hit in the Spectrometer. Left, for the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay and right, for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay.}%
+        \label{fig:pdgCodeSpec}
+    \end{figure}
+
+
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
