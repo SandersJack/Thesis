@@ -2,10 +2,22 @@
 
 
 \begin{document}
+
+    The software for NA62 is split into three main C\textmidscript{++} packages: NA62MC, NA62Reconstruction and NA62Analysis. NA62MC is a GEANT4 based Monte Carlo simulation package that simulates the NA62 experiemnt including the detector geomtery and the full simulation of 
+    kaon decays, used as a comparison to the data collected by the experiment. NA62Reconstruction is a package that is used to reconstruct either the Monte Carlo data or collected data from the experiment for all detectors. NA62Analysis is used by the physicists to analyse the data produced from the reconstruction to 
+    produce all the physics studies that are conducted at NA62. 
+
+    The NA62 software was designed for use only with the NA62 experiment resulting in in minimal configurability and flexibility, with the only option for users to change the software being to enable/disable sub-detectors. With the experiment forseen to run up to CERNs Long shutdown 3 (LS3), an upgraded software package was needed to allow
+    for the development of new detectors for the future kaon experiments. This software had to be flexible and configurable to allow for the simulatinous use of the software for NA62 data taking and physics analysis, as well as the development of new experiements.
+    \section{FlexibleMC}
     
+
+    \section{SlimMC}
+
+
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
-        \bibliography{../../../references.bib}%
+        \bibliography{../../references.bib}%
     }{} 
 \end{document}
