@@ -10,7 +10,32 @@
     The NA62 software was designed for use only with the NA62 experiment resulting in in minimal configurability and flexibility, with the only option for users to change the software being to enable/disable sub-detectors. With the experiment forseen to run up to CERNs Long shutdown 3 (LS3), an upgraded software package was needed to allow
     for the development of new detectors for the future kaon experiments. This software had to be flexible and configurable to allow for the simulatinous use of the software for NA62 data taking and physics analysis, as well as the development of new experiements.
     \section{FlexibleMC}
-    
+
+    For the implementation of a flexible framework all detector classes were refactored to inherit from a common class which contianed the basic functions and variables for all detectors allowing for all classes to be parsed using the same machinery. The input to the simulation was then changed to allow for the configuration of all the detectors to be read in from a configuration file which contained any varibles required for individual detectors and the X,Y,Z and rotation of the detectors. 
+    An example entry in the configuration file is shown in Figure \ref{fig:config} where a name was given for the station "STRAW0", along with chamber ID, chmaber type which defines the size of the straws and the chamber geometry which defines if the beam hole is symetric or not. The varibles for each subdetector are defined in Table  
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{imgs/example_config.png}
+        \caption{Example configuration for the STRAW0}
+        \label{fig:config}
+    \end{figure}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        Detector Name & Variables \\ \hline
+        STRAW & \begin{tabular}[c]{@{}l@{}}Chamber ID: 0,1,2,3\\ Chamber Type:  0(10mm), 1(5mm) \\ Chamber Mode: 0(default), 1(symmetric)\end{tabular} \\ \hline
+        Spectrometer Magnet & Magnetic field intensity \\ \hline
+        Vessel & \begin{tabular}[c]{@{}l@{}}Length\\ InnerRadius\\ OuterRadius\\ Type("BlueTube", "BlueTubeNoRails", "GreyTube")\end{tabular} \\ \hline
+        \end{tabular}
+        \caption{}
+        \label{tab:config_variables}
+    \end{table}
+
+    When built inside the simulation, each detector was now contained within its own mother volumen called the "Responsibilty Region" which was just slighly larger than the detector volume itself. This was a simple task for most detectors apart from the STRAWs and LAV which were made up of multiple stations that were not continuos, resulting in mutliple responsibility regions for each station.
+
 
     \section{SlimMC}
 
