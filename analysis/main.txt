@@ -45,18 +45,18 @@ blah blah blah
 4.7 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73
 5 Contribtions to NA62 Framework 74
 5.1 FlexibleMC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
-5.2 SlimMC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
-6 Future Kaon Experiments 76
-6.1 High Intensity Kaon Experiments (HIKE) Description . . . . . . . . . 76
-6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
-6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79
-6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 80
-6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 81
-6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 82
-6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
-6.6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 103
-7 Dark Photon Analysis 104
+5.2 SlimMC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
+6 Future Kaon Experiments 77
+6.1 High Intensity Kaon Experiments (HIKE) Description . . . . . . . . . 77
+6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78
+6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80
+6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 81
+6.2 KTAG Photon Detection System upgrade . . . . . . . . . . . . . . . 82
+6.3 GTk upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
+6.4 RICH upgrade design . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+6.6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+7 Dark Photon Analysis 105
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -159,39 +159,40 @@ CEDAR-H in 2023 and CEDAR-W in 2022 . . . . . . . . . . . . . . . 71
 4.35 Comparison of the number of kaon identifaction effciency of CEDAR-
 H in 2023 and CEDAR-W in 2022 with the expectation for a given
 photo-electron yield. . . . . . . . . . . . . . . . . . . . . . . . . . . . 72
-6.1 Diagram of HIKE phase 1 detector setup [7] . . . . . . . . . . . . . . 77
-6.2 Diagram of the expected layout of the 5 mm straws [7] . . . . . . . . 78
-6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 80
-6.4 Diagram of HIKE phase 3 detector setup [7] . . . . . . . . . . . . . . 81
-6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 82
+5.1 Example configuration for the STRAW0 . . . . . . . . . . . . . . . . 75
+6.1 Diagram of HIKE phase 1 detector setup [7] . . . . . . . . . . . . . . 78
+6.2 Diagram of the expected layout of the 5 mm straws [7] . . . . . . . . 79
+6.3 Diagram of HIKE phase 2 detector setup [7] . . . . . . . . . . . . . . 81
+6.4 Diagram of HIKE phase 3 detector setup [7] . . . . . . . . . . . . . . 82
+6.5 Scematic of Photonics MCP-PMT. CITE! . . . . . . . . . . . . . . . 83
 6.6 Hit distribution of GTK station 0 from MC for NA62 on the left and
-HIKE on the right . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83
-6.7 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 84
-6.8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
+HIKE on the right . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+6.7 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 85
+6.8 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
 6.9 Selected SiPM quantum efficiency taken from Hamamatsu S13360
-datasheet [10] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+datasheet [10] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+8LIST OF FIGURES LIST OF FIGURES
 6.10 Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays. The left column shows illumination on the Salev side of the
-RICH detector, and the right column shows the Jura side. . . . . . . 88
-8LIST OF FIGURES LIST OF FIGURES
+RICH detector, and the right column shows the Jura side. . . . . . . 89
 6.11 Cherenkov light illumination of RICH PMT arrays for the three dif-
 ferent sensor sizes. The left column shows illumination on the Salev
-side of the RICH detector, and the right column shows the Jura side. 89
+side of the RICH detector, and the right column shows the Jura side. 90
 6.12 Number of hits per ring candidate for NA62 PMTs and the three
-possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 90
+possible HIKE SiPMs . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
 6.13 Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated
 subset of hits within the ring candidate. A detailed description of the
-procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 92
+procedure is provided here [11] . . . . . . . . . . . . . . . . . . . . . . 93
 6.14 Production Z compared against production radius of particles produc-
 ing a hit in the Spectrometer with the fraction of particles produced
 before and after Z=210 m. Left, for the KL→π+π−π0decay and
-right, for the KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . 96
+right, for the KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . 97
 6.15 Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the
-KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 97
+KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 98
 6.16 Rate of particles across the cross section at the first STRAW chamber
-entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 102
 9List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 26
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -200,39 +201,40 @@ are quoted with respect to the upstream end of the CEDAR. . . . . . 41
 4.2 Table containing the ratios of η6/η8andη7/η8, asweel as the photo-
 electrons per beam particle from the pressure scans at different di-
 aphragm apertures. NEED TO CHECK THESE NUMBERS . . . . . 53
+5.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76
 6.1 Comparisons of the expected performance of the NA62 and HIKE
-RICH detectors [7] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87
+RICH detectors [7] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 88
 6.2 Rates of the four main KLdecays in the HIKE phase 2 fiducial vol-
-ume. (ADD ERROR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 93
+ume. (ADD ERROR) . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
 6.3 Total rates in the detectors for the four main KLdecays: KL→
 π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
-µ3),KL→π0π0π0andKL→π+π−π0.. 95
+µ3),KL→π0π0π0andKL→π+π−π0.. 96
 6.4 Detector rates for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 98
+directly from the daughter particles of the KLdecays. . . . . . . . . . 99
 10LIST OF TABLES LIST OF TABLES
 6.5 Max channel rates for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 99
+directly from the daughter particles of the KLdecays. . . . . . . . . . 100
 6.6 Particle rates at specified checkpoints along the HIKE detector setup.
 Including the average rate across the cross section and the maximum
 rate per cm2for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 100
+directly from the daughter particles of the KLdecays. . . . . . . . . . 101
 6.7 Particle rates at specified checkpoints along the HIKE detector setup
 excluding particles passing within the expected beam radius for the
 four main KLdecays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),
 KL→π0π0π0andKL→π+π−π0, produced directly from the daugh-
-ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 102
+ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 103
 11LIST OF TABLES LIST OF TABLES
 6.8 Average and Max particle rates per cm2for specified checkpoints
 along the length of the detector. The particle rates are collected not
@@ -245,7 +247,7 @@ radius 182.5 mm, MUV-1&2 a square of length 320 mm, MUV-3 a
 square of length 281 mm and HAC a square of length 281 mm. A geo-
 metrical cut has been made to remove particles that pass though the
 checkpoints within the expected beam dispersion radius calculated to
-be 0.4×10−3×Z, where Z is the position of the checkpoint. . . . . . 103
+be 0.4×10−3×Z, where Z is the position of the checkpoint. . . . . . 104
 12Chapter 1
 Introduction
 Hello Chapter!
@@ -766,8 +768,7 @@ Diameter 50 50
 Radial distance to mirror centre 106 106
 414.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 200 300 400 500 600 700
-Wavelength [nm]0.7000.7250.7500.7750.8000.8250.8500.8750.900ReflectivityRelectivity of Mangin Mirror vs Photon Wavelength
-Measured Reflectvivty
+Wavelength [nm]0.7000.7250.7500.7750.8000.8250.8500.8750.900Reflectivity
 Figure 4.9: Meausured reflectivity of CEDAR-H mangin mirror conducted by Win-
 light System
 During the construction process of CEDAR-H, each optical component was
@@ -779,7 +780,7 @@ tance of the quartz exit windows was also measured, and the results are shown in
 Figure 4.11.
 424.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 200 300 400 500 600 700
-Wavelength [nm]0.800.820.840.860.880.900.920.940.96TransmittanceCEDAR-H Condensor Lenses Transmittance
+Wavelength [nm]0.800.820.840.860.880.900.920.940.96Transmittance
 Measured Transmittance C0
 Measured Transmittance C1
 Measured Transmittance C2
@@ -791,7 +792,7 @@ Measured Transmittance C7
 Figure 4.10: Meausured transmittance of CEDAR-H condenser lenses conducted by
 Thomas Schneider at CERN
 200 300 400 500 600 700
-Wavelength [nm]0.00.20.40.60.8TransmittanceCEDAR-H Quartz Windows Transmittance
+Wavelength [nm]0.00.20.40.60.8Transmittance
 Measured Transmittance QW0
 Measured Transmittance QW1
 Measured Transmittance QW2
@@ -808,7 +809,7 @@ boxes were produced at CERN from off-the-shelf spherical lenses, which are coate
 with a reflective aluminum surface at CERN. The reflectivity was measured at CERN
 and is found in Figure 4.12.
 200 300 400 500 600 700
-Wavelength [nm]0.600.650.700.750.800.850.90ReflectivityReflectivity of KTAG Spherical Mirrors
+Wavelength [nm]0.600.650.700.750.800.850.90Reflectivity
 Measured Reflectivity SM 0-3
 Measured Reflectivity SM 4-7
 Figure 4.12: Meausured reflectivity of KTAG spherical mirror conducted by Thomas
@@ -961,12 +962,12 @@ separation of the kaon-pion peak has increased dramatically, with the estimated 
 sector coincidences of the pion peak falling well below 10−6at the kaon pressure.
 The final pressure scans at 1.2 mm and 1 mm, shown in the lower plots in Figure
 4.20, show complete separation between the kaon-pion peaks, however it is possible
-to see in the figure that the light yeild is being reduced at the particles pressures as
-the peaks no longer have a flat top. This suggests that at 1.3,the diagram aperture
-was narrower than the width of the Cherenkov ring. This is also clear in Table 4.2
-where at 1 mm the average photo-electrons per kaon was 16.03, which would result
-in less than 95 % identification efficiency at five sectors so would not be acceptable
-for use in NA62.
+to see that the maximum light yeild at the indiviual particle pressures was suppresed
+as the peaks no longer have a flat top. Suggesting that at 1.3,the diagram aperture
+was narrower than the width of the Cherenkov ring, resulting in the loss of light.
+This is also clear in Table 4.2 where at 1 mm the average photo-electrons per kaon
+was 16.03, which would result in less than 95 % identification efficiency at five sectors
+which would not be acceptable for use in NA62.
 524.3. TEST-BEAM AT CERN CHAPTER 4. CEDARH
 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3
 Pressure [bar]106
@@ -975,10 +976,9 @@ Pressure [bar]106
 103
 102
 101
-100Coincidences per triggerAt Least N Coincidences per Trigger vs Pressure
-6Fold
-7Fold
-8Fold
+100Coincidences per trigger6-fold
+7-fold
+8-fold
 3.6 3.8 4.0 4.2 4.4
 Pressure [bar]106
 105
@@ -1376,8 +1376,35 @@ software for NA62 data taking and physics analysis, as well as the development o
 745.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
 new experiements.
 5.1 FlexibleMC
+For the implementation of a flexible framework all detector classes were refactored
+to inherit from a common class which contianed the basic functions and variables
+for all detectors allowing for all classes to be parsed using the same machinery. The
+input to the simulation was then changed to allow for the configuration of all the
+detectors to be read in from a configuration file which contained any varibles required
+for individual detectors and the X,Y,Z and rotation of the detectors. An example
+entry in the configuration file is shown in Figure 5.1 where a name was given for the
+station ”STRAW0”, along with chamber ID, chmaber type which defines the size of
+the straws and the chamber geometry which defines if the beam hole is symetric or
+not. The varibles for each subdetector are defined in Table
+Figure 5.1: Example configuration for the STRAW0
+755.2. SLIMMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+Detector Name Variables
+STRAWChamber ID: 0,1,2,3
+Chamber Type: 0(10mm), 1(5mm)
+Chamber Mode: 0(default), 1(symmetric)
+Spectrometer Magnet Magnetic field intensity
+VesselLength
+InnerRadius
+OuterRadius
+Type(”BlueTube”, ”BlueTubeNoRails”, ”GreyTube”)
+Table 5.1
+When built inside the simulation, each detector was now contained within its own
+mother volumen called the ”Responsibilty Region” which was just slighly larger than
+the detector volume itself. This was a simple task for most detectors apart from the
+STRAWs and LAV which were made up of multiple stations that were not continuos,
+resulting in mutliple responsibility regions for each station.
 5.2 SlimMC
-75Chapter 6
+76Chapter 6
 Future Kaon Experiments
 Over the past 75 years the study of kaon physics has been integral to the development
 of the standard model. Since 2016, the NA62 experiment has been the leading
@@ -1392,7 +1419,7 @@ scription
 The High-intensity kaon experiments (HIKE) was a proposed project to continue
 kaon physics at CERN in the ECN3 experimental hall and represented a long-phased
 plan after LS3. HIKE would of profited from a four to six-fold increase in beam
-766.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
+776.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 intensity compared to NA62 and included cutting-edge detector technologies that
 will be desicred in this section. There were three phases within the HIKE program,
 the first being a continuation of NA62’s charged kaon physics with the high-intensity
@@ -1411,7 +1438,7 @@ similar characteristics to NA62 with a 75 Gev/c secondary beam produced from the
 0rad.
 Figure 6.1: Diagram of HIKE phase 1 detector setup [7]
 The upgraded detectors before the fiducial volume included an upgraded photon-
-776.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
+786.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 detection system for the KTAG, described in section 6.2 and a new GTk chip design
 described in section 6.3. It was proposed to upgrade the existing NA62 Vetocounter
 with scintillating fiber (SciFi) technologies to improve the granularity and to accom-
@@ -1429,7 +1456,7 @@ track angle and momentum resolution of 10-20 % compared to NA62.
 Figure 6.2: Diagram of the expected layout of the 5 mm straws [7]
 Downstream of the fiducial volume, the PMT arrays of the RICH detector would
 have been upgraded, which is described in Section 6.4. The timing detector would
-786.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
+796.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 profit from the current NA62-CHOD detector with upgraded PMTs, which would
 have been chosen from the number of studies from other detectors such as KTAG,
 RICH and MUV. For Phase 1, the primary electromagnetic calorimeter would have
@@ -1449,7 +1476,7 @@ the softer momentum of the secondary particles, and the chambers would have been
 reconfigured to have central beam holes to account for the neural beam. Due to the
 compact detector, the fiducial volume would have been increased to 90 m compared
 to 75 m in Phase 1.
-796.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
+806.1. HIGH INTENSITY KAON EXPERIMENTS (HIKE) DESCRIPTION CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.3: Diagram of HIKE phase 2 detector setup [7]
 The design proposed a production angle of 2.4 mrad on the target producing an
 expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux of
@@ -1465,7 +1492,7 @@ to produce a complete coverage of photons produced from KLdecays. The photon-
 detectors include coverage for photons emitted up to 100 mrad and allow for a free
 path of photons to the main electromagnetic calorimeter (MEC) emitted up to
 7.5 mrad.
-806.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
+816.2. KTAG PHOTON DETECTION SYSTEM UPGRADE CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.4: Diagram of HIKE phase 3 detector setup [7]
 Due to the differing experimental setup, Phase 3 was separated from the HIKE
 proposal submitted in 2023. Still, some detectors would have been shared between
@@ -1483,7 +1510,7 @@ of photons at the PMT arrays, taking into the production of Cherenkov photons in
 CEDAR-H and the resultant acceptance of the photons. It was proposed that the
 PMT arrays would be replaced with arrays of micro-channel plate photomultipliers
 (MCP-PMTs), which provide a single photon time resolution of 50 - 70 ps depending
-816.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+826.3. GTK UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 on the model, a low dark rate of 1 kHz/cm2and the ability to sustain the required
 photon rate. A downside of the MCP-PMTs is their limited lifetime from the aging
 of the Photo-Cathode caused by heavy feedback ions from the residual gas. This
@@ -1499,7 +1526,7 @@ improved granularity. The current NA62 GTk has two different pixel sizes: small,
 which are 300x300x200 µm, and large, which are 400x150x200 µm. The large pixels
 are found on the edge of the 10 chips that make up each station, and the small
 pixels are found in the center. Two options were envisioned to fulfill requirements
-826.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+836.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 for HIKE, the first having a pixel size on half of NA62 and the second having a
 pixel size of a third of NA62. The NA62MC simulation and NA62 reconstruction
 software were upgraded to allow for a more flexible GTk design.
@@ -1516,7 +1543,7 @@ the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern
 described in Figure 6.7. The PMTs have a single hit time resolution of 240 ps and a
 quantum efficiency of 20 %. Due to the placement of the PMTs, the distance between
 the center of each PMT is 18 mm, which is constrained by the sensor size and the
-836.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+846.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 geometry of PMT itself. This distance between sensors was the main contributor
 to the single hit position resolution of 4.7 mm, resulting in an overall ring radius
 resolution of 1.5 mm. The number of hits per ring candidate and the single hit time
@@ -1531,7 +1558,7 @@ quantum efficiency of 40 % and a single hit time resolution of at least 100 ps w
 available from major manufacturers. Three sensor sizes were selected for further in-
 vestigation, 9 ×9mm, 6×6mm, and 3 ×3mm. Each size had apparent benefits and
 downsides, but the smaller sensors would produce a better hit position resolution
-846.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+856.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 but at an increased cost and complexity. A study was conducted to determine the
 optimal sensor size for the SiPMs, with the overall detector performance balanced
 with the cost and complexity.
@@ -1548,7 +1575,7 @@ candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu
 offers a number of SiPMs in the S13360 series, with the **50CS selected for its
 improved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40 % peak
 at 460 nm, shown in Figure 6.9.
-856.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+866.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.9: Selected SiPM quantum efficiency taken from Hamamatsu S13360
 datasheet [10]
 Along with the QE efficiency requirement was a single hit time resolution of
@@ -1563,7 +1590,7 @@ efficiency, the expected number hits per π+at 15 and 45 GeV/c increased by a fa
 of two. This, along with the improved time resolution of the new PMTs resulted in
 a time π+time resolution of 27 ps at 15 GeV/c and 20 ps at 45 GeV/c . Using the im-
 plemented upgrades to the RICH detectors, the above expectations were confirmed
-866.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+876.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 NA62 RICH HIKE RICH
 Sensor time resolution 240ps 100ps
 Sensor quantum efficiency 20% 40%
@@ -1582,7 +1609,7 @@ the illumination on the current NA62 PMT arrays 6.10. Due to the better placemen
 of the square sensors, it is possible to see a more uniform illumination of the PMT
 arrays and better coverage of the light ring, especially in the Jura side. It is clear
 to see that either sensor size would be an improvement on the current NA62 setup.
-876.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+886.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Light distribution for NA62 setup on
 the Salev side of the RICH detector.
 (b) Light distribution for NA62 setup on
@@ -1590,7 +1617,7 @@ the Jura side of the RICH detector.
 Figure 6.10: Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays. The left column shows illumination on the Salev side of the RICH detector,
 and the right column shows the Jura side.
-886.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+896.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Light distribution for 3 mm sensors on
 the Salev side of the RICH detector.
 (b) Light distribution for 3 mm sensors
@@ -1606,7 +1633,7 @@ the Jura side of the RICH detector.
 Figure 6.11: Cherenkov light illumination of RICH PMT arrays for the three differ-
 ent sensor sizes. The left column shows illumination on the Salev side of the RICH
 detector, and the right column shows the Jura side.
-896.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+906.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 The number of reconstructed hits is shown in Figure 6.12, with the SiPM sensors
 resulting in a two-times increase in the number of hits per ring candidate. The
 improved number of reconstructed hits is mainly due to the enhanced quantum
@@ -1626,7 +1653,7 @@ NA62 PMT arrays.
 Figure 6.12: Number of hits per ring candidate for NA62 PMTs and the three
 possible HIKE SiPMs
 The time resolution of the RICH detector was calculated using the Ke3 sample
-906.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
+916.4. RICH UPGRADE DESIGN CHAPTER 6. FUTURE KAON EXPERIMENTS
 by equally splitting the reconstructed hits of the ring candidate into two sets and
 calculating the time difference between the two sets. The results are shown in
 Figure 6.13, with the 3x3 mm sensors producing the best time resolution of 20.04 ps
@@ -1637,7 +1664,7 @@ This size was chosen as it fulfills the HIKE requirements of time resolution wit
 the added complexity and cost of the smaller sensors, the 9x9 array has a total of
 8588 sensors on each of the Salev and Jura sides of the RICH detector compared to
 72780 for the 3x3 mm.
-916.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+926.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 (a) Time resolution for NA62 PMT ar-
 rays.
  (b) Time resolution for 3 mm SiPMs.
@@ -1654,7 +1681,7 @@ the expected rate for Phase 1, was possible to estimate by scaling the known NA6
 rates by the expected increase in beam intensity, by a factor of 4 compared to NA62.
 The rates for Phase 2 were calculated using the new simulation software described in
 the previous sections. A array of input files were produced in BDSIM by the CERN
-926.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+936.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 beam group which contained the simulated HIKE beam components at a Z of 120 m
 which is the start of the fiducial volume. The files are then taken by the NA62MC
 software and used as the primary beam instead of the turtle beam which is defult
@@ -1682,7 +1709,7 @@ KL→π0π0π06.602
 KL→π+π−π04.454
 Table 6.2: Rates of the four main KLdecays in the HIKE phase 2 fiducial volume.
 (ADD ERROR)
-936.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+946.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 The total rates from all particles in the events where the KLdecays are shown
 in Table 6.3. To calculate the rate all hits in all of the channels of each detector
 were colected and converted to the expected rate. The rates were large but this is
@@ -1691,7 +1718,7 @@ KL→π0π0π0decay was concering as one would expect a much lower rate compared
 to the other decays due to the lack of a charged daughter particle. Even with a lower
 branching ratio, it is expected that the KL→π+π−π0decay should have a higher
 rate in the spectrometer due to the charged pions.
-946.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+956.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 DetectorKLDecay [MHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -1721,7 +1748,7 @@ production radius of particles producing a hit in the Spectrometer is shown in F
 particles are produced after Z=210 m in the walls of the vaccume decay tube and in
 the spectrometer chambers themselves, with only 20 % of particles producing hits in
 the spectrometer produced before Z=210 m which would be consistant with being
-956.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+966.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 produced in the decay.
 Figure 6.14: Production Z compared against production radius of particles produc-
 ing a hit in the Spectrometer with the fraction of particles produced before and after
@@ -1732,7 +1759,7 @@ the majority of the particles are electron/positron pairs, produced in interacti
 photons in the walls of the vaccume decay tube and in the spectrometer chambers,
 compared to the KL→π+π−π0decay where the majority of the particles are pions
 produced in the decay.
-966.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+976.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 Figure 6.15: Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0
 decay.
@@ -1748,7 +1775,7 @@ that the rates in the spectrometer for the KL→π0π0π0decay are much lower wh
 is expected. Overall the rate are acceptable for the detectors as it is assumed that
 most of the hits produced not from the decay of the KLwill be removed by the
 trigger system as they will be outside the time window of the KLdecay.
-976.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+986.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 DetectorKLDecay Particle Rates [MHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -1777,7 +1804,7 @@ especially for the electronics that would need to be designed to meet the high r
 Along with the overall rate coming from the detector it is vital to know the max
 channel rates to design the electronic to handle the highest rate. The max channel
 rates for each detector were colected and are shown in Table 6.5.
-986.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+996.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 DetectorKLDecay Daughter Max Channel Rates [kHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -1807,7 +1834,7 @@ allowed for correct rate calculation for all three of these detectors, however i
 forceen that all detectors would be upgraded to increase the granularity and the
 rate handling capabilities. This would result in an incorrect calculation as the
 rate is determined by the NA62 detector design and the layout of the channels
-996.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+1006.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 in the detectors. As the final designs for these detector were not finalised, it was
 impractical to implement the new detectors in the simulation. However, it was still
 possible to calculate the rates at the planes of the upgraded detectors by collecting
@@ -1839,7 +1866,7 @@ e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0
 andKL→π+π−π0, produced directly from the daughter particles of the KLdecays.
 However as the rates are collected from the cross section at the expected detector
-1006.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+1016.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 position, the rates are higher than what would be seen due to the fact that all the
 detectors will eventually have a beam hole to accommodate beam particles passing
 though the detector. An example cross section at the entry of first STARW chamber
@@ -1854,7 +1881,7 @@ Using Equation 6.1, a mask for where the beam hole would be was applied to
 remove any particles that would not impact the detector. The resulant rates with
 the beam hole mask applied are shown in Table 6.7. As expected this reduced the
 max rate for most detectors without impacting the average rate.
-1016.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
+1026.5. DETECTOR RATES CHAPTER 6. FUTURE KAON EXPERIMENTS
 KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -1884,7 +1911,7 @@ the simulation shown in this section, it would then possible to design the detec
 that were not already upgraded within the siulation. The Table 6.8 was used in
 the HIKE proposal to demonstrate the requirment for upgrading the detectors to
 handle the increased rates.
-1026.6. CONCLUSIONS CHAPTER 6. FUTURE KAON EXPERIMENTS
+1036.6. CONCLUSIONS CHAPTER 6. FUTURE KAON EXPERIMENTS
 CheckpointsTotal Particle Rates kHz /cm2
 e+/−µ+/−π+/−γ Charged Particles
 Max Average Max Average Max Average Max Average Max Average
@@ -1909,9 +1936,9 @@ square of length 281 mm. A geometrical cut has been made to remove particles tha
 pass though the checkpoints within the expected beam dispersion radius calculated
 to be 0 .4×10−3×Z, where Z is the position of the checkpoint.
 6.6 Conclusions
-103Chapter 7
+104Chapter 7
 Dark Photon Analysis
-104Bibliography
+105Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -1929,7 +1956,7 @@ vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-105BIBLIOGRAPHY BIBLIOGRAPHY
+106BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
 [7] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
@@ -1946,4 +1973,4 @@ E. Imbergamo, G. Latino, M. Lenti, R. Lollini, P. Lubrano, R. Piandani,
 M. Pepe, M. Piccini, A. Sergi, M. Turisini, and R. Volpe, “Light detection sys-
 tem and time resolution of the na62 rich,” Journal of Instrumentation , vol. 15,
 p. P10025, oct 2020.
-106
+107
