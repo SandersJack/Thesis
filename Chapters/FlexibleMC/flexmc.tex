@@ -34,8 +34,51 @@
         \label{tab:config_variables}
     \end{table}
 
-    When built inside the simulation, each detector was now contained within its own mother volumen called the "Responsibilty Region" which was just slighly larger than the detector volume itself. This was a simple task for most detectors apart from the STRAWs and LAV which were made up of multiple stations that were not continuos, resulting in mutliple responsibility regions for each station.
+    When built inside the simulation, each detector was now contained within its own separate volume called the "Responsibility Region". This was a simple task for most detectors apart from the STRAWs and LAV which were made up of multiple stations that were not continuous, resulting in multiple responsibility regions for each station.
 
+    After the simulation was upgraded all the geometries of each detector had to be validated that they were still correct with respect to the previous version. This was due to the complex nature of refactoring the detectors and that a number volumes had been changed. The validation was completed using the GEANT4 , which is a virtual particle present in the simulation package that will travel in a straight line and interact with all volumes 
+    present in the simulation. It was then possible to produce a large square beam of these particles and save every time the particle passed though a boundary between two volumes. Using this it was possible to check the placement and geometry of each detector to mm precision to ensure that the simulation was still accurate. An example of the geantino hits on a single view of STRAW chamber 1 is shown in Figure \ref{fig:geantino_plot} where 
+    it is possible to see the features of the view. For the full validation a larger sample of Geantinos is used to get the required precision, however when there was a discrepancy they were sent in a much smaller area.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{plots/XY_CHBR0_Beam.png}
+        \caption{Geantino hits on a single view in straw chamber 1}%
+        \label{fig:geantino_plot}%
+    \end{figure} 
+
+    To reduce the chance of overlaps and to clean up the simulation, a campaign to reduce the size of the unused space in all sub-detectors. The outer volume (Responsibility Region) for all detectors were reduced to just slightly larger than the physical detector which is possible to see in figure \ref{fig:fields}, as the magnetic fields are calculated in the all volumes not the world volume. In \ref{fig:fields}(a) the field was calculated outside of the 
+    actual physical sub-detector due to the larger outer volume, whereas in \ref{fig:fields}(b) the volume has been reduced to a few mm's bigger than the actual physical detector and as a result the field is calculated in the correct region.
+
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=\linewidth]{imgs/old_mag.png}
+            \vspace{0.5em} % Adds space between the image and the caption
+            \makebox[\linewidth]{\small (a) Previous NA62MC Magnetic field calculations}
+    
+            \medskip
+    
+            \includegraphics[width=\linewidth]{imgs/new_mag.png}
+            \vspace{0.5em} % Adds space between the image and the caption
+            \makebox[\linewidth]{\small (b) Upgraded NA62MC Magnetic field calculations}
+        \end{minipage}
+        \caption{Visualisation from NA62MC of the magnetic field in the spectrometer region}
+        \label{fig:fields}
+    \end{figure}
+
+    The magnetic field in the simulation is based of real-world measurements of the magnetic field at NA62 using hall probes \cite{Fry_2016} with information saved in data files which is taken in and used to calulcate the magnetic field as various points in the simulation. In Na62MC the magnetic field is split into three distinct regions; Blutube region which is the magnetic field within the decay region which is used for small corrects, 
+    fringe field which are the edges of the MNP33 magnetic field and the MNP33 field which is the main magnetic field in the simulation. In the previous version of the simulation the position of the magnetic fields were hard coded, however in the upgraded version it was possible to move the MNP33 magnet to any position and the magnetic field would be calculated from that point.  An example of this flexibility is shown in Figure \ref{fig:moved_mag} where 
+    the MNP33 magnet was moved in front of the straw chamber 1 and the magnetic field was recalculated from that point within the constructed volumes.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{imgs/move_mag.png}
+        \caption{Visualisation from NA62MC with the MNP33 magnet moved in front of the straw chamber 1}%
+        \label{fig:moved_mag}%
+    \end{figure} 
+
+    Similar to the geometry the modification of the magnetic fields required validation, which was done using similar machinery but with a charged Geantino, similar to a normal Geantino but interact with magnetic fields.
 
     \section{SlimMC}
 
