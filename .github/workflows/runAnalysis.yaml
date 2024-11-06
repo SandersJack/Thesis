@@ -23,6 +23,12 @@ jobs:
         with:
           python-version: 3.11.2
 
+      - name: Set up Git LFS
+        run: git lfs install
+
+      - name: Pull LFS files
+        run: git lfs pull
+
       - name: Setting up Python 
         working-directory: ./
         run: ./Scripts/pythonSetup.sh
