@@ -149,7 +149,7 @@
 
 
     To accommodate a neutral beam, the beam holes in the Straw stations would have to become centred at 0 in the X dimension, creating a symmetric detector design. 
-    However using the current NA62 beam setup it is clear the hole centred at 0 would be incompatible as from Figure \ref{fig:nombeam} the beam would impact the detector. To fix this issue the TRIM5 magnet would be removed, allowing the beam to travers along the z-axis until the interaction with the MNP33 magnetic field allowing the beam to pass through Straw chambers 1 and 2 but resulted in the beam impacting chamber 4 as shown in Figure \ref{fig:nofit}.
+    However using the current NA62 beam setup it is clear the hole centred at 0 would be incompatible as from Figure \ref{fig:nombeam} the beam would impact the detector. To fix this issue the TRIM5 magnet would be removed, allowing the beam to traverse along the z-axis until the interaction with the MNP33 magnetic field allowing the beam to pass through Straw chambers 1 and 2 but resulted in the beam impacting chamber 4 as shown in Figure \ref{fig:nofit}.
 
     \begin{figure}[H]
         \begin{minipage}{\linewidth}
@@ -170,6 +170,115 @@
         \caption{Plots of symmetric straw chambers with current NA62 beam parameters}
         \label{fig:nofit}
       \end{figure}
+
+    In order to fit the beam within the last straw chamber three paramters from the NA62 could be modified: 
+    \begin{enumerate}
+        \item {Beam momentum (NA62 Nominal 75\,GeV)}
+        \item {Chamber 4 positioning (NA62 Nominal back-face at 219.07\,m)}
+        \item {MNP33 magnet field intensity (NA62 Nominal at $0.9\,Tm$, which equates to a 270\,MeV momentum kick)}
+    \end{enumerate}
+    To qunatify if the beam fitted within the beam hole of the detector a saftey parameter was defined:
+    \begin{equation}
+        \delta = \frac{x_0-x_d}{\sigma} 
+    \end{equation}
+    \noindent Where $x_0$ is the mean of the fitted Gaussian of the beam at the detector plane, $x_B$ is the x position of the beam hole wall (which was -63.8mm for the symmetric straw chambers), and $\sigma$ is the sigma of the plotted Gaussian of the beam at the detector plane. 
+    The beam is defined to have fitted in the beam hole if $\delta \geq 3 $. 
+    
+    The results of modifying the three parameters and their impact on the beam profile at straw chamber 4 is shown in Figure \ref{fig:sm1}. Comparing results first for different momentum there is no clear change between 75 to 85 GeV due to the size of the beam increases as momentum increases counteracting the reduction in the deflected produced by the MNP33 magnet (MAYBE PUT BEAM SIGMA IN APPENDIX).
+    Taking into account tht switching the beam momentum would cause other issues to the beam infrastructure it was decided to only continue with a 75\,GeV beam (NA62 Nominal).
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+          \makebox[.5\linewidth]{\includegraphics[width=.45\linewidth]{plots/75GeV_Beam_Hole_Acceptance.png}}%
+          \makebox[.5\linewidth]{\includegraphics[width=.45\linewidth]{plots/80GeV_Beam_Hole_Acceptance.png}}
+      
+          \makebox[.5\linewidth]{\small (a) 75\,GeV beam momentum}%
+          \makebox[.5\linewidth]{\small (b) 80.2\,GeV beam momentum}%
+      
+          \medskip
+      
+          \makebox[\linewidth]{\includegraphics[width=.45\linewidth]{plots/85GeV_Beam_Hole_Acceptance.png}}
+      
+          \makebox[\linewidth]{\small (c) 85\,GeV beam momentum}%
+      \end{minipage}
+      \caption{Plots of $\delta$ for different values of straw chamber 4 z position, MNP33 magnetic field and beam momentum}
+      \label{fig:sm1}
+    \end{figure}
+
+    Focusing on Figure \ref{fig:sm1}(a), only a small number of combinations produce a satisfactory safety factor. The optimat solution was with the MNP33 B field factored down by 0.7 and the straw station 4 moved to 206\,m, however this would place chamber 4 extreamly close to chamber 3 which would impact the reconstruction resolution and would become apparent below. 
+    It was expected that a chamber position of $> 209\,m$ would produce a acceptable resolution leaving few combinations available, other than ones at 0.7 MNP33 field scale. The setup with chamber 4 at 209\,m was chosen to ensure that the beam definitely fitted within the beam hole.
+    
+
+    The next phase was to ensure that the beam would safely pass through the beam hole through the LKr detector. This was imperative as unlike all most all other detectors which would be simple to move or slightly their positions, due to its size and position in the beam line it would make it difficult if not impossible to move. The Lkr as described in Chapter \ref{sec:na62}
+    is located 243\,m downstream from the target and is slightly offset in the x dimension by 4.9\,mm. It has a beam pipe which passes through its centre with a radius of 80\,mm and a thickness of 3\,mm.
+    As the MNP33 magnet deflects the beam in the negative x direction, the wall of the beam pipe of interest was located at -75.1 mm. It was noted that instead of moving the STRAW chamber 4 upstream by 10 m to 209 m, it would have be more beneficial to move the other chambers and the MNP33 magnet downstream towards chamber 4 by 10m instead, as shown in the Figure \ref{fig:firstlkr}. However this 
+    produced results with the beam impacting the LKr detector at -84.49\,mm. Not many options were left as the entire spectrometer could not be moved further downstream due the placement of the RICH, the distance between chamber 3 and 4 was already at its minimum and it was assumed that the distance between the MNP33 magnet and chamber 3 had previously been optimised. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{plots/FirstLkr.png}
+        \caption{Diagram showing the updated setup with straw chambers 1,2,3 and the MNP33 magnet moving 10\,m downstream}
+        \label{fig:firstlkr}
+    \end{figure}
+
+    A solution was found that included utilising the previously removed TRIM5 magnet, displacing the charged kaon beam in the positive x direction before the MNP33 magnet. To allow for the biggest momentum kick possible straw chambers 1 and 2 were move back to their original positions, resulting in a modified setup shown in Figure \ref{fig:sym}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=15cm]{plots/diagsym.png}
+        \caption{Diagram showing the proposed NA62 setup}
+        \label{fig:sym}
+    \end{figure}
+
+    The solution which provided the best beam placement in all straw chambers and the LKr and shown in Figure \ref{fig:results_sym} was found when TRIM5 produced a -26.6\,MeV kick (originally -90\,MeV) and the MNP33 field scale was set at 0.67, producing a kick of 180.9\,MeV (originally 270\,MeV).  
+
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/resc1.png}}%
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/resc2.png}}
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/resc3.png}}
+      
+          \makebox[.33\linewidth]{\small (a) Straw chamber 1}%
+          \makebox[.33\linewidth]{\small (b) Straw chamber 2}%
+          \makebox[.33\linewidth]{\small (c) Straw chamber 3}%
+      
+          \medskip
+      
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/resc4.png}}%
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/reslkr1.png}}
+          \makebox[.33\linewidth]{\includegraphics[width=.28\linewidth]{plots/reslkr2.png}}
+      
+          \makebox[.33\linewidth]{\small (d) Straw chamber 4}%
+          \makebox[.33\linewidth]{\small (e) LKr front-face}%
+          \makebox[.33\linewidth]{\small (f) LKr back-face}%
+        \end{minipage}
+    \caption{Plots of the beam profile in each of the straw chambers and the LKr front and back faces for the proposed symmetric setup}
+    \label{fig:results_sym}
+    \end{figure}
+
+    The overall safety margins for each Straw station and the LKr is provided in Table \ref{tab:saftey} with the following detector setup:
+    \begin{itemize}
+        \item MNP33 new z back-face position = 207.645\,m (NA62 Nominal 197.645\,m)
+        \item MNP33 new field momentum kick = 180.9\,MeV (NA62 Nominal 270\,MeV)
+        \item Chamber 3 new z back-face position = 214.645\,m (NA62 Nominal 204.65\,m)
+        \item TRIM5 new field momentum kick = -26.6\,MeV (NA62 Nominal -90\,MeV)
+    \end{itemize}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+        \hline
+        Detector & Saftey Margin & \begin{tabular}[c]{@{}c@{}}Number of beam particle \\ outside of beam pipe/hole \\ \%\end{tabular} \\ \hline
+        Chamber 1 & 3.46 & 0.035 \\ \hline
+        Chamber 2 & 3.09 & 0.11 \\ \hline
+        Chamber 3 & 3.99 & 0.025 \\ \hline
+        Chamber 4 & 4.81 & 0.03 \\ \hline
+        LKr Front & 3.70 & 0.045 \\ \hline
+        LKr Back & 3.16 & 0.115 \\ \hline
+        \end{tabular}
+    \caption{Results showing the safety margin and number of original beam particles hit outside of the beam hole/pipe boundary for each chamber and the LKr}
+    \label{tab:saftey}
+    \end{table}
+
+
     \section{SlimMC}
 
 
