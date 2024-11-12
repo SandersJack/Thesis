@@ -278,10 +278,88 @@
     \label{tab:saftey}
     \end{table}
 
+    For this study only the required detectors to produce a final result were modified, however if this were to be implemented in the future other detectors would have to be modified. For example the GTk would have to be flexible enough for it to be removed from the beamline for the neutral mode.
+    Downstream from the RICH would require minimal modification as shown in Figure \ref{fig:beampipes}, with the main issue being the beam pipe located in the downstream section of the HAC. It is acceptable for regular operation, but when the polarities of MNP33 and TRIM5 are reversed, the beam would fall outside the beam pipe. 
+    A much wider beam pipe, symmetric along the z-axis would have to be implemented.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{plots/beampipes.png}
+        \caption{Plot produced from Geantino study of detectors beam pipes downstream of the RICH. The black line shows the centre of the proposed beam, and the grey shows the proposed beam with the magnet polarities reversed}
+        \label{fig:beampipes}
+
+    \end{figure}
+
+    To determine if the symmetric setup defined above was viable the resolution of the reconstructed momentum of charged particles and then the resolution of the squared missing mass would have to be quantified. The squared missing mass resolution is critical as this will affect the size of the signal regions for $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ discussed in Chapter \ref{sec:na62}.
+
+    A NA62 Monte Carlo sample of $K^+ \rightarrow \pi^+ \pi^0$ was produced with the symmetric setup and reconstructed with NA62 Reconstruction. A generic selection for K2pi was used which uses a small number of detectors; GTK, Spectrometer, LKr, LAV, SAC and IRC. 
+    The selection involved selecting the reconstructed $\pi^+$ track in the spectrometer, and the two photons in the LKr which produced from the $\pi^0$ decay. The GTK is used for the kaon momentum calculations, and the LAV, IRC and SAC are used for photon veto.
+
+    The momentum resolution was computed using the reconstructed $\pi^+$ momentum compared against the true momentum from the MC. The difference between the reconstructed and true momentum was then plotted against the true momentum for both the NA62 and the symmetric setup, shown in Figure \ref{fig:dpvp}.
+
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+          \makebox[.5\linewidth]{\includegraphics[width=.45\linewidth]{plots/na62mom.png}}%
+          \makebox[.5\linewidth]{\includegraphics[width=.43\linewidth]{plots/symmom.png}}
+      
+          \makebox[.5\linewidth]{\small (a) NA62 setup}%
+          \makebox[.5\linewidth]{\small (b) NA62 symmetric setup}%
+      \end{minipage}
+      \caption{Difference between reconstructed and true pion momentum against true pion momentum from $K \to \pi^+\p^i0 decay}
+      \label{fig:dpvp}
+    \end{figure}
+    
+    For each true pion momentum bin a Gaussian fit was completed on the y distribution and the sigma of the fit is shown in Figure \ref{fig:momresna62_sym} for both NA62 and the symetric setup.
+
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+          \makebox[.5\linewidth]{\includegraphics[width=.45\linewidth]{plots/momresna62.png}}%
+          \makebox[.5\linewidth]{\includegraphics[width=.43\linewidth]{plots/monressym.png}}
+      
+          \makebox[.5\linewidth]{\small (a) NA62 setup}%
+          \makebox[.5\linewidth]{\small (b) NA62 symmetric setup}%
+      \end{minipage}
+      \caption{Sigma of fitted Gaussian of the reconstructed and true pion momentum against true pion momentum from $K \to \pi^+\p^i0 decay}
+      \label{fig:momresna62_sym}
+    \end{figure}
+
+    The resolution was computed by fitting the distributions in Figure \ref{fig:momresna62_sym}, with the current NA62 setup resolution calculated as, 
+    \begin{equation}
+        \frac{\sigma_p}{p} = 0.345(\pm 0.002)\% \oplus 0.00638(\pm 0.00011)\%p
+    \end{equation}
+    which is worse than the published NA62 resolution results \cite{Gil_2017} $\frac{\sigma_p}{p} = 0.3\% \oplus 0.005\%p$ due to the much looser cuts on the analysis selection used in this study.
+    The symmetric setup momentum reslution was computed as, 
+    \begin{equation}
+        \frac{\sigma_p}{p} = 0.539(\pm 0.0130)\% \oplus 0.0179(\pm 0.0006)\%p
+   \end{equation}
+    The momentum resolution due to the multiple scattering, which is the dominant factor has degraded by a factor of 1.6 with the resolution due to the position measurement degraded by a factor of 2.8. 
+    It is evident that the change in the setup has caused a degradation in the momentum resolution, however this was the first iteration of the design and was only optimised for geometrical acceptance of the beam. In future is would of been beneficial to optimise the setup for the resolution.
+    The next step was to calculate the resolution on the squared missing mass. This is computed from the missing mass of the vertex which was the difference between the Kaon energy and the $\pi^+$, and this was compared against the $\pi^0$ mass. This was done for the NA62 and the symmetric setup and is shown in Figure \ref{fig:mm2}. 
+    The resolution was taken from the fitted Gaussian for NA62, 
+    \begin{equation}
+        \sigma(m^2_{miss}) = 1.097(\pm 0.004) \times 10^{-3} GeV^2
+    \end{equation}
+    and the symmetric setup, 
+    \begin{equation}
+        \sigma(m^2_{miss}) = (1.490\pm 0.007) \times 10^{-3} GeV^2
+    \end{equation}
+    resulting in a degradation of the squared missing mass resolution by a factor of 1.35 for the symmetric setup compared to the current NA62 setup.
+
+    \begin{figure}[H]
+        \begin{minipage}{\linewidth}
+          \makebox[.5\linewidth]{\includegraphics[width=.45\linewidth]{plots/na62mm2.png}}%
+          \makebox[.5\linewidth]{\includegraphics[width=.43\linewidth]{plots/symmm2.png}}
+      
+          \makebox[.5\linewidth]{\small (a) NA62 setup}%
+          \makebox[.5\linewidth]{\small (b) NA62 symmetric setup}%
+      \end{minipage}
+      \caption{Difference of Squared missing mass and the squared $\pi^0$ mass from $K \to \pi^+\p^i0 decay}
+      \label{fig:mm2}
+    \end{figure}
+
+    The degradation suggests that it could be possible to construct a symmetric NA62, however more optimisation would hve to be done to get as close as possible to NA62 resolutions. However this study has proved that the flexible framework developed and described above is able to accepted new detector setups and complete full feasibility studies all the way up to the 
+    analysis level. Showing that the framework is ready for new kaon experiments which will be explored in Chapter \ref{chap:FutureKaon}.
 
     \section{SlimMC}
-
-
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
