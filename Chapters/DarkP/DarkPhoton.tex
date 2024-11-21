@@ -4,6 +4,24 @@
 \begin{document}
     
 
+    \section{Previous Results}
+    \section{Event Selection}
+    
+    \begin{itemize}
+        \item Require either the Control Trigger (sometimes described as Minimum Bias Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are described in Chapter \ref{sec:na62}
+        \item A vertex was selected if the total momentum was below $78/,GeV$, a total positive charge of 1, a $\chi^{2}$ less than 40 and a vertex position between 105\, and 180\,m.
+        \item The tracks associated to the vertex are selected if they are in acceptance of all four Straw spectrometer chambers and the CHOD. The track momentum must be greater than $5\,GeV$ and less than $60\,GeV$ with a $\Chi^+$ of less than 30. The tracks must traverse within 20\,cm of each other.
+        \item Require the presence of a three track in the vertex with a selected positive charged pion ($\pi^+$), and a selected electron positron pair ($\pi^{\pm}$). The pion is selected using missing mass between the Kaon momentum which is taken from the average beam momentum and the two positive tracks. 
+        If the positive track is within 5 sigma of the $\pi^0$ mass hypothesis then it is selected as a charged pion. If both positive tracks satisfy the condition the event is vetoed. From MC only approximately $0.1/,\%$ of Dalitz decays have both positive tracks satisfying the selection of the charged pion.
+        The electron was assigned to the only negative track and the negative track which doesn't pass the charged pion selection was selected as the positron.
+        \item A selected photon is also required. The missing momentum of the vertex was calculated with the Kaon momentum and the total vertex momentum and was used to extrapolate a straight line from the vertex position to the z plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position a single cluster
+        with a minimum energy of $5\,GeV$ is selected as a photon from the decay. The photon energy has to satisfy the condition of being within $5\,GeV$ of the calculated missing vertex momentum.
+        \item %% Elliptical cut
+    \end{itemize}
+
+    %%% Plot of the 5 sigma pion selection
+    The analysis started using the same procedure used in the NA48/2 \cite{2015178}
+
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
         \bibliography{../../../references.bib}%
