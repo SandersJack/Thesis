@@ -9,17 +9,7 @@ College of Engineering and Physical Sciences
 University of Birmingham
 Date
 21Abstract
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit, vestibulum
-ut, placerat ac, adipiscing vitae, felis. Curabitur dictum gravida mauris. Nam arcu
-libero, nonummy eget, consectetuer id, vulputate a, magna. Donec vehicula augue
-eu neque. Pellentesque habitant morbi tristique senectus et netus et malesuada
-fames ac turpis egestas. Mauris ut leo. Cras viverra metus rhoncus sem. Nulla et
-lectus vestibulum urna fringilla ultrices. Phasellus eu tellus sit amet tortor gravida
-placerat. Integer sapien est, iaculis in, pretium quis, viverra ac, nunc. Praesent eget
-sem vel leo ultrices bibendum. Aenean faucibus. Morbi dolor nulla, malesuada eu,
-pulvinar at, mollis ac, nulla. Curabitur auctor semper nulla. Donec varius orci eget
-risus. Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam. Duis eget
-orci sit amet orci dignissim rutrum.Acknowledgements
+[1]Acknowledgements
 blah blah blah
 1Contents
 1 Introduction 15
@@ -43,7 +33,7 @@ blah blah blah
 4.5 Commissioning at CERN . . . . . . . . . . . . . . . . . . . . . . . . . 62
 4.6 CEDAR-H Performance at NA62 . . . . . . . . . . . . . . . . . . . . 72
 4.7 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
-5 Contribtions to NA62 Framework 76
+5 Contributions to NA62 Framework 76
 5.1 FlexibleMC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
 5.1.1 Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77
 5.1.2 Testing: Geometry and Magnetic Fields . . . . . . . . . . . . 78
@@ -60,6 +50,8 @@ blah blah blah
 6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
 6.6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126
 7 Dark Photon Analysis 127
+7.1 Previous Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+7.2 Event Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -1325,9 +1317,9 @@ Diaphragm aperture [mm]0.00.20.40.60.81.0Arbitrary scale5-fold
 Figure 4.32: Results of diaphragm scan taken at 3.88 bar
 After the successful commissioning of CEDAR-H in NA62 the working point for
 the 2023 run is as follows:
-•Alignment: X=−2.258 and Y=−0.591
-•Kaon Pressure: 3.88 bar
-•Diaphragm Aperture: 1.8 mm
+Alignment: X=−2.258 and Y=−0.591
+Kaon Pressure: 3.88 bar
+Diaphragm Aperture: 1.8 mm
 The commissioning procedure above was extensive but was required due to the new
 vessel installation in 2023. At the start of each year, the commissioning must be
 repeated with alignment and pressure scans to ensure the detector is still operational.
@@ -1395,7 +1387,7 @@ yield.
 744.7. SUMMARY CHAPTER 4. CEDARH
 4.7 Summary
 75Chapter 5
-Contribtions to NA62 Framework
+Contributions to NA62 Framework
 The software for NA62 is split into three main C++ packages: NA62MC,
 NA62Reconstruction and NA62Analysis. NA62MC is a GEANT4 based Monte
 Carlo simulation package that simulates the NA62 experiemnt including the de-
@@ -1411,7 +1403,7 @@ the software being to enable/disable sub-detectors. With the experiment forseen 
 run up to CERNs Long shutdown 3 (LS3), an upgraded software package was needed
 to allow for the development of new detectors for the future kaon experiments. This
 software had to be flexible and configurable to allow for the simulatinous use of the
-765.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+765.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 software for NA62 data taking and physics analysis, as well as the development of
 new experiements.
 5.1 FlexibleMC
@@ -1427,7 +1419,7 @@ station ”STRAW0”, along with chamber ID, chmaber type which defines the size
 the straws and the chamber geometry which defines if the beam hole is symetric or
 not. The varibles for each subdetector are defined in Table
 Figure 5.1: Example configuration for the STRAW0
-775.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+775.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Detector Name Variables
 STRAWChamber ID: 0,1,2,3
 Chamber Type: 0(10mm), 1(5mm)
@@ -1450,7 +1442,7 @@ due to the complex nature of refactoring the detectors and that a number volumes
 had been changed. The validation was completed using the GEANT4 , which is
 a virtual particle present in the simulation package that will travel in a straight
 line and interact with all volumes present in the simulation. It was then possible
-785.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+785.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 to produce a large square beam of these particles and save every time the particle
 passed though a boundary between two volumes. Using this it was possible to check
 the placement and geometry of each detector to mm precision to ensure that the
@@ -1467,7 +1459,7 @@ detector which is possible to see in figure 5.3, as the magnetic fields are calc
 in the all volumes not the world volume. In 5.3(a) the field was calculated outside
 of the actual physical sub-detector due to the larger outer volume, whereas in 5.3(b)
 the volume has been reduced to a few mm’s bigger than the actual physical detector
-795.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+795.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 and as a result the field is calculated in the correct region.
 To improve the usability for users a geometry check is completed every time
 before the simulation is ran. Each outer detector volume is checked for any overlaps
@@ -1479,7 +1471,7 @@ are involved.
 (b) Upgraded NA62MC Magnetic field calculations
 Figure 5.3: Visualisation from NA62MC of the magnetic field in the spectrometer
 region
-805.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+805.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 The magnetic field in the simulation is based of real-world measurements of the
 magnetic field at NA62 from hall probes [7], with this information saved in the form
 of data files which is taken in and used to calculate the magnetic field at various
@@ -1497,7 +1489,7 @@ the constructed volumes.
 Figure 5.4: Visualisation from NA62MC with the MNP33 magnet moved in front of
 the straw chamber 1
 The modification of the magnetic fields required validation, which was done using
-815.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+815.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 similar machinery to the geometry test completed above but with different GEANT
 particle, the charged Geantino. Similar to a normal Geantino, but they interact with
 magnetic fields allowing to ensure that the same tracks were being produced by the
@@ -1506,7 +1498,7 @@ possible to see the displacement of the charged Geantinos within the field regio
 The exact XY positions of the hits would then be validated against a sample of
 charged Geantinos with the exact mass, momentum and direction produced with
 the previous version of the software.
-825.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+825.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Figure 5.5: Charged Geantino hits on all detectors ADD EXTENT OF THE FIELD
 REGIONS
 With minimal modification it was also possible to add the functionality to add
@@ -1515,7 +1507,7 @@ field. This was not implemented into the framework as its use was not foreseen b
 the machinery was developed and is ready for uses when required.
 After the geometry and magnetic field tests were completed, full test productions
 ofK+→π+π0,K+→π+π−π+andK+→µ+¯νwere produced to test the validity of
-835.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+835.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 the existing NA62 setup along with the entire software chain (MC-¿Reconstruction-
 ¿Analysis).
 5.1.3 Testing: Symmetric NA62
@@ -1538,7 +1530,7 @@ holes for the four Straw stations to be offset from the centre axis as shown in 
 mean beam centre of a charged Kaon at 75 GeV is shown by the red line starting
 from straw chamber 1 all the way to the LKr accounting for the interactions with
 the TRIM5 and the MNP33 magnets.
-845.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+845.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Figure 5.6: Diagram showing the path of the charged kaon beam, the straw chamber
 beam holes and the LKr beam pipe
 The exact positions of the NA62 straw chambers and the beam holes are defined
@@ -1552,7 +1544,7 @@ Straw ChamberZ BackFace
 4 219.07 52.8
 Table 5.2: Straw chamber beam hole properties for NA62 detector setup
 The beam profile at each Straw station is shown in Figure 5.7.
-855.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+855.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 (a) Straw chamber 1 (b) Straw chamber 2
 (c) Straw chamber 3 (d) Straw chamber 4
 Figure 5.7: Plots of current NA62 beam coordinates at each straw chamber with
@@ -1565,7 +1557,7 @@ fix this issue the TRIM5 magnet would be removed, allowing the beam to traverse
 along the z-axis until the interaction with the MNP33 magnetic field allowing the
 beam to pass through Straw chambers 1 and 2 but resulted in the beam impacting
 chamber 4 as shown in Figure 5.8.
-865.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+865.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 (a) Straw chamber 1 (b) Straw chamber 2
 (c) Straw chamber 3 (d) Straw chamber 4
 Figure 5.8: Plots of symmetric straw chambers with current NA62 beam parameters
@@ -1579,7 +1571,7 @@ To qunatify if the beam fitted within the beam hole of the detector a saftey par
 eter was defined:
 δ=x0−xd
 σ(5.1)
-875.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+875.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Where x0is the mean of the fitted Gaussian of the beam at the detector plane, xB
 is the x position of the beam hole wall (which was -63.8mm for the symmetric straw
 chambers), and σis the sigma of the plotted Gaussian of the beam at the detector
@@ -1592,7 +1584,7 @@ produced by the MNP33 magnet (MAYBE PUT BEAM SIGMA IN APPENDIX).
 Taking into account tht switching the beam momentum would cause other issues to
 the beam infrastructure it was decided to only continue with a 75 GeV beam (NA62
 Nominal).
-885.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+885.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 (a) 75 GeV beam momentum (b) 80.2 GeV beam momentum
 (c) 85 GeV beam momentum
 Figure 5.9: Plots of δfor different values of straw chamber 4 z position, MNP33
@@ -1606,7 +1598,7 @@ sition of >209mwould produce a acceptable resolution leaving few combinations
 available, other than ones at 0.7 MNP33 field scale. The setup with chamber 4 at
 209 m was chosen to ensure that the beam definitely fitted within the beam hole.
 The next phase was to ensure that the beam would safely pass through the
-895.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+895.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 beam hole through the LKr detector. This was imperative as unlike all most all
 other detectors which would be simple to move or slightly their positions, due to
 its size and position in the beam line it would make it difficult if not impossible to
@@ -1623,7 +1615,7 @@ the entire spectrometer could not be moved further downstream due the placement
 of the RICH, the distance between chamber 3 and 4 was already at its minimum
 and it was assumed that the distance between the MNP33 magnet and chamber 3
 had previously been optimised.
-905.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+905.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Figure 5.10: Diagram showing the updated setup with straw chambers 1,2,3 and the
 MNP33 magnet moving 10 m downstream
 A solution was found that included utilising the previously removed TRIM5
@@ -1631,24 +1623,24 @@ magnet, displacing the charged kaon beam in the positive x direction before the
 MNP33 magnet. To allow for the biggest momentum kick possible straw chambers
 1 and 2 were move back to their original positions, resulting in a modified setup
 shown in Figure 5.11.
-915.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+915.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Figure 5.11: Diagram showing the proposed NA62 setup
 The solution which provided the best beam placement in all straw chambers and
 the LKr and shown in Figure 5.12 was found when TRIM5 produced a -26.6 MeV
 kick (originally -90 MeV) and the MNP33 field scale was set at 0.67, producing a
 kick of 180.9 MeV (originally 270 MeV).
-925.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+925.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 (a) Straw chamber 1 (b) Straw chamber 2 (c) Straw chamber 3
 (d) Straw chamber 4 (e) LKr front-face (f) LKr back-face
 Figure 5.12: Plots of the beam profile in each of the straw chambers and the LKr
 front and back faces for the proposed symmetric setup
 The overall safety margins for each Straw station and the LKr is provided in
 Table 5.3 with the following detector setup:
-•MNP33 new z back-face position = 207.645 m (NA62 Nominal 197.645 m)
-•MNP33 new field momentum kick = 180.9 MeV (NA62 Nominal 270 MeV)
-•Chamber 3 new z back-face position = 214.645 m (NA62 Nominal 204.65 m)
-•TRIM5 new field momentum kick = -26.6 MeV (NA62 Nominal -90 MeV)
-935.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+MNP33 new z back-face position = 207.645 m (NA62 Nominal 197.645 m)
+MNP33 new field momentum kick = 180.9 MeV (NA62 Nominal 270 MeV)
+Chamber 3 new z back-face position = 214.645 m (NA62 Nominal 204.65 m)
+TRIM5 new field momentum kick = -26.6 MeV (NA62 Nominal -90 MeV)
+935.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Detector Saftey MarginNumber of beam particle
 outside of beam pipe/hole
 %
@@ -1669,7 +1661,7 @@ being the beam pipe located in the downstream section of the HAC. It is acceptab
 for regular operation, but when the polarities of MNP33 and TRIM5 are reversed,
 the beam would fall outside the beam pipe. A much wider beam pipe, symmetric
 along the z-axis would have to be implemented.
-945.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+945.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 Figure 5.13: Plot produced from Geantino study of detectors beam pipes down-
 stream of the RICH. The black line shows the centre of the proposed beam, and the
 grey shows the proposed beam with the magnet polarities reversed
@@ -1685,7 +1677,7 @@ SAC and IRC. The selection involved selecting the reconstructed π+track in the
 spectrometer, and the two photons in the LKr which produced from the π0decay.
 The GTK is used for the kaon momentum calculations, and the LAV, IRC and SAC
 are used for photon veto.
-955.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+955.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 The momentum resolution was computed using the reconstructed π+momentum
 compared against the true momentum from the MC. The difference between the
 reconstructed and true momentum was then plotted against the true momentum for
@@ -1700,7 +1692,7 @@ symetric setup.
 Figure 5.15: Sigma of fitted Gaussian of the reconstructed and true pion momentum
 against true pion momentum from K→π+i0decay
 The resolution was computed by fitting the distributions in Figure 5.15, with
-965.1. FLEXIBLEMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+965.1. FLEXIBLEMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 the current NA62 setup resolution calculated as,
 σp
 p= 0.345(±0.002)% ⊕0.00638( ±0.00011)% p (5.2)
@@ -1728,7 +1720,7 @@ and the symmetric setup,
 miss) = (1 .490±0.007)×10−3GeV2(5.5)
 resulting in a degradation of the squared missing mass resolution by a factor of 1.35
 for the symmetric setup compared to the current NA62 setup.
-975.2. SLIMMC CHAPTER 5. CONTRIBTIONS TO NA62 FRAMEWORK
+975.2. SLIMMC CHAPTER 5. CONTRIBUTIONS TO NA62 FRAMEWORK
 (a) NA62 setup (b) NA62 symmetric setup
 Figure 5.16: Difference of Squared missing mass and the squared π0mass from
 K→π+i0decay
@@ -2273,27 +2265,56 @@ to be 0 .4×10−3×Z, where Z is the position of the checkpoint.
 6.6 Conclusions
 126Chapter 7
 Dark Photon Analysis
-127Bibliography
+7.1 Previous Results
+7.2 Event Selection
+Require either the Control Trigger (sometimes described as Minimum Bias
+Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are de-
+scribed in Chapter 3
+A vertex was selected if the total momentum was below 78 /, GeV , a total
+positive charge of 1, a χ2less than 40 and a vertex position between 105 and
+180 m.
+The tracks associated to the vertex are selected if they are in acceptance of
+all four Straw spectrometer chambers and the CHOD. The track momentum
+must be greater than 5 GeV and less than 60 GeV with a+of less than 30.
+The tracks must traverse within 20 cm of each other.
+Require the presence of a three track in the vertex with a selected positive
+1277.2. EVENT SELECTION CHAPTER 7. DARK PHOTON ANALYSIS
+charged pion ( π+), and a selected electron positron pair ( π±). The pion is
+selected using missing mass between the Kaon momentum which is taken from
+the average beam momentum and the two positive tracks. If the positive track
+is within 5 sigma of the π0mass hypothesis then it is selected as a charged
+pion. If both positive tracks satisfy the condition the event is vetoed. From
+MC only approximately 0 .1/,% of Dalitz decays have both positive tracks
+satisfying the selection of the charged pion. The electron was assigned to the
+only negative track and the negative track which doesn’t pass the charged pion
+selection was selected as the positron.
+A selected photon is also required. The missing momentum of the vertex was
+calculated with the Kaon momentum and the total vertex momentum and was
+used to extrapolate a straight line from the vertex position to the z plane of
+the LKr calorimeter. Within a radius of 15 cm of the extrapolated position a
+single cluster with a minimum energy of 5 GeV is selected as a photon from
+the decay. The photon energy has to satisfy the condition of being within
+5GeV of the calculated missing vertex momentum.
+
+The analysis started using the same procedure used in the NA48/2 [13]
+128Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
 Counters for Particle Identification in the SPS Secondary Beams: A Description
 and an Operation Manual,” 12 1982.
-[3] E. Goudzovski, M. Krivda, C. Lazzeroni, K. Massri, F. O. Newson, S. Py-
-att, A. Romano, X. Serghi, A. Sergi, R. J. Staley, H. F. Heath, R. F. Page,
-A. Cassese, P. A. Cooke, J. B. Dainton, J. R. Fry, L. D. Fulton, E. Jones,
-T. J. Jones, K. J. McCormick, P. Sutcliffe, and B. Wrona, “Development of the
-kaon tagging system for the na62 experiment at cern,” Nuclear Instruments and
-Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors
-and Associated Equipment , vol. 801, pp. 86–94, 2015.
+[3] E. Goudzovski et al. , “Development of the kaon tagging system for the na62
+experiment at cern,” Nuclear Instruments and Methods in Physics Research
+Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ,
+vol. 801, pp. 86–94, 2015.
 [4] A. Sergi, “Na62 spectrometer: A low mass straw tracker,” Physics Procedia ,
 vol. 37, pp. 530–534, 2012. Proceedings of the 2nd International Conference on
 Technology and Instrumentation in Particle Physics (TIPP 2011).
 [5] A. Bizzeti, “The NA62 RICH detector,” Springer Proc. Phys. , vol. 212, pp. 279–
 282, 2018.
-128BIBLIOGRAPHY BIBLIOGRAPHY
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
+129BIBLIOGRAPHY BIBLIOGRAPHY
 [7] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
@@ -2305,10 +2326,8 @@ cern sps,” 2019.
 SPS: Letter of Intent,” tech. rep., CERN, Geneva, 2022. Letter of Intent sub-
 mitted to CERN SPSC. Address all correspondence to hike-eb@cern.ch.
 [11]
-[12] G. Anzivino, M. Barbanera, A. Bizzeti, F. Brizioli, F. Bucci, A. Cassese,
-P. Cenci, R. Ciaranfi, V. Duk, J. Engelfried, N. Estrada-Tristan, E. Iacopini,
-E. Imbergamo, G. Latino, M. Lenti, R. Lollini, P. Lubrano, R. Piandani,
-M. Pepe, M. Piccini, A. Sergi, M. Turisini, and R. Volpe, “Light detection sys-
-tem and time resolution of the na62 rich,” Journal of Instrumentation , vol. 15,
-p. P10025, oct 2020.
-129
+[12] G. Anzivino et al. , “Light detection system and time resolution of the na62
+rich,” Journal of Instrumentation , vol. 15, p. P10025, oct 2020.
+[13] J. Batley et al. , “Search for the dark photon in 0 decays,” Physics Letters B ,
+vol. 746, pp. 178–185, 2015.
+130
