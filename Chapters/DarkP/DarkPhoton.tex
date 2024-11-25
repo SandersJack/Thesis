@@ -77,10 +77,48 @@
         \centering 
         \includegraphics[width=\textwidth]{plots/accept.png}
         \linespread{1.0}
-        \caption{Acceptance of the NA62 selection compared against the acceptance produced in the NA48/2 analysis \ref{fig:accept}}
+        \caption{Acceptance of the NA62 selection compared against the acceptance produced in the NA48/2 analysis \cite{2015178}}
         \label{fig:accept}
     \end{figure}
     \section{Integrated Kaon Flux}
+    The total number of data events passing the selection for 2022 and 2023 was 22,059,350 with the number of $K^+$ decays within the fiducial volume for the 2022 and 2023 dataset was computed as 
+    \begin{equation}
+        N_K = \frac{N_{selected}}{(A_{2 \pi D} B_{2 \pi D} + A_{\mu 3D} B_{\mu 3D})} =  (4.95 \pm 0.15) \times 10^{12}
+    \end{equation}
+    Where $N_{selected}$ is the number of data events passing the selection, $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the selection and are evaluated using MC samples and $B_{2 \pi D}$, $B_{\mu 3D}$ are the branching fractions of the decays \cite{Olive:2014pdg}. As the MC samples employ the trigger emulators provided by the NA62 Framework the trigger efficiencies 
+    for both L1 and HLT are accounted for within the acceptances that are defined in Table \ref{fig:acceptances}.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+        \hline
+        \textbf{MC Sample} & \textbf{Acceptance} \\ \hline
+        $K_{2\pi D}$      & 0.56\%      \\ \hline
+        $K_{\mu 3D}$       & 0.0027\%      \\ \hline
+        \end{tabular}
+        \caption{Acceptances of $K_{2\pi D}$ and $K_{\mu 3D}$ samples for the $K_{2\pi D}$ selection}
+        \label{tab:acceptances}
+    \end{table}
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/mass_pieeg.png} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/mass_gee.png} }}%
+        \linespread{1.0}
+        \caption{Reconstructed masses $K_{2\pi D}$ and $K_{\mu 3D}$ for MC and data }%
+        \label{fig:signalPlots}%
+    \end{figure}
+    The reconstructed masses for data and MC passing the $K_{2 \pi D}$ selection are shown in Figures \ref{fig:signalPlots} and \ref{fig:mee_mc}. The MC samples have been scaled using the calculated $N_K$. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/mee_mc.png}
+        \linespread{1.0}
+        \caption{Reconstructed mass of electron positron pair}
+        \label{fig:mee_mc}
+    \end{figure}
+
+    \section{Dark Photon Search}
+    
+
+
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
