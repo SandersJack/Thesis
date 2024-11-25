@@ -52,6 +52,7 @@ blah blah blah
 7 Dark Photon Analysis 127
 7.1 Previous Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
 7.2 Event Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+7.3 Integrated Kaon Flux . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
 3List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -219,6 +220,16 @@ KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 120
 10LIST OF FIGURES LIST OF FIGURES
 6.16 Rate of particles across the cross section at the first STRAW chamber
 entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 124
+7.1 Reconstructed missing mass of Kaon and charged pion compared to
+the known neutral pion mass . . . . . . . . . . . . . . . . . . . . . . . 129
+7.2 Reconstructed masses of selected particles, left the total of charged
+pion, electron, positron and gamma and on right, electron, positron
+and gamma. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+7.3 Reconstructed missing mass of Mπeeγcompared against Meeγpro-
+duced from a K2pi Dalitz MC sample, with the defined elliptical cut
+used in the selection . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+7.4 Acceptance of the NA62 selection compared against the acceptance
+produced in the NA48/2 analysis 7.4 . . . . . . . . . . . . . . . . . . 132
 11List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 28
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -2267,6 +2278,7 @@ to be 0 .4×10−3×Z, where Z is the position of the checkpoint.
 Dark Photon Analysis
 7.1 Previous Results
 7.2 Event Selection
+The analysis started using the same procedure used in the NA48/2 [13]
 Require either the Control Trigger (sometimes described as Minimum Bias
 Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are de-
 scribed in Chapter 3
@@ -2277,8 +2289,8 @@ positive charge of 1, a χ2less than 40 and a vertex position between 105 and
 all four Straw spectrometer chambers and the CHOD. The track momentum
 must be greater than 5 GeV and less than 60 GeV with a+of less than 30.
 The tracks must traverse within 20 cm of each other.
-Require the presence of a three track in the vertex with a selected positive
 1277.2. EVENT SELECTION CHAPTER 7. DARK PHOTON ANALYSIS
+Require the presence of a three track in the vertex with a selected positive
 charged pion ( π+), and a selected electron positron pair ( π±). The pion is
 selected using missing mass between the Kaon momentum which is taken from
 the average beam momentum and the two positive tracks. If the positive track
@@ -2295,9 +2307,62 @@ the LKr calorimeter. Within a radius of 15 cm of the extrapolated position a
 single cluster with a minimum energy of 5 GeV is selected as a photon from
 the decay. The photon energy has to satisfy the condition of being within
 5GeV of the calculated missing vertex momentum.
-
-The analysis started using the same procedure used in the NA48/2 [13]
-128Bibliography
+An elliptical cut is used to reduce background that would overwise pass the
+selection. The reconstructed mass of the electron, positron and photon is
+compared against the reconstructed mass of the electron, positron, photon
+and charged pion.
+The cut on the reconstructed missing mass of the kaon, charge pion system was
+calculated using the Dalitz MC sample and is shown in Figure 7.1. The sigma is
+1287.2. EVENT SELECTION CHAPTER 7. DARK PHOTON ANALYSIS
+taken from the fitted guassian on the plot and calculated as,
+σ= 3.984±0.007 (7.1)
+Figure 7.1: Reconstructed missing mass of Kaon and charged pion compared to the
+known neutral pion mass
+The elliptical cut on the final reconstructed masses was defined using the Dalitz
+MC sample to collect the maximum amount of events passing the selection while
+making the cut a tight as possible. The simgas for the reconstructed masses Meeγ
+andMπeeγis calculated from fitting the distributions shown in Figure 7.2. The
+1297.2. EVENT SELECTION CHAPTER 7. DARK PHOTON ANALYSIS
+calculated sigma for the reconstructed mass Mπeeγwas calculated as
+σM πeeγ = 2.47±0.004 (7.2)
+and for Meeγ,
+σM eeγ = 1.329±0.009 (7.3)
+which were used as a origin for the elliptical parameters for the cut.
+Figure 7.2: Reconstructed masses of selected particles, left the total of charged pion,
+electron, positron and gamma and on right, electron, positron and gamma.
+The equation used for the elliptical cut in the selection is defined below,
+((x−xc)cos(θ) + (y−yc)sin(θ))2
+a2+((y−yc)cos(θ)−(x−xc)sin(θ))2
+a2<= 1 (7.4)
+where xcandycis the centre of the ellipse in the x and y dimensions. θbeing the
+rotation of the ellipse, aandbare the length of the semi-major and the semi-minor
+axis respectively. xandyare the values from the selection and the event is selected
+if the equation returns a value that is less than or equal to 1. After first starting
+with the results from Figure 7.2 and optimizing for a tight cut with a acceptable
+number of events passing produced parameters below,
+1307.2. EVENT SELECTION CHAPTER 7. DARK PHOTON ANALYSIS
+(xc= 493 .37): The x-coordinate of the ellipse’s center.
+(yc= 134 .89): The y-coordinate of the ellipse’s center.
+(a= 10.24): The semi-major axis of the ellipse (4 ×σM πeeγ ).
+(b= 4.29): The semi-minor axis of the ellipse (3 ×σM eeγ).
+(θ= 0.4887): The rotation angle of the ellipse in radians.
+((x, y)): The point being tested for inclusion within the ellipse.
+Which produced an ellipse used in the selection which is shown in 7.3
+Figure 7.3: Reconstructed missing mass of Mπeeγcompared against Meeγproduced
+from a K2pi Dalitz MC sample, with the defined elliptical cut used in the selection
+1317.3. INTEGRATED KAON FLUX CHAPTER 7. DARK PHOTON ANALYSIS
+The acceptance of the Dailtz sample is defined across the reconstructed elec-
+tron position mass in the range 2 me< M ee < m π0and is compared against the
+acceptance of the NA48/2 analysis [13] in Figure 7.4. Improving the selection using
+kinematic cuts compared to the calorimeter PID improved the acceptance at high
+Meecompared to NA48/2. It was expected that NA48/2 would have an acceptance
+advantage due to its design as a shorter experiment. If the same analysis procedure
+was employed using calorimetric PID the acceptance would not be competitive with
+NA48/2
+Figure 7.4: Acceptance of the NA62 selection compared against the acceptance
+produced in the NA48/2 analysis 7.4
+7.3 Integrated Kaon Flux
+132Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -2314,7 +2379,7 @@ Technology and Instrumentation in Particle Physics (TIPP 2011).
 282, 2018.
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
-129BIBLIOGRAPHY BIBLIOGRAPHY
+133BIBLIOGRAPHY BIBLIOGRAPHY
 [7] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
@@ -2330,4 +2395,4 @@ mitted to CERN SPSC. Address all correspondence to hike-eb@cern.ch.
 rich,” Journal of Instrumentation , vol. 15, p. P10025, oct 2020.
 [13] J. Batley et al. , “Search for the dark photon in 0 decays,” Physics Letters B ,
 vol. 746, pp. 178–185, 2015.
-130
+134
