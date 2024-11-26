@@ -81,12 +81,12 @@
         \label{fig:accept}
     \end{figure}
     \section{Integrated Kaon Flux}
-    The total number of data events passing the selection for 2022 and 2023 was 22,059,350 with the number of $K^+$ decays within the fiducial volume for the 2022 and 2023 dataset was computed as 
+    The total number of data events passing the selection for 2022 was 22,059,350 with the number of $K^+$ decays within the fiducial volume for the 2022 dataset was computed as 
     \begin{equation}
-        N_K = \frac{N_{selected}}{(A_{2 \pi D} B_{2 \pi D} + A_{\mu 3D} B_{\mu 3D})} =  (4.95 \pm 0.15) \times 10^{12}
+        N_K^{2022} = \frac{N_{selected}}{(A_{2 \pi D} B_{2 \pi D} + A_{\mu 3D} B_{\mu 3D})} =  (1.65 \pm 0.05) \times 10^{12}
     \end{equation}
     Where $N_{selected}$ is the number of data events passing the selection, $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the selection and are evaluated using MC samples and $B_{2 \pi D}$, $B_{\mu 3D}$ are the branching fractions of the decays \cite{Olive:2014pdg}. As the MC samples employ the trigger emulators provided by the NA62 Framework the trigger efficiencies 
-    for both L1 and HLT are accounted for within the acceptances that are defined in Table \ref{fig:acceptances}.
+    for both L1 and HLT are accounted for within the acceptances that are defined in Table \ref{fig:acceptances}.  
     \begin{table}[H]
         \centering
         \begin{tabular}{|c|c|}
@@ -98,6 +98,12 @@
         \caption{Acceptances of $K_{2\pi D}$ and $K_{\mu 3D}$ samples for the $K_{2\pi D}$ selection}
         \label{tab:acceptances}
     \end{table}
+    The 2022 sample was available when the MC background method was employed. However when the second and final background method was finalised the 2023 dataset was available so it was used. The integrated number of Kaons was then calculated using the 66,839,882 data events passing the selection for 2022+2023
+    \begin{equation}
+        N_K^{2022/23} = (4.95 \pm 0.15) \times 10^{12}
+    \end{equation}
+    The large increase in data events passing the selection when the 2023 dataset was added was due to the change in downscaling for the eMT trigger which went from $3 \to 1$. 
+    The reconstructed masses for data and MC passing the $K_{2 \pi D}$ selection for 2022+2023 are shown in Figure \ref{fig:signalPlots}. The MC samples have been scaled using the calculated $N_K$. The plots for the 2022 sample produce similar results but with lower statistics. 
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/mass_pieeg.png} }}%
@@ -106,7 +112,13 @@
         \caption{Reconstructed masses $K_{2\pi D}$ and $K_{\mu 3D}$ for MC and data }%
         \label{fig:signalPlots}%
     \end{figure}
-    The reconstructed masses for data and MC passing the $K_{2 \pi D}$ selection are shown in Figures \ref{fig:signalPlots} and \ref{fig:mee_mc}. The MC samples have been scaled using the calculated $N_K$. 
+    
+
+    \section{Dark Photon Search}
+    Two methods were employed in the background estimation for the Dark Photon Search. First used generated MC samples of the expected background as the background estimate, however as described below produced unsatisfactory results, which led on to the second method, using a data driven method for the background estimation. 
+    Both methods are described below
+    \subsection{MC Background Method}
+    As stated before, the MC method only used the 2022 dataset. After the full selection the reconstructed mass of the electron positron pair is shown in Figure \ref{fig:mee_mc}.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{plots/mee_mc.png}
@@ -114,9 +126,31 @@
         \caption{Reconstructed mass of electron positron pair}
         \label{fig:mee_mc}
     \end{figure}
+    The samples used include the simulation of the $\pi^0_D$ using the lowest-order differential decay rate \cite{PhysRevD.5.176} and is defined below
+    \begin{equation}\label{eq:partDecay}
+        \frac{d^2\Gamma}{dxdy} = \Gamma_0 \frac{\alpha}{\pi}|F(x)|^2\frac{(1-x)^3}{4x} \left(1+y^2+\frac{r^2}{x}\right)
+    \end{equation}
+    where $\Gamma_0$ is the $\pi^0 \to \gamma \gamma$ differential decay rate, $\alpha$ is the fine-structure constant, F(x) is the pion transition form factor (TFF) and x,y are kinematic variables defined below
+    \begin{equation}\label{eq:XParam}
+        x = \frac{(Q_{e^-} + Q_{e^+})^2}{m_{\pi^0}^2} = \frac{m_{ee}^2}{m_{\pi^0}^2}
+    \end{equation}
+    \begin{equation}
+        y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}
+    \end{equation}
+    where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. The TFF is parametrised as $F(x) = 1 + ax$, with a being a parameter set by experiments or theory. ADD THEORY BIT. The Particle Data Group (PDG) average for all experiments was $a = 0.0335± 0.0031$ \cite{Tanabashi:2018oca}. 
+    NEED MORE DESCRIPTION WHY CANT USE THEORY OR EXPERIMENT.
+    The background estimation using the MC cannot rely on the input of theory or experiments due to the underlying uncertainties. In the NA62 Framework $a =  0.032$ so a correction had to be made to remove the applied TFF and re-weight using the events passing the selection.
+    It is clear that in Figure \ref{fig:MCDATAFF} which shows the data over MC from Figure \ref{fig:mee_mc} but rather than in terms of $M_ee$ plot against $x$ from Equation \ref{eq:XParam}, suggests that there is a discrepancy. MC and data no longer match but is dependent along $x$ suggesting that the TFF found in the Framework is not acceptable for use in the background estimate.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/MCDataWithFF.png}
+        \linespread{1.0}
+        \caption{Reconstructed mass of electron positron pair}
+        \label{fig:MCDATAFF}
+    \end{figure}
+    %As the TFF is squared in Equation \ref{eq:partDecay}
 
-    \section{Dark Photon Search}
-    
+    \subsection{Data Driven Background Method}
 
 
 
