@@ -55,6 +55,8 @@ blah blah blah
 7.3 Integrated Kaon Flux . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
 3CONTENTS CONTENTS
 7.4 Dark Photon Search . . . . . . . . . . . . . . . . . . . . . . . . . . . 135
+7.4.1 MC Background Method . . . . . . . . . . . . . . . . . . . . . 135
+7.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 138
 4List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -232,8 +234,9 @@ duced from a K2pi Dalitz MC sample, with the defined elliptical cut
 used in the selection . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
 7.4 Acceptance of the NA62 selection compared against the acceptance
 produced in the NA48/2 analysis [13] . . . . . . . . . . . . . . . . . . 133
-7.5 Reconstructed masses K2πDandKµ3Dfor MC and data . . . . . . . 134
-7.6 Reconstructed mass of electron positron pair . . . . . . . . . . . . . . 135
+7.5 Reconstructed masses K2πDandKµ3Dfor MC and data . . . . . . . 135
+7.6 Reconstructed mass of electron positron pair . . . . . . . . . . . . . . 136
+7.7 Reconstructed mass of electron positron pair . . . . . . . . . . . . . . 138
 12List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 29
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -2367,12 +2370,13 @@ NA48/2
 Figure 7.4: Acceptance of the NA62 selection compared against the acceptance
 produced in the NA48/2 analysis [13]
 7.3 Integrated Kaon Flux
-The total number of data events passing the selection for 2022 and 2023 was 22,059,350
-with the number of K+decays within the fiducial volume for the 2022 and 2023
+The total number of data events passing the selection for 2022 was 22,059,350 with
+the number of K+decays within the fiducial volume for the 2022 dataset was com-
 1337.3. INTEGRATED KAON FLUX CHAPTER 7. DARK PHOTON ANALYSIS
-dataset was computed as
-NK=Nselected
-(A2πDB2πD+Aµ3DBµ3D)= (4.95±0.15)×1012(7.5)
+puted as
+N2022
+K=Nselected
+(A2πDB2πD+Aµ3DBµ3D)= (1.65±0.05)×1012(7.5)
 Where Nselected is the number of data events passing the selection, A2πDandAµ3D
 are the acceptances of the selection and are evaluated using MC samples and B2πD,
 Bµ3Dare the branching fractions of the decays [14]. As the MC samples employ the
@@ -2382,13 +2386,71 @@ MC Sample Acceptance
 K2πD 0.56%
 Kµ3D 0.0027%
 Table 7.1: Acceptances of K2πDandKµ3Dsamples for the K2πDselection
-Figure 7.5: Reconstructed masses K2πDandKµ3Dfor MC and data
-The reconstructed masses for data and MC passing the K2πDselection are shown
-in Figures 7.5 and 7.6. The MC samples have been scaled using the calculated NK.
+The 2022 sample was available when the MC background method was employed.
+However when the second and final background method was finalised the 2023
+dataset was available so it was used. The integrated number of Kaons was then
+calculated using the 66,839,882 data events passing the selection for 2022+2023
+N2022/23
+K = (4.95±0.15)×1012(7.6)
+The large increase in data events passing the selection when the 2023 dataset was
+added was due to the change in downscaling for the eMT trigger which went from
+3→1. The reconstructed masses for data and MC passing the K2πDselection for
+2022+2023 are shown in Figure 7.5. The MC samples have been scaled using the
+calculated NK. The plots for the 2022 sample produce similar results but with lower
+statistics.
 1347.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
-Figure 7.6: Reconstructed mass of electron positron pair
+Figure 7.5: Reconstructed masses K2πDandKµ3Dfor MC and data
 7.4 Dark Photon Search
-135Bibliography
+Two methods were employed in the background estimation for the Dark Photon
+Search. First used generated MC samples of the expected background as the back-
+ground estimate, however as described below produced unsatisfactory results, which
+led on to the second method, using a data driven method for the background esti-
+mation. Both methods are described below
+7.4.1 MC Background Method
+As stated before, the MC method only used the 2022 dataset. After the full selection
+the reconstructed mass of the electron positron pair is shown in Figure 7.6.
+1357.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+Figure 7.6: Reconstructed mass of electron positron pair
+The samples used include the simulation of the π0
+Dusing the lowest-order differ-
+ential decay rate [ ?] and is defined below
+d2Γ
+dxdy= Γ 0α
+π|F(x)|2(1−x)3
+4x
+1 +y2+r2
+x
+(7.7)
+where Γ 0is the π0→γγdifferential decay rate, αis the fine-structure constant,
+F(x) is the pion transition form factor (TFF) and x,y are kinematic variables defined
+1367.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+below
+x=(Qe−+Qe+)2
+m2
+π0=m2
+ee
+m2
+π0(7.8)
+y=2Qπ+(Qe−−Qe+)
+m2
+π0(1−x)(7.9)
+where Qe−,Qe+andQπ+are the four-momentum of the electron, position and
+charged pion. The TFF is parametrised as F(x) = 1 + ax, with a being a param-
+eter set by experiments or theory. ADD THEORY BIT. The Particle Data Group
+(PDG) average for all experiments was a= 0.03350 .0031 [15]. NEED MORE DE-
+SCRIPTION WHY CANT USE THEORY OR EXPERIMENT. The background
+estimation using the MC cannot rely on the input of theory or experiments due to
+the underlying uncertainties. In the NA62 Framework a= 0.032 so a correction had
+to be made to remove the applied TFF and re-weight using the events passing the
+selection. It is clear that in Figure 7.7 which shows the data over MC from Figure
+7.6 but rather than in terms of Meeplot against xfrom Equation 7.8, suggests that
+there is a discrepancy. MC and data no longer match but is dependent along x
+suggesting that the TFF found in the Framework is not acceptable for use in the
+background estimate.
+1377.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+Figure 7.7: Reconstructed mass of electron positron pair
+7.4.2 Data Driven Background Method
+138Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -2405,7 +2467,7 @@ Technology and Instrumentation in Particle Physics (TIPP 2011).
 282, 2018.
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
-136BIBLIOGRAPHY BIBLIOGRAPHY
+139BIBLIOGRAPHY BIBLIOGRAPHY
 [7] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
@@ -2423,4 +2485,6 @@ rich,” Journal of Instrumentation , vol. 15, p. P10025, oct 2020.
 vol. 746, pp. 178–185, 2015.
 [14] K. Olive and others (Particle Data Group), “Review of particle physics,” Chin.
 Phys. C , vol. 38, p. 090001, 2014.
-137
+[15] M. Tanabashi and others (Particle Data Group), “Review of particle physics,”
+Phys. Rev. D , vol. 98, p. 030001, 2018.
+140
