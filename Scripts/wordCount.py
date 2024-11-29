@@ -8,18 +8,20 @@ number_of_words = 0
 
 with open(r'analysis/main.txt','r',encoding="utf-8") as file:
  
-    # Reading the content of the file
-    # using the read() function and storing
-    # them in a new variable
     data = file.read()
- 
-    # Splitting the data into separate lines
-    # using the split() function
     
     lines = data.split()
     for i in reversed(range(len(lines))):
         if lines[i] == '.':
             lines.pop(i)
+
+    for i in reversed(range(len(lines))):
+        if lines[i].isdigit():
+            lines.pop(i)
+
+    with open("analysis/words.txt", "w", encoding="utf-8") as output_file:
+        # Join the filtered words and write to the output file
+        output_file.write(" ".join(lines))
             
     number_of_words += len(lines)
     

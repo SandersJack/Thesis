@@ -21,6 +21,7 @@
 \numberwithin{equation}{chapter}
 \usepackage{amsfonts}
 \usepackage{multirow,booktabs}
+\usepackage{moreverb}
 
 \linespread{2}
 %\setcitestyle{square}
@@ -42,6 +43,11 @@
 \newpage
 \listoftables
 \newpage
+
+\immediate\write18{texcount -inc -incbib 
+-sum main.tex > /tmp/wordcount.tex}
+\newcommand\wordcount{
+\verbatiminput{/tmp/wordcount.tex}}
 \chapter{Introduction}
 
 \subfile{Chapters/introduction/introduction.tex}
