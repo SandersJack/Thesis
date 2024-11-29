@@ -62,8 +62,9 @@ for line in commit_data:
         print(f"File 'analysis/main.txt' not found in commit {commit_hash}. Skipping.")
         continue
 
-    # Update the dictionary with the cumulative word count for the date
-    if date_str not in date_wc_dict:
+    formatted_date = datetime.strptime(date_str, "%Y-%m-%d").strftime("%d/%m/%Y")
+
+    if formatted_date not in date_wc_dict:
         date_wc_dict[date_str] = 0
     date_wc_dict[date_str] = max(date_wc_dict[date_str], wc)
 
@@ -77,10 +78,11 @@ sorted_wc = [date_wc_dict[date] for date in sorted_dates]
 output_filename = "git_word_count_filtered.csv"
 with open(output_filename, "w", newline='', encoding="utf-8") as csvfile:
     fieldnames = ["Date", "Cumulative WC"]
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer = csv.writer(csvfile)
+    
+    writer.writerow(["Date", "Word Count"])
 
-    writer.writeheader()
-    for date, wc in zip(sorted_dates, sorted_wc):
-        writer.writerow({"Date": date, "Cumulative WC": wc})
+    for date, wc in date_wc_dict.items():
+        writer.writerow([date, wc])
 
 print(f"Cumulative word count data saved to {output_filename}")
