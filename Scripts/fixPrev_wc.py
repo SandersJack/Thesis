@@ -84,7 +84,7 @@ with open(output_filename, "w", newline='', encoding="utf-8") as csvfile:
     
     writer.writerow(["Date", "Word Count"])
 
-    for date, wc in date_wc_dict.items():
+    for date, wc in sorted_wc.items():
         writer.writerow([date, wc])
 
 print(f"Cumulative word count data saved to {output_filename}")
