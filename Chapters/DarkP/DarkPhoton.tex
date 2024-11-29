@@ -2,11 +2,15 @@
 
 
 \begin{document}
-    
+    \section{MC Samples Used}
+    The main MC samples used in the analysis are as follows,
+    \begin{itemize}
+        \item 200\,M $K \to \pi^0_D \pi^+ $
+        \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$ 
+    \end{itemize}
 
-    \section{Previous Results}
     \section{Event Selection}
-    The analysis started using the same procedure used in the NA48/2 \cite{2015178}
+    %The analysis started using the same procedure used in the NA48/2 \cite{2015178}
     \begin{itemize}
         \item Require either the Control Trigger (sometimes described as Minimum Bias Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are described in Chapter \ref{sec:na62}
         \item A vertex was selected if the total momentum was below $78/,GeV$, a total positive charge of 1, a $\chi^{2}$ less than 40 and a vertex position between 105\, and 180\,m.
@@ -118,12 +122,34 @@
     Two methods were employed in the background estimation for the Dark Photon Search. First used generated MC samples of the expected background as the background estimate, however as described below produced unsatisfactory results, which led on to the second method, using a data driven method for the background estimation. 
     Both methods are described below
     \subsection{MC Background Method}
-    As stated before, the MC method only used the 2022 dataset. After the full selection the reconstructed mass of the electron positron pair is shown in Figure \ref{fig:mee_mc}.
+    As stated before, the MC method only used the 2022 dataset. 
+    It was expected that the limited size of the MC samples could impact the final result when used for the background estimate, however it was not feasible to directly increase the statistics on the main samples due to compute time and file size. It was possible to increase the statistics across a portion of the reconstructed mass spectra using a feature of the Framework.
+    It is possible for the true invariant mass of the electron positron pair to be used to calculate the kinematic variable $x$ from Equation \ref{eq:XParam}. 
+    \begin{equation}\label{eq:XParam}
+        x = \frac{(Q_{e^-} + Q_{e^+})^2}{m_{\pi^0}^2} = \frac{m_{ee}^2}{m_{\pi^0}^2}
+    \end{equation}
+    The resultant distribution from the MC sample is shown in Figure \ref{fig:trueMC_X}. The decay width in Equation \ref{eq:partDecay} is strongly dependent on this kinematic term, reducing to zero as the reconstructed invariant mass reached the $\pi^0$ mass. The Framework allows for the simulation of the Dalitz decay where the kinematic variable $x > 0.5$. From the true MC distribution in 
+    Figure \ref{fig:trueMC_X} the fraction of events above 0.5 was 0.003. Producing a simulation with the enabled, even with a fraction of size of the main sample would decrease the errors on the MC counts by orders of magnitude. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/TrueMC_X.png}
+        \linespread{1.0}
+        \caption{Reconstructed missing mass of electron positron pair of in terms of reconstructed kinematic variable $x$}
+        \label{fig:trueMC_X}
+    \end{figure}
+    For the rest of the study the following MC samples were used
+    \begin{itemize}
+        \item 200\,M $K \to \pi^0_D \pi^+ $ ($x < 0.5$)
+        \item 5\,M $K \to \pi^0_D \pi^+ $ ($x > 0.5$)
+        \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$ 
+    \end{itemize}
+    In order to improve the combination of the two $K_{2\pi_D}$ samples the large sample had events where $x > 0.5$ removed to allow for the new sample to cover that region.
+    After the full selection on the MC samples and data, the reconstructed mass of the electron positron pair is shown in Figure \ref{fig:mee_mc}.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{plots/mee_mc.png}
         \linespread{1.0}
-        \caption{Reconstructed mass of electron positron pair}
+        \caption{Reconstructed mass of electron positron pair of data and MC samples.}
         \label{fig:mee_mc}
     \end{figure}
     The samples used include the simulation of the $\pi^0_D$ using the lowest-order differential decay rate \cite{PhysRevD.5.176} and is defined below
@@ -131,24 +157,61 @@
         \frac{d^2\Gamma}{dxdy} = \Gamma_0 \frac{\alpha}{\pi}|F(x)|^2\frac{(1-x)^3}{4x} \left(1+y^2+\frac{r^2}{x}\right)
     \end{equation}
     where $\Gamma_0$ is the $\pi^0 \to \gamma \gamma$ differential decay rate, $\alpha$ is the fine-structure constant, F(x) is the pion transition form factor (TFF) and x,y are kinematic variables defined below
-    \begin{equation}\label{eq:XParam}
-        x = \frac{(Q_{e^-} + Q_{e^+})^2}{m_{\pi^0}^2} = \frac{m_{ee}^2}{m_{\pi^0}^2}
-    \end{equation}
     \begin{equation}
         y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}
     \end{equation}
     where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. The TFF is parametrised as $F(x) = 1 + ax$, with a being a parameter set by experiments or theory. ADD THEORY BIT. The Particle Data Group (PDG) average for all experiments was $a = 0.0335± 0.0031$ \cite{Tanabashi:2018oca}. 
     NEED MORE DESCRIPTION WHY CANT USE THEORY OR EXPERIMENT.
     The background estimation using the MC cannot rely on the input of theory or experiments due to the underlying uncertainties. In the NA62 Framework $a =  0.032$ so a correction had to be made to remove the applied TFF and re-weight using the events passing the selection.
-    It is clear that in Figure \ref{fig:MCDATAFF} which shows the data over MC from Figure \ref{fig:mee_mc} but rather than in terms of $M_ee$ plot against $x$ from Equation \ref{eq:XParam}, suggests that there is a discrepancy. MC and data no longer match but is dependent along $x$ suggesting that the TFF found in the Framework is not acceptable for use in the background estimate.
+    It is clear that in Figure \ref{fig:MCDATAFF} which shows the data over MC from Figure \ref{fig:mee_mc} but rather than in terms of $M_{ee}$ plot against $x$ from Equation \ref{eq:XParam}, suggests that there is a discrepancy. MC and data no longer match but is dependent along $x$ suggesting that the TFF found in the Framework is not acceptable for use in the background estimate.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{plots/MCDataWithFF.png}
         \linespread{1.0}
-        \caption{Reconstructed mass of electron positron pair}
+        \caption{Data vs MC in terms of reconstructed kinematic variable $x$ with the framework transition form factor}
         \label{fig:MCDATAFF}
     \end{figure}
-    %As the TFF is squared in Equation \ref{eq:partDecay}
+    The effective TFF of the analysis can be found by removing the Framework value by inverting the effects of the square of the TFF, 
+    \begin{equation} \label{eq:TFFsq}
+        F(x)^2 = (1 + ax)^2
+    \end{equation}
+    which resulted in the distribution shown in Figure \ref{fig:MCDATANOFF}. The MC with the removed effects of the TFF was fitted with equation \ref{eq:TFFsq} using a least $\chi^2$ method, with the resultant line shown in Figure \ref{fig:MCDATANOFF}, representing a value for a 
+    \begin{equation}
+        a = 0.0210 \pm 0.0029    
+    \end{equation}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/MCDataNOFF.png}
+        \linespread{1.0}
+        \caption{Data vs MC in terms of reconstructed kinematic variable $x$ with the framework transition form factor removed}
+        \label{fig:MCDATANOFF}
+    \end{figure}
+    The correction resulted in slightly better Data/MC agreement shown in Figure \ref{fig:mee_mc_afteTFF} when compared to Figure \ref{fig:mee_mc}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/Mee_afterTFF.png}
+        \linespread{1.0}
+        \caption{Reconstructed mass of electron positron pair of data and MC samples corrected for the effective transition form factor.}
+        \label{fig:mee_mc_afteTFF}
+    \end{figure}
+
+    The final counts for events passing the selection in terms of the reconstructed invariant mass for each MC sample is shown in Figure \ref{fig:counts_mc_data}, where it is clear where the two $K_{2\pi_D}$ samples have been combined. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/counts_MC_Data.png}
+        \linespread{1.0}
+        \caption{Reconstructed mass of electron positron pair of data, individual MC samples and combined MC.}
+        \label{fig:counts_mc_data}
+    \end{figure}
+    The resultant statistical errors were calculated for each individual MC sample and combined to produce a combined MC error for each mass bin and is shown in Figure \ref{fig:error_mc_data}. It was clear that implementing the biased $K_{2\pi_D}$, 
+    significantly reduced the statistical error of the combined sample by an order of magnitude compared to using only the original sample..
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/error_MC_Data.png}
+        \linespread{1.0}
+        \caption{Statistical error of MC samples in terms of reconstructed mass of electron positron pair.}
+        \label{fig:error_mc_data}
+    \end{figure}
 
     \subsection{Data Driven Background Method}
 
