@@ -10,7 +10,7 @@ def run_git_command(command):
     #print(f"Error: {result.stderr}")
     return result.stdout.strip()
 
-log_output = run_git_command(['git', 'log', '--pretty=format:"%ad %h %s"', '--date=short'])
+log_output = run_git_command(['git', 'log', '--pretty=format:%ad %h %s', '--date=short'])
 
 commit_data = log_output.split("\n")
 
