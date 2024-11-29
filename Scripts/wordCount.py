@@ -19,6 +19,14 @@ with open(r'analysis/main.txt','r',encoding="utf-8") as file:
         if lines[i].isdigit():
             lines.pop(i)
 
+    start_index = None
+    for i, line in enumerate(lines):
+        if "Chapter" in lines[i] and "1"in lines[i+1]:
+            start_index = i+1
+            break
+    print(start_index)
+    lines = lines[start_index:]
+
     with open("analysis/words.txt", "w", encoding="utf-8") as output_file:
         # Join the filtered words and write to the output file
         output_file.write(" ".join(lines))
