@@ -65,8 +65,8 @@ for line in commit_data:
     formatted_date = datetime.strptime(date_str, "%Y-%m-%d").strftime("%d/%m/%Y")
 
     if formatted_date not in date_wc_dict:
-        date_wc_dict[date_str] = 0
-    date_wc_dict[date_str] = max(date_wc_dict[date_str], wc)
+        date_wc_dict[formatted_date] = 0
+    date_wc_dict[formatted_date] = max(date_wc_dict[formatted_date], wc)
 
     print(date_str, wc)
 
