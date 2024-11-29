@@ -5,9 +5,9 @@ import csv
 
 def run_git_command(command):
     result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    print(f"Running command: {' '.join(command)}")
-    print(f"Output: {result.stdout}")
-    print(f"Error: {result.stderr}")
+    #print(f"Running command: {' '.join(command)}")
+    #print(f"Output: {result.stdout}")
+    #print(f"Error: {result.stderr}")
     return result.stdout.strip()
 
 log_output = run_git_command(['git', 'log', '--pretty=format:"%ad %h %s"', '--date=short'])
@@ -53,9 +53,9 @@ for line in commit_data:
                     break
             lines = lines[start_index:]
 
-            with open("analysis/words.txt", "w", encoding="utf-8") as output_file:
-                # Join the filtered words and write to the output file
-                output_file.write(" ".join(lines))
+            #with open("analysis/words.txt", "w", encoding="utf-8") as output_file:
+            #    # Join the filtered words and write to the output file
+            #    output_file.write(" ".join(lines))
                     
             wc += len(lines)
     except FileNotFoundError:
@@ -70,3 +70,17 @@ for line in commit_data:
     print(date_str, wc)
 
 run_git_command(['git', 'checkout', 'master'])
+
+sorted_dates = sorted(date_wc_dict.keys())
+sorted_wc = [date_wc_dict[date] for date in sorted_dates]
+
+output_filename = "git_word_count_filtered.csv"
+with open(output_filename, "w", newline='', encoding="utf-8") as csvfile:
+    fieldnames = ["Date", "Cumulative WC"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+    writer.writeheader()
+    for date, wc in zip(sorted_dates, sorted_wc):
+        writer.writerow({"Date": date, "Cumulative WC": wc})
+
+print(f"Cumulative word count data saved to {output_filename}")
