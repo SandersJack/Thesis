@@ -72,8 +72,9 @@ for line in commit_data:
 
 run_git_command(['git', 'checkout', 'master'])
 
-sorted_wc  = sorted(date_wc_dict.items(), key=lambda x: datetime.strptime(x[0], "%d/%m/%Y"))
+print(date_wc_dict)
 
+sorted_wc  = sorted(date_wc_dict.items(), key=lambda x: datetime.strptime(x[0], "%d/%m/%Y"))
 
 output_filename = "git_word_count_filtered.csv"
 with open(output_filename, "w", newline='', encoding="utf-8") as csvfile:
