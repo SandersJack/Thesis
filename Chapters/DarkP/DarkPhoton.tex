@@ -84,7 +84,7 @@
         \caption{Acceptance of the NA62 selection compared against the acceptance produced in the NA48/2 analysis \cite{2015178}}
         \label{fig:accept}
     \end{figure}
-    \section{Integrated Kaon Flux}
+    \section{Integrated Kaon Flux}\lable{sec:kaonFlux}
     The total number of data events passing the selection for 2022 was 22,059,350 with the number of $K^+$ decays within the fiducial volume for the 2022 dataset was computed as 
     \begin{equation}
         N_K^{2022} = \frac{N_{selected}}{(A_{2 \pi D} B_{2 \pi D} + A_{\mu 3D} B_{\mu 3D})} =  (1.65 \pm 0.05) \times 10^{12}
@@ -204,7 +204,7 @@
         \label{fig:counts_mc_data}
     \end{figure}
     The resultant statistical errors were calculated for each individual MC sample and combined to produce a combined MC error for each mass bin and is shown in Figure \ref{fig:error_mc_data}. It was clear that implementing the biased $K_{2\pi_D}$, 
-    significantly reduced the statistical error of the combined sample by an order of magnitude compared to using only the original sample..
+    significantly reduced the statistical error of the combined sample by an order of magnitude compared to using only the original sample.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{plots/error_MC_Data.png}
@@ -212,7 +212,65 @@
         \caption{Statistical error of MC samples in terms of reconstructed mass of electron positron pair.}
         \label{fig:error_mc_data}
     \end{figure}
+    %Now talk about procedure
+    The range of the Dark Photon search was defined as $9 \leq m_{A'} \leq 120 MeV / c^2$. The lower mass boundary is defined due to the falling geometric acceptance of the decay and the low electron identification efficiency at low momentum. The upper boundary was also defined due to both the falling geometrical acceptance and suppressed decay width. 
+    To select the search window centers and the size of the windows, the reconstructed mass resolution was considered. The reconstructed mass resolution was calculated using MC where the difference between the true mass and the reconstructed mass of the electron positron pair was collected for each mass bin and is shown in Figure \ref{fig:true_reco}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/true_reco.png}
+        \linespread{1.0}
+        \caption{True invariant mass minus reconstructed invariant mass of the electron positron pair in terms of true invariant mass.}
+        \label{fig:true_reco}
+    \end{figure}
+    For each invariant mass bin the Y projection is taken and a gaussian fit is conducted, where the sigma of the fit is recorded to produce the plot shown in Figure \ref{fig:mass_res}. The resultant points in blue are fitted to a straight line shown in orange, producing an equation for the reconstructed invariant mass resolution, 
+    \begin{equation}\label{eq:mass_res}
+        \sigma_m(m_{ee}) = 0.03755 MeV/c^2 + 0.00554 \times m_{ee}    
+    \end{equation}
+    The NA62 resolution is a significant improvement compared to NA48/2, shown as red line in Figure \ref{fig:mass_res} due to improved detector design and setup. Which results in smaller search mass windows compared to the previous study.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/mass_res.png}
+        \linespread{1.0}
+        \caption{Sigma of the difference between true and reconstructed invariant mass of the electron-positron pair in bin of true invariant mass.}
+        \label{fig:mass_res}
+    \end{figure}
+    Using Equation \ref{eq:mass_res} the window centres are defined as being separated by $3\sigma_m(m_{A'})$, with a window width of $\pm 1.5 \sigma_m(m_{A'})$ rounded to the nearest 0.01 $MeV/c^2$ which was the size of the saved bins of the invariant mass spectrum, resulting in 177 mass values tested.
 
+    For each DP mass value the number of data events $N_{obs}$ was compared to the number of expected events obtained from MC $N_{exp}$. The $N_{obs}$, $N_{exp}$ and their subsequent errors are shown in Figure \ref{fig:searchwindow_vals}. The error on the number of data events $\delta N_{obs}$ resulted from the statistical error from the number of 
+    events within each bin $\delta N_{obs} = \sqrt{N_{obs}}$. Similar, the error on the expected number of events was due to the statistical error on the number of MC events within the search window, but had to be corrected for the scale factor imposed on the MC to equate for the correct effective kaon flux, defined in Section \ref{sec:kaonFlux}, resulting in 
+    $\delta N_{exp} = sf \times \sqrt{N_{exp} / sf}$ where $sf$ was the scale factor used to scale the MC sample. It would of been require to include statistical errors due to the trigger efficiencies but as mentioned previously all MC samples employed a trigger emulator so this was not required.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/searchwindow_vals.png}
+        \linespread{1.0}
+        \caption{Number of observed data events ($N_{obs}$), expected number of events from MC ($N_{exp}$), the respective errors ($\delta N_{obs}$ and $\delta N_{exp}$) 
+        and the resultant upper limit on the number of Dark Photon candidates to a 90\% confidence level.}
+        \label{fig:searchwindow_vals}
+    \end{figure}
+    For each DP mass window the local significance of the DP signal was calculated, 
+    \begin{equation}
+        Z = \frac{N_{obs} - N_{exp}}{\sqrt{\delta N_{obs} + \delta N_{exp}}}
+    \end{equation}
+    and is shown in Figure \ref{fig:local_sig}. Across the search window the local significance is never greater than $3 \sigma$ resulting in no DP signal observed. 
+    The confidence intervals for the number of DP decays ($A' \to e^+e^-$) at a 90\% CL for each DP mass value was calculated using $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method recommended by the Particle Data Group \cite{Cowan:2018} and employs the method setout in \cite{Bock:2004xz}.(MAYBE DESCRIBE METHOD)
+    The resultant upper limits on the number of DP candidates ($N_{DP}$) at a 90\% CL is shown in Figure \ref{fig:searchwindow_vals}.
+
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[width=\textwidth]{plots/sig_mass.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=\textwidth]{plots/sig_mass_y.png} }}%
+        \linespread{1.0}
+        \caption{Local significance of DP signal across the search window $9 \leq m_{A'} \leq 120 MeV / c^2$. Top, in terms of DP mass and bottom, the y projection of the top plot.}%
+        \label{fig:local_sig}%
+    \end{figure}
+    The UL on the $N_{DP}$ was used to calculate the resultant 90\% CL on the branching fraction of the decay $\pi^0 \to \gamma A'$, which was computed with Equation \ref{eq:branching_frac}, with the assumption that $\mathcal{B}(A' \to e^+e^-) = 1$.
+
+    \begin{equation}\label{eq:branching_frac}
+         Br_{\pi \to \gamma A} = \frac{N_{exp}}{N_K Br_{K_{2\pi}} A_{DP}(K_{2\pi})}
+    \end{equation}
+
+    
     \subsection{Data Driven Background Method}
 
 
