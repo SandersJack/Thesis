@@ -56,7 +56,7 @@ blah blah blah
 3CONTENTS CONTENTS
 7.4 Dark Photon Search . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
 7.4.1 MC Background Method . . . . . . . . . . . . . . . . . . . . . 137
-7.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 145
+7.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 150
 4List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -249,6 +249,17 @@ samples and combined MC. . . . . . . . . . . . . . . . . . . . . . . . 144
 12LIST OF FIGURES LIST OF FIGURES
 7.12 Statistical error of MC samples in terms of reconstructed mass of
 electron positron pair. . . . . . . . . . . . . . . . . . . . . . . . . . . 144
+7.13 True invariant mass minus reconstructed invariant mass of the elec-
+tron positron pair in terms of true invariant mass. . . . . . . . . . . . 145
+7.14 Sigma of the difference between true and reconstructed invariant mass
+of the electron-positron pair in bin of true invariant mass. . . . . . . . 146
+7.15 Number of observed data events ( Nobs), expected number of events
+from MC ( Nexp), the respective errors ( δNobsandδNexp) and the
+resultant upper limit on the number of Dark Photon candidates to a
+90% confidence level. . . . . . . . . . . . . . . . . . . . . . . . . . . . 148
+7.16 Local significance of DP signal across the search window 9 ≤mA′≤
+120MeV/c2. Top, in terms of DP mass and bottom, the y projection
+of the top plot. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
 13List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 30
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -2387,9 +2398,9 @@ NA48/2
 Figure 7.4: Acceptance of the NA62 selection compared against the acceptance
 produced in the NA48/2 analysis [13]
 7.3 Integrated Kaon Flux
-The total number of data events passing the selection for 2022 was 22,059,350 with
-the number of K+decays within the fiducial volume for the 2022 dataset was com-
-puted as
+sec:kaonFlux The total number of data events passing the selection for 2022 was
+22,059,350 with the number of K+decays within the fiducial volume for the 2022
+dataset was computed as
 N2022
 K=Nselected
 (A2πDB2πD+Aµ3DBµ3D)= (1.65±0.05)×1012(7.5)
@@ -2518,12 +2529,74 @@ The resultant statistical errors were calculated for each individual MC sample
 and combined to produce a combined MC error for each mass bin and is shown in
 Figure 7.12. It was clear that implementing the biased K2πD, significantly reduced
 the statistical error of the combined sample by an order of magnitude compared to
-using only the original sample..
+using only the original sample.
 Figure 7.12: Statistical error of MC samples in terms of reconstructed mass of
 electron positron pair.
 1447.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+The range of the Dark Photon search was defined as 9 ≤mA′≤120MeV/c2.
+The lower mass boundary is defined due to the falling geometric acceptance of
+the decay and the low electron identification efficiency at low momentum. The
+upper boundary was also defined due to both the falling geometrical acceptance
+and suppressed decay width. To select the search window centers and the size of
+the windows, the reconstructed mass resolution was considered. The reconstructed
+mass resolution was calculated using MC where the difference between the true mass
+and the reconstructed mass of the electron positron pair was collected for each mass
+bin and is shown in Figure 7.13.
+Figure 7.13: True invariant mass minus reconstructed invariant mass of the electron
+positron pair in terms of true invariant mass.
+For each invariant mass bin the Y projection is taken and a gaussian fit is con-
+1457.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+ducted, where the sigma of the fit is recorded to produce the plot shown in Figure
+7.14. The resultant points in blue are fitted to a straight line shown in orange,
+producing an equation for the reconstructed invariant mass resolution,
+σm(mee) = 0 .03755 MeV/c2+ 0.00554 ×mee (7.12)
+The NA62 resolution is a significant improvement compared to NA48/2, shown as
+red line in Figure 7.14 due to improved detector design and setup. Which results in
+smaller search mass windows compared to the previous study.
+Figure 7.14: Sigma of the difference between true and reconstructed invariant mass
+of the electron-positron pair in bin of true invariant mass.
+Using Equation 7.12 the window centres are defined as being separated by
+3σm(mA′), with a window width of ±1.5σm(mA′) rounded to the nearest 0.01 MeV/c2
+which was the size of the saved bins of the invariant mass spectrum, resulting in 177
+mass values tested.
+For each DP mass value the number of data events Nobswas compared to the
+number of expected events obtained from MC Nexp. The Nobs,Nexpand their sub-
+1467.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+sequent errors are shown in Figure 7.15. The error on the number of data events
+δNobsresulted from the statistical error from the number of events within each bin
+δNobs=√Nobs. Similar, the error on the expected number of events was due to the
+statistical error on the number of MC events within the search window, but had
+to be corrected for the scale factor imposed on the MC to equate for the correct
+effective kaon flux, defined in Section ??, resulting in δNexp=sf×p
+Nexp/sfwhere
+sfwas the scale factor used to scale the MC sample. It would of been require to
+include statistical errors due to the trigger efficiencies but as mentioned previously
+all MC samples employed a trigger emulator so this was not required.
+1477.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+Figure 7.15: Number of observed data events ( Nobs), expected number of events
+from MC ( Nexp), the respective errors ( δNobsandδNexp) and the resultant upper
+limit on the number of Dark Photon candidates to a 90% confidence level.
+For each DP mass window the local significance of the DP signal was calculated,
+Z=Nobs−Nexpp
+δNobs+δNexp(7.13)
+and is shown in Figure 7.16. Across the search window the local significance is
+never greater than 3 σresulting in no DP signal observed. The confidence intervals
+for the number of DP decays ( A′→e+e−) at a 90% CL for each DP mass value
+1487.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+was calculated using Nobs,NexpandδNexpusing the CLs method recommended
+by the Particle Data Group [16] and employs the method setout in [17].(MAYBE
+DESCRIBE METHOD) The resultant upper limits on the number of DP candidates
+(NDP) at a 90% CL is shown in Figure 7.15.
+Figure 7.16: Local significance of DP signal across the search window 9 ≤mA′≤
+120MeV/c2. Top, in terms of DP mass and bottom, the y projection of the top plot.
+The UL on the NDPwas used to calculate the resultant 90% CL on the branching
+1497.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+fraction of the decay π0→γA′, which was computed with Equation 7.14, with the
+assumption that B(A′→e+e−) = 1.
+Brπ→γA=Nexp
+NKBrK2πADP(K2π)(7.14)
 7.4.2 Data Driven Background Method
-145Bibliography
+150Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -2540,7 +2613,7 @@ Technology and Instrumentation in Particle Physics (TIPP 2011).
 282, 2018.
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
-146BIBLIOGRAPHY BIBLIOGRAPHY
+151BIBLIOGRAPHY BIBLIOGRAPHY
 [7] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
@@ -2560,4 +2633,9 @@ vol. 746, pp. 178–185, 2015.
 Phys. C , vol. 38, p. 090001, 2014.
 [15] M. Tanabashi and others (Particle Data Group), “Review of particle physics,”
 Phys. Rev. D , vol. 98, p. 030001, 2018.
-147
+[16] G. Cowan, “Statistics review for the particle data group,” Particle Data Group
+Review , 2018.
+152BIBLIOGRAPHY BIBLIOGRAPHY
+[17] P. Bock, “Computation of confidence levels for exclusion or discovery of a signal
+with the method of fractional event counting,” JHEP , vol. 01, p. 080, 2007.
+153
