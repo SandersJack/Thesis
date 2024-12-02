@@ -56,7 +56,7 @@ blah blah blah
 3CONTENTS CONTENTS
 7.4 Dark Photon Search . . . . . . . . . . . . . . . . . . . . . . . . . . . 137
 7.4.1 MC Background Method . . . . . . . . . . . . . . . . . . . . . 137
-7.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 150
+7.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 153
 4List of Figures
 3.1 Expected squared missing mass distributions of main kaon decays and
 K+→π+ν¯ν(scaled by 1010for for visability). The solid coloured
@@ -260,6 +260,10 @@ resultant upper limit on the number of Dark Photon candidates to a
 7.16 Local significance of DP signal across the search window 9 ≤mA′≤
 120MeV/c2. Top, in terms of DP mass and bottom, the y projection
 of the top plot. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
+7.17 Upper limit on the branching fraction of π0→γA′at a 90% CL for
+each Dark Photon mass value. . . . . . . . . . . . . . . . . . . . . . . 151
+7.18 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
+mass value with the result from NA48/2 for comparison [13]. . . . . . 152
 13List of Tables
 3.1 Straw spectrometer chamber beamhole positions . . . . . . . . . . . . 30
 4.1 Optical and mechanical parameters of and . All values are dimensions
@@ -2593,10 +2597,50 @@ The UL on the NDPwas used to calculate the resultant 90% CL on the branching
 1497.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
 fraction of the decay π0→γA′, which was computed with Equation 7.14, with the
 assumption that B(A′→e+e−) = 1.
-Brπ→γA=Nexp
+Brπ→γA=NDP
 NKBrK2πADP(K2π)(7.14)
+where NKwas the effective kaon flux defined in Section sec:kaonFlux, BrK2πis the
+branching fraction of K+→π+π0[14] and ADP(K2π) which was the acceptance
+of the DP signal. ADP(K2π) was calculated using the acceptance of the π0
+Ddecay
+shown in Figure 7.4, parametrized with a polynomial to allow for the calculation
+of the acceptance in terms of DP mass. The resultant branching fraction at a 90%
+across the DP mass range is shown in Figure 7.17. The dramatic reduction of the
+UL at about 90 MeV/c2was due to the improved statistical errors provided by
+using the second K2πDsample biased using the kinematic variable. The red dashed
+lines provide the range at which the UL of the the branching fraction for NA48/2
+result [13], suggesting with improved statistical the possibility of a two orders of
+magnitude improvement.
+1507.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+Figure 7.17: Upper limit on the branching fraction of π0→γA′at a 90% CL for
+each Dark Photon mass value.
+The UL on the branching fraction was used to to set the upper limits on the
+mixing parameter ϵ2for each DP mass value. ϵ2was calculated from (NEED TO
+PUT EQUATION FROM THEORY) resulting in Equation 7.15.
+ϵ2=B(π0→γA′)
+2
+1−m2
+A′
+m2
+π03
+B(π0→γγ)(7.15)
+The resultant UL of the mixing parameter ϵ2at a 90% CL across the DP mass
+range is show in Figure 7.18. It is clear that the NA62 result for the 2022 data was
+1517.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+not competitive at low invariant mass ranges up to around 85 MeV/c2, where the
+statistics improve due to the biased sample. Suggesting that a low mass ranges the
+UL is limited by the statistical error on the MC sample. It is expected if the sample
+was at the same statistical level as the biased sample the UL could be improved by
+at least an order of magnitude.
+Figure 7.18: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
+mass value with the result from NA48/2 for comparison [13].
+It is clear that without increased MC statistics, the study would not be competi-
+tive with the already published result from NA48/2 [13] except for high mass ranges
+1527.4. DARK PHOTON SEARCH CHAPTER 7. DARK PHOTON ANALYSIS
+above 85 MeV/c2. A new method could be employed that removed the statistical
+error introduced by the MC for the background estimation.
 7.4.2 Data Driven Background Method
-150Bibliography
+153Bibliography
 [1] NA62Collaboration, “The beam and detector of the NA62 experiment at
 CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [2] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
@@ -2613,7 +2657,7 @@ Technology and Instrumentation in Particle Physics (TIPP 2011).
 282, 2018.
 [6] M. J. Riedl, “The mangin mirror and its primary aberrations,” Appl. Opt. ,
 vol. 13, pp. 1690–1694, Jul 1974.
-151BIBLIOGRAPHY BIBLIOGRAPHY
+154BIBLIOGRAPHY BIBLIOGRAPHY
 [7] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
@@ -2635,7 +2679,7 @@ Phys. C , vol. 38, p. 090001, 2014.
 Phys. Rev. D , vol. 98, p. 030001, 2018.
 [16] G. Cowan, “Statistics review for the particle data group,” Particle Data Group
 Review , 2018.
-152BIBLIOGRAPHY BIBLIOGRAPHY
+155BIBLIOGRAPHY BIBLIOGRAPHY
 [17] P. Bock, “Computation of confidence levels for exclusion or discovery of a signal
 with the method of fractional event counting,” JHEP , vol. 01, p. 080, 2007.
-153
+156
