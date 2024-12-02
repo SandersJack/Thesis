@@ -265,12 +265,36 @@
         \label{fig:local_sig}%
     \end{figure}
     The UL on the $N_{DP}$ was used to calculate the resultant 90\% CL on the branching fraction of the decay $\pi^0 \to \gamma A'$, which was computed with Equation \ref{eq:branching_frac}, with the assumption that $\mathcal{B}(A' \to e^+e^-) = 1$.
-
     \begin{equation}\label{eq:branching_frac}
-         Br_{\pi \to \gamma A} = \frac{N_{exp}}{N_K Br_{K_{2\pi}} A_{DP}(K_{2\pi})}
+         Br_{\pi \to \gamma A} = \frac{N_{DP}}{N_K Br_{K_{2\pi}} A_{DP}(K_{2\pi})}
     \end{equation}
-
-    
+    where $N_K$ was the effective kaon flux defined in Section {sec:kaonFlux}, $Br_{K_{2\pi}}$ is the branching fraction of $K^+ \to \pi^+ \pi^0$ \cite{Olive:2014pdg} and $A_{DP}(K_{2\pi})$ which was the acceptance of the DP signal. $A_{DP}(K_{2\pi})$ was calculated using the acceptance of 
+    the $\pi^0_D$ decay shown in Figure \ref{fig:accept}, parametrized with a polynomial to allow for the calculation of the acceptance in terms of DP mass. The resultant branching fraction at a 90\% across the DP mass range is shown in Figure \ref{fig:branchinFrac}. The dramatic reduction of the UL at about 
+    90 $MeV/c^2$ was due to the improved statistical errors provided by using the second $K_{2\pi_D}$ sample biased using the kinematic variable. The red dashed lines provide the range at which the UL of the the branching fraction for NA48/2 result \cite{2015178}, suggesting with improved statistical the possibility of a 
+    two orders of magnitude improvement.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/branchingFrac_mc.png}
+        \linespread{1.0}
+        \caption{Upper limit on the branching fraction of $\pi^0 \to \gamma A'$ at a 90\% CL for each Dark Photon mass value.}
+        \label{fig:branchinFrac}
+    \end{figure}
+    The UL on the branching fraction was used to to set the upper limits on the mixing parameter $\epsilon^2$ for each DP mass value. $\epsilon^2$ was calculated from (NEED TO PUT EQUATION FROM THEORY) resulting in Equation \ref{eq:epsilonsq}.
+    \begin{equation}\label{eq:epsilonsq}
+        \epsilon^2 = \frac{B(\pi^{0} \to \gamma A^{'})}{2 \left(1-\frac{m^2_{A'}}{m^2_{\pi^{0}}}\right)^3 B(\pi^{0} \to \gamma \gamma )}
+    \end{equation}
+    The resultant UL of the mixing parameter $\epsilon^2$ at a 90\% CL across the DP mass range is show in Figure \ref{fig:epsilon_sq}. It is clear that the NA62 result for the 2022 data was not competitive at low invariant mass ranges up to around $85 MeV/c^2$, where the statistics improve due 
+    to the biased sample. Suggesting that a low mass ranges the UL is limited by the statistical error on the MC sample. It is expected if the sample was at the same statistical level as the biased sample the UL could be improved by at least an order of magnitude.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/eplisonsq_mc.png}
+        \linespread{1.0}
+        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\% CL for each Dark Photon mass value with the result from NA48/2 for comparison \cite{2015178}.}
+        \label{fig:epsilon_sq}
+    \end{figure}
+    It is clear that without increased MC statistics, the study would not be competitive with the already published result from NA48/2 \cite{2015178} except for high mass ranges above $85 MeV/c^2$. 
+    %% Can maybe put the global plot but may not be necessary
+    A new method could be employed that removed the statistical error introduced by the MC for the background estimation.
     \subsection{Data Driven Background Method}
 
 
