@@ -103,7 +103,7 @@
         \label{tab:acceptances}
     \end{table}
     The 2022 sample was available when the MC background method was employed. However when the second and final background method was finalised the 2023 dataset was available so it was used. The integrated number of Kaons was then calculated using the 66,839,882 data events passing the selection for 2022+2023
-    \begin{equation}
+    \begin{equation}\label{eq:nk}
         N_K^{2022/23} = (4.95 \pm 0.15) \times 10^{12}
     \end{equation}
     The large increase in data events passing the selection when the 2023 dataset was added was due to the change in downscaling for the eMT trigger which went from $3 \to 1$. 
@@ -296,8 +296,69 @@
     %% Can maybe put the global plot but may not be necessary
     A new method could be employed that removed the statistical error introduced by the MC for the background estimation.
     \subsection{Data Driven Background Method}
+    The data driven background method employed the same selection setout in the previous section but rather than using the MC samples for the background estimation the data itself was used. Eventually the 2023 dataset was implemented along with the 2022. The number of data events passing the selection for the 2022/23 datasets was 
+    66,839,882, which is just over a 3 fold increase compared to just the 2022, even though both years had similar run durations. This was due to a change in the defined downscaling for the eMT trigger line which was reduced from 3 to 1, resulting in a total effective $N_K$ calculated with Equation \ref{eq:nk},
+    \begin{equation}
+        N_K^{2022/23} = (4.95 \pm 0.15) \times 10^{12}
+    \end{equation}
+    The resultant reconstructed invariant mass of the electron-positron pair for events passing the selection is Shown in Figure \ref{fig:22_23_data}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/22_23_data.png}
+        \linespread{1.0}
+        \caption{Reconstructed invariant mass of electron-positron pair for events passing the selection from the 2022 and 2023 NA62 dataset.}
+        \label{fig:22_23_data}
+    \end{figure}
+    The produce an estimation of the background the distribution from the data itself was used. To estimate the background the distribution was fitted using polynomials using the side bands of the data and the process is described below.
 
-
+    
+    A method similar to the previous section using the reconstructed mass resolution, defined with equation \ref{eq:mass_res} was used to convert bins of $M_{ee}$ to DP candidate windows.
+    A new DP mass range was defined as $8 \leq m_{A'} \leq 121.6 MeV/c^2$. The mass ranges were extended compared to the previous MC approach due to the large statistical afforded by only using the data sample rather than the MC. Each DP mass hypothesis was defined by steps of $1\sigma_m(m_{A'})$.
+    A 4th order polynomial was fitted to the data distribution using a least $\chi^2$ method. The fitting region for each mass hypothesis was defined as $\pm 20\sigma_m(m_{A'})$ from the mass hypothesis and the distribution was re-binned for each with a bin width of $1/10\sigma_m(m_{A'})$. 
+    However data events in the mass bins above $125 MeV/c^2$ were removed due to the small counts causing instability with the fitting.
+    Counts in the mass bins $\pm 1.5 \sigma_m(m_{A'})$
+    of the mass hypothesis were excluded from the fit to avoid the possibility of sensitivity reduction due to the presence of a DP signal, which would result in a biased background estimate.
+    The number of expected events $N_{epx}$ was evaluated as the integral of the fitted functions across the $\pm 1.5 \sigma_m(m_{A'})$ mass window divided the resultant bin width. The error on the number of expected events $\delta N_{exp}$ was a combination of statistical and systematic. The statistical $\delta N_{exp}^{stat}$ was computed from the propagation of the 
+    statistical errors of the polynomial parameters, provided in the form of a covariance matrix and was calculated using an error propagation method available in the ROOT package \cite{Brun1997} (TF1::IntegralError()). 
+    The systematic error $\delta N_{exp}^{sys}$ was estimated by fitting each distribution defined above with alternative polynomials, in this case 3rd and 5th order. The resultant integrals were evaluated and compared to the integral calculated using the main polynomial.
+    
+    Example fits for background estimation and the systematic error estimation the first DP mass hypothesis is shown in Figure \ref{fig:example8_fit}. The mass range of the plots is the entire $\pm 20 \sigma_m(m_{A'})$ fitting range and shown the removed region $\pm 1.5 \sigma_m(m_{A'})$ of the mass hypothesis described above.
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_3rd.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_4th.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_5th.png} }}%
+        \linespread{1.0}
+        \caption{Fit of 4th order polynomial on the data distribution at the first DP mass hypothesis for the background estimation, along with fits for 3rd and 5th order polynomials used for 
+        systematic error estimation.}%
+        \label{fig:example8_fit}%
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_3rd.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_4th.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_5th.png} }}%
+        \linespread{1.0}
+        \caption{Fit of 4th order polynomial on the data distribution at the final DP mass hypothesis for the background estimation, along with fits for 3rd and 5th order polynomials used for 
+        systematic error estimation.}%
+        \label{fig:exampleend_fit}%
+    \end{figure}
+    The fit for the final DP mass hypothesis is shown in Figure \ref{exampleend_fit}, sowing how all events after $125 MeV/c^2$ have been removed from the fitting region. The figure shows that the upper limit was reaching a point where there was not many data points on the 
+    right side of the mass window, which will of inevitably increased the error in this region.
+    
+    The resultant $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ are shown in Figure \ref{fig:datadrive_plot}
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/datadrive_plot.png}
+        \linespread{1.0}
+        \caption{Number of observed data events ($N_{obs}$), expected number of events from the data driven method ($N_{exp}$), the respective errors ($\delta N_{obs}$ and $\delta N_{exp}$) 
+        and the resultant upper limit on the number of Dark Photon candidates to a 90\% confidence level.}
+        \label{fig:datadrive_plot}
+    \end{figure}
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
