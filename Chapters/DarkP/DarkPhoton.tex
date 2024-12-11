@@ -401,6 +401,36 @@
         \label{fig:global_exclusion}
     \end{figure}
 
+    The lowest limit on the mixing parameter $\epsilon^2$ occurs at low DP mass due to the limited kinematic suppression of the DP decay. Key to this analysis was the assumption of the prompt decay, where the DP decays instantly into the lepton-antilepton pair. To ensure that the calculated limits above are correct a check on the DP mean path length was required. 
+    To calculate the max mean path of the DP, the max energy of the DP was required. From a nominal beam energy at NA62 of $75 GeV / c $ the maximum energy of the $\pi^0$ from the $K_{2\pi}$ decay was calculated in the kaons rest reference frame,
+    \begin{equation} \label{eq:2body}
+        E_{\pi^0}^{rest} = \frac{M^2 + m_{\pi^0}^2 - m_{\pi^+}^2}{2M} = 0.246 GeV
+    \end{equation}
+    where $M$, $m_{\pi^0}$ and $m_{\pi^+}$ was the kaon, neutral pion and charged pion masses, with the equation derived from basic 2 body decay kinematics. The $\pi^0$ momentum in the kaon rest frame was also defined as
+    \begin{equation} \label{eq:pi0mom}
+        p_{\pi^0}^{rest} = \sqrt{(E_{\pi^0}^{rest})^2 - m_{\pi^0}^2} 
+    \end{equation}
+    The Equations \ref{eq:2body} and \ref{eq:2body} are used to calculate the maximum energy of the $\pi^0$ in the laboratory reference frame via a lorentz boost
+    \begin{equation}
+        E^{lab}_{\pi^0} = \gamma_K (E_{\pi^0}^{rest} + \beta p_{\pi^0}^{rest}) = 68.5 GeV
+    \end{equation}
+    with $\gamma_K = E_{K} / M$. In the decay $\pi^0 \to \gamma A'$ the maximum energy of the DP would occur when all the energy of the neutral pion was transferred to the DP and the photon was at rest, resulting in a max DP energy of $E^{lab}_{A'} = 68.5 GeV$. 
+    The max DP mean free path was defined, 
+    \begin{equation}
+        \lambda_{max} = \gamma_{max}c\tau_{A'} = \frac{E_{max}}{m_{A'} c^2} c \tau_{A'}
+    \end{equation}
+    where DP mean free path is inversely dependent on $\epsilon^2 m_{A'}^2$. The lowest limit from the analysis was found as $\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ corresponding to a max DP mean path length of $0.81\m$. Due to the construction of the 
+    3 track trigger and offline reconstruction the resolution of the decay vertex position is 1\,m. Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
+    displaced decay is shown in Figure \ref{fig:prompt}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{plots/prompt.png}
+        \linespread{1.0}
+        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\% CL for each Dark Photon mass value from the data driven background estimation, with the result from NA48/2 for comparison \cite{2015178} and the expected limit of the prompt decay.}
+        \label{fig:prompt}
+    \end{figure}
+
+
     \ifSubfilesClassLoaded{%
         \bibliographystyle{IEEEtran}
         \bibliography{../../../references.bib}%
