@@ -405,7 +405,7 @@
             1.0 & \multicolumn{1}{c|}{0.581} & \multicolumn{1}{l|}{0.385} & 13.12 & \multicolumn{1}{l|}{0.759} & \multicolumn{1}{l|}{0.448} & 16.03 & \multicolumn{1}{l|}{0.757} & \multicolumn{1}{l|}{0.446} & 16.00 \\ \hline
             \end{tabular}%
         }
-        \caption{Table containing the ratios of $\eta_{6}/\eta_{8}$ and $\eta_{7}/\eta_{8}$, as well as the photo-electrons per beam particle from the pressure scans at different diaphragm apertures. NEED TO CHECK THESE NUMBERS}
+        \caption{Table containing the ratios of $\eta_{6}/\eta_{8}$ and $\eta_{7}/\eta_{8}$, as well as the photo-electrons per beam particle from the pressure scans at different diaphragm apertures.}
         \label{tab:testbeam_val}
     \end{table}
     %% Diaphragm scans
@@ -426,8 +426,15 @@
     %% Then describe the selection and why it was chosen
     %% Maybe we can add some N2 data !
     Considering all of the pressure scans completed during the test beam, the optimal working point for CEDAR-H was found to be at a pressure of 3.851\,bar with a diaphragm aperture of 1.7\,mm. 
-    It was chosen as it provided the best light yield with an average 19.13 photo-electrons per kaon along with an acceptable pion miss-identification probability. The pion miss-identification probability was estimated at less than $10^{-4}$, computed using the fit of a super-Gaussian on the falling edge of the pion peak shown as the dashed line on the six-fold coincidences. 
+    It was chosen as it provided the best light yield with an average 19.13 photo-electrons per kaon along with an acceptable pion miss-identification probability. The pion miss-identification probability was estimated at less than $10^{-4}$, computed using the fit of a Super-Gaussian (Equation \ref{eq:sup-gaus}) on the falling edge of the pion peak shown as the dashed line on the six-fold coincidences. 
     The fitted line was extrapolated past the results from data up to the kaon pressure to estimate the pion contribution to the siz fold coincidence, shown in Figure \ref{fig:testbeamPresures} (top right).
+    
+    The equation used to estimate the pion miss-identification by fitting to the falling edge of the pion peak is shown below, 
+    \begin{equation}\label{eq:sup-gaus}
+        f(X) = a \cdot e^{-\left(\frac{(x - \mu)^2}{2 \sigma^2}\right)^p}
+    \end{equation}
+    with $a$, $\mu$, $\sigma$ and $p$ being parameters found using a minimised chi squared fit.
+
     \section{Installation at NA62}
     \begin{figure}[H]
         \centering 
@@ -529,32 +536,32 @@
     %% First pressure scan
     The first pressure scan was completed with a diaphragm aperture of approximately 1.8\,mm . The pressure was set just above the proton pressure at 4.4\,bar and the pressure was slowly decreased as data was recorded. The data was reconstructed using a 4\,ns time window and the results are shown in Figure \ref{fig:cedarH_1}. Compared to the test beam, the y-axis of Figure \ref{fig:cedarH_1} is 
     arbitrary as the total number of triggers was not recorded. Instead, the number of coincidences was normalised to the beam intensity, which in NA62 is called the Argonian. This made the direct beam composition difficult to calculate, but the ratios of the three peaks were to be used to check if the composition was what was expected. From Figure \ref{fig:cedarH_1}, it's clear that the proton pressure was at 4.3\,bar with the kaon 
-    pressure at 3.88\,bar. The pion pressure is less clear due to the large flux of protons in the beam which overwhelmed the readout system, producing inconsistent results between 3.68 and 3.76\,bar. However, the falling edge of the pion peak was the important measurable, allowing the estimation of the pion miss-identification probability. (Replace with numbers normalised to 1) At the kaon pressure of 3.88\,bar the kaon 5-fold coincidences was 0.0003664
-    and where the pion contribution was estimated using the fit procedure using a super-Gaussian fitted on the falling edge and extrapolated to the kaon pressure was $1.29\times 10^{-06}$. Resulting in a pion miss-identification probability of $4\times 10^{-4}$ at the kaon pressure.
+    pressure at 3.88\,bar producing $21.71 \pm 0.02$ photo-electrons per kaon candidate.  The kaon pressure in NA62 was higher than what was found at the test-beam, 3.88\,bar compared to 3.85\,bar due to a 2\,K temperature difference of the radiator gas in ECN3 compared to H6. The pion pressure is less clear due to the large flux of protons in the beam which overwhelmed the readout system, producing inconsistent results between 3.68 and 3.76\,bar. However, the falling edge of the pion peak was the important measurable, allowing the estimation of the pion miss-identification probability. At the kaon pressure of 3.88\,bar the measured the normalised 5-fold coincidence was 0.0956, the pion contribution was then estimated using the fit of a super-Gaussian on the falling edge and extrapolated to the kaon pressure.
+    The estimated pion contribution to the normalised 5-fold coincidence was $5.36 \times 10^{-06}$, which resulted in a pion miss-identification probability of $0.6\times 10^{-5}$ at the kaon pressure.
+    
+    The light yield for the 1.8\,mm diaphragm aperture compared with the results from the test beam at a 2\,mm aperture shown in Figure \ref{fig:testbeamPresures}, resulted in an increase of just over 10\,\%. This increase produced by adding the KTAG photon-detection system compared to the single PMTs used in the test-beam, which was predicted from the simulations.
 
-    The kaon pressure in NA62 was higher than what was found at the test-beam, 3.88\,bar compared to 3.85\,bar due to a 2\,K temperature difference of the radiator gas in ECN3 compared to H6.
+    The photo-electrons per candidate and pion miss-identification probability suggested that an diaphragm aperture of 1.8\,mm was an excellent candidate for the working point as it passed all the requirements for operation at NA62
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin.pdf} }}%
-        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_PRES-__.Coin_log.pdf} }}%
-        \caption{Pressure scan of CEDAR-H with \HH\ at a diaphragm aperture of 1.8\,mm (CHECK THIS).}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_18mm.png} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.49\textwidth]{plots/H_18mm_log.png} }}%
+        \caption{Pressure scan of CEDAR-H with \HH\ at a diaphragm aperture of 1.8\,mm.}%
         \label{fig:cedarH_1}%
     \end{figure}
-    As the alignment had been conducted at a wide diaphragm aperture, it was possible that the alignment could have been incorrect especially if a smaller diaphragm was required. The diaphragm then was closed to 1.8\,mm and the alignment procedure was repeated. The smaller diagram allowed for a tighter alignment, as the diaphragm aperture was only wide enough for the single ring from the kaon to pass through. 
+    As the alignment had been conducted at a wide diaphragm aperture, it was possible that the alignment could have been incorrect especially if a smaller diaphragm was required. The diaphragm was kept at 1.8\,mm and the alignment procedure was repeated. The smaller diagram allowed for a tighter alignment, as the diaphragm aperture was only wide enough for the single ring from the kaon to pass through. 
     The results of the alignment are shown in Figure \ref{fig:cedarAlign2}, where the vessel was moved in both X and Y to produce a 2D map of motor positions and the corresponding average number of photo-electrons per candidate. The 
-    best position was found to be at $X = -2.258\,mm$ and $Y = -0.591\,mm$ with an average of 21.68 photo-electrons per kaon candidate.
+    best position was found to be at $X = -2.258\,mm$ and $Y = -0.591\,mm$ with an average of $21.68 \pm 0.01$ photo-electrons per kaon candidate.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{plots/Align_H_2_new.png}
         \caption{Results of alignment of CEDAR-H at the kaon pressure of 3.88\,bar with a diaphragm aperture of 1.5\,mm.}%
         \label{fig:cedarAlign2}%
     \end{figure}
-    After the final alignment, a small pressure scan was completed at a diaphragm aperture of 1.5\,mm to test the separation of the kaon and pion peaks and the results are shown in Figure \ref{fig:cedarH_2}. The separation compared to the previous pressure scan in Figure \ref{fig:cedarH_1}. Using the method of fitting the falling edge of the pion peak
-    , the pion miss-identification was estimated to be ..... DO THE CALC.
-
-    It was decided that the pressure scan from the 1.8\,mm diaphragm aperture produced the best results for running in NA62. Comparing the light yield results with a diaphragm slightly wider than 1.8\,mm from the test beam resulted in an increase of just over 10\,\%, only by adding the KTAG photon-detection system compared to the single PMTs, which was predicted from the simulation.
+    After the final alignment, a pressure scan was completed across the pion and kaon peak with a diaphragm aperture of 1.5\,mm with the results shown in Figure \ref{fig:cedarH_2}. The separation compared to the previous pressure scan in Figure \ref{fig:cedarH_1} was much greater with the pion contribution to the 5-fold coincidence estimated to be order of $10^-90$ which corresponded to a almost zero miss-identification probability.
+    However even after the updated alignment the number of photo-electrons per kaon candidate was $21.47 \pm 0.04$ suggesting a slightly lower light yield than the previous pressure scan completed with a 1.8\,mm diaphragm aperture. 
     
-    The results show that the CEDAR-H is operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. However, there was a slight degradation of the light yield compared to the previous diaphragm aperture, and as the miss-identification was acceptable at the previous setting, this was chosen as the working point. 
+    The results show that the CEDAR-H was made operational in NA62 and was able to separate the kaon and pion peaks with a high level of confidence. It was decided that the pressure scan from the 1.8\,mm diaphragm aperture produced the best results for use in the run due to the superior light yield, resulting in a better kaon identification efficiency and pion miss-identification probability than was better than what was required at NA62.
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm.png} }}%
@@ -588,7 +595,27 @@
         \includegraphics[width=0.8\textwidth]{plots/2024_Hydrogen_scan.png}
         \caption{Results of CEDAR-H pressure scan at the start of NA62's 2024 run with a diaphragm aperture of 1.5\,mm.}%
         \label{fig:cedarPres2024}%
-    \end{figure}    
+    \end{figure}
+    Due to the changes to the working point pressure between the test beam and between the 2023 and 2024 runs, a new method was developed to monitor the CEDAR-H and to take into account the environmental variables to ensure the refractive index of the radiator gas did not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
+    back of the CEDAR was recorded and is shown in Figure \ref{fig:PoverT_23} for the 2023 run and Figure \ref{fig:PoverT_24} for the 2024 run. The pressure was divided by temperature as it was expected that as the CEDAR was a sealed vessel, as the temperature increased so did the pressure resulting in an expected constant value which was then multiplied by room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
+    A good example of how this normalised the pressure was in the final days of the 2023 run in Figure \ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, where as the normalised pressures stayed constant suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure as this could cause changes in the refractive index. 
+    However as CEDAR-H is not perfectly sealed, especially for Hydrogen, some small leak was expected which is why there is a gradual decrease in the normalised pressure rather than a flat line. The normalised pressure and the resultant hit per candidates were used to decide if the CEDAR required extra filling during the run due to the small loss of gas, which can be seen in Figures \ref{fig:PoverT_23} and \ref{fig:PoverT_23} as the large 
+    spikes in pressure at various points. 
+    
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{plots/cedar_p_over_t_rt_2023.pdf}
+        \caption{The recorded pressure and pressure over temperature times room temperature for CEDAR-H during the 2023 NA62 run.}%
+        \label{fig:PoverT_23}%
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{plots/cedar_p_over_t_rt_2024.pdf}
+        \caption{The recorded pressure and pressure over temperature times room temperature for CEDAR-H during the 2024 NA62 run.}%
+        \label{fig:PoverT_24}%
+    \end{figure}
     \section{CEDAR-H Performance at NA62} \label{sec:cedarHperformance}
     The performance of the CEDAR-H in standard NA62 run conditions was assessed using data collected in 2023 and compared to CEDAR-W with data collected in 2022. A sample of kaons was collected using a selection of $K^{+}\to\pi^{+}\pi^{+}\pi^{-}$ decays which were fully reconstructed using the STRAW spectrometer, described in Section \ref{sec:STRAW}. The KTAG was used to reconstruct the kaon candidates using 
     the nominal 2\,ns clustering time window. The number of photo-electrons per kaon was measured from events that had at least a five sector coincidence and the results are shown in Figure \ref{fig:NHitsCompare}. The light yield was calculated by fitting a poissonian distribution on the distributions between 4 and 24 photo-electrons. The smaller range is used to remove the contributions from the large number of 
