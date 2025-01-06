@@ -103,10 +103,6 @@
         \caption{Quantum Efficiency of Photonics MCP-PMT as a function of wavelength (REMAKE, Ask Angela for data)}%
         \label{fig:mcp_qe}%
     \end{figure}  
-    %%% KTAG PMT ARRAYS IMAGE
-    %%% KTAG PMT ARRAYS LIGHT DISTRIBUTION
-    %%% KTAG Time resolution
-    %%% KTAG QUANTUM EFFICIENCY
     From the Monte Carlo simulation the implemented MCP-PMTs performed excellently with the result shown in Figure \ref{fig:time_hits}. The MCP-PMT produced 24.3 photo-electrons per kaon candidate with a time resolution of 18\,ps, taken from the Gaussian sigma of the distribution in Figure \ref{fig:time_hits} (Right). The results surpassed the requirements for the KTAG in HIKE and the upgrades were ready to be used in the HIKE simulations.
     \begin{figure}[H]
         \centering
@@ -117,36 +113,46 @@
     \end{figure}
 
     \section{GTk upgrade design} \label{sec:gtk_upgrade}
-    The NA62 GTk described in section \ref{sec:GTK} would have required an upgrade to sustain the fourfold increase in intensity at HIKE, requiring the new detector to have a time resolution of 50\,ps compared to 200\,ps in NA62. The exact pixel technology was not specified and is not part of this study, with the upgrade being focused on the improved granularity. 
-    The current NA62 GTk has two different pixel sizes: small, which are 300x300x200$\mu m$, and large, which are 400x150x200$\mu m$. The large pixels are found on the edge of the 10 chips that make up each station, and the small pixels are found in the center. Two options were envisioned to fulfill requirements for HIKE, the first having a pixel size on half of NA62 and the second having a pixel size of a third of NA62.
-    The NA62MC simulation and NA62 reconstruction software were upgraded to allow for a more flexible GTk design. 
-
-    For the HIKE simulations, the pixel size of one-third of NA62 was chosen to maximize the granularity of the GTk, with the small pixel size being 150x150x200$\mu m$ and the larger pixel size being 200x150x200$\mu m$. 
-
+    The NA62 GTk described in Section \ref{sec:GTK} would have required an upgrade to sustain the fourfold increase in intensity at HIKE, requiring the new detector to have a time resolution of 50\,ps compared to 200\,ps in NA62. The exact pixel technology was not specified and was not part of this study, with the upgrade being focused on the improved granularity. 
+    The NA62 GTk has two different pixel sizes: small, which are 300x300x200$\,\mu m$, and large, which are 400x150x200$\,\mu m$. The large pixels are found on the edge of the 10 chips that make up each station, and the small pixels are found in the center shown in Figure \ref{fig:gtk_dia}. 
     \begin{figure}[H]
         \centering
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/gtk_na62.png}
-            \caption*{}
-        \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/gtk_hike.png}
-            \caption*{}
-        \end{minipage}
-        \caption{Hit distribution of GTK station 0 from MC for NA62 on the left and HIKE on the right}%
-        \label{fig:NA62RICHIlum}
-    \end{figure}
+        \includegraphics[width=\textwidth]{plots/GTK_0.pdf}
+        \caption{Diagram showing the layout of a NA62 GTk station with small pixels shown in Red and the large pixels shown in green.}%
+        \label{fig:gtk_dia}%
+    \end{figure}  
+    Two options were envisioned to fulfil requirements for HIKE, the first having a pixel size on half of NA62 and the second having a pixel size of a third of NA62. Using the upgraded NA62 software package described in Section \ref{sec:na62fw} the two different types of pixels were implemented.
+    For the HIKE simulations used for the proposal, the pixel size of one-third of NA62 was chosen to maximize the granularity of the GTk, with the small pixel size being 150x150x200$\mu m$ and the larger pixel size being 200x150x200$\mu m$. One of the chips of the HIKE GTk station is shown in Figure \ref{fig:gtk_dia_2}. 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{plots/GTK_2.pdf}
+        \caption{Diagram showing a part of the layout of a HIKE GTk station with small pixels shown in Red and the large pixels shown in green.}%
+        \label{fig:gtk_dia_2}%
+    \end{figure}  
+    %\begin{figure}[H]
+    %    \centering
+    %    \begin{minipage}[b]{0.49\textwidth}
+    %        \centering
+    %        \includegraphics[width=\textwidth]{plots/gtk_na62.png}
+    %        \caption*{}
+    %    \end{minipage}
+    %    \begin{minipage}[b]{0.49\textwidth}
+    %        \centering
+    %        \includegraphics[width=\textwidth]{plots/gtk_hike.png}
+    %        \caption*{}
+    %    \end{minipage}
+    %    \caption{Hit distribution of GTK station 0 from MC for NA62 on the left and HIKE on the right}%
+    %    \label{fig:NA62RICHIlum}
+    %\end{figure}
 
 
     \section{RICH upgrade design} \label{sec:rich_upgrade}
-    The overall design of the NA62 RICH described in section \ref{sec:RICH} was well suited for use within HIKE with an upgrade to the Cherenkov photon-detection system. The NA62 RICH photon detection system comprises two arrays on either side of the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern described in Figure \ref{fig:richPMTArray}. 
+    The overall design of the NA62 RICH described in section \ref{sec:RICH} was well suited for re-use within HIKE with an upgrade to the photon-detection system. The NA62 RICH photon detection system comprises two arrays on either side of the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern described in Figure \ref{fig:richPMTArray}. 
     The PMTs have a single hit time resolution of 240\,ps and a quantum efficiency of 20\,\%. Due to the placement of the PMTs, the distance between the center of each PMT is 18\,mm, which is constrained by the sensor size and the geometry of PMT itself. This distance between sensors was the main contributor to the single hit position resolution of 4.7\,mm, 
     resulting in an overall ring radius resolution of 1.5\,mm. The number of hits per ring candidate and the single hit time resolution produced a time resolution of 80\,ps. Due to the increased beam intensity, the main requirement of the RICH for HIKE was a time resolution of 20 - 30\,ps.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{plots/diagramRICH.png}
+        \includegraphics[width=0.6\textwidth]{plots/NA62_RICH.pdf}
         \caption{Diagram of RICH PMT array}%
         \label{fig:richPMTArray}%
     \end{figure}  
@@ -154,40 +160,40 @@
     of at least 100\,ps were available from major manufacturers. Three sensor sizes were selected for further investigation, $9 \times 9\,mm$, $6 \times 6\,mm$, and $3 \times 3\,mm$. Each size had apparent benefits and downsides, but the smaller sensors would produce a better hit position resolution but at an increased cost and complexity.
     A study was conducted to determine the optimal sensor size for the SiPMs, with the overall detector performance balanced with the cost and complexity. 
 
-    Using the upgraded NA62 software package described in section \ref{sec:na62fw}, it was possible to implement the new PMTs into the RICH Monte Carlo simulation with the implemented arrays shown in Figure \ref{fig:RICH_PMTs}. Compared to the arrays currently used in NA62, the PMTs have been aligned on the vertical axis, and because of the geometry of the new PMTs, the are of the light spot, shown in Figure \ref{fig:RICH_PMTs} as a grey circle, is completely covered by the PMTs with 
-    no gaps between the sensors.
+    Using the upgraded NA62 software package described in Section \ref{sec:na62fw}, it was possible to implement the new PMTs into the RICH Monte Carlo simulation with the implemented arrays shown in Figure \ref{fig:RICH_PMTs}. Compared to the PMT arrays currently used in NA62, the PMs have been aligned on the vertical axis to simply the placement because of the square geometry of the new PMTs. The area of the expected light spot, shown in Figure \ref{fig:RICH_PMTs} as a grey circle, is completely covered by the SiPMs with 
+    no gaps between the sensors which was a clear improvement compared to the NA62 setup shown in Figure \ref{fig:richPMTArray}.
     \begin{figure}[H]
         \begin{minipage}[b]{0.30\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_9mm.png}
+            \includegraphics[width=\textwidth]{plots/SiPM_2.pdf}
             \linespread{1.0}
         \end{minipage}%
         \hfill
         \begin{minipage}[b]{0.30\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_6mm.png}
+            \includegraphics[width=\textwidth]{plots/SiPM_1.pdf}
             \linespread{1.0}
         \end{minipage}
         \hfill
         \begin{minipage}[b]{0.30\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_3mm.png}
+            \includegraphics[width=\textwidth]{plots/SiPM_0.pdf}
             \linespread{1.0}
         \end{minipage}
-        \caption{}
+        \caption{Diagram of proposed RICH SiPM arrays for use in HIKE. Left, 9x9\,mm, center 6x6\,mm and right 3x3\,mm.}
         \label{fig:RICH_PMTs}
     \end{figure}
-    The letter of intent for HIKE proposed a SiPM with a Quantum efficiency of at least 40\,\% \cite{CortinaGil:2839661}. The Hamamatsu S13360-**50CS series was selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected for its improved Ultra Violet (UV) sensitivity and a high quantum efficiency of 40\,\% peak at 460\,nm, 
+    The requirements for HIKE proposed a SiPM with a Quantum efficiency of at least 40\,\% \cite{thehikecollaboration2023high}. The Hamamatsu S13360-**50CS series was selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected for its improved Ultra Violet (UV) sensitivity and high quantum efficiency of 40\,\% at 460\,nm, 
     shown in Figure \ref{fig:RICH_PMT_QE}. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{plots/PMT_QE.png}
-        \caption{Selected SiPM quantum efficiency taken from Hamamatsu S13360 datasheet \cite{MPPC}}%
+        \caption{Selected SiPM quantum efficiency taken from Hamamatsu S13360 data-sheet \cite{MPPC}}%
         \label{fig:RICH_PMT_QE}%
     \end{figure}  
-    Along with the QE efficiency requirement was a single hit time resolution of 100\,ps \cite{CortinaGil:2839661}. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value was given. The time resolution would also depend on the final design of the RICH readout electronics and would have to be measured in a test setup. A simple Gaussian time response curve with a sigma of 100\,ps was used for the simulations.
+    Along with the QE efficiency, a single hit time resolution of 100\,ps was required \cite{thehikecollaboration2023high}. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value was given. The time resolution would also depend on the final design of the RICH readout electronics and would have to be measured in a test setup. A simple Gaussian time response curve with a sigma of 100\,ps was used for the simulations as a placeholder, ready for a specific model to be implemented when chosen.
     
-    The expected performance of the RICH detector with the new PMTs was compared to the current NA62 RICH detector in Table \ref{tab:hikeRICH}. With the increased quantum efficiency, the expected number hits per $\pi^{+}$ at 15 and 45\,$GeV/c$ increased by a factor of two. This, along with the improved time resolution of the new PMTs resulted in a time $\pi^+$ time resolution of 27\,ps at 15\,$GeV/c$ and 20\,ps at 45\,$GeV/c$.
+    The expected performance of the RICH detector with the new PMTs was compared to the current NA62 RICH detector in Table \ref{tab:hikeRICH}. With the increased quantum efficiency, the expected number hits per $\pi^{+}$ between 15 and 45\,$GeV/c$ was expected to increase by a factor of two. This, along with the improved time resolution of the new PMTs resulted in an expected time $\pi^+$ time resolution of 27\,ps at 15\,$GeV/c$ and 20\,ps at 45\,$GeV/c$.
     \begin{table}[]
         \centering
         \begin{tabular}{|l|l|l|}
@@ -345,12 +351,12 @@
     After the new GTk and RICH detectors were developed it was necessary to determine the expected particle rate in the upgraded detectors and the other detectors. 
     For the expected rate for Phase 1, was possible to estimate by scaling the known NA62 rates by the expected increase in beam intensity, by a factor of 4 compared to NA62. 
     The rates for Phase 2 were calculated using the new simulation software described in the previous sections. A array of input files were produced in BDSIM by the CERN beam group which contained the simulated HIKE beam components at a Z of 120\,m which is the start of the fiducial volume.
-    The files are then taken by the NA62MC software and used as the primary beam instead of the turtle beam which is defult for NA62. Each file contained 10000 events which was equivalent to 10000 protons on target and there was 18K files prodcued in total which was equivalent to 1.8E8 protons on target. 
-    As this wouldn't be enough to get a good estimate of the rates, each files was used 11 times as an inuput to the simuation with random seeds to increase the statisitcs. The simulation was ran with the unforced flag which allows for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
+    The files are then taken by the NA62MC software and used as the primary beam instead of the turtle beam which is default for NA62. Each file contained 10000 events which was equivalent to 10000 protons on target and there was 18K files produced in total which was equivalent to 1.8E8 protons on target. 
+    As this wouldn't be enough to get a good estimate of the rates, each files was used 11 times as an input to the simulation with random seeds to increase the statistics. The simulation was ran with the unforced flag which allows for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
     After simulation the files were then reconstructed using the NA62 reconstruction software and the rates wre calculated by scaling the numbers in the output by the expected HIKE phase 2 beam conditions which was a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
 
     
-    The $K_L$ rate at the entrance of the fiducial volume was calulcated to be 304.1 MHz (ADD ERROR), with the rate of the four decays in the fiducial volume shown in Table \ref{tab:hikeDecayRates}.
+    The $K_L$ rate at the entrance of the fiducial volume was calculated to be 304.1 MHz (ADD ERROR), with the rate of the four decays in the fiducial volume shown in Table \ref{tab:hikeDecayRates}.
 
     \begin{table}[H]
         \centering
