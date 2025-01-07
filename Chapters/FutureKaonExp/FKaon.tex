@@ -201,8 +201,8 @@
          & NA62 RICH & HIKE RICH \\ \hline
         Sensor time resolution & 240ps & 100ps \\ \hline
         Sensor quantum efficiency & 20\% & 40\% \\ \hline
-        Number of hit for $\pi^+$ at 15 $GeV/c$ & 7 & 14 \\ \hline
-        Number of hit for $\pi^+$ at 45 $GeV/c$ & 12 & 24 \\ \hline
+        Number of photo-electrons for $\pi^+$ at 15 $GeV/c$ & 7 & 14 \\ \hline
+        Number of photo-electrons for $\pi^+$ at 45 $GeV/c$ & 12 & 24 \\ \hline
         Time resolution for $\pi^+$ at 15 $GeV/c$ & 90ps & 27ps \\ \hline
         Time resolution for $\pi^+$ at 45 $GeV/c$ & 70ps & 20ps \\ \hline
         \end{tabular}
@@ -217,115 +217,145 @@
         \centering
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/NA62_sal_ilum.png}
-            \caption*{(a) Light distribution for NA62 setup on the Salev side of the RICH detector.}
+            \includegraphics[width=\textwidth]{plots/RICH_na62_Saleve.pdf}
+            \caption*{(a) Light distribution for NA62 setup on the Saleve side of the RICH detector.}
         \end{minipage}
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/NA62_jur_ilum.png}
+            \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
             \caption*{(b) Light distribution for NA62 setup on the Jura side of the RICH detector.}
         \end{minipage}
-        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays. The 
-        left column shows illumination on the Salev side of the RICH detector, and the right column shows the Jura side.}%
+        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3). The 
+        left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:NA62RICHIlum}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \begin{minipage}[b]{0.49\textwidth}
+        \begin{minipage}[b]{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_3mm_sal_ilum.png}
-            \caption*{(a) Light distribution for 3\,mm sensors on the Salev side of the RICH detector.}
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_Saleve.pdf}
+            \caption*{(a) 3\,mm Saleve.}
         \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
+        \begin{minipage}[b]{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_3mm_jur_ilum.png}
-            \caption*{(b) Light distribution for 3\,mm sensors on the Jura side of the RICH detector.}
-        \end{minipage}
-    
-        \vspace{0.5cm} % Adjust the vertical space between rows
-    
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/RICH_6mm_sal_ilum.png}
-            \caption*{(c) Light distribution for 6\,mm sensors on the Salev side of the RICH detector.}
-        \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/RICH_6mm_jur_ilum.png}
-            \caption*{(d) Light distribution for 6\,mm sensors on the Jura side of the RICH detector.}
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_Jura.pdf}
+            \caption*{(b) 3\,mm Jura.}
         \end{minipage}
     
-        \vspace{0.5cm} % Adjust the vertical space between rows
+        \vspace{0.01cm} % Adjust the vertical space between rows
     
-        \begin{minipage}[b]{0.49\textwidth}
+        \begin{minipage}[b]{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_9mm_sal_ilum.png}
-            \caption*{(e) Light distribution for 9\,mm sensors on the Salev side of the RICH detector.}
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_Saleve.pdf}
+            \caption*{(c) 6\,mm Saleve.}
         \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
+        \begin{minipage}[b]{0.45\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/RICH_9mm_jur_ilum.png}
-            \caption*{(f) Light distribution for 9\,mm sensors on the Jura side of the RICH detector.}
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_Jura.pdf}
+            \caption*{(d) 6\,mm Jura.}
+        \end{minipage}
+    
+        \vspace{0.01cm} % Adjust the vertical space between rows
+    
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_Saleve.pdf}
+            \caption*{(e) 9\,mm Saleve.}
+        \end{minipage}
+        \begin{minipage}[b]{0.45\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_Jura.pdf}
+            \caption*{(f) 9\,mm Jura.}
         \end{minipage}
         
-        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensor sizes. The 
-        left column shows illumination on the Salev side of the RICH detector, and the right column shows the Jura side.}%
+        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensor produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3). 
+        The left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:HikeRICHIlum}
     \end{figure}
 
     %%% Files /afs/cern.ch/work/j/jsanders/Software/na62fw/NA62Analysis/PathToUser
     %%% N Hit in Ring candidate
-    The number of reconstructed hits is shown in Figure \ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed hits is mainly due to the enhanced quantum efficiency of the SiPMs and the sensors' better placement, reducing the probability of multiple photons hitting the same sensor.
-    There are minimal differences between the three sensor sizes shown in Figure \ref{fig:NA62RICHNHITs}(b-d), with the 3\,mm sensors having a slightly higher number of hits per ring candidate when compared to the 9\,mm sensors. 
+    In the reconstruction the photo-electrons are clustered into ring candidates. The number of reconstructed photo-electrons is shown in Figure \ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons was mainly due to the enhanced quantum efficiency of the SiPMs and the sensors' better placement, reducing the probability of multiple photons hitting the same sensor.
+    There are minimal differences between the three sensor sizes shown in Figure \ref{fig:NA62RICHNHITs}\,(b-d), with the 3\,mm sensors having a slightly higher number of hits per ring candidate when compared to the 9\,mm sensors. 
 
     \begin{figure}[H]
         \centering
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/sample-a}
-            \caption*{(a) Number of hits per ring candidate for NA62 PMT arrays.}
+            \includegraphics[width=\textwidth]{plots/RICH_na62_nhits.pdf}
+            \caption*{(a) Number of hits per ring candidate for NA62 PMT arrays, $\mu = 13.00 \pm 0.01$}
         \end{minipage}
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_NHits_3mm.png}
-            \caption*{(b) Number of hits per ring candidate for 3\,mm SiPMs, $\simga = 28.86$.}
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_nhits.pdf}
+            \caption*{(b) Number of hits per ring candidate for 3\,mm SiPMs, $\mu = 28.86 \pm 0.01$.}
         \end{minipage}
 
         \vspace{0.5cm}
 
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_NHits_6mm.png}
-            \caption*{(a) Number of hits per ring candidate for 6\,mm SiPMs $\simga = 27.56$.}
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_nhits.pdf}
+            \caption*{(a) Number of hits per ring candidate for 6\,mm SiPMs, $\mu = 27.56 \pm 0.01$.}
         \end{minipage}
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_NHits_9mm.png}
-            \caption*{(b) Number of hits per ring candidate for 9\,mm SiPMs $\simga = 26.36$.}
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_nhits.pdf}
+            \caption*{(b) Number of hits per ring candidate for 9\,mm SiPMs, $\mu = 26.36 \pm 0.01$.}
         \end{minipage}
 
-        \caption{Number of hits per ring candidate for NA62 PMTs and the three possible HIKE SiPMs}%
+        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE SiPMs produced with a from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
         \label{fig:NA62RICHNHITs}
     \end{figure}
 
+    The subsequent reconstructed ring candidate radius is shown in Figure \ref{fig:NARICHRINGRAD}, with the NA62 PMT array producing a resolution of 1.68\,mm compared to 0.72\,mm for the HIKE array with 9\,mm SiPMs. This was a over two times increase in resolution with 
+    the largest sensor size with the 3\,mm improving further to 0.41\,mm. However it was noted that this resolution would not be possible in data-taking due to inaccuracies with the mirror placement and dispersion in the radiator gas. It was accepted that the 9\,mm value would be the best possible resolution obtainable.
+    \begin{figure}[H]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_na62_radius.pdf}
+            \caption*{(a) Ring radius for NA62 PMT arrays, $\sigma = 1.68 \pm 0.03$.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_radius.pdf}
+            \caption*{(b) Ring radius for 3\,mm SiPMs, $\sigma = 0.41 \pm 0.01$.}
+        \end{minipage}
+
+        \vspace{0.5cm}
+
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_radius.pdf}
+            \caption*{(a) Ring radius for 6\,mm SiPMs, $\sigma = 0.56 \pm 0.01$.}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_radius.pdf}
+            \caption*{(b) v for 9\,mm SiPMs, $\sigma = 0.72 \pm 0.01$.}
+        \end{minipage}
+
+        \caption{Reconstructed ring radius for electron candidates for NA62 PMTs and the three possible HIKE SiPMs produced with a from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
+        \label{fig:NARICHRINGRAD}
+    \end{figure}
 
     %%% Ring Radius Resolution
-    The time resolution of the RICH detector was calculated using the Ke3 sample by equally splitting the reconstructed hits of the ring candidate into two sets and calculating the time difference between the two sets. The results are shown in Figure \ref{fig:NA62RICHTIMERes}, with the 3x3\,mm sensors producing the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
-    Each sensor size produced a time resolution of less than 30\,ps, fulfilling the requirements of HIKE. 
-    
-    The 9x9\,mm sensor size was selected for future use in the HIKE RICH detector. This size was chosen as it fulfills the HIKE requirements of time resolution without the added complexity and cost of the smaller sensors, the 9x9 array has a total of 8588 sensors on each of the Salev and Jura sides of the RICH detector compared to 72780 for the 3x3\,mm.
+    The time resolution of the RICH detector was calculated using the Ke3 sample by equally splitting the reconstructed photo-electrons of the ring candidates into two sets and calculating the time difference between them, with the results are shown in Figure \ref{fig:NA62RICHTIMERes}. The 3x3\,mm sensors produced the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
+    However there was little difference between the SiPMs with each sensor size producing a time resolution of less than 30\,ps, fulfilling the requirements of HIKE. 
+    The improvement was clear with using the small SiPMs when compared with the NA62 resolution in Figure \ref{fig:NA62RICHTIMERes} which had a time resolution of 61.35\,ps. 
 
     \begin{figure}[H]
         \centering
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/sample-a}
-            \caption*{(a) Time resolution for NA62 PMT arrays.}
+            \includegraphics[width=\textwidth]{plots/RICH_na62_time.pdf}
+            \caption*{(a) Time resolution for NA62 RICH.}
         \end{minipage}
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_sigma_3mm.png}
+            \includegraphics[width=\textwidth]{plots/RICH_3mm_time.pdf}
             \caption*{(b) Time resolution for 3\,mm SiPMs.}
         \end{minipage}
 
@@ -333,12 +363,12 @@
 
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_sigma_6mm.png}
+            \includegraphics[width=\textwidth]{plots/RICH_6mm_time.pdf}
             \caption*{(a) Time resolution for 6\,mm SiPMs.}
         \end{minipage}
         \begin{minipage}[b]{0.49\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{plots/ring_sigma_9mm.png}
+            \includegraphics[width=\textwidth]{plots/RICH_9mm_time.pdf}
             \caption*{(b) Time resolution for 9\,mm SiPMs.}
         \end{minipage}
 
@@ -346,14 +376,17 @@
         A detailed description of the procedure is provided here \cite{Anzivino_2020}}%
         \label{fig:NA62RICHTIMERes}
     \end{figure}
-
+    After the RICH MC study it was proven that the introduction of small SiPMs would dramatically increase the granularly of the detector. All three SiPM sensors sizes produced results which exceeded the requirements for HIKE with time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. It was decided that the 9x9\,mm SiPMs would be used for the HIKE simulations used for the proposal as the provided excellent performance and 
+    would reduce the cost and complexity with implementing the smaller sensor sizes in the detector when it was built. A clear benefit was the reduction of number of channels from 72780 for the 3x3\,mm compared to 8588 for the 9x9/,mm SiPMs.
     \section{Detector Rates}
     After the new GTk and RICH detectors were developed it was necessary to determine the expected particle rate in the upgraded detectors and the other detectors. 
-    For the expected rate for Phase 1, was possible to estimate by scaling the known NA62 rates by the expected increase in beam intensity, by a factor of 4 compared to NA62. 
-    The rates for Phase 2 were calculated using the new simulation software described in the previous sections. A array of input files were produced in BDSIM by the CERN beam group which contained the simulated HIKE beam components at a Z of 120\,m which is the start of the fiducial volume.
-    The files are then taken by the NA62MC software and used as the primary beam instead of the turtle beam which is default for NA62. Each file contained 10000 events which was equivalent to 10000 protons on target and there was 18K files produced in total which was equivalent to 1.8E8 protons on target. 
+    For the expected rate for Phase 1, it was possible to estimate by scaling the known NA62 rates by the expected increase in beam intensity, by a factor of 4 compared to NA62. 
+    The rates for Phase 2 were calculated using the new simulation software described in the previous sections. 
+    
+    An array of input files were produced in BDSIM \cite{Nevay2020BDSIM} by the CERN beam group which contained the simulated HIKE beam components at a Z of 120\,m which was the start of the fiducial volume.
+    The files were then used as an input for the NA62MC software and used as the primary beam instead of the turtle beam which is default for NA62. Each file contained 10000 events which was equivalent to 10000 protons on target and there was 18K files produced in total which was equivalent to $1.8 \times 10^8$ protons on target. 
     As this wouldn't be enough to get a good estimate of the rates, each files was used 11 times as an input to the simulation with random seeds to increase the statistics. The simulation was ran with the unforced flag which allows for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
-    After simulation the files were then reconstructed using the NA62 reconstruction software and the rates wre calculated by scaling the numbers in the output by the expected HIKE phase 2 beam conditions which was a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
+    After simulation the files were then reconstructed using the NA62 Reconstruction software and the rates wre calculated by scaling the numbers in the output by the expected HIKE Phase 2 beam conditions, a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
 
     
     The $K_L$ rate at the entrance of the fiducial volume was calculated to be 304.1 MHz (ADD ERROR), with the rate of the four decays in the fiducial volume shown in Table \ref{tab:hikeDecayRates}.
@@ -363,17 +396,17 @@
         \begin{tabular}{|l|l|}
         \hline
         KL decay & Rate [MHz] \\ \hline
-        $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$) & 13.891 \\ \hline
-        $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$) & 9.639 \\ \hline
-        $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ & 6.602 \\ \hline
-        $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ & 4.454 \\ \hline
+        $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$) & 13.89 \\ \hline
+        $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$) & 9.63 \\ \hline
+        $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ & 6.60 \\ \hline
+        $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ & 4.45 \\ \hline
         \end{tabular}
         \caption{Rates of the four main $K_L$ decays in the HIKE phase 2 fiducial volume. (ADD ERROR)}%
         \label{tab:hikeDecayRates}%
     \end{table}
 
-    The total rates from all particles in the events where the $K_L$ decays are shown in Table \ref{tab:totalRatesInDetectors}. To calculate the rate all hits in all of the channels of each detector were colected and converted to the expected rate. The rates were large but this is to be expected with a high intenstity, however the rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay was concering as one would expect
-    a much lower rate compared to the other decays due to the lack of a charged daughter particle. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions.
+    The total rates from all particles in the events where the $K_L$ decays are shown in Table \ref{tab:totalRatesInDetectors}. To calculate the rate all hits in all of the channels of each detector were collected and converted to the expected rate. The rates were large but this was to be expected with a high intenstity, however the rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay was concering as one would expect
+    a much lower rate compared to the other decays due to the lack of a charged daughter particles. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions.
     
     \begin{table}[H] 
         \centering
@@ -401,8 +434,8 @@
         \label{tab:totalRatesInDetectors}
     \end{table}
 
-    Directly looking at the MC it was possible to find the origin of the particles producing the hits in the spectrometer. The production Z compared against the production radius of particles producing a hit in the Spectrometer is shown in Figure \ref{fig:SpectroCheck}. 
-    It is clear to see the for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles are produced after Z=210\,m in the walls of the vaccume decay tube and in the spectrometer chambers themselves, with only 20\,\% of particles producing hits in the spectrometer produced before Z=210\,m which would be consistant with being produced in the decay.
+    Directly looking at the MC it was possible to find the origin of the particles which produced the hits in the spectrometer. The production Z compared against the production radius of particles which produced a hit in the Spectrometer is shown in Figure \ref{fig:SpectroCheck}. 
+    It is clear to see the for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles were produced after Z=210\,m with most produced in the walls of the vacuum decay tube and in the spectrometer chambers themselves, with only 20\,\% of particles produced before Z=210\,m which would be consistent with being produced in the decay.
 
     \begin{figure}[H]
         \centering
@@ -420,7 +453,7 @@
         \label{fig:SpectroCheck}
     \end{figure}
 
-    Again this is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vaccume decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
+    Again this is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vacuum decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
 
     \begin{figure}[H]
         \centering
@@ -439,8 +472,8 @@
     \end{figure}
 
     As well as the overall hit rate, it is important to understand the rate in the detectors produced directly from the daughter particles of the $K_L$ decays. The daughter particles were selected as particles with a GEANT4 production process of "Decay", which should include any subsequent decays of the daughter particles eg $\pi^0 \to \gamma \gamma$. 
-    This should exclud all hits produced from particles produced by "gammma conversion" which produce electron positron pairs and impact the rate, as shown above. The rates for each detector is shown in Table \ref{tab:DecayParticleRatesDetectors}. It is clear that the overall rates are much lower when compared to the total rates in Table \ref{tab:totalRatesInDetectors} and that the rates in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay are much lower which is expected. Overall the rate are acceptable for the detectors as it is assumed that most of the 
-    hits produced not from the decay of the $K_L$ will be removed by the trigger system as they will be outside the time window of the $K_L$ decay.
+    This should exclude all hits produced from particles produced by "gammma conversion" which produce electron positron pairs and impact the rate, as shown above. The rates for each detector is shown in Table \ref{tab:DecayParticleRatesDetectors}. It was clear that the overall rates were much lower when compared to the total rates in Table \ref{tab:totalRatesInDetectors} and that the rates in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay are much lower which is expected. Overall the rates were acceptable for the detectors as it was assumed that most of the 
+    hits produced not from the decay of the $K_L$ or other subsequent decays would be removed by the trigger system as they would be outside the time window of the $K_L$ decay.
 
     \begin{table}[H]
         \centering
@@ -468,7 +501,7 @@
         \label{tab:DecayParticleRatesDetectors}
     \end{table}
     
-    Rates for the detectors are important to understand in terms of detector design, especially for the electronics that would need to be designed to meet the high rates. Along with the overall rate coming from the detector it is vital to know the max channel rates to design the electronic to handle the highest rate. The max channel rates for each detector were colected and are shown in Table \ref{tab:maxChannelRates}. 
+    Rates for the detectors were important to understand in order to determine the overall detector design, especially for the electronics that would need to be designed to meet the high rates. Along with the overall rate it was vital to know the max channel rates in the detectors to design the electronics to handle the highest rate expected. The max channel rates for each detector were colected and are shown in Table \ref{tab:maxChannelRates}. 
 
     \begin{table}[H]
         \centering
@@ -527,8 +560,8 @@
         \label{tab:RatesAtZ}
     \end{table}
 
-    However as the rates are collected from the cross section at the expected detector position, the rates are higher than what would be seen due to the fact that all the detectors will eventually have a beam hole to accommodate beam particles passing though the detector. An example cross section at the entry of first STARW chamber is shown in Figure \ref{fig:STRAW1_rate}, where it is clear that the highest rate from the decay particles is found at the centre. As the detectors are not designed and the beam hole size is not know, it is possible to estimate there rough size by calculating the beam divergence at the detector position.
-    This is calculated using the equation:
+    However as the rates are collected from the cross section at the expected detector position, the rates are higher than what would be seen due to the fact that all the detectors would eventually have a beam hole to accommodate beam particles passing though the detector. An example cross section at the entry of first STARW chamber is shown in Figure \ref{fig:STRAW1_rate}, where it is clear that the highest rate from the decay particles was found at the centre. As the detectors were not designed and the beam hole size was not known, it was possible to estimate the estimated size by calculating the beam divergence at the detector position.
+    This was calculated using Equation \ref{eq:beamDivergence}.
     \begin{equation}\label{eq:beamDivergence}
         \delta_{beam} = 0.4\,mrad \times Z
     \end{equation}
@@ -539,7 +572,7 @@
         \label{fig:STRAW1_rate}%
     \end{figure} 
 
-    Using Equation \ref{eq:beamDivergence}, a mask for where the beam hole would be was applied to remove any particles that would not impact the detector. The resulant rates with the beam hole mask applied are shown in Table \ref{tab:RatesAtZBeamHole}. As expected this reduced the max rate for most detectors without impacting the average rate. 
+    Using Equation \ref{eq:beamDivergence}, a mask for where the beam hole would be was applied to remove any particles that would not impact the detector. The resultant rates with the beam hole mask applied are shown in Table \ref{tab:RatesAtZBeamHole}. As expected this reduced the max rate for most detectors without impacting the average rate across the detector plane. 
 
     \begin{table}[H]
         \centering
@@ -569,7 +602,9 @@
         \label{tab:RatesAtZBeamHole}
     \end{table}
     
-    For the detector design it was also important to calulate the total rates produced by different particles, which is shown in Table \ref{tab:TotalRates}. With all rates information from the simulation shown in this section, it would then possible to design the detectors that were not already upgraded within the siulation. The Table \ref{tab:TotalRates} was used in the HIKE proposal to demonstrate the requirment for upgrading the detectors to handle the increased rates.
+    For the detector design it was also important to calculate the total rates produced by different particles, which is shown in Table \ref{tab:TotalRates}. Its clear that the majority of the rates in the at the detector planes was from photons, especially in the spectrometer. However, the rate from charged particles which the detectors would be mainly designed for is reasonable suggesting that the detectors could be designed and built with current technologies.
+    
+    With all rates information from the simulation shown in this section, it would then possible to design the detectors that were not already upgraded within the simulation. The Table \ref{tab:TotalRates} was used in the HIKE proposal to demonstrate the requirement for upgrading the detectors to handle the increased rates.
 
     \begin{table}[H]
         \centering
@@ -594,8 +629,6 @@
         \caption{Average and Max particle rates per $cm^2$ for specified checkpoints along the length of the detector. The particle rates are collected not from the geometrical acceptance of the corresponding sub-detectors but from the cross section of the outer volume for the sub-detector found in the Monte Carlo. For the Straw-1\&3 a circle of radius of 141.5\,mm, NCHOD a square of length 330\,mm, CHOD a square of length 244\,mm, IRC a square of length 122\,mm, MEC a circle of radius 182.5\,mm, MUV-1\&2 a square of length 320\,mm,  MUV-3 a square of length 281\,mm and HAC a square of length 281\,mm. A geometrical cut has been made to remove particles that pass though the checkpoints within the expected beam dispersion radius calculated to be $0.4\times10^{-3}\times Z$, where Z is the position of the checkpoint.}
         \label{tab:TotalRates}
     \end{table}
-
-    \section{Conclusions}
 
 
     \ifSubfilesClassLoaded{%
