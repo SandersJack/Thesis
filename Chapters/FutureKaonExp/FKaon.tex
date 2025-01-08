@@ -69,14 +69,14 @@
     The duel layer design or chevron, adds some addiational benfits than a single layer one; better gains due to the increased surface for secondary electrons to be produced and improved lifetime due to the suppression of ions produced in the amplification from reaching the photocathode. 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{imgs/mcp_diag.pdf}
+        \includegraphics[width=0.8\textwidth]{imgs/mcp_diag.pdf}
         \caption{Diagram describing the workings of a MCP-PMT.}%
         \label{fig:mcppmt_dia}%
     \end{figure}  
     An example of the expected MCP-PMT model to be used in the KTAG manufactured by Photonics is shown in Figure \ref{fig:mcppmt}. The module consists of a 8x8 array of pixels which can individually be readout.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{imgs/mcp_pmt_dia.png}
+        \includegraphics[width=0.8\textwidth]{imgs/mcp_pmt_dia.png}
         \caption{Schematic of Photonics MCP-PMT \cite{RONZHIN201552}}%
         \label{fig:mcppmt}%
     \end{figure}  
@@ -84,22 +84,22 @@
     reflected by the spherical mirror. As the schematic in Figure \ref{fig:mcppmt} shows there is some unused area around the active area of each MCP-PMT, which would result in reduced efficiency, especially in the centre where the maximum amount of light would be expected. To mitigate this reflective surfaces were attached to each side of the individual MCP-PMTs shown in Figure \ref{fig:mcp_ktag}, which reflect the light onto the active surface.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{imgs/array_diag.png}
+        \includegraphics[width=0.8\textwidth]{imgs/array_diag.png}
         \caption{Visualisation of the MCP-PMT array placed inside of the KTAG}%
         \label{fig:mcp_ktag}%
     \end{figure}  
     The resultant light spot for one of the sectors is shown in Figure \ref{fig:mcp_ktag_light}, where the inactive areas between the individual MCP-PMT are shown and the increased amount of light at the edges from the reflective surfaces. The position on the MCP-PMT in the KTAG sector was optimised to produce the maximum number of photo-electrons per kaon candidate.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{plots/light_mcp.png}
-        \caption{Collected light distribution for the MCP-PMT installed in the KTAG. (REMAKE)}%
+        \includegraphics[width=0.8\textwidth]{plots/ktag_MCP_spot.pdf}
+        \caption{Collected light distribution for the MCP-PMT installed in the KTAG.}%
         \label{fig:mcp_ktag_light}%
     \end{figure}  
     The Quantum Efficiency of the MCP-PMT from Photonics is shown in Figure \ref{fig:mcp_qe}. There are two options for the photocathode of the MCP-PMT available, a standard bialkali (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. The distribution for the Hi-QE Blue was implemented into the Monte Carlo but further studies at The University of Birmingham are planned to take place to characterise the MCP-PMTs by measuring the lifetimes, QE and other characteristics inorder to decide which type could be used 
     for high intensity kaon physics at HIKE.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{plots/mcp_qe.png}
+        \includegraphics[width=0.8\textwidth]{plots/mcp_qe.png}
         \caption{Quantum Efficiency of Photonics MCP-PMT as a function of wavelength (REMAKE, Ask Angela for data)}%
         \label{fig:mcp_qe}%
     \end{figure}  
@@ -166,19 +166,16 @@
         \begin{minipage}[b]{0.30\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_2.pdf}
-            \linespread{1.0}
         \end{minipage}%
         \hfill
         \begin{minipage}[b]{0.30\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_1.pdf}
-            \linespread{1.0}
         \end{minipage}
         \hfill
         \begin{minipage}[b]{0.30\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_0.pdf}
-            \linespread{1.0}
         \end{minipage}
         \caption{Diagram of proposed RICH SiPM arrays for use in HIKE. Left, 9x9\,mm, center 6x6\,mm and right 3x3\,mm.}
         \label{fig:RICH_PMTs}
@@ -436,37 +433,19 @@
 
     Directly looking at the MC it was possible to find the origin of the particles which produced the hits in the spectrometer. The production Z compared against the production radius of particles which produced a hit in the Spectrometer is shown in Figure \ref{fig:SpectroCheck}. 
     It is clear to see the for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles were produced after Z=210\,m with most produced in the walls of the vacuum decay tube and in the spectrometer chambers themselves, with only 20\,\% of particles produced before Z=210\,m which would be consistent with being produced in the decay.
-
     \begin{figure}[H]
         \centering
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/spectroCheckpiPLus.png}
-            \caption*{}
-        \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/spectroCheckpi0.png}
-            \caption*{}
-        \end{minipage}
+        \subfloat{{\includegraphics[width=0.49\textwidth]{plots/ZProd_410.pdf} }}%
+        \subfloat{{\includegraphics[width=0.49\textwidth]{plots/ZProd_411.pdf} }}%
         \caption{Production Z compared against production radius of particles producing a hit in the Spectrometer with the fraction of particles produced before and after Z=210\,m. Left, for the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay and right, for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay.}%
         \label{fig:SpectroCheck}
     \end{figure}
 
-    Again this is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vacuum decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
-
+    This is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vacuum decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
     \begin{figure}[H]
         \centering
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/spectroCheckpiPLus_pdg.png}
-            \caption*{}
-        \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/spectroCheckpi0_pdg.png}
-            \caption*{}
-        \end{minipage}
+        \subfloat{{\includegraphics[width=0.49\textwidth]{plots/SpectHits_410.pdf} }}%
+        \subfloat{{\includegraphics[width=0.49\textwidth]{plots/SpectHits_411.pdf} }}%
         \caption{Monte Carlo particle code for the particles producing a hit in the Spectrometer. Left, for the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay and right, for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay.}%
         \label{fig:pdgCodeSpec}
     \end{figure}
@@ -567,7 +546,7 @@
     \end{equation}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{plots/Straw1ChecknoHole.png}
+        \includegraphics[width=\textwidth]{plots/Hits_Straw1.pdf}
         \caption{Rate of particles across the cross section at the first STRAW chamber entrance at Z=213.\,m.}%
         \label{fig:STRAW1_rate}%
     \end{figure} 
