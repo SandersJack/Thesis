@@ -245,10 +245,53 @@
     \end{figure}
 
     \subsection{Charged Particle Hodoscopes}
-    The charged particle hodoscopes comprised of pair of scintillating detectors which cover the acceptance downstream of the RICH and upstream of the LKr. %%CHOD and NA48 CHOD
-    They were used as inputs to the L0 trigger system
+    The charged particle hodoscopes comprised of pair of scintillating detectors which cover the acceptance downstream of the RICH and upstream of the LKr. The main function of the charged particle hodoscopes was to provide input to the first level of NA62 triggers system.
+    The NA48-CHOD which was used in NA62's predecessor experiment NA48 \cite{Fantietal2007} was located upstream of LAV12, just after the RICH. The NA48-CHOD consisted of two planes of 20\,mm thick plastic scintillator slabs, 64 vertical and 64 horizontal which is shown in Figure \ref{fig:NA48CHOD}. Each scintillating slab was individually connected to photomultipliers via a light guide. A signal in both planes was required to produce a track time with a resolution of 200\,ps.
+    The charged particle rate at the NA48-CHOD was 13\,MHz, with the overall rate at 35\,MHz mainly resulting from particles produced from interactions with upstream detectors.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/NA48-CHOD.png}
+        \linespread{1.0}
+        \caption{Schematic of the NA48-CHOD \cite{Fantietal2007}.}
+        \label{fig:NA48CHOD}
+    \end{figure}
+    The CHOD was located after the twelfth LAV station, before the LKr and consisted of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and are bundled into groups of four and are read out by Silicon photomultipliers (SiPM). The overall time resolution of the detector was 1.1\,ns. 
+    In operation the CHOD would sustain a rate of 45\,MHz, with 13\,MHz from charged particles.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=\textwidth]{imgs/NEW-CHOD.png}
+        \linespread{1.0}
+        \caption{Layout of the NA62 CHOD. Left, the front cross section of scintillating tiles with the support structure. Right, side cross section of the scintillating tiles \cite{Kholodenko_2017}.}
+        \label{fig:NEWCHOD}
+    \end{figure}
+
+    \subsection{Muon Veto System}
+    The Muon Veto System (MUV) was used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises of a hadronic sampling calorimeter made from two modules, MUV1 and MUV2 utilising iron as an absorber material. MUV1 was a newly designed module for NA62 and MUV2 was repurposed from the front of the NA48 hadronic calorimeter \cite{Fantietal2007}. MUV1 consisted of 24, 26.8\,mm thick iron plates with 23 layers scintillator strips placed of 9\,mm thickness with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
+    The total material MUV1 produced a total thickness of 4.1\,$X_0$ (interaction lengths). The light produced within the strips was collected by WLS fibres and readout by PMTs. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.5\textwidth]{imgs/MUV1.png}
+        \linespread{1.0}
+        \caption{Schematic of the MUV1 module used as part of the Muon Veto System at NA62.}
+        \label{fig:MUV1}
+    \end{figure}
+    MUV2 was similar in construction with $2\times22$ strips per plane versus 48 for MUV1, as shown in Figure \ref{fig:muvs_diags}. MUV2 had thinner iron plates at 25\,mm thick which resulted in a lower total thickness of 3.7\,$X_0$.
+    \begin{figure}[H]
+        \centering
+        \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/MUV1_diag.pdf} }}%
+        \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/MUV2_diag.pdf} }}%
+        \linespread{1.0}
+        \caption{Layout of scintillating tiles for a horizontal layer for: Left, MUV1 and Right, MUV2.}%
+        \label{fig:muvs_diags}%
+    \end{figure}
+    Downstream of the hadronic calorimeter the MUV3 detector was located behind a 80\,cm thick iron wall and was used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
+    Each tile is readout directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector a nominal beam intensity was 13\,MHz. The MUV3 was primarily used as a veto within the L0 trigger system to veto events that include a muon. 
 
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
+    
+
+    %Maybe Software too ???? HAs to here or in the Software chapter
+    \section{NA62 Results}
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
