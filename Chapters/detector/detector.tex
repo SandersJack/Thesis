@@ -85,21 +85,32 @@
         cos(\theta) = \frac{1}{\beta n}
     \end{equation}
     In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. The pressure is set at 1.7\,bar of Nitrogen in the CEDAR-W so that the light from the 
-    kaon is focused by a set of lenses and mirrors onto arrays of photomultiplier tubes (PMTs). The light from the other beam components does not reach the PMT arrays. A diagram showing the internal optics of the CEDAR is shown in Figure \ref{fig:Cedar_dia}.
+    kaon is focused by a set of lenses and mirrors onto arrays of photomultiplier tubes (PMTs). The light from the other beam components does not reach the PMT arrays. A more detailed description of CEDARs can be found in Section \ref{sec:cedarH}.
+    %A diagram showing the internal optics of the CEDAR is shown in Figure \ref{fig:Cedar_dia}.
+    %\begin{figure}[H]
+    %    \centering
+    %    \includegraphics[width=10cm]{imgs/CedarOldDia.png}
+    %    \linespread{1.0}
+    %    \caption{Diagram describing the CEDAR optics \cite{Bovet:1982xf}}
+    %    \label{fig:Cedar_dia}
+    %\end{figure}
     \begin{figure}[H]
-        \centering
-        \includegraphics[width=10cm]{imgs/CedarOldDia.png}
+        \centering 
+        \includegraphics[width=0.5\textwidth]{imgs/KTAG.png}
         \linespread{1.0}
-        \caption{Diagram describing the CEDAR optics \cite{Bovet:1982xf}}
-        \label{fig:Cedar_dia}
+        \caption{Model of the upstream part of the CEDAR and the KTAG photon-detection system \cite{Gil_2017}.}
+        \label{fig:ktag}
     \end{figure}
     \newline\indent In the original CERN design, the Cherenkov light exiting each CEDAR exit window was detected by an ET-9820QB photomultiplier tube (PMT) placed directly on the exit window, with a particle identified if there was a coincidence of at least six PMTs. 
     However, these PMTs would not fulfil the timing ($\leq 100$\,ps) and rate requirements (\~ 45\,MHz of kaons) at NA62. 
     %% Describe the KTAG more in depth with photos and diagrams
-    \newline \indent For NA62, a purpose-built photon-detection system was designed, constructed and mounted to the upstream end of the CEDAR Vessel.
-    The photon light from the CEDAR exit windows are reflected radially 90 degrees by eight spherical mirrors onto 8 PMT planes, referred to as sectors.  
-    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The KTAG photo-detection system allowed the use of at least five sectors for particle identification, resulting in an improved kaon identification efficiency compared to the original setup.
-    A kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
+    \newline \indent For NA62, a purpose-built photon-detection system shown in Figure \ref{fig:ktag} was designed, constructed and mounted to the upstream end of the CEDAR Vessel.
+    The photon light from the CEDAR exit windows are reflected radially 90 degrees by eight spherical mirrors onto eight PMT plane, referred to as sectors.  
+    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. 
+    %% Input QE plots for the PMTs
+    The signals from the PMT arrays are clustered into kaon candidates within a nominal 2\,ns time window. A kaon was identified when there are at least five sectors in coincidence (5-fold coincidence). 
+    The clustering results with on average 18 photo-electrons per kaon candidate.
+    The PMTs can achieve time a resolution of 300\,ps resulting in a reconstructed kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
     \newline\indent In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62 beam-line after design at the University of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses Hydrogen as a radiator gas, 
     which required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H can be found in Section \ref{sec:CEDARH}.
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
@@ -219,10 +230,10 @@
         \label{fig:rich_ring}
     \end{figure}
     \subsection{Photon Detection System}\label{sec:PDS}
-    The photon detection system provided a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It was made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad were covered by the intermediate-ring calorimeter (IRC) and small-angle 
+    The photon detection system provides a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It is made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad are covered by the intermediate-ring calorimeter (IRC) and small-angle 
     calorimeter (SAC).
 
-    Photons with production angles between 1 and 8.5\,mrad were covered by the NA48 liquid krypton calorimeter (LKr). A quasi-homogeneous calorimeter which consisted of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and had a depth of 127\,cm. This corresponded to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons made up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes either side.
+    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 liquid krypton calorimeter (LKr). A quasi-homogeneous calorimeter which consists of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and had a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes either side.
     Each anode ribbon was connected at the downstream end to preamplifiers and the high voltage of 3000V to provide the drift field required for the ionisation.
 
 
@@ -234,7 +245,7 @@
         \label{fig:lkrDiag}
     \end{figure}
 
-    The Large Angle Veto (LAV) provide coverage from 8.5 to 50\,mrad with 12 stations positioned along and beyond the decay volume. 11 of the LAV stations were along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consisted of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume and were recycled from the OPAL experiment \cite{OPALCollaboration1991}, with LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in the each of the glass blocks resulted in the emission of Cherenkov light, which was then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
+    The Large Angle Veto (LAV) provide coverage from 8.5 to 50\,mrad with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume and were recycled from the OPAL experiment \cite{OPALCollaboration1991}, with LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in the each of the glass blocks Results in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
 
     \begin{figure}[H]
         \centering 
@@ -245,8 +256,8 @@
     \end{figure}
 
     \subsection{Charged Particle Hodoscopes}
-    The charged particle hodoscopes comprised of pair of scintillating detectors which cover the acceptance downstream of the RICH and upstream of the LKr. The main function of the charged particle hodoscopes was to provide input to the first level of NA62 triggers system.
-    The NA48-CHOD which was used in NA62's predecessor experiment NA48 \cite{Fantietal2007} was located upstream of LAV12, just after the RICH. The NA48-CHOD consisted of two planes of 20\,mm thick plastic scintillator slabs, 64 vertical and 64 horizontal which is shown in Figure \ref{fig:NA48CHOD}. Each scintillating slab was individually connected to photomultipliers via a light guide. A signal in both planes was required to produce a track time with a resolution of 200\,ps.
+    The charged particle hodoscopes comprises of pair of scintillating detectors which cover the acceptance downstream of the RICH and upstream of the LKr. The main function of the charged particle hodoscopes is to provide input to the first level of NA62 triggers system.
+    The NA48-CHOD which is used in NA62's predecessor experiment NA48 \cite{Fantietal2007} was located upstream of LAV12, just after the RICH. The NA48-CHOD consists of two planes of 20\,mm thick plastic scintillator slabs, 64 vertical and 64 horizontal which is shown in Figure \ref{fig:NA48CHOD}. Each scintillating slab are individually connected to photomultipliers via a light guide. A signal in both planes is required to produce a track time with a resolution of 200\,ps.
     The charged particle rate at the NA48-CHOD was 13\,MHz, with the overall rate at 35\,MHz mainly resulting from particles produced from interactions with upstream detectors.
     \begin{figure}[H]
         \centering 
@@ -255,8 +266,8 @@
         \caption{Schematic of the NA48-CHOD \cite{Fantietal2007}.}
         \label{fig:NA48CHOD}
     \end{figure}
-    The CHOD was located after the twelfth LAV station, before the LKr and consisted of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and are bundled into groups of four and are read out by Silicon photomultipliers (SiPM). The overall time resolution of the detector was 1.1\,ns. 
-    In operation the CHOD would sustain a rate of 45\,MHz, with 13\,MHz from charged particles.
+    The CHOD is located after the twelfth LAV station, before the LKr and consisted of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and are bundled into groups of four, read out by Silicon photomultipliers (SiPM). The overall time resolution of the detector was 1.1\,ns. 
+    In operation the CHOD sustains a particle rate of 45\,MHz, with 13\,MHz from charged particles.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/NEW-CHOD.png}
@@ -266,8 +277,8 @@
     \end{figure}
 
     \subsection{Muon Veto System}
-    The Muon Veto System (MUV) was used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises of a hadronic sampling calorimeter made from two modules, MUV1 and MUV2 utilising iron as an absorber material. MUV1 was a newly designed module for NA62 and MUV2 was repurposed from the front of the NA48 hadronic calorimeter \cite{Fantietal2007}. MUV1 consisted of 24, 26.8\,mm thick iron plates with 23 layers scintillator strips placed of 9\,mm thickness with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
-    The total material MUV1 produced a total thickness of 4.1\,$X_0$ (interaction lengths). The light produced within the strips was collected by WLS fibres and readout by PMTs. 
+    The Muon Veto System (MUV) is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises of a hadronic sampling calorimeter made from two modules, MUV1 and MUV2 utilising iron as an absorber material. MUV1 was a newly designed module for NA62 and MUV2 was repurposed from the front of the NA48 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24, 26.8\,mm thick iron plates with 23 layers scintillator strips placed of 9\,mm thickness with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
+    The total material of MUV1 produces a total thickness of 4.1\,$X_0$ (interaction lengths). The light that is produced within the strips is collected by WLS fibres and readout by PMTs. 
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.5\textwidth]{imgs/MUV1.png}
@@ -275,7 +286,7 @@
         \caption{Schematic of the MUV1 module used as part of the Muon Veto System at NA62.}
         \label{fig:MUV1}
     \end{figure}
-    MUV2 was similar in construction with $2\times22$ strips per plane versus 48 for MUV1, as shown in Figure \ref{fig:muvs_diags}. MUV2 had thinner iron plates at 25\,mm thick which resulted in a lower total thickness of 3.7\,$X_0$.
+    MUV2 is similar in construction with $2\times22$ strips per plane versus 48 for MUV1, as shown in Figure \ref{fig:muvs_diags}. MUV2 has thinner iron plates, at 25\,mm thick which results in a lower total thickness of 3.7\,$X_0$.
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/MUV1_diag.pdf} }}%
@@ -284,8 +295,8 @@
         \caption{Layout of scintillating tiles for a horizontal layer for: Left, MUV1 and Right, MUV2.}%
         \label{fig:muvs_diags}%
     \end{figure}
-    Downstream of the hadronic calorimeter the MUV3 detector was located behind a 80\,cm thick iron wall and was used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
-    Each tile is readout directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector a nominal beam intensity was 13\,MHz. The MUV3 was primarily used as a veto within the L0 trigger system to veto events that include a muon. 
+    Downstream of the hadronic calorimeter the MUV3 detector is located behind a 80\,cm thick iron wall and is used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
+    Each tile is readout directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector a nominal beam intensity is 13\,MHz. The MUV3 is primarily used as a veto within the L0 trigger system to veto events that include a muon. 
 
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     
