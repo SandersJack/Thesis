@@ -145,7 +145,8 @@ recorded at a different diaphragm apertures of 0.79, 1 and 2.02 mm. . 54
 4.18 Results of the first pressure scan at the H6 test beam at a diaphragm
 aperture of 2.3 mm. On the left are coincidences per trigger against
 pressure, and on the right in log scale. . . . . . . . . . . . . . . . . . 55
-4.19 Ratios of η7/η8andη6/η8with respect to pressure at a diaphragm
+4.19 Left, Ratios of η8/η7andη8/η6and right, photons per PMT calculated
+with Equations 4.3 & 4.4 with respect to pressure at a diaphragm
 aperture of 2.3 mm. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 56
 6LIST OF FIGURES LIST OF FIGURES
 4.20 Results of the CEDAR-H pressure scans taken during the 2022 test
@@ -1050,26 +1051,26 @@ measured, and the results are shown in Figure 4.11.
 484.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
 200 300 400 500 600 700
 Wavelength [nm]0.800.820.840.860.880.900.920.940.96Transmittance
-Measured Transmittance C0
-Measured Transmittance C1
-Measured Transmittance C2
-Measured Transmittance C3
-Measured Transmittance C4
-Measured Transmittance C5
-Measured Transmittance C6
-Measured Transmittance C7
+C0
+C1
+C2
+C3
+C4
+C5
+C6
+C7
 Figure 4.10: Measured transmittance of CEDAR-H condenser lenses conducted by
 engineers at CERN.
 200 300 400 500 600 700
 Wavelength [nm]0.00.20.40.60.8Transmittance
-Measured Transmittance QW0
-Measured Transmittance QW1
-Measured Transmittance QW2
-Measured Transmittance QW3
-Measured Transmittance QW4
-Measured Transmittance QW5
-Measured Transmittance QW6
-Measured Transmittance QW7
+QW0
+QW1
+QW2
+QW3
+QW4
+QW5
+QW6
+QW7
 Figure 4.11: Measured transmittance of CEDAR-H quartz exit windows conducted
 by engineers at CERN.
 494.2. DEVELOPMENT OF CEDAR-H CHAPTER 4. CEDARH
@@ -1080,8 +1081,8 @@ depicted in Figure 4.12, with the mirrors grouped in groups of four which had si
 characteristics.
 200 300 400 500 600 700
 Wavelength [nm]0.600.650.700.750.800.850.90Reflectivity
-Measured Reflectivity SM 0-3
-Measured Reflectivity SM 4-7
+SM 0-3
+SM 4-7
 Figure 4.12: Measured reflectivity of KTAG spherical mirror conducted by engineers
 at CERN.
 504.3. CEDAR-H TEST-BEAM CHAPTER 4. CEDARH
@@ -1208,27 +1209,30 @@ and
 4−7(1−η6/η8)−2#
 (4.4)
 with ηNdefined as the probability of an N-fold coincidence and λbeing the number
-of photo-electrons per PMT. The ratios η7/η8andη6/η8are shown in Figure 4.19.
-The two equations 4.3 and 4.4 were used to cross-check the result and then averaged.
-At the pion pressure (3.68 bar), η6/η8= 0.550 and η7/η8= 0.856, which produced
-an average light yield of λ= 2.372. The proton yielded slightly less light with
-η7/η8= 0.840 and η6/η8= 0.528 producing an average yield of λ= 2.293. At the
-kaon pressure (3.844 bar), the ratios of η7/η8= 0.869 and η6/η8= 0.574 producing
-an average yield of λ= 2.454 which would result in a total of 19.63 photo-electrons
-per kaon. This was a excellent result, suggesting that the optics had been correctly
-manufactured and installed, however the diaphragm was wider with respect to the
-normal NA62 setting. It was clear that the 2.3 mm diaphragm could not be used
+of photo-electrons per PMT. The ratios η8/η7andη8/η6are shown in Figure 4.19 and
+the resultant photons per PMT. The two equations 4.3 and 4.4 were used to cross-
+check the result and then averaged. At the pion pressure (3.68 bar), η8/η6= 0.435
+andη8/η7= 0.5, which produced an average light yield of λ= 2.372. The proton
+yielded slightly less light with η8/η6= 0.42 and η8/η7= 0.525 producing an average
+yield of λ= 2.3. At the kaon pressure (3.844 bar), the ratios of η8/η6= 0.5 and
+η8/η7= 0.535 producing an average yield of λ= 2.454 which would result in a total
+of 19.63 photo-electrons per kaon. This was a excellent result, suggesting that the
+optics had been correctly manufactured and installed, however the diaphragm was
 554.3. CEDAR-H TEST-BEAM CHAPTER 4. CEDARH
-in NA62 due to the un-satisfactory kaon-pion separation seen in Figure 4.18, where
-the probability of misidentification of a pion at the kaon pressure was too high. The
-actual miss-identification will be quantified later on in this section, but it was clear
-with the peaks of the pion and kaon having no clear separation that the result would
-be unsatisfactory.
+wider with respect to the normal NA62 setting. It was clear that the 2.3 mm di-
+aphragm could not be used in NA62 due to the un-satisfactory kaon-pion separation
+seen in Figure 4.18, where the probability of misidentification of a pion at the kaon
+pressure was too high. The actual miss-identification will be quantified later on in
+this section, but it was clear with the peaks of the pion and kaon having no clear
+separation that the result would be unsatisfactory.
 3.6 3.8 4.0 4.2 4.4
-Pressure [bar]0.00.20.40.60.8RatioR76
-R87
-Figure 4.19: Ratios of η7/η8andη6/η8with respect to pressure at a diaphragm
-aperture of 2.3 mm.
+Pressure [bar]0.00.10.20.30.40.5Ratio8/6
+8/7
+3.6 3.8 4.0 4.2 4.4
+Pressure [bar]0.00.51.01.52.02.5Photons per PMTPhotons 78
+Photons 68
+Figure 4.19: Left, Ratios of η8/η7andη8/η6and right, photons per PMT calculated
+with Equations 4.3 & 4.4 with respect to pressure at a diaphragm aperture of 2.3 mm.
 Several pressure scans were completed at different diaphragm apertures to select
 a working point with excellent light yield and low pion misidentification (pion-kaon
 separation), and the results are shown in Figure 4.20. The corresponding coincidence
@@ -1238,10 +1242,10 @@ this provides a light yield similar to the 2.3 mm pressure scan but with greater
 separation between the pion and kaon peaks, however, there was no clear separation
 in the six-fold coincidences. As in NA62 the detector would use the current particle
 selection with at least five sectors it was important to achieve a clear separation
-564.3. CEDAR-H TEST-BEAM CHAPTER 4. CEDARH
 with six coincidences, which was the closest criteria available for the test-beam.
 The top right of Figure 4.20 was at a similar diaphragm aperture used at NA62
 of 1.7 mm. Compared to the 2 mm pressure scan, the light yield decreased only by
+564.3. CEDAR-H TEST-BEAM CHAPTER 4. CEDARH
 1.7 %, but the separation of the kaon-pion peak has increased dramatically, with the
 estimated six sector coincidences of the pion peak falling well below 10−6at the kaon
 pressure. The final pressure scans at 1.2 mm and 1 mm, in Figure 4.20 show complete
