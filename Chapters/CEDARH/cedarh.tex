@@ -360,17 +360,18 @@
     \begin{equation}\label{eq:Lamb2}
         \lambda= \ln \left[ 1 + \frac{14}{ \sqrt{4 - 7(1-\eta_{6}/\eta_{8})}-2} \right]
     \end{equation}
-    with $\eta_{N}$ defined as the probability of an N-fold coincidence and $\lambda$ being the number of photo-electrons per PMT. The ratios $\eta_{7}/\eta_{8}$ and $\eta_{6}/\eta_{8}$ are shown in Figure \ref{fig:alignment_res2_ratio}. 
-    The two equations \ref{eq:Lamb1} and \ref{eq:Lamb2} were used to cross-check the result and then averaged. At the pion pressure (3.68\,bar), $\eta_{6}/\eta_{8} = 0.550$ and $\eta_{7}/\eta_{8} = 0.856$, which produced an average light yield of $\lambda = 2.372$. 
-    The proton yielded slightly less light with $\eta_{7}/\eta_{8} = 0.840$ and $\eta_{6}/\eta_{8} = 0.528$ producing an average yield of $\lambda = 2.293$. At the kaon pressure (3.844\,bar), the ratios of $\eta_{7}/\eta_{8} = 0.869$ and $\eta_{6}/\eta_{8} = 0.574$ producing an average yield of $\lambda = 2.454$ which
+    with $\eta_{N}$ defined as the probability of an N-fold coincidence and $\lambda$ being the number of photo-electrons per PMT. The ratios $\eta_{8}/\eta_{7}$ and $\eta_{8}/\eta_{6}$ are shown in Figure \ref{fig:alignment_res2_ratio} and the resultant photons per PMT. 
+    The two equations \ref{eq:Lamb1} and \ref{eq:Lamb2} were used to cross-check the result and then averaged. At the pion pressure (3.68\,bar), $\eta_{8}/\eta_{6} = 0.435$ and $\eta_{8}/\eta_{7} = 0.5$, which produced an average light yield of $\lambda = 2.372$. 
+    The proton yielded slightly less light with $\eta_{8}/\eta_{6} = 0.42$ and $\eta_{8}/\eta_{7} = 0.525$ producing an average yield of $\lambda = 2.3$. At the kaon pressure (3.844\,bar), the ratios of $\eta_{8}/\eta_{6} = 0.5$ and $\eta_{8}/\eta_{7} = 0.535$ producing an average yield of $\lambda = 2.454$ which
     would result in a total of 19.63 photo-electrons per kaon. This was a excellent result, suggesting that the optics had been correctly manufactured and installed, however the diaphragm was wider with respect to the normal NA62 setting. It was clear that the 2.3\,mm diaphragm could not be used 
     in NA62 due to the un-satisfactory kaon-pion separation seen in Figure \ref{fig:1presscan_testbeam}, where the probability of misidentification of a pion at the kaon pressure was too high. The actual miss-identification will be quantified later on in this section, but it was clear with the peaks of the pion and kaon having no 
     clear separation that the result would be unsatisfactory. 
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.8\textwidth]{plots/1Pres_testbeam_RatioPlot.pdf}
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/RatioPlot.pdf}}}
+        \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{plots/Photons.pdf}}}
         \linespread{1.0}
-        \caption{Ratios of $\eta_{7}/\eta_{8}$ and $\eta_{6}/\eta_{8}$ with respect to pressure at a diaphragm aperture of 2.3\,mm.} %CREATE NEW ONE AS THIS HAS ERROR in labels
+        \caption{Left, Ratios of $\eta_{8}/\eta_{7}$ and $\eta_{8}/\eta_{6}$ and right, photons per PMT calculated with Equations \ref{eq:Lamb1} \& \ref{eq:Lamb2} with respect to pressure at a diaphragm aperture of 2.3\,mm.} %CREATE NEW ONE AS THIS HAS ERROR in labels
         \label{fig:alignment_res2_ratio}
     \end{figure}
     Several pressure scans were completed at different diaphragm apertures to select a working point with excellent light yield and low pion misidentification (pion-kaon separation), and the results are shown in Figure \ref{fig:testbeamPresures}. The corresponding coincidence ratios and average number of photo-electrons per beam particle are 
