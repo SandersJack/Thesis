@@ -9,7 +9,7 @@
     \newline\indent The experiment employs a decay-in-flight technique to obtain a large number of charged kaon decays, in the order of $10^{13}$ within the short time frame of a 
     few years. The experimental setup was designed to fulfil all the requirements for the challenging measurement of $K^+ \rightarrow \pi^{+} \nu \bar{\nu}$, which involves the 
     detection of the $K^{+}$ upstream and the detection of the product $\pi^{+}$, with a missing energy-momentum carried away by the undetected neutrino-antineutrino pair. 
-    The measurement of the missing mass is used for kinematic rejection of the main background $K^{+}$ decays; $K^+ \rightarrow \pi^{+} \pi^{0}$, $K^+ \rightarrow \pi^{+} \pi^{-} + \pi^{0}$ and $K^+ \rightarrow \mu^{+} \nu_{\mu}$ by selecting two regions shown in figure \ref{fig:missing-mass-signal}.
+    The measurement of the missing mass is used for kinematic rejection of the main background $K^{+}$ decays; $K^+ \rightarrow \pi^{+} \pi^{0}$, $K^+ \rightarrow \pi^{+} \pi^{-}$ and $K^+ \rightarrow \mu^{+} \nu_{\mu}$ by selecting two regions shown in figure \ref{fig:missing-mass-signal}.
     The missing mass calculation requires precise timing and position measurement of the $K^{+}$ and $\pi^{+}$ candidates, provided by beam (section \ref{sec:GTK}) and secondary (section \ref{sec:STRAW}) particle spectrometers. 
     The measured 3-momenta of the candidates allows for the reconstruction of the 4-momenta of the Kaon $P_{K^{+}}$ and the pion $P_{\pi^{+}}$ which is used in equation \ref{eq:missingmass}
     \begin{equation}\label{eq:missingmass}
@@ -19,7 +19,7 @@
         \centering
         \includegraphics[width=13cm]{imgs/missingmasss_signal.png}
         \caption{Expected squared missing mass distributions of main kaon decays and $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ (scaled by $10^{10}$ for for visibility). The solid 
-        coloured areas show the signal regions used to reject the dominant kaon decays kinematically.}
+        coloured areas show the signal regions used to reject the dominant kaon decays kinematically \cite{Gil_2017}.}
         \label{fig:missing-mass-signal}
     \end{figure}
     The rest of this chapter will cover how NA62 fulfils the above mentioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line, upstream of the NA62 detector.
@@ -298,11 +298,41 @@
     Downstream of the hadronic calorimeter the MUV3 detector is located behind a 80\,cm thick iron wall and is used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
     Each tile is readout directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector a nominal beam intensity is 13\,MHz. The MUV3 is primarily used as a veto within the L0 trigger system to veto events that include a muon. 
 
+    \subsection{Detectors for Run 2}
+    Between run 1 (2016-2018) and run 2 (2021-present) a number of modifications were applied to the NA62 detector setup shown in Figure \ref{fig:na62-det-run2}. An additional GTK station was placed upstream of the first station to reduce tracking inefficiencies. The GTK2 station was also moved upstream of the scraper magnet to reduce amount of background from beam interactions.
+    \begin{figure}[t]
+        \centering
+        \includegraphics[width=13cm]{imgs/na62-2021_Xview.pdf}
+        \linespread{1.0}
+        \caption{X-Z diagram of NA62 detector setup for Run 2}
+        \label{fig:na62-det-run2}
+    \end{figure}
+    The VetoCounter (VC) was designed and built to suppress the backgrounds produced by decays of kaons that occur upstream of the fiducial volume. The VC comprises of three scintillating stations with two placed before the final collimator, separated by a lead plate and one after the final collimator. Each station comprises of nine tiles of size 40x120\,mm and two 20x120\,mm, with the smaller tiles located either side of the beam pipe and are readout by 
+    PMTs. 
+    
+    %%ANTI0
+
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     
 
-    %Maybe Software too ???? HAs to here or in the Software chapter
+    %Maybe Software too ???? Has to here or in the Software chapter
     \section{NA62 Results}
+    The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400,MHz respectably. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
+    Three trigger streams are used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN): 
+    \begin{itemize}
+        \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
+        \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$
+    \end{itemize}
+    The selection criteria for the signal and the normalisation involve overlapping conditions, requiring a kaon candidate in the KTAG with a measured momentum from the GTK in the range 72.7 to 77.2 GeV/c. The $\pi+$ is identified using information from the RICH, LKr, and the Muon Veto System. The $\pi^+$ is the matched to the kaon candidate by extrapolating the kaon and pion tracks from the GTK and the STRAW respectively to form a vertex, defined as the midpoint of the trajectories closest approach.
+    There is then signal specific which require no signals in the LAV downstream of the vertex within 3\,ns, no signals in the IRC or SAC within 5\,ns and no signals in the LKr within 10\,mm of the $\pi^+$ impact point. A more detailed break down of the selection criteria can be found here \cite{NA62:2024pjp}.
+
+    The nominalisation events are selected through the missing mass parameters shown in Figure \ref{fig:missing-mass-signal} in the range 0.010 - 0.026\SI{}{\giga\eV\squared\per\clight\tothe{4}} \cite{NA62:2024pjp}, with respect to the $\pi^0$ mass \cite{Tanabashi2018}.
+
+    The dataset from run 1 and run 2 were combined through a number of methods set out in \cite{NA62:2024pjp} resulting in the measurement of the branching ratio
+    \begin{equation}
+        \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = (13^{+3.3}_{-3.0} \times 10^{-11})
+    \end{equation}
+    The overall dataset from 2016 to 2022 had an expected background events of $18^{+3}_{-2}$ and a observation of 51 signal events \cite{NA62:2024pjp}. This resulted in a p-value of the background only hypothesis of $2 \times 10^{-7}$ which corresponds to a rejection of five sigma. Representing the first observation of $K^+ \to \pi \nu \bar\nu$. 
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
