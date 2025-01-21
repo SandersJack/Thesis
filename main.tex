@@ -1,11 +1,25 @@
 \documentclass[12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \title{PhD Thesis}
 \author{Jack Sanders }
 \date{University of Birmingham - 2025}
+
+\fancyhf{} 
+
+\fancyhead[L]{\thesection\quad\rightmark} % Section number and title on the left
+\fancyhead[R]{\leftmark} % Chapter title on the right
+\fancyfoot[C]{\thepage} % Page number in the footer
+
+% Remove "Chapter" from \leftmark
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% Shorten section titles for \rightmark if needed
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+
 \usepackage{subfiles}
 \usepackage{hyperref}
 \usepackage[numbers]{natbib}
