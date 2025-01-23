@@ -315,10 +315,89 @@
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     
 
+    \begin{table}[H]
+        \centering
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|p{10cm}|}
+        \hline
+        \textbf{Detector} & \textbf{Condition} & \textbf{Description} \\ \hline
+        \multirow{3}{*}{RICH} & RICH           & At least two signals in the detector \\ \cline{2-3}
+                              & RICH3          & At least three signal in the detector \\ \cline{2-3}
+                              & RICH8          & At least eight signal in the detector \\ \hline
+        \multirow{5}{*}{CHOD} & Q1             & At least one signal in the detector \\ \cline{2-3}
+                              & H3               & At least three signals in the detector \\ \cline{2-3}
+                              & Q2               & At least one signal in each of two different quadrants \\ \cline{2-3}
+                              & QX               & At least one signal in each of two diagonally-opposite quadrants \\ \cline{2-3}
+                              & UTMC             & Fewer than five signals in the detector \\ \hline
+        NA48-CHOD               & NA48-CHOD          & At least one signal in the detector \\ \hline
+        \multirow{3}{*}{MUV3}   & M1                 & At least one signal in the detector \\ \cline{2-3}
+                                & MO1                & At least one signal in the outer tiles \\ \cline{2-3}
+                                & MO2                & At least two signals in the outer tiles \\ \cline{2-3}
+                                & MOQX               & At least one signal in each of two diagonally-opposite quadrants \\ \hline
+        \multirow{7}{*}{LKr}    & E5                 & At least 5 GeV deposited in the LKr \\ \cline{2-3}
+                                & E10                & At least 10 GeV deposited in the LKr \\ \cline{2-3}
+                                & E20                & At least 20 GeV deposited in the LKr \\ \cline{2-3}
+                                & E30                & At least 40 GeV deposited in the LKr \\ \cline{2-3}
+                                & E40                & At least 40 GeV deposited in the LKr \\ \cline{2-3}
+                                & C2E5               & At least 5 GeV deposited in the LKr by at least two clusters \\ \cline{2-3}
+                                & LKr40              & Logical OR between E40 and C2E5 \\ \hline
+        \end{tabular}
+        }
+        \caption{List of L0 trigger conditions for each detector at NA62.}
+        \label{tab:detector_conditions}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|p{10cm}|}
+        \hline
+        \textbf{Detector} & \textbf{Condition} & \textbf{Description} \\ \hline
+        KTAG              & KTAG5               & Requires hits in at least five sectors within a 5\,ns time window \\ \hline
+        LAV               & LAV2-11             & Requires at least three signals in LAV stations 2-11 within a 4\,ns time window \\ \hline
+        \multirow{8}{*}{STRAW}  & STRAW                    & Designed for collection of PNN decays, requiring a single positive track originating from the Fiducial Volume (FV), momentum below \SI{50}{\giga\electronvolt\per\clight}, closest distance of approach (CDA) to the nominal beam axis below 200\,mm with a Z position upstream of the first STRAW station \\ \cline{2-3}
+                                & STRAW-Exo                & Requires at least one negatively charged track \\ \cline{2-3}
+                                & STRAW-ExoTight           & Extension of STRAW-Exo requiring the negative track to have momentum below \SI{65}{\giga\electronvolt\per\clight}, a CDA below 500\,mm from the nominal beam axis and a Z position of the CDA of at least 80\,m \\ \cline{2-3}
+                                & STRAW-MMiss              & Extension of STRAW-ExoTight which includes a requirement on the missing mass squared from the track and the nominal beam four-momenta to suppress $K^+ \to \pi^+ \pi^+ \pi^-$ decays  \\ \cline{2-3}
+                                & STRAW-MT	               & Requires at least three tracks originating from the FV \\ \cline{2-3}
+                                & STRAW-DV5                & Requires pairs of tracks originating from a displaced vertex with a CDA at least 50\,mm from the nominal beam axis \\ \cline{2-3}
+                                & STRAW-1TRK	           & Requires one positively charged track originating in the FV with a momentum less than \SI{65}{\giga\electronvolt\per\clight} \\ \cline{2-3}
+                                & STRAW-MUV3            & Extension of STRAW to include extrapolation of the track to the acceptance of MUV3 and requiring it to be within $|x| \& |y| < 1320$ and a radius of 103\,mm \\ \hline
+                                
+        \end{tabular}
+        }
+        \caption{List of L1 trigger conditions for each detector which are utilised at NA62.}
+        \label{tab:detector_conditions_HLT}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Trigger}    &  \textbf{L0 Conditions}           &   \textbf{L1 Conditions}                        & \textbf{Downscaling}     \\ \hline
+        Normalisation       &  RICHxRICH3x!M1xQ1                &   KTAGxSTRAW-1TRK                               & 400             \\ \hline
+        Pnn                 &  RICHxRICH3x!M1x!QXxUTMCx!E40     &   KTAGx!LAV2-11xSTRAW-MUV3                      & 1               \\ \hline
+        MinBias             &  RICHxQ1                          &                                                 & 400             \\ \hline
+        3                   &  RICHxRICH3x!QXxUTMCx!E40         &   KTAGx!LAV2-11xSTRAW                           & 500             \\ \hline
+        Electron MultiTrack &  RICHxRICH8xQXxH3xE20xC2E5        &   STRAW_MM                                      & 1               \\ \hline
+        MultiTrack          &  RICHxRICH8xQXxH3                 &   KTAGxSTRAW-ExoTight                           & 100             \\ \hline
+        Muon MultiTrack     &  RICHxRICH8xMO2xQXxH3             &   KTAGxSTRAW-ExoTight                           & 1               \\ \hline
+        7                   &  RICHxQ1xE30                      &   KTAGxSTRAW                                    & 10              \\ \hline
+        8                   &  RICHxRICH8xQ2xE30xC2D5           &   STRAW-ExoTight                                & 4               \\ \hline
+        Neutrino            &  !RICH16xMOQXx!Q2xUTMCxE5         &   KTAGxSTRAW-1TRK                               & 1               \\ \hline
+        \end{tabular}
+        }
+        \caption{List of triggers used for the NA62 2024 run, along with the L0 and L1 conditions and the relevant downscaling factors.}
+    
+    \end{table}
+
+
+
     %Maybe Software too ???? Has to here or in the Software chapter
     \section{NA62 Results}
     The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400,MHz respectably. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
-    Three trigger streams are used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN): 
+    The trigger streams used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN) in this period differ from those that are define in Section \ref{sec:TDAQ} and are defined below: 
     \begin{itemize}
         \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
         \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$
