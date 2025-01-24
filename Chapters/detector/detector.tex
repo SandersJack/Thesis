@@ -397,8 +397,13 @@
     \end{table}
     A more detailed explanation of the full NA62 trigger system and the resultant performance can be found here \cite{NA62_trigger_2023}.
     \section{NA62 Software}
-
-    %Maybe Software too ???? Has to here or in the Software chapter
+    The NA62 collaboration maintains an offline software framework (na62fw) which is used for the physics analysis of data collected from the experiment. The software framework comprise of three separate packages: 
+    \begin{itemize}
+        \item NA62MC: A GEANT4 \cite{Agostinelli2003Geant4} based Monte Carlo simulation of the experiment, used to compared against the data collected.
+        \item NA62Reconstruction: Reconstruction software used to create hits and candidates for all sub-detectors from data collected by the experiment and data from MC simulations.
+        \item NA62Analysis: A software tool kit to conduct physics analysis on the reconstructed data.
+    \end{itemize}
+    Each module of na62fw utilises the tools found within the ROOT analysis framework \cite{Brun1997}. A more detailed description of the software framework can be found in Section \ref{sec:na62fw}.
     \section{NA62 Results}
     The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400,MHz respectably. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
     The trigger streams used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN) in this period differ from those that are define in Section \ref{sec:TDAQ} and are defined below: 
