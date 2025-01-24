@@ -313,7 +313,10 @@
     %%ANTI0
 
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
-    
+    The high intensity of the NA62 experiment requires a triggering system that can limit the eventual data that is stored while keeping useful data to satisfy the experiments physics goals. The NA62 trigger system is comprised of two stages: a hardware trigger (L0) and a software trigger (L1) which is also known as the high level trigger (HLT). Each stage of the trigger system is designed to reduce the incoming rate by a factor of 10. 
+    With a rate of \mathcal{O}(10\,MHz) kaon decays within the fiducial volume the L0 was designed to reduce this to \mathcal{O}(1\,MHz). With the L1 then reducing the rate written to storage to \mathcal{O}(100\,kHz). 
+
+    To fit with NA62 broad physics goals the trigger system is designed to be flexible. The L0 trigger involves packets of data sent from fast sub-detectors which contain the results of the conditions found in Table \ref{tab:detector_conditions} and is then processed by the L0 Trigger Processor (L0TP). These L0 trigger conditions can be combined to produce a hardware trigger, such as those used in 2024 run shown in Table \ref{tab:detector_conditions_stream}. The coincidence of the L0 conditions from Table \ref{tab:detector_conditions} have to be within 6.25\,ns of the trigger reference time which is provided by the RICH detector, one a event passes the L0 trigger other detectors then send information packets to the NA62 PC farm.
 
     \begin{table}[H]
         \centering
@@ -346,7 +349,8 @@
         \caption{List of L0 trigger conditions for each detector at NA62.}
         \label{tab:detector_conditions}
     \end{table}
-
+    The L1 trigger then uses a number of algorithms for three more detectors and are described in Table \ref{tab:detector_conditions_HLT}. These conditions are then combined to produce a L1 trigger stream shown in Table \ref{tab:detector_conditions_stream} and is then combined with a L0 stream to form a trigger mask. NA62 has a number of trigger masks defined in Table \ref{tab:detector_conditions_stream}, to fulfil its numerous physics goals. For an event to be saved to permanent storage at least one of these trigger masks has to be accepted.
+    Each mask has a corresponding downscaling which reduces the rate of events passing that trigger to reduce the amount saved to permanent storage. However, this results in the loss of interesting physics data so the downscaling is minimised as much as possible.
     \begin{table}[H]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -380,7 +384,7 @@
         Pnn                 &  RICHxRICH3x!M1x!QXxUTMCx!E40     &   KTAGx!LAV2-11xSTRAW-MUV3                      & 1               \\ \hline
         MinBias             &  RICHxQ1                          &                                                 & 400             \\ \hline
         3                   &  RICHxRICH3x!QXxUTMCx!E40         &   KTAGx!LAV2-11xSTRAW                           & 500             \\ \hline
-        Electron MultiTrack &  RICHxRICH8xQXxH3xE20xC2E5        &   STRAW_MM                                      & 1               \\ \hline
+        Electron MultiTrack &  RICHxRICH8xQXxH3xE20xC2E5        &   STRAW-MM                                      & 1               \\ \hline
         MultiTrack          &  RICHxRICH8xQXxH3                 &   KTAGxSTRAW-ExoTight                           & 100             \\ \hline
         Muon MultiTrack     &  RICHxRICH8xMO2xQXxH3             &   KTAGxSTRAW-ExoTight                           & 1               \\ \hline
         7                   &  RICHxQ1xE30                      &   KTAGxSTRAW                                    & 10              \\ \hline
@@ -389,10 +393,10 @@
         \end{tabular}
         }
         \caption{List of triggers used for the NA62 2024 run, along with the L0 and L1 conditions and the relevant downscaling factors.}
-    
+        \label{tab:detector_conditions_stream}
     \end{table}
-
-
+    A more detailed explanation of the full NA62 trigger system and the resultant performance can be found here \cite{NA62_trigger_2023}.
+    \section{NA62 Software}
 
     %Maybe Software too ???? Has to here or in the Software chapter
     \section{NA62 Results}
