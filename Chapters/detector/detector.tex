@@ -222,7 +222,7 @@
     the momentum of the particle measured by the spectrometer. In Figure \ref{fig:rich_ring}, it is clear that separating pions and muons within the desired momentum range is possible.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=\textwidth]{imgs/rich_ring_radius.png}
+        \includegraphics[width=0.8\textwidth]{imgs/rich_ring_radius.png}
         \linespread{1.0}
         \caption{Cherenkov ring radius as a function of the particle momentum \cite{Bizzeti:2017dqh}}
         \label{fig:rich_ring}
@@ -230,6 +230,8 @@
     \subsection{Photon Detection System}\label{sec:PDS}
     The photon detection system provides a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It is made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad are covered by the intermediate-ring calorimeter (IRC) and small-angle 
     calorimeter (SAC). %Describe SAC and IRC
+    The IRC wraps around the beam pipe and consists of layers of lead and scintillating material which are readout by WLS fibres bundled into four groups and readout by a Hamamatsu PM.
+    The SAC which is located just upstream of the beam dump within the beam vacuum, comprises of 70 lead plates with 70 plastic scintillators in between readout by WLS fibres resulting in a total material of 19\,$X_0$. The fibres are bundled into four groups which are then readout by Hamamatsu PMs, resulting in four channels.
 
     Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 liquid krypton calorimeter (LKr). A quasi-homogeneous calorimeter which consists of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes either side.
     Each anode ribbon was connected at the downstream end to preamplifiers and the high voltage of 3000V to provide the drift field required for the ionisation.
@@ -296,6 +298,12 @@
     Downstream of the hadronic calorimeter the MUV3 detector is located behind a 80\,cm thick iron wall and is used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
     Each tile is readout directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector a nominal beam intensity is 13\,MHz. The MUV3 is primarily used as a veto within the L0 trigger system to veto events that include a muon. 
 
+    Additionally the is a peripheral muon veto detector (MUV0) which is a scintillating hodoscope designed to detect low momentum $\pi^-$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$ which are deflected into the positive X dimension and miss the acceptance of the RICH.
+    \subsection{Hadronic Sampling Calorimeter (HASC)}
+    The Hadronic Sampling Calorimeter (HASC) is located downstream of the MUV3 and BEND magnet which deflects positively charged particles in the negative X direction. The HASC is designed to detect $\pi^+$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$ and comprises of nine modules of 60 lead plates and 60 scintillating layers covering an acceptance of −0.48\,m to −0.18\,m in X and -0.15 to 0.15 in Y from the beam axis.
+    Each scintillating layer has 10 longitudinal sections which are optically coupled to WLS fibres and readout by SiPMs.
+    
+    
     \subsection{Detectors for Run 2}
     Between run 1 (2016-2018) and run 2 (2021-present) a number of modifications were applied to the NA62 detector setup shown in Figure \ref{fig:na62-det-run2}. An additional GTK station was placed upstream of the first station to reduce tracking inefficiencies. The GTK2 station was also moved upstream of the scraper magnet to reduce amount of background from beam interactions.
     \begin{figure}[H]
@@ -308,8 +316,9 @@
     The VetoCounter (VC) was designed and built to suppress the backgrounds produced by decays of kaons that occur upstream of the fiducial volume. The VC comprises of three scintillating stations with two placed before the final collimator, separated by a lead plate and one after the final collimator. Each station comprises of nine tiles of size 40x120\,mm and two 20x120\,mm, with the smaller tiles located either side of the beam pipe and are readout by 
     PMTs. 
     
-    %%ANTI0
+    A veto hodoscope (ANTI-0) was placed just before the entrance to the fiducial volume. The ANTI-0 is designed to veto the halo particles produced from the beam when they enter the FV to reduce the chance of halo particles from being identified as secondary decay products. The detector comprises of 280 scintillating tiles which are then readout by four SiPMs \cite{Danielsson_2020}.
 
+    A second HASC station was also added to the opposite side of the beam to cover the positive X direction and to make the overall station symmetric.
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     The high intensity of the NA62 experiment requires a triggering system that can limit the eventual data that is stored while keeping useful data to satisfy the experiments physics goals. The NA62 trigger system is comprised of two stages: a hardware trigger (L0) and a software trigger (L1) which is also known as the high level trigger (HLT). Each stage of the trigger system is designed to reduce the incoming rate by a factor of 10. 
     With a rate of \mathcal{O}(10\,MHz) kaon decays within the fiducial volume the L0 was designed to reduce this to \mathcal{O}(1\,MHz) and the L1 then reducing the rate written to storage to \mathcal{O}(100\,kHz). 
