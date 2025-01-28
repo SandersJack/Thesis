@@ -3,21 +3,21 @@
 
 \begin{document}
 
-    The software for NA62 is split into three main \sloppy\texttt{C++} packages: NA62MC, NA62Reconstruction and NA62Analysis. NA62MC is a GEANT4 based Monte Carlo simulation package that simulates the NA62 experiment including the detector geometry and the full simulation of 
-    kaon decays, used as a comparison to the data collected by the experiment. NA62Reconstruction is a package that is used to reconstruct either the Monte Carlo data or collected data from the experiment for all detectors. NA62Analysis is used by the physicists to analyse the data produced from the reconstruction to 
-    produce all the physics studies that are conducted at NA62. 
+    As briefly described in Section \ref{sec:introSoft} the software for NA62 is split into three main \sloppy\texttt{C++} packages. 
+    NA62MC is a GEANT4 based Monte Carlo simulation package that simulates the NA62 experiment. The MC utilises functions within GEANT4 to construct the sub-detectors of NA62 including all their materials and structures. It is possible to select a number of $K$ decays to simulate to create signals similar to what are produced in real life at the experiment. After the simulation is complete the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
+    NA62Reconstruction is then used to reconstruct either the Monte Carlo data or collected data from the experiment, producing hits within the detectors and clustering them into candidates. NA62Analysis is used to analyse the data produced from the reconstruction to conduct all the physics studies that are conducted at NA62. 
 
-    The NA62 software was designed for use only with the NA62 experiment resulting in in minimal configurability and flexibility, with the only option for users to change the software being to enable/disable sub-detectors. With the experiment forseen to run up to CERNs Long shutdown 3 (LS3), an upgraded software package was needed to allow
-    for the development of new detectors for the future kaon experiments. This software had to be flexible and configurable to allow for the simulatinous use of the software for NA62 data taking and physics analysis, as well as the development of new experiements.
+    The na62fw was designed for use only with the NA62 experimental setup, resulting in in minimal configurability and flexibility. Within the simulation the only option for users to change was to enable/disable sub-detectors. With the experiment foreseen to run up to CERNs Long shutdown 3 (LS3), an upgraded software package was needed to allow for the development of new detectors for the future kaon experiments. 
+    The software had to be flexible and configurable to allow for the simultaneous use of the software for NA62 data taking and physics analysis, as well as the development of new experiments.
     \section{FlexibleMC}
     \subsection{Description}
-    For the implementation of a flexible framework all detector classes were refactored to inherit from a common class which contianed the basic functions and variables for all detectors allowing for all classes to be parsed using the same machinery. The input to the simulation was then changed to allow for the configuration of all the detectors to be read in from a configuration file which contained any varibles required for individual detectors and the X,Y,Z and rotation of the detectors. 
-    An example entry in the configuration file is shown in Figure \ref{fig:config} where a name was given for the station "STRAW0", along with chamber ID, chmaber type which defines the size of the straws and the chamber geometry which defines if the beam hole is symetric or not. The varibles for each subdetector are defined in Table  
+    For the implementation of a flexible framework all detector classes were refactored to inherit from a common class which contained the basic functions and variables for all detectors. This allowed for all classes for the detectors to be parsed using the same machinery. The input to the simulation was then changed from a simple text file, to a single configuration file for all the detectors. The configuration file contained any arguments required for individual detectors which are defined in Table \ref{tab:config_variables}. The X,Y,Z placement of the detectors and rotation were also defined in this file. 
+    An example entry in the configuration file is shown in Figure \ref{fig:config} where a name was given for the station "STRAW0", along with chamber ID, chamber type which defines the size of the straws and the chamber geometry which defines if the beam hole is symmetric or not.  
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.8\textwidth]{imgs/example_config.png}
-        \caption{Example configuration for the STRAW0}
+        \caption{Example configuration for the STRAW0 in the geometry file for NA62MC.}
         \label{fig:config}
     \end{figure}
 
@@ -25,69 +25,63 @@
         \centering
         \begin{tabular}{|l|l|}
         \hline
-        Detector Name & Variables \\ \hline
-        STRAW & \begin{tabular}[c]{@{}l@{}}Chamber ID: 0,1,2,3\\ Chamber Type:  0(10mm), 1(5mm) \\ Chamber Mode: 0(default), 1(symmetric)\end{tabular} \\ \hline
+        Detector Name & Arguments \\ \hline
+        STRAW & \begin{tabular}[c]{@{}l@{}}Chamber Name: "STRAW0","STRAW1","STRAW2","STRAW3" \\ Chamber ID: 0,1,2,3\\ Chamber Type:  0(10mm), 1(5mm) \\ Chamber Mode: 0(default), 1(symmetric)\end{tabular} \\ \hline
         Spectrometer Magnet & Magnetic field intensity \\ \hline
         Vessel & \begin{tabular}[c]{@{}l@{}}Length\\ InnerRadius\\ OuterRadius\\ Type("BlueTube", "BlueTubeNoRails", "GreyTube")\end{tabular} \\ \hline
         \end{tabular}
-        \caption{}
+        \caption{Arguments for detectors in the geometry file for use within NA62MC.}
         \label{tab:config_variables}
     \end{table}
 
-    When built inside the simulation, each detector was now contained within its own separate volume called the "Responsibility Region". This was a simple task for most detectors apart from the STRAWs and LAV which were made up of multiple stations that were not continuous, resulting in multiple responsibility regions for each station.
+    When constructed inside the simulation, each detector was contained within its own separate outer volume called the "Responsibility Region" (RR). 
+    The creation of the RR was a simple task for most detectors apart from the STRAWs and LAV which were made up of multiple stations that were not continuous, resulting in multiple responsibility regions for each station.
 
     \subsection{Testing: Geometry and Magnetic Fields}
-    After the simulation was upgraded all the geometries of each detector had to be validated that they were still correct with respect to the previous version. This was due to the complex nature of refactoring the detectors and that a number volumes had been changed. The validation was completed using the GEANT4 , which is a virtual particle present in the simulation package that will travel in a straight line and interact with all volumes 
-    present in the simulation. It was then possible to produce a large square beam of these particles and save every time the particle passed though a boundary between two volumes. Using this it was possible to check the placement and geometry of each detector to mm precision to ensure that the simulation was still accurate. An example of the geantino hits on a single view of STRAW chamber 1 is shown in Figure \ref{fig:geantino_plot} where 
-    it is possible to see the features of the view. For the full validation a larger sample of Geantinos is used to get the required precision, however when there was a discrepancy they were sent in a much smaller area.
+    After the simulation was upgraded all the geometries of each detector had to be validated that they were still correct with respect to the previous version. This was due to the complex nature of refactoring the detectors with a number of volume changes and the way the detectors were constructed. The validation was completed using a virtual particle within the GEANT4 framework called a Geantino. The Geantino is a particle which will traverse the simulation in a straight line and interact with all volumes 
+    present in the simulation but will not be impacted by magnetic fields. A large square beam of these particles was sent through the simulation and every time the particle passed across a boundary between two volumes its position was saved. Using this information it was possible to reconstruct the entire geometry of each detector in order to check the placement and geometry to mm precision to ensure that the simulation was still accurate. An example of the Geantino hits on a single view of STRAW chamber 1 is shown in Figure \ref{fig:geantino_plot} where 
+    it is possible to see the features of the view, such as the missing straws within the center, used to produce the chamber beam hole. For the full validation a larger sample of Geantinos was used to get the required precision. However, if a discrepancy between the new version and the previous, a smaller area was selected to create a more precise picture on what was incorrect. This information was then used to modify the software to fix any geometry issues.
+    This check was conducted for all sub-detectors.
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{plots/XY_CHBR0_Beam.png}
-        \caption{Geantino hits on a single view in straw chamber 1}%
+        \includegraphics[width=0.7\textwidth]{plots/XY_CHBR0_Beam.png}
+        \caption{Geantino hits on a single view in STRAW chamber 1.}%
         \label{fig:geantino_plot}%
     \end{figure} 
 
-    To reduce the chance of overlaps and to clean up the simulation, a campaign to reduce the size of the unused space in all sub-detectors. The outer volume (Responsibility Region) for all detectors were reduced to just slightly larger than the physical detector which is possible to see in figure \ref{fig:fields}, as the magnetic fields are calculated in the all volumes not the world volume. In \ref{fig:fields}(a) the field was calculated outside of the 
-    actual physical sub-detector due to the larger outer volume, whereas in \ref{fig:fields}(b) the volume has been reduced to a few mm's bigger than the actual physical detector and as a result the field is calculated in the correct region.
+    To reduce the chance of overlaps and to clean up the simulation, the size of the unused space in all sub-detectors surrounding the physical geometry was reduced. The RR for all sub-detectors was reduced to just slightly larger than the physical detector. It is possible to see this change in figure \ref{fig:fields}, which depicts the direction of the magnetic fields. As the magnetic fields are only calculated in volumes, it is possible to see the reduction in RR size around the geometry. In \ref{fig:fields}(top) the field was calculated outside of the 
+    actual physical sub-detector due to the larger RR, whereas in \ref{fig:fields}(bottom) the RR has been reduced to a few mm's bigger than the actual physical detector. As well as reducing the chance of overlaps, it would speed up the simulation due to the reduction in unnecessary calculations for the magnetic field outside of the detector geometry.
 
-    To improve the usability for users a geometry check is completed every time before the simulation is ran. Each outer detector volume is checked for any overlaps with other detectors in all three dimensions taking into account any rotations and the shape of the outer volumes, if a overlap is found the simulation does not start and an error is produced to the user describing where the overlap is and what detectors are involved. 
-
-    \begin{figure}[H]
-        \begin{minipage}{\linewidth}
-            \centering
-            \includegraphics[width=\linewidth]{imgs/old_mag.png}
-            \vspace{0.5em} % Adds space between the image and the caption
-            \makebox[\linewidth]{\small (a) Previous NA62MC Magnetic field calculations}
-    
-            \medskip
-    
-            \includegraphics[width=\linewidth]{imgs/new_mag.png}
-            \vspace{0.5em} % Adds space between the image and the caption
-            \makebox[\linewidth]{\small (b) Upgraded NA62MC Magnetic field calculations}
-        \end{minipage}
-        \caption{Visualisation from NA62MC of the magnetic field in the spectrometer region}
-        \label{fig:fields}
-    \end{figure}
-
-    The magnetic field in the simulation is based of real-world measurements of the magnetic field at NA62 from hall probes \cite{Fry_2016}, with this information saved in the form of data files which is taken in and used to calculate the magnetic field at various points in the simulation. In NA62MC the magnetic field is split into three distinct regions; Bluetube which is the magnetic field within the decay region which is used for small corrections, 
-    fringe field which are the edges of the MNP33 magnetic field and the MNP33 field which is the main magnetic field defined in the simulation from the MNP33 magnet. In the previous version of the simulation the position of the magnetic fields were hard coded, however in the upgraded version it was possible to move the MNP33 magnet to be placed in any position, requiring the  magnetic field to be calculated relative from that position.  An example of this flexibility is shown in Figure \ref{fig:moved_mag} where 
-    the MNP33 magnet was moved from 198\,m to 163\,m in front of the straw chamber 1 and the magnetic field was recalculated from that point within the constructed volumes.
+    To improve the usability for users a geometry check is completed every time before the simulation is ran. Each outer detector volume is checked for any overlaps with other detectors in all three dimensions taking into account any rotations and the shape of the outer volumes. If an overlap of two sub-detectors is found the simulation does not start and an error is produced to the user describing where the overlap is and what sub-detectors are involved. 
 
     \begin{figure}[H]
         \centering
+        \subfloat{{\includegraphics[width=\textwidth]{imgs/old_mag.png} }}%
+        \linespread{1.0}
+        \subfloat{{\includegraphics[width=\textwidth]{imgs/new_mag.png} }}%
+        
+        \caption{Visualisation of the magnetic fields in the spectrometer region from the simulation. Top, previous version with large outer volumes and bottom, new flexible version with reduced outer volumes. The small red arrow represent the direction of the magnetic field in the volumes.}%
+        \label{fig:fields}%
+    \end{figure}
+
+    The magnetic field in the simulation is based of real-world measurements of the magnetic field at NA62 from hall probes \cite{Fry_2016}, with this information saved in the form of data files which is taken in and used to calculate the magnetic field at various points in the simulation. In NA62MC the magnetic field is split into three distinct regions; Bluetube which is the magnetic field within the decay region which is used for small corrections, 
+    fringe field which are the edges of the MNP33 magnetic field and the MNP33 field which is the main magnetic field defined in the simulation from the MNP33 dipole magnet. In the previous version of the simulation the position of the magnetic fields were written within the static code. However, in the flexible version it was possible to move the MNP33 magnet to be placed in any position via the geometry input file. This required for the magnetic field to be calculated relative to the central position of the MNP33 dipole magnet. An example of this flexibility is shown in Figure \ref{fig:moved_mag} where 
+    the MNP33 magnet was moved from 198\,m to 163\,m, which is in front of the STRAW chamber 1. The MNP33 and fringe magnetic field was recalculated from the new position at 163\,m to account for the placement of the MNP33 magnet.
+    \begin{figure}[H]
+        \centering
         \includegraphics[width=\textwidth]{imgs/move_mag.png}
-        \caption{Visualisation from NA62MC with the MNP33 magnet moved in front of the straw chamber 1}%
+        \caption{Visualisation of the MNP33 magnet placed in front of the STRAW chamber 1 at 163\,m from the target in the simulation. Originally the magnet was placed at 198\,m, which is after the STRAW chamber 2. The small red arrow represent the direction of the magnetic field in the volumes.}%
         \label{fig:moved_mag}%
     \end{figure} 
 
-    The modification of the magnetic fields required validation, which was done using similar machinery to the geometry test completed above but with different GEANT particle, the charged Geantino. Similar to a normal Geantino, but they interact with magnetic fields allowing to ensure that the same tracks were being produced by the new version of the software. An example of this is shown in Figure \ref{fig:mag_check} where it is possible to see the displacement 
-    of the charged Geantinos within the field regions. The exact XY positions of the hits would then be validated against a sample of charged Geantinos with the exact mass, momentum and direction produced with the previous version of the software.
+    Similar to the changes in the sub-detector construction, the modification of the magnetic fields required validation. This was done using similar machinery to the geometry test completed previously but with different GEANT particle, the charged Geantino. Similar to a normal Geantino, where the particle traverses all volumes within its path but interacts with magnetic fields. As the charged Geantino enters a magnetic field it is deflected as if it were a positively charged particle. This test ensured that the same tracks of the charged Geantinos between the previous version and the new flexible version were being produced within the magnetic fields. 
+    An example of the tracks taken by the charged Geantinos within the simulation is shown in Figure \ref{fig:mag_check} where it is possible to see the displacement of the particles within the magnetic field regions. The exact XY positions of the hits would then be validated against a sample of charged Geantinos with the exact same characteristics and starting parameters produced with the previous version of the software.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{plots/All_xz.png}
-        \caption{Charged Geantino hits on all detectors ADD EXTENT OF THE FIELD REGIONS}%
+        \caption{Charged Geantino hits on all detectors within the simulation.}%
         \label{fig:mag_check}%
     \end{figure} 
 
@@ -97,7 +91,7 @@
     
     \subsection{Testing: Symmetric NA62}
     It was also required to test the entire software chain using the new features of the flexible framework to ensure that when it was required and used in the future there were no issues. 
-    It was proposed to conduct a small study to investigate the feasibilty of a symmetric NA62.
+    It was proposed to conduct a small study to investigate the feasibility of a symmetric NA62.
 
     As described previously in Chapter \ref{sec:na62} the current NA62 detector setup has been optimised for the search of $K^+ \to \pi^+ \nu \bar\nu$ with the current experiement set to run until CERNS LS3. After LS3 it was foreseen that there would be the possiblilty of both charged and neutral kaon experiemnts located at CERN 
     requiring a redesign of the NA62 detector setup. In the current NA62 setup, the beam is deflected in the positive x-direction by the TRIM5 magnet, which is located between GTK stations 2 and 3. The TRIM5 has a strength of $-0.3\,Tm$, which equates to a 90\,MeV kick, deflecting the beam to a maximum deflection of approximately +114\,mm at straw chamber 2. 
