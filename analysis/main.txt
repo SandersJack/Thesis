@@ -2007,8 +2007,8 @@ OuterRadius
 Type(”BlueTube”, ”BlueTubeNoRails”, ”GreyTube”)
 Table 5.1: Arguments for detectors in the geometry file for use within NA62MC.
 When constructed inside the simulation, each detector was contained within its
-885.1 FlexibleMC Contributions to NA62 Framework
 own separate outer volume called the ”Responsibility Region” (RR). The creation
+885.1 FlexibleMC Contributions to NA62 Framework
 of the RR was a simple task for most detectors apart from the STRAWs and LAV
 which were made up of multiple stations that were not continuous, resulting in
 multiple responsibility regions for each station.
@@ -2033,6 +2033,8 @@ version and the previous, a smaller area was selected to create a more precise p
 on what was incorrect. This information was then used to modify the software to
 fix any geometry issues. This check was conducted for all sub-detectors.
 895.1 FlexibleMC Contributions to NA62 Framework
+-1500 -1000 -500 0 500 1000 1500
+X [mm]-1500-1000-500050010001500Y [mm]
 Figure 5.2: Geantino hits on a single view in STRAW chamber 1.
 To reduce the chance of overlaps and to clean up the simulation, the size of the
 unused space in all sub-detectors surrounding the physical geometry was reduced.
@@ -2050,8 +2052,8 @@ before the simulation is ran. Each outer detector volume is checked for any over
 with other detectors in all three dimensions taking into account any rotations and
 the shape of the outer volumes. If an overlap of two sub-detectors is found the
 simulation does not start and an error is produced to the user describing where the
-overlap is and what sub-detectors are involved.
 905.1 FlexibleMC Contributions to NA62 Framework
+overlap is and what sub-detectors are involved.
 Figure 5.3: Visualisation of the magnetic fields in the spectrometer region from the
 simulation. Top, previous version with large outer volumes and bottom, new flexible
 version with reduced outer volumes. The small red arrow represent the direction of
@@ -2066,8 +2068,8 @@ and the MNP33 field which is the main magnetic field defined in the simulation f
 the MNP33 dipole magnet. In the previous version of the simulation the position
 of the magnetic fields were written within the static code. However, in the flexible
 version it was possible to move the MNP33 magnet to be placed in any position via
-the geometry input file. This required for the magnetic field to be calculated relative
 915.1 FlexibleMC Contributions to NA62 Framework
+the geometry input file. This required for the magnetic field to be calculated relative
 to the central position of the MNP33 dipole magnet. An example of this flexibility
 is shown in Figure 5.4 where the MNP33 magnet was moved from 198 m to 163 m,
 which is in front of the STRAW chamber 1. The MNP33 and fringe magnetic field
