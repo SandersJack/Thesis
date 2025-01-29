@@ -23,6 +23,7 @@
 
     \begin{table}[H]
         \centering
+        \resizebox{\textwidth}{!}{%
         \begin{tabular}{|l|l|}
         \hline
         Detector Name & Arguments \\ \hline
@@ -30,6 +31,7 @@
         Spectrometer Magnet & Magnetic field intensity \\ \hline
         Vessel & \begin{tabular}[c]{@{}l@{}}Length\\ InnerRadius\\ OuterRadius\\ Type("BlueTube", "BlueTubeNoRails", "GreyTube")\end{tabular} \\ \hline
         \end{tabular}
+        }
         \caption{Arguments for detectors in the geometry file for use within NA62MC.}
         \label{tab:config_variables}
     \end{table}
@@ -45,7 +47,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{plots/XY_CHBR0_Beam.png}
+        \includegraphics[width=0.7\textwidth]{plots/straw_V0.pdf}
         \caption{Geantino hits on a single view in STRAW chamber 1.}%
         \label{fig:geantino_plot}%
     \end{figure} 
