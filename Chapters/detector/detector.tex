@@ -106,8 +106,15 @@
     %% Describe the KTAG more in depth with photos and diagrams
     \newline \indent For NA62, a purpose-built photon-detection system shown in Figure \ref{fig:ktag} was designed, constructed and mounted to the upstream end of the CEDAR Vessel.
     The photon light from the CEDAR exit windows is reflected radially 90 degrees by eight spherical mirrors onto eight PMT planes, referred to as sectors.  
-    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. 
+    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The Quantum Efficiency (QE) for both Hamamatsu PMTs are shown in Figure \ref{fig:pmtQE}. The QE is the probability of a PMTs photocathode to convert a photon of a specific wavelength to an electron.
     %% Input QE plots for the PMTs
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.7\textwidth]{imgs/cedarQE.pdf}
+        \linespread{1.0}
+        \caption{Quantum Efficiency of both types of PMT used in the KTAG photon-detection system (Hamamatsu R9880-110 and R7400).}
+        \label{fig:pmtQE}
+    \end{figure}
     The signals from the PMT arrays are clustered into kaon candidates within a nominal 2\,ns time window. A kaon was identified when there are at least five sectors in coincidence (5-fold coincidence). 
     The clustering results with, on average, 18 photo-electrons per kaon candidate.
     The PMTs can achieve a single hit time resolution of 300\,ps, resulting in a reconstructed kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
