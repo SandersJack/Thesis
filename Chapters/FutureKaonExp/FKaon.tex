@@ -78,24 +78,34 @@
     \section{The KTAG upgrades for HIKE} \label{sec:ktag_upgrade}
     To sustain the increased kaon rate, the KTAG required upgrades to the photon-detection and data acquisition systems, allowing to reach the required time resolution of 15-20\,ps and kaon identification efficiency of greater than 95\,\%. The expected kaon rate in HIKE Phase 1 was 200\,MHz, which corresponds to a maximum rate of \SI{10}{\mega\hertz\per\centi\meter\squared} for the detected photons at the PMT array. This rate takes into account the 
     production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons on the PMT plane. It was proposed that the NA62 PMT arrays were replaced with arrays of micro-channel plate photomultipliers (MCP-PMTs). The MCP-PMTs would provide a single photon time resolution of 50-70\,ps depending on the model, a low dark rate of \SI{1}{\kilo\hertz\per\centi\meter\squared} and the ability to sustain the required photon rate. 
-    A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas. This results in the rapid degradation of PMT quantum efficiency with the increasing integrated anode charge.
+    A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas resulting in a rapid reduction in the Quantum Efficiency (QE) \cite{KISHIMOTO2006204}. This results in the rapid degradation of PMT quantum efficiency with the increasing integrated anode charge.
     %% Describe MCP-PMT with diagram
     MCP-PMTs are similar to normal PMTs except that the dynode section is replaced by a micro-channel plate. An example diagram is shown in Figure \ref{fig:mcppmt_dia}, where a photon hits the photocathode window, producing a single electron, which is then accelerated towards the MCP by an electric field provided by a voltage difference across the gap. The electron then collides with the walls of the MCP, producing secondary electrons, which results in a cascade collected by the anodes below.
-    The dual layer design, or chevron, adds additional benefits compared to a single layer design: better gains due to the increased surface for secondary electrons to be produced and improved lifetime due to the suppression of ions produced in the amplification from reaching the photocathode. 
+    The dual layer design, or chevron, adds additional benefits compared to a single layer design such as better gains due to the increased surface for secondary electrons to be produced 
+    %and improved lifetime due to the suppression of ions produced in the amplification from reaching the photocathode. 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{imgs/mcp_diag.pdf}
         \caption{Diagram describing the workings of a MCP-PMT.}%
         \label{fig:mcppmt_dia}%
     \end{figure}  
-    An example of MCP-PMT model proposed for the KTAG and manufactured by Photonis is shown in Figure \ref{fig:mcppmt}. The module consists of an 8x8 array of pixels which can individually be read out.
+    Major breakthroughs to improve the lifetime of the MCP-PMT have come with the method of Atomic Layer Deposition (ALD) \cite{BEAULIEU200981}, where the channels of the MCP are coated with a ultra-thin layer of \ce{Al2O3} or \ce{MgO}. The layer prevents the out-gassing from the MCP glass substrate and drastically reduces the heavy ions reaching the photocathode resulting in significant increases in lifetime of the MCP-PMTs \cite{Lehmann_2018}. 
+    Utilising the method of ALD, MCP-PMTs from Photonis have been demonstrated to withstand an Integrated Anode Charge (IAC) greater than \SI{20}{\coulomb\per\centi\meter\squared} \cite{LEHMANN2020161821}, corresponding to a lifetime improvement of a factor of 100 compared to standard MCP-PMTs, shown in Figure \ref{fig:mcppmt_life}.
+    % have 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{imgs/mcp_pmt_dia.png}
+        \includegraphics[width=0.7\textwidth]{plots/mcp_lifetimes.png}
+        \caption{Lifetimes of available MCP-PMTs with the photocathode QE vs Integrated Anode Charge (IAC) for photons at 400\,nm wavelength. Top, old ALD coated MCP-PMTs from Hamamatsu with non coated versions shown in the insert plot. Bottom, more recent ALD coated MCP-PMTs from PHOTONIS and Photek in the inserted plot. \cite{Lehmann_2022}}%
+        \label{fig:mcppmt_life}%
+    \end{figure}  
+    An example of MCP-PMT model proposed for the KTAG is shown in Figure \ref{fig:mcppmt}. The module consists of an 8x8 array of pixels which can individually be read out.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{imgs/mcp_pmt_dia.png}
         \caption{Schematic of Photonis MCP-PMT \cite{RONZHIN201552}.}%
         \label{fig:mcppmt}%
     \end{figure}  
-    Simulations of the KTAG wiith the upgraded photon-detection system for use in HIKE Phase 1 show that each of the eight KTAG sectors would use four of these MCP-PMT, shown in Figure \ref{fig:mcp_ktag}. The four MCP-PMTs per sector were required for full coverage of the light spot produced when the light exiting the CEDAR was 
+    Simulations of the KTAG with the upgraded photon-detection system for use in HIKE Phase 1 show that each of the eight KTAG sectors would use four of these MCP-PMT, shown in Figure \ref{fig:mcp_ktag}. The four MCP-PMTs per sector were required for full coverage of the light spot produced when the light exiting the CEDAR was 
     reflected by the spherical mirror. The schematic in Figure \ref{fig:mcppmt} shows there was some unused space around the active area of each MCP-PMT, which would result in reduced efficiency, especially in the centre, where the maximum amount of light would be expected. To mitigate this, reflective surfaces were attached to each side of the individual MCP-PMTs shown in Figure \ref{fig:mcp_ktag} to reflect the light onto the active surface.
     \begin{figure}[H]
         \centering
@@ -110,7 +120,31 @@
         \caption{Collected light distribution for the MCP-PMT installed in the KTAG.}%
         \label{fig:mcp_ktag_light}%
     \end{figure}  
-    The Quantum Efficiency (QE) of the MCP-PMT from Photonics is shown in Figure \ref{fig:mcp_qe}. There are two options for the photocathode of the MCP-PMT available: a standard bialkali (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. The distribution for the Hi-QE Blue was implemented into the Monte Carlo, but further studies at The University of Birmingham are planned to take place to characterise the MCP-PMTs by measuring the lifetimes, QE, and other characteristics in order to decide which type could be used 
+    HIKE Phase 1 required that the MCP-PMTs installed within the KTAG photon-detection system to have a demonstrated lifetime of \SI{80}{\coulomb\per\centi\meter\squared}. Other requirements for HIKE for the MCP-PMT is a single photon detection rate of \SI{10}{\mega\hertz\per\centi\meter\squared} without degradation to the signal due to charge saturation effects. 
+    The MCP-PMTs manufactured by Photonics with 2 layers of ALD provide the best lifetime with no degradation in QE after \SI{30}{\coulomb\per\centi\meter\squared}, shown in Figure \ref{fig:mcppmt_life}. An excellent candidate for MCP-PMT was Photonis XP85012-S-R2D2 of the PLANACON line. However, the Photonis MCP-PMT doesn't match with the HIKE Phase 1 rate requirements and 
+    result in reduced gain above \SI{1}{\mega\hertz\per\centi\meter\squared}, shown in Figure \ref{fig:mcp_rate}. It is possible to reach \SI{10}{\mega\hertz\per\centi\meter\squared} with smaller sensor size but would result in a quadrupling of the cost to cover the light spot. Future research looking at reducing the resistance, capacitance and gain for single photon detection could possibly allow the larger
+    XP85012-S-R2D2 to accommodate up to \SI{10}{\mega\hertz\per\centi\meter\squared}.
+    %which has shown 
+    %% Need to talk about gain
+    %capability of up to \SI{20}{\mega\hertz\per\centi\meter\squared} with no degradation to the gain \cite{KOMAREK2022167330}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/rate.png}
+        \caption{Rate capability of state of the art MCP-PMTs \cite{Lehmann2022}.}%
+        \label{fig:mcp_rate}%
+    \end{figure} 
+    The Photonis MCP-PMT has a Collection Efficiency (CE) of above 60\,\%, the probability of the photo-electron passing through the pours of the MCP and producing a signal. With current technologies it is possible for MCP-PMTs reach CE of over to 90\,\% \cite{Orlov_2018}, however the Photonis MCP-PMT was selected as it better fit the HIKE Phase 1 timing requirements requirements as the higher CE models utilise late photo-electrons resulting in higher time resolutions.
+    %% Time resolution tts and rms
+    The XP85012-S-R2D2 MCP-PMT had a transit time spread of 50\,ps with a timing precision RMS of 120\,ps \cite{XP85112SBA} and results in a time response, shown in Figure \ref{fig:mcp_time} which was implemented used for the HIKE simulations.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{plots/timeresponse.pdf}
+        \caption{Time response of the Photonics XP85012-S-R2D2 MCP-PMT.}%
+        \label{fig:mcp_time}%
+    \end{figure} 
+    The QE for the MCP-PMT from Photonis is shown in Figure \ref{fig:mcp_qe}. There are two options for the photocathode of the MCP-PMT available: a standard Bialkali (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. 
+    The HI-QE are more recent models, however there is no lifetime data available so albeit being the preferred option the standard Bialkali was chosen for use in the simulation.
+    Further studies at The University of Birmingham are planned to characterise the Photonis XP85012-S-R2D2 MCP-PMT by measuring the lifetimes, QE, CE, and other characteristics in order to decide which type would have been used 
     for high-intensity kaon physics at HIKE.
     \begin{figure}[H]
         \centering
@@ -625,7 +659,7 @@
     \end{table}
 
     \section{Conclusions}
-    Unfortunately, in 2024, CERN management decided that HIKE would not be accepted for operation in ECN3. However, the development of the detectors, software and the subsequent physics studies was utilised for the KOTO II proposal (CITE WHEN available).
+    Unfortunately, in 2024, CERN management decided that HIKE would not be accepted for operation in ECN3. However, the development of the detectors, software and the subsequent physics studies was utilised for the KOTO II proposal \cite{ahn2025proposalkotoiiexperiment}.
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
