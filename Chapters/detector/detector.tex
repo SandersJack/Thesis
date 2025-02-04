@@ -22,7 +22,7 @@
         coloured areas show the signal regions used to reject the dominant kaon decays kinematically \cite{Gil_2017}.}
         \label{fig:missing-mass-signal}
     \end{figure}
-    The rest of this chapter will cover how NA62 fulfils the above-mentioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line upstream of the NA62 detector.
+    The rest of this chapter will cover how NA62 fulfils the above-mentioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line from the target through the NA62 detector.
     The NA62 detector comprises a number of sub-detectors, which will be described in Section \ref{sec:sub-det}, with the trigger and data acquisition system (TDAQ) following in Section \ref{sec:TDAQ} 
     
     \begin{figure}[t]
@@ -76,7 +76,7 @@
         \caption{Schematic of K12 beamline after GTK3 \cite{Gil_2017}.}
         \label{fig:AFTER-GTK-beam-line}
     \end{figure}
-    \section{NA62 Detectors}
+    \section{NA62 Detectors}\label{sec:sub-det}
     \subsection{KTAG}\label{sec:KTAG}
     As the NA62 beam is unseparated and kaons only account for 6\,\% of the beam composition, the kaons must be identified. Kaon identification is provided by the KTAG and located at $Z=69.4$\,m. It comprises a CEDAR vessel and a purpose-built
     photon detection system. Until the NA62 2023 run, the CEDAR vessel used was a CEDAR-W filled with a Nitrogen radiator. CEDARs were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the super proton synchrotron (SPS).
@@ -119,7 +119,7 @@
     The clustering results with, on average, 18 photo-electrons per kaon candidate.
     The PMTs can achieve a single hit time resolution of 300\,ps, resulting in a reconstructed kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
     \newline\indent In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62 beam-line after design at the University of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses hydrogen as a radiator gas. 
-    This required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H, can be found in Section \ref{sec:CEDARH}.
+    This required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H, can be found in Section \ref{sec:cedarH}.
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \begin{figure}[H]
         \centering 
@@ -419,7 +419,7 @@
     Each module of na62fw utilises the tools found within the ROOT analysis framework \cite{Brun1997}. A more detailed description of the software framework can be found in Section \ref{sec:na62fw}.
     \section{NA62 Results}\label{sec:na62res}
     The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400\,MHz, respectively. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
-    The trigger streams used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN) in this period differ from those that are defined in Section \ref{sec:TDAQ} and are defined below: 
+    The trigger streams used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN) in this period differ from those that are defined in Section \ref{sec:TDAQ} and are defined below (L0 in red and L1 in blue): 
     \begin{itemize}
         \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
         \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$
