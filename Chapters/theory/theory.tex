@@ -1,9 +1,34 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-    Start of theory
+    \section{Standard Model of Particle Physics}
+
+    The Standard Model (SM) of particle physics is a framework which contains our current understanding of the matter and three of the four four forces found in the universe. Within the SM there are 12 elementary fermions, 
+    5 vector bosons which mediate the three fundamental forces and a scalar boson responsible for particle masses (Figure \ref{fig:SM}). It is important to note that the SM is not a complete model of the universe. A great example of this is the gravitational force 
+    which is not described by the theory, however at the small scales of of particle physics this force is neglected due to it's insignificant strength when compared to the other three forces (strong, electromagnetic and weak).
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/SM.pdf}
+        \caption{The Standard Model of particle physics with the 12 fermions shown in purple and green, the five vector bosons shown in red and the Higgs scaler boson shown in yellow.}%
+        \label{fig:SM}%
+    \end{figure}
+
+
+
+    \begin{equation}
+    \begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} =
+        V_{\text{CKM}}
+        \begin{pmatrix} d \\ s \\ b \end{pmatrix} = 
+        \begin{pmatrix} 
+            V_{ud} & V_{us} & V_{ub} \\ 
+            V_{cd} & V_{cs} & V_{cb} \\ 
+            V_{td} & V_{ts} & V_{tb} 
+        \end{pmatrix}
+        \begin{pmatrix} d \\ s \\ b \end{pmatrix}
+    \end{equation}
+
     \ifSubfilesClassLoaded{%
-    \bibliographystyle{IEEEtran}
+    \bibliographystyle{ieeetr}
     \bibliography{../../../references.bib}%
     }{} 
 \end{document}
