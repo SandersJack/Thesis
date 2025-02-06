@@ -13,21 +13,78 @@
         \label{fig:SM}%
     \end{figure}
     The SM comprises of a quantum field theory (QFT) and is based on the non-Abelian gauge symmetry groups SU(3)×SU(2)×U(1). The SU(3) governs the strong interactions and the SU(2)×U(1) the electroweak interactions. 
-    Each group contains their respective gauge bosons: gluon for the strong and W,Z and photon for the electroweak. The SU(3) is an exact gauge symmetry where as the electroweak symmetry is spontaneously broken by the Higgs field, resulting 
+    Each group contains their respective gauge bosons: gluon for the strong and W, Z and photon for the electroweak. The SU(3) is an exact gauge symmetry where as the electroweak symmetry is spontaneously broken by the Higgs field, resulting 
     in the massive electroweak bosons ($W^{\pm}$ and $Z^{\pm}$). Due to this broken symmetry which gives rise to massive quarks, the strong and weak eigenstates diverge. The weak eigenstates (d', s', b') of down, strange and bottom quarks which are associated to the weak interaction are related to the mass
     eigenstates (d, s, b) through the Cabibbo-Kobayashi-Maskawa (CKM) matrix $V_{\text{CKM}}$ \cite{PhysRevLett.10.531,10.1143/PTP.49.652}. 
     \begin{equation}
-    \begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} =
+    \begin{bmatrix} d' \\ s' \\ b' \end{bmatrix} =
         V_{\text{CKM}}
-        \begin{pmatrix} d \\ s \\ b \end{pmatrix} = 
-        \begin{pmatrix} 
+        \begin{bmatrix} d \\ s \\ b \end{bmatrix} = 
+        \begin{bmatrix} 
             V_{ud} & V_{us} & V_{ub} \\ 
             V_{cd} & V_{cs} & V_{cb} \\ 
             V_{td} & V_{ts} & V_{tb} 
-        \end{pmatrix}
-        \begin{pmatrix} d \\ s \\ b \end{pmatrix}
+        \end{bmatrix}
+        \begin{bmatrix} d \\ s \\ b \end{bmatrix}
+    \end{equation}
+    Utilising the elements of the CKM matrix it is possible to calculate the probability that a quark type i will transition into type j with $|V_{ij}|^2$.
+
+    For a unitary 3x3 matrix the CKM can be reduced from nine parameters to four: three mixing angles ($\theta_{12}$, $\theta_{13}$, $\theta_{23}$) which dictate the couplings between each generation of quarks and one phase ($\delta$) which introduces CP violation \cite{10.1143/PTP.49.652}. 
+    A number of different parametrisations are possible but the standard choice is \cite{PhysRevLett.53.1802}, 
+    \begin{equation}\label{eq:angles}
+    V_{\text{CKM}} =
+    \begin{bmatrix}
+    c_{12} c_{13} & s_{12} c_{13} & s_{13} e^{-i\delta} \\
+    - s_{12} c_{23} - c_{12} s_{23} s_{13} e^{i\delta} & c_{12} c_{23} - s_{12} s_{23} s_{13} e^{i\delta} & s_{23} c_{13} \\
+    s_{12} s_{23} - c_{12} c_{23} s_{13} e^{i\delta} & - c_{12} s_{23} - s_{12} c_{23} s_{13} e^{i\delta} & c_{23} c_{13}
+    \end{bmatrix}
+    \end{equation}  
+    where $c_{ij} = \cos{\theta_{ij}}$ and $s_{ij} = \sin{\theta_{ij}}$. The mixing angles $\theta_{ij}$ can be selected to satisfy $0 \leq \theta_{ij} \leq \frac{\pi}{2}$ such that $c_{ij}, s_{ij} \geq 0$.
+
+    Through experiments it is known that there is hierarchical structure to the components of the CKM matrix, 
+    \begin{equation}
+        s_{12} \ll s_{23} \ll s_{13}
+    \end{equation}
+    and it is useful to further parametrise through the Wolfenstein parametrisation \cite{PhysRevLett.51.1945} (Equation \ref{eq:wolf}). For this parametrisation the following definitions are used,
+    \begin{equation}
+        \begin{split}
+            s_{12} &= \lambda \\
+            s_{23} &= A\lambda^2 \\
+            s_{13} &= A\lambda^3(\rho + i\eta)
+        \end{split}
+    \end{equation}
+    resulting in, 
+    \begin{equation}\label{eq:wolf}
+        V_{\text{CKM}} =
+        \begin{bmatrix}
+        1 - \frac{\lambda^2}{2} & \lambda & A\lambda^3 (\rho - i\eta) \\
+        -\lambda & 1 - \frac{\lambda^2}{2} & A\lambda^2 \\
+        A\lambda^3 (1 - \rho - i\eta) & -A\lambda^2 & 1
+        \end{bmatrix}
+        + O(\lambda^4).
+    \end{equation}
+    Reducing the CKM to $O(\lambda^3)$ results in the loss of unity. However, unity can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of Equation \ref{eq:wolf},
+    \begin{equation}
+        V_{td} = A\lambda^3 (1 - \bar{\rho} - i\bar{\eta})
+    \end{equation}
+    where 
+    \begin{equation}
+        \begin{split}
+            \bar{\rho} = \rho(1 - \frac{\lambda^2}{2}) \\
+            \bar{\eta} = \eta(1 - \frac{\lambda^2}{2})
+        \end{split}
+        .
     \end{equation}
 
+    Through a large number of experiments the elements of the CKM matrix can be measured and are combined to form a global fit \cite{Charles:2004jd}:
+    \begin{equation}
+    V_{\text{CKM}} = 
+    \begin{bmatrix}
+        0.97436^{+0.00014}_{-0.00019} & 0.22498^{+0.00081}_{-0.00062} & 0.00373^{+0.00019}_{-0.00015} \\
+        0.22484^{+0.00081}_{-0.00061} & 0.97351^{+0.00016}_{-0.00019} & 0.04160^{+0.00066}_{-0.00121} \\
+        0.00857^{+0.00018}_{-0.00037} & 0.04088^{+0.00066}_{-0.00119} & 0.999125^{+0.000052}_{-0.000027}
+    \end{bmatrix}
+    \end{equation}
     \ifSubfilesClassLoaded{%
     \bibliographystyle{ieeetr}
     \bibliography{../../references.bib}%
