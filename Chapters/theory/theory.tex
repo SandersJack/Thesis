@@ -76,15 +76,70 @@
         .
     \end{equation}
 
-    Through a large number of experiments the elements of the CKM matrix can be measured and are combined to form a global fit \cite{Charles:2004jd}:
+    The unitary nature of the CKM matrix imposes conditions on the row and columns
     \begin{equation}
-    V_{\text{CKM}} = 
+        \begin{split}
+            \sum_{i} V_{ij}V^*_{ik} = \delta_{jk} \\ 
+            \sum_{j} V_{ij}V^*_{kj} = \delta_{ik}
+        \end{split}
+    \end{equation}
+    where $\delta_{jk}$ denotes the Kronecker delta function, which equals 1 when j = k and 0 otherwise. This results in six vanishing combinations of the CKM matrix which can be represented as triangles, with the most common being
+    \begin{equation}
+        V_{ud}V^*_{ub} + V_{cd}V^*_{cb} + V_{td}V^*_{tb} = 0
+    \end{equation}
+    and can be modified with the Wolfenstein parametrisation (Equation \ref{eq:wolf_uni}) which is depicted in Figure \ref{fig:triange}.
+    \begin{equation}\label{eq:wolf_uni}
+        1 + \frac{V_{td}V^*_{tb}}{V_{cd}V^*_{cb}} = - \frac{V_{ud}V^*_{ub}}{V_{cd}V^*_{cb}} = \bar{\rho} + i\bar{\eta} \\ 
+    \end{equation}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/unitary.pdf}
+        \caption{Sketch of the most common unitary triangle $V_{ud}V^*_{ub} + V_{cd}V^*_{cb} + V_{td}V^*_{tb} = 0$.}%
+        \label{fig:triange}%
+    \end{figure}
+
+    The CKM matrix components are fundamental parameters of the SM. Through a large number of experiments the elements of the CKM matrix can be measured and are combined to form a global fit \cite{Charles:2004jd}:
+    \begin{equation}
+    \begin{bmatrix} 
+        |V_{ud}| & |V_{us}| & |V_{ub}| \\ 
+        |V_{cd}| & |V_{cs}| & |V_{cb}| \\ 
+        |V_{td}| & |V_{ts}| & |V_{tb}| 
+    \end{bmatrix} = 
     \begin{bmatrix}
         0.97436^{+0.00014}_{-0.00019} & 0.22498^{+0.00081}_{-0.00062} & 0.00373^{+0.00019}_{-0.00015} \\
         0.22484^{+0.00081}_{-0.00061} & 0.97351^{+0.00016}_{-0.00019} & 0.04160^{+0.00066}_{-0.00121} \\
         0.00857^{+0.00018}_{-0.00037} & 0.04088^{+0.00066}_{-0.00119} & 0.999125^{+0.000052}_{-0.000027}
     \end{bmatrix}
     \end{equation}
+    A feature of the CKM matrix is that the diagonal components which describe the transitions within the quark generations dominate, compared to the off-diagonal elements which are suppressed for 
+    transitions between one generation and doubly suppressed for transitions between two generations. This suppression between two generations produces rare decays, such as $K^+ \to \pi^+ \nu \bar{\nu}$ described in Section __. 
+
+    Through measurement of the CKM matrix components it is possible to constrain the unitary triangle (Figure \ref{fig:triange}) shown in Figure  
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/rhoeta_large.png}
+        \caption{Constraints for the most common unitary triangle in the ($\bar{\rho}$,$\bar{\eta}$) plane \cite{Charles:2004jd}.}%
+        \label{fig:excluded_tri}%
+    \end{figure}
+
+    Including the four CKM components discussed above there are nineteen free parameters of the SM:
+    \begin{itemize}
+        \item Four CKM parameters discussed above.
+        \item Six Quark masses (Up, down, charm, strange, top and bottom).
+        \item Three Lepton masses (Electron, muon and tau).
+        \item Three Gauge Couplings (U(1), SU(2) and SU(3))
+        \item Two Higgs parameters (Vacuum expectation value and mass).
+        \item Quantum chromodynamics (QCD) vacuum angle.
+    \end{itemize}
+    Each one of these parameters needs to be measured through experiment to the highest precision so that any discrepancies can be resolved. Any deviations from theoretical understanding could be hint of 
+    physics beyond the Standard Model (BSM). 
+    \section{Kaon Physics}
+    \subsection{$K^+ \to \pi^+ \nu \bar{\nu}$}
+    \subsection{$K^0_L \to \pi^0 l^+l^-$}
+    \subsection{$K^0_L \to \pi^0 \nu \bar{\nu}$}
+
+    \section{Dark Photon}
+
     \ifSubfilesClassLoaded{%
     \bibliographystyle{ieeetr}
     \bibliography{../../references.bib}%
