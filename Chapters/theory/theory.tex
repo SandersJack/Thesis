@@ -197,9 +197,12 @@
     \end{table}
     As well as the decays found in Table \ref{tab:kaon_decays} there are a number of extremely rare modes. NA62 main physics goal is to measure the Branching Fraction (BF) of the ultra-rare $K^+ \to \pi^+ \nu \bar{\nu}$ which has a $O(10^{-11})$ and is described in more detail in Section \ref{sec:pinn_theory}.
 
-    The future kaon physics would be again looking at the neutral kaon modes. This was proposed through the HIKE proposal which is detailed in Section \ref{sec:FutureKaon} which set out in multiple phases to measure the BF of $K^0_L \to \pi^0 l^+l^-$ (described in Section \ref{sec:kllep_theory}) and eventually $K^0_L \to \pi^0 \nu \bar{\nu}$ (described in Section \ref{sec:klpinn_theory}).
+    The future kaon physics is planned to investigate the neutral kaon modes again. This was proposed through the HIKE proposal which is detailed in Section \ref{sec:FutureKaon} which set out in multiple phases to measure the BF of $K^0_L \to \pi^0 l^+l^-$ (described in Section \ref{sec:kllep_theory}) and eventually $K^0_L \to \pi^0 \nu \bar{\nu}$ (described in Section \ref{sec:pinn_theory}).
 
-    \subsection{$K^+ \to \pi^+ \nu \bar{\nu}$}\label{sec:pinn_theory}
+    \subsection{$K \to \pi \nu \bar{\nu}$}\label{sec:pinn_theory}
+    %\subsection{Flavour Changing Neutral Currents}\label{sec:FCNC}
+
+
     \begin{figure}[H]
         \centering
         \begin{minipage}{0.45\textwidth}
@@ -306,10 +309,58 @@
             }
         \end{minipage}
         \caption{Feynman diagrams for the $K^+ \to \pi^+ \nu \bar{\nu}$ decay.}
+        \label{fig:fey_pinn}
     \end{figure}
-    \subsection{$K^0_L \to \pi^0 l^+l^-$}\label{sec:kllep_theory}
-    \subsection{$K^0_L \to \pi^0 \nu \bar{\nu}$}\label{sec:klpinn_theory}
+    The $K^+ \to \pi^+ \nu \bar{\nu}$ decays through Flavour Changing Neutral Current (FCNC) which is extremely suppressed in the SM due to CKM and GIM suppression \cite{PhysRevD.2.1285}. The decay process is described by the box and penguin Feynman diagrams shown in Figure \ref{fig:fey_pinn}. The decay is the transformation of a anti-strange quark into an anti-down quark and an neutrino pair, leaving the up quark unchanged.
+    The branching ratio of $K_{\pi\nu\bar{\nu}}$ is dominated by the $Z^0$ penguin diagrams and after summing over the three neutrino flavours can be described by \cite{Buras2015},
+    \begin{equation}\label{eq:pinn_theory_br}
+        \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \kappa_+(1+\Delta_{EM})\left[\left(\frac{\mathfrak{Im}(\lambda_t)}{\lambda^5}X(x_t)\right)^2 + \left(\frac{\mathfrak{Re}(\lambda_c)}{\lambda}P_c(X) + \frac{\mathfrak{Re}(\lambda_t)}{\lambda^5}X(x_t)\right)^2\right]
+    \end{equation}
+    with 
+    \begin{equation}
+        \begin{split}
+            \kappa_+ = (5.173 \pm 0.025) \times 10^{-11} \left(\frac{\lambda}{0.225}\right)^8, \Delta_{EM} = -0.003
+        \end{split}
+    \end{equation}    
+    where $x_t = m_t^2 / m_W^2$ which is the ratio of the mass of the top quark and the mass of the W boson, $\lambda$ originates from the Wolfenstein parametrisation shown above and $\lambda_i = V_{is}^*V_{id}$ where $V_{ij}$ are CKM matrix elements. $\Delta_{EM}$ takes into account the correction from radiative photon exchanges and $\kappa_+$ condenses the relevant hadronic matrix elements. 
+    The terms $X(x_t)$ and $P_c(X)$ are the loop functions which describe contributions from the top and charm quark.
+
+    %%SM prediction
     
+    It is possible to represent $\lambda_t$ and $\lambda_c$ from Equation \ref{eq:pinn_theory_br} as \cite{Buchalla:1995vs}, %\cite{Buras2015}, 
+    \begin{equation}
+        %\mathfrak{Re}(\lambda_t) \simeq |V_{ub}||V_{cb}| \cos{\gamma}(1-2\lambda^2) + (|V_{ub}|^2 - |V_{cb}|^2)\lambda \left(1 - \frac{\lambda^2}{2}\right),
+        \mathfrak{Re}(\lambda_t) = -(1-\frac{\lambda}{2})A^2\lambda^5(1-\bar{\rho})
+    \end{equation}
+    \begin{equation}
+        %\mathfrak{Im}(\lambda_t) \simeq |V_{ub}||V_{cb}|\sin{\gamma},
+        \mathfrak{Im}(\lambda_t) = A^2\lambda^5\eta
+    \end{equation}
+    \begin{equation}
+        %\mathfrak{Re}(\lambda_c) \simeq -\lambda \left(1-\frac{\lambda^2}{2}\right),
+        \mathfrak{Re}(\lambda_c) = -\lambda(1-\frac{\lambda}{2})
+    \end{equation}
+    and can be used to parametrise the $K_{\pi\nu\bar{\nu}}$ branching fraction (\ref{eq:pinn_theory_br}) with the CKM Wolfenstein parameters as \cite{Buchalla:1998ba}
+    \begin{equation}\label{eq:branch_kpinunu}
+        %\mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \frac{\kappa_+}{\lambda^8}|V_{cb}|^4X(x_t)^2 \left(\sigma R_t^2\sin{\beta}^2 + 1/\sigma \left(R_t\cos{\beta} + \frac{\lambda^4P_c(X)}{|V_{cb}|^2 X(x_t)} \right)\right).
+        \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \kappa_+ A^4X(x_t)^2\frac{1}{\sigma}((\sigma^2\bar{\eta})^2 + (\rho_0 - \bar{\rho})^2)
+    \end{equation}
+    where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1+ \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) with a centre of ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}\sigma}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$.
+    The $K_L \to \pi^0 \nu \bar{\nu}$ ($K_{\pi^0\nu\bar{\nu}}$) decays through similar feynman diagrams shown in Figure \ref{fig:fey_pinn} but with a down quark on top which does not change during the decay compared to an up quark for the charged mode. The $K_{\pi^0\nu\bar{\nu}}$ decay is almost entirely CP violating and is dominated by top loop contributions \cite{PhysRevD.39.3322}, resulting in the branching fraction depending on imaginary part of the top loop from Equation \ref{eq:pinn_theory_br} which is CP violating,
+    \begin{equation}
+        \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = \kappa_L \left(\frac{\mathfrak{Im}(\lambda_t)}{\lambda^5} X(x_t) \right)^2
+    \end{equation}
+    with
+    \begin{equation}
+        \kappa_L = (2.231 \pm 0.013) \times 10^{-10} \left(\frac{\lambda}{0.225}\right)^8.
+    \end{equation}
+    It is also possible to parametrise the equation with the Wolfenstein parameters similar to Equation \ref{eq:branch_kpinunu} as \cite{Buchalla:1998ba}, 
+    \begin{equation}
+        \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = \kappa_L \eta^2 A^4 X(x_t)^2.
+    \end{equation}
+
+
+    \subsection{$K^0_L \to \pi^0 l^+l^-$}\label{sec:kllep_theory}
     
 
     \section{Dark Photon}
