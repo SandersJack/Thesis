@@ -311,10 +311,13 @@
         \caption{Feynman diagrams for the $K^+ \to \pi^+ \nu \bar{\nu}$ decay.}
         \label{fig:fey_pinn}
     \end{figure}
-    The $K^+ \to \pi^+ \nu \bar{\nu}$ decays through Flavour Changing Neutral Current (FCNC) which is extremely suppressed in the SM due to CKM and GIM suppression \cite{PhysRevD.2.1285}. The decay process is described by the box and penguin Feynman diagrams shown in Figure \ref{fig:fey_pinn}. The decay is the transformation of a anti-strange quark into an anti-down quark and an neutrino pair, leaving the up quark unchanged.
+    The $K^+ \to \pi^+ \nu \bar{\nu}$ decays through Flavour Changing Neutral Current (FCNC) which are extremely suppressed in the SM due to CKM and GIM suppression \cite{PhysRevD.2.1285}. The decay process is described by the box and penguin Feynman diagrams shown in Figure \ref{fig:fey_pinn}. The decay is the transformation of a anti-strange quark into an anti-down quark and an neutrino pair, leaving the up quark unchanged.
     The branching ratio of $K_{\pi\nu\bar{\nu}}$ is dominated by the $Z^0$ penguin diagrams and after summing over the three neutrino flavours can be described by \cite{Buras2015},
     \begin{equation}\label{eq:pinn_theory_br}
-        \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \kappa_+(1+\Delta_{EM})\left[\left(\frac{\mathfrak{Im}(\lambda_t)}{\lambda^5}X(x_t)\right)^2 + \left(\frac{\mathfrak{Re}(\lambda_c)}{\lambda}P_c(X) + \frac{\mathfrak{Re}(\lambda_t)}{\lambda^5}X(x_t)\right)^2\right]
+        \begin{split}
+            \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) &= \kappa_+(1+\Delta_{EM}) \Bigg[ \left( \frac{\mathfrak{Im}(\lambda_t)}{\lambda^5} X(x_t) \right)^2 \\
+            &\quad + \left( \frac{\mathfrak{Re}(\lambda_c)}{\lambda} P_c(X) + \frac{\mathfrak{Re}(\lambda_t)}{\lambda^5} X(x_t) \right)^2 \Bigg]
+        \end{split}    
     \end{equation}
     with 
     \begin{equation}
@@ -323,10 +326,10 @@
         \end{split}
     \end{equation}    
     where $x_t = m_t^2 / m_W^2$ which is the ratio of the mass of the top quark and the mass of the W boson, $\lambda$ originates from the Wolfenstein parametrisation shown above and $\lambda_i = V_{is}^*V_{id}$ where $V_{ij}$ are CKM matrix elements. $\Delta_{EM}$ takes into account the correction from radiative photon exchanges and $\kappa_+$ condenses the relevant hadronic matrix elements. 
-    The terms $X(x_t)$ and $P_c(X)$ are the loop functions which describe contributions from the top and charm quark.
-
-    %%SM prediction
-    
+    The terms $X(x_t)$ and $P_c(X)$ are the loop functions which describe contributions from the top and charm quark. The $X(x_t)$ can be described by the equation \cite{PhysRevD.83.034030, Buras2015}, 
+    \begin{equation}
+        X(x_t) = X^(0) + \frac{\alpha_s}{4\pi}X_t^{(1)} + \frac{\alpha}{4\pi}X_t^{(EW)} = 1.481 \pm 0.005 \pm 0.008.
+    \end{equation}
     It is possible to represent $\lambda_t$ and $\lambda_c$ from Equation \ref{eq:pinn_theory_br} as \cite{Buchalla:1995vs}, %\cite{Buras2015}, 
     \begin{equation}
         %\mathfrak{Re}(\lambda_t) \simeq |V_{ub}||V_{cb}| \cos{\gamma}(1-2\lambda^2) + (|V_{ub}|^2 - |V_{cb}|^2)\lambda \left(1 - \frac{\lambda^2}{2}\right),
@@ -345,7 +348,9 @@
         %\mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \frac{\kappa_+}{\lambda^8}|V_{cb}|^4X(x_t)^2 \left(\sigma R_t^2\sin{\beta}^2 + 1/\sigma \left(R_t\cos{\beta} + \frac{\lambda^4P_c(X)}{|V_{cb}|^2 X(x_t)} \right)\right).
         \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \kappa_+ A^4X(x_t)^2\frac{1}{\sigma}((\sigma^2\bar{\eta})^2 + (\rho_0 - \bar{\rho})^2)
     \end{equation}
-    where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1+ \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) with a centre of ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}\sigma}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$.
+    where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1+ \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) with a centre of ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}\sigma}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$. The ellipse constrains the parameters ($\bar{\rho},\bar{\eta}$) and is depicted in Figures \ref{fig:traingles_SM} and \ref{fig:traingles_SM_elip}.
+    
+    
     The $K_L \to \pi^0 \nu \bar{\nu}$ ($K_{\pi^0\nu\bar{\nu}}$) decays through similar feynman diagrams shown in Figure \ref{fig:fey_pinn} but with a down quark on top which does not change during the decay compared to an up quark for the charged mode. The $K_{\pi^0\nu\bar{\nu}}$ decay is almost entirely CP violating and is dominated by top loop contributions \cite{PhysRevD.39.3322}, resulting in the branching fraction depending on imaginary part of the top loop from Equation \ref{eq:pinn_theory_br} which is CP violating,
     \begin{equation}
         \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = \kappa_L \left(\frac{\mathfrak{Im}(\lambda_t)}{\lambda^5} X(x_t) \right)^2
@@ -358,11 +363,73 @@
     \begin{equation}
         \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = \kappa_L \eta^2 A^4 X(x_t)^2.
     \end{equation}
+    The decay can be used to further constrain the parameter $\bar{\eta}$ and is shown in Figures \ref{fig:traingles_SM} and \ref{fig:traingles_SM_elip}.
+    
+    
+    Inputting experimental values into the equations for the branching fractions produces the SM predictions \cite{Buras2022},
+    \begin{equation}
+        \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = (8.60 \pm 0.42) \times 10^{-11}
+    \end{equation}
+    and 
+    \begin{equation}
+        \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = (2.94 \pm 0.15) \times 10^{-11}.
+    \end{equation}
 
+    The first observation and measurement of the branching fraction for the $K^+ \to \pi^+ \nu \bar{\nu}$ decay has been obtained by NA62 in 2024 and is described in Section \ref{sec:na62res}. The current best experimental result for the branching fraction for the $K_L \to \pi^0 \nu \bar{\nu}$ decay is an upper limit obtained by the 
+    KOTO experiment \cite{PhysRevLett.122.021802}, 
+    \begin{equation}
+        \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) < 300 \times 10^{-11} (90\% \text{CL}).
+    \end{equation}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/unitary_sm.pdf}
+        \linespread{1.0}
+        \caption{Diagram of the unitary triangle and its relationship with rare kaon decays.}%
+        \label{fig:traingles_SM}%
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/SMelip.pdf}
+        \linespread{1.0}
+        \caption{Constraints on the unitary triangle from the SM predictions for the branching fractions of $K^+ \to \pi^+ \nu \bar{\nu}$ and $K_L \to \pi^0 \nu \bar{\nu}$ decays \cite{Olive:2014pdg}.}%
+        \label{fig:traingles_SM_elip}%
+    \end{figure}
 
     \subsection{$K^0_L \to \pi^0 l^+l^-$}\label{sec:kllep_theory}
-    
+    The decay $K^0_L \to \pi^0 l^+l^-$ is a FCNC transition of a strange quark into a down quark and a lepton-lepton pair and are theoretically clean with contributions through three processes: direct CP violating, indirect CP violating and CP conserving components.
+    The SM branching fraction for the $K^0_L \to \pi^0 l^+l^-$ decay can be described as \cite{Buchalla:2003sj,Isidori2004},
+    \begin{equation}
+        \mathcal{B}(K^0_L \to \pi^0 l^+l^-) = \left(C^l_{mix} \pm C^l_{int} \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + C^l_{dir} \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + C^l_{CPC} \right) \times 10^{-12}
+    \end{equation}
+    where $C^l_{mix}$ represents the contributions due to $K_S - K_L$ mixing, $C^l_{int}$ the interference of the indirect and direct CP violating decays, $C^l_{dir}$ the contribution of direct CP violating and $C^l_{CPC}$ is the long distance CP conserving contribution. 
+    The $|a_S|$ term depicts the decay form factor which has been calculated from results at NA48/2 from the measurement of the branching fraction of $K_S \to \pi^0 l^+l^-$ as $|a_S| = 1.2 \pm 0.2$ \cite{NA481:2003cfm, NA481:2004nbc}.
+    This results in the branching fractions for the $K^0_L \to \pi^0 e^+e^-$ and $K^0_L \to \pi^0 \mu^+\mu^-$ decays, 
+    \begin{equation} \label{eq:kl_piee}
+        \mathcal{B}(K^0_L \to \pi^0 e^+e^-) = \left(15.7|a_S|^2 \pm 6.2 |a_S| \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 2.4 \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) \right) \times 10^{-12}
+    \end{equation}
+    and 
+    \begin{equation} \label{eq:kl_pimumu}
+        \mathcal{B}(K^0_L \to \pi^0 \mu^+\mu^-) = \left(3.7|a_S|^2 \pm 1.6 |a_S| \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 1.0\left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 5.2 \right) \times 10^{-12}.
+    \end{equation}
+    Equations \ref{eq:kl_piee} and \ref{eq:kl_pimumu} show the main difference between the two decay modes, that the CP conserving contribution due to the two-photon intermediate state only occurs in the muon decay as it is negligible in the helicity suppressed electron mode.
 
+    Utilising the above equations, set out in \cite{Mescia:2006jd} the expected SM branching fractions can be described as,
+    \begin{equation}
+        \mathcal{B}(K^0_L \to \pi^0 e^+e^-) = 3.54^{+0.98}_{-0.85} (1.56^{+0.62}_{-0.49}) \times 10^{-11}
+    \end{equation}  
+    and 
+    \begin{equation}
+        \mathcal{B}(K^0_L \to \pi^0 \mu^+\mu^-) = 1.41^{+0.28}_{-0.26} (0.95^{+0.22}_{-0.21}) \times 10^{-11}.
+    \end{equation}
+    The current best results experimentally for the branching fraction of $K^0_L \to \pi^0 l^+l^-$ decays are the upper limits obtained by the KTeV experiment \cite{PhysRevLett.93.021805, PhysRevLett.84.5279} 
+    \begin{equation}
+        \mathcal{B}(K^0_L \to \pi^0 e^+e^-) < 28 \times 10^{-11} (90\% \text{CL})
+    \end{equation}  
+    and 
+    \begin{equation}
+        \mathcal{B}(K^0_L \to \pi^0 \mu^+\mu^-) < 38 \times 10^{-11} (90\% \text{CL}).
+    \end{equation}
     \section{Dark Photon}
 
     \ifSubfilesClassLoaded{%
