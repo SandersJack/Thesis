@@ -4,15 +4,21 @@
 \begin{document}
 
     %% Intro with background on NA48/2
-    \section{MC Samples Used}
-    The main MC samples used in the analysis are as follows,
-    \begin{itemize}
-        \item 200\,M $K \to \pi^0_D \pi^+ $
-        \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$ 
-    \end{itemize}
+    The aim of the analysis is to set limits on the mixing parameter of the Dark Photon (DP) Utilising the production of $A'$ through the decay of $\pi^0 \to \gamma A'$ and its subsequent decay into SM particles $A' \to e^+e^-$. The theoretical background for this hypothetical DP is set out in Section \ref{sec:DarkP_th}. 
+    The NA62 experiment, which is described in Section \ref{sec:na62} provides a clean sample of $\pi^0$ through the decay of $K^+ \to \pi^+\pi^0$ which has a branching ratio of 20.67\,\%. With the assumption that the DP decays promptly, where the $A'$ decays at the point of its production, the decay signature is identical to the Dalitz decay 
+    $\pi^0_D \to e^+e^-$. This decay represents the background for the DP search and determines the sensitivity of the experiment. 
+
+    
+    %\section{MC Samples Used}
+    %The main MC samples used in the analysis are as follows,
+    %\begin{itemize}
+    %    \item 200\,M $K \to \pi^0_D \pi^+ $
+    %    \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$ 
+    %\end{itemize}
 
     \section{Event Selection}
     %The analysis started using the same procedure used in the NA48/2 \cite{2015178}
+    The analysis strategy for the DP search first originated from the selection used for the same search at NA48/2 \cite{2015178}. The event selection strategy used in the search for the DP followed the selection of the Dalitz decay:
     \begin{itemize}
         \item Require either the Control Trigger (sometimes described as Minimum Bias Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are described in Chapter \ref{sec:na62}
         \item A vertex was selected if the total momentum was below $78/,GeV$, a total positive charge of 1, a $\chi^{2}$ less than 40 and a vertex position between 105\, and 180\,m.
@@ -22,10 +28,15 @@
         The electron was assigned to the only negative track and the negative track which doesn't pass the charged pion selection was selected as the positron.
         \item A selected photon is also required. The missing momentum of the vertex was calculated with the Kaon momentum and the total vertex momentum and was used to extrapolate a straight line from the vertex position to the z plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position a single cluster
         with a minimum energy of $5\,GeV$ is selected as a photon from the decay. The photon energy has to satisfy the condition of being within $5\,GeV$ of the calculated missing vertex momentum.
-        \item An elliptical cut is used to reduce background that would overwise pass the selection. The reconstructed mass of the electron, positron and photon is compared against the reconstructed mass of the electron, positron, photon and charged pion.
+        \item An elliptical cut is used to reduce background that would otherwise pass the selection. The reconstructed mass of the electron, positron and photon is compared against the reconstructed mass of the electron, positron, photon and charged pion.
     \end{itemize}
+    The major difference between the selection used for the NA62 study compared to NA48/2 was the decay particle identification strategy. The study at NA48/2 utilised calorimetric Particle Identification (PID) where the LKr was used to reconstruct the energy of pion and the electron-positron pair. The reconstructed energy over momentum was then used to distinguish 
+    between the electron/positron and pion. Whereas as described in the selection above the momentum measurements were only utilised in the selection and the reconstructed masses were compared to the expected. This change was driven by the difference in experimental setup between NA48/2 and NA62 where the latter is much longer as its designed for much higher momenta. 
+    This results in the LKr being further away from the decay point, which reduced the acceptance of the decay at NA62 compared to NA48/2. The Lkr was still used in the analysis for the reconstruction of the photon energy which was required to reduce other backgrounds from passing the selection. 
     %%% Plot of the 5 sigma pion selection
-    The cut on the reconstructed missing mass of the kaon, charge pion system was calculated using the Dalitz MC sample and is shown in Figure \ref{fig:kaonpion}. The sigma is taken from the fitted guassian on the plot and calculated as, 
+    
+    The cut on the reconstructed missing mass of the kaon and charged pion system was calculated using a $K \to \pi^0_D \pi^+ $ ($K_{2\pi_D}$) MC sample and is shown in Figure \ref{fig:kaonpion}. The kaon and the charged pion was selected from MC truth utilising the PDG particle codes within the simulation and was then associated with one of the reconstructed particle candidates.
+    The sigma for the particle identification cut is taken from fitting a gaussian on the distribution in Figure \ref{fig:kaonpion} and calculated as, 
     \begin{equation}
         \sigma = 3.984 \pm 0.007
     \end{equation} 
@@ -33,10 +44,11 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/kaonpion.png}
         \linespread{1.0}
-        \caption{Reconstructed missing mass of Kaon and charged pion compared to the known neutral pion mass}
+        \caption{Reconstructed missing mass of Kaon and charged pion compared to the known neutral pion mass.}
         \label{fig:kaonpion}
     \end{figure}
-    The elliptical cut on the final reconstructed masses was defined using the Dalitz MC sample to collect the maximum amount of events passing the selection while making the cut a tight as possible. The simgas for the reconstructed masses $M_{ee \gamma}$ and $M_{\pi ee \gamma}$ is calculated from fitting the distributions shown in Figure \ref{fig:reconMasses}.
+    The elliptical cut conducted on the final reconstructed masses of the reconstructed decay particle was defined using a $K_{2\pi_D}$ MC sample. Using the same method as before, utilising the MC truth information to select the correct decay particles and associating them to the reconstructed candidates, the distributions for the reconstructed masses were produced and shown in Figure \ref{reconMasses}. 
+    The sigma for the reconstructed masses $M_{ee \gamma}$ and $M_{\pi ee \gamma}$ is calculated from fitting the distributions shown in Figure \ref{fig:reconMasses} with a gaussian distribution.
     The calculated sigma for the reconstructed mass $M_{\pi ee \gamma}$ was calculated as
     \begin{equation}
         \sigma_M_{\pi ee \gamma} = 2.47 \pm 0.004
@@ -55,7 +67,7 @@
         \label{fig:reconMasses}%
     \end{figure}
     The equation used for the elliptical cut in the selection is defined below,
-    \begin{equation}
+    \begin{equation}\label{eq:elipse}
         \frac{((x - x_c)cos(\theta) + (y-y_c)sin(\theta))^2}{a^2} + \frac{((y - y_c)cos(\theta) - (x-x_c)sin(\theta))^2}{a^2} <= 1
     \end{equation}
     where $x_c$ and $y_c$ is the centre of the ellipse in the x and y dimensions. $\theta$ being the rotation of the ellipse, $a$ and $b$ are the length of the semi-major and the semi-minor axis respectively. 
@@ -69,21 +81,23 @@
         \item $(\theta = 0.4887)$: The rotation angle of the ellipse in radians.
         \item $((x, y))$: The point being tested for inclusion within the ellipse.
     \end{itemize}
-    Which produced an ellipse used in the selection which is shown in \ref{fig:elip}
+    The the size of the semi-major and minor axis were chosen to maximise the amount of $\pi^0_D$ decays passing the selection and to have the ellipse as small as possible to reduce the chance of other backgrounds being introduced in the selected events.
+    The parameters described above when inputted into Equation \ref{eq:elipse} produced an ellipse shown in red in Figure \ref{fig:elip}. Figure \ref{fig:elip} shows all the events from the $K_{2\pi_D}$ mc sample reaching the end of the selection, just before the elliptical cut. 
+    It shows that the ellipse is as tight as possible to collect the majority of the $K_{2\pi_D}$ events, without being too large.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/elip.png}
         \linespread{1.0}
-        \caption{Reconstructed missing mass of $M_{\pi ee \gamma}$ compared against $M_{ee \gamma}$ produced from a K2pi Dalitz MC sample, with the defined elliptical cut used in the selection}
+        \caption{Reconstructed missing mass of $M_{\pi ee \gamma}$ compared against $M_{ee \gamma}$ produced from a $K_{2\pi_D}$ MC sample, with the defined elliptical cut used in the selection.}
         \label{fig:elip}
     \end{figure}
-    The acceptance of the Dailtz sample is defined across the reconstructed electron position mass in the range $2m_e < M_ee < m_{\pi^0}$ and is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure \ref{fig:accept}.
-    Improving the selection using kinematic cuts compared to the calorimeter PID improved the acceptance at high $M_ee$ compared to NA48/2. It was expected that NA48/2 would have an acceptance advantage due to its design as a shorter experiment. If the same analysis procedure was employed using calorimetric PID the acceptance would not be competitive with NA48/2
+    The acceptance of the $K_{2\pi_D}$ MC sample is defined across the reconstructed electron position mass in the range $2m_e < M_ee < m_{\pi^0}$ and is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure \ref{fig:accept}.
+    Improving the selection using kinematic cuts compared to the calorimeter PID improved the overall acceptance. It was expected that NA48/2 would have an acceptance advantage due to its design as a shorter experiment, improving the acceptance to low momenta decay particles. It is clear however that if the same analysis procedure was employed using calorimetric PID the acceptance would not be as competitive with NA48/2.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/accept.png}
+        \includegraphics[width=0.9\textwidth]{plots/accept.png}
         \linespread{1.0}
-        \caption{Acceptance of the NA62 selection compared against the acceptance produced in the NA48/2 analysis \cite{2015178}}
+        \caption{Acceptance of the NA62 selection compared against the acceptance produced in the NA48/2 analysis \cite{2015178}.}
         \label{fig:accept}
     \end{figure}
     \section{Integrated Kaon Flux}\lable{sec:kaonFlux}
@@ -122,9 +136,9 @@
 
     \section{Dark Photon Search}
     Two methods were employed in the background estimation for the Dark Photon Search. First used generated MC samples of the expected background as the background estimate, however as described below produced unsatisfactory results, which led on to the second method, using a data driven method for the background estimation. 
-    Both methods are described below
+    Both methods are described below. 
     \subsection{MC Background Method}
-    As stated before, the MC method only used the 2022 dataset. 
+    As stated previously, the MC background method only utilised the 2022 NA62 dataset. 
     It was expected that the limited size of the MC samples could impact the final result when used for the background estimate, however it was not feasible to directly increase the statistics on the main samples due to compute time and file size. It was possible to increase the statistics across a portion of the reconstructed mass spectra using a feature of the Framework.
     It is possible for the true invariant mass of the electron positron pair to be used to calculate the kinematic variable $x$ from Equation \ref{eq:XParam}. 
     \begin{equation}\label{eq:XParam}
@@ -134,7 +148,7 @@
     Figure \ref{fig:trueMC_X} the fraction of events above 0.5 was 0.003. Producing a simulation with the enabled, even with a fraction of size of the main sample would decrease the errors on the MC counts by orders of magnitude. 
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/TrueMC_X.png}
+        \includegraphics[width=0.9\textwidth]{plots/TrueMC_X.png}
         \linespread{1.0}
         \caption{Reconstructed missing mass of electron positron pair of in terms of reconstructed kinematic variable $x$}
         \label{fig:trueMC_X}
@@ -162,10 +176,11 @@
     \begin{equation}
         y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}
     \end{equation}
-    where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. The TFF is parametrised as $F(x) = 1 + ax$, with a being a parameter set by experiments or theory. ADD THEORY BIT. The Particle Data Group (PDG) average for all experiments was $a = 0.0335± 0.0031$ \cite{Tanabashi:2018oca}. 
-    NEED MORE DESCRIPTION WHY CANT USE THEORY OR EXPERIMENT.
-    The background estimation using the MC cannot rely on the input of theory or experiments due to the underlying uncertainties. In the NA62 Framework $a =  0.032$ so a correction had to be made to remove the applied TFF and re-weight using the events passing the selection.
-    It is clear that in Figure \ref{fig:MCDATAFF} which shows the data over MC from Figure \ref{fig:mee_mc} but rather than in terms of $M_{ee}$ plot against $x$ from Equation \ref{eq:XParam}, suggests that there is a discrepancy. MC and data no longer match but is dependent along $x$ suggesting that the TFF found in the Framework is not acceptable for use in the background estimate.
+    where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. Within the kinematic region of Dalitz decay the TFF is expected to vary slowly as x increases and can be approximated as $F(x) = 1 + ax$, with $a$ being the slope factor which has been set through theory and experimentally. 
+    The Vector Meson Dominance (VMD) model expects that $a = m_{\pi^0} (m_{\rho}^2 + m_{\omega}^2) / 2 = 0.03$ \cite{PhysRevD.83.037503}.
+    Experimentally the Particle Data Group (PDG) average for all experiments was $a = 0.0335± 0.0031$ \cite{Tanabashi:2018oca}. Due to large errors and inconsistent results experimentally and through theory it is not possible just to rely on external values for the slope the MC cannot rely on the input of theory or experiments due to the underlying uncertainties. 
+    In the NA62 Framework by default the slope factor $a =  0.032$. A correction was made to remove the applied TFF in the framework and then is re-weighted using the data events passing the selection compared to the expected number of events from MC across the reconstructed mass.
+    In Figure \ref{fig:MCDATAFF} which shows the data over MC from Figure \ref{fig:mee_mc} in terms of the kinematic parameter $x$ described in Equation \ref{eq:XParam}, suggests that there is a discrepancy between the expected and data. The MC and data do not match but there is a dependence along $x$ suggesting that the TFF found in the Framework is not acceptable for use in the background estimate with this data set.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/MCDataWithFF.png}
@@ -177,9 +192,9 @@
     \begin{equation} \label{eq:TFFsq}
         F(x)^2 = (1 + ax)^2
     \end{equation}
-    which resulted in the distribution shown in Figure \ref{fig:MCDATANOFF}. The MC with the removed effects of the TFF was fitted with equation \ref{eq:TFFsq} using a least $\chi^2$ method, with the resultant line shown in Figure \ref{fig:MCDATANOFF}, representing a value for a 
+    which resulted in the distribution shown in Figure \ref{fig:MCDATANOFF}. The MC with the removed effects of the TFF was fitted with equation \ref{eq:TFFsq} using a least $\chi^2$ method, with the resultant TFF shown in Figure \ref{fig:MCDATANOFF}. The fitted TFF in Figure \ref{fig:MCDATANOFF} represents a slope factor of,
     \begin{equation}
-        a = 0.0210 \pm 0.0029    
+        a = 0.0210 \pm 0.0029.
     \end{equation}
     \begin{figure}[H]
         \centering 
@@ -191,7 +206,7 @@
     The correction resulted in slightly better Data/MC agreement shown in Figure \ref{fig:mee_mc_afteTFF} when compared to Figure \ref{fig:mee_mc}.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/Mee_afterTFF.png}
+        \includegraphics[width=0.9\textwidth]{plots/Mee_afterTFF.png}
         \linespread{1.0}
         \caption{Reconstructed mass of electron positron pair of data and MC samples corrected for the effective transition form factor.}
         \label{fig:mee_mc_afteTFF}
@@ -200,7 +215,7 @@
     The final counts for events passing the selection in terms of the reconstructed invariant mass for each MC sample is shown in Figure \ref{fig:counts_mc_data}, where it is clear where the two $K_{2\pi_D}$ samples have been combined. 
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/counts_MC_Data.png}
+        \includegraphics[width=0.9\textwidth]{plots/counts_MC_Data.png}
         \linespread{1.0}
         \caption{Reconstructed mass of electron positron pair of data, individual MC samples and combined MC.}
         \label{fig:counts_mc_data}
@@ -209,7 +224,7 @@
     significantly reduced the statistical error of the combined sample by an order of magnitude compared to using only the original sample.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/error_MC_Data.png}
+        \includegraphics[width=0.9\textwidth]{plots/error_MC_Data.png}
         \linespread{1.0}
         \caption{Statistical error of MC samples in terms of reconstructed mass of electron positron pair.}
         \label{fig:error_mc_data}
@@ -219,7 +234,7 @@
     To select the search window centers and the size of the windows, the reconstructed mass resolution was considered. The reconstructed mass resolution was calculated using MC where the difference between the true mass and the reconstructed mass of the electron positron pair was collected for each mass bin and is shown in Figure \ref{fig:true_reco}.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/true_reco.png}
+        \includegraphics[width=0.9\textwidth]{plots/true_reco.png}
         \linespread{1.0}
         \caption{True invariant mass minus reconstructed invariant mass of the electron positron pair in terms of true invariant mass.}
         \label{fig:true_reco}
@@ -231,7 +246,7 @@
     The NA62 resolution is a significant improvement compared to NA48/2, shown as red line in Figure \ref{fig:mass_res} due to improved detector design and setup. Which results in smaller search mass windows compared to the previous study.
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/mass_res.png}
+        \includegraphics[width=0.9\textwidth]{plots/mass_res.png}
         \linespread{1.0}
         \caption{Sigma of the difference between true and reconstructed invariant mass of the electron-positron pair in bin of true invariant mass.}
         \label{fig:mass_res}
@@ -259,9 +274,9 @@
 
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[width=0.7\textwidth]{plots/sig_mass.png} }}%
+        \subfloat{{\includegraphics[width=0.9\textwidth]{plots/sig_mass.png} }}%
         \linespread{1.0}
-        \subfloat{{\includegraphics[width=0.7\textwidth]{plots/sig_mass_y.png} }}%
+        \subfloat{{\includegraphics[width=0.9\textwidth]{plots/sig_mass_y.png} }}%
         \linespread{1.0}
         \caption{Local significance of DP signal across the search window $9 \leq m_{A'} \leq 120 MeV / c^2$. Top, in terms of DP mass and bottom, the y projection of the top plot.}%
         \label{fig:local_sig}%
@@ -294,11 +309,11 @@
         \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\% CL for each Dark Photon mass value with the result from NA48/2 for comparison \cite{2015178}.}
         \label{fig:epsilon_sq}
     \end{figure}
-    It is clear that without increased MC statistics, the study would not be competitive with the already published result from NA48/2 \cite{2015178} except for high mass ranges above $85 MeV/c^2$. 
+    It is clear that without increased MC statistics, the study would not be competitive with the already published result from NA48/2 \cite{2015178} except for high mass ranges above $85 MeV/c^2$. As this method is limited by the low statistics of the MC it would not be improved by introducing larger NA62 datasets 
     %% Can maybe put the global plot but may not be necessary
     A new method could be employed that removed the statistical error introduced by the MC for the background estimation.
     \subsection{Data Driven Background Method}
-    The data driven background method employed the same selection setout in the previous section but rather than using the MC samples for the background estimation the data itself was used. Eventually the 2023 dataset was implemented along with the 2022. The number of data events passing the selection for the 2022/23 datasets was 
+    The data driven background method employed the same selection described in the previous section, but instead of using the produced MC samples for the background estimation, the data itself was used. Eventually the 2023 dataset was implemented along with the 2022. The number of data events passing the selection for the 2022/23 datasets was 
     66,839,882, which is just over a 3 fold increase compared to just the 2022, even though both years had similar run durations. This was due to a change in the defined downscaling for the eMT trigger line which was reduced from 3 to 1, resulting in a total effective $N_K$ calculated with Equation \ref{eq:nk},
     \begin{equation}
         N_K^{2022/23} = (4.95 \pm 0.15) \times 10^{12}
@@ -434,7 +449,7 @@
 
 
     \ifSubfilesClassLoaded{%
-        \bibliographystyle{IEEEtran}
-        \bibliography{../../../references.bib}%
+        \bibliographystyle{ieeetr}
+        \bibliography{../../references.bib}%
     }{} 
 \end{document}
