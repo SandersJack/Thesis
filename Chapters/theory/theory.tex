@@ -432,13 +432,30 @@
     \end{equation}
     \section{Dark Photon}
     As mentioned above the SM is not a complete theory of the universe. A large component of the universe is not yet understood such as the origin of the observed rise in cosmic-ray positron fraction with energy and the anomalous muon magnetic moment (g-2) \cite{Muong-2:2023cdq} suggest the existence of a hidden sector. 
-    The hypothetical Dark Photon (DP) (denoted $A'$) with a \si{\giga\electronvolt\per\clight} scale mass could be possible explanations for these deviations from the SM. The DP has two unknown parameters: the mass $m_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the DP interaction with SM particles. For DP of mass less than a pion 
+    A possible extension of the SM is the interaction of a new $U(1)$ gauge symmetry with an associated boson, the Dark Photon (DP) which kinematically mixes with the SM hypercharge $U(1)_Y$ \cite{Fabbrichesi:2020wbt}. There are three separate benchmark cases of the DP which have been set out by the Physics Beyond Colliders group for future study \cite{Beacham_2020}: 
+    \begin{itemize}
+        \item BC1 - The DP is massive and decays into only SM particles.
+        \item BC2 - The DP is massive decays into mostly Dark Matter.
+        \item BC3 - The DP is massless and involves the existence of so called milli-charged particles.
+    \end{itemize}
+    In this study the BC1 case is the only scenario accounted for. The hypothetical DP (denoted $A'$) with a \si{\giga\electronvolt\per\clight} scale mass could be possible explanations for these deviations from the SM. The DP has two unknown parameters: the mass $m_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the DP interaction with SM particles. For DP of mass less than a pion 
     it is possible for it to produced in the $\pi^0$ decay $\pi^0 \to \gamma A'$ and then subsequently decay to SM particles $A' \to e^+e^-$. The resultant branching fraction for the $\pi^0$ decay is \cite{PhysRevD.80.095024},
-    \begin{equation}
+    \begin{equation}\label{eq:DP_branch}
         \mathcal{B}(\pi^0 \to \gamma A') = 2\epsilon^2 \left(1-\frac{m_{A'}^2}{m_{\pi^0}^2}^3\right) \mathcal{B}(\pi^0 \to \gamma \gamma).
     \end{equation}
-    Within the DP mass range for the decay the only allowed tree level decay is the $A' \to \e^+e^-$ decay. As the loop decays to three photons and two neutrinos are highly suppressed compared to the electron pair, it is safe to assume that the branching fraction for $A' \to \e^+e^-$ is equal to 1. This assumption allows the expected decay width to be described as \cite{PhysRevD.80.095024}, 
-    %eq
+    Within the DP mass range for the decay the only allowed tree level decay is the $A' \to \e^+e^-$ decay. As the loop decays to three photons and two neutrinos are highly suppressed compared to the electron pair, it is safe to assume that the branching fraction for $A' \to \e^+e^- \approx 1 $. This assumption allows the expected decay width to be described as \cite{PhysRevD.80.095024}, 
+    \begin{equation}
+        \Gamma_{A'} \approx \Gamma (A' \to \e^+e^-) = \frac{1}{3} \alpha \epsilon^2 m_{A'} \sqrt{1 - \frac{4m_e^2}{m_{A'^2}}} \left( 1 + \frac{4m_e^2}{m_{A'^2}} \right)
+    \end{equation}
+    By utilising Equation \ref{eq:DP_branch} and constructing a study to search for the DP to measure it branching fraction, it is possible to measure the mixing parameter. Within the DP mass range $2m_e < m_{A'} < m_{\pi^0}$ the world leading result for the upper limit of $\epsilon^2$ is from the NA48/2 experiment \cite{2015178} and is shown in Figure \ref{fig:na48_dp_lim}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/na48_limits.png}
+        \linespread{1.0}
+        \caption{Obtained upper limits on the DP mixing parameter from the NA48/2 \cite{2015178} and other experiments.}%
+        \label{fig:na48_dp_lim}%
+    \end{figure}
+    The study set out in Section \ref{sec:darkP} sets out to improve the limits on the DP mixing parameter set by NA48/2 with data collected from the NA62 experiment.
     \ifSubfilesClassLoaded{%
     \bibliographystyle{ieeetr}
     \bibliography{../../references.bib}%
