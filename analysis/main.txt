@@ -50,23 +50,22 @@ L→π0l+l−. . . . . . . . . . . . . . . . . . . . . . . . . . . 26
 4.5 Commissioning at CERN . . . . . . . . . . . . . . . . . . . . . . . . . 86
 4.6 CEDAR-H Performance at NA62 . . . . . . . . . . . . . . . . . . . . 98
 5 The Search for Dark Photons at NA62 101
-5.1 MC Samples Used . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
-5.2 Event Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
-5.3 Integrated Kaon Flux . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
-5.4 Dark Photon Search . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
-5.4.1 MC Background Method . . . . . . . . . . . . . . . . . . . . . 108
-5.4.2 Data Driven Background Method . . . . . . . . . . . . . . . . 118
-6 Future Kaon Experiments 128
-6.1 HIKE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 128
-6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
-6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
-6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 132
-6.2 Flexible Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
-6.2.1 Testing: Geometry and Magnetic Fields . . . . . . . . . . . . 135
-6.3 The KTAG upgrades for HIKE . . . . . . . . . . . . . . . . . . . . . 140
-6.4 RICH Upgrade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
-6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
-6.6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 167
+5.1 Event Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101
+5.2 Integrated Kaon Flux . . . . . . . . . . . . . . . . . . . . . . . . . . . 107
+5.3 Dark Photon Search . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+5.3.1 MC Background Method . . . . . . . . . . . . . . . . . . . . . 109
+5.3.2 Data Driven Background Method . . . . . . . . . . . . . . . . 120
+6 Future Kaon Experiments 131
+6.1 HIKE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 131
+6.1.1 Phase 1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+6.1.2 Phase 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 134
+6.1.3 Phase 3 (KLEVER) . . . . . . . . . . . . . . . . . . . . . . . . 135
+6.2 Flexible Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 136
+6.2.1 Testing: Geometry and Magnetic Fields . . . . . . . . . . . . 138
+6.3 The KTAG upgrades for HIKE . . . . . . . . . . . . . . . . . . . . . 143
+6.4 RICH Upgrade . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+6.5 Detector Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+6.6 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 170
 3List of Figures
 2.1 The Standard Model of particle physics with the 12 fermions shown
 in purple and green, the five vector bosons shown in red and the Higgs
@@ -216,142 +215,142 @@ H in 2023 and CEDAR-W in 2022 with the expectation values for a
 given photo-electron yield as a function of at least N coincidences in
 sectors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
 5.1 Reconstructed missing mass of Kaon and charged pion compared to
-the known neutral pion mass . . . . . . . . . . . . . . . . . . . . . . . 103
+the known neutral pion mass. . . . . . . . . . . . . . . . . . . . . . . 104
 5.2 Reconstructed masses of selected particles, left the total of charged
 pion, electron, positron and gamma and on right, electron, positron
-and gamma. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 104
+and gamma. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
 5.3 Reconstructed missing mass of Mπeeγcompared against Meeγpro-
-duced from a K2pi Dalitz MC sample, with the defined elliptical cut
-used in the selection . . . . . . . . . . . . . . . . . . . . . . . . . . . 105
+duced from a K2πDMC sample, with the defined elliptical cut used
+in the selection. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 106
 5.4 Acceptance of the NA62 selection compared against the acceptance
-produced in the NA48/2 analysis [43] . . . . . . . . . . . . . . . . . . 106
+produced in the NA48/2 analysis [43]. . . . . . . . . . . . . . . . . . . 107
 80.0 LIST OF FIGURES LIST OF FIGURES
-5.5 Reconstructed masses K2πDandKµ3Dfor MC and data . . . . . . . 107
+5.5 Reconstructed masses K2πDandKµ3Dfor MC and data . . . . . . . 108
 5.6 Reconstructed missing mass of electron positron pair of in terms of
-reconstructed kinematic variable x. . . . . . . . . . . . . . . . . . . 108
-5.7 Reconstructed mass of electron positron pair of data and MC samples.109
+reconstructed kinematic variable x. . . . . . . . . . . . . . . . . . . 109
+5.7 Reconstructed mass of electron positron pair of data and MC samples.110
 5.8 Data vs MC in terms of reconstructed kinematic variable xwith the
-framework transition form factor . . . . . . . . . . . . . . . . . . . . 110
+framework transition form factor . . . . . . . . . . . . . . . . . . . . 111
 5.9 Data vs MC in terms of reconstructed kinematic variable xwith the
-framework transition form factor removed . . . . . . . . . . . . . . . 111
+framework transition form factor removed . . . . . . . . . . . . . . . 112
 5.10 Reconstructed mass of electron positron pair of data and MC samples
-corrected for the effective transition form factor. . . . . . . . . . . . . 111
+corrected for the effective transition form factor. . . . . . . . . . . . . 113
 5.11 Reconstructed mass of electron positron pair of data, individual MC
-samples and combined MC. . . . . . . . . . . . . . . . . . . . . . . . 112
+samples and combined MC. . . . . . . . . . . . . . . . . . . . . . . . 114
 5.12 Statistical error of MC samples in terms of reconstructed mass of
-electron positron pair. . . . . . . . . . . . . . . . . . . . . . . . . . . 112
+electron positron pair. . . . . . . . . . . . . . . . . . . . . . . . . . . 114
 5.13 True invariant mass minus reconstructed invariant mass of the elec-
-tron positron pair in terms of true invariant mass. . . . . . . . . . . . 113
+tron positron pair in terms of true invariant mass. . . . . . . . . . . . 115
 5.14 Sigma of the difference between true and reconstructed invariant mass
-of the electron-positron pair in bin of true invariant mass. . . . . . . . 113
+of the electron-positron pair in bin of true invariant mass. . . . . . . . 116
 5.15 Number of observed data events ( Nobs), expected number of events
 from MC ( Nexp), the respective errors ( δNobsandδNexp) and the
 resultant upper limit on the number of Dark Photon candidates to a
-90% confidence level. . . . . . . . . . . . . . . . . . . . . . . . . . . . 114
+90% confidence level. . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
 5.16 Local significance of DP signal across the search window 9 ≤mA′≤
 120MeV/c2. Top, in terms of DP mass and bottom, the y projection
-of the top plot. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 115
+of the top plot. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
 5.17 Upper limit on the branching fraction of π0→γA′at a 90% CL for
-each Dark Photon mass value. . . . . . . . . . . . . . . . . . . . . . . 116
+each Dark Photon mass value. . . . . . . . . . . . . . . . . . . . . . . 119
 5.18 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
-mass value with the result from NA48/2 for comparison [43]. . . . . . 117
+mass value with the result from NA48/2 for comparison [43]. . . . . . 120
 5.19 Reconstructed invariant mass of electron-positron pair for events pass-
-ing the selection from the 2022 and 2023 NA62 dataset. . . . . . . . . 118
+ing the selection from the 2022 and 2023 NA62 dataset. . . . . . . . . 121
 90.0 LIST OF FIGURES LIST OF FIGURES
 5.20 Fit of 4th order polynomial on the data distribution at the first DP
 mass hypothesis for the background estimation, along with fits for
-3rd and 5th order polynomials used for systematic error estimation. . 120
+3rd and 5th order polynomials used for systematic error estimation. . 123
 5.21 Fit of 4th order polynomial on the data distribution at the final DP
 mass hypothesis for the background estimation, along with fits for
-3rd and 5th order polynomials used for systematic error estimation. . 121
+3rd and 5th order polynomials used for systematic error estimation. . 124
 5.22 Number of observed data events ( Nobs), expected number of events
 from the data driven method ( Nexp), the respective errors ( δNobsand
 δNexp) and the resultant upper limit on the number of Dark Photon
-candidates to a 90% confidence level. . . . . . . . . . . . . . . . . . . 122
+candidates to a 90% confidence level. . . . . . . . . . . . . . . . . . . 125
 5.23 Local significance of DP signal across the search window 8 ≤mA′≤
 121.6MeV/c2for the data driven study. Top, in terms of DP mass
-and bottom, the y projection of the DP mass plot. . . . . . . . . . . . 123
+and bottom, the y projection of the DP mass plot. . . . . . . . . . . . 126
 5.24 Upper limit on the branching fraction of π0→γA′at a 90% CL for
 each Dark Photon mass value, for the data driven background method
-for estimating the number of expected events. . . . . . . . . . . . . . 124
+for estimating the number of expected events. . . . . . . . . . . . . . 127
 5.25 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value from the data driven background estimation, with the
-result from NA48/2 for comparison [43]. . . . . . . . . . . . . . . . . 125
+result from NA48/2 for comparison [43]. . . . . . . . . . . . . . . . . 128
 5.26 Upper limit at a 90% CL on the mixing parameter for the data driven
 background estimate (Green) compared to published exclusions limits
-[43, 68, 69, 70, 71, 72, 73, 74] . . . . . . . . . . . . . . . . . . . . . . 126
+[43, 69, 70, 71, 72, 73, 74, 75] . . . . . . . . . . . . . . . . . . . . . . 129
 5.27 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value from the data driven background estimation, with the
 result from NA48/2 for comparison [43] and the expected limit of the
-prompt decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
-6.1 Diagram of HIKE Phase 1 detector setup [76]. . . . . . . . . . . . . . 129
+prompt decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
+6.1 Diagram of HIKE Phase 1 detector setup [77]. . . . . . . . . . . . . . 132
 6.2 Diagram of the new STRAW spectrometer layout with 5 mm straw
-tubes [76]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 130
-6.3 Diagram of HIKE Phase 2 detector setup [76]. . . . . . . . . . . . . . 132
-6.4 Diagram of HIKE phase 3 detector setup [76]. . . . . . . . . . . . . . 133
-6.5 Example configuration for the STRAW0 in the geometry file for NA62MC.134
+tubes [77]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+6.3 Diagram of HIKE Phase 2 detector setup [77]. . . . . . . . . . . . . . 135
+6.4 Diagram of HIKE phase 3 detector setup [77]. . . . . . . . . . . . . . 136
+6.5 Example configuration for the STRAW0 in the geometry file for NA62MC.137
 100.0 LIST OF FIGURES LIST OF FIGURES
-6.6 Geantino hits on a single view in STRAW chamber 1. . . . . . . . . . 136
+6.6 Geantino hits on a single view in STRAW chamber 1. . . . . . . . . . 139
 6.7 Visualisation of the magnetic fields in the spectrometer region from
 the simulation. Top, previous version with large outer volumes and
 bottom, new flexible version with reduced outer volumes. The small
-red arrow represents the direction of the magnetic field in the volumes.137
+red arrow represents the direction of the magnetic field in the volumes.140
 6.8 Visualisation of the MNP33 magnet placed in front of the STRAW
 chamber 1 at 163 m from the target in the simulation. Originally, the
 magnet was placed at 198 m, which is after the STRAW chamber 2.
 The small red arrow represents the direction of the magnetic field in
-the volumes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
+the volumes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
 6.9 Tracks for charged Geantinos with a 400 GeV /c momentum through
-the NA62 detector. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
-6.10 Diagram describing the workings of a MCP-PMT. . . . . . . . . . . . 141
+the NA62 detector. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 142
+6.10 Diagram describing the workings of a MCP-PMT. . . . . . . . . . . . 144
 6.11 Lifetimes of available MCP-PMTs with the photocathode QE vs Inte-
 grated Anode Charge (IAC) for photons at 400 nm wavelength. Top,
 old ALD coated MCP-PMTs from Hamamatsu with non coated ver-
 sions shown in the insert plot. Bottom, more recent ALD coated
-MCP-PMTs from PHOTONIS and Photek in the inserted plot. [85] . 142
-6.12 Schematic of Photonis MCP-PMT [86]. . . . . . . . . . . . . . . . . . 142
-6.13 Visualisation of the MCP-PMT array placed inside of the KTAG . . . 143
-6.14 Collected light distribution for the MCP-PMT installed in the KTAG. 144
-6.15 Rate capability of state of the art MCP-PMTs [87]. . . . . . . . . . . 145
-6.16 Time response of the Photonics XP85012-S-R2D2 MCP-PMT. . . . . 145
+MCP-PMTs from PHOTONIS and Photek in the inserted plot. [86] . 145
+6.12 Schematic of Photonis MCP-PMT [87]. . . . . . . . . . . . . . . . . . 145
+6.13 Visualisation of the MCP-PMT array placed inside of the KTAG . . . 146
+6.14 Collected light distribution for the MCP-PMT installed in the KTAG. 147
+6.15 Rate capability of state of the art MCP-PMTs [88]. . . . . . . . . . . 148
+6.16 Time response of the Photonics XP85012-S-R2D2 MCP-PMT. . . . . 148
 6.17 Quantum Efficiency of Photonics MCP-PMT as a function of wave-
-length. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 146
+length. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 149
 6.18 Results from the Monte Carlo simulation of CEDAR-H and MCP-
 PMT. Left, the number of photo-electrons per kaon candidate and
-right, the Kaon Candidate time. . . . . . . . . . . . . . . . . . . . . . 147
-6.19 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 148
+right, the Kaon Candidate time. . . . . . . . . . . . . . . . . . . . . . 150
+6.19 Diagram of RICH PMT array . . . . . . . . . . . . . . . . . . . . . . 151
 6.20 Diagram of proposed RICH SiPM arrays for use in HIKE. Left, 9x9 mm,
-center 6x6 mm and right 3x3 mm. . . . . . . . . . . . . . . . . . . . . 149
+center 6x6 mm and right 3x3 mm. . . . . . . . . . . . . . . . . . . . . 152
 110.0 LIST OF FIGURES LIST OF FIGURES
 6.21 Selected SiPM quantum efficiency taken from Hamamatsu S13360
-data-sheet [90] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 150
+data-sheet [91] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 153
 6.22 Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays produced from a MC sample of K+→π0e+ν(Ke3). The left
 column shows illumination on the Saleve side of the RICH detector,
-and the right column shows the Jura side. . . . . . . . . . . . . . . . 151
+and the right column shows the Jura side. . . . . . . . . . . . . . . . 154
 6.23 Cherenkov light illumination of RICH PMT arrays for the three dif-
 ferent sensors produced from a MC sample of K+→π0e+ν(Ke3).
 The left column shows illumination on the Saleve side of the RICH
-detector, and the right column shows the Jura side. . . . . . . . . . . 152
+detector, and the right column shows the Jura side. . . . . . . . . . . 155
 6.24 Number of photo-electrons per ring candidate for NA62 PMTs and
 the three possible HIKE SiPMs produced from a MC sample of K+→
-π0e+ν(Ke3). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
+π0e+ν(Ke3). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 157
 6.25 Reconstructed ring radius for electron candidates for NA62 PMTs
 and the three possible HIKE SiPMs produced from a MC sample of
-K+→π0e+ν(Ke3). . . . . . . . . . . . . . . . . . . . . . . . . . . . 155
+K+→π0e+ν(Ke3). . . . . . . . . . . . . . . . . . . . . . . . . . . . 158
 6.26 Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated
 subsets of hits within the ring candidate. A detailed description of
-the procedure is provided here [92] . . . . . . . . . . . . . . . . . . . 157
+the procedure is provided here [93] . . . . . . . . . . . . . . . . . . . 160
 6.27 Production Z compared against production radius of particles produc-
 ing a hit in the Spectrometer with the fraction of particles produced
 before and after Z=210 m. Left, for the KL→π+π−π0decay and
-right, for the KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . 161
+right, for the KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . 164
 6.28 Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the
-KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 161
+KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 164
 6.29 Rate of particles across the cross section at the first STRAW chamber
-entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 165
+entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 168
 12List of Tables
 2.1 Properties of charged and neutral kaons [10]. . . . . . . . . . . . . . . 22
 2.2 Main decay modes of the positively charged kaon ( K+) with their
@@ -370,46 +369,46 @@ outside the CEDAR vessel. . . . . . . . . . . . . . . . . . . . . . . . . 68
 4.2 Table containing the ratios of η6/η8andη7/η8, as well as the max
 photo-electrons per beam particle at the peak values from the pressure
 scans at different diaphragm apertures. . . . . . . . . . . . . . . . . . 79
-5.1 Acceptances of K2πDandKµ3Dsamples for the K2πDselection . . . . 106
+5.1 Acceptances of K2πDandKµ3Dsamples for the K2πDselection . . . . 107
 6.1 Intensity requirements for three phases for HIKE. The number of kaon
 decays per year corresponds to those that decay within the HIKE
-fiducial volume. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 129
-6.2 Arguments for detectors in the geometry file for use within NA62MC. 135
+fiducial volume. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+6.2 Arguments for detectors in the geometry file for use within NA62MC. 138
 130.0 LIST OF TABLES LIST OF TABLES
 6.3 Comparisons of the expected performance of the NA62 and HIKE
-RICH detectors [76] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 151
+RICH detectors [77] . . . . . . . . . . . . . . . . . . . . . . . . . . . . 154
 6.4 Rates of the four main KLdecays in the HIKE phase 2 fiducial vol-
-ume. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 159
+ume. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 162
 6.5 Total rates in the detectors for the four main KLdecays: KL→
 π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
-µ3),KL→π0π0π0andKL→π+π−π0..160
+µ3),KL→π0π0π0andKL→π+π−π0..163
 6.6 Detector rates for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 162
+directly from the daughter particles of the KLdecays. . . . . . . . . . 165
 6.7 Max channel rates for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 163
+directly from the daughter particles of the KLdecays. . . . . . . . . . 166
 6.8 Particle rates at specified checkpoints along the HIKE detector setup.
 Including the average rate across the cross-section and the maximum
 rate per cm2for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced
-directly from the daughter particles of the KLdecays. . . . . . . . . . 164
+directly from the daughter particles of the KLdecays. . . . . . . . . . 167
 6.9 Particle rates at specified checkpoints along the HIKE detector setup
 excluding particles passing within the expected beam radius for the
 four main KLdecays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),
 KL→π0π0π0andKL→π+π−π0, produced directly from the daugh-
-ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 166
+ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 169
 6.10 Average and Max particle rates per cm2for specified checkpoints
-along the length of the detector. . . . . . . . . . . . . . . . . . . . . . 167
+along the length of the detector. . . . . . . . . . . . . . . . . . . . . . 170
 14Chapter 1
 Introduction
 Hello Chapter!
@@ -2447,24 +2446,31 @@ electron yield as a function of at least N coincidences in sectors.
 100Chapter 5
 The Search for Dark Photons at
 NA62
-5.1 MC Samples Used
-The main MC samples used in the analysis are as follows,
-200 M K→π0
-Dπ+
-50 M K→π0
-Dµ+νµ
-5.2 Event Selection
+The aim of the analysis is to set limits on the mixing parameter of the Dark Photon
+(DP) Utilising the production of A′through the decay of π0→γA′and its sub-
+sequent decay into SM particles A′→e+e−. The theoretical background for this
+hypothetical DP is set out in Section 2.3. The NA62 experiment, which is described
+in Section 3 provides a clean sample of π0through the decay of K+→π+π0which
+has a branching ratio of 20.67 %. With the assumption that the DP decays promptly,
+where the A′decays at the point of its production, the decay signature is identical
+to the Dalitz decay π0
+D→e+e−. This decay represents the background for the DP
+search and determines the sensitivity of the experiment.
+5.1 Event Selection
+The analysis strategy for the DP search first originated from the selection used for
+the same search at NA48/2 [43]. The event selection strategy used in the search for
+the DP followed the selection of the Dalitz decay:
 Require either the Control Trigger (sometimes described as Minimum Bias
 Trigger), Multi Track (MT) or Electron Multi Track (eMT) which are de-
 scribed in Chapter 3
 A vertex was selected if the total momentum was below 78 /, GeV , a total
+1015.1 Event Selection The Search for Dark Photons at NA62
 positive charge of 1, a χ2less than 40 and a vertex position between 105 and
 180 m.
 The tracks associated to the vertex are selected if they are in acceptance of
 all four Straw spectrometer chambers and the CHOD. The track momentum
 must be greater than 5 GeV and less than 60 GeV with a+of less than 30.
 The tracks must traverse within 20 cm of each other.
-1015.2 Event Selection The Search for Dark Photons at NA62
 Require the presence of a three track in the vertex with a selected positive
 charged pion ( π+), and a selected electron positron pair ( π±). The pion is
 selected using missing mass between the Kaon momentum which is taken from
@@ -2482,27 +2488,48 @@ the LKr calorimeter. Within a radius of 15 cm of the extrapolated position a
 single cluster with a minimum energy of 5 GeV is selected as a photon from
 the decay. The photon energy has to satisfy the condition of being within
 5GeV of the calculated missing vertex momentum.
-An elliptical cut is used to reduce background that would overwise pass the
+An elliptical cut is used to reduce background that would otherwise pass the
 selection. The reconstructed mass of the electron, positron and photon is
 compared against the reconstructed mass of the electron, positron, photon
 and charged pion.
-The cut on the reconstructed missing mass of the kaon, charge pion system was
-calculated using the Dalitz MC sample and is shown in Figure 5.1. The sigma is
-taken from the fitted guassian on the plot and calculated as,
+The major difference between the selection used for the NA62 study compared to
+NA48/2 was the decay particle identification strategy. The study at NA48/2 utilised
+calorimetric Particle Identification (PID) where the LKr was used to reconstruct
+1025.1 Event Selection The Search for Dark Photons at NA62
+the energy of pion and the electron-positron pair. The reconstructed energy over
+momentum was then used to distinguish between the electron/positron and pion.
+Whereas as described in the selection above the momentum measurements were
+only utilised in the selection and the reconstructed masses were compared to the
+expected. This change was driven by the difference in experimental setup between
+NA48/2 and NA62 where the latter is much longer as its designed for much higher
+momenta. This results in the LKr being further away from the decay point, which
+reduced the acceptance of the decay at NA62 compared to NA48/2. The Lkr was
+still used in the analysis for the reconstruction of the photon energy which was
+required to reduce other backgrounds from passing the selection.
+The cut on the reconstructed missing mass of the kaon and charged pion system
+was calculated using a K→π0
+Dπ+(K2πD) MC sample and is shown in Figure
+5.1. The kaon and the charged pion was selected from MC truth utilising the
+PDG particle codes within the simulation and was then associated with one of
+the reconstructed particle candidates. The sigma for the particle identification cut
+is taken from fitting a gaussian on the distribution in Figure 5.1 and calculated as,
 σ= 3.984±0.007 (5.1)
-1025.2 Event Selection The Search for Dark Photons at NA62
+1035.1 Event Selection The Search for Dark Photons at NA62
 Figure 5.1: Reconstructed missing mass of Kaon and charged pion compared to the
-known neutral pion mass
-The elliptical cut on the final reconstructed masses was defined using the Dalitz
-MC sample to collect the maximum amount of events passing the selection while
-making the cut a tight as possible. The simgas for the reconstructed masses Meeγ
-andMπeeγis calculated from fitting the distributions shown in Figure 5.2. The
-calculated sigma for the reconstructed mass Mπeeγwas calculated as
+known neutral pion mass.
+The elliptical cut conducted on the final reconstructed masses of the recon-
+structed decay particle was defined using a K2πDMC sample. Using the same
+method as before, utilising the MC truth information to select the correct decay
+particles and associating them to the reconstructed candidates, the distributions for
+the reconstructed masses were produced and shown in Figure ??. The sigma for
+the reconstructed masses MeeγandMπeeγis calculated from fitting the distributions
+shown in Figure 5.2 with a gaussian distribution. The calculated sigma for the
+reconstructed mass Mπeeγwas calculated as
 σM πeeγ = 2.47±0.004 (5.2)
 and for Meeγ,
 σM eeγ = 1.329±0.009 (5.3)
 which were used as a origin for the elliptical parameters for the cut.
-1035.2 Event Selection The Search for Dark Photons at NA62
+1045.1 Event Selection The Search for Dark Photons at NA62
 Figure 5.2: Reconstructed masses of selected particles, left the total of charged pion,
 electron, positron and gamma and on right, electron, positron and gamma.
 The equation used for the elliptical cut in the selection is defined below,
@@ -2521,22 +2548,30 @@ number of events passing produced parameters below,
 (b= 4.29): The semi-minor axis of the ellipse (3 ×σM eeγ).
 (θ= 0.4887): The rotation angle of the ellipse in radians.
 ((x, y)): The point being tested for inclusion within the ellipse.
-1045.2 Event Selection The Search for Dark Photons at NA62
-Which produced an ellipse used in the selection which is shown in 5.3
+1055.1 Event Selection The Search for Dark Photons at NA62
+The the size of the semi-major and minor axis were chosen to maximise the amount
+ofπ0
+Ddecays passing the selection and to have the ellipse as small as possible to
+reduce the chance of other backgrounds being introduced in the selected events. The
+parameters described above when inputted into Equation 5.4 produced an ellipse
+shown in red in Figure 5.3. Figure 5.3 shows all the events from the K2πDmc
+sample reaching the end of the selection, just before the elliptical cut. It shows that
+the ellipse is as tight as possible to collect the majority of the K2πDevents, without
+being too large.
 Figure 5.3: Reconstructed missing mass of Mπeeγcompared against Meeγproduced
-from a K2pi Dalitz MC sample, with the defined elliptical cut used in the selection
-The acceptance of the Dailtz sample is defined across the reconstructed elec-
+from a K2πDMC sample, with the defined elliptical cut used in the selection.
+The acceptance of the K2πDMC sample is defined across the reconstructed elec-
 tron position mass in the range 2 me< M ee < m π0and is compared against the
 acceptance of the NA48/2 analysis [43] in Figure 5.4. Improving the selection using
-kinematic cuts compared to the calorimeter PID improved the acceptance at high
-Meecompared to NA48/2. It was expected that NA48/2 would have an acceptance
-advantage due to its design as a shorter experiment. If the same analysis procedure
-was employed using calorimetric PID the acceptance would not be competitive with
-NA48/2
-1055.3 Integrated Kaon Flux The Search for Dark Photons at NA62
+kinematic cuts compared to the calorimeter PID improved the overall acceptance. It
+was expected that NA48/2 would have an acceptance advantage due to its design as
+a shorter experiment, improving the acceptance to low momenta decay particles. It
+is clear however that if the same analysis procedure was employed using calorimetric
+PID the acceptance would not be as competitive with NA48/2.
+1065.2 Integrated Kaon Flux The Search for Dark Photons at NA62
 Figure 5.4: Acceptance of the NA62 selection compared against the acceptance
-produced in the NA48/2 analysis [43]
-5.3 Integrated Kaon Flux
+produced in the NA48/2 analysis [43].
+5.2 Integrated Kaon Flux
 sec:kaonFlux The total number of data events passing the selection for 2022 was
 22,059,350 with the number of K+decays within the fiducial volume for the 2022
 dataset was computed as
@@ -2554,8 +2589,8 @@ Kµ3D 0.0027%
 Table 5.1: Acceptances of K2πDandKµ3Dsamples for the K2πDselection
 The 2022 sample was available when the MC background method was employed.
 However when the second and final background method was finalised the 2023
+1075.3 Dark Photon Search The Search for Dark Photons at NA62
 dataset was available so it was used. The integrated number of Kaons was then
-1065.4 Dark Photon Search The Search for Dark Photons at NA62
 calculated using the 66,839,882 data events passing the selection for 2022+2023
 N2022/23
 K = (4.95±0.15)×1012(5.6)
@@ -2566,21 +2601,22 @@ added was due to the change in downscaling for the eMT trigger which went from
 calculated NK. The plots for the 2022 sample produce similar results but with lower
 statistics.
 Figure 5.5: Reconstructed masses K2πDandKµ3Dfor MC and data
-5.4 Dark Photon Search
+5.3 Dark Photon Search
 Two methods were employed in the background estimation for the Dark Photon
 Search. First used generated MC samples of the expected background as the back-
 ground estimate, however as described below produced unsatisfactory results, which
 led on to the second method, using a data driven method for the background esti-
-mation. Both methods are described below
-1075.4 Dark Photon Search The Search for Dark Photons at NA62
-5.4.1 MC Background Method
-As stated before, the MC method only used the 2022 dataset. It was expected that
-the limited size of the MC samples could impact the final result when used for the
-background estimate, however it was not feasible to directly increase the statistics
-on the main samples due to compute time and file size. It was possible to increase
-the statistics across a portion of the reconstructed mass spectra using a feature of
-the Framework. It is possible for the true invariant mass of the electron positron
-pair to be used to calculate the kinematic variable xfrom Equation 5.7.
+mation. Both methods are described below.
+1085.3 Dark Photon Search The Search for Dark Photons at NA62
+5.3.1 MC Background Method
+As stated previously, the MC background method only utilised the 2022 NA62
+dataset. It was expected that the limited size of the MC samples could impact
+the final result when used for the background estimate, however it was not feasible
+to directly increase the statistics on the main samples due to compute time and file
+size. It was possible to increase the statistics across a portion of the reconstructed
+mass spectra using a feature of the Framework. It is possible for the true invariant
+mass of the electron positron pair to be used to calculate the kinematic variable x
+from Equation 5.7.
 x=(Qe−+Qe+)2
 m2
 π0=m2
@@ -2599,9 +2635,9 @@ reconstructed kinematic variable x
 For the rest of the study the following MC samples were used
 200 M K→π0
 Dπ+(x <0.5)
+1095.3 Dark Photon Search The Search for Dark Photons at NA62
 5 MK→π0
 Dπ+(x >0.5)
-1085.4 Dark Photon Search The Search for Dark Photons at NA62
 50 M K→π0
 Dµ+νµ
 In order to improve the combination of the two K2πDsamples the large sample had
@@ -2626,19 +2662,26 @@ y=2Qπ+(Qe−−Qe+)
 m2
 π0(1−x)(5.9)
 where Qe−,Qe+andQπ+are the four-momentum of the electron, position and
-charged pion. The TFF is parametrised as F(x) = 1 + ax, with a being a param-
-eter set by experiments or theory. ADD THEORY BIT. The Particle Data Group
-1095.4 Dark Photon Search The Search for Dark Photons at NA62
-(PDG) average for all experiments was a= 0.03350 .0031 [63]. NEED MORE DE-
-SCRIPTION WHY CANT USE THEORY OR EXPERIMENT. The background
-estimation using the MC cannot rely on the input of theory or experiments due to
-the underlying uncertainties. In the NA62 Framework a= 0.032 so a correction had
-to be made to remove the applied TFF and re-weight using the events passing the
-selection. It is clear that in Figure 5.8 which shows the data over MC from Figure
-5.7 but rather than in terms of Meeplot against xfrom Equation 5.7, suggests that
-there is a discrepancy. MC and data no longer match but is dependent along x
-suggesting that the TFF found in the Framework is not acceptable for use in the
-background estimate.
+charged pion. Within the kinematic region of Dalitz decay the TFF is expected to
+1105.3 Dark Photon Search The Search for Dark Photons at NA62
+vary slowly as x increases and can be approximated as F(x) = 1 + ax, with abeing
+the slope factor which has been set through theory and experimentally. The Vector
+Meson Dominance (VMD) model expects that a=mπ0(m2
+ρ+m2
+ω)/2 = 0 .03 [63].
+Experimentally the Particle Data Group (PDG) average for all experiments was
+a= 0.03350 .0031 [64]. Due to large errors and inconsistent results experimentally
+and through theory it is not possible just to rely on external values for the slope
+the MC cannot rely on the input of theory or experiments due to the underlying
+uncertainties. In the NA62 Framework by default the slope factor a= 0.032. A
+correction was made to remove the applied TFF in the framework and then is
+re-weighted using the data events passing the selection compared to the expected
+number of events from MC across the reconstructed mass. In Figure 5.8 which shows
+the data over MC from Figure 5.7 in terms of the kinematic parameter xdescribed
+in Equation 5.7, suggests that there is a discrepancy between the expected and
+data. The MC and data do not match but there is a dependence along xsuggesting
+that the TFF found in the Framework is not acceptable for use in the background
+estimate with this data set.
 Figure 5.8: Data vs MC in terms of reconstructed kinematic variable xwith the
 framework transition form factor
 The effective TFF of the analysis can be found by removing the Framework value
@@ -2646,19 +2689,21 @@ by inverting the effects of the square of the TFF,
 F(x)2= (1 + ax)2(5.10)
 which resulted in the distribution shown in Figure 5.9. The MC with the removed
 effects of the TFF was fitted with equation 5.10 using a least χ2method, with the
-resultant line shown in Figure 5.9, representing a value for a
-a= 0.0210±0.0029 (5.11)
-1105.4 Dark Photon Search The Search for Dark Photons at NA62
+1115.3 Dark Photon Search The Search for Dark Photons at NA62
+resultant TFF shown in Figure 5.9. The fitted TFF in Figure 5.9 represents a slope
+factor of,
+a= 0.0210±0.0029. (5.11)
 Figure 5.9: Data vs MC in terms of reconstructed kinematic variable xwith the
 framework transition form factor removed
 The correction resulted in slightly better Data/MC agreement shown in Figure
 5.10 when compared to Figure 5.7.
+1125.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.10: Reconstructed mass of electron positron pair of data and MC samples
 corrected for the effective transition form factor.
 The final counts for events passing the selection in terms of the reconstructed
 invariant mass for each MC sample is shown in Figure 5.11, where it is clear where
 the two K2πDsamples have been combined.
-1115.4 Dark Photon Search The Search for Dark Photons at NA62
+1135.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.11: Reconstructed mass of electron positron pair of data, individual MC
 samples and combined MC.
 The resultant statistical errors were calculated for each individual MC sample
@@ -2674,10 +2719,10 @@ the decay and the low electron identification efficiency at low momentum. The
 upper boundary was also defined due to both the falling geometrical acceptance
 and suppressed decay width. To select the search window centers and the size of
 the windows, the reconstructed mass resolution was considered. The reconstructed
+1145.3 Dark Photon Search The Search for Dark Photons at NA62
 mass resolution was calculated using MC where the difference between the true mass
 and the reconstructed mass of the electron positron pair was collected for each mass
 bin and is shown in Figure 5.13.
-1125.4 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.13: True invariant mass minus reconstructed invariant mass of the electron
 positron pair in terms of true invariant mass.
 For each invariant mass bin the Y projection is taken and a gaussian fit is con-
@@ -2688,9 +2733,9 @@ producing an equation for the reconstructed invariant mass resolution,
 The NA62 resolution is a significant improvement compared to NA48/2, shown as
 red line in Figure 5.14 due to improved detector design and setup. Which results in
 smaller search mass windows compared to the previous study.
+1155.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.14: Sigma of the difference between true and reconstructed invariant mass
 of the electron-positron pair in bin of true invariant mass.
-1135.4 Dark Photon Search The Search for Dark Photons at NA62
 Using Equation 5.12 the window centres are defined as being separated by
 3σm(mA′), with a window width of ±1.5σm(mA′) rounded to the nearest 0.01 MeV/c2
 which was the size of the saved bins of the invariant mass spectrum, resulting in 177
@@ -2707,10 +2752,10 @@ Nexp/sfwhere
 sfwas the scale factor used to scale the MC sample. It would of been require to
 include statistical errors due to the trigger efficiencies but as mentioned previously
 all MC samples employed a trigger emulator so this was not required.
+1165.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.15: Number of observed data events ( Nobs), expected number of events
 from MC ( Nexp), the respective errors ( δNobsandδNexp) and the resultant upper
 limit on the number of Dark Photon candidates to a 90% confidence level.
-1145.4 Dark Photon Search The Search for Dark Photons at NA62
 For each DP mass window the local significance of the DP signal was calculated,
 Z=Nobs−Nexpp
 δNobs+δNexp(5.13)
@@ -2718,14 +2763,14 @@ and is shown in Figure 5.16. Across the search window the local significance is
 never greater than 3 σresulting in no DP signal observed. The confidence intervals
 for the number of DP decays ( A′→e+e−) at a 90% CL for each DP mass value
 was calculated using Nobs,NexpandδNexpusing the CLs method recommended
-by the Particle Data Group [64] and employs the method setout in [65].(MAYBE
+by the Particle Data Group [65] and employs the method setout in [66].(MAYBE
 DESCRIBE METHOD) The resultant upper limits on the number of DP candidates
 (NDP) at a 90% CL is shown in Figure 5.15.
+1175.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.16: Local significance of DP signal across the search window 9 ≤mA′≤
 120MeV/c2. Top, in terms of DP mass and bottom, the y projection of the top plot.
 The UL on the NDPwas used to calculate the resultant 90% CL on the branching
 fraction of the decay π0→γA′, which was computed with Equation 5.14, with the
-1155.4 Dark Photon Search The Search for Dark Photons at NA62
 assumption that B(A′→e+e−) = 1.
 Bπ→γA=NDP
 NKBrK2πADP(K2π)(5.14)
@@ -2734,6 +2779,7 @@ branching fraction of K+→π+π0[31] and ADP(K2π) which was the acceptance
 of the DP signal. ADP(K2π) was calculated using the acceptance of the π0
 Ddecay
 shown in Figure 5.4, parametrized with a polynomial to allow for the calculation
+1185.3 Dark Photon Search The Search for Dark Photons at NA62
 of the acceptance in terms of DP mass. The resultant branching fraction at a 90%
 across the DP mass range is shown in Figure 5.17. The dramatic reduction of the
 UL at about 90 MeV/c2was due to the improved statistical errors provided by
@@ -2745,7 +2791,6 @@ Figure 5.17: Upper limit on the branching fraction of π0→γA′at a 90% CL fo
 each Dark Photon mass value.
 The UL on the branching fraction was used to to set the upper limits on the
 mixing parameter ϵ2for each DP mass value. ϵ2was calculated from (NEED TO
-1165.4 Dark Photon Search The Search for Dark Photons at NA62
 PUT EQUATION FROM THEORY) resulting in Equation 5.15.
 ϵ2=B(π0→γA′)
 2
@@ -2758,6 +2803,7 @@ The resultant UL of the mixing parameter ϵ2at a 90% CL across the DP mass
 range is show in Figure 5.18. It is clear that the NA62 result for the 2022 data was
 not competitive at low invariant mass ranges up to around 85 MeV/c2, where the
 statistics improve due to the biased sample. Suggesting that a low mass ranges the
+1195.3 Dark Photon Search The Search for Dark Photons at NA62
 UL is limited by the statistical error on the MC sample. It is expected if the sample
 was at the same statistical level as the biased sample the UL could be improved by
 at least an order of magnitude.
@@ -2765,18 +2811,20 @@ Figure 5.18: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value with the result from NA48/2 for comparison [43].
 It is clear that without increased MC statistics, the study would not be competi-
 tive with the already published result from NA48/2 [43] except for high mass ranges
-above 85 MeV/c2. A new method could be employed that removed the statistical
-error introduced by the MC for the background estimation.
-1175.4 Dark Photon Search The Search for Dark Photons at NA62
-5.4.2 Data Driven Background Method
-The data driven background method employed the same selection setout in the pre-
-vious section but rather than using the MC samples for the background estimation
-the data itself was used. Eventually the 2023 dataset was implemented along with
-the 2022. The number of data events passing the selection for the 2022/23 datasets
-was 66,839,882, which is just over a 3 fold increase compared to just the 2022, even
-though both years had similar run durations. This was due to a change in the de-
-fined downscaling for the eMT trigger line which was reduced from 3 to 1, resulting
-in a total effective NKcalculated with Equation 5.6,
+above 85 MeV/c2. As this method is limited by the low statistics of the MC it would
+not be improved by introducing larger NA62 datasets A new method could be em-
+ployed that removed the statistical error introduced by the MC for the background
+estimation.
+5.3.2 Data Driven Background Method
+The data driven background method employed the same selection described in the
+previous section, but instead of using the produced MC samples for the background
+estimation, the data itself was used. Eventually the 2023 dataset was implemented
+along with the 2022. The number of data events passing the selection for the 2022/23
+datasets was 66,839,882, which is just over a 3 fold increase compared to just the
+1205.3 Dark Photon Search The Search for Dark Photons at NA62
+2022, even though both years had similar run durations. This was due to a change
+in the defined downscaling for the eMT trigger line which was reduced from 3 to 1,
+resulting in a total effective NKcalculated with Equation 5.6,
 N2022/23
 K = (4.95±0.15)×1012(5.16)
 The resultant reconstructed invariant mass of the electron-positron pair for events
@@ -2786,13 +2834,13 @@ ing the selection from the 2022 and 2023 NA62 dataset.
 The produce an estimation of the background the distribution from the data itself
 was used. To estimate the background the distribution was fitted using polynomials
 using the side bands of the data and the process is described below.
-1185.4 Dark Photon Search The Search for Dark Photons at NA62
 A method similar to the previous section using the reconstructed mass resolu-
 tion, defined with equation 5.12 was used to convert bins of Meeto DP candidate
 windows. A new DP mass range was defined as 8 ≤mA′≤121.6MeV/c2. The
 mass ranges were extended compared to the previous MC approach due to the large
 statistical afforded by only using the data sample rather than the MC. Each DP
 mass hypothesis was defined by steps of 1 σm(mA′). A 4th order polynomial was
+1215.3 Dark Photon Search The Search for Dark Photons at NA62
 fitted to the data distribution using a least χ2method. The fitting region for each
 mass hypothesis was defined as ±20σm(mA′) from the mass hypothesis and the dis-
 tribution was re-binned for each with a bin width of 1 /10σm(mA′). However data
@@ -2816,11 +2864,11 @@ Example fits for background estimation and the systematic error estimation the
 first DP mass hypothesis is shown in Figure 5.20. The mass range of the plots is
 the entire ±20σm(mA′) fitting range and shown the removed region ±1.5σm(mA′) of
 the mass hypothesis described above.
-1195.4 Dark Photon Search The Search for Dark Photons at NA62
+1225.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.20: Fit of 4th order polynomial on the data distribution at the first DP
 mass hypothesis for the background estimation, along with fits for 3rd and 5th order
 polynomials used for systematic error estimation.
-1205.4 Dark Photon Search The Search for Dark Photons at NA62
+1235.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.21: Fit of 4th order polynomial on the data distribution at the final DP
 mass hypothesis for the background estimation, along with fits for 3rd and 5th order
 polynomials used for systematic error estimation.
@@ -2838,7 +2886,7 @@ observed in each DP mass window. A described above the error δNobsincreases pas
 this will not cause any significant impact to the analysis due to the competitive
 acceptance at this high mass range. Using the same method used in the MC study,
 Nobs,NexpandδNexpwere used as inputs to the CLs method to calculate the upper
-1215.4 Dark Photon Search The Search for Dark Photons at NA62
+1245.3 Dark Photon Search The Search for Dark Photons at NA62
 limit on the number of DP candidates in each mass window and is shown in Figure
 5.22. The resultant upper limit on the number of DP candidates was more than an
 order of magnitude better than the one produced by the Monte Carlo study and
@@ -2852,7 +2900,7 @@ With Nobs,Nexp,δNobsandδNexpshown in Figure 5.22, the local significance
 of the DP signal was calculated with Equation 5.13 and is shown in Figure 5.23.
 Again, the significance did not reach the threshold of three sigma so no DP was
 observed.
-1225.4 Dark Photon Search The Search for Dark Photons at NA62
+1255.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.23: Local significance of DP signal across the search window 8 ≤mA′≤
 121.6MeV/c2for the data driven study. Top, in terms of DP mass and bottom, the
 y projection of the DP mass plot.
@@ -2861,13 +2909,13 @@ the upper limit of the branching ratio to a 90% CL, using Equation 5.14 and is s
 in Figure 5.24. The resultant upper limit for the Bπ→γAsuggested a significant
 improvement compared to the result produced in the MC study shown in Figure
 5.17.
-1235.4 Dark Photon Search The Search for Dark Photons at NA62
+1265.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.24: Upper limit on the branching fraction of π0→γA′at a 90% CL for
 each Dark Photon mass value, for the data driven background method for estimating
 the number of expected events.
 The resultant upper limit on the mixing parameter was calculated with Equation
 5.15 was compared to the result from NA48/2 [43] in Figure 5.25.
-1245.4 Dark Photon Search The Search for Dark Photons at NA62
+1275.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.25: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data driven background estimation, with the result from
 NA48/2 for comparison [43].
@@ -2878,13 +2926,13 @@ for using the data for the estimation of the background, reducing the errors whi
 limited the study previously. To see how this result compares to global results for
 the mixing parameter, the result from this analysis was presented in Figure 5.26,
 produced using the software package DarkCast, a companion software package to
-well known papers [66, 67]. Figure 5.26 shows the result from this study and a
-number of other collaborations: NA48/2 [43], BaBar [68], NA64 [69], KLOE [70],
-KLOE-2 [71], FASER [72] and others [73, 74].
-1255.4 Dark Photon Search The Search for Dark Photons at NA62
+well known papers [67, 68]. Figure 5.26 shows the result from this study and a
+number of other collaborations: NA48/2 [43], BaBar [69], NA64 [70], KLOE [71],
+KLOE-2 [72], FASER [73] and others [74, 75].
+1285.3 Dark Photon Search The Search for Dark Photons at NA62
 Figure 5.26: Upper limit at a 90% CL on the mixing parameter for the data driven
-background estimate (Green) compared to published exclusions limits [43, 68, 69,
-70, 71, 72, 73, 74]
+background estimate (Green) compared to published exclusions limits [43, 69, 70,
+71, 72, 73, 74, 75]
 The lowest limit on the mixing parameter ϵ2occurs at low DP mass due to
 the limited kinematic suppression of the DP decay. Key to this analysis was the
 assumption of the prompt decay, where the DP decays instantly into the lepton-
@@ -2906,7 +2954,7 @@ prest
 (Erest
 π0)2−m2
 π0 (5.18)
-1265.4 Dark Photon Search The Search for Dark Photons at NA62
+1295.3 Dark Photon Search The Search for Dark Photons at NA62
 The Equations 5.17 and 5.17 are used to calculate the maximum energy of the π0
 in the laboratory reference frame via a lorentz boost
 Elab
@@ -2932,7 +2980,7 @@ bin would correspond to a displaced decay is shown in Figure 5.27.
 Figure 5.27: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data driven background estimation, with the result from
 NA48/2 for comparison [43] and the expected limit of the prompt decay.
-127Chapter 6
+130Chapter 6
 Future Kaon Experiments
 Over the past 75 years the study of kaon physics has been integral to the develop-
 ment of the standard model. Since 2016, the NA62 experiment has been the leading
@@ -2951,10 +2999,10 @@ that will be described in this section. The beam intensity requirements for HIKE
 are described in Table 6.1. To accommodate the higher intensities, upgrades were
 needed to the infrastructure that provided the beam to ECN3. A number of work
 groups such as the ECN3 beam delivery group within the Physics Beyond Colliders
-community at CERN [75] was already conducting efforts to consolidate all the work
+community at CERN [76] was already conducting efforts to consolidate all the work
 required to upgrade infrastructure. Three phases were foreseen within the HIKE
 program, the first being a continuation of NA62 charged kaon physics with the high-
-1286.1 HIKE Future Kaon Experiments
+1316.1 HIKE Future Kaon Experiments
 intensity beam and detector upgrades to accommodate the rate increase with the
 goal of measuring the branching ratio of K+→π+ν¯νto 5 % precision. The second
 phase would have involved neutral kaon physics with charged secondary particle
@@ -2977,8 +3025,8 @@ equating to 1 .3×1013protons per spill on the target. The expected beam had
 similar characteristics to NA62 with a 75 GeV /c secondary beam produced from
 the 400 GeV /c primary beam from the SPS accelerator onto a target at an angle of
 0 rad.
-Figure 6.1: Diagram of HIKE Phase 1 detector setup [76].
-1296.1 HIKE Future Kaon Experiments
+Figure 6.1: Diagram of HIKE Phase 1 detector setup [77].
+1326.1 HIKE Future Kaon Experiments
 The detectors before the fiducial volume included an upgraded photon-detection
 system for the KTAG, described in Section 6.3, and a new GTK chip design. It was
 proposed to upgrade the existing NA62 Vetocounter with scintillating fibre (SciFi)
@@ -2987,7 +3035,7 @@ intensity.
 Major upgrades were envisioned to the LAV and STRAW detectors within the
 fiducial volume. A number of LAV stations were to be upgraded to a new lead
 scintillator design, similar to the Vacuum Veto System (VVS) planned for the CKM
-experiment [77, 78]. The LAV detectors were crucial to the subsequent phases
+experiment [78, 79]. The LAV detectors were crucial to the subsequent phases
 of HIKE, especially Phase 3, and were designed to fulfil the requirements of the
 KL→π0ν¯νmeasurement even when used in Phase 1. The STRAW spectrometer
 was to be upgraded to use novel 5 mm straw design with a layout shown in Figure
@@ -2995,12 +3043,12 @@ was to be upgraded to use novel 5 mm straw design with a layout shown in Figure
 increasing granularity and resulting in an expected improvement in the track angle
 and momentum resolution of 10-20 % compared to NA62.
 Figure 6.2: Diagram of the new STRAW spectrometer layout with 5 mm straw tubes
-[76].
+[77].
 Downstream of the fiducial volume, the PMT arrays of the RICH detector would
 have been upgraded, described in Section 6.4. The HIKE timing detector would
 profit from the current NA62-CHOD detector with upgraded PMTs, which were to
 be chosen from the outcome of studies from other detectors such as KTAG, RICH
-1306.1 HIKE Future Kaon Experiments
+1336.1 HIKE Future Kaon Experiments
 and MUVs. For HIKE Phase 1, the LKr was proposed as the primary electro-
 magnetic calorimeter given its excellent energy resolution, but the required timing
 resolution was to be achieved by upgrading its readout system. A number of other
@@ -3026,8 +3074,8 @@ account for the neural beam. The MNP33 magnet required a reduction in strength
 by 20 % to account for the shorter spectrometer, resulting in a momentum kick of
 210 MeV /c. The fiducial volume would have been increased to 90 m compared to
 75 m in Phase 1.
-1316.1 HIKE Future Kaon Experiments
-Figure 6.3: Diagram of HIKE Phase 2 detector setup [76].
+1346.1 HIKE Future Kaon Experiments
+Figure 6.3: Diagram of HIKE Phase 2 detector setup [77].
 The design proposed a production angle of 2.4 mrad on the target producing an
 expected KLyield of 5 .4×10−5per proton. Assuming an integrated proton flux of
 1.2×1019protons on target per year would have resulted in 3 .8×1013KLdecays
@@ -3040,7 +3088,7 @@ of NA62 at 2 ×1013. Assuming 200 days of data taking and 3000 spills per day (a
 in Phase 1) and an 3 .2×106KLper proton on target would result in 3 .8×1013
 decays per year. The expected time to Phase 2 goals was 6 years of data taking.
 6.1.3 Phase 3 (KLEVER)
-HIKE phase 3, previously known as KLEVER [79], was an experiment designed to
+HIKE phase 3, previously known as KLEVER [80], was an experiment designed to
 measure the KL→π0ν¯νdecay. The experimental setup is shown in Figure 6.4 and
 differs from the design used at NA62 and HIKE Phase1/2. The setup consists of a
 large number of photon detectors located around a 160 m long vacuum volume to
@@ -3048,10 +3096,10 @@ produce a complete coverage of photons produced from KLdecays. The detectors
 include coverage for photons emitted up to 100 mrad and allow for photons emitted
 with an angle up to 7.5 mrad to be detected by the main electromagnetic calorimeter
 (MEC).
-1326.2 Flexible Software Future Kaon Experiments
-Figure 6.4: Diagram of HIKE phase 3 detector setup [76].
+1356.2 Flexible Software Future Kaon Experiments
+Figure 6.4: Diagram of HIKE phase 3 detector setup [77].
 Due to the significantly different experimental setup, Phase 3 was separated from
-the HIKE proposal submitted in 2023 [76]. However, some detectors would have been
+the HIKE proposal submitted in 2023 [77]. However, some detectors would have been
 shared between the two experiments as the granularity and efficiency requirements
 for Phase 3 were driven the detector requirements for the first two phases, reducing
 the overall costs. The LAVs, MEC, IRC, SAC and the hadronic calorimeters, which
@@ -3072,7 +3120,7 @@ the detectors and clustering them into candidates. NA62Analysis is used to analy
 the data produced from the reconstruction to conduct all the physics studies that
 are performed at NA62.
 The NA62FW was designed for use only with the NA62 experimental setup, re-
-1336.2 Flexible Software Future Kaon Experiments
+1366.2 Flexible Software Future Kaon Experiments
 sulting in minimal configurability and flexibility. Within the simulation, the only
 option for users to modify was to enable/disable sub-detectors. With the experi-
 ment foreseen to run up to CERN Long shutdown 3 (LS3), an upgraded software
@@ -3093,7 +3141,7 @@ along with chamber ID, chamber type which defines the size of the straws and the
 chamber geometry which determines if the beam hole is symmetric or not.
 Figure 6.5: Example configuration for the STRAW0 in the geometry file for
 NA62MC.
-1346.2 Flexible Software Future Kaon Experiments
+1376.2 Flexible Software Future Kaon Experiments
 Detector Name Arguments
 STRAWChamber Name: ”STRAW0”, ”STRAW1”, ”STRAW2” or ”STRAW3”
 Chamber ID: 0, 1, 2 or 3
@@ -3125,7 +3173,7 @@ fields. A large square beam of these particles was sent through the simulation, 
 every time the particle passed across a boundary between two volumes, its position
 was saved. Using this information it was possible to reconstruct the entire geometry
 of each detector in order to check the placement and geometry to mm precision to
-1356.2 Flexible Software Future Kaon Experiments
+1386.2 Flexible Software Future Kaon Experiments
 ensure that the simulation was still accurate. An example of the Geantino hits on
 a single view of STRAW chamber 1 is shown in Figure 6.6 where it is possible to
 see the features of the view, such as the missing straws within the centre, used to
@@ -3145,7 +3193,7 @@ detector. It is possible to see this change in figure 6.7, which depicts the dir
 of the magnetic fields. As the magnetic fields are only calculated in volumes, it
 is possible to see the reduction in RR size around the geometry. In 6.7(top) the
 field was calculated outside of the actual physical sub-detector due to the larger
-1366.2 Flexible Software Future Kaon Experiments
+1396.2 Flexible Software Future Kaon Experiments
 RR, whereas in 6.7(bottom), the RR has been reduced to a few mm’s larger than
 the actual physical detector. As well as reducing the chance of overlaps, reducing
 the RR would speed up the simulation slightly due to the reduction in unnecessary
@@ -3161,8 +3209,8 @@ simulation. Top, previous version with large outer volumes and bottom, new flexi
 version with reduced outer volumes. The small red arrow represents the direction
 of the magnetic field in the volumes.
 The magnetic field in the simulation is based on real-world measurements of the
-1376.2 Flexible Software Future Kaon Experiments
-magnetic field at NA62 from hall probes [80], with this information saved in the
+1406.2 Flexible Software Future Kaon Experiments
+magnetic field at NA62 from hall probes [81], with this information saved in the
 form of data files which are taken in and used to calculate the magnetic field at
 various points in the simulation. In NA62MC the magnetic field is split into three
 distinct regions: the Bluetube field within the decay region which is used for small
@@ -3185,7 +3233,7 @@ Similar to the changes in the sub-detector construction, the modification of the
 magnetic fields required validation. This was done using similar machinery to the ge-
 ometry test completed previously but with a different GEANT particle, the charged
 Geantino. This is similar to a normal Geantino, where the particle traverses all vol-
-1386.2 Flexible Software Future Kaon Experiments
+1416.2 Flexible Software Future Kaon Experiments
 umes within its path but interacts with magnetic fields. As the charged Geantino
 enters a magnetic field, it is deflected as if it were a positively charged particle. This
 test ensured that the same tracks of the charged Geantinos between the previous
@@ -3205,7 +3253,7 @@ this was not implemented into the framework as its use was not foreseen, but the
 machinery was developed and is ready for use when required. After the geometry
 and magnetic field tests were completed, full test productions of K+→π+π0,
 K+→π+π−π+andK+→µ+¯νwere produced to test the validity of the existing
-1396.3 The KTAG upgrades for HIKE Future Kaon Experiments
+1426.3 The KTAG upgrades for HIKE Future Kaon Experiments
 NA62 setup along with the entire software chain (MC →Reconstruction →Analysis).
 After testing, the software was ready to be used to develop new detectors and
 produce physics studies for HIKE.
@@ -3222,7 +3270,7 @@ PMTs). The MCP-PMTs would provide a single photon time resolution of 50-70 ps
 depending on the model, a low dark rate of 1 kHz /cm2and the ability to sustain
 the required photon rate. A downside of the MCP-PMTs is their limited lifetime
 from the ageing of the photocathode caused by feedback ions from the residual gas
-resulting in a rapid reduction in the Quantum Efficiency (QE) [81]. This results
+resulting in a rapid reduction in the Quantum Efficiency (QE) [82]. This results
 in the rapid degradation of PMT quantum efficiency with the increasing integrated
 anode charge. MCP-PMTs are similar to normal PMTs except that the dynode sec-
 tion is replaced by a micro-channel plate. An example diagram is shown in Figure
@@ -3233,30 +3281,30 @@ producing secondary electrons, which results in a cascade collected by the anode
 below. The dual layer design, or chevron, adds additional benefits compared to a
 single layer design such as better gains due to the increased surface for secondary
 electrons to be produced
-1406.3 The KTAG upgrades for HIKE Future Kaon Experiments
+1436.3 The KTAG upgrades for HIKE Future Kaon Experiments
 Photocathodeγe−Micro Channel Plate
 Anode
 Figure 6.10: Diagram describing the workings of a MCP-PMT.
 Major breakthroughs to improve the lifetime of the MCP-PMT have come with
-the method of Atomic Layer Deposition (ALD) [82], where the channels of the
+the method of Atomic Layer Deposition (ALD) [83], where the channels of the
 MCP are coated with a ultra-thin layer of Al 2O3or MgO. The layer prevents
 the out-gassing from the MCP glass substrate and drastically reduces the heavy
 ions reaching the photocathode resulting in significant increases in lifetime of the
-MCP-PMTs [83]. Utilising the method of ALD, MCP-PMTs from Photonis have
+MCP-PMTs [84]. Utilising the method of ALD, MCP-PMTs from Photonis have
 been demonstrated to withstand an Integrated Anode Charge (IAC) greater than
-20 C/cm2[84], corresponding to a lifetime improvement of a factor of 100 compared
+20 C/cm2[85], corresponding to a lifetime improvement of a factor of 100 compared
 to standard MCP-PMTs, shown in Figure 6.11.
-1416.3 The KTAG upgrades for HIKE Future Kaon Experiments
+1446.3 The KTAG upgrades for HIKE Future Kaon Experiments
 Figure 6.11: Lifetimes of available MCP-PMTs with the photocathode QE vs In-
 tegrated Anode Charge (IAC) for photons at 400 nm wavelength. Top, old ALD
 coated MCP-PMTs from Hamamatsu with non coated versions shown in the insert
 plot. Bottom, more recent ALD coated MCP-PMTs from PHOTONIS and Photek
-in the inserted plot. [85]
+in the inserted plot. [86]
 An example of MCP-PMT model proposed for the KTAG is shown in Figure
 6.12. The module consists of an 8x8 array of pixels which can individually be read
 out.
-Figure 6.12: Schematic of Photonis MCP-PMT [86].
-1426.3 The KTAG upgrades for HIKE Future Kaon Experiments
+Figure 6.12: Schematic of Photonis MCP-PMT [87].
+1456.3 The KTAG upgrades for HIKE Future Kaon Experiments
 Simulations of the KTAG with the upgraded photon-detection system for use in
 HIKE Phase 1 show that each of the eight KTAG sectors would use four of these
 MCP-PMT, shown in Figure 6.13. The four MCP-PMTs per sector were required
@@ -3273,7 +3321,7 @@ inactive areas between the individual MCP-PMT and the increased amount of light
 at the edges produced from the reflective surfaces are shown. The position on the
 MCP-PMT in the KTAG sector was optimised to produce the maximum number of
 photo-electrons per kaon candidate.
-1436.3 The KTAG upgrades for HIKE Future Kaon Experiments
+1466.3 The KTAG upgrades for HIKE Future Kaon Experiments
 -60 -40 -20 0 20 40 60
 Y [mm]-60-40-2002040Z (Relative to Centre of Light Guide) [mm]
  0.20.40.60.81.0
@@ -3292,22 +3340,22 @@ to reach 10 MHz /cm2with smaller sensor size but would result in a quadrupling o
 the cost to cover the light spot. Future research looking at reducing the resistance,
 capacitance and gain for single photon detection could possibly allow the larger
 XP85012-S-R2D2 to accommodate up to 10 MHz /cm2.
-1446.3 The KTAG upgrades for HIKE Future Kaon Experiments
-Figure 6.15: Rate capability of state of the art MCP-PMTs [87].
+1476.3 The KTAG upgrades for HIKE Future Kaon Experiments
+Figure 6.15: Rate capability of state of the art MCP-PMTs [88].
 The Photonis MCP-PMT has a Collection Efficiency (CE) of above 60 %, the
 probability of the photo-electron passing through the pours of the MCP and pro-
 ducing a signal. With current technologies it is possible for MCP-PMTs reach CE of
-over to 90 % [88], however the Photonis MCP-PMT was selected as it better fit the
+over to 90 % [89], however the Photonis MCP-PMT was selected as it better fit the
 HIKE Phase 1 timing requirements requirements as the higher CE models utilise late
 photo-electrons resulting in higher time resolutions. The XP85012-S-R2D2 MCP-
-PMT had a transit time spread of 50 ps with a timing precision RMS of 120 ps [89]
+PMT had a transit time spread of 50 ps with a timing precision RMS of 120 ps [90]
 and results in a time response, shown in Figure 6.16 which was implemented used
 for the HIKE simulations.
 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3
 Time [ns]0.00.20.40.60.81.0
 Figure 6.16: Time response of the Photonics XP85012-S-R2D2 MCP-PMT.
 The QE for the MCP-PMT from Photonis is shown in Figure 6.17. There are
-1456.3 The KTAG upgrades for HIKE Future Kaon Experiments
+1486.3 The KTAG upgrades for HIKE Future Kaon Experiments
 two options for the photocathode of the MCP-PMT available: a standard Bialkali
 (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. The HI-QE are more recent models, however
 there is no lifetime data available so albeit being the preferred option the standard
@@ -3323,7 +3371,7 @@ electrons per kaon candidate with a time resolution of 18 ps, taken from the Gau
 sigma of the distribution in Figure 6.18 (Right). The results surpassed the require-
 ments for the KTAG in HIKE and the upgrades were ready to be used in the HIKE
 simulations.
-1466.4 RICH Upgrade Future Kaon Experiments
+1496.4 RICH Upgrade Future Kaon Experiments
 0 10 20 30 40 50
 Number of Photo-electrons0.00.20.40.60.81.0
 -0.150 -0.125 -0.100 -0.075 -0.050 -0.025 0.000 0.025 0.050
@@ -3344,7 +3392,7 @@ hit position resolution of 4.7 mm, resulting in an overall ring radius resolutio
 1.5 mm. The number of hits per ring candidate and the single hit time resolution
 produced a time resolution of 80 ps. Due to the increased beam intensity, the main
 requirement of the RICH for HIKE was a time resolution of 20 - 30 ps.
-1476.4 RICH Upgrade Future Kaon Experiments
+1506.4 RICH Upgrade Future Kaon Experiments
 -400 -300 -200 -100 0 100 200 300 400
 X [mm]-400-300-200-1000100200300400Y [mm]
 Figure 6.19: Diagram of RICH PMT array
@@ -3364,7 +3412,7 @@ balancing overall detector performance with cost and complexity.
 Using the upgraded NA62 software package described in Section 6.2, it was pos-
 sible to implement the new PMTs into the RICH Monte Carlo simulation with the
 implemented arrays shown in Figure 6.20. Compared to the PMT arrays currently
-1486.4 RICH Upgrade Future Kaon Experiments
+1516.4 RICH Upgrade Future Kaon Experiments
 used in NA62, the PMs have been aligned on the vertical axis to simply the place-
 ment because of the square geometry of the new PMTs. The area of the expected
 light spot, shown in Figure 6.20, as a grey circle, is completely covered by the SiPMs
@@ -3379,20 +3427,20 @@ X [mm]-400-300-200-1000100200300400Y [mm]
 Figure 6.20: Diagram of proposed RICH SiPM arrays for use in HIKE. Left, 9x9 mm,
 center 6x6 mm and right 3x3 mm.
 The performance for HIKE required a SiPM with a Quantum Efficiency (QE)
-of at least 40 % [76]. The Hamamatsu S13360-**50CS series was selected as the
+of at least 40 % [77]. The Hamamatsu S13360-**50CS series was selected as the
 preliminary candidate for the RICH PMT upgrade to achieve this requirement.
 Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected
 for its improved Ultra Violet (UV) sensitivity and high quantum efficiency of 40 %
 at 460 nm, shown in Figure 6.21.
-1496.4 RICH Upgrade Future Kaon Experiments
+1526.4 RICH Upgrade Future Kaon Experiments
 Figure 6.21: Selected SiPM quantum efficiency taken from Hamamatsu S13360 data-
-sheet [90]
+sheet [91]
 Along with the QE efficiency, a single hit time resolution of 100 ps was required
-[76]. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent
+[77]. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent
 time resolution, but no definite value was given. The time resolution would also
 depend on the final design of the RICH readout electronics and would have to
 be measured in a test setup. The SiPMs from Hamamatsu have previously been
-tested and have reached a single hit time resolution below 100 ps [91]. For use in
+tested and have reached a single hit time resolution below 100 ps [92]. For use in
 the simulation a conservative simple Gaussian time response curve with a sigma of
 100 ps was used for the simulations, which would be updated later on for a specific
 model to be implemented when chosen.
@@ -3402,7 +3450,7 @@ efficiency, the expected number hits per π+between 15 and 45 GeV/c was expected
 to increase by a factor of two. This, along with the improved time resolution of the
 new PMTs resulted in an expected time π+time resolution of 27 ps at 15 GeV/c
 and 20 ps at 45 GeV/c . Using the implemented upgrades to the RICH detectors, the
-1506.4 RICH Upgrade Future Kaon Experiments
+1536.4 RICH Upgrade Future Kaon Experiments
 NA62 RICH HIKE RICH
 Sensor time resolution 240ps 100ps
 Sensor quantum efficiency 20% 40%
@@ -3411,7 +3459,7 @@ Number of photo-electrons for π+at 45 GeV/c 12 24
 Time resolution for π+at 15 GeV/c 90ps 27ps
 Time resolution for π+at 45 GeV/c 70ps 20ps
 Table 6.3: Comparisons of the expected performance of the NA62 and HIKE RICH
-detectors [76]
+detectors [77]
 above expectations were confirmed by a Monte Carlo sample of K+→π0e+ν(Ke3).
 For the three sensor sizes, a test production of 1M Ke3 was used to determine
 the preliminary performance of the detector and compare this to the current NA62
@@ -3431,7 +3479,7 @@ Figure 6.22: Cherenkov light illumination of RICH PMT arrays for the NA62 PMT
 arrays produced from a MC sample of K+→π0e+ν(Ke3). The left column shows
 illumination on the Saleve side of the RICH detector, and the right column shows
 the Jura side.
-1516.4 RICH Upgrade Future Kaon Experiments
+1546.4 RICH Upgrade Future Kaon Experiments
 -400 -300 -200 -100 0 100 200 300 400
 X [mm]-400-300-200-1000100200300400Y [mm]
 0.20.40.60.81.0
@@ -3457,7 +3505,7 @@ Figure 6.23: Cherenkov light illumination of RICH PMT arrays for the three diffe
 ent sensors produced from a MC sample of K+→π0e+ν(Ke3). The left column
 shows illumination on the Saleve side of the RICH detector, and the right column
 shows the Jura side.
-1526.4 RICH Upgrade Future Kaon Experiments
+1556.4 RICH Upgrade Future Kaon Experiments
 In the reconstruction, the photo-electrons are clustered into ring candidates. The
 number of reconstructed photo-electrons is shown in Figure 6.24, with the SiPM sen-
 sors resulting in a two-times increase in the number of hits per ring candidate. The
@@ -3467,7 +3515,7 @@ the probability of multiple photons hitting the same sensor. There are minimal d
 ferences between the three sensor sizes shown in Figure 6.24 (b-d), with the 3 mm
 sensors having a slightly higher number of hits per ring candidate when compared
 to the 9 mm sensors.
-1536.4 RICH Upgrade Future Kaon Experiments
+1566.4 RICH Upgrade Future Kaon Experiments
 0 10 20 30 40 50
 Number of Photo-electrons0.00.20.40.60.81.0
 =13.00±0.01
@@ -3492,7 +3540,7 @@ for the HIKE array with 9 mm SiPMs. With the the largest sensor size at 3 mm
 improving further to 0.41 mm. However, it would not be possible to obtain this
 resolution in reality due to small misalignments in the mirror and dispersion in
 the radiator gas. It was accepted that the 9 mm value would be the best possible
-1546.4 RICH Upgrade Future Kaon Experiments
+1576.4 RICH Upgrade Future Kaon Experiments
 resolution obtainable.
 160 170 180 190 200 210 220 230 240
 Ring Radius [mm]0.00.20.40.60.81.0
@@ -3517,13 +3565,13 @@ by equally splitting the reconstructed photo-electrons of the ring candidates in
 sets and calculating the time difference between them, with the results are shown
 in Figure 6.26. This method was used to remove any dependence on the reference
 time with respect to the single hit times. The 3x3 mm sensors produced the best
-1556.4 RICH Upgrade Future Kaon Experiments
+1586.4 RICH Upgrade Future Kaon Experiments
 time resolution of 20.04 ps compared to the 9x9 mm sensors with a time resolution of
 21.22 ps. However, there was little difference between the SiPMs, with each sensor
 size producing a time resolution of less than 30 ps, fulfilling the requirements of
 HIKE. The improvement was clear with using the small SiPMs when compared
 with the NA62 resolution in Figure 6.26, which had a time resolution of 61.35 ps.
-1566.4 RICH Upgrade Future Kaon Experiments
+1596.4 RICH Upgrade Future Kaon Experiments
 -0.4 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3 0.4
 Time [ns]0.00.20.40.60.81.0
 (a) NA62 PMT arrays.
@@ -3542,12 +3590,12 @@ Time [ns]0.00.20.40.60.81.0
 Figure 6.26: Time resolution for NA62 PMTs and the three possible HIKE SiPMs,
 calculated from the time difference between two equally populated subsets of hits
 within the ring candidate. A detailed description of the procedure is provided here
-[92]
+[93]
 After the RICH MC study, it was proven that introducing small SiPMs would
 dramatically increase the granularity of the detector. All three SiPM sensor sizes
 produced results which exceeded the requirements for HIKE with a time resolu-
 tion of around 20 ps and improvements on the reconstructed ring radius resolution.
-1576.5 Detector Rates Future Kaon Experiments
+1606.5 Detector Rates Future Kaon Experiments
 From the results of the HIKE simulation, the 9x9 mm SiPMs would be used as they
 provided excellent performance and would reduce the cost and complexity of imple-
 menting the smaller sensor sizes in the detector when it was built. A clear benefit
@@ -3561,7 +3609,7 @@ HIKE simulations. It was possible to estimate the expected rate for Phase 1 by
 scaling the known NA62 rates by the expected increase in beam intensity by a fac-
 tor of 4 compared to NA62. The rates for Phase 2 were calculated using the new
 simulation software described in the previous sections.
-An array of input files were produced in BDSIM [93] by the CERN beam group
+An array of input files were produced in BDSIM [94] by the CERN beam group
 which contained the simulated HIKE beam components at a Z of 120 m, which
 was the start of the fiducial volume. The files were then used as an input for the
 NA62MC software and used as the primary beam instead of the turtle beam, which
@@ -3580,7 +3628,7 @@ of 4.8 seconds and a beam intensity of 2 ×1013protons per spill.
 TheKLrate at the entrance of the fiducial volume was calculated to be 304.1
 MHz. The rate of the four main KLdecays inside the fiducial volume is shown in
 Table 6.4.
-1586.5 Detector Rates Future Kaon Experiments
+1616.5 Detector Rates Future Kaon Experiments
 KL decay Rate [MHz]
 KL→π±e∓νe(K0
 e3)13.89
@@ -3597,7 +3645,7 @@ decay was concerning as one would expect a much lower rate compared to the other
 decays due to the lack of a charged daughter particles. Even with a lower branching
 ratio, it is expected that the KL→π+π−π0decay should have a higher rate in the
 spectrometer due to the charged pions.
-1596.5 Detector Rates Future Kaon Experiments
+1626.5 Detector Rates Future Kaon Experiments
 DetectorKLDecay [MHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -3628,7 +3676,7 @@ of the particles were produced after Z=210 m with most produced in the walls of 
 vacuum decay tube and the spectrometer chambers themselves, with only 20 % of
 particles produced before Z=210 m which would be consistent with being produced
 in the decay.
-1606.5 Detector Rates Future Kaon Experiments
+1636.5 Detector Rates Future Kaon Experiments
 120 140 160 180 200 220 240
 Z [m]025050075010001250150017502000Radius [mm]0.75 0.25
 0.20.40.60.81.0
@@ -3655,7 +3703,7 @@ Photon
 Figure 6.28: Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0
 decay.
-1616.5 Detector Rates Future Kaon Experiments
+1646.5 Detector Rates Future Kaon Experiments
 As well as the overall hit rate, it is important to understand the rate in the
 detectors produced directly from the daughter particles of the KLdecays. The
 daughter particles were selected as particles with a GEANT4 production process
@@ -3692,7 +3740,7 @@ e3),KL→
 π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced directly from the
 daughter particles of the KLdecays.
-1626.5 Detector Rates Future Kaon Experiments
+1656.5 Detector Rates Future Kaon Experiments
 It is important to understand the rates of the detectors in order to determine the
 overall detector design, especially for the electronics that would need to be designed
 to meet the high rates. The reported rates would also drive the development of the
@@ -3729,7 +3777,7 @@ three of these detectors. However, other detectors would be upgraded to increase
 granularity, but the design was not yet finalised and, therefore, not implemented in
 the simulation. This would result in an incorrect calculation as the rate is determined
 by the NA62 detector design and the layout of the channels in the detectors. As the
-1636.5 Detector Rates Future Kaon Experiments
+1666.5 Detector Rates Future Kaon Experiments
 final designs for these detector were not finalised, it was impractical to implement the
 new detectors in the simulation. However, it was still possible to calculate the rates
 at the planes of the upgraded detectors by collecting particles passing through the
@@ -3767,7 +3815,7 @@ through the detector. An example cross-section at the entry of the first STARW
 chamber is shown in Figure 6.29, where it is clear that the highest rate from the
 decay particles was found at the centre. As the detectors were not designed and the
 beam hole size was unknown, it was possible to estimate the size by calculating the
-1646.5 Detector Rates Future Kaon Experiments
+1676.5 Detector Rates Future Kaon Experiments
 beam divergence at the detector position. This was calculated using Equation 6.1.
 δbeam= 0.4mrad×Z (6.1)
 -2000 -1500 -1000 -500 0 500 1000 1500 2000
@@ -3780,7 +3828,7 @@ remove any particles that would not impact the detector. The resultant rates wit
 the beam hole mask applied are shown in Table 6.9. As expected, this reduced the
 max rate for most detectors without impacting the average rate across the detector
 plane.
-1656.5 Detector Rates Future Kaon Experiments
+1686.5 Detector Rates Future Kaon Experiments
 KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -3821,7 +3869,7 @@ of length 330 mm, CHOD a square of length 244 mm, IRC a square of length 122 mm,
 MEC a circle of radius 182.5 mm, MUV-1&2 a square of length 320 mm, MUV-3 a
 square of length 281 mm and HAC a square of length 281 mm. A geometrical cut
 has been made to remove particles that pass through the checkpoints within the
-1666.6 Conclusions Future Kaon Experiments
+1696.6 Conclusions Future Kaon Experiments
 expected beam dispersion radius calculated to be 0 .4×10−3×Z, where Z is the
 position of the checkpoint.
 CheckpointsTotal Particle Rates kHz /cm2
@@ -3842,8 +3890,8 @@ the length of the detector.
 6.6 Conclusions
 Unfortunately, in 2024, CERN management decided that HIKE would not be ac-
 cepted for operation in ECN3. However, the development of the detectors, software
-and the subsequent physics studies was utilised for the KOTO II proposal [94].
-167Bibliography
+and the subsequent physics studies was utilised for the KOTO II proposal [95].
+170Bibliography
 [1] N. Cabibbo, “Unitary symmetry and leptonic decays,” Phys. Rev. Lett. , vol. 10,
 pp. 531–533, Jun 1963.
 [2] M. Kobayashi and T. Maskawa, “Cp-violation in the renormalizable theory of
@@ -3868,7 +3916,7 @@ contributions to cosmic-ray physics,” Physics Today , vol. 66, pp. 8–8, 06 2
 [9] C. M. G. Lattes, G. P. S. Occhialini, and C. F. Powell, “Observations on the
 tracks of slow mesons in photographic emulsions,” Nature , vol. 160, pp. 453–
 456, 1947.
-1686.6 BIBLIOGRAPHY BIBLIOGRAPHY
+1716.6 BIBLIOGRAPHY BIBLIOGRAPHY
 [10] S. Navas et al. , “Review of particle physics,” Phys. Rev. D , vol. 110, no. 3,
 p. 030001, 2024.
 [11] G. D. Rochester and C. C. Butler, “Evidence for the existence of new unstable
@@ -3897,7 +3945,7 @@ system,” Physics Letters B , vol. 317, no. 1, pp. 233–242, 1993.
 of the neutral kaon,” Physics Letters B , vol. 465, no. 1, pp. 335–348, 1999.
 [22] A. Alavi-Harati et al., “Observation of direct cp violation in kS,L→ππdecays,”
 Phys. Rev. Lett. , vol. 83, pp. 22–27, Jul 1999.
-1696.6 BIBLIOGRAPHY BIBLIOGRAPHY
+1726.6 BIBLIOGRAPHY BIBLIOGRAPHY
 [23] S. L. Glashow, J. Iliopoulos, and L. Maiani, “Weak interactions with lepton-
 hadron symmetry,” Phys. Rev. D , vol. 2, pp. 1285–1292, Oct 1970.
 [24] A. J. Buras, D. Buttazzo, J. Girrbach-Noe, and R. Knegjens, “ K+→π+ννand
@@ -3926,7 +3974,7 @@ l→π0µ+µ−decay within
 the sm,” The European Physical Journal C , vol. 36, pp. 57–66, 2004.
 [34] J. R. Batley et al. , “Observation of the rare decay K(S) — >pi0 e+ e-,” Phys.
 Lett. B , vol. 576, pp. 43–54, 2003.
-1706.6 BIBLIOGRAPHY BIBLIOGRAPHY
+1736.6 BIBLIOGRAPHY BIBLIOGRAPHY
 [35] J. R. Batley et al. , “Observation of the rare decay K(S) — >pi0 mu+ mu-,”
 Phys. Lett. B , vol. 599, pp. 197–211, 2004.
 [36] F. Mescia, C. Smith, and S. Trine, “K(L) — >pi0 e+ e- and K(L) — >pi0
@@ -3956,7 +4004,7 @@ CERN,” Journal of Instrumentation , vol. 12, pp. P05025–P05025, may 2017.
 [45] C. Bovet, R. Maleyran, L. Piemontese, A. Placci, and M. Placidi, “The Cedar
 Counters for Particle Identification in the SPS Secondary Beams: A Description
 and an Operation Manual,” 12 1982.
-1716.6 BIBLIOGRAPHY BIBLIOGRAPHY
+1746.6 BIBLIOGRAPHY BIBLIOGRAPHY
 [46] E. Goudzovski et al. , “Development of the kaon tagging system for the na62
 experiment at cern,” Nuclear Instruments and Methods in Physics Research
 Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ,
@@ -3984,7 +4032,7 @@ tation , vol. 15, p. C07007, jul 2020.
 Energy Physics , vol. 2023, no. 122, 2023.
 [55] S. Agostinelli et al. , “GEANT4 – a simulation toolkit,” Nuclear Instruments
 and Methods in Physics Research Section A , vol. 506, pp. 250–303, 2003.
-1726.6 BIBLIOGRAPHY BIBLIOGRAPHY
+1756.6 BIBLIOGRAPHY BIBLIOGRAPHY
 [56] R. Brun and F. Rademakers, “ROOT - An Object Oriented Data Analysis
 Framework,” Nuclear Instruments and Methods in Physics Research Section A ,
 vol. 389, pp. 81–86, 1997. Proceedings AIHENP’96 Workshop, Lausanne, Sep.
@@ -4000,93 +4048,95 @@ vol. 13, pp. 1690–1694, Jul 1974.
 [61] J. C. Henshaw, “Beam intensity effects on the K+→π+ν¯νmeasurement at
 NA62,” 2023. Presented 01 Dec 2023.
 [62] CERN Engineers, 2022. Personal communication.
-[63] M. Tanabashi and others (Particle Data Group), “Review of particle physics,”
+[63] P. Lichard, “Vector meson dominance and the π0transition form factor,” Phys.
+Rev. D , vol. 83, p. 037503, Feb 2011.
+[64] M. Tanabashi and others (Particle Data Group), “Review of particle physics,”
 Phys. Rev. D , vol. 98, p. 030001, 2018.
-[64] G. Cowan, “Statistics review for the particle data group,” Particle Data Group
+[65] G. Cowan, “Statistics review for the particle data group,” Particle Data Group
 Review , 2018.
-[65] P. Bock, “Computation of confidence levels for exclusion or discovery of a signal
+[66] P. Bock, “Computation of confidence levels for exclusion or discovery of a signal
 with the method of fractional event counting,” JHEP , vol. 01, p. 080, 2007.
-[66] P. Ilten, Y. Soreq, M. Williams, et al. , “Serendipity in dark photon searches,”
+[67] P. Ilten, Y. Soreq, M. Williams, et al. , “Serendipity in dark photon searches,”
 Journal of High Energy Physics , vol. 2018, no. 4, 2018.
-[67] C. Baruch, P. Ilten, Y. Soreq, et al. , “Axial vectors in darkcast,” Journal of
+[68] C. Baruch, P. Ilten, Y. Soreq, et al. , “Axial vectors in darkcast,” Journal of
 High Energy Physics , vol. 2022, no. 124, 2022.
-[68] J. P. Lees et al. , “Search for a Dark Photon in e+e−Collisions at BaBar,” Phys.
+1766.6 BIBLIOGRAPHY BIBLIOGRAPHY
+[69] J. P. Lees et al. , “Search for a Dark Photon in e+e−Collisions at BaBar,” Phys.
 Rev. Lett. , vol. 113, no. 20, p. 201801, 2014.
-1736.6 BIBLIOGRAPHY BIBLIOGRAPHY
-[69] D. Banerjee et al. , “Improved limits on a hypothetical X(16.7) boson and a
+[70] D. Banerjee et al. , “Improved limits on a hypothetical X(16.7) boson and a
 dark photon decaying into e+e−pairs,” 2019.
-[70] A. Anastasi et al. , “Limit on the production of a low-mass vector boson in
+[71] A. Anastasi et al. , “Limit on the production of a low-mass vector boson in
 e+e−oUγ, Uoe+e−with the KLOE experiment,” Phys. Lett. , vol. B750, pp. 633–
 637, 2015.
-[71] D. Babusci et al. , “Limit on the production of a light vector gauge boson in phi
+[72] D. Babusci et al. , “Limit on the production of a light vector gauge boson in phi
 meson decays with the KLOE detector,” Phys. Lett. , vol. B720, pp. 111–115,
 2013.
-[72] B. Petersen, “First Physics Results from the FASER Experiment,” in 57th
+[73] B. Petersen, “First Physics Results from the FASER Experiment,” in 57th
 Rencontres de Moriond on Electroweak Interactions and Unified Theories , 5
 2023.
-[73] M. Davier and H. Nguyen Ngoc, “An Unambiguous Search for a Light Higgs
+[74] M. Davier and H. Nguyen Ngoc, “An Unambiguous Search for a Light Higgs
 Boson,” Phys. Lett. , vol. B229, pp. 150–155, 1989.
-[74] A. Bodas, R. Coy, and S. J. D. King, “Solving the electron and muon g−2
+[75] A. Bodas, R. Coy, and S. J. D. King, “Solving the electron and muon g−2
 anomalies in Z′models,” 2 2021.
-[75] L. Gatignon et al. , “Report from the Conventional Beams Working Group to
+[76] L. Gatignon et al. , “Report from the Conventional Beams Working Group to
 the Physics Beyond Collider Study and to the European Strategy for Particle
 Physics,” tech. rep., CERN, Geneva, 2022.
-[76] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
+[77] M. U. Ashraf et al. , “High intensity kaon experiments (hike) at the cern sps
 proposal for phases 1 and 2,” 2023.
-[77] J. Frank et al. , “Charged kaons at the main injector (ckm): A proposal for a
+[78] J. Frank et al. , “Charged kaons at the main injector (ckm): A proposal for a
 precision measurement of the decay k+→π+ν¯νand other rare k+processes at
 fermilab using the main injector,” tech. rep., Fermilab, 2001.
-[78] E. Ramberg, P. Cooper, and R. Tschirhart, “A photon veto detector for the ckm
+[79] E. Ramberg, P. Cooper, and R. Tschirhart, “A photon veto detector for the ckm
 experiment,” in 2003 IEEE Nuclear Science Symposium. Conference Record
 (IEEE Cat. No.03CH37515) , pp. 210–214 Vol.1, 2003.
-[79] F. Ambrosino et al. , “Klever: An experiment to measure br( kl→π0ν¯ν) at the
+1776.6 BIBLIOGRAPHY BIBLIOGRAPHY
+[80] F. Ambrosino et al. , “Klever: An experiment to measure br( kl→π0ν¯ν) at the
 cern sps,” 2019.
-1746.6 BIBLIOGRAPHY BIBLIOGRAPHY
-[80] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
+[81] J. R. Fry, G. Ruggiero, and F. Bergsma, “Precision magnetic field mapping for
 CERN experiment NA62,” Journal of Physics G: Nuclear and Particle Physics ,
 vol. 43, p. 125004, nov 2016.
-[81] N. Kishimoto, M. Nagamine, K. Inami, Y. Enari, and T. Ohshima, “Lifetime
+[82] N. Kishimoto, M. Nagamine, K. Inami, Y. Enari, and T. Ohshima, “Lifetime
 of mcp–pmt,” Nuclear Instruments and Methods in Physics Research Section
 A: Accelerators, Spectrometers, Detectors and Associated Equipment , vol. 564,
 no. 1, pp. 204–211, 2006.
-[82] D. Beaulieu, D. Gorelikov, P. de Rouffignac, K. Saadatmand, K. Stenton,
+[83] D. Beaulieu, D. Gorelikov, P. de Rouffignac, K. Saadatmand, K. Stenton,
 N. Sullivan, and A. Tremsin, “Nano-engineered ultra-high-gain microchannel
 plates,” Nuclear Instruments and Methods in Physics Research Section A: Ac-
 celerators, Spectrometers, Detectors and Associated Equipment , vol. 607, no. 1,
 pp. 81–84, 2009. Radiation Imaging Detectors 2008.
-[83] A. Lehmann et al. , “Lifetime of mcp-pmts and other performance features,”
+[84] A. Lehmann et al. , “Lifetime of mcp-pmts and other performance features,”
 Journal of Instrumentation , vol. 13, p. C02010, feb 2018.
-[84] A. Lehmann et al. , “Recent progress with microchannel-plate pmts,” Nuclear
+[85] A. Lehmann et al. , “Recent progress with microchannel-plate pmts,” Nuclear
 Instruments and Methods in Physics Research Section A: Accelerators, Spec-
 trometers, Detectors and Associated Equipment , vol. 952, p. 161821, 2020. 10th
 International Workshop on Ring Imaging Cherenkov Detectors (RICH 2018).
-[85] A. Lehmann et al. , “Latest technological advances with mcp-pmts,” Journal of
+[86] A. Lehmann et al. , “Latest technological advances with mcp-pmts,” Journal of
 Physics: Conference Series , vol. 2374, p. 012128, nov 2022.
-[86] A. Ronzhin, S. Los, E. Ramberg, A. Apresyan, S. Xie, M. Spiropulu, and
+[87] A. Ronzhin, S. Los, E. Ramberg, A. Apresyan, S. Xie, M. Spiropulu, and
 H. Kim, “Direct tests of micro channel plates as the active element of a new
 shower maximum detector,” Nuclear Instruments and Methods in Physics Re-
 search Section A: Accelerators, Spectrometers, Detectors and Associated Equip-
 ment , vol. 795, pp. 52–57, 2015.
-[87] A. Lehmann, “Status and perspectives of vacuum-based photon detec-
+[88] A. Lehmann, “Status and perspectives of vacuum-based photon detec-
 tors.” https://indico.cern.ch/event/1094055/contributions/4974129/
+1786.6 BIBLIOGRAPHY BIBLIOGRAPHY
 attachments/2508971/4311863/Lehmann_Talk_RICH2022_final.pdf ,
 September 2022. Presented at RICH 2022, Edinburgh, Scotland, September
 15, 2022.
-1756.6 BIBLIOGRAPHY BIBLIOGRAPHY
-[88] D. Orlov, T. Ruardij, S. D. Pinto, R. Glazenborg, and E. Kernen, “High collec-
+[89] D. Orlov, T. Ruardij, S. D. Pinto, R. Glazenborg, and E. Kernen, “High collec-
 tion efficiency mcps for photon counting detectors,” Journal of Instrumentation ,
 vol. 13, p. C01047, jan 2018.
-[89] Photonis, “Specification MCP-PMT TYPE XP85112-S-BA PLANACON.”
+[90] Photonis, “Specification MCP-PMT TYPE XP85112-S-BA PLANACON.”
 Technical Specification, Document No. 184-7774A1. Available from Photonis
 or related sources.
-[90] “MPPC (Multi-Pixel Photon Counter) S13360 Series.” Hamamatsu Photonics.
-[91] F. Carnesecchi et al. , “Experimental study of the time resolution of sipm cou-
+[91] “MPPC (Multi-Pixel Photon Counter) S13360 Series.” Hamamatsu Photonics.
+[92] F. Carnesecchi et al. , “Experimental study of the time resolution of sipm cou-
 pled to scintillator,” Nuclear Instruments and Methods in Physics Research
 Section A: Accelerators, Spectrometers, Detectors and Associated Equipment ,
 vol. 982, p. 164484, 2020.
-[92] G. Anzivino et al. , “Light detection system and time resolution of the na62
+[93] G. Anzivino et al. , “Light detection system and time resolution of the na62
 rich,” Journal of Instrumentation , vol. 15, p. P10025, oct 2020.
-[93] L. J. Nevay et al. , “Bdsim: An accelerator tracking code with particle-matter
+[94] L. J. Nevay et al. , “Bdsim: An accelerator tracking code with particle-matter
 interactions,” Computer Physics Communications , vol. 252, p. 107200, 2020.
-[94] J. K. Ahn et al. , “Proposal of the koto ii experiment,” 2025.
-176
+[95] J. K. Ahn et al. , “Proposal of the koto ii experiment,” 2025.
+179
