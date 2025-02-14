@@ -2818,17 +2818,20 @@ estimation.
 5.3.2 Data Driven Background Method
 The data driven background method employed the same selection described in the
 previous section, but instead of using the produced MC samples for the background
-estimation, the data itself was used. Eventually the 2023 dataset was implemented
-along with the 2022. The number of data events passing the selection for the 2022/23
-datasets was 66,839,882, which is just over a 3 fold increase compared to just the
+estimation, the data itself was used. In addition to the 2022 dataset used in the
+MC bacground study the 2023 and 2024 datasets were included for this study. The
+number of data events passing the selection for the 2022-24 datasets was 160,670,014
 1205.3 Dark Photon Search The Search for Dark Photons at NA62
-2022, even though both years had similar run durations. This was due to a change
-in the defined downscaling for the eMT trigger line which was reduced from 3 to 1,
-resulting in a total effective NKcalculated with Equation 5.6,
+which is just over a 8 fold increase compared to the 2022 dataset. This large increase
+by adding 2023 and 2024 data was due to a change in the defined downscaling for
+the eMT trigger line which was reduced from 3 to 1, resulting in a total effective
+NKcalculated with Equation 5.6,
 N2022/23
-K = (4.95±0.15)×1012(5.16)
+K = (1.19±0.04)×1013(5.16)
 The resultant reconstructed invariant mass of the electron-positron pair for events
 passing the selection is Shown in Figure 5.19.
+0 20 40 60 80 100 120 140
+Mee [MeV/c2]012345Events / (1 MeV/c2)1e6
 Figure 5.19: Reconstructed invariant mass of electron-positron pair for events pass-
 ing the selection from the 2022 and 2023 NA62 dataset.
 The produce an estimation of the background the distribution from the data itself
@@ -2839,11 +2842,11 @@ tion, defined with equation 5.12 was used to convert bins of Meeto DP candidate
 windows. A new DP mass range was defined as 8 ≤mA′≤121.6MeV/c2. The
 mass ranges were extended compared to the previous MC approach due to the large
 statistical afforded by only using the data sample rather than the MC. Each DP
-mass hypothesis was defined by steps of 1 σm(mA′). A 4th order polynomial was
 1215.3 Dark Photon Search The Search for Dark Photons at NA62
+mass hypothesis was defined by steps of 1 σm(mA′). A 4th order polynomial was
 fitted to the data distribution using a least χ2method. The fitting region for each
-mass hypothesis was defined as ±20σm(mA′) from the mass hypothesis and the dis-
-tribution was re-binned for each with a bin width of 1 /10σm(mA′). However data
+mass hypothesis was defined as ±15σm(mA′) from the mass hypothesis and the dis-
+tribution was re-binned for each with a bin width of 1 /5σm(mA′). However data
 events in the mass bins above 125 MeV/c2were removed due to the small counts
 causing instability with the fitting. Counts in the mass bins ±1.5σm(mA′) of the
 mass hypothesis were excluded from the fit to avoid the possibility of sensitivity
@@ -2892,6 +2895,16 @@ limit on the number of DP candidates in each mass window and is shown in Figure
 order of magnitude better than the one produced by the Monte Carlo study and
 shown in Figure 5.15, however its not possible for a direct comparison due to the
 change in method and the increase in statistics from the added 2023 sample.
+20 40 60 80 100 120
+MA (Dark photon mass hypothesis) [MeV/c2]
+100101102103104105106107
+Nexp
+Nobs
+Nstat
+exp
+Nsyst
+exp
+UL (NDP 90% CL)NexpNobs
 Figure 5.22: Number of observed data events ( Nobs), expected number of events
 from the data driven method ( Nexp), the respective errors ( δNobsandδNexp) and the
 resultant upper limit on the number of Dark Photon candidates to a 90% confidence
@@ -2901,6 +2914,13 @@ of the DP signal was calculated with Equation 5.13 and is shown in Figure 5.23.
 Again, the significance did not reach the threshold of three sigma so no DP was
 observed.
 1255.3 Dark Photon Search The Search for Dark Photons at NA62
+20 40 60 80 100 120
+MA (Dark photon mass hypothesis) [MeV/c2]
+-10-50510DP signal local significance±3 significance
+±2 significance
+±1 significance
+-3 -2 -1 0 1 2 3
+DP signal local significance01020
 Figure 5.23: Local significance of DP signal across the search window 8 ≤mA′≤
 121.6MeV/c2for the data driven study. Top, in terms of DP mass and bottom, the
 y projection of the DP mass plot.
@@ -2910,12 +2930,31 @@ in Figure 5.24. The resultant upper limit for the Bπ→γAsuggested a significa
 improvement compared to the result produced in the MC study shown in Figure
 5.17.
 1265.3 Dark Photon Search The Search for Dark Photons at NA62
+20 40 60 80 100 120
+MA (Dark photon mass hypothesis) [MeV/c2]
+109
+108
+107
+106
+Upper limit on B(0A) @ 90% CL
 Figure 5.24: Upper limit on the branching fraction of π0→γA′at a 90% CL for
 each Dark Photon mass value, for the data driven background method for estimating
 the number of expected events.
 The resultant upper limit on the mixing parameter was calculated with Equation
 5.15 was compared to the result from NA48/2 [43] in Figure 5.25.
 1275.3 Dark Photon Search The Search for Dark Photons at NA62
+20 40 60 80 100 120
+MA (Dark photon mass hypothesis) [MeV/c2]
+1010
+109
+108
+107
+106
+105
+104
+Upper limit on 2 @ 90% CL
+NA62-2022/23
+NA48/2 Result
 Figure 5.25: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data driven background estimation, with the result from
 NA48/2 for comparison [43].
@@ -2926,7 +2965,7 @@ for using the data for the estimation of the background, reducing the errors whi
 limited the study previously. To see how this result compares to global results for
 the mixing parameter, the result from this analysis was presented in Figure 5.26,
 produced using the software package DarkCast, a companion software package to
-well known papers [67, 68]. Figure 5.26 shows the result from this study and a
+well known papers [67, 68]. Figure 5.26 shows the results from this study and a
 number of other collaborations: NA48/2 [43], BaBar [69], NA64 [70], KLOE [71],
 KLOE-2 [72], FASER [73] and others [74, 75].
 1285.3 Dark Photon Search The Search for Dark Photons at NA62
@@ -2977,6 +3016,19 @@ reconstruction the resolution of the decay vertex position is 1 m. Suggesting th
 the current status of the analysis is consistent with the prompt decay mode. From
 the max energy of the DP, the point at which the mixing parameter for each mass
 bin would correspond to a displaced decay is shown in Figure 5.27.
+20 40 60 80 100 120
+MA (Dark photon mass hypothesis) [MeV/c2]
+1010
+109
+108
+107
+106
+105
+104
+Upper limit on 2 @ 90% CL
+NA62-2022/23
+NA48/2 Result
+Prompt Limit
 Figure 5.27: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data driven background estimation, with the result from
 NA48/2 for comparison [43] and the expected limit of the prompt decay.
