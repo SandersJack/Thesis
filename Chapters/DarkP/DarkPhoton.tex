@@ -1,5 +1,7 @@
 \documentclass[../../main.tex]{subfiles}
 
+\newcommand{\CLs}{\text{CL}_s}
+
 
 \begin{document}
 
@@ -269,7 +271,32 @@
         Z = \frac{N_{obs} - N_{exp}}{\sqrt{\delta N_{obs} + \delta N_{exp}}}
     \end{equation}
     and is shown in Figure \ref{fig:local_sig}. Across the search window the local significance is never greater than $3 \sigma$ resulting in no DP signal observed. 
-    The confidence intervals for the number of DP decays ($A' \to e^+e^-$) at a 90\% CL for each DP mass value was calculated using $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method recommended by the Particle Data Group \cite{Cowan:2018} and employs the method setout in \cite{Bock:2004xz}.(MAYBE DESCRIBE METHOD)
+    The confidence intervals for the number of DP decays ($A' \to e^+e^-$) at a 90\% CL for each DP mass value was calculated using $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method recommended by the Particle Data Group \cite{Cowan:2018} and employs the method set out in \cite{Junk:1999kv, Read:2000ru}.
+    For setting an upper limit on the signal $s$ from a counting experiment where $N$ events are observed and there is a known expected background $b$, it can be considered a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
+    \begin{equation}\label{eq:test_stat}
+        X = L_{s+b} / L_b = \frac{e^{-s+b}(s+b)^N}{N!} / \frac{e^{-b} b^N}{N!} = e^{-s}(1+\frac{s}{b})^N.
+    \end{equation} 
+    It is beneficial to denote the test statistic for the observed data as $X_{obs}$.
+    A confidence level for the exclusion of the background hypothesis ($\text{CL}_{s+b}$) is the probability that the test statistic defined in Equation \ref{eq:test_stat} is less than or equal than the observed test statistic, 
+    \begin{equation}\label{eq:prob_test}
+        CL_{s+b} = P_{s+b}(X \leq X_{obs}).
+    \end{equation}
+    To improve the computational efficiency the test statistic defined in Equation \ref{eq:test_stat} used for comparison is simplified to, 
+    \begin{equation}
+        log(X) = N log(\frac{s}{b}).
+    \end{equation}
+    The confidence level is calculated using a Monte-Carlo integration method where large number of trials are used to calculate the probability defined in Equation \ref{eq:prob_test}. For each trial the value N is sampled from the Poisson distribution with a mean of s+b, with b being the background sampled from a normal distribution with a mean equal to the expected number of events and sigma equal to the error on the expected value.
+    The test statistic is then computed and compared with $X_{obs}$. Similarly the confidence level for the exclusion of the signal+background ($\text{CL}_{b}$) is calculated, with the difference being that N is sampled from a Poisson distribution with a mean of $b$ compared to $s+b$. 
+    After the trials the modified frequentist confidence level ($\text{CL}_s$) is calculated as,
+    \begin{equation}
+        CL_s = CL_{s+b} / CL_b.
+    \end{equation}
+    A binary search is then completed using the above method to find the value of $s$ which satisfies the relation, 
+    \begin{equation}
+        CL_s(s) = 1 - \alpha
+    \end{equation}
+    which would be the upper limit on the signal for a confidence level of $\alpha$.
+
     The resultant upper limits on the number of DP candidates ($N_{DP}$) at a 90\% CL is shown in Figure \ref{fig:searchwindow_vals}.
 
     \begin{figure}[H]
@@ -342,35 +369,33 @@
     Example fits for background estimation and the systematic error estimation the first DP mass hypothesis is shown in Figure \ref{fig:example8_fit}. The mass range of the plots is the entire $\pm 20 \sigma_m(m_{A'})$ fitting range and shown the removed region $\pm 1.5 \sigma_m(m_{A'})$ of the mass hypothesis described above.
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_3rd.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/6_3rd.pdf} }}%
         \linespread{1.0}
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_4th.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/6_4th.pdf} }}%
         \linespread{1.0}
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fit8_5th.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/6_5th.pdf} }}%
         \linespread{1.0}
-        \caption{Fit of 4th order polynomial on the data distribution at the first DP mass hypothesis for the background estimation, along with fits for 3rd and 5th order polynomials used for 
-        systematic error estimation.}%
+        \caption{Fits of the data distributions with polynomial for the first DP mass hypothesis. Top left, the data fitted with 3rd order used for the systematic uncertainty calculation, top right fitted with a 4th order polynomial for the background estimation and bottom fitted with 5th order for the systematic uncertainty calculation.}%
         \label{fig:example8_fit}%
     \end{figure}
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_3rd.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/121_3rd.pdf} }}%
         \linespread{1.0}
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_4th.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/121_4th.pdf} }}%
         \linespread{1.0}
-        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/fitend_5th.png} }}%
+        \subfloat{{\includegraphics[width=0.45\textwidth]{plots/121_4th.pdf} }}%
         \linespread{1.0}
-        \caption{Fit of 4th order polynomial on the data distribution at the final DP mass hypothesis for the background estimation, along with fits for 3rd and 5th order polynomials used for 
-        systematic error estimation.}%
+        \caption{Fits of the data distributions with polynomial for the final DP mass hypothesis. Top left, the data fitted with 3rd order used for the systematic uncertainty calculation, top right fitted with a 4th order polynomial for the background estimation and bottom fitted with 5th order for the systematic uncertainty calculation.}%
         \label{fig:exampleend_fit}%
     \end{figure}
-    The fit for the final DP mass hypothesis is shown in Figure \ref{exampleend_fit}, showing how all events after $125 MeV/c^2$ have been removed from the fitting region. The figure shows that the upper limit was reaching a point where there was not many data points on the 
+    The polynomial fits for the final DP mass hypothesis are shown in Figure \ref{fig:exampleend_fit}, showing how all events after \SI{125}{\mega\electronvolt\per\clight^2} have been removed from the fitting region. The figure shows that the upper limit was reaching a point where there was not many data points on the 
     right side of the mass window, which will of inevitably increased the error in this region.
     
     The resultant $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ are shown in Figure \ref{fig:datadrive_plot}. As expected the combined expected error $\delta N_{obs}$, has dramatically reduced compared to the MC background presented in Figure \ref{fig:searchwindow_vals} and out preforming the statistical error for the observed in each DP mass window. 
-    A described above the error $\delta N_{obs}$ increases past $100 MeV/c^2$ caused by the reduced fitting window due to the remove data events past $125 MeV/c^2$, resulting in both the statistical and the systematic to increase. However this will not cause any significant impact to the analysis due to the competitive acceptance at this high mass range.
+    A described above the error $\delta N_{obs}$ increases past \SI{100}{\mega\electronvolt\per\clight^2} caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight^2}, resulting in both the statistical and the systematic to increase. However this will not cause any significant impact to the analysis due to the competitive acceptance at this high mass range.
     Using the same method used in the MC study, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ were used as inputs to the CLs method to calculate the upper limit on the number of DP candidates in each mass window and is shown in Figure \ref{fig:datadrive_plot}. The resultant upper limit on the number of DP candidates was more than an order of magnitude better than the one produced by the Monte Carlo study and shown in Figure \ref{fig:searchwindow_vals}, however
-    its not possible for a direct comparison due to the change in method and the increase in statistics from the added 2023 sample.
+    was not possible for a direct comparison due to the change in method and the increase in statistics from the inclusion of the 2023 and 2024 datasets.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/datadrive_plot_24.pdf}
@@ -389,7 +414,7 @@
         \caption{Local significance of DP signal across the search window $8 \leq m_{A'} \leq 121.6 MeV / c^2$ for the data driven study. Top, in terms of DP mass and bottom, the y projection of the DP mass plot.}%
         \label{fig:local_sig_data}%
     \end{figure}
-    The upper limit on the number of DP shown in Figure \ref{fig:datadrive_plot} was used to calculate the upper limit of the branching ratio to a 90\% CL, using Equation \ref{eq:branching_frac} and is shown in Figure \ref{fig:branchinFrac_data}. The resultant upper limit for the $\mathcal{B}{\pi \to \gamma A}$ suggested a significant improvement
+    The upper limit on the number of DP shown in Figure \ref{fig:datadrive_plot} was used to calculate the upper limit of the branching ratio to a 90\% CL, using Equation \ref{eq:branching_frac} and is shown in Figure \ref{fig:branchinFrac_data}. The resultant upper limit for the $\mathcal{B}(\pi^0 \to \gamma A)$ suggested a significant improvement
     compared to the result produced in the MC study shown in Figure \ref{fig:branchinFrac}.
     \begin{figure}[H]
         \centering 
@@ -436,8 +461,11 @@
     \begin{equation}
         \lambda_{max} = \gamma_{max}c\tau_{A'} = \frac{E_{max}}{m_{A'} c^2} c \tau_{A'}
     \end{equation}
-    where DP mean free path is inversely dependent on $\epsilon^2 m_{A'}^2$. The lowest limit from the analysis was found as $\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ corresponding to a max DP mean path length of $0.81\m$. Due to the construction of the 
-    3 track trigger and offline reconstruction the resolution of the decay vertex position is 1\,m. Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
+    where DP mean free path is inversely dependent on $\epsilon^2 m_{A'}^2$. The lowest limit from the analysis was found as 
+    $\epsilon^2 m_{A'}^2 = 3.36 \times 10^{-6} MeV^2 /c^4$  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
+    corresponding to a max DP mean path length of 
+    $1.629\,m$.%$0.81\m$. 
+    Due to the construction of the 3 track trigger and offline reconstruction the resolution of the decay vertex position is 1\,m. Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
     displaced decay is shown in Figure \ref{fig:prompt}.
     \begin{figure}[H]
         \centering 
