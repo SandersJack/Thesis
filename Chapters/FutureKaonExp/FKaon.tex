@@ -3,10 +3,10 @@
 
 \begin{document}
     Over the past 75\,years the study of kaon physics has been integral to the development of the standard model. Since 2016, the NA62 experiment has been the leading experiment in the field of kaon physics. However, 
-    with the NA62 experiment scheduled up to CERN Long Shutdown 3 (LS3), which is expected in autumn 2026, it is important to investigate future experiments. It was then required to investigate the future of kaon physics and the potential experiments that could succeed NA62. This chapter will discuss the potential future of kaon physics, the experiments that could be used to further the field, and the 
+    with the NA62 experiment scheduled up to \gls{LS3}, which is expected in autumn 2026, it is important to investigate future experiments. It was then required to investigate the future of kaon physics and the potential experiments that could succeed NA62. This chapter will discuss the potential future of kaon physics, the experiments that could be used to further the field, and the 
     work I contributed to these experiments.
     \section[HIKE]{High Intensity Kaon Experiments (HIKE)}
-    The High-intensity kaon experiments (HIKE) was a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represented a long-phased program after LS3. HIKE would have profited from a four to six-fold increase in beam intensity compared to NA62 and included cutting-edge detector technologies that will be described in this 
+    The \gls{HIKE} was a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represented a long-phased program after LS3. HIKE would have profited from a four to six-fold increase in beam intensity compared to NA62 and included cutting-edge detector technologies that will be described in this 
     section. The beam intensity requirements for HIKE are described in Table \ref{tab:hikePhases}. To accommodate the higher intensities, upgrades were needed to the infrastructure that provided the beam to ECN3. A number of work groups such as the ECN3 beam delivery group within the Physics Beyond Colliders community at CERN \cite{Gatignon:2650989} was already conducting efforts to consolidate all the work required to upgrade infrastructure.
     Three phases were foreseen within the HIKE program, the first being a continuation of NA62 charged kaon physics with the high-intensity beam and detector upgrades to accommodate the rate increase with the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to 5\,\% precision. The second phase would have involved neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$. 
     The third phase would have been designed to observe the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay and measure its branching ratio to a 20\,\% precision. 
@@ -43,7 +43,7 @@
         \caption{Diagram of the new STRAW spectrometer layout with 5\,mm straw tubes \cite{thehikecollaboration2023high}.}%
         \label{fig:5mmstraw}%
     \end{figure} 
-    Downstream of the fiducial volume, the PMT arrays of the RICH detector would have been upgraded, described in Section \ref{sec:rich_upgrade}. The HIKE timing detector would profit from the current NA62-CHOD detector with upgraded PMTs, which were to be chosen from the outcome of 
+    Downstream of the fiducial volume, the PMT arrays of the RICH detector would have been upgraded, described in Section \ref{sec:rich_upgrade}. The HIKE timing detector would profit from the current NA62-CHOD detector with upgraded \glspl{PMT}, which were to be chosen from the outcome of 
     studies from other detectors such as KTAG, RICH and MUVs. For HIKE Phase 1, the LKr was proposed as the primary electromagnetic calorimeter given its excellent energy resolution, but the required timing resolution was to be achieved by upgrading 
     its readout system. A number of other detectors would have been upgraded or replaced with higher granularity, such as the hadronic calorimeter, MUVs, IRC, and SAC.
 
@@ -80,7 +80,7 @@
     NA62MC is a GEANT4-based Monte Carlo simulation package that simulates the NA62 experiment. The MC utilises functions within GEANT4 to construct the sub-detectors of NA62, including all their materials and structures. It is possible to select a number of kaon decays to simulate in order to create signals similar to what are produced in reality at the experiment. After the simulation is complete, the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
     NA62Reconstruction is then used to reconstruct either the Monte Carlo data or collected data from the experiment, producing hits within the detectors and clustering them into candidates. NA62Analysis is used to analyse the data produced from the reconstruction to conduct all the physics studies that are performed at NA62. 
 
-    The NA62FW was designed for use only with the NA62 experimental setup, resulting in minimal configurability and flexibility. Within the simulation, the only option for users to modify was to enable/disable sub-detectors. With the experiment foreseen to run up to CERN Long shutdown 3 (LS3), an upgraded software package was required to allow for the development of new detectors for future kaon experiments. 
+    The NA62FW was designed for use only with the NA62 experimental setup, resulting in minimal configurability and flexibility. Within the simulation, the only option for users to modify was to enable/disable sub-detectors. With the experiment foreseen to run up to \gls{LS3}, an upgraded software package was required to allow for the development of new detectors for future kaon experiments. 
     The software had to be flexible and configurable enough to allow for the simultaneous use for NA62 data taking and physics analysis, as well as the development of new experiments.
     To implement a flexible framework, all detector classes were refactored to inherit from a common class, which contained the essential functions and variables for all detectors. This allowed for all classes of the detectors to be parsed using the same machinery. The input to the simulation was then changed from a simple text file, to a single configuration file for all the detectors. The configuration file contained any arguments required for individual detectors which are defined in Table \ref{tab:config_variables}, including detectors upgraded later on in this Chapter. The X, Y, and Z placement of the back face of the detectors, along with the rotation, were also defined in this file. 
     An example entry in the configuration file for a STRAW station is shown in Figure \ref{fig:config}, where a name was given for the station "STRAW0", along with chamber ID, chamber type which defines the size of the straws and the chamber geometry which determines if the beam hole is symmetric or not.  
@@ -166,8 +166,8 @@
 
     \section{The KTAG upgrades for HIKE} \label{sec:ktag_upgrade}
     To sustain the increased kaon rate, the KTAG required upgrades to the photon-detection and data acquisition systems, allowing to reach the required time resolution of 15-20\,ps and kaon identification efficiency of greater than 95\,\%. The expected kaon rate in HIKE Phase 1 was 200\,MHz, which corresponds to a maximum rate of \SI{10}{\mega\hertz\per\centi\meter\squared} for the detected photons at the PMT array. This rate takes into account the 
-    production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons on the PMT plane. It was proposed that the NA62 PMT arrays were replaced with arrays of micro-channel plate photomultipliers (MCP-PMTs). The MCP-PMTs would provide a single photon time resolution of 50-70\,ps depending on the model, a low dark rate of \SI{1}{\kilo\hertz\per\centi\meter\squared} and the ability to sustain the required photon rate. 
-    A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas resulting in a rapid reduction in the Quantum Efficiency (QE) \cite{KISHIMOTO2006204}. This results in the rapid degradation of PMT quantum efficiency with the increasing integrated anode charge.
+    production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons on the PMT plane. It was proposed that the NA62 PMT arrays were replaced with arrays of \glspl{MCP-PMT}. The MCP-PMTs would provide a single photon time resolution of 50-70\,ps depending on the model, a low dark rate of \SI{1}{\kilo\hertz\per\centi\meter\squared} and the ability to sustain the required photon rate. 
+    A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas resulting in a rapid reduction in the \gls{QE} \cite{KISHIMOTO2006204}. This results in the rapid degradation of PMT quantum efficiency with the increasing integrated anode charge.
     %% Describe MCP-PMT with diagram
     MCP-PMTs are similar to normal PMTs except that the dynode section is replaced by a micro-channel plate. An example diagram is shown in Figure \ref{fig:mcppmt_dia}, where a photon hits the photocathode window, producing a single electron, which is then accelerated towards the MCP by an electric field provided by a voltage difference across the gap. The electron then collides with the walls of the MCP, producing secondary electrons, which results in a cascade collected by the anodes below.
     The dual layer design, or chevron, adds additional benefits compared to a single layer design such as better gains due to the increased surface for secondary electrons to be produced 
@@ -178,13 +178,13 @@
         \caption{Diagram describing the workings of a MCP-PMT.}%
         \label{fig:mcppmt_dia}%
     \end{figure}  
-    Major breakthroughs to improve the lifetime of the MCP-PMT have come with the method of Atomic Layer Deposition (ALD) \cite{BEAULIEU200981}, where the channels of the MCP are coated with a ultra-thin layer of \ce{Al2O3} or \ce{MgO}. The layer prevents the out-gassing from the MCP glass substrate and drastically reduces the heavy ions reaching the photocathode resulting in significant increases in lifetime of the MCP-PMTs \cite{Lehmann_2018}. 
-    Utilising the method of ALD, MCP-PMTs from Photonis have been demonstrated to withstand an Integrated Anode Charge (IAC) greater than \SI{20}{\coulomb\per\centi\meter\squared} \cite{LEHMANN2020161821}, corresponding to a lifetime improvement of a factor of 100 compared to standard MCP-PMTs, shown in Figure \ref{fig:mcppmt_life}.
+    Major breakthroughs to improve the lifetime of the MCP-PMT have come with the method of \gls{ALD} \cite{BEAULIEU200981}, where the channels of the MCP are coated with a ultra-thin layer of \ce{Al2O3} or \ce{MgO}. The layer prevents the out-gassing from the MCP glass substrate and drastically reduces the heavy ions reaching the photocathode resulting in significant increases in lifetime of the MCP-PMTs \cite{Lehmann_2018}. 
+    Utilising the method of ALD, MCP-PMTs from Photonis have been demonstrated to withstand an \gls{IAC} greater than \SI{20}{\coulomb\per\centi\meter\squared} \cite{LEHMANN2020161821}, corresponding to a lifetime improvement of a factor of 100 compared to standard MCP-PMTs, shown in Figure \ref{fig:mcppmt_life}.
     % have 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/mcp_lifetimes.png}
-        \caption{Lifetimes of available MCP-PMTs with the photocathode QE vs Integrated Anode Charge (IAC) for photons at 400\,nm wavelength. Top, old ALD coated MCP-PMTs from Hamamatsu with non coated versions shown in the insert plot. Bottom, more recent ALD coated MCP-PMTs from PHOTONIS and Photek in the inserted plot. \cite{Lehmann_2022}}%
+        \caption{Lifetimes of available MCP-PMTs with the photocathode QE vs \gls{IAC} for photons at 400\,nm wavelength. Top, old ALD coated MCP-PMTs from Hamamatsu with non coated versions shown in the insert plot. Bottom, more recent ALD coated MCP-PMTs from PHOTONIS and Photek in the inserted plot. \cite{Lehmann_2022}}%
         \label{fig:mcppmt_life}%
     \end{figure}  
     An example of MCP-PMT model proposed for the KTAG is shown in Figure \ref{fig:mcppmt}. The module consists of an 8x8 array of pixels which can individually be read out.
@@ -222,7 +222,7 @@
         \caption{Rate capability of state of the art MCP-PMTs \cite{Lehmann2022}.}%
         \label{fig:mcp_rate}%
     \end{figure} 
-    The Photonis MCP-PMT has a Collection Efficiency (CE) of above 60\,\%, the probability of the photo-electron passing through the pours of the MCP and producing a signal. With current technologies it is possible for MCP-PMTs reach CE of over to 90\,\% \cite{Orlov_2018}, however the Photonis MCP-PMT was selected as it better fit the HIKE Phase 1 timing requirements requirements as the higher CE models utilise late photo-electrons resulting in higher time resolutions.
+    The Photonis MCP-PMT has a \gls{CE} of above 60\,\%, the probability of the photo-electron passing through the pours of the MCP and producing a signal. With current technologies it is possible for MCP-PMTs reach CE of over to 90\,\% \cite{Orlov_2018}, however the Photonis MCP-PMT was selected as it better fit the HIKE Phase 1 timing requirements requirements as the higher CE models utilise late photo-electrons resulting in higher time resolutions.
     %% Time resolution tts and rms
     The XP85012-S-R2D2 MCP-PMT had a transit time spread of 50\,ps with a timing precision RMS of 120\,ps \cite{XP85112SBA} and results in a time response, shown in Figure \ref{fig:mcp_time} which was implemented used for the HIKE simulations.
     \begin{figure}[H]
@@ -329,7 +329,7 @@
     Along with the QE efficiency, a single hit time resolution of 100\,ps was required \cite{thehikecollaboration2023high}. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value was given. The time resolution would also depend on the final design of the RICH readout electronics and would have to be measured in a test setup. The SiPMs from Hamamatsu have previously been tested and have reached a single hit time resolution below 100\,ps \cite{CARNESECCHI2020164484}. 
     For use in the simulation a conservative simple Gaussian time response curve with a sigma of 100\,ps was used for the simulations, which would be updated later on for a specific model to be implemented when chosen.
     
-    The expected performance of the RICH detector with the new PMTs was compared to the current NA62 RICH detector in Table \ref{tab:hikeRICH}. With the increased quantum efficiency, the expected number hits per $\pi^{+}$ between 15 and 45\,$GeV/c$ was expected to increase by a factor of two. This, along with the improved time resolution of the new PMTs resulted in an expected time $\pi^+$ time resolution of 27\,ps at 15\,$GeV/c$ and 20\,ps at 45\,$GeV/c$.
+    The expected performance of the RICH detector with the new PMTs was compared to the current NA62 RICH detector in Table \ref{tab:hikeRICH}. With the increased quantum efficiency, the expected number hits per $\pi^{+}$ between 15 and \SI{45}{\giga\electronvolt\per\clight} was expected to increase by a factor of two. This, along with the improved time resolution of the new PMTs resulted in an expected time $\pi^+$ time resolution of 27\,ps at \SI{15}{\giga\electronvolt\per\clight} and 20\,ps at \SI{45}{\giga\electronvolt\per\clight}.
     \begin{table}[]
         \centering
         \begin{tabular}{|l|l|l|}
@@ -345,9 +345,9 @@
         \caption{Comparisons of the expected performance of the NA62 and HIKE RICH detectors \cite{thehikecollaboration2023high}}
         \label{tab:hikeRICH}
     \end{table}
-    Using the implemented upgrades to the RICH detectors, the above expectations were confirmed by a Monte Carlo sample of $K^{+} \to \pi^{0}e^{+}{\nu}$ (Ke3).  
+    Using the implemented upgrades to the RICH detectors, the above expectations were confirmed by a Monte Carlo sample of \gls{ke3}.  
 
-    For the three sensor sizes, a test production of 1M Ke3 was used to determine the preliminary performance of the detector and compare this to the current NA62 setup. The plots in Figure \ref{fig:HikeRICHIlum} show the light distribution on the PMT arrays for the three sensor sizes: 3\,mm \ref{fig:HikeRICHIlum}\,(a,b), 6\,mm \ref{fig:HikeRICHIlum}\,(c,d), and 9\,mm \ref{fig:HikeRICHIlum}\,(e,f) compared to the illumination on the current NA62 PMT arrays \ref{fig:NA62RICHIlum}. 
+    For the three sensor sizes, a test production of 1M \gls{ke3} was used to determine the preliminary performance of the detector and compare this to the current NA62 setup. The plots in Figure \ref{fig:HikeRICHIlum} show the light distribution on the PMT arrays for the three sensor sizes: 3\,mm \ref{fig:HikeRICHIlum}\,(a,b), 6\,mm \ref{fig:HikeRICHIlum}\,(c,d), and 9\,mm \ref{fig:HikeRICHIlum}\,(e,f) compared to the illumination on the current NA62 PMT arrays \ref{fig:NA62RICHIlum}. 
     Due to the better placement of the square sensors, it is possible to see a more uniform illumination of the PMT arrays and better coverage of the light ring, especially in the Jura side. It is clear to see that either sensor size would be an improvement on the current NA62 setup.
     \begin{figure}[H]
         \centering
@@ -359,7 +359,7 @@
             \centering
             \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
         \end{minipage}
-        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3). The 
+        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays produced from a MC sample of \gls{ke3}. The 
         left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:NA62RICHIlum}
     \end{figure}
@@ -403,7 +403,7 @@
             \caption*{(f) 9\,mm Jura.}
         \end{minipage}
         
-        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensors produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3). 
+        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensors produced from a MC sample of \gls{ke3}. 
         The left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:HikeRICHIlum}
     \end{figure}
@@ -439,7 +439,7 @@
             \caption*{(d) 9\,mm SiPMs.}
         \end{minipage}
 
-        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE SiPMs produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
+        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE SiPMs produced from a MC sample of \gls{ke3}.}%
         \label{fig:NA62RICHNHITs}
     \end{figure}
 
@@ -476,7 +476,7 @@
     \end{figure}
 
     %%% Ring Radius Resolution
-    The time resolution of the RICH detector was calculated using the Ke3 sample by equally splitting the reconstructed photo-electrons of the ring candidates into two sets and calculating the time difference between them, with the results are shown in Figure \ref{fig:NA62RICHTIMERes}. This method was used to remove any dependence on the reference time with respect to the single hit times. The 3x3\,mm sensors produced the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
+    The time resolution of the RICH detector was calculated using the \gls{ke3} sample by equally splitting the reconstructed photo-electrons of the ring candidates into two sets and calculating the time difference between them, with the results are shown in Figure \ref{fig:NA62RICHTIMERes}. This method was used to remove any dependence on the reference time with respect to the single hit times. The 3x3\,mm sensors produced the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
     However, there was little difference between the SiPMs, with each sensor size producing a time resolution of less than 30\,ps, fulfilling the requirements of HIKE. 
     The improvement was clear with using the small SiPMs when compared with the NA62 resolution in Figure \ref{fig:NA62RICHTIMERes}, which had a time resolution of 61.35\,ps. 
 

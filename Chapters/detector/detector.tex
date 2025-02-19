@@ -2,7 +2,7 @@
 %% NEED TO ADD NA62 RATES
 \begin{document}
     \section{Overview}
-    The NA62 experiment is a fixed target experiment located in the north area of CERN with a high energy particle beam provided by the Super Proton Synchrotron (SPS). The main goal of the experiment is to measure the 
+    The NA62 experiment is a fixed target experiment located in the north area of CERN with a high energy particle beam provided by the \gls{SPS}. The main goal of the experiment is to measure the 
     branching fraction of the ultra-rare charged kaon decay $K^+ \rightarrow \pi^+ \nu \bar{\nu}$. Alongside, there is an expansive physics program of 
     precision and rare decay measurements, as well as searches for forbidden processes and exotic particles.  
     %A target of 100 events has been set to obtain this precision, requiring the exposure of kaon decays in the order of $10^{13}$.
@@ -23,7 +23,7 @@
         \label{fig:missing-mass-signal}
     \end{figure}
     The rest of this chapter will cover how NA62 fulfils the above-mentioned requirements. Section \ref{sec:BeamLine} will describe the NA62 beam-line from the target through the NA62 detector.
-    The NA62 detector comprises a number of sub-detectors, which will be described in Section \ref{sec:sub-det}, with the trigger and data acquisition system (TDAQ) following in Section \ref{sec:TDAQ} 
+    The NA62 detector comprises a number of sub-detectors, which will be described in Section \ref{sec:sub-det}, with the \gls{TDAQ} following in Section \ref{sec:TDAQ} 
     
     \begin{figure}[t]
         \centering
@@ -37,7 +37,7 @@
         \centering 
         \includegraphics[width=\textwidth]{imgs/BeamLine.png}
         \linespread{1.0}
-        \caption{Schematic of K12 beamline from T10 target at 0m to the entrance of the NA62 decay region at 102.4m \cite{Gil_2017}.}
+        \caption{Schematic of K12 beamline from T10 target at 0\,m to the entrance of the NA62 decay region at 102.4m \cite{Gil_2017}.}
         \label{fig:beam-line}
     \end{figure}
     The NA62 experiment at CERN uses a hadron beam extracted from the SPS with a nominal momentum of \SI{400}{\giga\electronvolt\per\clight}, directed onto a 400\,mm long, 2\,mm diameter beryllium rod that forms
@@ -46,7 +46,7 @@
     \newline\indent The elements of the K12 beam-line are shown in Figure \ref{fig:beam-line} and comprise a number of components. First are three quadrupole magnets (Q1, Q2 and Q3), used to focus the beam with a large solid angle acceptance of $\pm2.7$\,mrad 
     horizontally and $\pm1.5$\,mrad vertically at a \SI{75}{\giga\electronvolt\per\clight} central momentum. Next follows an achromat (A1), which selects a beam of a \SI{75}{\giga\electronvolt\per\clight} momentum with a 1\,\% rms momentum. 
     The A1 achromat comprises four dipole magnets that vertically deflect the beam, the first two deflect the beam 110\,mm downwards, while the final two deflect the beam upwards towards
-    the original axis. Between these pairs of magnets, there are a pair of water-cooled beam-dump units (TAX1 and TAX2) with a set of holes to select the required 75\,$GeV/c$ momentum beam while  
+    the original axis. Between these pairs of magnets, there are a pair of water-cooled beam-dump units (TAX1 and TAX2) with a set of holes to select the required \SI{75}{\giga\electronvolt\per\clight} momentum beam while  
     absorbing unwanted secondary beam particles and any remaining primary protons. TAX1\&2 can be closed to act as a secondary target for use in dump mode or for safety when access is required downstream. 
     At the focus between the TAX1\&2, a radiator consisting of tungsten plates with a thickness of up to 5\,mm is introduced into the path of the beam. The radiator is optimised to reduce positron energy while 
     minimising the loss of energy to hadrons.
@@ -54,7 +54,7 @@
     collimators (C1, C2), which redefines the horizontal and vertical acceptance of the beam. The collimator after the Q6 quadrupole (C3) is employed to absorb positrons that had their momenta degraded by the radiator 
     and again redefines the acceptance in the vertical dimension.
     \newline\indent The beam next passes through a 40\,mm field-free hole in a set of iron plates, placed between three 2\,m dipole magnets (B3). The vertical magnetic field in the iron plates is used to deflect muons.
-    Any deviation in the beam due to stray fields in the beam hole is cancelled out by a pair of steering dipoles (TRIM2 and TRIM3). Two quadrupoles (Q7, Q8) follow and ensure that the beam is parallel before the KTAG, which employs a differential Cherenkov counter (CEDAR), described in Section \ref{sec:KTAG},
+    Any deviation in the beam due to stray fields in the beam hole is cancelled out by a pair of steering dipoles (TRIM2 and TRIM3). Two quadrupoles (Q7, Q8) follow and ensure that the beam is parallel before the KTAG, which employs a \gls{CEDAR} described in Section \ref{sec:KTAG},
     which requires the beam to be parallel. Before the KTAG, a pair of collimators (C4 and C5) are used to absorb particles in the tails of the beam.
     \newline\indent For beam monitoring, two pairs of filament scintillator counters (FISC 1, 3 and FISC 2, 4) are installed at either end of the KTAG. Used in coincidence, the beam divergence can be measured and used to tune the divergence to zero and ensure the beam is parallel through the CEDAR vessel.
     \newline\indent Following the KTAG are two quadrupoles (Q9 and Q10), used to focus the beam before the beam tracking system (GTK). The GTK comprises four stations made up of silicon pixel detectors described in Section \ref{sec:GTK} and are installed in the beam vacuum. 
@@ -63,11 +63,11 @@
     which is at the entrance to the decay region ($Z = 102.4$\,m). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal dimension by an angle of +1.2\,mrad.
     \newline\indent At $Z = 102.4$\,m begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo pumps along its length. The Bluetube is made up of 19 cylindrical sections ranging in diameter shown in Figure \ref{fig:na62-det}, from 1.92\,m in the first section after GTK3 to 2.4\,m in the middle section and then 2.8\,m
     in the region containing the STRAW spectrometer.
-    The first section is defined as the decay region or Fiducial Volume (FV) between $Z = 105$\, and $Z = 170$\,m. Further downstream, the Bluetube hosts a number of detectors: 
+    The first section is defined as the decay region or \gls{FV} between $Z = 105$\,m and $Z = 170$\,m. Further downstream, the Bluetube hosts a number of detectors: 
     Eleven LAV stations used in the Photon detection system described in Section \ref{sec:PDS} and four STRAW spectrometer chambers coupled with a large aperture dipole magnet (MNP33), providing kinematic measurements of the charged products of kaons decaying in the decay region, described in Section \ref{sec:STRAW}.  
-    The MNP33 magnet provides a \SI{270}{\mega\electronvolt\per\clight} momentum kick in the horizontal dimension, deflecting the \SI{75}{\giga\electronvolt\per\clight} beam by -3.6\,mrad, so that combined with the TRIM5 deflection, the beam passes through the central aperture of the Liquid Krypton calorimeter (LKr). The path of the beam is shown in Figure \ref{fig:AFTER-GTK-beam-line}, showing the deflection in the horizontal dimension.
-    After the final STRAW spectrometer chamber (STRAW4), the Bluetube is closed off with a thin aluminium window (except for the hole for the beam to pass through), separating the vacuum from the 17\,m long, neon-filled Ring Imaging Cherenkov counter (RICH), designed to distinguish between secondary pions and muons produced in kaon decays and is part of the Particle Identification system (PID) and is described in Section \ref{sec:RICH}. 
-    The beam is transported through the remaining downstream detectors in a vacuum and is deflected -13.2\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the Small Angle Calorimeter (SAC) acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
+    The MNP33 magnet provides a \SI{270}{\mega\electronvolt\per\clight} momentum kick in the horizontal dimension, deflecting the \SI{75}{\giga\electronvolt\per\clight} beam by -3.6\,mrad, so that combined with the TRIM5 deflection, the beam passes through the central aperture of the \gls{LKr}. The path of the beam is shown in Figure \ref{fig:AFTER-GTK-beam-line}, showing the deflection in the horizontal dimension.
+    After the final STRAW spectrometer chamber (STRAW4), the Bluetube is closed off with a thin aluminium window (except for the hole for the beam to pass through), separating the vacuum from the 17\,m long, neon-filled \gls{RICH}, designed to distinguish between secondary pions and muons produced in kaon decays and is part of the Particle Identification system (PID) and is described in Section \ref{sec:RICH}. 
+    The beam is transported through the remaining downstream detectors in a vacuum and is deflected -13.2\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the \gls{SAC} acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
     \newline\indent 
     \begin{figure}[H]
         \centering 
@@ -79,13 +79,13 @@
     \section{NA62 Detectors}\label{sec:sub-det}
     \subsection{KTAG}\label{sec:KTAG}
     As the NA62 beam is unseparated and kaons only account for 6\,\% of the beam composition, the kaons must be identified. Kaon identification is provided by the KTAG and located at $Z=69.4$\,m. It comprises a CEDAR vessel and a purpose-built
-    photon detection system. Until the NA62 2023 run, the CEDAR vessel used was a CEDAR-W filled with a Nitrogen radiator. CEDARs were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the super proton synchrotron (SPS).
+    photon detection system. Until the NA62 2023 run, the CEDAR vessel used was a CEDAR-W filled with a Nitrogen radiator. CEDARs were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS}.
     The CEDAR is a differential Cherenkov Counter and exploits the dependence of the beam particle's mass on the properties of the produced light, defined in equation \ref{eq:Cherenkov} where $\beta = \frac{p}{\gamma m}$. 
     \begin{equation}\label{eq:Cherenkov}
         cos(\theta) = \frac{1}{\beta n}
     \end{equation}
     In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. The pressure is set at 1.7\,bar of Nitrogen in the CEDAR-W so that the light from the 
-    kaon is focused by a set of lenses and mirrors onto arrays of photomultiplier tubes (PMTs). The light from the other beam components does not reach the PMT arrays. %A more detailed description of CEDARs can be found in Section \ref{sec:cedarH}.
+    kaon is focused by a set of lenses and mirrors onto arrays of \glspl{PMT}. The light from the other beam components does not reach the PMT arrays. %A more detailed description of CEDARs can be found in Section \ref{sec:cedarH}.
     %A diagram showing the internal optics of the CEDAR is shown in Figure \ref{fig:Cedar_dia}.
     %\begin{figure}[H]
     %    \centering
@@ -101,12 +101,12 @@
         \caption{Model of the upstream part of the CEDAR and the KTAG photon-detection system \cite{Gil_2017}.}
         \label{fig:ktag}
     \end{figure}
-    \newline\indent In the original CERN design, the Cherenkov light exiting each CEDAR exit window was detected by a single ET-9820QB photomultiplier tube (PMT) placed directly on the exit window. A particle was identified if there was a coincidence of at least six PMTs. 
+    \newline\indent In the original CERN design, the Cherenkov light exiting each CEDAR exit window was detected by a single ET-9820QB \gls{PMT} placed directly on the exit window. A particle was identified if there was a coincidence of at least six PMTs. 
     However, these PMTs would not fulfil the timing ($\leq 100$\,ps) and rate requirements (45\,MHz of kaons) at NA62. 
     %% Describe the KTAG more in depth with photos and diagrams
     \newline \indent For NA62, a purpose-built photon-detection system shown in Figure \ref{fig:ktag} was designed, constructed and mounted to the upstream end of the CEDAR Vessel.
     The photon light from the CEDAR exit windows is reflected radially 90 degrees by eight spherical mirrors onto eight PMT planes, referred to as sectors.  
-    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The Quantum Efficiency (QE) for both Hamamatsu PMTs are shown in Figure \ref{fig:pmtQE}. The QE is the probability of a PMTs photocathode to convert a photon of a specific wavelength and emit a photo-electron into the vacuum of the PMT.
+    Each PMT plane is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 R9880-110 and 16 R7400. The \gls{QE} for both Hamamatsu PMTs are shown in Figure \ref{fig:pmtQE}. The QE is the probability of a PMTs photocathode to convert a photon of a specific wavelength and emit a photo-electron into the vacuum of the PMT.
     %% Input QE plots for the PMTs
     \begin{figure}[H]
         \centering 
@@ -128,7 +128,7 @@
         \caption{Image of GTk station \cite{Gil_2017}.}
         \label{fig:gtk_img}
     \end{figure}
-    The precise measurement of the beam momentum, time, and position is provided by the GigaTracker (GTK). A beam spectrometer comprising hybrid silicon trackers is placed within the vacuum pipe and an achromat upstream of the decay volume. 
+    The precise measurement of the beam momentum, time, and position is provided by the \gls{GTK}. A beam spectrometer comprising hybrid silicon trackers is placed within the vacuum pipe and an achromat upstream of the decay volume. 
     As particles of differing momenta are deflected by different amounts in a magnetic field, the momentum of a particle can be measured by comparing the positions of the particles in each station. The detector was designed to measure a particles momentum at a resolution of 0.2\,\%
     and its direction at the exit of the achromat to $16\,\mu rad$. Each GTK station has a time resolution of $200$\,ps, which results in an overall track time resolution of 75\ps \cite{AglieriRinella:2019eri}.
     %During run one data-taking period (2016-2018), three stations were employed and are shown in Figure \ref{fig:gtk_run1}. Another station was added (GTK0) for run2 data taking (2021-present) and placed in front of the first GTK station, increasing the tracking efficiency 
@@ -145,8 +145,8 @@
     \indent Each station consists of 18000 pixels of size $300\times300$\,\si{\micro\meter\squared} in a matrix of $200\times90$, covering a total area of  $62.8\times27$\,\si{\milli\meter\squared} and is read out by application-specific integrated circuits (ASIC). 
     The tracker is placed directly within the beam, which requires the material to be minimised in order to reduce the number of interactions with the beam and reduce the beam divergence. The material budget for each station was set at $0.5\,\%$, corresponding to $500\,\mu m$ of Silicon.
     \subsection{Charged Anti-coincidence detector (CHANTI)}
-    The CHANTI is located after the GTK, and its primary goal is to provide the rejection of particles produced from inelastic collisions of beam particles with the final GTK station. Vetoing these particles is imperative as they would enter the decay volume and result in background for $K^+ \to \pi^+ \nu \bar\nu$. The detector is also used to detect the muon halo close to the beam.
-    The CHANTI detector is a set of six square hodoscope stations comprising two planes, one paced vertically and the other horizontally, with a fully constructed station shown in Figure \ref{fig:CHANTI}. The planes are comprised of polystyrene based scintillator bars with central fast wavelength-shifting (WLS) fibre which were then connected to silicon photomultipliers (SiPMs).
+    The \gls{CHANTI} is located after the GTK, and its primary goal is to provide the rejection of particles produced from inelastic collisions of beam particles with the final GTK station. Vetoing these particles is imperative as they would enter the decay volume and result in background for $K^+ \to \pi^+ \nu \bar\nu$. The detector is also used to detect the muon halo close to the beam.
+    The CHANTI detector is a set of six square hodoscope stations comprising two planes, one paced vertically and the other horizontally, with a fully constructed station shown in Figure \ref{fig:CHANTI}. The planes are comprised of polystyrene based scintillator bars with central fast wavelength-shifting (WLS) fibre which were then connected to \glspl{SiPM}.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.8\textwidth]{imgs/CHANTI.png}
@@ -182,7 +182,7 @@
         \caption{Straw spectrometer chamber beam-hole positions}
         \label{tab:chamber_info}
     \end{table}
-    \indent The straws are 2.1\,m long drift tubes that are 9.82\,mm in diameter, made from $36$\,\si{\micro\meter} thick polyethylene terephthalate (PET), coated on the inside with 50\,nm of
+    \indent The straws are 2.1\,m long drift tubes that are 9.82\,mm in diameter, made from $36$\,\si{\micro\meter} thick \gls{PET}, coated on the inside with 50\,nm of
     copper and 20\,nm of gold. The straws are filled with a mixture of 70\,\% Argon and 30\,\% CO\textsubscript{2} at atmospheric pressure and have a central gold-plated tungsten anode wire. The straws act like 
     proportional counters, when a charged particle passes through the gas, it is ionised, creating electron-ion pairs that drift to the opposite electrodes, inducing a charge on the anode wire. 
     When the electron approaches the anode wire, the electric field strength increases dramatically, producing Townsend avalanches. This provides a large multiplication of the signal, producing a
@@ -206,7 +206,7 @@
         \label{fig:both_figures}
     \end{figure}
     \subsection{Ring Imaging Cherenkov counter (RICH)}\label{sec:RICH}
-    The Ring Imaging Cherenkov counter (RICH) is designed to separate secondary pion and muons within a momentum range of 15 - 35\,\si{\giga\electronvolt\per\clight}. 
+    The \gls{RICH} is designed to separate secondary pion and muons within a momentum range of 15 - 35\,\si{\giga\electronvolt\per\clight}. 
     The ability to separate the secondary particles is required as the largest background to $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ comes from 
     the $K^+ \rightarrow \mu^+ \nu_{\mu}$, which has a branching fraction 10 orders of magnitude greater. The majority of the suppression comes from kinematic selections and the response difference between pions and muons in the calorimeters. However, another factor of 100 is required in the momentum range 15 - 35\,\si{\giga\electronvolt\per\clight}, which the RICH satisfies. 
     \newline\indent The RICH is a 17.5\,m long cylindrical vessel comprising four steel sections with diameters gradually decreasing from 4.2\,m at the upstream section to accommodate the PMT flanges to 3.2\,m in the downstream end.
@@ -233,12 +233,11 @@
         \label{fig:rich_ring}
     \end{figure}
     \subsection{Photon Detection System}\label{sec:PDS}
-    The photon detection system provides a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It is made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad is covered by the intermediate-ring calorimeter (IRC) and small-angle 
-    calorimeter (SAC). %Describe SAC and IRC
+    The photon detection system provides a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It is made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad is covered by the \gls{IRC} and \gls{SAC}. %Describe SAC and IRC
     The IRC wraps around the beam pipe and consists of layers of lead and scintillating material, which are read out by WLS fibres bundled into four groups and read out by a Hamamatsu PM.
     The SAC, which is located just upstream of the beam dump within the beam vacuum, comprises of 70 lead plates with 70 plastic scintillators in between readout by WLS fibres resulting in a total material of 19\,$X_0$. The fibres are bundled into four groups which are then read out by Hamamatsu PMs, resulting in four channels.
 
-    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 liquid krypton calorimeter (LKr). A quasi-homogeneous calorimeter which consists of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes on either side.
+    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. A quasi-homogeneous calorimeter which consists of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes on either side.
     Each anode ribbon was connected at the downstream end to preamplifiers and the high voltage of 3000V to provide the drift field required for the ionisation.
 
 
@@ -250,7 +249,7 @@
         \label{fig:lkrDiag}
     \end{figure}
 
-    The Large Angle Veto (LAV) provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume and was recycled from the OPAL experiment \cite{OPALCollaboration1991}, with LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
+    The \gls{LAV} provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume and was recycled from the OPAL experiment \cite{OPALCollaboration1991}, with LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
 
     \begin{figure}[H]
         \centering 
@@ -271,7 +270,7 @@
         \caption{Schematic of the NA48-CHOD \cite{Fantietal2007}.}
         \label{fig:NA48CHOD}
     \end{figure}
-    The CHOD is located after the twelfth LAV station, before the LKr and consists of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, and is shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and is bundled into groups of four, read out by Silicon photomultipliers (SiPM). The overall time resolution of the detector was 1.1\,ns. 
+    The CHOD is located after the twelfth LAV station, before the LKr and consists of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, and is shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and is bundled into groups of four, read out by \glspl{SiPM}. The overall time resolution of the detector was 1.1\,ns. 
     The CHOD sustains a particle rate of 45\,MHz, with 13\,MHz from charged particles.
     \begin{figure}[H]
         \centering 
@@ -282,7 +281,7 @@
     \end{figure}
 
     \subsection{Muon Veto System}
-    The Muon Veto System (MUV) is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising iron as an absorber material. MUV1 was a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48/2 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24, 26.8\,mm thick iron plates with 23 layers of scintillator strips that are 9\,mm thick with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
+    The \gls{MUV} is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising iron as an absorber material. MUV1 was a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48/2 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24, 26.8\,mm thick iron plates with 23 layers of scintillator strips that are 9\,mm thick with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
     The material of MUV1 produces a total thickness of 4.1\,$X_0$. The light that is produced within the strips is collected by WLS fibres and read out by PMTs. 
     \begin{figure}[H]
         \centering 
@@ -305,7 +304,7 @@
 
     Additionally, there is a peripheral muon veto detector (MUV0), which is a scintillating hodoscope designed to detect low momentum $\pi^-$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$, which are deflected into the positive X dimension and miss the acceptance of the RICH.
     \subsection{Hadronic Sampling Calorimeter (HASC)}
-    The Hadronic Sampling Calorimeter (HASC) is located downstream of the MUV3 and BEND magnet which deflects positively charged particles in the negative X direction. The HASC is designed to detect $\pi^+$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$ and comprises of nine modules of 60 lead plates and 60 scintillating layers covering an acceptance of −0.48\,m to −0.18\,m in X and -0.15 to 0.15 in Y from the beam axis.
+    The \gls{HASC} is located downstream of the MUV3 and BEND magnet which deflects positively charged particles in the negative X direction. The HASC is designed to detect $\pi^+$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$ and comprises of nine modules of 60 lead plates and 60 scintillating layers covering an acceptance of −0.48\,m to −0.18\,m in X and -0.15 to 0.15 in Y from the beam axis.
     Each scintillating layer has 10 longitudinal sections which are optically coupled to WLS fibres and read out by SiPMs.
     
     
@@ -318,10 +317,10 @@
         \caption{X-Z diagram of NA62 detector setup for Run 2}
         \label{fig:na62-det-run2}
     \end{figure}
-    The VetoCounter (VC) was designed and built to suppress the backgrounds produced by decays of kaons that occur upstream of the fiducial volume. The VC comprises three scintillating stations, with two placed before the final collimator, separated by a lead plate and one after the final collimator. Each station comprises of nine tiles of size 40x120\,mm and two 20x120\,mm, with the smaller tiles located on either side of the beam pipe and is read out by 
+    The \gls{VC} was designed and built to suppress the backgrounds produced by decays of kaons that occur upstream of the fiducial volume. The VC comprises three scintillating stations, with two placed before the final collimator, separated by a lead plate and one after the final collimator. Each station comprises of nine tiles of size 40x120\,mm and two 20x120\,mm, with the smaller tiles located on either side of the beam pipe and is read out by 
     PMTs. 
     
-    A veto hodoscope (ANTI-0) was placed just before the entrance to the fiducial volume. The ANTI-0 is designed to veto the halo particles produced from the beam when they enter the FV to reduce the chance of halo particles from being identified as secondary decay products. The detector comprises 280 scintillating tiles, which are then read out by four SiPMs \cite{Danielsson_2020}.
+    A \gls{ANTI-0} was placed just before the entrance to the fiducial volume. The ANTI-0 is designed to veto the halo particles produced from the beam when they enter the FV to reduce the chance of halo particles from being identified as secondary decay products. The detector comprises 280 scintillating tiles, which are then read out by four \gls{SiPMs} \cite{Danielsson_2020}.
 
     A second HASC station was also added to the opposite side of the beam to cover the positive X direction and to make the overall station symmetric.
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
@@ -419,7 +418,7 @@
     Each module of na62fw utilises the tools found within the ROOT analysis framework \cite{Brun1997}. A more detailed description of the software framework can be found in Section \ref{sec:na62fw}.
     \section{NA62 Results}\label{sec:na62res}
     The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400\,MHz, respectively. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
-    The trigger streams used for the data collection for the $K^+ \to \pi \nu \bar\nu$ (PNN) in this period differ from those that are defined in Section \ref{sec:TDAQ} and are defined below (L0 in red and L1 in blue): 
+    The trigger streams used for the data collection for the \gls{PNN} in this period differ from those that are defined in Section \ref{sec:TDAQ} and are defined below (L0 in red and L1 in blue): 
     \begin{itemize}
         \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
         \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$

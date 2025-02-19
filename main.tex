@@ -54,6 +54,11 @@
 
 \usepackage[dvipsnames]{xcolor}
 
+%\usepackage[nohyperlinks, printonlyused, withpage]{acronym}
+\usepackage[acronym, nohypertypes, toc, nomain]{glossaries}
+\glsdisablehyper
+\makeglossaries
+
 %\pagecolor{Apricot}
 
 \newcommand{\NN}{\ensuremath{\mathrm{N}_{2}}}
@@ -63,12 +68,17 @@
 \newcommand{\CW}{\mbox{CEDAR-W}}
 \newcommand{\CH}{\mbox{CEDAR-H}}
 
+\input{acronyms}
+
 
 \begin{document}
+
 
 \subfile{Chapters/title/title.tex}
 \newpage
 \tableofcontents
+\newpage
+\printglossary[type=\acronymtype, title={List of Acronyms}]
 \newpage
 \listoffigures
 \newpage
