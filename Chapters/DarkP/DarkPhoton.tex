@@ -463,10 +463,12 @@
     \end{equation}
     where DP mean free path is inversely dependent on $\epsilon^2 m_{A'}^2$. The lowest limit from the analysis was found as 
     $\epsilon^2 m_{A'}^2 = 3.36 \times 10^{-6} MeV^2 /c^4$  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
-    corresponding to a max DP mean path length of 
-    $1.629\,m$.%$0.81\m$. 
-    Due to the construction of the 3 track trigger and offline reconstruction the resolution of the decay vertex position is 1\,m. Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
-    displaced decay is shown in Figure \ref{fig:prompt}.
+    corresponding to a max DP mean path length of $1.629\,m$.%$0.81\m$. 
+    Due to the construction of the 3 track trigger and offline reconstruction the resolution of a decay vertex position is around 1\,m. With a vertex greater than 1\,m a three track vertex will be created by the reconstruction which will result in the event being removed due to the requirement of one three track vertex, reducing the acceptance. 
+    However, this is only true in the most extreme cases where all the energy is propagated from the kaon to the DP. In this extreme case it is possible to visualise the 1\,m prompt limit, which is shown in Figure \ref{fig:prompt} as the dashed lines. The two lines represent the 1\,m limit for the maximum DP energy and 50\,\% of the maximum. The fluctuations 
+    of the UP on the mixing parameter fall between these two lines suggesting that the prompt assumption is still valid except for in the most extreme cases.
+    %Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
+    %displaced decay is shown in Figure \ref{fig:prompt}.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/eplisonsq_data_24.pdf}
@@ -475,6 +477,8 @@
         \label{fig:prompt}
     \end{figure}
 
+
+    %% Say about like outside the prompt the acceptance does not change as the three track vertex is not to be created. But that the overlaps are ok as they only occur in extreme conditions.
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
