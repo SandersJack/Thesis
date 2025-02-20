@@ -2,17 +2,17 @@
 
 
 \begin{document}
-    \glspl{CEDAR} were designed and built at CERN to detect secondary beam particles at the \gls{SPS} \cite{Bovet:1982xf}. Two types of CEDAR were developed at CERN:
-    \gls{cw} and \gls{cn}, corresponding to the areas of use. The two designs differ in terms of the energy range in which they can detect beam particles, with CEDAR-N 
-    able to separate kaons and pions up to \SI{300}{\giga\electronvolt\per\clight} but not detect protons below \SI{60}{{\giga\electronvolt\per\clight}}. Whereas CEDAR-W can detect protons down to \si{12}{\giga\electronvolt\per\clight}
+    \glspl{CEDAR} were designed and built at CERN to detect secondary beam particles at the \gls{SPS} \cite{Bovet:1982xf}. Two types of \gls{CEDAR} were developed at CERN:
+    \gls{cw} and \gls{cn}, corresponding to the areas of use. The two designs differ in terms of the energy range in which they can detect beam particles, with \gls{cn} 
+    able to separate kaons and pions up to \SI{300}{\giga\electronvolt\per\clight} but not detect protons below \SI{60}{{\giga\electronvolt\per\clight}}. Whereas \gls{cw} can detect protons down to \si{12}{\giga\electronvolt\per\clight}
     and separate kaons and pions up to \SI{150}{{\giga\electronvolt\per\clight}}. 
-    %% Describe the previous performance of CEDAR-W with Nitrogen
-    \newline\indent As described in Section \ref{sec:na62}, since 2016 NA62 has utilised a CEDAR-W filled with \gls{n2} at a nominal gas pressure of 1.71\,bar (absolute pressure).
-    In this configuration, the CEDAR contributed to the most significant amount of material in the path of the beam, corresponding to $39 \times 10^{-3}\,X_0$ of material, 
-    where $X_0$ is one radiation length. The CEDAR vessel contributed $3.9 \times 10^{-3}\,X_0$ and the \gls{n2} gas contributed $35 \times 10^{-3}\,X_0$.
+    %% Describe the previous performance of \gls{cw} with Nitrogen
+    \newline\indent As described in Section \ref{sec:na62}, since 2016 NA62 has utilised a \gls{cw} filled with \gls{n2} at a nominal gas pressure of 1.71\,bar (absolute pressure).
+    In this configuration, the \gls{CEDAR} contributed to the most significant amount of material in the path of the beam, corresponding to $39 \times 10^{-3}\,X_0$ of material, 
+    where $X_0$ is one radiation length. The \gls{CEDAR} vessel contributed $3.9 \times 10^{-3}\,X_0$ and the \gls{n2} gas contributed $35 \times 10^{-3}\,X_0$.
     From simulations, the material from the \gls{cw} with \gls{n2} resulted in the multiple scattering of beam particles, introducing an angular divergence in the beam of $32\,\mu rad$. Scattered beam particles 
     contribute to the backgrounds for the searches for ultra-rare decays. In order to reduce these backgrounds, it was possible to minimise the amount of material in the path of the beam. 
-    It was proposed that a CEDAR filled with \gls{h2} could reduce the material due to the radiator gas's lower mass. Using \gls{h2} as a radiator gas would require a pressure of 3.8\,bar 
+    It was proposed that a \gls{CEDAR} filled with \gls{h2} could reduce the material due to the radiator gas's lower mass. Using \gls{h2} as a radiator gas would require a pressure of 3.8\,bar 
     to produce a similar Cherenkov angle as \gls{n2} gas at \SI{1.71}{\bar}. \gls{h2} at this pressure would introduce $3.4 \times 10^{-3}\,X_0$ of material, which would result in a factor of five reduction in material compared to \gls{n2}, resulting in a total 
     material of $7.3 \times 10^{-3}\,X_0$. The expected angular beam divergence is $13\,\mu rad$ in both the horizontal and vertical dimensions. 
 
@@ -21,30 +21,30 @@
     of the decay volume would reduce from $2.1\,\%$ to $0.9\,\%$. The reduction in scattering would result in higher kaon transmission (number of kaons reaching the
     decay volume) and reduced signal rates in the downstream detectors. %%% May be we can add things about trigger rates but I think we should do a quick study
 
-    \section{CEDAR Detector}\label{sec:cedar_desc}
+    \section{\gls{CEDAR} Detector}\label{sec:cedar_desc}
     
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/cedar_diagram_jack.pdf}
         \linespread{1.0}
-        \caption{Diagram describing the optics of the CEDAR+KTAG photon-detection system and the expected Cherenkov light ring path in orange.}
+        \caption{Diagram describing the optics of the \gls{CEDAR}+KTAG photon-detection system and the expected Cherenkov light ring path in orange.}
         \label{fig:CEDAR_DIA}
     \end{figure}
-    A CEDAR comprises a thermally insulated gas vessel separated into two sections: a 4.3\,m long cylinder with an inner diameter of 53\,cm and a vessel cap 
-    which can differ in length, depending on the CEDAR variant. The CEDAR-W has a vessel cap length of 34\,cm compared to 28\,cm for the CEDAR-N variant. Both attached to the main cylinder 
-    at the upstream end. The gas vessel is separated from the vacuum of the beam-pipe by two aluminum windows at the upstream and downstream end. A diagram of the CEDAR vessel, along with the optics enclosed, is depicted in Figure \ref{fig:CEDAR_DIA} 
+    A \gls{CEDAR} comprises a thermally insulated gas vessel separated into two sections: a 4.3\,m long cylinder with an inner diameter of 53\,cm and a vessel cap 
+    which can differ in length, depending on the \gls{CEDAR} variant. The \gls{cw} has a vessel cap length of 34\,cm compared to 28\,cm for the \gls{cn} variant. Both attached to the main cylinder 
+    at the upstream end. The gas vessel is separated from the vacuum of the beam-pipe by two aluminum windows at the upstream and downstream end. A diagram of the \gls{CEDAR} vessel, along with the optics enclosed, is depicted in Figure \ref{fig:CEDAR_DIA} 
     
-    The beam is designed to pass through the CEDAR vessel along the longitudinal axis through the radiator gas and aluminium windows. When the beam particles pass through the vessel Cherenkov at a velocity $v$ between,
+    The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis through the radiator gas and aluminium windows. When the beam particles pass through the vessel Cherenkov at a velocity $v$ between,
     \begin{equation}
         \frac{c}{n} < v < c
     \end{equation}
     where $c$ is the speed of light in a vacuum, and $n$ is the refractive index of the radiator gas, Cherenkov light is produced.
-    %\newline\indent The beam is designed to pass through the CEDAR vessel along the longitudinal axis, passing through the radiator gas. When the beam passes through the vessel, Cherenkov
+    %\newline\indent The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis, passing through the radiator gas. When the beam passes through the vessel, Cherenkov
     %light is produced with an angle dependent on the mass and momentum of the beam particle and is defined as equation \ref{eq:Cherenkov2}.
     %\begin{equation}\label{eq:Cherenkov2}
     %cos(\theta) = \frac{1}{\beta n}
     %\end{equation}
-    The CEDAR contains optics inside the vessel to allow the reflection and focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm, as displayed in Figure \ref{fig:CEDAR_DIA} as the orange lines. 
+    The \gls{CEDAR} contains optics inside the vessel to allow the reflection and focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm, as displayed in Figure \ref{fig:CEDAR_DIA} as the orange lines. 
     The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}. A mirror comprising two spherical surfaces with the downstream lens cemented onto a concave mirror. The 
     mirror is designed to reduce spherical aberrations, an effect intrinsic to lenses and curved mirrors where the light that strikes the spherical surface off-centre is refracted/reflected
     to different points compared to the light that would strike the centre of the mirror. After the mirror, the light goes through a plano-convex lens named the Chromatic Corrector, which is designed in such a way that it corrects for the chromatic dispersion of the radiator gas
@@ -63,8 +63,8 @@
         \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{imgs/Diaphragm.png} }}%
         \subfloat{{\includegraphics[height=8cm, width=0.5\textwidth]{imgs/Diaphragm_close.png} }}%
         \linespread{1.0}
-        \caption{Photos showing the CEDAR diaphragm. On the left, a fully open diaphragm is shown in the CERN clean room with the front of the CEDAR fully removed.
-        On the right, a slightly open diaphragm is shown through one of the quartz exit windows, allowing light to exit the CEDAR vessel.}%
+        \caption{Photos showing the \gls{CEDAR} diaphragm. On the left, a fully open diaphragm is shown in the CERN clean room with the front of the \gls{CEDAR} fully removed.
+        On the right, a slightly open diaphragm is shown through one of the quartz exit windows, allowing light to exit the \gls{CEDAR} vessel.}%
         \label{fig:cedarpics}%
     \end{figure}
     
@@ -74,23 +74,23 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/Condensers-W.pdf}
         \linespread{1.0}
-        \caption{Drawing showing the placement of the CEDAR condenser lenses.}
+        \caption{Drawing showing the placement of the \gls{CEDAR} condenser lenses.}
         \label{fig:condenser}
     \end{figure}
-    The light exits the CEDAR through eight quartz exit windows placed around the beam pipe at the upstream end of the CEDAR, shown in Figure \ref{fig:exit-windows}. Attached to the exit windows are glass filters designed to 
+    The light exits the \gls{CEDAR} through eight quartz exit windows placed around the beam pipe at the upstream end of the \gls{CEDAR}, shown in Figure \ref{fig:exit-windows}. Attached to the exit windows are glass filters designed to 
     attenuate light below 240\,nm to remove light from unwanted particles.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.5\textwidth]{imgs/exit_windows.png}
         \linespread{1.0}
-        \caption{Image showing the exit windows and nose at the upstream end of the CEDAR-W.}
+        \caption{Image showing the exit windows and nose at the upstream end of the \gls{cw}.}
         \label{fig:exit-windows}
     \end{figure}
-    In the original CEDAR design \cite{Bovet:1982xf}, light exiting the CEDAR through the exit windows was detected by eight ET-9820QB photomultiplier tubes (PMTs), with one attached to each window. 
+    In the original \gls{CEDAR} design \cite{Bovet:1982xf}, light exiting the \gls{CEDAR} through the exit windows was detected by eight ET-9820QB photomultiplier tubes (PMTs), with one attached to each window. 
     A particle was identified when there was a coincidence in at least six PMTs.
     However, this setup would not be applicable for NA62, which requires strict timing requirements on the selection of kaons of less than 100\,ps, a kaon identification efficiency greater than 95\,\% 
     and a pion miss-identification probability of less than $10^{-4}$. To achieve these strict requirements, a purpose-built photon detection system was designed \cite{GOUDZOVSKI201586} and attached to the 
-    upstream end of the CEDAR. The light exiting the quartz windows traversed through optical caps attached to the exit windows, which focused the light onto spherical mirrors instead of directly after the window. The eight spherical mirrors, one for each exit 
+    upstream end of the \gls{CEDAR}. The light exiting the quartz windows traversed through optical caps attached to the exit windows, which focused the light onto spherical mirrors instead of directly after the window. The eight spherical mirrors, one for each exit 
     window, reflect the light 90 degrees onto eight PMT arrays and broaden the light to increase the resultant light spot. The spherical mirrors were manufactured from off-the-shelf optical lenses, then coated in aluminium and are shown in Figure \ref{fig:spherical-mirror}. Each light spot is defined as a sector 
     which will be used from now on. Each sector contains a light guide before a PMT array equipped with 48 Hamamatsu PMTs (32 of type R9880U-110 and 16 of type R7400U-03). 
     The light guide consists of a matrix of cones coated by aluminised mylar to maximise their reflectivity and direct the light onto the active area of each PMT. 
@@ -98,7 +98,7 @@
         \centering 
         \includegraphics[width=0.5\textwidth]{imgs/spherical_mirror.png}
         \linespread{1.0}
-        \caption{Image showing each of the CEDAR-H spherical mirrors before installation into the KTAG photon-detection system.}
+        \caption{Image showing each of the \gls{ch} spherical mirrors before installation into the KTAG photon-detection system.}
         \label{fig:spherical-mirror}
     \end{figure}    
     % Explain how particles are detected
@@ -106,56 +106,56 @@
     \begin{equation}\label{eq:Cherenkov2}
     cos(\theta) = \frac{1}{\beta n}
     \end{equation}
-    with $n$ being the refractive index of the radiator gas and $\beta$ the beam particle velocity defined as $\beta = p / E$. The momentum ($p$) is constant for all beam particles in NA62, and for a constant refractive index, different particles produce slightly different Cherenkov angles due to their differing mass. The CEDAR is designed to allow the light emitted from a specific angle to pass through a 
+    with $n$ being the refractive index of the radiator gas and $\beta$ the beam particle velocity defined as $\beta = p / E$. The momentum ($p$) is constant for all beam particles in NA62, and for a constant refractive index, different particles produce slightly different Cherenkov angles due to their differing mass. The \gls{CEDAR} is designed to allow the light emitted from a specific angle to pass through a 
     diaphragm aperture by selecting the pressure of the radiator gas. When the pressure of the gas is raised, the refractive index increases, which results in an increase in the Cherenkov angle and the Cherenkov ring radius. This allows a pressure to be
-    selected where a kaon at \SI{75}\giga\electronvolt\per\clight produces a Cherenkov ring radius of 100\,mm at the diaphragm, matching the centre of the CEDAR aperture. Selecting a aperture of less than 2.5\,mm allowed only the light from the kaon to pass through the diaphragm, with the 
-    central radius of the pion ring being 2\,mm larger and the central radius of the proton ring being 6\,mm smaller, shown in Figure \ref{fig:WestNitrogen}. The selection of a single particle Cherenkov ring depends on the beam divergence being less than $100\,\mu m$ and the axis of the CEDAR vessel being aligned parallel
-    to the beam. The CEDAR alignment to the beam is performed using a pair of motors at the downstream end of the detector, which displaces the downstream end by $\pm 5\,mm$ in both the XY dimension, pivoting the CEDAR vessel around the fixed upstream end. 
-    At a temperature of 293\,K, the nominal gas pressure to select kaons at \SI{75}{\giga\electronvolt\per\clight} is defined at \SI{1.71}{\bar} for \gls{n2} in CEDAR-W and \SI{3.85}{\bar} for \gls{h2} in CEDAR-H, with the values fluctuating by 0.34\,\% for every 1\,K of temperature difference.
-    The CEDAR vessel is sealed and insulated in order to operate as a closed volume with a fixed amount of gas. It is also expected to be insensitive to fluctuations in the environmental temperature due to the extensive insulation around the pressure vessel.
+    selected where a kaon at \SI{75}\giga\electronvolt\per\clight produces a Cherenkov ring radius of 100\,mm at the diaphragm, matching the centre of the \gls{CEDAR} aperture. Selecting a aperture of less than 2.5\,mm allowed only the light from the kaon to pass through the diaphragm, with the 
+    central radius of the pion ring being 2\,mm larger and the central radius of the proton ring being 6\,mm smaller, shown in Figure \ref{fig:WestNitrogen}. The selection of a single particle Cherenkov ring depends on the beam divergence being less than $100\,\mu m$ and the axis of the \gls{CEDAR} vessel being aligned parallel
+    to the beam. The \gls{CEDAR} alignment to the beam is performed using a pair of motors at the downstream end of the detector, which displaces the downstream end by $\pm 5\,mm$ in both the XY dimension, pivoting the \gls{CEDAR} vessel around the fixed upstream end. 
+    At a temperature of 293\,K, the nominal gas pressure to select kaons at \SI{75}{\giga\electronvolt\per\clight} is defined at \SI{1.71}{\bar} for \gls{n2} in \gls{cw} and \SI{3.85}{\bar} for \gls{h2} in \gls{ch}, with the values fluctuating by 0.34\,\% for every 1\,K of temperature difference.
+    The \gls{CEDAR} vessel is sealed and insulated in order to operate as a closed volume with a fixed amount of gas. It is also expected to be insensitive to fluctuations in the environmental temperature due to the extensive insulation around the pressure vessel.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/WestN2_1_7_WaveVSRadius_wQW_QE.pdf}
         \linespread{1.0}
-        \caption{Simulated Cherenkov ring radius vs wavelength at the diaphragm for CEDAR-W with \gls{n2} at a nominal pressure of 1.71\,bar with the KTAG PMT effective 
+        \caption{Simulated Cherenkov ring radius vs wavelength at the diaphragm for \gls{cw} with \gls{n2} at a nominal pressure of 1.71\,bar with the KTAG PMT effective 
         quantum efficiency applied. The black dashed lines represent the edges of a 2\,mm diaphragm aperture.}
         \label{fig:WestNitrogen}
     \end{figure} 
-    \section{Development of CEDAR-H}
+    \section{Development of \gls{ch}}
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/WestH2_3_67_WaveVSRadius_wQW_QE.pdf}
         \linespread{1.0}
-        \caption{Simulated Cherenkov ring radius vs wavelength at the diaphragm for CEDAR-W with \gls{h2} at a pressure of 3.67\,bar with the KTAG PMT effective 
+        \caption{Simulated Cherenkov ring radius vs wavelength at the diaphragm for \gls{cw} with \gls{h2} at a pressure of 3.67\,bar with the KTAG PMT effective 
         quantum efficiency applied. The black dashed lines represent the edges of a 2\,mm diaphragm aperture.}
         \label{fig:WestHyrogen}
     \end{figure} 
-    %Due to the different chromatic dispersion effects in Hydrogen, it was not possible to use the CEDAR-W using \gls{h2}. From simulations (Figure \ref{fig:WestHyrogen}), it was apparent the light was distorted 
-    %when compared to the CEDAR-W with \gls{n2}\ shown in Figure \ref{fig:WestNitrogen}. 
+    %Due to the different chromatic dispersion effects in Hydrogen, it was not possible to use the \gls{cw} using \gls{h2}. From simulations (Figure \ref{fig:WestHyrogen}), it was apparent the light was distorted 
+    %when compared to the \gls{cw} with \gls{n2}\ shown in Figure \ref{fig:WestNitrogen}. 
     Simulations of the \gls{cw} filled with \gls{h2} radiator gas show that the correction of the chromatic dispersion is inefficient, and photons of different wavelengths still display different radii at the diaphragm after the correction.
-    As in Figure \ref{fig:WestHyrogen}, in this configuration, it is not feasible to only select the light from kaons using the CEDAR diaphragm aperture without sacrificing light yield and operating at a lower detection efficiency. 
-    It was decided that a new vessel had to be developed with updated optics optimised for use with \gls{h2}. The vessel was called CEDAR-H.
+    As in Figure \ref{fig:WestHyrogen}, in this configuration, it is not feasible to only select the light from kaons using the \gls{CEDAR} diaphragm aperture without sacrificing light yield and operating at a lower detection efficiency. 
+    It was decided that a new vessel had to be developed with updated optics optimised for use with \gls{h2}. The vessel was called \gls{ch}.
     
-    An available CEDAR-N vessel was chosen to be used as the CEDAR-H structure, which reduced the costs when most of the mechanical components, such as the diaphragm and mirror supports, were not envisioned to change due to their complexity. This 
+    An available \gls{cn} vessel was chosen to be used as the \gls{ch} structure, which reduced the costs when most of the mechanical components, such as the diaphragm and mirror supports, were not envisioned to change due to their complexity. This 
     reduced the degrees of freedom for optimisation to two: the radius of curvature of the chromatic corrector lens and the two surfaces of the Mangin mirror. Initial parameters of the optical components were found using an analytical ray-tracing 
     procedure that considered the point of origin of the Cherenkov light and the wavelength spectrum \cite{Bache:2845388, Henshaw:2915320}. The parameters were iterated to achieve a ring radius of 100\,mm at the diaphragm and to minimise the width of the ring at the diaphragm. 
     Due to the pressure-dependent effects of the chromatic dispersion and spherical aberration, each computation was completed at pressures between 3.8 to 4.1\,bar in steps of 0.1\,bar.
 
-    Once the initial parameters had been found, a full GEANT4 \cite{Agostinelli2003Geant4} simulation was employed to validate and optimise the results from the analytical computation. The GEANT4 simulation allowed to further trace the light coming out of the CEDAR vessel through the diaphragm aperture 
+    Once the initial parameters had been found, a full GEANT4 \cite{Agostinelli2003Geant4} simulation was employed to validate and optimise the results from the analytical computation. The GEANT4 simulation allowed to further trace the light coming out of the \gls{CEDAR} vessel through the diaphragm aperture 
     , and being reflected by the spherical mirrors onto the PMT arrays, as shown by the light path in Figure \ref{fig:CEDAR_DIA}. The simulation was then used to modify the optical parameters 
-    to maximise the number of photons reaching the KTAG PMTs. The radius of the beam hole of the Mangin mirror was reduced with respect to the original CEDAR design, resulting in a greater reflective surface and increasing number of 
-    photons reaching the PMTs. The spherical mirrors outside the vessel were updated to improve the light distribution on the PMT arrays. It was found that using the condenser lenses from the CEDAR-W as opposed to the CEDAR-N resulted in more significant photon yield. 
+    to maximise the number of photons reaching the KTAG PMTs. The radius of the beam hole of the Mangin mirror was reduced with respect to the original \gls{CEDAR} design, resulting in a greater reflective surface and increasing number of 
+    photons reaching the PMTs. The spherical mirrors outside the vessel were updated to improve the light distribution on the PMT arrays. It was found that using the condenser lenses from the \gls{cw} as opposed to the \gls{cn} resulted in more significant photon yield. 
 
     The optimisation studies produced results with negligible differences between 3.8 and 4.1\,bar as the increase of Cherenkov photons at high pressure was counteracted by the improved light distribution on the PMT array at low pressures.
     Due to \gls{h2} safety considerations, the lower pressure of 3.8\,bar was selected. The optics sufficiently correct the chromatic dispersion at this pressure setting, producing a Gaussian width of 0.4\,mm for the kaon and pion rings at the diaphragm (see left Figure \ref{fig:cedarHsim}). This configuration allowed for the selection of 
-    kaons with a 2\,mm CEDAR diaphragm, shown in Figure \ref{fig:cedarHsim} with minimal light from the pion passing through.
+    kaons with a 2\,mm \gls{CEDAR} diaphragm, shown in Figure \ref{fig:cedarHsim} with minimal light from the pion passing through.
 
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/3_8_Radius_wQW.pdf} }}%
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/3_8_WaveVSRadius_wQW_QE.pdf} }}%
         \linespread{1.0}
-        \caption{Simulated Cherenkov ring radius at the diaphragm of CEDAR-H with \gls{h2} at 3.8\,bar for proton, kaon, and pion beam particles (left plot) and against wavelength (right plot). 
+        \caption{Simulated Cherenkov ring radius at the diaphragm of \gls{ch} with \gls{h2} at 3.8\,bar for proton, kaon, and pion beam particles (left plot) and against wavelength (right plot). 
         Both plots have the effective KTAG \gls{PMT} \gls{QE} applied.}%
         \label{fig:cedarHsim}%
     \end{figure}
@@ -166,11 +166,11 @@
         \linespread{1.0}
         \centering
         \small\caption{Optical and mechanical parameters of \CW\ and \CH. All values are dimensions in millimetres unless otherwise stated. 
-        Positions along the beam axis are quoted with respect to the upstream end of the CEDAR. Double horizontal lines separate optical elements inside the CEDAR vessel, and the last two optical elements positioned outside the CEDAR vessel.}
+        Positions along the beam axis are quoted with respect to the upstream end of the \gls{CEDAR}. Double horizontal lines separate optical elements inside the \gls{CEDAR} vessel, and the last two optical elements positioned outside the \gls{CEDAR} vessel.}
         \label{table:CedarParameterValues}
         
         \begin{tabular}{@{}llrr@{}}
-        \textbf{CEDAR type} &   & \textbf{\CW} & \textbf{\CH} \\ 
+        \textbf{\gls{CEDAR} type} &   & \textbf{\CW} & \textbf{\CH} \\ 
         \bottomrule
         
         Nominal gas type &   & \gls{n2} & \gls{h2} \\
@@ -229,7 +229,7 @@
         
     \end{table}
 
-    The CEDAR-H was constructed at CERN in 2022 using the mechanical and optical parameters found in Table \ref{table:CedarParameterValues} compared to CEDAR-W.
+    The \gls{ch} was constructed at CERN in 2022 using the mechanical and optical parameters found in Table \ref{table:CedarParameterValues} compared to \gls{cw}.
     The Mangin mirror and chromatic corrector were constructed using high-quality quartz blanks and tested by an outside company (Winlight) to sub-micron tolerances. 
     The reflectivity of the Mangin mirror was measured and is shown in Figure \ref{fig:ManginReflec}, peaking at just under 90\,\% reflectivity for a wavelength of 350\,nm. 
     This was excellent as the majority of the Cherenkov light was produced at around 300\,nm.
@@ -237,24 +237,24 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/ManginReflec.pdf}
         \linespread{1.0}
-        \caption{Measured reflectivity of CEDAR-H Mangin mirror conducted by Winlight System.}
+        \caption{Measured reflectivity of \gls{ch} Mangin mirror conducted by Winlight System.}
         \label{fig:ManginReflec}
     \end{figure}
-    During the construction process of CEDAR-H, each optical component was tested and measured to ensure that their performance would not diverge from the light yield seen in simulations. 
+    During the construction process of \gls{ch}, each optical component was tested and measured to ensure that their performance would not diverge from the light yield seen in simulations. 
     The transmittance for each of the condenser lenses is shown in Figure \ref{fig:CLTransmit}, with each lens having over 90\,\% transmittance for light above 240\,nm. Light at wavelengths below 240\,nm would not impact the final light yield due to the lower limit for the 
     UV glass filters described in Section \ref{sec:cedar_desc} and attached to the exit windows. The transmittance of each of the quartz exit windows was also measured, and the results are shown in Figure \ref{fig:QWTransmit}.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/TranmitCL.pdf}
         \linespread{1.0}
-        \caption{Measured transmittance of CEDAR-H condenser lenses conducted by engineers at CERN \cite{CERNprivate}.}
+        \caption{Measured transmittance of \gls{ch} condenser lenses conducted by engineers at CERN \cite{CERNprivate}.}
         \label{fig:CLTransmit}
     \end{figure}
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/TranmitQW.pdf}
         \linespread{1.0}
-        \caption{Measured transmittance of CEDAR-H quartz exit windows conducted by engineers at CERN \cite{CERNprivate}.}
+        \caption{Measured transmittance of \gls{ch} quartz exit windows conducted by engineers at CERN \cite{CERNprivate}.}
         \label{fig:QWTransmit}
     \end{figure}
 
@@ -270,19 +270,19 @@
     \end{figure}
 
 
-    \section{CEDAR-H Test-beam}
+    \section{\gls{ch} Test-beam}
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/test_beamInstall.png}
         \linespread{1.0}
-        \caption{Image of CEDAR-H being installed on the H6 beam-line at CERN in 2022.}
+        \caption{Image of \gls{ch} being installed on the H6 beam-line at CERN in 2022.}
         \label{fig:CEDARHTest}
     \end{figure}
-    After construction of the CEDAR-H, the detector was tested and characterised in 2022 during a test at the H6 beam-line at CERN, shown in Figure \ref{fig:CEDARHTest}.
+    After construction of the \gls{ch}, the detector was tested and characterised in 2022 during a test at the H6 beam-line at CERN, shown in Figure \ref{fig:CEDARHTest}.
     The test beam had three main aims: to familiarise with the safety procedures related to \gls{h2} gas operations, to ensure that the optics had been installed and aligned correctly, and to measure the kaon identification efficiency and pion miss-identification probability for several working points.
     The H6 beam-line was located at the CERN north area and was derived from \SI{400}{\giga\electronvolt\per\clight} primary protons from the SPS interacting with a target consisting of a beryllium rod, producing an unseparated \SI{75}{\giga\electronvolt\per\clight} hadron beam similar to the NA62 beam. 
-    CEDAR-H was installed 440\,m downstream of the target, compared to 70\,m when installed in NA62, resulting in a different beam composition when compared to NA62, with 4\,\% kaons, 25\,\% protons, and 71\,\% pions. 
-    The beam divergence at the entrance of the CEDAR was $80\,\mu m$ in the H6 beam-line compared to \SI{70}{\micro\meter} in NA62, well within the operating divergence of the CEDAR. 
+    \gls{ch} was installed 440\,m downstream of the target, compared to 70\,m when installed in NA62, resulting in a different beam composition when compared to NA62, with 4\,\% kaons, 25\,\% protons, and 71\,\% pions. 
+    The beam divergence at the entrance of the \gls{CEDAR} was $80\,\mu m$ in the H6 beam-line compared to \SI{70}{\micro\meter} in NA62, well within the operating divergence of the \gls{CEDAR}. 
 
     For the test beam, an ET 9820QB PMT was installed directly onto each exit window without the optical caps previously described and operated at a voltage of 2\,kV with a 30\,mV discriminator threshold voltage to achieve single photo-electron sensitivity. The test setup is described in Figure \ref{fig:CEDARHTest_dia} where a pair of scintillating 
     counters were installed at either end of the detector (one downstream and one upstream) to provide a trigger when each beam particle passed through the detector vessel. For a typical \gls{Spill}, there were $2.8\times 10^{5}$ particles, and for each triggered particle within the \gls{Spill}, the six, seven and eight-fold 
@@ -291,12 +291,12 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/test_beam_diagram_jack.pdf}
         \linespread{1.0}
-        \caption{Diagram showing the CEDAR test-beam setup in H6 from the side view.}
+        \caption{Diagram showing the \gls{CEDAR} test-beam setup in H6 from the side view.}
         \label{fig:CEDARHTest_dia}
     \end{figure}
 
-    After the installation, the first step of the test was to conduct an alignment of the CEDAR-H vessel with the beam-line. As described in Section \ref{sec:cedar_desc}, the CEDAR is attached to XY motors, which are used to align the vessel to the beam. The diagram in Figure \ref{fig:alignment_dia}
-    depicts how moving the CEDAR vessel would have impacted the position of the Cherenkov ring at the diaphragm. The alignment aims to centre the ring directly within the diaphragm aperture to maximise the light yield. 
+    After the installation, the first step of the test was to conduct an alignment of the \gls{ch} vessel with the beam-line. As described in Section \ref{sec:cedar_desc}, the \gls{CEDAR} is attached to XY motors, which are used to align the vessel to the beam. The diagram in Figure \ref{fig:alignment_dia}
+    depicts how moving the \gls{CEDAR} vessel would have impacted the position of the Cherenkov ring at the diaphragm. The alignment aims to centre the ring directly within the diaphragm aperture to maximise the light yield. 
     
     \begin{figure}[H]
         \centering 
@@ -313,7 +313,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/test_beamalingment1.png}
         \linespread{1.0}
-        \caption{Output of data collection for CEDAR-H at the end of the first alignment. From left, the mean number of detected photons per group of two PMTs normalised to the trigger, the positions of the XY motors, the diaphragm aperture (DIA), the gas pressure (PRESS), the average number of 
+        \caption{Output of data collection for \gls{ch} at the end of the first alignment. From left, the mean number of detected photons per group of two PMTs normalised to the trigger, the positions of the XY motors, the diaphragm aperture (DIA), the gas pressure (PRESS), the average number of 
         detected photons (NPE) per PM, the number of triggers (TRIG) and the spacial alignment of the PMTs.}
         \label{fig:alignment_res1}
     \end{figure}
@@ -326,13 +326,13 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/test_beamalingment2.png}
         \linespread{1.0}
-        \caption{Output of data collection on CEDAR at the end of the second alignment showing the positions of the XY motors, the diaphragm aperture, pressure of the CEDAR, the average number of 
+        \caption{Output of data collection on \gls{CEDAR} at the end of the second alignment showing the positions of the XY motors, the diaphragm aperture, pressure of the \gls{CEDAR}, the average number of 
         photo-electrons per PM and then the spacial alignment of the PMTs. Each entry was recorded at a different diaphragm aperture of 0.79, 1 and 2.02\ mm.}
         \label{fig:alignment_res2}
     \end{figure}
 
-    The next stage of the test beam was to conduct a pressure scan. Before the scan, the pressure of the CEDAR-H was set at the highest pressure (4.4\,bar), where there were no selected beam particles. A selected beam particle was defined when there is signal in at least 6 PMTs in coincidence.
-    The scan consisted of reducing the pressure in small steps and collecting a number of spills of data at each step. This was completed at a diaphragm width of 2.3\,mm, which was slightly larger than the standard operating setting used with the CEDAR-W at NA62. The aperture was chosen to maximise the light yield of the detector to 
+    The next stage of the test beam was to conduct a pressure scan. Before the scan, the pressure of the \gls{ch} was set at the highest pressure (4.4\,bar), where there were no selected beam particles. A selected beam particle was defined when there is signal in at least 6 PMTs in coincidence.
+    The scan consisted of reducing the pressure in small steps and collecting a number of spills of data at each step. This was completed at a diaphragm width of 2.3\,mm, which was slightly larger than the standard operating setting used with the \gls{cw} at NA62. The aperture was chosen to maximise the light yield of the detector to 
     compare the computed beam composition to the expected at the H6 beam line. The results of the pressure scan are found in Figure \ref{fig:1presscan_testbeam}, with the selection of each beam component visible in the plots. The protons have maximum light yield at 4.26\,bar with 0.232 coincidences per trigger, with the build-up in coincidences caused by the gradual entrance of 
     the Cherenkov ring into the aperture of the diaphragm. The kaon has a maximum light yield at 3.844, with 0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69\,bar, with 0.721 coincidences per trigger. The fraction of triggers was within 1-2\,\% of the expected beam composition, resulting in the selection of a particle in 99.1\,\% of the triggers.
     It was expected that not all light from the proton ring would pass through the 2.3\,mm diaphragm aperture due to its large Gaussian width and distorted shape, shown in Figure \ref{fig:cedarHsim}.
@@ -345,7 +345,7 @@
         \label{fig:1presscan_testbeam}%
     \end{figure}
     
-    The resultant light yield of CEDAR-H can be computed from the 6, 7, and 8 coincidences per trigger shown in Figure \ref{fig:1presscan_testbeam}. The light yield can be computed using either of the two equations below, 
+    The resultant light yield of \gls{ch} can be computed from the 6, 7, and 8 coincidences per trigger shown in Figure \ref{fig:1presscan_testbeam}. The light yield can be computed using either of the two equations below, 
     \begin{equation}\label{eq:Lamb1}
         \lambda= \ln \left[ 1+\frac{8}{\eta_{7}/\eta_{8}-1} \right]
     \end{equation}
@@ -385,7 +385,7 @@
         \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/12mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}\hfill
         \subfloat{\includegraphics[height=8cm, width=0.49\textwidth]{plots/1mmPres_testbeam_LogCoincidencesAvgPointspTrigger.pdf}}
         \linespread{1.0}
-        \caption{Results of the CEDAR-H pressure scans taken during the 2022 test beam. Top left was conducted with a diagram aperture of 2\,mm, top right with a diagram aperture of 1.7\,mm, 
+        \caption{Results of the \gls{ch} pressure scans taken during the 2022 test beam. Top left was conducted with a diagram aperture of 2\,mm, top right with a diagram aperture of 1.7\,mm, 
         bottom left with a diagram aperture of 1.2\,mm and bottom right with a diagram aperture of 1\,mm}
         \label{fig:testbeamPresures}
     \end{figure}
@@ -421,11 +421,11 @@
         \caption{Plot showing the results of the diaphragm scan during the H6 test beam at a pressure of 3.85\,bar.}
         \label{fig:Diascan}
     \end{figure}
-    %% Then comparison with 2011 test beam CEDAR-W
+    %% Then comparison with 2011 test beam \gls{cw}
     %% Possibly have the pion peak to calculate the ring width
     %% Then describe the selection and why it was chosen
     %% Maybe we can add some N2 data !
-    Considering all of the pressure scans completed during the test beam, the optimal working point for CEDAR-H was found to be at a pressure of 3.85\,bar with a diaphragm aperture of 1.7\,mm. 
+    Considering all of the pressure scans completed during the test beam, the optimal working point for \gls{ch} was found to be at a pressure of 3.85\,bar with a diaphragm aperture of 1.7\,mm. 
     It was chosen as it provided the best light yield with an average of 19.13 photo-electrons per kaon, along with an acceptable pion miss-identification probability. The pion miss-identification probability was estimated to be less than $10^{-4}$, from Figure \ref{fig:testbeamPresures} (top right) using the fit of a Super-Gaussian (Equation \ref{eq:sup-gaus}) on the falling edge of the pion peak shown as the dashed line on the six-fold coincidences. 
     The fitted line was extrapolated past the results from data up to the kaon pressure to estimate the pion contribution to the six-fold coincidence.
     
@@ -440,18 +440,18 @@
         \centering 
         \includegraphics[width=\textwidth]{imgs/NA62_install.png}
         \linespread{1.0}
-        \caption{Image of CEDAR-H being installed on the NA62 beam-line in 2022}
+        \caption{Image of \gls{ch} being installed on the NA62 beam-line in 2022}
         \label{fig:cedarHinstall}
     \end{figure}
-    CEDAR-H was installed on the NA62 beam-line in 2023, involving several steps. First, the KTAG photon-detection system had to be disassembled from the CEDAR-W and set to one side, with the CEDAR-W vessel then removed from the beam-line. The CEDAR-H was brought to the NA62 underground cavern and installed into the beam-line, shown in Figure \ref{fig:cedarHinstall}.
-    The new spherical mirrors were aligned with a laser beam and secured to a support cylinder, shown in Figure \ref{fig:mirroralign}. The process of alignment started with the positioning of the laser. Data from the NA62 Monte Carlo simulation provided info about the direction of light exiting the CEDAR-H vessel. A photon that hit the centre of the spherical mirror was selected, and the positions 
-    at the exit window and spherical mirror were recorded in XYZ. The vector was then calculated from the mirror's centre to the exit window and used to set up the laser for the mirror alignment. A target representing the PMT array, shown in Figure \ref{fig:mirrortarget}, was placed at the correct distance from the spherical mirror. The laser was placed to simulate the direction of light exiting the CEDAR-H and 
+    \gls{ch} was installed on the NA62 beam-line in 2023, involving several steps. First, the KTAG photon-detection system had to be disassembled from the \gls{cw} and set to one side, with the \gls{cw} vessel then removed from the beam-line. The \gls{ch} was brought to the NA62 underground cavern and installed into the beam-line, shown in Figure \ref{fig:cedarHinstall}.
+    The new spherical mirrors were aligned with a laser beam and secured to a support cylinder, shown in Figure \ref{fig:mirroralign}. The process of alignment started with the positioning of the laser. Data from the NA62 Monte Carlo simulation provided info about the direction of light exiting the \gls{ch} vessel. A photon that hit the centre of the spherical mirror was selected, and the positions 
+    at the exit window and spherical mirror were recorded in XYZ. The vector was then calculated from the mirror's centre to the exit window and used to set up the laser for the mirror alignment. A target representing the PMT array, shown in Figure \ref{fig:mirrortarget}, was placed at the correct distance from the spherical mirror. The laser was placed to simulate the direction of light exiting the \gls{ch} and 
     the spherical mirror was adjusted so that the laser light hit the centre of the target, ensuring that the light would hit the centre of the PMT array. This process was then repeated for all eight spherical mirrors. 
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.4\textwidth]{imgs/spherical_mirror_align.png}
         \linespread{1.0}
-        \caption{Image of the four spherical mirrors being aligned whilst attached to the CEDAR support cylinder}
+        \caption{Image of the four spherical mirrors being aligned whilst attached to the \gls{CEDAR} support cylinder}
         \label{fig:mirroralign}
     \end{figure}    
     \begin{figure}[H]
@@ -461,80 +461,80 @@
         \caption{Image of the target used for the alignment of the spherical mirrors}
         \label{fig:mirrortarget}
     \end{figure}    
-    The mirror support cylinder was then attached to the nose of the CEDAR-H, the KTAG photon-detection system was reassembled at the upstream end of the vessel, and all connections were reconnected and tested.
+    The mirror support cylinder was then attached to the nose of the \gls{ch}, the KTAG photon-detection system was reassembled at the upstream end of the vessel, and all connections were reconnected and tested.
 
-    Compared to the setup of the CEDAR-W, several modifications were made due to the requirements for the use of \gls{h2} within the ECN3 experimental hall. It was expected that some negligible amount of gas would leak from the CEDAR-H 
+    Compared to the setup of the \gls{cw}, several modifications were made due to the requirements for the use of \gls{h2} within the ECN3 experimental hall. It was expected that some negligible amount of gas would leak from the \gls{ch} 
     , so all precautions had to be taken in order to prevent the concentration of gas from reaching dangerous levels between the Lower Explosive Limit (LEL) of 4\,\% and Upper Explosive Limit of 75\,\% in air. Any area where there was a potential 
-    for a \gls{h2} leak was designated as an explosive atmosphere (ATEX) zone 2. In the ATEX zones, there are no electrical connectors, and all metal parts of the CEDAR-H are grounded to prevent any ignition sources. 
-    During \gls{h2} operation, the diaphragm end switches are manually isolated through a key located by the KTAG electronics rack, as these are not ATEX rated and have the potential to create a spark. The ATEX zones extended 80\,cm from the CEDAR-H vessel and required 
+    for a \gls{h2} leak was designated as an explosive atmosphere (ATEX) zone 2. In the ATEX zones, there are no electrical connectors, and all metal parts of the \gls{ch} are grounded to prevent any ignition sources. 
+    During \gls{h2} operation, the diaphragm end switches are manually isolated through a key located by the KTAG electronics rack, as these are not ATEX rated and have the potential to create a spark. The ATEX zones extended 80\,cm from the \gls{ch} vessel and required 
     experts had to have ATEX training in order to access.
     Any confined space where the \gls{h2} can acuminate, such as the KTAG enclosure and the box containing the diaphragm potentiometer and motor, was flushed with a constant supply of nitrogen to prevent the build-up of \gls{h2}. Safety interlocks were installed to turn off the KTAG electronics 
-    in the event the supply of \gls{n2} is interrupted. A second interlock was in place to turn off the KTAG electronics if there was a sizeable pressure drop in the CEDAR-H vessel. The pressure sensor precision limits the defined pressure drop for the interlock. A small leak was defined to be a measured drop in pressure of 0.02\,mbar per minute 
+    in the event the supply of \gls{n2} is interrupted. A second interlock was in place to turn off the KTAG electronics if there was a sizeable pressure drop in the \gls{ch} vessel. The pressure sensor precision limits the defined pressure drop for the interlock. A small leak was defined to be a measured drop in pressure of 0.02\,mbar per minute 
     measured by a rolling average across an hour. A major leak interlock, which would represent a rupture of the aluminium windows, would be triggered if the pressure dropped by 0.1\ mbar per second. 
-    This major leak interlock would cut power to the CEDAR and neighbouring areas, turning off vacuum pumps and the GTK. To avoid the possibility of the window rupture, the CEDAR-H has a safety valve attached to the exhaust on top of a CEDAR vessel, which limits the pressure in the vessel to a maximum value of 5\,bar. 
+    This major leak interlock would cut power to the \gls{CEDAR} and neighbouring areas, turning off vacuum pumps and the GTK. To avoid the possibility of the window rupture, the \gls{ch} has a safety valve attached to the exhaust on top of a \gls{CEDAR} vessel, which limits the pressure in the vessel to a maximum value of 5\,bar. 
     The aluminium windows have been tested to withstand a pressure of 7.5\,bar before installation so that the safety valve would prevent any damage to the windows.
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[width=0.68\textwidth]{imgs/KTAG_CEDAR-H_comp.pdf} }}%
-        \subfloat{{\includegraphics[width=0.30\textwidth]{imgs/KTAG_CEDAR-H_comp.jpg} }}%
-        \caption{CEDAR-H installed in the NA62 beam-line (left) and the KTAG photon-detection system reassembled at the upstream end of the vessel (right)}%
+        \subfloat{{\includegraphics[width=0.68\textwidth]{imgs/KTAG_\gls{ch}_comp.pdf} }}%
+        \subfloat{{\includegraphics[width=0.30\textwidth]{imgs/KTAG_\gls{ch}_comp.jpg} }}%
+        \caption{\gls{ch} installed in the NA62 beam-line (left) and the KTAG photon-detection system reassembled at the upstream end of the vessel (right)}%
         \label{fig:cedarpics_ns62}%
     \end{figure}
-    Dedicated flammable gas detectors were installed on the top of the metal pavilions at both upstream and downstream ends of the CEDAR-H vessel, shown in Figure \ref{fig:cedarpics_ns62}. The detectors monitor the concentration of \gls{h2} levels outside the vessel 
-    and result in a warning if the concentration exceeds 10\,\% of the LEL. The gas detectors were connected to the CEDAR-H \gls{DSS}. A concentration of 20\,\% of the LEL generates a level 3 alarm, which would cut the power in the area if the alarm is triggered, and the CERN fire brigade would be informed.
-    The main metal pavilion covers the upstream end of the CEDAR-H vessel, the KTAG photon-detection system, and the gas distribution panel, and it was designed to guide any leaking gas to the \gls{h2} sensor. Another smaller metal pavilion was installed at the downstream end of the vessel.
+    Dedicated flammable gas detectors were installed on the top of the metal pavilions at both upstream and downstream ends of the \gls{ch} vessel, shown in Figure \ref{fig:cedarpics_ns62}. The detectors monitor the concentration of \gls{h2} levels outside the vessel 
+    and result in a warning if the concentration exceeds 10\,\% of the LEL. The gas detectors were connected to the \gls{ch} \gls{DSS}. A concentration of 20\,\% of the LEL generates a level 3 alarm, which would cut the power in the area if the alarm is triggered, and the CERN fire brigade would be informed.
+    The main metal pavilion covers the upstream end of the \gls{ch} vessel, the KTAG photon-detection system, and the gas distribution panel, and it was designed to guide any leaking gas to the \gls{h2} sensor. Another smaller metal pavilion was installed at the downstream end of the vessel.
 
-    During the installation, the CEDAR-H was leak tested at 3.85\,bar for 10 days, where the leak rate was measured to be 0.2\,litres per day at standard pressure and temperature. This satisfied the safety requirements for use in ECN3, given the measured airflow from the ventilation of the experimental hall.
+    During the installation, the \gls{ch} was leak tested at 3.85\,bar for 10 days, where the leak rate was measured to be 0.2\,litres per day at standard pressure and temperature. This satisfied the safety requirements for use in ECN3, given the measured airflow from the ventilation of the experimental hall.
 
     %% Things to add: Maybe something about the gas system. And maybe something about the electronics? Maybe more about the KTAG
     \section{Commissioning at CERN}
-    The commissioning of the \CH in the NA62 beam-line was completed at the start of the 2023 run. After the CERN beam experts conducted the start-of-run activities and the beam was steered through the CEDAR-H vessel, the beam intensity was set at 10\,\% of the NA62 nominal value, corresponding to a particle rate 
+    The commissioning of the \CH in the NA62 beam-line was completed at the start of the 2023 run. After the CERN beam experts conducted the start-of-run activities and the beam was steered through the \gls{ch} vessel, the beam intensity was set at 10\,\% of the NA62 nominal value, corresponding to a particle rate 
     of 60\,Hz. Periodic triggers were used during the \CH commissioning in order to select all beam particles and measure the beam composition. The periodic triggers are where a period is selected between the start of burst (SoB) and end of burst (EoB) at which data was collected. At the beam intensity selected, the period was set so that $2 \times 10^{5}$ triggers per spill was collected. 
     For each triggered event, the KTAG data acquisition system recorded the time and the channel ID of each PMT signal within a 100\,ns time window defined by the trigger. The data collected was then reconstructed using the NA62 framework with the individual PMT signals clustered using an algorithm that selects the signals within a 4\,ns time window into candidates. 
     As each individual PMT signal was recorded, the light yield was defined using a different method when compared to the test beam. In the test beam, the ratios of the coincidences were used to calculate the light yield using statistical equations. However, at NA62, the light yield can be measured precisely due to the high granularity of the KTAG photon-detection system and can be defined as the number of photo-electrons per beam particle candidate.
     The identification of the beam particle utilised a 5-fold coincidence, compared to the 6-fold used in the test beam, due to the availability of data and the reduced noise level with the KTAG photon-detection system.
 
-    As the CEDAR had been removed from H6, then moved to ECN3 and installed into the beam line, the first step of the commissioning was to validate that the detector was still functional using \gls{n2} before filling the vessel with \gls{h2}. 
+    As the \gls{CEDAR} had been removed from H6, then moved to ECN3 and installed into the beam line, the first step of the commissioning was to validate that the detector was still functional using \gls{n2} before filling the vessel with \gls{h2}. 
     %This was because any work that could have been conducted due to any issues caused by the transport to ECN3, would have been complicated by the presence of \gls{h2}. 
     This would allow to confirm the basic functionality of the detector without the complications added by \gls{h2} in case a hardware intervention was needed.
-    It is important to note that any results from this phase were preliminary due to the distorted nature of the Cherenkov light in the CEDAR-H with a \gls{n2} radiator gas. The CEDAR-H vessel was filled with \gls{n2}\ to 1.5\,bar, where a pressure scan was then completed going up in the pressure to 2.12\,bar, at a diaphragm aperture of 1.45\,mm with the results shown in Figure \ref{fig:cedarHNN}. 
+    It is important to note that any results from this phase were preliminary due to the distorted nature of the Cherenkov light in the \gls{ch} with a \gls{n2} radiator gas. The \gls{ch} vessel was filled with \gls{n2}\ to 1.5\,bar, where a pressure scan was then completed going up in the pressure to 2.12\,bar, at a diaphragm aperture of 1.45\,mm with the results shown in Figure \ref{fig:cedarHNN}. 
     The pressure scan in Figure \ref{fig:cedarHNN} showed that the aperture was too small, resulting in narrow peaks with no flat tops that had been seen in the test beam. The pion-kaon peaks were not well separated, which was not expected with a small diaphragm, so it was assumed that the detector alignment with the beam was not correct as the procedure might have been affected by other particles Cherenkov ring passing through the diaphragm aperture.
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/N_145mm.png} }}%
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/N_145mm_log.png} }}%
-        \caption{Pressure scan with CEDAR-H with \gls{n2}\ going from a 1.5\,bar to 2.12\,bar at a diaphragm aperture of 1.45\,mm.}%
+        \caption{Pressure scan with \gls{ch} with \gls{n2}\ going from a 1.5\,bar to 2.12\,bar at a diaphragm aperture of 1.45\,mm.}%
         \label{fig:cedarHNN}%
     \end{figure}
     A coarse alignment was conducted at a diaphragm aperture of 1.45\,mm and at the expected proton pressure of 2.031\,bar as it is an isolated peak, so it was more efficient for alignment, with the results shown in Figure \ref{fig:cedarAlignNN}. 
     %The alignment was completed in suboptimal conditions due to the small aperture as it was desired to first align with a large diaphragm. 
     The detector started at $Y=-1.943$ and $X=-2.219$ and an average of 20.6 photo-electrons per candidate. 
     The alignment results are shown in Figure \ref{fig:cedarAlignNN}, where the Y motors were first moved in the positive direction, which caused a decrease in the number of photo-electrons per candidate. The Y motors were then moved in the negative direction until the maximum was found at $Y=-2.051$. The large gaps in the results 
-    showed the instability of the motors, as it was not possible to return to the same point after moving the motors due to the inaccuracy in the control system. The X motor was then modified until a maximum was found at $X=-2.155$. The final position of the CEDAR-H with \gls{n2} was $X=-2.155$ and $Y=-2.051$, with an average of 20.9 photo-electrons per candidate. However, the maximum was found at the edge of the usable range in the Y direction
-    , it was possible that the maximum light yield was not found and was further in negative Y. As this would have been much harder to conduct with \gls{h2} in the CEDAR, the vessel was lowered 2\,mm by reducing the height of the downstream foot. This would mean that the Y motor values from now on are not comparable to these alignment results. 
+    showed the instability of the motors, as it was not possible to return to the same point after moving the motors due to the inaccuracy in the control system. The X motor was then modified until a maximum was found at $X=-2.155$. The final position of the \gls{ch} with \gls{n2} was $X=-2.155$ and $Y=-2.051$, with an average of 20.9 photo-electrons per candidate. However, the maximum was found at the edge of the usable range in the Y direction
+    , it was possible that the maximum light yield was not found and was further in negative Y. As this would have been much harder to conduct with \gls{h2} in the \gls{CEDAR}, the vessel was lowered 2\,mm by reducing the height of the downstream foot. This would mean that the Y motor values from now on are not comparable to these alignment results. 
     
-    The tests with \gls{n2} confirmed that the optics were still functional after being moved from H6 and installed in NA62, so it was decided to proceed with the next phase, filling the CEDAR vessel with \gls{h2} and performing a full alignment. The final alignment must be completed with \gls{h2} as it was possible that results would differ due to the misshapen rings caused by using \gls{n2} in CEDAR-H.
+    The tests with \gls{n2} confirmed that the optics were still functional after being moved from H6 and installed in NA62, so it was decided to proceed with the next phase, filling the \gls{CEDAR} vessel with \gls{h2} and performing a full alignment. The final alignment must be completed with \gls{h2} as it was possible that results would differ due to the misshapen rings caused by using \gls{n2} in \gls{ch}.
     
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{plots/Align_N_2_new.png}
-        \caption{Results of the alignment of CEDAR-H with \gls{n2}\ at the start of NA62 2022 run, at a diaphragm aperture of 1.45\,mm and a pressure of 2.031\,bar}%
+        \caption{Results of the alignment of \gls{ch} with \gls{n2}\ at the start of NA62 2022 run, at a diaphragm aperture of 1.45\,mm and a pressure of 2.031\,bar}%
         \label{fig:cedarAlignNN}%
     \end{figure}
 
-    The CEDAR-H was first filled with \gls{h2} to 4.3\,bar where a small pressure scan was conducted to find the best value to collect Cherenkov light from the proton. The pressure was adjusted by $\pm0.2\,bar$ and the light yield was recorded, with the best pressure found to be 4.3\,bar.
+    The \gls{ch} was first filled with \gls{h2} to 4.3\,bar where a small pressure scan was conducted to find the best value to collect Cherenkov light from the proton. The pressure was adjusted by $\pm0.2\,bar$ and the light yield was recorded, with the best pressure found to be 4.3\,bar.
 
 
-    The first alignment of CEDAR-H with \gls{h2} was conducted at 4.3\,bar, where the proton peak was expected to be from the results at the test beam. The alignment was conducted at a diaphragm aperture of 6\,mm to fully collect light from protons only. This allows for a course alignment, in which the method involved balancing the number of photo-electrons on each sector. The results of the 
-    alignment are shown in Figure \ref{fig:cedarAlign1}. The CEDAR-H was originally in the position of $X=-2.144\,mm$ and $Y=-2.025\,mm$, where a proton candidate had, on average, 15.58 photo-electrons. This was much lower than what was expected from the test beam and from the \gls{n2} test previously, so a new alignment was definitely required. The Y motors were first modified, increasing by around 0.1\,mm and then 
+    The first alignment of \gls{ch} with \gls{h2} was conducted at 4.3\,bar, where the proton peak was expected to be from the results at the test beam. The alignment was conducted at a diaphragm aperture of 6\,mm to fully collect light from protons only. This allows for a course alignment, in which the method involved balancing the number of photo-electrons on each sector. The results of the 
+    alignment are shown in Figure \ref{fig:cedarAlign1}. The \gls{ch} was originally in the position of $X=-2.144\,mm$ and $Y=-2.025\,mm$, where a proton candidate had, on average, 15.58 photo-electrons. This was much lower than what was expected from the test beam and from the \gls{n2} test previously, so a new alignment was definitely required. The Y motors were first modified, increasing by around 0.1\,mm and then 
     stopping to take a number of bursts to increase the statistics. This was repeated, which resulted in the number of photo-electrons per proton candidate increasing, maximising at an average of 21.07 at $Y=-0.725\,mm$, suggesting the detector was aligned in the Y dimension. To ensure that this was the maximum point, the Y motor continued to move until the 
     number of photo-electrons decreased. When this occurred, the detector was moved back to the previous maximum. The X motors were moved in both the positive and negative direction to again find the maximum number of photo-electrons. It was found that the detector was aligned in the X dimension in its original state, so the X motor was returned to its original position.
-    The final position of the CEDAR-H was $X=-2.144\,mm$ and $Y=-0.725\,mm$, resulting with the average number of photo-electrons per proton candidate of 21.07. This suggested that before lowering the CEDAR-H, the maximum was at -2.725\,mm, past the previous maximum of -2.051\,mm, and that the lowering was required. 
+    The final position of the \gls{ch} was $X=-2.144\,mm$ and $Y=-0.725\,mm$, resulting with the average number of photo-electrons per proton candidate of 21.07. This suggested that before lowering the \gls{ch}, the maximum was at -2.725\,mm, past the previous maximum of -2.051\,mm, and that the lowering was required. 
 
     \begin{figure}[H]
         \centering
         \includegraphics[height=8cm]{plots/Align_H_2_new_corse.png}
-        \caption{Results of the first alignment of CEDAR-H with \gls{h2}\ at the proton pressure of 4.3\,bar with a diaphragm aperture of 6\,mm }%
+        \caption{Results of the first alignment of \gls{ch} with \gls{h2}\ at the proton pressure of 4.3\,bar with a diaphragm aperture of 6\,mm }%
         \label{fig:cedarAlign1}%
     \end{figure}
     %% First pressure scan
@@ -550,7 +550,7 @@
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_18mm.png} }}%
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_18mm_log.png} }}%
-        \caption{Pressure scan of CEDAR-H with \gls{h2}\ at a diaphragm aperture of 1.8\,mm.}%
+        \caption{Pressure scan of \gls{ch} with \gls{h2}\ at a diaphragm aperture of 1.8\,mm.}%
         \label{fig:cedarH_1}%
     \end{figure}
     As the alignment had been conducted at a wide diaphragm aperture, it was possible that the alignment could have been incorrect especially if a smaller diaphragm was required. The diaphragm was kept at 1.8\,mm and the alignment procedure was repeated. The smaller diaphragm allowed for a fine alignment, as the diaphragm aperture was only wide enough for the single ring from the kaon to pass through. 
@@ -559,18 +559,18 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{plots/Align_H_2_new.png}
-        \caption{Results of alignment of CEDAR-H at the kaon pressure of 3.88\,bar with a diaphragm aperture of 1.5\,mm.}%
+        \caption{Results of alignment of \gls{ch} at the kaon pressure of 3.88\,bar with a diaphragm aperture of 1.5\,mm.}%
         \label{fig:cedarAlign2}%
     \end{figure}
     After the final alignment, a pressure scan was completed across the pion and kaon peak with a diaphragm aperture of 1.5\,mm with the results shown in Figure \ref{fig:cedarH_2}. The separation compared to the previous pressure scan in Figure \ref{fig:cedarH_1} was much greater with the pion contribution to the 5-fold coincidence estimated to be of the order of $10^{-90}$ which corresponded to an almost zero miss-identification probability.
     However, even after the updated alignment, the number of photo-electrons per kaon candidate was $21.47 \pm 0.04$ suggesting a slightly lower light yield than the previous pressure scan completed with a 1.8\ mm diaphragm aperture. 
     
-    The results show that the CEDAR-H was made operational in NA62 and was able to separate the kaon and pion peaks with a high level of confidence. It was decided that the pressure scan from the 1.8\,mm diaphragm aperture produced the best results for use in the run due to the superior light yield, resulting in a better kaon identification efficiency and pion miss-identification probability that was better than what was required at NA62.
+    The results show that the \gls{ch} was made operational in NA62 and was able to separate the kaon and pion peaks with a high level of confidence. It was decided that the pressure scan from the 1.8\,mm diaphragm aperture produced the best results for use in the run due to the superior light yield, resulting in a better kaon identification efficiency and pion miss-identification probability that was better than what was required at NA62.
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm.png} }}%
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm_log.png} }}%
-        \caption{Pressure scan of CEDAR-H with \gls{h2}\ at a diaphragm aperture of 1.5\,mm.}%
+        \caption{Pressure scan of \gls{ch} with \gls{h2}\ at a diaphragm aperture of 1.5\,mm.}%
         \label{fig:cedarH_2}%
     \end{figure}
     A diaphragm scan was completed as a final test of the light yield with respect to the aperture. The results are shown in Figure \ref{fig:cedarDiascan}, where the diaphragm was varied between 0 and 6.5\,mm. As the diaphragm was opened, the coincidences increased as the Cherenkov light from the kaon started to pass through the aperture, maximising at 1.75\,mm, just lower than 
@@ -581,7 +581,7 @@
         \caption{Results of diaphragm scan taken at 3.88\,bar.}%
         \label{fig:cedarDiascan}%
     \end{figure}
-    After the successful commissioning of CEDAR-H in NA62, the working point for the 2023 run was as follows:
+    After the successful commissioning of \gls{ch} in NA62, the working point for the 2023 run was as follows:
     \begin{itemize}
         \item Alignment: $X = -2.258\,mm$ and $Y = -0.591\,mm$
         \item Kaon Pressure: 3.88\,bar
@@ -591,60 +591,60 @@
     slight movements of the vessel can be possible at each \gls{h2} filling due to possible deformation of the beam-pipe when the detector is brought in and out of vacuum. Also, it was possible that the pressure set points for the beam particles could differ due to the environmental changes in ECN3.
     %%% 2024 Commissioning?????
     
-    For example, the commissioning of the CEDAR-H in 2024, with the pressure scan of the kaon peak shown in Figure \ref{fig:cedarPres2024}, showed that the environmental changes in ECN3 impacted the set pressure points for the beam particles. The kaon pressure was found to be 3.81\,bar, which was 0.07\,bar lower than the previous year. This change is acceptable at the start of the run when the detector working point is set during the commissioning time, but 
+    For example, the commissioning of the \gls{ch} in 2024, with the pressure scan of the kaon peak shown in Figure \ref{fig:cedarPres2024}, showed that the environmental changes in ECN3 impacted the set pressure points for the beam particles. The kaon pressure was found to be 3.81\,bar, which was 0.07\,bar lower than the previous year. This change is acceptable at the start of the run when the detector working point is set during the commissioning time, but 
     whilst taking data, the conditions are monitored to ensure that the light yield for the kaons is at its maximum. 
-    %A new method was designed to monitor the CEDAR and is described in Section \label{sec:cedarHperformance}. <--- possible add
+    %A new method was designed to monitor the \gls{CEDAR} and is described in Section \label{sec:cedarHperformance}. <--- possible add
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/2024_Hydrogen_scan.png}
-        \caption{Results of CEDAR-H pressure scan at the start of NA62's 2024 run with a diaphragm aperture of 1.5\,mm.}%
+        \caption{Results of \gls{ch} pressure scan at the start of NA62's 2024 run with a diaphragm aperture of 1.5\,mm.}%
         \label{fig:cedarPres2024}%
     \end{figure}
-    Due to the changes to the working point pressure between the test beam and between the 2023 and 2024 runs, a new method was developed to monitor the CEDAR-H and to take into account the environmental variables to ensure the refractive index of the radiator gas did not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
-    back of the CEDAR were recorded and shown in Figure \ref{fig:PoverT_23} for the 2023 run and Figure \ref{fig:PoverT_24} for the 2024 run. The pressure was divided by temperature, as the ratio should be consistent for a sealed vessel like the CEDAR, and the ratio was multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
-    During previous runs at NA62, the CEDAR would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the CEDAR vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. Even though the CEDAR is extensively insulated, it is designed to mitigate sharp temperature changes. It does not stop the CEDAR vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the CEDAR
+    Due to the changes to the working point pressure between the test beam and between the 2023 and 2024 runs, a new method was developed to monitor the \gls{ch} and to take into account the environmental variables to ensure the refractive index of the radiator gas did not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
+    back of the \gls{CEDAR} were recorded and shown in Figure \ref{fig:PoverT_23} for the 2023 run and Figure \ref{fig:PoverT_24} for the 2024 run. The pressure was divided by temperature, as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio was multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
+    During previous runs at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. It does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the \gls{CEDAR}
     was sealed with a fixed amount of gas and the pressure was allowed to vary.
     A good example of how this new method was utilised was in the final days of the 2023 run in Figure \ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stayed constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
-    However, as CEDAR-H was not perfectly sealed, especially for Hydrogen, a small leak was expected, so there was a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate were used to decide if the CEDAR required extra filling during the run due to the small loss of gas, which can be seen in Figures \ref{fig:PoverT_23} and \ref{fig:PoverT_23} as the large 
+    However, as \gls{ch} was not perfectly sealed, especially for Hydrogen, a small leak was expected, so there was a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate were used to decide if the \gls{CEDAR} required extra filling during the run due to the small loss of gas, which can be seen in Figures \ref{fig:PoverT_23} and \ref{fig:PoverT_23} as the large 
     spikes in pressure at various points. 
     
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{plots/cedar_p_over_t_rt_2023.pdf}
-        \caption{The recorded pressure and pressure over temperature times room temperature for CEDAR-H during the 2023 NA62 run.}%
+        \caption{The recorded pressure and pressure over temperature times room temperature for \gls{ch} during the 2023 NA62 run.}%
         \label{fig:PoverT_23}%
     \end{figure}
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.9\textwidth]{plots/cedar_p_over_t_rt_2024.pdf}
-        \caption{The recorded pressure and pressure over temperature times room temperature for CEDAR-H during the 2024 NA62 run.}%
+        \caption{The recorded pressure and pressure over temperature times room temperature for \gls{ch} during the 2024 NA62 run.}%
         \label{fig:PoverT_24}%
     \end{figure}
-    \section{CEDAR-H Performance at NA62} \label{sec:cedarHperformance}
-    The performance of the CEDAR-H in standard NA62 run conditions was assessed using data collected in 2023 and compared to CEDAR-W with data collected in 2022. A sample of kaons was collected using a selection of $K^{+}\to\pi^{+}\pi^{+}\pi^{-}$ decays which were fully reconstructed using the STRAW spectrometer, described in Section \ref{sec:STRAW}. The KTAG was used to reconstruct the kaon candidates using 
+    \section{\gls{ch} Performance at NA62} \label{sec:cedarHperformance}
+    The performance of the \gls{ch} in standard NA62 run conditions was assessed using data collected in 2023 and compared to \gls{cw} with data collected in 2022. A sample of kaons was collected using a selection of $K^{+}\to\pi^{+}\pi^{+}\pi^{-}$ decays which were fully reconstructed using the STRAW spectrometer, described in Section \ref{sec:STRAW}. The KTAG was used to reconstruct the kaon candidates using 
     a nominal 2\,ns clustering time window. The number of photo-electrons per kaon was measured from events that had at least a five-sector coincidence, and the results are shown in Figure \ref{fig:NHitsCompare}. The light yield was calculated by fitting a Poissonian distribution between 4 and 24 photo-electrons. The smaller range was used to remove the contributions from the large number of 
-    photo-electrons, produced from secondary kaons in coincidence, reconstructed as a single kaon. The average light yield for the CEDAR-H was 20.6 photo-electrons per kaon compared to 18.1 for CEDAR-W.
+    photo-electrons, produced from secondary kaons in coincidence, reconstructed as a single kaon. The average light yield for the \gls{ch} was 20.6 photo-electrons per kaon compared to 18.1 for \gls{cw}.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/CEDAR_NHits.pdf}
-        \caption{Comparison of the number of photo-electrons per kaon candidate of CEDAR-H in 2023 and CEDAR-W in 2022}%
+        \caption{Comparison of the number of photo-electrons per kaon candidate of \gls{ch} in 2023 and \gls{cw} in 2022}%
         \label{fig:NHitsCompare}%
     \end{figure}    
-    The time resolution of the KTAG + CEDAR-H was calculated to be 66\,ps using the equation,
+    The time resolution of the KTAG + \gls{ch} was calculated to be 66\,ps using the equation,
     \begin{equation}
         \sigma_{t} = \frac{\sigma_{PMT}}{\sqrt{N_{PE}}}
     \end{equation}
-    where $\sigma_{PMT}$ is the single photo-electron time resolution of the PMTs of 300\,ps, and $N_{PE}$ is the number of photo-electrons per candidate, compared to 71\,ps for CEDAR-W.
+    where $\sigma_{PMT}$ is the single photo-electron time resolution of the PMTs of 300\,ps, and $N_{PE}$ is the number of photo-electrons per candidate, compared to 71\,ps for \gls{cw}.
     
-    The kaon tagging efficiency was calculated by comparing the number of N-Fold coincidences against the total number of events. The results of the computation are shown in Figure \ref{fig:Effciency}, with CEDAR-H having a kaon identification efficiency of 99.7\,\% compared to 99.5\,\% for CEDAR-W.
+    The kaon tagging efficiency was calculated by comparing the number of N-Fold coincidences against the total number of events. The results of the computation are shown in Figure \ref{fig:Effciency}, with \gls{ch} having a kaon identification efficiency of 99.7\,\% compared to 99.5\,\% for \gls{cw}.
     The identification efficiency was compared to the analytical expectation with the photo-electron yield produced from Figure \ref{fig:NHitsCompare}, calculated assuming an ideal detector and uniform photo-electrons across all eight sectors. The results from the data showed that the eight sector efficiencies 
     were higher than the expectation due to the contribution from secondary kaons in coincidence. Due to the higher light yield, the experiment had the option of changing the identification classification to a 6-fold coincidence, which provides an identification greater than 95\,\% and would improve the pion miss-identification probability dramatically.
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/CEDAR_Eff_new_2.pdf}
-        \caption{Comparison of the number of kaon identification efficiency for CEDAR-H in 2023 and CEDAR-W in 2022 with the expectation values for 
+        \caption{Comparison of the number of kaon identification efficiency for \gls{ch} in 2023 and \gls{cw} in 2022 with the expectation values for 
         a given photo-electron yield as a function of at least N coincidences in sectors.}%
         \label{fig:Effciency}%
     \end{figure}    

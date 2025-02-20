@@ -42,7 +42,7 @@
     \end{figure}
     The NA62 experiment at CERN uses a hadron beam extracted from the SPS with a nominal momentum of \SI{400}{\giga\electronvolt\per\clight}, directed onto a 400\,mm long, 2\,mm diameter beryllium rod that forms
     the fixed target (T10) located at 0\,m in figure \ref{fig:beam-line}. The beam derived from the T10 target, referred to as K12, is a high-intensity unseparated hadron beam with a nominal momentum of
-    75\,$GeV/c$. The beam momenta was chosen to maximise the fraction of kaons with respect to the other beam components at the entrance to the detector. 
+    \SI{75}{\giga\electronvolt\per\clight}. The beam momenta was chosen to maximise the fraction of kaons with respect to the other beam components at the entrance to the detector. 
     \newline\indent The elements of the K12 beam-line are shown in Figure \ref{fig:beam-line} and comprise a number of components. First are three quadrupole magnets (Q1, Q2 and Q3), used to focus the beam with a large solid angle acceptance of $\pm2.7$\,mrad 
     horizontally and $\pm1.5$\,mrad vertically at a \SI{75}{\giga\electronvolt\per\clight} central momentum. Next follows an achromat (A1), which selects a beam of a \SI{75}{\giga\electronvolt\per\clight} momentum with a 1\,\% rms momentum. 
     The A1 achromat comprises four dipole magnets that vertically deflect the beam, the first two deflect the beam 110\,mm downwards, while the final two deflect the beam upwards towards
@@ -79,12 +79,12 @@
     \section{NA62 Detectors}\label{sec:sub-det}
     \subsection{KTAG}\label{sec:KTAG}
     As the NA62 beam is unseparated and kaons only account for 6\,\% of the beam composition, the kaons must be identified. Kaon identification is provided by the KTAG and located at $Z=69.4$\,m. It comprises a CEDAR vessel and a purpose-built
-    photon detection system. Until the NA62 2023 run, the CEDAR vessel used was a CEDAR-W filled with a Nitrogen radiator. CEDARs were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS}.
+    photon detection system. Until the NA62 2023 run, the CEDAR vessel used was a \gls{cw} filled with a Nitrogen radiator. CEDARs were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS}.
     The CEDAR is a differential Cherenkov Counter and exploits the dependence of the beam particle's mass on the properties of the produced light, defined in equation \ref{eq:Cherenkov} where $\beta = \frac{p}{\gamma m}$. 
     \begin{equation}\label{eq:Cherenkov}
         cos(\theta) = \frac{1}{\beta n}
     \end{equation}
-    In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. The pressure is set at 1.7\,bar of Nitrogen in the CEDAR-W so that the light from the 
+    In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. The pressure is set at 1.7\,bar of Nitrogen in the \gls{cw} so that the light from the 
     kaon is focused by a set of lenses and mirrors onto arrays of \glspl{PMT}. The light from the other beam components does not reach the PMT arrays. %A more detailed description of CEDARs can be found in Section \ref{sec:cedarH}.
     %A diagram showing the internal optics of the CEDAR is shown in Figure \ref{fig:Cedar_dia}.
     %\begin{figure}[H]
@@ -117,9 +117,9 @@
     \end{figure}
     The signals from the PMT arrays are clustered into kaon candidates within a nominal 2\,ns time window. A kaon was identified when there are at least five sectors in coincidence (5-fold coincidence). 
     The clustering results with, on average, 18 photo-electrons per kaon candidate.
-    The PMTs can achieve a single hit time resolution of 300\,ps, resulting in a reconstructed kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and CEDAR-W \cite{GOUDZOVSKI201586}.
-    \newline\indent In 2023, a new CEDAR with a Hydrogen radiator (CEDAR-H) was installed in the NA62 beam-line after design at the University of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses hydrogen as a radiator gas. 
-    This required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new CEDAR-H, can be found in Section \ref{sec:cedarH}.
+    The PMTs can achieve a single hit time resolution of 300\,ps, resulting in a reconstructed kaon time resolution of $70$\,ps and a kaon identification efficiency of $95\%$ was achieved with the KTAG and \gls{cw} \cite{GOUDZOVSKI201586}.
+    \newline\indent In 2023, a new CEDAR with a Hydrogen radiator \gls{ch} was installed in the NA62 beam-line after design at the University of Birmingham and testing at CERN. The new CEDAR uses the same basic principles as previous CEDARs but uses hydrogen as a radiator gas. 
+    This required the design of new optical elements in the CEDAR and the photon detection system. A more detailed description of the CEDAR and its optical elements, along with the design, testing and installation of the new \gls{ch}, can be found in Section \ref{sec:cedarH}.
     \subsection{GigaTracker (GTK)}\label{sec:GTK}
     \begin{figure}[H]
         \centering 
@@ -423,7 +423,7 @@
         \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
         \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$
     \end{itemize}
-    The selection criteria for the signal and the normalisation involve overlapping conditions, requiring a kaon candidate in the KTAG with a measured momentum from the GTK in the range of 72.7 to 77.2 GeV/c. The $\pi+$ is identified using information from the RICH, LKr, and the Muon Veto System. The $\pi^+$ is matched to the kaon candidate by extrapolating the kaon and pion tracks from the GTK and the STRAW, respectively, to form a vertex, defined as the midpoint of the trajectories closest approach.
+    The selection criteria for the signal and the normalisation involve overlapping conditions, requiring a kaon candidate in the KTAG with a measured momentum from the GTK in the range of 72.7 to 77.2\,\si{\giga\electronvolt\per\clight}. The $\pi+$ is identified using information from the RICH, LKr, and the Muon Veto System. The $\pi^+$ is matched to the kaon candidate by extrapolating the kaon and pion tracks from the GTK and the STRAW, respectively, to form a vertex, defined as the midpoint of the trajectories closest approach.
     
     A signal-specific selection then requires no signals in the LAV downstream of the vertex within 3\,ns, no signals in the IRC or SAC within 5\,ns and no signals in the LKr within 10\,mm of the $\pi^+$ impact point. A more detailed breakdown of the selection criteria can be found here \cite{NA62:2024pjp}.
 
