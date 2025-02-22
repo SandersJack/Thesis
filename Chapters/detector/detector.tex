@@ -209,12 +209,12 @@
         \label{fig:both_figures}
     \end{figure}
     \subsection{Ring Imaging Cherenkov counter (RICH)}\label{sec:RICH}
-    The \gls{RICH} is designed to separate secondary pion and muons within a momentum range of 15 - 35\,\si{\giga\electronvolt\per\clight}. 
-    The ability to separate the secondary particles is required as the largest background to $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ comes from 
-    the $K^+ \rightarrow \mu^+ \nu_{\mu}$, which has a branching fraction 10 orders of magnitude greater. The majority of the suppression comes from kinematic selections and the response difference between pions and muons in the calorimeters. However, another factor of 100 is required in the momentum range 15 - 35\,\si{\giga\electronvolt\per\clight}, which the RICH satisfies. 
+    The \gls{RICH} is designed to separate secondary pion and muons within a momentum range of 15 - 35\,\si{\giga\electronvolt\per\clight} as required by the necessity to suppress the $K^+ \rightarrow \mu^+ \nu_{\mu}$ background in the \gls{PNN} analysis. 
+    %The ability to separate the secondary particles is required as the largest background to $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ comes from the $K^+ \rightarrow \mu^+ \nu_{\mu}$, which has a branching fraction 10 orders of magnitude greater. 
+    The majority of the suppression comes from kinematic selections and the response difference between pions and muons in the calorimeters. However, another factor of 100 is required in the momentum range 15 - 35\,\si{\giga\electronvolt\per\clight}, given by the RICH satisfies. 
     \newline\indent The RICH is a 17.5\,m long cylindrical vessel comprising four steel sections with diameters gradually decreasing from 4.2\,m at the upstream section to accommodate the PMT flanges to 3.2\,m in the downstream end.
-    The radiator vessel is separated from the vacuum decay tube by an aluminium window of 2\,mm thickness and radius of 1.1\,m at the upstream end, allowing minimal material in the path of particles entering the detector. A lightweight aluminium pipe connected to the vacuum tube passes through the vessel, allowing the beam to pass aluminium
-    in a vacuum and continues through the 4\,mm thick, 1.4\,m radius aluminum exit window.
+    The radiator vessel is separated from the vacuum decay tube by an aluminium window of 2\,mm thickness and radius of 1.1\,m at the upstream end, allowing minimal material in the path of particles entering the detector. A lightweight aluminium beam pipe connected to the vacuum tube passes through the vessel,
+    ending with a 4\,mm thick, 1.4\,m radius aluminum exit window.
     The vessel contains Neon gas at a pressure of 900\,mbar with a refractive index of $n = 1 + 62.8 \times 10^{-6}$ at a wavelength of $300\,\mu m$, corresponding to a Cherenkov threshold for charged pion of 12.5\,\si{\giga\electronvolt\per\clight}.
     \begin{figure}[H]
         \centering 
@@ -236,14 +236,14 @@
         \label{fig:rich_ring}
     \end{figure}
     \subsection{Photon Detection System}\label{sec:PDS}
-    The photon detection system provides a rejection power of $10^8$ for the main decay background $K^+ \to \pi^+ \pi^0$. It is made up of four calorimeters used to detect and reject background decays with photons in the final state, with coverage from 0 to 50\,mrad. Photons with small production angles between 0 and 1\,mrad is covered by the \gls{IRC} and \gls{SAC}. %Describe SAC and IRC
-    The IRC wraps around the beam pipe and consists of layers of lead and scintillating material, which are read out by WLS fibres bundled into four groups and read out by a Hamamatsu PM.
+    The photon detection system provides a rejection power of $10^8$ for the main decay background for \gls{PNN}. It is made up of four calorimeters used to detect and reject kaon decays with photons in the final state, with coverage from 0 to 50\,mrad. 
+    
+    Photons with small production angles between 0 and 1\,mrad are detected by the \gls{IRC} and \gls{SAC}. %Describe SAC and IRC
+    The IRC wraps around the beam pipe and consists of layers of lead and scintillating material, which are read out by WLS fibres bundled into four groups and then by a Hamamatsu PM.
     The SAC, which is located just upstream of the beam dump within the beam vacuum, comprises of 70 lead plates with 70 plastic scintillators in between readout by WLS fibres resulting in a total material of 19\,$X_0$. The fibres are bundled into four groups which are then read out by Hamamatsu PMs, resulting in four channels.
 
-    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. A quasi-homogeneous calorimeter which consists of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, designed to allow for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes on either side.
-    Each anode ribbon was connected at the downstream end to preamplifiers and the high voltage of 3000V to provide the drift field required for the ionisation.
-
-
+    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. The \gls{LKr} is a quasi-homogeneous calorimeter consisting of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, allowing for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure \ref{fig:lkrDiag}, consisting each of a central anode and cathodes on either side.
+    Each anode ribbon is connected at the downstream end to preamplifiers and to a high voltage of 3000V to provide the drift field required for the ionisation.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/lkrDiag.png}
@@ -251,21 +251,35 @@
         \caption{Left, a schematic of the structure of a single quadrant of the Lkr.  Right, the layout of cells within the quadrant. \cite{Bizzeti:2017dqh}}
         \label{fig:lkrDiag}
     \end{figure}
-
-    The \gls{LAV} provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume and was recycled from the OPAL experiment \cite{OPALCollaboration1991}, with LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
-
+    The \gls{LKr} energy resolution can be parametrised as, 
+    \begin{equation}
+        \frac{\sigma_E}{E} = \frac{4.8\,\%}{\sqrt{E}} \oplus \frac{11\,\%}{E} \oplus 0.9\,\%
+    \end{equation}
+    where $E$ is the cluster energy in \si{\giga\electronvolt}.
+    The \gls{LAV} provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed just upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the perimeter of the vacuum volume \cite{OPALCollaboration1991}, see LAV1 picture in Figure \ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
+    %% Performance plots!!
     \begin{figure}[H]
         \centering 
-        \includegraphics[width=\textwidth]{imgs/LAV1.JPG}
+        \includegraphics[width=0.7\textwidth]{imgs/LAV1.JPG}
         \linespread{1.0}
         \caption{Photo of the installation of LAV1 at NA62 in 2008.}
         \label{fig:LAV1}
     \end{figure}
 
+    The detection efficiencies for the photon veto detectors at NA62 are shown in Figure \ref{fig:pv_ineff}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.7\textwidth]{imgs/PV_ineff.png}
+        \linespread{1.0}
+        \caption{Detection efficiency of a photon as a function of the photon energy for the photon veto detectors: LAV (top left), LKr (top right), IRC (bottom left) and SAC (bottom right) \cite{NA62:2020pwi}. }
+        \label{fig:pv_ineff}
+    \end{figure}
+
     \subsection{Charged Particle Hodoscopes}
-    The charged particle hodoscopes comprise a pair of scintillating detectors which cover the acceptance downstream of the RICH and upstream of the LKr. The main function of the charged particle hodoscopes is to provide input to the first level of the NA62 trigger system.
-    The NA48-CHOD, which was used in NA62's predecessor experiment NA48 \cite{Fantietal2007} and is located upstream of LAV12, just after the RICH. The NA48-CHOD consists of two planes of 20\,mm thick plastic scintillator slabs, 64 vertical and 64 horizontal which is shown in Figure \ref{fig:NA48CHOD}. Each scintillating slab is individually connected to photomultipliers via a light guide. A signal in both planes is required to produce a track time with a resolution of 200\,ps.
-    The charged particle rate at the NA48-CHOD was 13\,MHz, with the overall rate at 35\,MHz mainly resulting from particles produced from interactions with upstream detectors.
+    The charged particle hodoscopes comprise a pair of scintillating detectors which cover the acceptance downstream of the \gls{RICH} and upstream of the \gls{LKr}. The main function of the charged particle hodoscopes is to provide input to the first level of the NA62 trigger system.
+    
+    The NA48-CHOD, was used in NA62's predecessor experiment NA48 \cite{Fantietal2007} and is located upstream of LAV12, just after the RICH. The NA48-CHOD consists of two planes of 20\,mm thick plastic scintillator slabs, 64 vertical and 64 horizontal as shown in Figure \ref{fig:NA48CHOD}. Each scintillating slab is individually connected to photomultipliers via a light guide. A signal in both planes is required to produce a track time with a resolution of 200\,ps.
+    The charged particle rate at the NA48-CHOD is 13\,MHz, with the overall rate at 35\,MHz mainly resulting from particles produced from interactions with upstream detectors.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/NA48-CHOD.png}
@@ -273,8 +287,7 @@
         \caption{Schematic of the NA48-CHOD \cite{Fantietal2007}.}
         \label{fig:NA48CHOD}
     \end{figure}
-    The CHOD is located after the twelfth LAV station, before the LKr and consists of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, and is shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and is bundled into groups of four, read out by \glspl{SiPM}. The overall time resolution of the detector was 1.1\,ns. 
-    The CHOD sustains a particle rate of 45\,MHz, with 13\,MHz from charged particles.
+    The CHOD is located after the twelfth LAV station, before the LKr and consists of an array of 152 30\,mm thick plastic scintillating tiles that cover an acceptance radius of between 140 and 1070\,mm, and is shown in Figure \ref{fig:NEWCHOD}. The scintillating tiles overlap by 1\,mm and are supported by a glass fibre foil (G10). The light produced from each tile is collected with a WLS fibre and is bundled into groups of four, read out by \glspl{SiPM}. The overall time resolution of the detector is 1.1\,ns. 
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/NEW-CHOD.png}
@@ -282,10 +295,18 @@
         \caption{Layout of the NA62 CHOD. Left, the front cross-section of scintillating tiles with the support structure. Right, side cross-section of the scintillating tiles \cite{Kholodenko_2017}.}
         \label{fig:NEWCHOD}
     \end{figure}
+    The CHOD sustains a particle rate of 45\,MHz, with 13\,MHz from charged particles at a nominal beam intensity with the individual channel rates shown in Figure \ref{fig:chod_rate}.
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.7\textwidth]{imgs/CHOD_rate.png}
+        \linespread{1.0}
+        \caption{Channel rates of the CHOD at a beam intensity of 750\,MHz \cite{Gil_2017}.}
+        \label{fig:chod_rate}
+    \end{figure}
 
     \subsection{Muon Veto System}
-    The \gls{MUV} is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising iron as an absorber material. MUV1 was a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48/2 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24, 26.8\,mm thick iron plates with 23 layers of scintillator strips that are 9\,mm thick with a width of 60\,mm, placed in between, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
-    The material of MUV1 produces a total thickness of 4.1\,$X_0$. The light that is produced within the strips is collected by WLS fibres and read out by PMTs. 
+    The \gls{MUV} is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising iron as an absorber material. MUV1 is a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48/2 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24, 26.8\,mm thick iron plates with 23 layers of scintillator strips placed in between that are 9\,mm thick with a width of 60\,mm, shown in the schematic in Figure \ref{fig:MUV1}. The scintillating strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
+    The material of MUV1 produces a total material of 4.1\,$X_0$. The light that is produced within the strips is collected by WLS fibres and read out by PMTs. 
     \begin{figure}[H]
         \centering 
         \includegraphics[width=0.5\textwidth]{imgs/MUV1.png}
@@ -293,7 +314,7 @@
         \caption{Schematic of the MUV1 module used in the Muon Veto System at NA62.}
         \label{fig:MUV1}
     \end{figure}
-    MUV2 is similar in construction with $2\times22$ strips per plane versus 48 for MUV1, as shown in Figure \ref{fig:muvs_diags}. MUV2 has thinner iron plates, at 25\,mm thick, resulting in a lower total thickness of 3.7\,$X_0$.
+    MUV2 is similar in construction with $2\times22$ strips per plane versus 48 for MUV1, as shown in Figure \ref{fig:muvs_diags}. MUV2 has thinner iron plates, at 25\,mm thick, resulting in a lower total material of 3.7\,$X_0$.
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/MUV1_diag.pdf} }}%
@@ -303,8 +324,14 @@
         \label{fig:muvs_diags}%
     \end{figure}
     Downstream of the hadronic calorimeter, the MUV3 detector is located behind an 80\,cm thick iron wall and is used for muon identification. The MUV3 comprises of 140, 59\,mm thick scintillating tiles and eight smaller tiles around the beam pipe to account for the high particle rate from the beam.
-    Each tile is read out directly by two PMTs, without any WLS to improve time resolution of the detector to 0.6\,ns. The overall muon rate within the detector for a nominal beam intensity is 13\,MHz. The MUV3 is primarily used as a veto within the L0 trigger system to veto events that include a muon. 
-
+    Each tile is read out directly by two PMTs, with a time resolution of 0.6\,ns. The overall muon rate within the detector is 13\,MHz for a nominal beam intensity, with the individual channel rates shown in Figure \ref{fig:muv3_rate}. The MUV3 is primarily used within the L0 trigger as a muon veto. %The MUV3 is primarily used as a veto within the L0 trigger system to veto events that include a muon. 
+    \begin{figure}[H]
+        \centering 
+        \includegraphics[width=0.7\textwidth]{imgs/muv3_rate.png}
+        \linespread{1.0}
+        \caption{MUV3 geometry and channel rates for nominal beam intensity \cite{Gil_2017}.}
+        \label{fig:muv3_rate}
+    \end{figure}
     Additionally, there is a peripheral muon veto detector (MUV0), which is a scintillating hodoscope designed to detect low momentum $\pi^-$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$, which are deflected into the positive X dimension and miss the acceptance of the RICH.
     \subsection{Hadronic Sampling Calorimeter (HASC)}
     The \gls{HASC} is located downstream of the MUV3 and BEND magnet which deflects positively charged particles in the negative X direction. The HASC is designed to detect $\pi^+$ from the kaon decay $K^+ \to \pi^+ \pi^+ \pi^-$ and comprises of nine modules of 60 lead plates and 60 scintillating layers covering an acceptance of −0.48\,m to −0.18\,m in X and -0.15 to 0.15 in Y from the beam axis.
@@ -327,10 +354,10 @@
 
     A second HASC station was also added to the opposite side of the beam to cover the positive X direction and to make the overall station symmetric.
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
-    The high intensity of the NA62 experiment requires a triggering system that can limit the eventual data that is stored while keeping useful data to satisfy the experiment's physics goals. The NA62 trigger system is comprised of two stages: a hardware trigger (L0) and a software trigger (L1), which is also known as the high-level trigger (HLT). Each stage of the trigger system is designed to reduce the incoming rate by a factor of 10. 
+    The high intensity of the NA62 experiment necessitates a triggering system capable of reducing the stored data while retaining essential information to meet the experiment's physics objectives. The NA62 trigger system is comprised of two stages: a hardware trigger (L0) and a software trigger (L1), which is also known as the high-level trigger (HLT). Each stage of the trigger system is designed to reduce the incoming rate by a factor of 10. 
     With a rate of \mathcal{O}(10\,MHz) kaon decays within the fiducial volume, the L0 was designed to reduce this to \mathcal{O}(1\,MHz) and the L1 then reducing the rate written to storage to \mathcal{O}(100\,kHz). 
 
-    To fit with NA62 broad physics goals, the trigger system is designed to be flexible. The L0 trigger involves packets of data sent from fast sub-detectors, which contain the results of the conditions found in Table \ref{tab:detector_conditions} and is then processed by the L0 Trigger Processor (L0TP). These L0 trigger conditions can be combined to produce a hardware trigger, such as those used in the 2024 run shown in Table \ref{tab:detector_conditions_stream}. 
+    To fit with NA62 broad physics goals, the trigger system is designed to be flexible. At the L0 trigger, packets of data are sent from fast sub-detectors, which contain the results of the conditions found in Table \ref{tab:detector_conditions} and is then processed by the L0 Trigger Processor (L0TP). These L0 trigger conditions can be combined to produce a hardware trigger, such as those used in the 2024 run shown in Table \ref{tab:detector_conditions_stream}. 
     The coincidence of the L0 conditions from Table \ref{tab:detector_conditions} have to be within 6.25\,ns of the trigger reference time which is provided by the RICH detector. Once an event passes the L0 trigger other detectors then send information packets to the NA62 PC farm for use in the L1 trigger.
 
     \begin{table}[H]
@@ -364,8 +391,8 @@
         \caption{List of L0 trigger conditions for each detector at NA62.}
         \label{tab:detector_conditions}
     \end{table}
-    The L1 trigger then uses a number of algorithms for three more detectors, which are described in Table \ref{tab:detector_conditions_HLT}. These conditions are then combined to produce a L1 trigger stream shown in Table \ref{tab:detector_conditions_stream} and then combined with a L0 stream to form a trigger mask. NA62 has a number of trigger masks defined in Table \ref{tab:detector_conditions_stream} to fulfil its numerous physics goals. For an event to be saved to permanent storage, at least one of these trigger masks has to be accepted.
-    Each mask has a corresponding downscaling, which reduces the rate of events passing that trigger to reduce the amount saved to permanent storage. However, this results in the loss of interesting physics data so the downscaling is minimised as much as possible.
+    The L1 trigger then uses a number of algorithms for three more detectors, which are described in Table \ref{tab:detector_conditions_HLT}. These conditions are then combined to produce a L1 trigger stream shown in Table \ref{tab:detector_conditions_stream} and then combined with a L0 stream to form a trigger mask. NA62 has a number of trigger masks defined in Table \ref{tab:detector_conditions_stream} to fulfil its numerous physics goals. For an event to be saved to permanent storage, the event has to satisfy at least one mask.
+    Each mask can have a corresponding downscaling, which reduces the rate of events passing that trigger to minimise the amount saved to permanent storage. However, this results in the loss of interesting physics data so the downscaling is minimised as much as possible.
     \begin{table}[H]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -420,23 +447,29 @@
     \end{itemize}
     Each module of na62fw utilises the tools found within the ROOT analysis framework \cite{Brun1997}. A more detailed description of the software framework can be found in Section \ref{sec:na62fw}.
     \section{NA62 Results}\label{sec:na62res}
-    The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400\,MHz, respectively. With 2021 and 2022 collected at a mean intensity of 580\,MHz.  
-    The trigger streams used for the data collection for the \gls{PNN} in this period differ from those that are defined in Section \ref{sec:TDAQ} and are defined below (L0 in red and L1 in blue): 
+    The latest result from NA62 contains data collected in the periods 2016-2018 and 2021-2022. The data collection during 2016, 2017 and 2018 was at mean intensities of 240, 330 and 400\,MHz, respectively, while the 2021 and 2022 data were collected at a mean intensity of 580\,MHz.  
+    The trigger streams used for the data collection for the \gls{PNN} in this analysis slightly from those that are defined for 2024 in Section \ref{sec:TDAQ} and are defined below (L0 in red and L1 in blue): 
     \begin{itemize}
         \item Normalisation (to collect normalisation sample of $K^+ \to \pi^+ \pi^0$): \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRK}}$
         \item PNN: \\ $\textcolor{red}{\text{RICHxQ1x}}\overline{\textcolor{red}{\text{MUV3}}}\textcolor{red}{\text{xUTMCx}}\overline{\textcolor{red}{\text{QX}}}\textcolor{red}{\text{x}}\overline{\textcolor{red}{\text{LKr40}}}\text{x}\textcolor{blue}{\text{KTAGxSTRAW-1TRKxSTRAWx}}\overline{\textcolor{blue}{\text{LAV}}}$
     \end{itemize}
-    The selection criteria for the signal and the normalisation involve overlapping conditions, requiring a kaon candidate in the KTAG with a measured momentum from the GTK in the range of 72.7 to 77.2\,\si{\giga\electronvolt\per\clight}. The $\pi+$ is identified using information from the RICH, LKr, and the Muon Veto System. The $\pi^+$ is matched to the kaon candidate by extrapolating the kaon and pion tracks from the GTK and the STRAW, respectively, to form a vertex, defined as the midpoint of the trajectories closest approach.
+    The selection criteria for the signal and the normalisation involve overlapping conditions, requiring a kaon candidate in the KTAG with a measured momentum from the GTK in the range of 72.7 to 77.2\,\si{\giga\electronvolt\per\clight}. The $\pi^+$ is identified using information from the RICH, LKr, and the Muon Veto System. The $\pi^+$ is matched to the kaon candidate by extrapolating the kaon and pion tracks from the GTK and the STRAW, respectively, to form a vertex, defined as the midpoint of the trajectories closest approach.
     
     A signal-specific selection then requires no signals in the LAV downstream of the vertex within 3\,ns, no signals in the IRC or SAC within 5\,ns and no signals in the LKr within 10\,mm of the $\pi^+$ impact point. A more detailed breakdown of the selection criteria can be found here \cite{NA62:2024pjp}.
 
     The nominalisation events are selected through the missing mass parameters shown in Figure \ref{fig:missing-mass-signal} in the range 0.010 - 0.026\SI{}{\giga\eV\squared\per\clight\tothe{4}} \cite{NA62:2024pjp}, with respect to the $\pi^0$ mass \cite{Tanabashi2018}.
+    The normalisation sample is utilised to calculate the effective number of kaon decays within the \gls{FV}, 
+    \begin{equation}
+        N_K = \frac{N_{\pi\pi} D_{Norm}}{\mathcal{B}_{\pi\pi}A_{\pi\pi}}
+    \end{equation}
+    where $N_{\pi\pi}$ is the number of $K^+ \to \pi^+ \pi^0$ events passing the selection, $D_{Norm}$ is the downscaling of the normalisation trigger, $\mathcal{B}_{\pi\pi}$ is the branching fraction for the $K^+ \to \pi^+ \pi^0$ decay and $A_{\pi\pi}$ the acceptance. This allows the measurement of the effective number of kaons independent of the \gls{PNN} decay.
 
-    The dataset from run one and run two was combined through a number of methods set out in \cite{NA62:2024pjp}, resulting in the measurement of the branching ratio
+    The dataset from the years 2016-2018 and 2021-2022 was combined through a number of methods set out in \cite{NA62:2024pjp}, resulting in the measurement of the branching ratio
     \begin{equation}
         \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = (13^{+3.3}_{-3.0} \times 10^{-11})
     \end{equation}
-    The overall dataset from 2016 to 2022 had an expected number of background events of $18^{+3}_{-2}$ and an observation of 51 signal events \cite{NA62:2024pjp}. This resulted in a p-value of the background only hypothesis of $2 \times 10^{-7}$, corresponding to a rejection of five sigma. Representing the first observation of $K^+ \to \pi \nu \bar\nu$. 
+    The overall dataset from 2016 to 2022 had an expected number of background events of $18^{+3}_{-2}$ and an observation of 51 signal events \cite{NA62:2024pjp}. This resulted in a p-value of the background only hypothesis of $2 \times 10^{-7}$, corresponding to a rejection of five sigma. 
+    This presents the first observation of $K^+ \to \pi \nu \bar\nu$ and represents the rarest particle decay measured to date. 
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
