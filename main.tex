@@ -55,7 +55,7 @@
 \usepackage[dvipsnames]{xcolor}
 
 %\usepackage[nohyperlinks, printonlyused, withpage]{acronym}
-\usepackage[acronym, nohypertypes, toc, nomain]{glossaries}
+\usepackage[acronym, nohypertypes, nomain]{glossaries}
 \glsdisablehyper
 \makeglossaries
 
@@ -72,10 +72,14 @@
 
 
 \begin{document}
-
+\pagenumbering{roman}
 
 \subfile{Chapters/title/title.tex}
 \newpage
+
+\chapter*{Declaration of author's contributions}
+\subfile{Chapters/author/author.tex}
+
 \tableofcontents
 \newpage
 \printglossary[type=\acronymtype, title={List of Acronyms}]
@@ -85,8 +89,8 @@
 \listoftables
 \newpage
 
-\chapter{Introduction}
-
+\pagenumbering{arabic}
+\chapter*{Introduction}
 \subfile{Chapters/introduction/introduction.tex}
 \chapter{Theoretical foundations}
 \subfile{Chapters/theory/theory.tex}
@@ -104,6 +108,9 @@
 
 \chapter{Future Kaon Experiments}\label{chap:FutureKaon}
 \subfile{Chapters/FutureKaonExp/FKaon.tex}
+
+\chapter{Conclusions}
+\subfile{Chapters/Conclusion/conclusion.tex}
 
 \bibliographystyle{ieeetr}
 \bibliography{references} 
