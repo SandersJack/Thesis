@@ -344,14 +344,21 @@
         \centering
         \includegraphics[width=13cm]{imgs/na62-2021_Xview.pdf}
         \linespread{1.0}
-        \caption{X-Z diagram of NA62 detector setup for Run 2}
+        \caption{X-Z diagram of NA62 detector setup for Run 2.}
         \label{fig:na62-det-run2}
     \end{figure}
     The \gls{VC} was designed and built to suppress the backgrounds produced by decays of kaons that occur upstream of the fiducial volume. The VC comprises three scintillating stations, with two placed before the final collimator, separated by a lead plate and one after the final collimator. Each station comprises of nine tiles of size 40x120\,mm and two 20x120\,mm, with the smaller tiles located on either side of the beam pipe and is read out by 
     PMTs. 
     
     A \gls{ANTI-0} was placed just before the entrance to the fiducial volume. The ANTI-0 is designed to veto the halo particles produced from the beam when they enter the FV to reduce the chance of halo particles from being identified as secondary decay products. The detector comprises 280 scintillating tiles, which are then read out by four \gls{SiPMs} \cite{Danielsson_2020}.
-
+    The expected channel rate for the ANTI-0 is shown in Figure \ref{fig:anti0}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imgs/ANTI0_rate.png}
+        \linespread{1.0}
+        \caption{Channel rate in kHz for the ANTI-0 for a nominal beam intensity \cite{Danielsson_2020}.}
+        \label{fig:anti0}
+    \end{figure}
     A second HASC station was also added to the opposite side of the beam to cover the positive X direction and to make the overall station symmetric.
     \section{Trigger and Data Acquisition System (TDAQ)}\label{sec:TDAQ}
     The high intensity of the NA62 experiment necessitates a triggering system capable of reducing the stored data while retaining essential information to meet the experiment's physics objectives. The NA62 trigger system is comprised of two stages: a hardware trigger (L0) and a software trigger (L1), which is also known as the high-level trigger (HLT). Each stage of the trigger system is designed to reduce the incoming rate by a factor of 10. 
@@ -469,7 +476,7 @@
         \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = (13^{+3.3}_{-3.0} \times 10^{-11})
     \end{equation}
     The overall dataset from 2016 to 2022 had an expected number of background events of $18^{+3}_{-2}$ and an observation of 51 signal events \cite{NA62:2024pjp}. This resulted in a p-value of the background only hypothesis of $2 \times 10^{-7}$, corresponding to a rejection of five sigma. 
-    This presents the first observation of $K^+ \to \pi \nu \bar\nu$ and represents the rarest particle decay measured to date. 
+    This presents the first observation of $K^+ \to \pi \nu \bar\nu$ and represents the rarest particle decay measured to date at a precision of 25\,\%. The measurement agrees with the SM predictions within $1.7\,\sigma$ and with more data to be analysed NA62 plans to obtain a precision of less than 20\,\%.
 
     \ifSubfilesClassLoaded{%
         \bibliographystyle{ieeetr}
