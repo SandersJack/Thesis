@@ -77,7 +77,7 @@
     had all designs driven by their usage in Phase 3. The upstream veto, charged particle veto, and the pre-shower detectors are unique to Phase 3.
     \section{Flexible Software}\label{sec:na62fw}
     As briefly described in Section \ref{sec:introSoft}, the software for NA62 is split into three main \sloppy\texttt{C++} packages. 
-    NA62MC is a GEANT4-based Monte Carlo simulation package that simulates the NA62 experiment. The MC utilises functions within GEANT4 to construct the sub-detectors of NA62, including all their materials and structures. It is possible to select a number of kaon decays to simulate in order to create signals similar to what are produced in reality at the experiment. After the simulation is complete, the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
+    NA62MC is a GEANT4-based Monte Carlo simulation package that simulates the NA62 experiment. The \gls{MC} utilises functions within GEANT4 to construct the sub-detectors of NA62, including all their materials and structures. It is possible to select a number of kaon decays to simulate in order to create signals similar to what are produced in reality at the experiment. After the simulation is complete, the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
     NA62Reconstruction is then used to reconstruct either the Monte Carlo data or collected data from the experiment, producing hits within the detectors and clustering them into candidates. NA62Analysis is used to analyse the data produced from the reconstruction to conduct all the physics studies that are performed at NA62. 
 
     The NA62FW was designed for use only with the NA62 experimental setup, resulting in minimal configurability and flexibility. Within the simulation, the only option for users to modify was to enable/disable sub-detectors. With the experiment foreseen to run up to \gls{LS3}, an upgraded software package was required to allow for the development of new detectors for future kaon experiments. 
@@ -359,7 +359,7 @@
             \centering
             \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
         \end{minipage}
-        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays produced from a MC sample of \gls{ke3}. The 
+        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 PMT arrays produced from a \gls{MC} sample of \gls{ke3}. The 
         left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:NA62RICHIlum}
     \end{figure}
@@ -403,7 +403,7 @@
             \caption*{(f) 9\,mm Jura.}
         \end{minipage}
         
-        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensors produced from a MC sample of \gls{ke3}. 
+        \caption{Cherenkov light illumination of RICH PMT arrays for the three different sensors produced from a \gls{MC} sample of \gls{ke3}. 
         The left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
         \label{fig:HikeRICHIlum}
     \end{figure}
@@ -439,7 +439,7 @@
             \caption*{(d) 9\,mm SiPMs.}
         \end{minipage}
 
-        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE SiPMs produced from a MC sample of \gls{ke3}.}%
+        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE SiPMs produced from a \gls{MC} sample of \gls{ke3}.}%
         \label{fig:NA62RICHNHITs}
     \end{figure}
 
@@ -471,7 +471,7 @@
             \caption*{(d) 9\,mm SiPMs.}
         \end{minipage}
 
-        \caption{Reconstructed ring radius for electron candidates for NA62 PMTs and the three possible HIKE SiPMs produced from a MC sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
+        \caption{Reconstructed ring radius for electron candidates for NA62 PMTs and the three possible HIKE SiPMs produced from a \gls{MC} sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
         \label{fig:NARICHRINGRAD}
     \end{figure}
 
@@ -510,7 +510,7 @@
         A detailed description of the procedure is provided here \cite{Anzivino_2020}}%
         \label{fig:NA62RICHTIMERes}
     \end{figure}
-    After the RICH MC study, it was proven that introducing small SiPMs would dramatically increase the granularity of the detector. All three SiPM sensor sizes produced results which exceeded the requirements for HIKE with a time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. From the results of the HIKE simulation, the 9x9\,mm SiPMs would be used as they provided excellent performance and 
+    After the RICH \gls{MC} study, it was proven that introducing small SiPMs would dramatically increase the granularity of the detector. All three SiPM sensor sizes produced results which exceeded the requirements for HIKE with a time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. From the results of the HIKE simulation, the 9x9\,mm SiPMs would be used as they provided excellent performance and 
     would reduce the cost and complexity of implementing the smaller sensor sizes in the detector when it was built. A clear benefit was reducing the number of channels from 72780 for the 3x3\,mm compared to 8588 for the 9x9\,mm SiPMs.
     \section{Detector Rates}
     After the new GTk and RICH detectors were developed, it was necessary to determine the expected particle rate in the upgraded and non-upgraded detectors. The upgraded STRAW detector utilising 5\,mm diameter straws was also included in the HIKE simulations.  
@@ -578,7 +578,7 @@
         \label{fig:SpectroCheck}
     \end{figure}
 
-    This is clear in Figure \ref{fig:pdgCodeSpec} where the MC particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vacuum decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
+    This is clear in Figure \ref{fig:pdgCodeSpec} where the \gls{MC} particle identification code of the particles producing hits in the spectrometer is shown. For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ the majority of the particles are electron/positron pairs, produced in interactions of photons in the walls of the vacuum decay tube and in the spectrometer chambers, compared to the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay where the majority of the particles are pions produced in the decay. 
     \begin{figure}[H]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/SpectHits_410.pdf} }}%
