@@ -80,6 +80,9 @@
 \chapter*{Declaration of author's contributions}
 \subfile{Chapters/author/author.tex}
 
+\fancyhead[L]{}
+\fancyhead[R]{\rightmark}
+
 \tableofcontents
 \newpage
 \printglossary[type=\acronymtype, title={List of Acronyms}]
@@ -91,15 +94,19 @@
 
 \pagenumbering{arabic}
 \chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\markboth{Introduction}{Introduction}
 \subfile{Chapters/introduction/introduction.tex}
-\chapter{Theoretical foundations}
+\chapter{Theoretical foundations}\label{sec:theory}
+\fancyhead[L]{\thesection\quad\leftmark}
+\fancyhead[R]{\rightmark}
 \subfile{Chapters/theory/theory.tex}
 \chapter{The NA62 Experiment}\label{sec:na62}
 \subfile{Chapters/detector/detector.tex}
 
-\chapter{CEDAR-H}
-\subfile{Chapters/CEDARH/cedarh.tex}\label{sec:cedarH}
+\chapter{CEDAR-H}\label{sec:cedarH}
 
+\subfile{Chapters/CEDARH/cedarh.tex}
 %\chapter{Contributions to NA62 Framework}\label{sec:na62fw}
 %\subfile{Chapters/FlexibleMC/flexmc.tex}
 
