@@ -106,7 +106,7 @@ ivCONTENTS
 3.2 Development of CEDAR-Hydrogen (CEDAR-H) . . . . . . . . . . . . 53
 3.3 CEDAR-H Test-beam . . . . . . . . . . . . . . . . . . . . . . . . . . . 60
 3.3.1 Alignment of CEDAR-H . . . . . . . . . . . . . . . . . . . . . 61
-3.3.2 Pressure and diaphragm scans . . . . . . . . . . . . . . . . . . 63
+3.3.2 Pressure and Diaphragm Scans . . . . . . . . . . . . . . . . . 63
 3.4 Installation at NA62 . . . . . . . . . . . . . . . . . . . . . . . . . . . 70
 3.4.1 Mechanical and Optical Setup . . . . . . . . . . . . . . . . . . 70
 3.4.2 Hydrogen Safety . . . . . . . . . . . . . . . . . . . . . . . . . 72
@@ -2034,13 +2034,14 @@ Figure 3.14: Diagram showing the CEDAR test-beam setup in H6 from the side
 view.
 Due to the flammable nature of H 2gas some considerations had to be made
 compared to running with N 2. An area of 1 m radius around the ends of the CEDAR-
-H was designated as an explosive atmosphere (ATEX) zone and was certified by
-CERN. A number of changes were completed by CERN on the gas systems in H6 to
-accommodate the safety systems for operation with H 2. The pressure was monitored
-by the gas control software and alarms were implemented if drops in pressure were
-observed. Also some operational changes compared to N 2were modified for the
-pressure scans, where a maximum pressure was set a 4.4 bar to reduce the chance of
-the vessel rupture.
+H was designated as an explosive atmosphere (ATEX) zone where extra care has
+to be taken to reduce the chance of a spark forming. This setup was certified by
+CERN before the test-beam was operational. A number of changes were completed
+by CERN on the gas systems in H6 to accommodate the safety systems for operation
+with H 2. The pressure was monitored by the gas control software and alarms were
+implemented if drops in pressure were observed. Also some operational changes
+compared to N 2were modified for the pressure scans, where a maximum pressure
+was set a 4.4 bar to reduce the chance of the vessel rupture.
 3.3.1 Alignment of CEDAR-H
 After the installation, the first step of the test was to conduct an alignment of the
 CEDAR-H vessel with the beam-line. As described in Section 3.1, the CEDAR
@@ -2048,8 +2049,8 @@ is attached to XY motors, which are used to align the vessel to the beam. The
 diagram in Figure 3.15 depicts how moving the CEDAR vessel would have impacted
 the position of the Cherenkov ring at the diaphragm. The alignment aims to centre
 the ring directly within the diaphragm aperture to maximise the light yield. It
-was possible to quantify the alignment in two ways: to maximise the number of
 613.3 CEDAR-H CEDAR-H Test-beam
+was possible to quantify the alignment in two ways: to maximise the number of
 detected photons per beam particle and to balance the number of detected photons
 per trigger on each PMT.
 + Y Motor
@@ -2072,8 +2073,8 @@ normalised to the trigger, the positions of the XY motors, the diaphragm apertur
 per PM, the number of triggers (TRIG) and the spacial alignment of the PMTs.
 A second fine alignment with a smaller diaphragm aperture was essential to
 ensure the detector’s alignment with the beam. The second alignment was conducted
-at a pressure of 4.29 bar, where the proton ring had a radius of 100 mm at the
 623.3 CEDAR-H CEDAR-H Test-beam
+at a pressure of 4.29 bar, where the proton ring had a radius of 100 mm at the
 diaphragm with a diaphragm aperture of 1.3 mm. For which the alignment results
 are shown in Figure 3.17 and were checked at three different aperture settings. The
 three aperture settings were chosen to ensure that the Cherenkov ring was aligned
@@ -2091,15 +2092,15 @@ alignment of the PMTs. Each entry was recorded at a different diaphragm aperture
 of 0.79, 1 and 2.02 mm.
 The CEDAR was successfully aligned at the proton pressure with motor positions
 of:X= 1.35 mm and Y= 3.59 mm with an average PMT efficiency of 98.3 %.
-3.3.2 Pressure and diaphragm scans
+3.3.2 Pressure and Diaphragm Scans
 The remaining goals of the test-beam were to determine the parameters for oper-
 ation at NA62. This included the determination of the kaon pressure to maximise
 kaon yield, the optimal diaphragm aperture to maximise light from the kaon and
 minimising the impact of light from the pion. This was completed through a number
 of pressure and diaphragm scans which are described below.
 To determine the kaon operating pressure a pressure scan was performed. Before
-the scan, the pressure of the CEDAR-H was set at the highest pressure (4.4 bar),
 633.3 CEDAR-H CEDAR-H Test-beam
+the scan, the pressure of the CEDAR-H was set at the highest pressure (4.4 bar),
 where there were no selected beam particles. A selected beam particle was defined
 when there is signal in at least 6 PMTs in coincidence. The scan consisted of reducing
 the pressure in small steps and collecting a number of spills of data at each step.
@@ -2134,8 +2135,8 @@ Pressure [bar]106
 Figure 3.18: Results of the first pressure scan at the H6 test beam at a diaphragm
 aperture of 2.3 mm. On the left are coincidences per trigger against pressure, and
 on the right in log scale.
-The resultant light yield of CEDAR-H can be computed from the 6, 7, and 8
 643.3 CEDAR-H CEDAR-H Test-beam
+The resultant light yield of CEDAR-H can be computed from the 6, 7, and 8
 coincidences per trigger shown in Figure 3.18. The light yield can be computed
 using either of the two equations below,
 λ= ln
@@ -2381,7 +2382,8 @@ measured airflow from the ventilation of the experimental hall.
 3.5 Commissioning at CERN
 The commissioning of the CEDAR-H in the NA62 beam-line was completed at
 the start of the 2023 run. The goals of the commissioning were to ascertain the
-operational woking point for kaon detection at NA62.
+operational woking point for kaon detection at NA62 and to ensure that the detector
+was still operations after its transport and installation.
 After the CERN beam experts conducted the start-of-run activities and the beam
 was steered through the CEDAR-H vessel, the beam intensity was set at 10 % of
 the NA62 nominal value, corresponding to a particle rate of 60 Hz. Periodic triggers
@@ -2397,8 +2399,8 @@ selects the signals within a 4 ns time window into candidates. As each individua
 PMT signal was recorded, the light yield was defined using a different method when
 compared to the test beam. In the test beam, the ratios of the coincidences were
 used to calculate the light yield using statistical equations. However, at NA62,
-the light yield can be measured precisely due to the high granularity of the KTAG
 743.5 CEDAR-H Commissioning at CERN
+the light yield can be measured precisely due to the high granularity of the KTAG
 photon-detection system and can be defined as the number of photo-electrons per
 beam particle candidate. The identification of the beam particle utilised a 5-fold
 coincidence, compared to the 6-fold used in the test beam, due to the availability of
