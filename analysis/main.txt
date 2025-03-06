@@ -156,7 +156,7 @@ viiList of Acronyms
 FCNC Flavour Changing Neutral Current. 11, 13
 FVFiducial Volume. 18, 21, 27, 44
 GTK GigaTracker. 21, 25, 26
-H2Hydrogen gas. i, 46, 52–56, 60, 72–78, 80, 82, 83, 85
+H2Hydrogen gas. i, 46, 52–56, 60, 61, 72–78, 80, 82, 83, 85
 HASC Hadronic Sampling Calorimeter. 38
 HIKE High-intensity Kaon Experiments. 2, 122, 162
 IAC Integrated Anode Charge. 135, 136
@@ -169,7 +169,7 @@ MC Monte Carlo. 43, 71, 91–93, 95–103, 105, 106, 109–111, 114–116, 121, 
 145, 146, 148, 149, 151, 155
 MCP-PMT Micro-Channel Plate Photomultiplier. 134
 MUV Muon Veto System. 36
-N2Nitrogen gas. i, 46, 52, 56, 73, 75–78, 85, 162
+N2Nitrogen gas. i, 46, 52, 56, 61, 73, 75–78, 85, 162
 PDG Particle Data Group. 100
 PET Polyethylene Terephthalate. 28
 PID Particle Identification. 22, 91, 92
@@ -2032,6 +2032,15 @@ CEDARBeamSide View
 Beam ScintillatorBeam Scintillator
 Figure 3.14: Diagram showing the CEDAR test-beam setup in H6 from the side
 view.
+Due to the flammable nature of H 2gas some considerations had to be made
+compared to running with N 2. An area of 1 m radius around the ends of the CEDAR-
+H was designated as an explosive atmosphere (ATEX) zone and was certified by
+CERN. A number of changes were completed by CERN on the gas systems in H6 to
+accommodate the safety systems for operation with H 2. The pressure was monitored
+by the gas control software and alarms were implemented if drops in pressure were
+observed. Also some operational changes compared to N 2were modified for the
+pressure scans, where a maximum pressure was set a 4.4 bar to reduce the chance of
+the vessel rupture.
 3.3.1 Alignment of CEDAR-H
 After the installation, the first step of the test was to conduct an alignment of the
 CEDAR-H vessel with the beam-line. As described in Section 3.1, the CEDAR
@@ -2040,9 +2049,9 @@ diagram in Figure 3.15 depicts how moving the CEDAR vessel would have impacted
 the position of the Cherenkov ring at the diaphragm. The alignment aims to centre
 the ring directly within the diaphragm aperture to maximise the light yield. It
 was possible to quantify the alignment in two ways: to maximise the number of
+613.3 CEDAR-H CEDAR-H Test-beam
 detected photons per beam particle and to balance the number of detected photons
 per trigger on each PMT.
-613.3 CEDAR-H CEDAR-H Test-beam
 + Y Motor
 - Y Motor+ X Motor- X Motor
 Figure 3.15: Diagram depicting the movements of the Cherenkov ring at the di-
@@ -2064,10 +2073,10 @@ per PM, the number of triggers (TRIG) and the spacial alignment of the PMTs.
 A second fine alignment with a smaller diaphragm aperture was essential to
 ensure the detector’s alignment with the beam. The second alignment was conducted
 at a pressure of 4.29 bar, where the proton ring had a radius of 100 mm at the
+623.3 CEDAR-H CEDAR-H Test-beam
 diaphragm with a diaphragm aperture of 1.3 mm. For which the alignment results
 are shown in Figure 3.17 and were checked at three different aperture settings. The
 three aperture settings were chosen to ensure that the Cherenkov ring was aligned
-623.3 CEDAR-H CEDAR-H Test-beam
 within the aperture. As the aperture was closed it was expected that the number
 of photo-electrons per PMT would decrease but if aligned the balance on the PMTs
 would not change. Figure 3.17 shows that this is indeed the case and suggests that
@@ -2090,10 +2099,10 @@ minimising the impact of light from the pion. This was completed through a numbe
 of pressure and diaphragm scans which are described below.
 To determine the kaon operating pressure a pressure scan was performed. Before
 the scan, the pressure of the CEDAR-H was set at the highest pressure (4.4 bar),
+633.3 CEDAR-H CEDAR-H Test-beam
 where there were no selected beam particles. A selected beam particle was defined
 when there is signal in at least 6 PMTs in coincidence. The scan consisted of reducing
 the pressure in small steps and collecting a number of spills of data at each step.
-633.3 CEDAR-H CEDAR-H Test-beam
 This was completed at a diaphragm width of 2.3 mm, which was slightly larger than
 the standard operating setting used with the CEDAR-W at NA62. The aperture
 was chosen to maximise the light yield of the detector to compare the computed
@@ -2126,8 +2135,8 @@ Figure 3.18: Results of the first pressure scan at the H6 test beam at a diaphra
 aperture of 2.3 mm. On the left are coincidences per trigger against pressure, and
 on the right in log scale.
 The resultant light yield of CEDAR-H can be computed from the 6, 7, and 8
-coincidences per trigger shown in Figure 3.18. The light yield can be computed
 643.3 CEDAR-H CEDAR-H Test-beam
+coincidences per trigger shown in Figure 3.18. The light yield can be computed
 using either of the two equations below,
 λ= ln
 1 +8
@@ -2326,17 +2335,17 @@ to the requirements for the use of H 2within the ECN3 experimental hall. It was
 expected that some negligible amount of gas would leak from the CEDAR-H , so
 all precautions had to be taken in order to prevent the concentration of gas from
 reaching dangerous levels between the Lower Explosive Limit (LEL) of 4 % and
-Upper Explosive Limit of 75 % in air. Any area where there was a potential for a
-H2leak was designated as an explosive atmosphere (ATEX) zone 2. In the ATEX
-zones, there are no electrical connectors, and all metal parts of the CEDAR-H are
-grounded to prevent any ignition sources. During H 2operation, the diaphragm end
-switches are manually isolated through a key located by the KTAG electronics rack,
-as these are not ATEX rated and have the potential to create a spark. The ATEX
-zones extended 80 cm from the CEDAR-H vessel and required experts had to have
-ATEX training in order to access. Any confined space where the H 2can acuminate,
-such as the KTAG enclosure and the box containing the diaphragm potentiometer
-and motor, was flushed with a constant supply of nitrogen to prevent the build-up
-of H 2. Safety interlocks were installed to turn off the KTAG electronics in the event
+Upper Explosive Limit of 75 % in air. Any area where there was a potential for
+a H 2leak was designated as an ATEX zone 2. In the ATEX zones, there are
+no electrical connectors, and all metal parts of the CEDAR-H are grounded to
+prevent any ignition sources. During H 2operation, the diaphragm end switches are
+manually isolated through a key located by the KTAG electronics rack, as these
+are not ATEX rated and have the potential to create a spark. The ATEX zones
+extended 80 cm from the CEDAR-H vessel and required experts had to have ATEX
+training in order to access. Any confined space where the H 2can acuminate, such
+as the KTAG enclosure and the box containing the diaphragm potentiometer and
+motor, was flushed with a constant supply of nitrogen to prevent the build-up of
+H2. Safety interlocks were installed to turn off the KTAG electronics in the event
 723.4 CEDAR-H Installation at NA62
 the supply of N 2is interrupted. A second interlock was in place to turn off the
 KTAG electronics if there was a sizeable pressure drop in the CEDAR-H vessel.
