@@ -4,7 +4,6 @@ by
 Jack Dylan Sanders
 A thesis submitted to the University of Birmingham for the degree of
 DOCTOR OF PHILOSOPHY
-0.0
 Particle Physics Research Group
 School of Physics and Astronomy
 College of Engineering and Physical Sciences
@@ -21,9 +20,23 @@ with Achromatic Ring focus (CEDAR) and a purpose built photon-detection sys-
 tem. Since 2016 NA62 has employed a CEDAR with a Nitrogen gas (N 2) radiator
 gas. To reduce the amount of material in the path of the beam a new CEDAR
 utilising Hydrogen gas (H 2) as a radiator gas can be used. Its design, testing and
-commissioning at NA62 is presented.0.0
-Acknowledgements
-blah blah blah
+commissioning at NA62 is presented.Acknowledgements
+It would not have been possible to complete this work without the teaching and
+collaborations of my colleges for which I tremendously grateful. I would like to
+mention a few in particular.
+I would like to thank my supervisors Evgueni Goudzovski, Cristina Lazzeroni
+and Angela Romero for their guidance throughout my time at The University of
+Birmingham and during the writing process for this thesis.
+I also extend my gratitude to my fellow NA62 collaborators who have been
+a part of my work and for the successful operation of the NA62 experiment. I
+would like to thank John Fry and Chris Parkinson for their passage of knowledge
+for anything relating to the CEDAR and their hard work to get the new CEDAR
+detector designed, tested and working at NA62. I would also like to thank the many
+students in the office who helped me throughout this journey, and whom I now call
+my friends.
+Finally, I would like to thank my family, especially Emily, who has had to endure
+my long nights of work and periods away at CERN. I am immensely grateful for her
+support, and I couldn’t have done it without her.
 iDeclaration of author’s
 contributions
 Chapter 1 sets out the theoretical framework for the thesis. Topics include the
@@ -132,18 +145,18 @@ CEDAR Differential Cherenkov counter with Achromatic Ring focus. i, 20, 22–25,
 46–54, 56, 60, 61, 63, 71, 73, 75–77, 84, 85
 CEDAR-H CEDAR-Hydrogen. 25, 51–78, 80–89, 162
 CEDAR-N CEDAR-North. 23, 46, 47, 53, 54
-CEDAR-W CEDAR-West. 23, 25, 46, 47, 50, 52–56, 64, 70, 72, 87–89, 162
+CEDAR-W CEDAR-West. 23, 25, 46, 47, 50, 52–56, 64, 70, 72, 85, 87–89, 162
 CHANTI Charged Anti-coincidence detector. 26
 CKM Cabibbo-Kobayashi-Maskawa. 4–7
 CLConfidence Level. 106–110, 116–119, 121
 CPCharge-Parity. 5, 9, 12–14
 DP Dark Photon. 1, 15, 16, 90, 103, 105–109, 111–116, 119–121, 162
-DSS Detector Safety System. 74
+DSS Detector Safety System. 73
 viiList of Acronyms
 FCNC Flavour Changing Neutral Current. 11, 13
 FVFiducial Volume. 18, 21, 27, 44
 GTK GigaTracker. 21, 25, 26
-H2Hydrogen gas. i, 46, 52–56, 60, 72–78, 80, 82, 83
+H2Hydrogen gas. i, 46, 52–56, 60, 72–78, 80, 82, 83, 85
 HASC Hadronic Sampling Calorimeter. 38
 HIKE High-intensity Kaon Experiments. 2, 122, 162
 IAC Integrated Anode Charge. 135, 136
@@ -156,7 +169,7 @@ MC Monte Carlo. 43, 71, 91–93, 95–103, 105, 106, 109–111, 114–116, 121, 
 145, 146, 148, 149, 151, 155
 MCP-PMT Micro-Channel Plate Photomultiplier. 134
 MUV Muon Veto System. 36
-N2Nitrogen gas. i, 46, 52, 56, 73, 75–78, 162
+N2Nitrogen gas. i, 46, 52, 56, 73, 75–78, 85, 162
 PDG Particle Data Group. 100
 PET Polyethylene Terephthalate. 28
 PID Particle Identification. 22, 91, 92
@@ -2067,9 +2080,8 @@ ment showing the positions of the XY motors, the diaphragm aperture, pressure of
 the CEDAR, the average number of photo-electrons per PM and then the spacial
 alignment of the PMTs. Each entry was recorded at a different diaphragm aperture
 of 0.79, 1 and 2.02 mm.
-The CEDAR was successfully aligned at the proton pressure with a motor po-
-sitions of: X= 1.35 mm and Y= 3.59 mm with an average PMT efficiency of
-98.3 %.
+The CEDAR was successfully aligned at the proton pressure with motor positions
+of:X= 1.35 mm and Y= 3.59 mm with an average PMT efficiency of 98.3 %.
 3.3.2 Pressure and diaphragm scans
 The remaining goals of the test-beam were to determine the parameters for oper-
 ation at NA62. This included the determination of the kaon pressure to maximise
@@ -2080,8 +2092,8 @@ To determine the kaon operating pressure a pressure scan was performed. Before
 the scan, the pressure of the CEDAR-H was set at the highest pressure (4.4 bar),
 where there were no selected beam particles. A selected beam particle was defined
 when there is signal in at least 6 PMTs in coincidence. The scan consisted of reducing
-633.3 CEDAR-H CEDAR-H Test-beam
 the pressure in small steps and collecting a number of spills of data at each step.
+633.3 CEDAR-H CEDAR-H Test-beam
 This was completed at a diaphragm width of 2.3 mm, which was slightly larger than
 the standard operating setting used with the CEDAR-W at NA62. The aperture
 was chosen to maximise the light yield of the detector to compare the computed
@@ -2297,7 +2309,7 @@ spherical mirror. The laser was placed to simulate the direction of light exitin
 CEDAR-H and the spherical mirror was adjusted so that the laser light hit the centre
 of the target, ensuring that the light would hit the centre of the PMT array. The
 spherical mirror was adjusted using the screw located at the back of the support,
-shown in Figure ??(left). The is process was then repeated for all eight spherical
+shown in Figure 3.25 (left). The is process was then repeated for all eight spherical
 mirrors.
 Figure 3.24: Image of the four spherical mirrors being aligned whilst attached to
 the CEDAR support cylinder [66].
@@ -2345,8 +2357,8 @@ Dedicated flammable gas detectors were installed on the top of the metal pavil-
 ions at both upstream and downstream ends of the CEDAR-H vessel, shown in Fig-
 ure 3.26. The detectors monitor the concentration of H 2levels outside the vessel and
 result in a warning if the concentration exceeds 10 % of the LEL. The gas detectors
-733.5 CEDAR-H Commissioning at CERN
 were connected to the CEDAR-H Detector Safety System (DSS). A concentration
+733.5 CEDAR-H Commissioning at CERN
 of 20 % of the LEL generates a level 3 alarm, which would cut the power in the area
 if the alarm is triggered, and the CERN fire brigade would be informed. The main
 metal pavilion covers the upstream end of the CEDAR-H vessel, the KTAG photon-
@@ -2376,8 +2388,8 @@ selects the signals within a 4 ns time window into candidates. As each individua
 PMT signal was recorded, the light yield was defined using a different method when
 compared to the test beam. In the test beam, the ratios of the coincidences were
 used to calculate the light yield using statistical equations. However, at NA62,
-743.5 CEDAR-H Commissioning at CERN
 the light yield can be measured precisely due to the high granularity of the KTAG
+743.5 CEDAR-H Commissioning at CERN
 photon-detection system and can be defined as the number of photo-electrons per
 beam particle candidate. The identification of the beam particle utilised a 5-fold
 coincidence, compared to the 6-fold used in the test beam, due to the availability of
@@ -2568,28 +2580,27 @@ fractive index of the radiator gas did not change by large amounts which would
 result in lower kaon detection efficiency. The pressure of the vessel and temperature
 at both the front and back of the CEDAR were recorded and shown in Figure 3.35
 for the 2023 run and Figure 3.36 for the 2024 run. The pressure was divided by tem-
-perature, as the ratio should be consistent for a sealed vessel like the CEDAR, and
+perature (p/T), as the ratio should be consistent for a sealed vessel like the CEDAR,
 843.5 CEDAR-H Commissioning at CERN
-the ratio was multiplied by a room temperature of 293.15 K, resulting in the pres-
-sure at normalised room temperature. During previous runs at NA62, the CEDAR
-would be kept at a fixed pressure and regulated to stay at the desired pressure,
-which would be correct if the CEDAR vessel did not change in temperature. If the
-temperature of the gas changed with the pressure regulated to a fixed value, the
-resultant refractive index of the radiator gas would diverge from the desired value,
-reducing the detector efficiency. Even though the CEDAR is extensively insulated,
-it is designed to mitigate sharp temperature changes. It does not stop the CEDAR
-vessel from slowly changing temperature with the environment due to seasons. To
-mitigate this, the CEDAR was sealed with a fixed amount of gas and the pressure
-was allowed to vary. A good example of how this new method was utilised was in
-the final days of the 2023 run in Figure 3.35 where the actual pressure increased
-by nearly 10 mbar, whereas the normalised pressures stayed constant, suggesting
-that the temperature in ECN3 increased, reiterating that the pressure should not
-be automatically maintained at a specific pressure. However, as CEDAR-H was not
-perfectly sealed, especially for Hydrogen, a small leak was expected, so there was a
-gradual decrease in the normalised pressure. The normalised pressure and the re-
-sultant number of photo-electrons per candidate were used to decide if the CEDAR
-required extra filling during the run due to the small loss of gas, which can be seen
-in Figures 3.35 and 3.35 as the large spikes in pressure at various points.
+and the ratio was multiplied by a room temperature of 293.15 K, resulting in the
+pressure at normalised room temperature. Even though the CEDAR is extensively
+insulated, it is designed to mitigate sharp temperature changes. It does not stop
+the CEDAR vessel from slowly changing temperature with the environment due to
+seasons. To mitigate this, the CEDAR is sealed with a fixed amount of gas and
+the pressure was allowed to vary. While operating with the CEDAR-W with N 2is
+was possible to operate without monitoring due to minimal gas leakage from the
+vessel. However, for CEDAR-H it was now essential to monitor the p/T due to the
+increased leakage of the H 2gas from the vessel.
+A good example of how the p/T method was utilised was in the final days of
+the 2023 run in Figure 3.35 where the actual pressure increased by nearly 10 mbar,
+whereas the normalised pressures stayed constant, suggesting that the tempera-
+ture in ECN3 increased, reiterating that the pressure should not be automatically
+maintained at a specific pressure. However, as CEDAR-H was not perfectly sealed,
+especially for Hydrogen, a small leak was expected, so there was a gradual decrease
+in the normalised pressure. The normalised pressure and the resultant number of
+photo-electrons per candidate were used to decide if the CEDAR required extra fill-
+ing during the run due to the small loss of gas, which can be seen in Figures 3.35
+and 3.35 as the large spikes in pressure at various points.
 853.6 CEDAR-H Commissioning at CERN
 2023-08-01 2023-08-15 2023-09-01 2023-09-15 2023-10-01382038253830383538403845385038553860Pressure (p/T×293.15) [mbar]
 3820383038403850386038703880
