@@ -343,7 +343,7 @@
         photo-electrons per PM and then the spacial alignment of the PMTs. Each entry was recorded at a different diaphragm aperture of 0.79, 1 and 2.02\ mm.}
         \label{fig:alignment_res2}
     \end{figure}
-    The \gls{CEDAR} was successfully aligned at the proton pressure with a motor positions of: $X = 1.35$\,mm and $Y = 3.59$\,mm with an average \gls{PMT} efficiency of 98.3\,\%.
+    The \gls{CEDAR} was successfully aligned at the proton pressure with motor positions of: $X = 1.35$\,mm and $Y = 3.59$\,mm with an average \gls{PMT} efficiency of 98.3\,\%.
 
     \subsection{Pressure and diaphragm scans}
     The remaining goals of the test-beam were to determine the parameters for operation at NA62. This included the determination of the kaon pressure to maximise kaon yield, the optimal diaphragm aperture to maximise light from the kaon and minimising the impact of light from the pion. This was completed through a number of pressure and diaphragm scans which are described below.
@@ -472,7 +472,7 @@
     \gls{ch} was installed on the NA62 beam-line in 2023, involving several steps. First, the KTAG photon-detection system had to be disassembled from the \gls{cw} and set to one side, with the \gls{cw} vessel then removed from the beam-line. The \gls{ch} was brought to the NA62 underground cavern and installed into the beam-line, shown in Figure \ref{fig:cedarHinstall}.
     The new spherical mirrors were aligned with a laser beam and secured to a support cylinder, depicted in the diagram in Figure \ref{fig:align_ray} and shown in Figure \ref{fig:mirroralign}. The process of alignment started with the positioning of the laser. Data from the NA62 \gls{MC} simulation provided info about the direction of light exiting the \gls{ch} vessel. A photon that hit the centre of the spherical mirror was selected, and the positions 
     at the exit window and spherical mirror were recorded in XYZ. The vector was then calculated from the mirror's centre to the exit window and used to set up the laser for the mirror alignment. A target representing the PMT array, shown in Figure \ref{fig:mirrortarget}, was placed at the correct distance from the spherical mirror. The laser was placed to simulate the direction of light exiting the \gls{ch} and 
-    the spherical mirror was adjusted so that the laser light hit the centre of the target, ensuring that the light would hit the centre of the PMT array. The spherical mirror was adjusted using the screw located at the back of the support, shown in Figure \ref{mirrortarget} (left).
+    the spherical mirror was adjusted so that the laser light hit the centre of the target, ensuring that the light would hit the centre of the PMT array. The spherical mirror was adjusted using the screw located at the back of the support, shown in Figure \ref{fig:mirrortarget} (left).
     The is process was then repeated for all eight spherical mirrors. 
     \begin{figure}[H]
         \centering 
@@ -483,8 +483,9 @@
     \end{figure}    
     \begin{figure}[H]
         \centering 
-        \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/alingment_target.png}}}
-        \subfloat{{\includegraphics[width=0.5\textwidth]{imgs/mirror_back.png}}}
+        \subfloat{{\includegraphics[height=5cm, width=0.49\textwidth]{imgs/alingment_target.png}}}
+        \vspace{2mm}
+        \subfloat{{\includegraphics[height=5cm, width=0.49\textwidth]{imgs/mirror_back.png}}}
         \linespread{1.0}
         \caption{Left, image of the target used for the alignment of the spherical mirrors and right, image showing the back of the spherical mirror and the screw used to modify its position \cite{EnricoCERN}.}
         \label{fig:mirrortarget}
@@ -503,8 +504,8 @@
     The aluminium windows have been tested to withstand a pressure of 7.5\,bar before installation so that the safety valve would prevent any damage to the windows.
     \begin{figure}[H]
         \centering
-        \subfloat{{\includegraphics[width=0.68\textwidth]{imgs/KTAG_CEDAR-H_comp.pdf} }}%
-        \subfloat{{\includegraphics[width=0.30\textwidth]{imgs/KTAG_CEDAR-H_comp.jpg} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.68\textwidth]{imgs/KTAG_CEDAR-H_comp.pdf} }}%
+        \subfloat{{\includegraphics[height=8cm, width=0.30\textwidth]{imgs/KTAG_CEDAR-H_comp.jpg} }}%
         \caption{\gls{ch} installed in the NA62 beam-line (left) and the KTAG photon-detection system reassembled at the upstream end of the vessel (right)}%
         \label{fig:cedarpics_ns62}%
     \end{figure}
@@ -632,10 +633,12 @@
         \label{fig:cedarPres2024}%
     \end{figure}
     Due to the changes to the working point pressure between the test beam and between the 2023 and 2024 runs, a new method was developed to monitor the \gls{ch} and to take into account the environmental variables to ensure the refractive index of the radiator gas did not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
-    back of the \gls{CEDAR} were recorded and shown in Figure \ref{fig:PoverT_23} for the 2023 run and Figure \ref{fig:PoverT_24} for the 2024 run. The pressure was divided by temperature, as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio was multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
-    During previous runs at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. It does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the \gls{CEDAR}
-    was sealed with a fixed amount of gas and the pressure was allowed to vary.
-    A good example of how this new method was utilised was in the final days of the 2023 run in Figure \ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stayed constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
+    back of the \gls{CEDAR} were recorded and shown in Figure \ref{fig:PoverT_23} for the 2023 run and Figure \ref{fig:PoverT_24} for the 2024 run. The pressure was divided by temperature (p/T), as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio was multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
+    %During data taking with \gls{cw} with \gls{n2} at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. 
+    Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. It does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure was allowed to vary.
+    While operating with the \gls{cw} with \gls{n2} is was possible to operate without monitoring due to minimal gas leakage from the vessel. However, for \gls{ch} it was now essential to monitor the p/T due to the increased leakage of the \gls{h2} gas from the vessel.
+    
+    A good example of how the p/T method was utilised was in the final days of the 2023 run in Figure \ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stayed constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
     However, as \gls{ch} was not perfectly sealed, especially for Hydrogen, a small leak was expected, so there was a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate were used to decide if the \gls{CEDAR} required extra filling during the run due to the small loss of gas, which can be seen in Figures \ref{fig:PoverT_23} and \ref{fig:PoverT_23} as the large 
     spikes in pressure at various points. 
     
