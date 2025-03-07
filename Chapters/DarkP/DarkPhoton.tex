@@ -24,7 +24,7 @@
     \begin{itemize}
         \item Require that at least one of the following triggers is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the Electron Multi-Track (eMT) trigger, which are described in Chapter~\ref{sec:na62}.
         \item A vertex was selected if the total momentum was below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of 1, a $\chi^{2}$ less than 40 and a vertex position between 105\, and 180\,m.
-        \item The tracks associated with the vertex are selected if they are in acceptance of all four Straw spectrometer chambers and the CHOD. The track momentum must be greater than \SI{5}{\giga\electronvolt\per\clight} and less than \SI{60}{\giga\electronvolt\per\clight} with a $\Chi^+$ of less than 30. The tracks must traverse within 20\,cm of each other.
+        \item The tracks associated with the vertex are selected if they are in acceptance of all four Straw spectrometer chambers and the CHOD. The track momentum must be greater than \SI{5}{\giga\electronvolt\per\clight} and less than \SI{60}{\giga\electronvolt\per\clight} with a $\chi^+$ of less than 30. The tracks must traverse within 20\,cm of each other.
         \item Require the presence of a three-track in the vertex with a selected positively charged pion ($\pi^+$) and a selected electron-positron pair ($\pi^{\pm}$). The pion is selected using the missing mass between the Kaon momentum, which is taken from the average beam momentum and the two positive tracks. 
         If the positive track is within five sigma of the $\pi^0$ mass hypothesis, it is selected as a charged pion. If both positive tracks satisfy the condition, the event is vetoed. From \gls{MC}, only approximately $0.1/,\%$ of Dalitz decays have both positive tracks satisfying the selection of the charged pion.
         The electron was assigned to the only negative track and the negative track which doesn't pass the charged pion selection was selected as the positron.
@@ -53,11 +53,11 @@
     The sigma for the reconstructed masses $M_{ee \gamma}$ and $M_{\pi ee \gamma}$ is calculated by fitting the distributions shown in Figure \ref{fig:reconMasses} with a Gaussian distribution.
     The calculated sigma for the reconstructed mass $M_{\pi ee \gamma}$ was calculated as
     \begin{equation}\label{eq:piee_sig}
-        \sigma_M_{\pi ee \gamma} = 2.47 \pm 0.004
+        \sigma_{\pi ee \gamma} = 2.47 \pm 0.004
     \end{equation}
     and for $M_{ee \gamma}$, 
     \begin{equation}\label{eq:gammaee_sig}
-        \sigma_M_{ee \gamma} = 1.329 \pm 0.009
+        \sigma_{ee \gamma} = 1.329 \pm 0.009
     \end{equation} 
     which were used as an origin for the elliptical parameters for the cut.
     \begin{figure}[H]
@@ -78,8 +78,8 @@
     \begin{itemize}
         \item $(x_c = 493.37)$: The x-coordinate of the ellipse's center.
         \item $(y_c = 134.89)$: The y-coordinate of the ellipse's center.
-        \item $(a = 10.24)$: The semi-major axis of the ellipse ($4 \times \sigma_M_{\pi ee \gamma}$).
-        \item $(b = 4.29)$: The semi-minor axis of the ellipse ($3 \times \sigma_M_{ee \gamma}$).
+        \item $(a = 10.24)$: The semi-major axis of the ellipse ($4 \times \sigma_{\pi ee \gamma}$).
+        \item $(b = 4.29)$: The semi-minor axis of the ellipse ($3 \times \sigma_{ee \gamma}$).
         \item $(\theta = 0.4887)$: The rotation angle of the ellipse in radians.
         \item $((x, y))$: The point being tested for inclusion within the ellipse.
     \end{itemize}
@@ -184,7 +184,7 @@
     \begin{equation}
         y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}
     \end{equation}
-    where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. Within the kinematic region of Dalitz decay, the \gld{TFF} is expected to vary slowly as x increases and can be approximated as $F(x) = 1 + ax$, with $a$ being the slope factor, which has been set through theory and experimentally. 
+    where $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, position and charged pion. Within the kinematic region of Dalitz decay, the \gls{TFF} is expected to vary slowly as x increases and can be approximated as $F(x) = 1 + ax$, with $a$ being the slope factor, which has been set through theory and experimentally. 
     The Vector Meson Dominance (VMD) model expects that $a = m_{\pi^0} (m_{\rho}^2 + m_{\omega}^2) / 2 = 0.03$ \cite{PhysRevD.83.037503}.
     Experimentally, the \gls{PDG} average for all experiments was $a = 0.0335± 0.0031$ \cite{Tanabashi:2018oca}. However, due to large errors and inconsistent results experimentally and through theory, it is not possible to rely on external values for the slope factor for the MC.  
     In the NA62 framework, by default, the slope factor is defined as $a =  0.032$. The \gls{MC} samples have already been produced, a correction was made to remove the applied \gls{TFF}. The data is re-weighted using the events passing the selection compared against the expected number of events from \gls{MC} across the reconstructed mass range.
