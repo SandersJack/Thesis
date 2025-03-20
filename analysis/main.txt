@@ -145,7 +145,7 @@ CEDAR-N CEDAR-North. 24, 44, 45, 51, 52
 CEDAR-W CEDAR-West. 24, 26, 44, 45, 48, 50–54, 62, 68, 70, 83, 85–87, 159
 CHANTI Charged particle Anti-coincidence detector. 28
 CKM Cabibbo-Kobayashi-Maskawa. 4–7, 11
-CLConfidence Level. 104–108, 114–116, 118
+CLConfidence Level. 104–108, 114, 115, 117, 118
 CPCharge-Parity. 4, 9, 12, 14, 15
 DP Dark Photon. 1, 16, 17, 88, 101, 103–107, 109–114, 116–118, 159
 DSS Detector Safety System. 71
@@ -169,7 +169,7 @@ MUV Muon Veto System. 36
 N2Nitrogen gas. i, 44, 50, 54, 59, 71, 73–76, 83, 159
 PDG Particle Data Group. 98
 PET Polyethylene Terephthalate. 29
-PID Particle Identification. 23, 89, 90, 94
+PID Particle Identification. 23, 90, 94
 PMT Photomultiplier Tube. 25, 53, 61, 77, 121
 Kπ+ν¯νK+→πν¯ν. 30, 32, 42, 43
 viiList of Acronyms
@@ -184,7 +184,7 @@ Spill SPS beam pulse. 59
 SPS Super Proton Synchrotron. 1, 18, 24, 44
 TDAQ Trigger and Data Acquisition system. 19
 TFF Transition Form Factor. 97–99
-ULUpper Limit. 104–107, 113, 114, 116, 159
+ULUpper Limit. 104–107, 113, 114, 117, 159
 VC VetoCounter. 39
 viiiList of Figures
 1.1 The Standard Model of particle physics with the 12 fermions shown
@@ -347,7 +347,7 @@ given photo-electron yield as a function of at least N coincidences in
 sectors. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 86
 xiiiLIST OF FIGURES
 4.1 Reconstructed missing mass of Kaon and charged pion compared to
-the known neutral pion mass. . . . . . . . . . . . . . . . . . . . . . . 91
+the known neutral pion mass fitted with a Gaussian. . . . . . . . . . 91
 4.2 Reconstructed masses of selected particles, left the total of charged
 pion, electron, positron and gamma and on right, electron, positron
 and gamma. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92
@@ -413,13 +413,13 @@ method for estimating the number of expected events. . . . . . . . . . 115
 4.25 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value from the data-driven background estimation, with the
 result from NA48/2 for comparison [44]. . . . . . . . . . . . . . . . . 115
-4.26 Upper limit at a 90% CL on the mixing parameter for the data-driven
-background estimate (Green) compared to published exclusions limits
-[44, 76, 77, 78, 79, 80, 81, 82] . . . . . . . . . . . . . . . . . . . . . . 116
-4.27 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
+4.26 Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value from the data-driven background estimation, with the
 result from NA48/2 for comparison [44] and the expected limit of the
-prompt decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 118
+prompt decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+4.27 Upper limit at a 90% CL on the mixing parameter for the data-driven
+background estimate (Green) compared to published exclusions limits
+[44, 76, 77, 78, 79, 80, 81, 82] . . . . . . . . . . . . . . . . . . . . . . 118
 5.1 Diagram of HIKE Phase 1 detector setup [84]. . . . . . . . . . . . . . 120
 5.2 Diagram of the new STRAW spectrometer layout with 5 mm straw
 tubes [84]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
@@ -2141,22 +2141,22 @@ ratios and average number of photo-electrons per beam particle are described in
 Table 3.2. The pressure scan at 2 mm is shown in the top left plot of Figure 3.20;
 this provides a light yield similar to the 2.3 mm pressure scan but with greater
 separation between the pion and kaon peaks, however, there was no clear separation
-in the six-fold coincidences. In NA62, the detector would use at least five for particle
-identification so it was important to achieve a clear separation with six coincidences,
-which was the closest criteria available for the test beam. The top right of Figure
-3.20 was at a similar diaphragm aperture used at NA62 of 1.7 mm. Compared to
-the 2 mm pressure scan, the light yield decreased only by 1.7 %, but the separation
-of the kaon-pion peak has increased dramatically, with the estimated six sector
-coincidences of the pion peak falling well below 10−6at the kaon pressure. The final
-pressure scans at 1.2 mm and 1 mm, in Figure 3.20 show complete separation between
-the kaon-pion peaks. However, the maximum light yield at the individual particle
-pressures was suppressed as the peaks no longer had a flat peak. This suggested
-that at 1.3 mm the diagram aperture was narrower than the width of the Cherenkov
-ring, which resulted in the loss of light at the diaphragm. This is clear for Table
+in the six-fold coincidences. NA62 would use at least five sector coincidences for
+particle identification so it was important to achieve a clear separation with six
+coincidences, which was the closest criteria available for the test beam. The top
+right of Figure 3.20 was at a similar diaphragm aperture used at NA62 of 1.7 mm.
+Compared to the 2 mm pressure scan, the light yield decreased only by 1.7 %, but the
+separation of the kaon-pion peak has increased dramatically, with the estimated six
+sector coincidences of the pion peak falling well below 10−6at the kaon pressure. The
+final pressure scans at 1.2 mm and 1 mm, in Figure 3.20 show complete separation
+between the kaon-pion peaks. However, the maximum light yield at the individual
+particle pressures was suppressed as the peaks no longer had a flat peak. This
+suggested that at 1.3 mm the diagram aperture was narrower than the width of the
+Cherenkov ring, which resulted in the loss of light at the diaphragm. This is clear in
 633.3 CEDAR-H CEDAR-H Test-beam
-3.2 where at 1 mm the average photo-electrons per kaon is 16.03, translating to less
-than 95 % identification efficiency at five sectors which would not be acceptable for
-use in NA62.
+Table 3.2 where at 1 mm the average photo-electrons per kaon is 16.03, translating to
+less than 95 % identification efficiency at five sectors which would not be acceptable
+for use in NA62.
 3.6 3.7 3.8 3.9 4.0 4.1 4.2 4.3
 Pressure [bar]106
 105
@@ -2346,22 +2346,21 @@ the start of the 2023 run. The goals of the commissioning were to ascertain the
 operational woking point for kaon detection at NA62 and to ensure that the detector
 was still operational after its transport and installation.
 After the CERN beam experts conducted the start-of-run activities and the beam
-was steered through the CEDAR-H vessel, the beam intensity was set at 10 % of
-the NA62 nominal value, corresponding to a particle rate of 60 Hz. Periodic triggers
-were used during the CEDAR-H commissioning in order to select all beam particles
-and measure the beam composition. The periodic triggers are where a period is
-selected between the start of burst (SoB) and end of burst (EoB) at which data was
-collected. At the beam intensity selected, the period was set so that 2 ×105triggers
-per spill was collected. For each triggered event, the KTAG data acquisition system
-recorded the time and the channel ID of each PMT signal within a 100 ns time
-window defined by the trigger. The data collected was then reconstructed using the
-NA62 framework with the individual PMT signals clustered using an algorithm that
-selects the signals within a 4 ns time window into candidates. As each individual
+was steered through the CEDAR-H vessel, the beam intensity was set at 10 % of the
+NA62 nominal value, corresponding to a particle rate of 60 Hz. Periodic triggers were
+used during the CEDAR-H commissioning in order to select all beam particles and
+measure the beam composition. The periodic triggers are where a period is selected
+between the start of burst (SoB) and end of burst (EoB) at which data was collected.
+At the beam intensity selected, the period was set so that 2 ×105triggers per spill
+was collected. For each triggered event, the KTAG data acquisition system recorded
+the time and the channel ID of each PMT signal within a 100 ns time window
+defined by the trigger. Individual PMT signals are clustered into into candidates
+an algorithm that selects the hits within a 4 ns time window. As each individual
 PMT signal was recorded, the light yield was defined using a different method when
 compared to the test beam. In the test beam, the ratios of the coincidences were
-used to calculate the light yield using Equations 3.3&3.4. However, at NA62, the
+used to calculate the light yield using Equations 3.3 & 3.4. However, at NA62,
+the light yield can be measured precisely due to the high granularity of the KTAG
 713.5 CEDAR-H Commissioning at CERN
-light yield can be measured precisely due to the high granularity of the KTAG
 photon-detection system and can be defined as the number of photo-electrons per
 beam particle candidate. The identification of the beam particle utilised a 5-fold
 coincidence, compared to the 6-fold used in the test beam, due to the reduced noise
@@ -2386,29 +2385,29 @@ beam was not correct.
 723.5 CEDAR-H Commissioning at CERN
 Figure 3.27: Pressure scan with CEDAR-H with N 2going from a 1.5 bar to 2.12 bar
 at a diaphragm aperture of 1.45 mm.
-A coarse alignment was conducted at a diaphragm aperture of 1.45 mm and at the
-expected proton pressure of 2.03 bar as it is an isolated peak, so it was more efficient
-for alignment, with the results shown in Figure 3.28. The procedure was the same
-as the one done in the test-beam where the motors on the upstream end of the vessel
-moved in both X and Y dimensions, pivoting the vessel about the downstream end.
-The detector started at Y=−1.943 and X=−2.219 and an average of 20.6 photo-
-electrons per candidate. The alignment results are shown in Figure 3.28, where the
-Y motors were first moved in the positive direction, which caused a decrease in the
-number of photo-electrons per candidate. The Y motors were then moved in the
-negative direction until the maximum was found at Y=−2.051. The large gaps in
-the results showed the instability of the motors, as it was not possible to return to
-the same point after moving the motors due to the inaccuracy in the control system.
-The X motor was then modified until a maximum was found at X=−2.155. The
-final position of the CEDAR-H with N 2wasX=−2.155 and Y=−2.051, with an
-average of 20.9 photo-electrons per candidate. However, the maximum was found at
-the edge of the usable range in the Y direction , it was possible that the maximum
-light yield was not found and was further in negative Y. As this would have been
-much harder to conduct with H 2in the CEDAR, the vessel was lowered 2 mm by
-reducing the height of the downstream foot. The maximum photo-electrons per
+A coarse alignment was conducted at a diaphragm aperture of 1.45 mm and at
+the expected proton pressure of 2.03 bar as it is an isolated peak, so it was more
+efficient for alignment, with the results shown in Figure 3.28. The procedure was
+the same as the one done in the test-beam where the motors on the upstream end
+of the vessel moved in both X and Y dimensions, pivoting the vessel about the
+downstream end. The detector started at Y=−1.943 and X=−2.219 and an
+average of 20.6 photo-electrons per candidate. The alignment results are shown in
+Figure 3.28, where the Y motor was first moved in the positive direction, which
+caused a decrease in the number of photo-electrons per candidate. The Y motor
+position was then moved in the negative direction until the maximum was found at
+Y=−2.051. The large gaps in the results showed the instability of the motors, as
+it was not possible to return to the same point after moving the motors due to the
+inaccuracy in the control system. The X motor position was then modified until
+a maximum was found at X=−2.155. The final position of the CEDAR-H with
+N2wasX=−2.155 and Y=−2.051, with an average of 20.9 photo-electrons per
+candidate. However, the maximum was found at the edge of the usable range in the
+Y direction , it was possible that the maximum light yield was not found and was
+further in negative Y. As this would have been much harder to conduct with H 2in
+the CEDAR, the vessel was lowered 2 mm by reducing the height of the downstream
 733.5 CEDAR-H Commissioning at CERN
-candidate was now located at Y=−0.05, while the Xwas unchanged. This would
-mean that the Y motor values from now on are not comparable to these alignment
-results.
+foot. The maximum photo-electrons per candidate was now located at Y=−0.05,
+while the Xwas unchanged. This would mean that the Y motor values from now
+on are not comparable to these alignment results.
 The tests with N 2confirmed that the optics were still functional after being
 moved from H6 and installed in NA62, so it was decided to proceed with the next
 phase, filling the CEDAR vessel with H 2and performing a full alignment. The final
@@ -2428,15 +2427,15 @@ number of photo-electrons on each sector. The results of the alignment are shown
 Figure 3.29. The CEDAR-H was originally in the position of X=−2.144 mm and
 Y=−2.025 mm, where a proton candidate had, on average, 15.58 photo-electrons.
 743.5 CEDAR-H Commissioning at CERN
-This was much lower than what was expected from the test beam and from the
-N2test previously, so a new alignment was definitely required. The Y motors were
-first modified, increasing by around 0.1 mm and then stopping to take a number of
-bursts to increase the statistics. This was repeated, which resulted in the number of
-photo-electrons per proton candidate increasing, maximising at an average of 21.07
-atY=−0.725 mm, suggesting the detector was aligned in the Y dimension. To
-ensure that this was the maximum point, the Y motor continued to move until the
+This was much lower than what was expected from the test beam and from the N 2
+test previously, so a new alignment was definitely required. The Y motor position
+were first modified, increasing by around 0.1 mm and then stopping to take a number
+of bursts to increase the statistics. This was repeated, which resulted in the number
+of photo-electrons per proton candidate increasing, maximising at an average of
+21.07 at Y=−0.725 mm, suggesting the detector was aligned in the Y dimension.
+To ensure that this was the maximum point, the Y motor continued to move until the
 number of photo-electrons decreased. When this occurred, the detector was moved
-back to the previous maximum. The X motors were moved in both the positive and
+back to the previous maximum. The X motor were moved in both the positive and
 negative direction to again find the maximum number of photo-electrons. It was
 found that the detector was aligned in the X dimension in its original state, so the
 X motor was returned to its original position. The final position of the CEDAR-H
@@ -2449,25 +2448,25 @@ mately 1.8 mm. The pressure was set just above the proton pressure at 4.4 bar an
 the pressure was slowly decreased as data was recorded. The data was reconstructed
 using a 4 ns time window, with the results shown in Figure 3.30. Compared to the
 753.5 CEDAR-H Commissioning at CERN
-test beam, the y-axis of Figure 3.30 is arbitrary as the total number of triggers was
-not recorded. Instead, the number of coincidences was normalised to the beam inten-
-sity, which in NA62 can be measured through counts in argonion chamber detector.
-This made the direct beam composition difficult to calculate, but the ratios of the
-three peaks were to be used to check if the composition was what was expected. Fig-
-ure 3.30 shows the proton pressure at 4.3 bar and the kaon pressure at 3.88 bar. At
-the kaon pressure the max light yield corresponded to 21 .71±0.02 photo-electrons
-per kaon candidate. The kaon pressure in NA62 was higher than what was found at
-the test-beam, 3.88 bar compared to 3.85 bar due to a 2 K temperature difference of
-the radiator gas in ECN3 compared to H6. The pion pressure could not be precisely
-determined due to the large flux of pions in the beam which overwhelmed the NA62
-readout system, producing inconsistent results between 3.68 and 3.76 bar. However,
-the falling edge of the pion peak was not effected, allowing the estimation of the
-pion miss-identification probability. At the kaon pressure of 3.88 bar the measured
-normalised 5-fold coincidence was 0.0956. The pion contribution was then estimated
-using the fit of a super-Gaussian on the falling edge and extrapolated to the kaon
-pressure. The estimated pion contribution to the normalised 5-fold coincidence was
-5.36×10−06, which resulted in a pion miss-identification probability of 0 .6×10−5
-at the kaon pressure.
+test beam, the y-axis of Figure 3.30 is arbitrary as the total number of triggers
+was not recorded. Instead, the number of coincidences was normalised to the beam
+intensity, which in NA62 can be measured through counts in argonion chamber de-
+tector. This made the direct beam composition difficult to calculate, but the ratios
+of the three peaks were to be used to check if the composition was what was ex-
+pected. Figure 3.30 shows the proton pressure at 4.3 bar and the kaon pressure at
+3.88 bar. At the kaon pressure the max light yield corresponded to 21 .71±0.02
+photo-electrons per kaon candidate. The kaon pressure in NA62 was higher than
+what was found at the test-beam, 3.88 bar compared to 3.85 bar due to a 2 K tem-
+perature difference of the radiator gas in ECN3 compared to H6. The pion pressure
+could not be precisely determined due to the large flux of pions in the beam which
+overwhelmed the NA62 readout system, producing inconsistent results between 3.68
+and 3.76 bar. However, the falling edge of the pion peak was not effected, allowing
+for the estimation of the pion miss-identification probability. At the kaon pressure
+of 3.88 bar the measured normalised 5-fold coincidence value was 0.0956 (see Figure
+3.30). The pion contribution was then estimated using the fit of a super-Gaussian
+on the falling edge and extrapolated to the kaon pressure. The estimated pion con-
+tribution to the normalised 5-fold coincidence was 5 .36×10−06, which resulted in a
+pion miss-identification probability of 0 .6×10−5at the kaon pressure.
 The light yield obtained with a 1.8 mm diaphragm aperture compared with the
 results from the test beam at a 2 mm aperture shown in Figure 3.20, showed an
 increase of just over 10 %. This increase was produced by adding the KTAG photon-
@@ -2491,14 +2490,14 @@ photo-electrons per kaon candidate.
 773.5 CEDAR-H Commissioning at CERN
 Figure 3.31: Results of alignment of CEDAR-H at the kaon pressure of 3.88 bar with
 a diaphragm aperture of 1.5 mm.
-After the final alignment, a pressure scan was completed across the pion and kaon
-peak with a diaphragm aperture of 1.5 mm with the results shown in Figure 3.32.
-The separation compared to the previous pressure scan in Figure 3.30 was much
-greater with the pion contribution to the 5-fold coincidence estimated to be of the
-order of 10−90which corresponded to an almost zero miss-identification probability.
-However, even after the updated alignment, the number of photo-electrons per kaon
-candidate was 21 .47±0.04 suggesting a slightly lower light yield than the previous
-pressure scan completed with a 1.8 mm diaphragm aperture.
+After the final alignment, a pressure scan was completed across the pion and
+kaon peak with a diaphragm aperture of 1.5 mm with the results shown in Figure
+3.32. The separation compared to the previous pressure scan in Figure 3.30 was much
+greater with the pion contribution to the 5-fold coincidence estimated consistent with
+a zero miss-identification probability. However, even after the updated alignment,
+the number of photo-electrons per kaon candidate was 21 .47±0.04 suggesting a
+slightly lower light yield than the previous pressure scan completed with a 1.8 mm
+diaphragm aperture.
 The results show that the CEDAR-H was made operational in NA62 and was
 able to separate the kaon and pion peaks with a high level of confidence. It was
 decided that the pressure scan from the 1.8 mm diaphragm aperture produced the
@@ -2654,16 +2653,17 @@ lently and will continue to be utilised at NA62 until 2026.
 86Chapter 4
 The Search for Dark Photons at
 NA62
-The analysis aims to set limits on the mixing parameter of the Dark Photon (DP)
-utilising the production of A′through the decay of π0→γA′and its subsequent
-decay into SM particles A′→e+e−. The theoretical background for this hypothet-
-ical DP is described in Section 1.3. The NA62 experiment, described in Section
-2 provides a clean sample of π0particles through the decay of K+→π+π0with
-a branching ratio of 20.67 %. With the assumption that the DP decays promptly,
-where the A′decays at the point of its production, the decay signature is identical
-to the Dalitz decay π0
-D→e+e−. This decay represents the background for the DP
-search and determines the experiment’s sensitivity.
+This chapter summarises the search for the Dark Photon (DP) at NA62, called A’,
+with the data collected in 2022 to 2024. The analysis aims to set limits on the mixing
+parameter of the DP utilising the production of A′through the decay of π0→γA′
+and its subsequent decay into SM particles A′→e+e−. The theoretical background
+for this hypothetical DP is described in Section 1.3. The NA62 experiment, described
+in Section 2 provides a clean sample of π0particles through the decay of K+→
+π+π0with a branching ratio of 20.67 %. With the assumption that the DP decays
+promptly, where the A′decays at the point of its production, the decay signature is
+identical to the Dalitz decay π0
+D→e+e−. This decay represents the background for
+the DP search and determines the experiment’s sensitivity.
 4.1 Event Selection
 The analysis strategy for the DP search originated from the selection used for the
 search at NA48/2 [44]. As the K→π0
@@ -2674,8 +2674,9 @@ positron pair. The selection strategy is set out below:
 Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT)
 trigger, or the Electron Multi-Track (eMT) trigger, described in Chapter 2.
 874.1 The Search for Dark Photons at NA62 Event Selection
-A vertex is selected if the total momentum is below 78 GeV /c, a total positive
-charge of 1, a χ2less than 40 and a vertex position between 105 and 180 m.
+A three track vertex is selected if the total momentum is below 78 GeV /c, a
+total positive charge of 1, a χ2less than 40 and a vertex position between 105
+and 180 m.
 The tracks within the vertex are checked if they are in acceptance of all four
 Straw spectrometer chambers and the CHOD. The track momentum must be
 greater than 5 GeV /cand less than 60 GeV /cwith a χ+of less than 30. All
@@ -2703,9 +2704,9 @@ vertex momentum.
 pass the selection. The reconstructed mass of the electron, positron and photon
 is compared against the reconstructed mass of the electron, positron, photon
 and charged pion.
+884.1 The Search for Dark Photons at NA62 Event Selection
 The major difference between the selection used for the NA62 compared to the
 NA48/2 study is the PID. The study at NA48/2 used calorimetric PID where the
-884.1 The Search for Dark Photons at NA62 Event Selection
 LKr was utilised to reconstruct the energy of the pion and the electron-positron
 pair. The reconstructed energy over momentum was used to distinguish between the
 electron/positron and pion. Whereas in the NA62 search described in the selection
@@ -2718,22 +2719,26 @@ K2πDdecay at NA62 compared to NA48/2. The LKr was still used in the analysis
 to reconstruct the photon energy, which was required to prevent other backgrounds
 from passing the selection.
 The cut on the reconstructed missing mass of the kaon and charged pion system
-was calculated using a K2πDMC sample and is shown in Figure 4.1. The kaon
-and the charged pion were selected from MC truth information utilising the PDG
-particle codes and were associated with one of the reconstructed particle candidates.
-The sigma for the PID cut for the charged pion is taken from a fitted Gaussian on
-the distribution in Figure 4.1 and calculated as,
+is calculated using a K2πDMC sample and is shown in Figure 4.1. The kaon and the
+charged pion were selected from MC truth information utilising the PDG particle
+codes and were associated with one of the reconstructed particle candidates. The
+sigma for the PID cut for the charged pion is taken from a fitted Gaussian on the
+distribution in Figure 4.1 and calculated as,
 σ= 3.984±0.007. (4.1)
 894.1 The Search for Dark Photons at NA62 Event Selection
+-40 -30 -20 -10 0 10 20 30 40
+MK+ M0 [MeV]
+0.000.020.040.060.080.10 Data
+Gaussian
 Figure 4.1: Reconstructed missing mass of Kaon and charged pion compared to the
-known neutral pion mass.
+known neutral pion mass fitted with a Gaussian.
 The elliptical cut conducted on the final reconstructed masses of the recon-
-structed decay particle was defined using a K2πDMC sample. Utilising the MC
-truth information to select the correct decay particles and associating them to the
-reconstructed candidates, the distributions for the reconstructed masses, shown in
-Figure 4.2. The sigma for the reconstructed masses MeeγandMπeeγis calculated
-by fitting the distributions shown in Figure 4.2 with a Gaussian distribution. The
-calculated sigma for the reconstructed mass Mπeeγwas calculated as
+structed decay particle is defined using a K2πDMC sample. Utilising the MC truth
+information to select the correct decay particles and associating them to the recon-
+structed candidates, the distributions for the reconstructed masses, shown in Figure
+4.2. The sigma for the reconstructed masses MeeγandMπeeγis calculated by fitting
+the distributions shown in Figure 4.2 with a Gaussian distribution. The calculated
+sigma for the reconstructed mass Mπeeγis calculated as
 σπeeγ= 2.47±0.004, (4.2)
 and for Meeγ,
 σeeγ= 1.329±0.009, (4.3)
@@ -2749,7 +2754,7 @@ where xcandycare the ellipse’s centre in the x and y dimensions. The angle θi
 the rotation of the ellipse and a,bare the length of the semi-major and the semi-
 minor axis, respectively. The points xandyare the reconstructed mass values of
 the candidate event. The event is selected if the equation returns a value that is less
-than or equal to 1. The results from Figure 4.2 and Equations 4.2 & 4.3was used as
+than or equal to 1. The results from Figure 4.2 and Equations 4.2 & 4.3 is used as
 starting point for the parameter values. These were optimised for a tight cut with
 an acceptable number of events passing. The optimisation produced parameters for
 the ellipse defined below,
@@ -2760,9 +2765,9 @@ the ellipse defined below,
 (θ= 0.4887): The rotation angle of the ellipse in radians.
 914.1 The Search for Dark Photons at NA62 Event Selection
 ((x, y)): The point being tested for inclusion within the ellipse.
-The size of the semi-major and minor axis was chosen to maximise the amount of
-π0
-Ddecays passing the selection and to have the ellipse as small as possible. This was
+The size of the semi-major and minor axis is chosen to maximise the amount of π0
+D
+decays passing the selection and to have the ellipse as small as possible. This is
 required to reduce the chance of other backgrounds from passing selection. When
 utilised in Equation 4.4, the parameters described above produced an ellipse shown
 in red in Figure 4.3. All the events from the K2πDMC sample reaching the end of
@@ -2770,8 +2775,8 @@ the selection are shown in Figure 4.3. It shows that the ellipse is as tight as 
 to collect the majority of the K2πDevents.
 Figure 4.3: Reconstructed missing mass of Mπeeγcompared against Meeγproduced
 from a K2πDMC sample, with the defined elliptical cut used in the selection.
-The acceptance of the K2πDMC sample is defined across the reconstructed elec-
-tron position mass in the range 2 me< M ee< m π0and is compared against the
+The acceptance of the K2πDMC sample is defined across the reconstructed
+electron-positron mass in the range 2 me< M ee< m π0and is compared against the
 acceptance of the NA48/2 analysis [44] in Figure 4.4. It was expected that NA48/2
 would have an acceptance advantage due to its design as a shorter experiment, which
 is seen with superior acceptance at low momenta. However, if the analysis proce-
@@ -2786,9 +2791,9 @@ NA62-E/p
 Figure 4.4: Acceptance of the NA62 selection with E/p PID and kinematic PID,
 compared against the acceptance produced in the NA48/2 analysis [44].
 4.2 Integrated Kaon Flux
-The total number of data events passing the selection for the 2022 dataset was
-22,059,350. The total number of K+decays within the fiducial volume for the 2022
-dataset was computed as
+The total number of data events passing the selection for the 2022 dataset is
+22,059,350. The total number of K+decays within the fiducial volume for the
+2022 dataset is computed as
 N2022
 K=Nselected
 (A2πDB2πD+Aµ3DBµ3D)= (1.65±0.05)×1012. (4.5)
@@ -2806,17 +2811,17 @@ Kµ3D 0.0027%
 Table 4.1: Acceptances of K2πDandKµ3Dsamples for the K2πDselection
 934.3 The Search for Dark Photons at NA62 Dark Photon Search
 Only the 2022 sample was available when the MC background method was em-
-ployed. The data driven background estimation method used the 2022, 2023 and
-2024 datasets. Utilising the same method in Equation 4.5, the integrated number of
-kaons was calculated using the number of data events passing the selection for the
-2022-24 datasets which was 160,670,014,
+ployed. The data driven background estimation method uses the 2022, 2023 and
+2024 datasets. Utilising the same method in Equation 4.5, the integrated number
+of kaons is calculated using the number of data events passing the selection for the
+2022-24 datasets which is 160,670,014,
 N2022−24
 K = (1.19±0.04)×1013. (4.6)
 The large increase in data events passing the selection when the 2023 and 2024
-datasets were added was due to the change in downscaling for the eMT trigger,
-which went from 3 →1. The reconstructed masses for data and MC passing the
-K2πDselection for 2022-24 are shown in Figure 4.5. The MC samples have been
-scaled using the calculated NK.
+datasets were added is due to the change in downscaling for the eMT trigger, which
+went from 3 →1. The reconstructed masses for data and MC passing the K2πD
+selection for 2022-24 are shown in Figure 4.5. The MC samples have been scaled
+using the calculated NK.
 Figure 4.5: Reconstructed masses K2πDandKµ3Dfor MC and data
 4.3 Dark Photon Search
 Two methods were employed in the background estimation for the Dark Photon
@@ -2826,10 +2831,10 @@ This led to the development of a second method which used a data-driven method.
 Both methods are described below.
 944.3 The Search for Dark Photons at NA62 Dark Photon Search
 4.3.1 MC Background Method
-The limited size of the MC samples was expected to impact the final result when
+The limited size of the MC samples is expected to impact the final result when
 used for the background estimate. However, due to compute time and file size, it
-was not feasible to directly increase the statistics on the main samples. Still, using
-a feature of the framework, it was possible to increase the statistics across a portion
+is not feasible to directly increase the statistics on the main samples. Still, using
+a feature of the framework, it is possible to increase the statistics across a portion
 of the reconstructed mass spectra. The true invariant mass of the electron positron
 pair can be used to calculate the kinematic variable xfrom Equation 4.7.
 x=(Qe−+Qe+)2
@@ -2838,14 +2843,14 @@ m2
 ee
 m2
 π0(4.7)
-where Qe−andQe+are the four-momentum of the electron and position pair, and
+where Qe−andQe+are the four-momentum of the electron and positron pair, and
 mπ0is the mass of the neutral pion. The resultant distribution of the K2πDin terms
 of the the kinematic variable xfrom the MC is shown in Figure 4.6. The decay width
 in Equation 4.8 strongly depends on the kinematic term x, reducing to zero as the
-reconstructed invariant mass of the electron-position pair reached the π0mass. The
+reconstructed invariant mass of the electron-positron pair reached the π0mass. The
 na62 software framework allows for the simulation of the Dalitz decay only when
 the kinematic variable x >0.5. From the true MC distribution in Figure 4.6 the
-fraction of events above 0.5 was 0.003. Producing a simulation with the cut on the
+fraction of events above 0.5 is 0.003. Producing a simulation with the cut on the
 kinematic variable xwith a fraction of the size of the main sample, would decrease
 the errors on the MC counts by orders of magnitude.
 Figure 4.6: Reconstructed missing mass of electron-positron pair of in terms of
@@ -2861,7 +2866,7 @@ Dµ+νµ
 To improve the combination of the two K2πDsamples, events where x >0.5 were
 removed from the main sample at the selection stage. After the full selection of the
 MC samples they were combined into a single dataset to describe the background.
-Using the known NK, computed in Section 4.2 for the 2022 dataset the MC was
+Using the known NK, computed in Section 4.2 for the 2022 dataset the MC is
 scaled to match the number of events in the data. This resulted in the background
 estimation in terms of the electron positron invariant mass shown in Figure 4.7.
 0 20 40 60 80 100 120 140
@@ -2904,21 +2909,21 @@ the slope factor for the MC. In the NA62 framework, by default, the slope factor
 defined as a= 0.032.
 The comparison in Figure 4.8 shows data over MC from Figure 4.7 in terms of
 the kinematic parameter xdescribed in Equation 4.7. This distribution suggests
-that there was a discrepancy between the expected and data as xincreases. The
+that there is a discrepancy between the expected and data as xincreases. The
 dependence along xsuggests that the TFF found in the framework is incompatible
 for use in the background estimate with this data set. As the MC samples had
-already been produced, a correction was required to remove the applied TFF.
+already been produced, a correction is required to remove the applied TFF.
 Figure 4.8: Data vs MC in terms of reconstructed kinematic variable xwith the
 framework transition form factor
 The TFF used by the framework is removed by fitting the square of the TFF,
 shown in Equation 4.10, on the data over MC.
 F(x)2= (1 + ax)2(4.10)
 974.3 The Search for Dark Photons at NA62 Dark Photon Search
-The fitted line shown in Figure 4.8 is the TFF of the framework which was removed
-from the data by inverting the effects of Equation 4.10. This resulted in the dis-
-tribution shown in Figure 4.9. The data over MC with the removed effects of the
-TFF was fitted with equation 4.10 using a least χ2method, with the resultant TFF
-shown as a line in Figure 4.9. The fitted TFF in Figure 4.9 shows a slope factor of,
+The fitted line shown in Figure 4.8 is the TFF of the framework which is removed
+from the data by inverting the effects of Equation 4.10. This resulted in the distri-
+bution shown in Figure 4.9. The data over MC with the removed effects of the TFF
+is fitted with equation 4.10 using a least χ2method, with the resultant TFF shown
+as a line in Figure 4.9. The fitted TFF in Figure 4.9 shows a slope factor of,
 a= 0.0210±0.0029. (4.11)
 Figure 4.9: Data vs MC in terms of reconstructed kinematic variable xwith the
 framework transition form factor removed
@@ -2953,10 +2958,10 @@ The range of the DP search is defined as 9 ≤mA′≤120 MeV /c2. The lower
 mass boundary is defined due to the falling geometric acceptance of the decay and
 the low electron identification efficiency at low momentum. The upper boundary is
 defined due to both the falling geometrical acceptance and suppressed decay width.
-To select the search window centers and size of the windows, the reconstructed mass
-resolution was considered. The reconstructed mass resolution was calculated using
+To select the search window centers and size of the windows, the reconstructed
+mass resolution is considered. The reconstructed mass resolution is calculated using
 MC, where the difference between the true mass and the reconstructed mass of the
-electron-positron pair was collected for each mass bin and shown in Figure 4.13.
+electron-positron pair is collected for each mass bin and shown in Figure 4.13.
 1004.3 The Search for Dark Photons at NA62 Dark Photon Search
 Figure 4.13: True invariant mass minus reconstructed invariant mass of the electron-
 positron pair in terms of true invariant mass.
@@ -2973,9 +2978,7 @@ at NA48/2.
 Figure 4.14: Sigma of the difference between true and reconstructed invariant mass
 of the electron-positron pair in bin of true invariant mass.
 The window centres are separated by 3 σm(mA′), with a window width of ±1.5σm(mA′)
-rounded to the nearest 0.01 MeV /c2. The rounding was required as this is the size
-of the output bins from the selection of the invariant mass spectrum. This results
-in 177 DP mass values tested.
+rounded to the nearest 0.01 MeV /c2. This results in 177 DP mass values tested.
 For each DP mass value, the number of data events ( Nobs) is compared to the
 number of expected events obtained from MC ( Nexp). The Nobs,Nexpand their
 subsequent errors are shown in Figure 4.15. The error on the number of data events
@@ -2985,14 +2988,14 @@ error on the number of MC events within the search window. A correction is requi
 due to the scale factor imposed on the MC to equate for the correct effective kaon
 flux, defined in Section 4.2. The error for Nexpis defined as δNexp=sf×p
 Nexp/sf
-where sfwas the scale factor used to scale the MC sample. It would have been
+where sfis the scale factor used to scale the MC sample. It would have been
 required to include statistical errors due to the trigger efficiencies, but as mentioned
-previously, all MC samples employed a trigger emulator, so this was not required.
+previously, all MC samples employed a trigger emulator, so this is not required.
 1024.3 The Search for Dark Photons at NA62 Dark Photon Search
 Figure 4.15: Number of observed data events ( Nobs), expected number of events
 from MC ( Nexp), the respective errors ( δNobsandδNexp) and the resultant UL on
 the number of Dark Photon candidates to a 90% confidence level.
-For each DP mass window the local significance of the DP signal was calculated,
+For each DP mass window the local significance of the DP signal is calculated,
 Z=Nobs−Nexpp
 δNobs+δNexp(4.13)
 and is shown in Figure 4.16. Across the search window, the local significance is
@@ -3041,18 +3044,18 @@ Figure 4.16: Local significance of DP signal across the search window 9 ≤mA′
 120 MeV /c2. Top, in terms of DP mass and bottom, the y projection of the top
 plot.
 The UL on the NDPis used to calculate the resultant 90% CL on the branching
-fraction of the decay π0→γA′, which was computed with Equation 4.19, with the
+fraction of the decay π0→γA′, which is computed with Equation 4.19, with the
 assumption that B(A′→e+e−) = 1.
 Bπ→γA=NDP
 NKBK2πADP(K2π)(4.19)
-where NKwas the effective kaon flux defined in Section 4.2, BK2πis the branching
-fraction of K+→π+π0[32] and ADP(K2π) was the acceptance of the DP signal.
-The acceptance ADP(K2π) was calculated using the acceptance of the π0
-Ddecay
-shown in Figure 4.4, parametrised with a polynomial to allow for the calculation
-of the acceptance in terms of DP mass. The resultant branching fraction at a 90%
-CL across the DP mass range is shown in Figure 4.17. The reduction of the UL at
-90 MeV /c2was due to the improved statistical errors provided by using the second
+where NKis the effective kaon flux defined in Section 4.2, BK2πis the branching
+fraction of K+→π+π0[32] and ADP(K2π) is the acceptance of the DP signal.
+The acceptance ADP(K2π) is calculated using the acceptance of the π0
+Ddecay shown
+in Figure 4.4, parametrised with a polynomial to allow for the calculation of the
+acceptance in terms of DP mass. The resultant branching fraction at a 90% CL
+across the DP mass range is shown in Figure 4.17. The reduction of the UL at
+90 MeV /c2is due to the improved statistical errors provided by using the second
 K2πDsample biased using the kinematic variable. The red dashed lines provide the
 1054.3 The Search for Dark Photons at NA62 Dark Photon Search
 range of the NA48/2 result [44], suggesting that with an improved sample size, a
@@ -3069,12 +3072,12 @@ A′
 m2
 π03
 B(π0→γγ)(4.20)
-The UL for the mixing parameter ϵ2at a 90% CL across the DP mass range is
-shown in Figure 4.18. The NA62 result for the 2022 data was not competitive at
-low invariant mass ranges up to around 85 MeV /c2. This suggests that at low mass
-ranges, the UL is limited by the small MC sample size, producing large statistical
-errors. It is expected that if the MC sample x <0.5 was at the same statistical level
-as the biased sample, the UL could be improved by at least an order of magnitude.
+The UL for the mixing parameter ϵ2at a 90% CL across the DP mass range is shown
+in Figure 4.18. The NA62 result for the 2022 data is not competitive at low invariant
+mass ranges up to around 85 MeV /c2. This suggests that at low mass ranges, the
+UL is limited by the small MC sample size, producing large statistical errors. It is
+expected that if the MC sample x <0.5 is at the same statistical level as the biased
+sample, the UL could be improved by at least an order of magnitude.
 1064.3 The Search for Dark Photons at NA62 Dark Photon Search
 Figure 4.18: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Photon
 mass value with the result from NA48/2 for comparison [44].
@@ -3087,7 +3090,7 @@ estimation.
 4.3.2 Data-Driven Background Method
 The data-driven background method employed the same selection described previ-
 ously. Instead of using the produced MC samples for the background estimation,
-the data itself was used. In addition to the 2022 dataset used in the MC background
+the data itself is used. In addition to the 2022 dataset used in the MC background
 study, the 2023 and 2024 datasets were included for this study with the number of
 kaon decays defined in Section 4.2. The resultant reconstructed invariant mass of
 the electron-positron pair for events passing the selection is shown in Figure 4.19.
@@ -3104,11 +3107,11 @@ tion, defined with equation 4.12, is used to convert bins of Meeto DP candidate
 windows. A new DP mass range is defined as 6 ≤mA′≤121.6 MeV /c2. The mass
 ranges were extended compared to the previous MC approach due to the large num-
 ber of events in the mass bins at the extreme ends of the distribution afforded by
-only using the data sample rather than the MC. Each DP mass hypothesis is defined
-by steps of 1 σm(mA′). This deviated from the MC study where the window’s width
-was the size of the mass centre step. Now, the mass windows overlap, increasing
-the number of mass hypotheses. A 4th-order polynomial is fitted to the data dis-
-tribution using a least χ2method. The fitting region for each mass hypothesis is
+only using the data sample rather than the MC. Each DP mass hypothesis is de-
+fined by steps of 1 σm(mA′). This deviated from the MC study where the window’s
+width is the size of the mass centre step. Now, the mass windows overlap, increas-
+ing the number of mass hypotheses. A 4th-order polynomial is fitted to the data
+distribution using a least χ2method. The fitting region for each mass hypothesis is
 defined as ±15σm(mA′) from the mass hypothesis, and the distribution is re-binned
 for each point with a bin width of 1 /5σm(mA′). However, data events in the mass
 bins above 125 MeV /c2were removed due to the small counts causing instability
@@ -3189,11 +3192,11 @@ to the removed data events past 125 MeV /c2. However, this does not have any
 significant impact on the analysis due to the competitive acceptance at this high
 mass range. Using the same method used in the MC study, Nobs,NexpandδNexp
 are used as inputs to the CLs method to calculate the UL on the number of DP
-candidates in each mass window shown in Figure 4.22. The resultant combined error
-on the number of expected DP candidates was reduced by more than an order of
-magnitude compared to the MC study, which is shown in Figure 4.15. However, was
-a combination of the new background estimate method and the increase in statistics
-from the inclusion of the 2023 and 2024 datasets.
+candidates in each mass window shown in Figure 4.22. The resultant combined
+error on the number of expected DP candidates is reduced by more than an order
+of magnitude compared to the MC study, which is shown in Figure 4.15. However,
+this improvement is a combination of the new background estimation method and
+the increase in statistics from the inclusion of the 2023 and 2024 datasets.
 20 40 60 80 100 120
 MA (Dark photon mass hypothesis) [MeV/c2]
 100101102103104105106107
@@ -3209,7 +3212,7 @@ from the data-driven method ( Nexp), the respective errors ( δNobsandδNexp) an
 resultant UL on the number of Dark Photon candidates to a 90% confidence level.
 With Nobs,Nexp,δNobsandδNexpshown in Figure 4.22, the local significance of
 the DP signal is calculated with Equation 4.13 and is shown in Figure 4.23. The
-significance did not reach the threshold of three sigma, so no DP was observed.
+significance did not reach the threshold of three sigma, so no DP is observed.
 1124.3 The Search for Dark Photons at NA62 Dark Photon Search
 20 40 60 80 100 120
 MA (Dark photon mass hypothesis) [MeV/c2]
@@ -3254,30 +3257,14 @@ Figure 4.25: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data-driven background estimation, with the result from
 NA48/2 for comparison [44].
 1144.3 The Search for Dark Photons at NA62 Dark Photon Search
-The study significantly improves the UL of the square mixing parameter com-
-pared to the NA48/2 result by an order of magnitude. This is due to better statistics
-provided by NA62 and the improved method for using the data to estimate the back-
-ground, reducing the errors that previously limited the study. To see how this result
-compares to global results for the mixing parameter, the result from this analysis is
-presented in Figure 4.26, produced using the software package DarkCast. This is a
-companion software package to well-known papers [74, 75]. Figure 4.26 shows the
-results from this study and a number of other collaborations: NA48/2 [44], BaBar
-[76], NA64 [77], KLOE [78], KLOE-2 [79], FASER [80] and others [81, 82]. The re-
-sult from NA62 provides coverage to areas of the phase space not yet covered from
-previous experiments. With coverage past 25 MeV /c2providing new limits up to
-the search range upper limits.
-Figure 4.26: Upper limit at a 90% CL on the mixing parameter for the data-driven
-background estimate (Green) compared to published exclusions limits [44, 76, 77,
-78, 79, 80, 81, 82]
 The lowest limit on the mixing parameter ϵ2occurs at low DP mass due to
-the limited kinematic suppression of the DP decay. Key to this analysis was the
+the limited kinematic suppression of the DP decay. Key to this analysis is the
 assumption of the prompt decay, where the DP decays instantly into the lepton-
-1154.3 The Search for Dark Photons at NA62 Dark Photon Search
 antilepton pair. To ensure that the calculated limits above are correct, a check on
-the DP max mean path length was required. To calculate the max mean path of the
-DP, the max energy of the DP was required. From a nominal beam energy at NA62
-of 75 GeV /cthe maximum energy of the π0from the K2πdecay was calculated in
-the kaons rest reference frame,
+the DP max mean path length is required. To calculate the max mean path of the
+DP, the max energy of the DP is required. From a nominal beam energy at NA62
+of 75 GeV /cthe maximum energy of the π0from the K2πdecay is calculated in the
+kaons rest reference frame,
 Erest
 π0=M2+m2
 π0−m2
@@ -3285,7 +3272,7 @@ Erest
 2M= 0.246 GeV (4.21)
 where M,mπ0andmπ+were the kaon, neutral pion and charged pion masses, with
 the equation derived from basic two body decay kinematics. The π0momentum in
-the kaon rest frame was also defined as
+the kaon rest frame is defined as
 prest
 π0=q
 (Erest
@@ -3314,10 +3301,10 @@ a vertex greater than 1 m, a three-track vertex will be created by the reconstru
 which will result in the event being removed due to the requirement of one three-
 track vertex, reducing the acceptance. However, this is only true in the most extreme
 cases where all the energy is propagated from the kaon to the DP. In this extreme
-case, it is possible to visualise the 1 m prompt limit, which is shown in Figure 4.27 as
+1154.3 The Search for Dark Photons at NA62 Dark Photon Search
+case, it is possible to visualise the 1 m prompt limit, which is shown in Figure 4.26 as
 the dashed lines. The two lines represent the 1 m limit for the maximum DP energy
 and 50 % of the maximum. The fluctuations of the UP on the mixing parameter fall
-1164.4 The Search for Dark Photons at NA62 Conclusions
 between these two lines, suggesting that the prompt assumption is still valid except
 in the most extreme cases.
 20 40 60 80 100 120
@@ -3335,20 +3322,47 @@ EA=34.23GeV
 NA62-2022/23/24
 NA48/2 Result
 Prompt Limits (=1m)
-Figure 4.27: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
+Figure 4.26: Upper limit mixing parameter ϵ2at a 90% CL for each Dark Pho-
 ton mass value from the data-driven background estimation, with the result from
 NA48/2 for comparison [44] and the expected limit of the prompt decay.
+The study significantly improves the UL of the square mixing parameter com-
+pared to the NA48/2 result by an order of magnitude. This is due to better statistics
+provided by NA62 and the improved method for using the data to estimate the back-
+ground, reducing the errors that previously limited the study. To see how this result
+compares to global results for the mixing parameter, the result from this analysis is
+presented in Figure 4.27, produced using the software package DarkCast. This is a
+companion software package to well-known papers [74, 75]. Figure 4.27 shows the
+results from this study and a number of other collaborations: NA48/2 [44], BaBar
+[76], NA64 [77], KLOE [78], KLOE-2 [79], FASER [80] and others [81, 82]. The re-
+sult from NA62 provides coverage to areas of the phase space not yet covered from
+1164.4 The Search for Dark Photons at NA62 Conclusions
+previous experiments. With coverage past 25 MeV /c2providing new limits up to
+the search range upper limits.
+102
+101
+MA (Dark photon mass hypothesis) [GeV/c2]
+104
+103
+102
+ Dark Photon
+NA62BaBarBaBarBaBarBaBarBaBarBaBarBaBar
+FASERKLOE
+NA48/2
+NA64
+OrsayDavier
+Figure 4.27: Upper limit at a 90% CL on the mixing parameter for the data-driven
+background estimate (Green) compared to published exclusions limits [44, 76, 77,
+78, 79, 80, 81, 82]
 4.4 Conclusions
 The search for DP at NA62 has continued and expanded from the study conducted
-at NA48/2. Two methods for the background estimation have been presented: one
-utilising MC samples and the other utilising the data itself. It was found that us-
-ing the MC background estimation method produced uncompetitive results due to
-the limited size of the samples produced. The data driven background estimation
-however provided excellent results producing competitive limits for the mixing pa-
-rameter across the DP mass search range. The result covers an area which is yet
-to be covered by any other experiment at the time of writing. A final result will be
-available when NA62 completes data taking in 2026 and the full dataset is used for
-the analysis.
+at NA48/2 utilising the 2022 to 2024 datasets. Two methods for the background
+estimation have been presented: one utilising MC samples and the other utilising
+the data. It was found that using the MC background estimation method produced
+uncompetitive results due to the limited size of the samples produced. The data
+driven background estimation however provided excellent results producing compet-
+itive limits for the mixing parameter across the DP mass search range. The result
+covers an area which is yet to be covered by any other experiment at the time of
+writing.
 117Chapter 5
 Future Kaon Experiments
 Over the past 75 years the study of kaon physics has been integral to the develop-
