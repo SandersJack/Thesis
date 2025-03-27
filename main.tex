@@ -70,6 +70,15 @@
 
 \input{acronyms}
 
+\setcounter{topnumber}{5}
+\setcounter{bottomnumber}{5}
+\setcounter{totalnumber}{10}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.9}
+
+
 
 \begin{document}
 \pagenumbering{roman}
@@ -105,7 +114,7 @@
 \chapter{The NA62 Experiment}\label{sec:na62}
 \subfile{Chapters/detector/detector.tex}
 
-\chapter{CEDAR-H}\label{sec:cedarH}
+\chapter{The CEDAR-H Detector}\label{sec:cedarH}
 
 \subfile{Chapters/CEDARH/cedarh.tex}
 %\chapter{Contributions to NA62 Framework}\label{sec:na62fw}
