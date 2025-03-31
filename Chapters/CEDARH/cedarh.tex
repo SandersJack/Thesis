@@ -5,6 +5,13 @@
     \glsreset{cw}
     \glsreset{ch}
     \glsreset{cn}
+
+    As described in Section~\ref{sec:na62}, until 2022 NA62, has utilised a \gls{cw} filled with \gls{n2} at a nominal gas pressure of 1.71\,bar (absolute pressure) to identify kaons from the unseparated hadron beam.
+    For the searches for ultra-rare decays it is essential to reduce backgrounds from dominant kaon decays and from upstream sources produced by scatted beam particles. Minimising the amount of material in the path of the beam is essential to reduce the upstream backgrounds. 
+    It is possible design a new \gls{CEDAR} with hydrogen as the radiator gas to reduce the amount of multiple scattering of beam particles within the vessel. The design, testing and commissioning of this new detector is detailed in this chapter.
+
+    
+
     \glspl{CEDAR} were designed and built at CERN to identify secondary beam particles at the \gls{SPS} \cite{Bovet:1982xf}. Two types of \gls{CEDAR} were developed at CERN:
     \gls{cw} and \gls{cn}, corresponding to the areas of use. The two designs differ in terms of the momentum range in which they can identify beam particles, \gls{cn} 
     able to separate kaons and pions up to \SI{300}{\giga\electronvolt\per\clight} and detect protons down to \SI{60}{\giga\electronvolt\per\clight}. \gls{cw} can detect protons down to \SI{12}{\giga\electronvolt\per\clight}
@@ -26,11 +33,9 @@
         \end{tabular}
         \label{tab:cedar_material_comparison}
     \end{table}
-    \newline\indent As described in Section~\ref{sec:na62}, until 2022 NA62 has utilised a \gls{cw} filled with \gls{n2} at a nominal gas pressure of 1.71\,bar (absolute pressure).
-    In this configuration, the \gls{CEDAR} contributed the most significant amount of material in the path of the beam, corresponding to $39 \times 10^{-3}\,X_0$, 
+    The \gls{cw} with \gld{n2}, contributed the most significant amount of material in the path of the beam, corresponding to $39 \times 10^{-3}\,X_0$, 
     where $X_0$ is one radiation length. The \gls{CEDAR} vessel contributed $3.9 \times 10^{-3}\,X_0$ and the \gls{n2} gas contributed $35 \times 10^{-3}\,X_0$.
-    The material from the \gls{cw} with \gls{n2} resulted in the multiple scattering of beam particles, introducing an angular divergence in the beam of $32\,\mu rad$. Scattered beam particles 
-    contribute to the backgrounds for the searches for ultra-rare decays. In order to reduce these backgrounds, minimising the amount of material in the path of the beam is essential. 
+    The material from the \gls{cw} with \gls{n2} resulted in the multiple scattering of beam particles, introducing an angular divergence in the beam of \SI{32}{\micro\radian}. 
     It is proposed that a \gls{CEDAR} filled with \gls{h2} could reduce the material due to the radiator gas's lower density. Using \gls{h2} as a radiator gas would require a pressure of 3.8\,bar 
     to produce a similar Cherenkov angle as \gls{n2} gas at \SI{1.71}{\bar}. \gls{h2} at this pressure introduces $3.4 \times 10^{-3}\,X_0$ of material, which would result in a factor of five reduction in material compared to \gls{n2}, resulting in a total 
     material of $7.3 \times 10^{-3}\,X_0$. The expected angular beam divergence is $13\,\mu rad$ in both the horizontal and vertical dimensions. A summary of the material budget of each detector is shown in Table~\ref{tab:cedar_material_comparison}.
@@ -61,10 +66,10 @@
     \end{equation}
     where $c$ is the speed of light in a vacuum, and $n$ is the refractive index of the radiator gas, Cherenkov light is produced. The Cherenkov light from the beam particles is emitted as cones with a semi-aperture angle dependent on the speed of the beam particle,
     \begin{equation}\label{eq:Cherenkov2}
-    \cos{\theta} = \frac{1}{\beta n}
+    \cos{\theta_c} = \frac{1}{\beta n}
     \end{equation}
-    with $n$ being the refractive index of the radiator gas and $\beta$ the beam particle velocity defined as $\beta = (1 + \frac{m}{p})^{-1/2}$ where $m$ is the particles mass and $p$ is its momentum. A differential counter is designed to focus the Cherenkov light to produce a ring image to distinguish particles of different masses. Particles of different masses produce 
-    produce ring images a different radii. 
+    with $n$ being the refractive index of the radiator gas, $\theta_c$ is the semi-aperture angle and $\beta$ the beam particle velocity defined as $\beta = (1 + \frac{m}{p})^{-1/2}$ where $m$ is the particles mass and $p$ is its momentum. A differential counter is designed to focus the Cherenkov light to a ring image in order to distinguish particles of different masses. Particles of different masses produce 
+    produce ring images of different radii. 
     %The momentum ($p$) is constant for all beam particles in NA62, and for a constant refractive index, different particles produce slightly different Cherenkov angles due to their differing mass.
     %\newline\indent The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis, passing through the radiator gas. When the beam passes through the vessel, Cherenkov
     %light is produced with an angle dependent on the mass and momentum of the beam particle and is defined as equation~\ref{eq:Cherenkov2}.
@@ -74,12 +79,29 @@
 
     The \gls{CEDAR} contains optical elements inside the vessel to allow the reflection and focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm, as displayed in Figure~\ref{fig:CEDAR_DIA} as the orange lines. 
     The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}. This is a lens comprising two spherical surfaces, with the downstream surface cemented onto a concave mirror having an identical radius of curvature.
+    The radius at which the light is focused at the focal point is defined as, 
+    \begin{equation}
+        R_{focal} = f \theta_c
+    \end{equation}
+    where $f_m$ is the focal length for the Mangin mirror. The focal length of a Mangin mirror with two spherical surfaces is defined as, 
+    \begin{equation} 
+        \frac{1}{f_m} = \frac{2(n_m - 1)}{r_1} + \frac{2}{r_1}
+    \end{equation}
+    where $n_m$ is the refractive index of the Mangin mirror, $r_1$ and $r_2$ are the radii of curvature of the refracting and reflecting surfaces. 
     %A mirror comprising two spherical surfaces with the downstream lens cemented onto a concave mirror. 
     The mirror is designed to reduce spherical aberrations, an effect intrinsic to lenses and curved mirrors where the light that strikes the spherical surface off-centre is refracted/reflected
     to different points compared to the light that would strike the centre of the mirror. After the mirror, the light goes through a plano-convex lens named the Chromatic Corrector, which is designed in such a way that it corrects for the chromatic dispersion of the radiator gas
-    and directs the light towards the diaphragm.
-    Chromatic dispersion happens because different wavelengths of light refract differently in a medium, causing the Cherenkov ring to disperse, which would result in some of the light being lost when it reaches the small diaphragm opening. Both the Mangin mirror and the 
-    Chromatic corrector have a hole in the centre to allow for the beam to pass through without impacting the optics. 
+    and directs the light towards the diaphragm. 
+    Chromatic dispersion occurs due to different wavelengths of light refracting differently in a medium, causing the Cherenkov ring to disperse, which would result in some of the light being lost when it reaches the small diaphragm opening. Both the Mangin mirror and the 
+    Chromatic corrector have a hole in the centre to allow for the beam to pass through without impacting the optics. For a plano-convex lens the focal distance is defined as 
+    \begin{equation}
+        \frac{1}{f_{cc}} = \frac{(n_{cc}-1)}{r_{cc}}
+    \end{equation}
+    where $n_{cc}$ is the refractive index of the Chromatic Corrector and $r_{cc}$ is the radius of curvature of the convex side. Combined with the Mangin mirror the final focal distance is found as
+    \begin{equation}
+        \frac{1}{f_{Total}} = \frac{1}{f_m} + \frac{1}{f_{cc}} - \frac{d}{f_{m}f_{cc}}
+    \end{equation}
+    where $d$ is the distance between the Mangin mirror and the corrector lens. The optical parameters for the \gls{cw} are found in Table \ref{table:CedarParameterValues}.
     
     \newline\indent The diaphragm is shown in Figure~\ref{fig:cedarpics}, as a disk with eight separate apertures is located at the focal distance of the Mangin mirror. Each aperture has an inner and outer element which allows the aperture to open to  
     20\,mm and close to 0\,mm symmetrically about a radius of 100\,mm. These elements can be seen in Figure~\ref{fig:cedarpics} (right), where the aperture was set at a small value, used only to select a single Cherenkov ring of radius 100\,mm.  
