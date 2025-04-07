@@ -7,6 +7,8 @@
     \glsreset{DP}
     \glsreset{PID}
     \glsreset{kpid}
+    \glsreset{UL}
+    \glsreset{CL}
     %% Intro with background on NA48/2
     This chapter summarises the search for the \gls{DP} at NA62, called A', with the data collected from 2022 to 2024.
     The analysis aims to set limits on the mixing parameter of the \gls{DP} utilising the production of $A'$ through the decay of $\pi^0 \to \gamma A'$ and its subsequent decay into SM particles $A' \to e^+e^-$. The theoretical background for this hypothetical \gls{DP} is described in Section \ref{sec:DarkP_th}. 
@@ -158,14 +160,14 @@
     %Both methods are described below. 
     \section{\gls{MC} Background Method}
     %As stated previously, the \gls{MC} background method only utilised the 2022 NA62 dataset. 
-    The limited size of the \gls{MC} samples is expected to impact the final result when used for the background estimate. However, due to compute time and file size, it is not feasible to directly increase the statistics on the main samples. Using a feature of the framework, the statistics across a portion of the reconstructed mass range can be increased.
-    The true \gls{MC} invariant mass of the electron-positron pair is used to calculate the kinematic variable $x$ from Equation \ref{eq:XParam}. 
+    The limited size of the \gls{MC} samples will impact the final result when used for the background estimate. However, due to compute time and file size, it is not feasible to directly increase the statistics on the main samples. Using a feature of the framework, the statistics across a portion of the reconstructed mass range is increased.
+    The true \gls{MC} invariant mass of the electron-positron pair is used to calculate the kinematic variable $x$,
     \begin{equation}\label{eq:XParam}
         x = \frac{(Q_{e^-} + Q_{e^+})^2}{m_{\pi^0}^2} = \frac{m_{ee}^2}{m_{\pi^0}^2}
     \end{equation}
-    where $Q_{e^-}$ and $Q_{e^+}$ are the four-momentum of the electron and positron pair, and $m_{\pi^0}$ is the mass of the neutral pion.
-    The resultant distribution of the \gls{kpid} in terms of the kinematic variable $x$ from the \gls{MC} is shown in Figure~\ref{fig:trueMC_X}. The decay width in Equation \ref{eq:partDecay} strongly depends on the kinematic term $x$, reducing to zero as the reconstructed invariant mass of the electron-positron pair reaches the $\pi^0$ mass. The NA62 software framework allows for the simulation of the Dalitz decay only when the kinematic variable $x > 0.5$. From the true \gls{MC} distribution in 
-    Figure~\ref{fig:trueMC_X} the fraction of events above 0.5 is 0.003. Producing a simulation with the cut on the kinematic variable $x$ with a fraction of the size of the main sample would decrease the errors on the \gls{MC} counts by orders of magnitude. 
+    where $Q_{e^-}$ and $Q_{e^+}$ are the four-momenta of the electron and positron pair, and $m_{\pi^0}$ is the mass of the neutral pion.
+    The resultant distribution of the \gls{kpid} in terms of the kinematic variable $x$ from the \gls{MC} is shown in Figure~\ref{fig:trueMC_X}. The decay width, defined in Equation \ref{eq:partDecay}, strongly depends on the kinematic term $x$. The decay width reduces to zero as the invariant mass of the electron-positron pair reaches the $\pi^0$ mass. The NA62 software framework allows for the simulation of the Dalitz decay only when the kinematic variable $x > 0.5$. From the true \gls{MC} distribution in 
+    Figure~\ref{fig:trueMC_X} the fraction of events where $x > 0.5$ is 0.003. Producing a simulation with the cut on the kinematic variable $x$ with a fraction of the size of the main sample decreases the errors on the \gls{MC} counts by orders of magnitude. 
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/TrueMC_X.png}
@@ -180,7 +182,7 @@
         \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$.
     \end{itemize}
     To improve the combination of the two \gls{kpid} \gls{MC} samples, events where $x > 0.5$ are removed from the large sample at the selection stage. 
-    After the full selection of the \gls{MC} samples, they are combined into a single dataset to estimate the background. Using the known $N_K$, computed in Section \ref{sec:kaonFlux} for the 2022 dataset the \gls{MC} 
+    After the full selection, the \gls{MC} samples are combined into a single dataset to estimate the background. Using the known $N_K$, computed in Section \ref{sec:kaonFlux} for the 2022 dataset the \gls{MC} 
     is scaled to match the number of events in the data. The background estimation in terms of the electron-positron invariant mass is shown in Figure~\ref{fig:mee_mc}.
     % the reconstructed mass of the electron-positron pair is shown in Figure~\ref{fig:mee_mc}. Using the computed $N_K$, the \gls{MC} was scaled to match the data.
     \begin{figure}[t]
@@ -190,27 +192,28 @@
         \caption{Reconstructed mass of electron-positron pair of data and \gls{MC} samples.}
         \label{fig:mee_mc}
     \end{figure}
+    
+    \subsection{The $\pi^0$ Transition Form Factor}
     The simulation of the $\pi^0_D$ uses the lowest-order differential decay rate \cite{PhysRevD.5.1763} defined below,
     \begin{equation}\label{eq:partDecay}
         \frac{d^2\Gamma}{dxdy} = \Gamma_0 \frac{\alpha}{\pi}|F(x)|^2\frac{(1-x)^3}{4x} \left(1+y^2+\frac{r^2}{x}\right)
     \end{equation}
     where $\Gamma_0$ is the $\pi^0 \to \gamma \gamma$ differential decay rate, $\alpha$ is the fine-structure constant, F(x) is the pion \gls{TFF}, $x$ and $y$ are the kinematic variables defined in Equation \ref{eq:XParam} and below,
     \begin{equation}
-        y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}
+        y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{m_{\pi^0}^2 (1-x)}.
     \end{equation}
-    The variables $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momentum of the electron, positron and charged pion. Within the kinematic region of Dalitz decay, the \gls{TFF} is expected to vary slowly as x increases and is approximated as $F(x) = 1 + ax$. The variable $a$ is the slope factor, which has been set through theoretical predictions and a number of experiments. 
+    The variables $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momenta of the electron, positron and charged pion. Within the kinematic region of Dalitz decay, the \gls{TFF} varies slowly as x increases and is approximated as $F(x) = 1 + ax$. The variable $a$ is the slope factor, which has been set through theoretical predictions and a number of experiments. 
     The Vector Meson Dominance (VMD) model expects that $a = m_{\pi^0} (m_{\rho}^2 + m_{\omega}^2) / 2 = 0.03$ \cite{PhysRevD.83.037503}.
     For experiments, the \gls{PDG} average for all experiments is $a = 0.0335 \pm 0.0031$ \cite{Tanabashi:2018oca}. Due to significant errors and inconsistent results experimentally, it is not possible to rely on external values for the slope factor for the MC.  
     In the NA62 framework, the slope factor is defined as $a =  0.032$ by default. 
     
-    \subsection{Transition Form Factor Correction}
     The comparison in Figure~\ref{fig:MCDATAFF} shows data over \gls{MC} from Figure~\ref{fig:mee_mc} in terms of the kinematic parameter $x$ described in Equation \ref{eq:XParam}. This distribution suggests a discrepancy between the expected background and data as $x$ increases. The dependence along $x$ suggests that the TFF found in the framework is incompatible with the background estimate for this data set.
     As the \gls{MC} samples have already been produced, a correction is required to remove the applied \gls{TFF}. %The \gls{MC} is re-weighted using the events passing the selection compared against the expected number of events from \gls{MC} across the reconstructed mass range.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/MCDataWithFF.png}
         \linespread{1.0}
-        \caption{Data vs \gls{MC} in terms of reconstructed kinematic variable $x$ with the framework transition form factor.}
+        \caption{Data/\gls{MC} in terms of reconstructed kinematic variable $x$ with the framework \gls{TFF}. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
         \label{fig:MCDATAFF}
     \end{figure}
     The \gls{TFF} used by the framework is removed by fitting the square of the TFF,
@@ -218,18 +221,18 @@
         F(x)^2 = (1 + ax)^2
     \end{equation}
     on the data over \gls{MC}.
-    The fitted line shown in Figure~\ref{fig:MCDATAFF} is the \gls{TFF} of the framework, which is removed from the data by inverting the effects of Equation \ref{eq:TFFsq}. This results in the distribution shown in Figure~\ref{fig:MCDATANOFF}. The data over \gls{MC} with the removed effects of the \gls{TFF} is fitted with equation \ref{eq:TFFsq} using a least $\chi^2$ method, with the resultant TFF shown as a line in Figure~\ref{fig:MCDATANOFF}. The fitted TFF in Figure~\ref{fig:MCDATANOFF} produces a slope factor of,
+    The fitted line shown in Figure~\ref{fig:MCDATAFF} is the \gls{TFF} of the framework, which is removed from the data by inverting the effects of Equation \ref{eq:TFFsq}. This results in the distribution shown in Figure~\ref{fig:MCDATANOFF}. The data over \gls{MC} with the removed \gls{TFF} is fitted with equation \ref{eq:TFFsq} using a least $\chi^2$ method, with the resultant TFF shown as a line in Figure~\ref{fig:MCDATANOFF}. The fitted TFF in Figure~\ref{fig:MCDATANOFF} produces a slope factor of,
     \begin{equation}
-        a = 0.0210 \pm 0.0029.
+        a = 0.021 \pm 0.003.
     \end{equation}
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/MCDataNOFF.png}
         \linespread{1.0}
-        \caption{Data vs \gls{MC} in terms of reconstructed kinematic variable $x$ with the framework transition form factor removed.}
+        \caption{Data/\gls{MC} in terms of reconstructed kinematic variable $x$ with the framework \gls{TFF} removed. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
         \label{fig:MCDATANOFF}
     \end{figure}
-    The correction results in an improved Data/\gls{MC} agreement shown in Figure~\ref{fig:mee_mc_afteTFF} compared to Figure~\ref{fig:mee_mc}. The \gls{TFF} correction is used throughout the study for the \gls{MC} samples.
+    The correction results in an improved Data over \gls{MC} agreement shown in Figure~\ref{fig:mee_mc_afteTFF} compared to Figure~\ref{fig:mee_mc}. The \gls{TFF} correction is used throughout the study for the \gls{MC} samples.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/Mee_mc_afterTFF_new.pdf}
@@ -240,7 +243,7 @@
 
     \subsection{Dark Photon Search Window}
     The counts for events passing the selection in terms of the reconstructed invariant mass for each \gls{MC} sample are shown in Figure~\ref{fig:counts_mc_data}. It shows how the two \gls{kpid} samples have been combined to produce a continuous distribution and 
-    shows the contribution from the \gls{kmu3D} decay along with the data.
+    shows the contribution from the \gls{kmu3D} decay.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/counts_MC_Data.png}
@@ -299,7 +302,7 @@
     \begin{equation}\label{eq:localSig}
         Z = \frac{N_{obs} - N_{exp}}{\sqrt{\delta N_{obs} + \delta N_{exp}}}
     \end{equation}
-    and is shown in Figure~\ref{fig:local_sig}. Across the search window, the local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal observed. 
+    and is shown in Figure~\ref{fig:local_sig}. Across the search window, the local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed. 
     The \gls{UL} for the number of \gls{DP} decays ($A' \to e^+e^-$) at a 90\% \gls{CL} for each \gls{DP} mass value is calculated with $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method. This method is recommended by the Particle Data Group \cite{Cowan:2018} and employs the process set out in \cite{Junk:1999kv, Read:2000ru}.
     For setting an \gls{UL} on the signal $s$ from a counting experiment where $N$ events are observed, and there is a known expected background $b$, it can be considered a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
     \begin{equation}\label{eq:test_stat}
@@ -341,7 +344,15 @@
         \mathcal{B}{\pi \to \gamma A} = \frac{N_{DP}}{N_K \mathcal{B}_{K_{2\pi}} A_{DP}(K_{2\pi})}
     \end{equation}
     where $N_K$ is the effective kaon flux defined in Section \ref{sec:kaonFlux}, $\mathcal{B}_{K_{2\pi}}$ is the branching fraction of $K^+ \to \pi^+ \pi^0$ \cite{Olive:2014pdg} and $A_{DP}(K_{2\pi})$ is the acceptance of the \gls{DP} signal. The acceptance $A_{DP}(K_{2\pi})$ is calculated using the acceptance of 
-    the $\pi^0_D$ decay shown in Figure~\ref{fig:accept}, parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass. The resultant branching fraction at a 90\% \gls{CL} across the \gls{DP} mass range is shown in Figure~\ref{fig:branchinFrac}. The reduction of the \gls{UL} at 
+    the $\pi^0_D$ decay shown in Figure~\ref{fig:accept}, parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass, shown in Figure~\ref{fig:acceptDP}. 
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.7\textwidth]{plots/accept_poly.png}
+        \linespread{1.0}
+        \caption{\gls{DP} acceptance in terms of mass parametrised with a polynomial, shown in red.}
+        \label{fig:acceptDP}
+    \end{figure}
+    The resultant branching fraction at a 90\% \gls{CL} across the \gls{DP} mass range is shown in Figure~\ref{fig:branchinFrac}. The reduction of the \gls{UL} at 
     90\,\si{\mega\electronvolt\per\clight^2} is due to the improved statistical errors provided by using the second $K_{2\pi_D}$ sample biased using the kinematic variable. The red dashed lines provide the range of the NA48/2 result \cite{2015178}, suggesting that with an improved sample size, a 
     two-order of magnitude improvement is possible.
     \begin{figure}[t]
@@ -356,7 +367,7 @@
         \epsilon^2 = \frac{B(\pi^{0} \to \gamma A^{'})}{2 \left(1-\frac{m^2_{A'}}{m^2_{\pi^{0}}}\right)^3 B(\pi^{0} \to \gamma \gamma )}.
     \end{equation}
     The \gls{UL} for the mixing parameter $\epsilon^2$ at a 90\% \gls{CL} across the \gls{DP} mass range is shown in Figure~\ref{fig:epsilon_sq}. The NA62 result for the 2022 data is not competitive at low invariant mass ranges up to around \SI{85}{\mega\electronvolt\per\clight^2}.
-    This suggests that at low mass ranges, the \gls{UL} is limited by the small \gls{MC} sample size. It is expected that if the \gls{MC} sample $x < 0.5$ is at the same statistical level as the biased sample, the \gls{UL} could be improved by at least an order of magnitude.
+    This suggests that at low mass ranges, the \gls{UL} is limited by the small \gls{MC} sample size. If the main \gls{MC} sample is produced at the same statistical level as the biased sample, the \gls{UL} could be improved by at least an order of magnitude.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/eplisonsq_mc.png}
@@ -367,7 +378,7 @@
     Without increased \gls{MC} statistics, the study would not be competitive with the already published result from NA48/2 \cite{2015178} except for high mass ranges above \SI{85}{\mega\electronvolt\per\clight^2}. As this method is limited by the low statistics of the \gls{MC}, it would not be improved by introducing larger NA62 datasets.
     %% Can maybe put the global plot, but may not be necessary
     A new method is employed that drastically reduces the statistical error introduced by the \gls{MC} for the background estimation. 
-    \section{Data-Driven Background Method}
+    \section{Background Estimation Using Data Distribution}
     %The data-driven background method employed the same selection described previously. 
     Instead of using the produced \gls{MC} samples for the background estimation, the data itself is used. In addition to the 2022 dataset used in the \gls{MC} background study, the 2023 and 2024 datasets are included for this study with the number of effective kaon decays 
     defined in Section \ref{sec:kaonFlux}. The resultant reconstructed invariant mass of the electron-positron pair for events passing the selection is shown in Figure~\ref{fig:22_23_data}.
@@ -383,9 +394,9 @@
 
     \subsection{Fitting the data distribution}
     A method similar to the previous section using the reconstructed mass resolution, defined with equation \ref{eq:mass_res}, is used to convert bins of $M_{ee}$ to \gls{DP} candidate windows.
-    A new \gls{DP} mass range is defined as $6 \leq m_{A'} \leq 121.6$\,\si{\mega\electronvolt\per\clight\squared}. The mass ranges are extended compared to the previous \gls{MC} approach due to the large number of events in the mass bins at the extreme ends of the distribution afforded by only using the data sample rather than the MC. Each \gls{DP} mass hypothesis is defined by steps of $1\sigma_m(m_{A'})$. 
+    A new \gls{DP} mass range is defined as $6 \leq m_{A'} \leq 121.6$\,\si{\mega\electronvolt\per\clight\squared}. The mass ranges are extended compared to the previous \gls{MC} study. This is due to the large number of events in the mass bins at the extreme ends of the distribution afforded by only using the data sample rather than the MC. Each \gls{DP} mass hypothesis is defined by steps of $1\sigma_m(m_{A'})$. 
     %This deviated from the \gls{MC} study where the window's width is the size of the mass centre step. 
-    The mass windows overlap, increasing the number of mass hypotheses compared to the \gls{MC} study. %How many?
+    The mass windows overlap which result in 428 mass hypotheses. %This is  compared to the \gls{MC} study. %How many?
     A 4th-order polynomial is fitted to the data distribution using a least $\chi^2$ method. The fitting region for each mass hypothesis is defined as $\pm 15\sigma_m(m_{A'})$ from the mass hypothesis, and the distribution is re-binned for each point with a bin width of $1/5\sigma_m(m_{A'})$. 
     Data events in the mass bins above \SI{125}{\mega\electronvolt\per\clight\squared} are removed. This is because the small counts at the edge of the mass range cause instability with the fitting.
     Events in the mass bins $\pm 1.5 \sigma_m(m_{A'})$
@@ -417,13 +428,13 @@
         \caption{Fits of the data distributions with polynomial for the final \gls{DP} mass hypothesis. Top left, the data fitted with 3rd order used for the systematic uncertainty calculation, top right fitted with a 4th order polynomial for the background estimation and bottom fitted with 5th order for the systematic uncertainty calculation.}%
         \label{fig:exampleend_fit}%
     \end{figure}
-    The polynomial fits for the final \gls{DP} mass hypothesis are shown in Figure~\ref{fig:exampleend_fit}, showing how all events after \SI{125}{\mega\electronvolt\per\clight\squared} have been removed from the fitting region. 
-    The upper boundary for the search region is selected for when the fits with the polynomials become unstable due to the reduced number of data events. %when fitting became unstable due to the reduced number of data points on the right side of the mass window, which would have inevitably increased the error in this region.
+    The polynomial fits for the final \gls{DP} mass hypothesis are shown in Figure~\ref{fig:exampleend_fit}, showing all events after \SI{125}{\mega\electronvolt\per\clight\squared} being removed from the fitting region. 
+    The upper boundary for the search region is selected when the fits with the polynomials become unstable due to the reduced number of data events. %when fitting became unstable due to the reduced number of data points on the right side of the mass window, which would have inevitably increased the error in this region.
     
     The resultant $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ are shown in Figure~\ref{fig:datadrive_plot}. The combined expected error $\delta N_{obs}$ has reduced compared to the \gls{MC} background presented in Figure~\ref{fig:searchwindow_vals}. 
     The error $\delta N_{exp}^{syst}$ becomes dominant compared to the statistical above \SI{100}{\mega\electronvolt\per\clight\squared}. This is caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight\squared}. However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
-    Using the same method used in the \gls{MC} study, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ are used as inputs to the CLs method to calculate the \gls{UL} on the number of \gls{DP} candidates in each mass window shown in Figure~\ref{fig:datadrive_plot}. The combined error on the number of expected \gls{DP} candidates is reduced by more than an order of magnitude compared to the \gls{MC} study, which is shown in Figure~\ref{fig:searchwindow_vals}. However,
-    this improvement combines the new background estimation method and the increase in statistics from the inclusion of the 2023 and 2024 datasets.
+    Using the same method used in the \gls{MC} study, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ are used as inputs to the CLs method to calculate the \gls{UL} on the number of \gls{DP} candidates in each mass window shown in Figure~\ref{fig:datadrive_plot}. The combined error on the number of expected \gls{DP} candidates is reduced by more than an order of magnitude compared to the \gls{MC} study, which is shown in Figure~\ref{fig:searchwindow_vals}.
+    The reduction in error is from  the new background estimation method and the increase in statistics from the inclusion of the 2023 and 2024 datasets.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/datadrive_plot_24.pdf}
@@ -451,14 +462,14 @@
         \centering 
         \includegraphics[width=0.65\textwidth]{plots/branchingFrac_data_24.pdf}
         \linespread{1.0}
-        \caption{Upper limit on the branching fraction of $\pi^0 \to \gamma A'$ at a 90\% \gls{CL} for each Dark Photon mass value, for the data-driven background method for estimating the number of expected events.}
+        \caption{Upper limit on the branching fraction of $\pi^0 \to \gamma A'$ at a 90\,\% \gls{CL} for each Dark Photon mass value, for the data-driven background method for estimating the number of expected events.}
         \label{fig:branchinFrac_data}
     \end{figure}
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24_wout.pdf}
         \linespread{1.0}
-        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\% \gls{CL} for each Dark Photon mass value from the data-driven background estimation, with the result from NA48/2 for comparison \cite{2015178}.}
+        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each Dark Photon mass value from the data-driven background estimation, with the result from NA48/2 for comparison \cite{2015178}.}
         \label{fig:epsilon_sq_data}
     \end{figure}
     
@@ -491,9 +502,9 @@
     %displaced decay is shown in Figure~\ref{fig:prompt}.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/eplisonsq_data_24.pdf}
+        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24.pdf}
         \linespread{1.0}
-        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\% \gls{CL} for each Dark Photon mass value from the data-driven background estimation, with the result from NA48/2 for comparison \cite{2015178} and the expected limit of the prompt decay.}
+        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each Dark Photon mass value from the data-driven background estimation, with the result from NA48/2 for comparison \cite{2015178} and the expected limit of the prompt decay.}
         \label{fig:prompt}
     \end{figure}
 
@@ -503,7 +514,7 @@
 
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/globalfit_24.pdf}
+        \includegraphics[width=0.65\textwidth]{plots/globalfit_24.pdf}
         \linespread{1.0}
         \caption{Upper limit at a 90\% \gls{CL} on the mixing parameter for the data-driven background estimate (Green) compared to published exclusions limits \cite{2015178, Lees:2014xha,Banerjee:2019hmi,Anastasi:2015qla,Babusci:2012cr,Petersen:2023hgm,Davier:1989wz,Bodas:2021fsy}.}
         \label{fig:global_exclusion}
