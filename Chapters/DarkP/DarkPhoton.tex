@@ -9,6 +9,7 @@
     \glsreset{kpid}
     \glsreset{UL}
     \glsreset{CL}
+    \glsreset{TFF}
     %% Intro with background on NA48/2
     This chapter summarises the search for the \gls{DP} at NA62, called A', with the data collected from 2022 to 2024.
     The analysis aims to set limits on the mixing parameter of the \gls{DP} utilising the production of $A'$ through the decay of $\pi^0 \to \gamma A'$ and its subsequent decay into SM particles $A' \to e^+e^-$. The theoretical background for this hypothetical \gls{DP} is described in Section \ref{sec:DarkP_th}. 
@@ -160,7 +161,7 @@
     %Both methods are described below. 
     \section{\gls{MC} Background Method}
     %As stated previously, the \gls{MC} background method only utilised the 2022 NA62 dataset. 
-    To estimate the background for the \gls{DP} search the \gls{MC} is used and is compared to the data.
+    The background for the search for \gls{DP} is a combination of \gls{kpid} and \gls{kmu3D} which are modelled by \gls{MC} and compared against the data.
     The limited size of the \gls{MC} samples will impact the final result when used for the background estimate. However, due to compute time and file size, it is not feasible to directly increase the statistics on the main samples. Using a feature of the NA62 framework, the statistics across a portion of the reconstructed mass range is increased.
     The true \gls{MC} invariant mass of the electron-positron pair is used to calculate the kinematic variable $x$,
     \begin{equation}\label{eq:XParam}
@@ -173,7 +174,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/TrueMC_X.png}
         \linespread{1.0}
-        \caption{Reconstructed missing mass of electron-positron pair in terms of kinematic variable $x$.}
+        \caption{True invariant mass of the electron-positron pair divided by the $\pi^0$ mass of the \gls{kpid} \gls{MC} sample, which is equal to the kinematic variable $x$.}
         \label{fig:trueMC_X}
     \end{figure}
     For the rest of the study, the following \gls{MC} samples are used,
@@ -190,7 +191,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/mee_mc_new.pdf}
         \linespread{1.0}
-        \caption{Reconstructed mass of electron-positron pair for 2022 data and \gls{MC} samples.}
+        \caption{Reconstructed invariant mass of electron-positron pair for 2022 data and \gls{MC} samples.}
         \label{fig:mee_mc}
     \end{figure}
     
@@ -214,7 +215,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/MCDataWithFF.png}
         \linespread{1.0}
-        \caption{Data/\gls{MC} in terms of reconstructed kinematic variable $x$ with the framework \gls{TFF}. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
+        \caption{Data/\gls{MC} in terms of the reconstructed kinematic variable $x$ with the framework \gls{TFF}. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
         \label{fig:MCDATAFF}
     \end{figure}
     The \gls{TFF} used by the framework is removed by fitting the square of the TFF,
@@ -230,15 +231,15 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/MCDataNOFF.png}
         \linespread{1.0}
-        \caption{Data/\gls{MC} in terms of reconstructed kinematic variable $x$ with the framework \gls{TFF} removed. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
+        \caption{Data/\gls{MC} in terms of the reconstructed kinematic variable $x$ with the framework \gls{TFF} removed. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
         \label{fig:MCDATANOFF}
     \end{figure}
-    The correction results in an improved Data over \gls{MC} agreement shown in Figure~\ref{fig:mee_mc_afteTFF} compared to Figure~\ref{fig:mee_mc}. The \gls{TFF} correction is used throughout the study for the \gls{MC} samples.
+    The correction results in the \gls{MC} background estimation better modelling the data, shown in Figure~\ref{fig:mee_mc_afteTFF} compared to Figure~\ref{fig:mee_mc}. The \gls{TFF} correction is used throughout the study for the \gls{MC} samples.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/Mee_mc_afterTFF_new.pdf}
         \linespread{1.0}
-        \caption{Reconstructed mass of electron-positron pair for data and \gls{MC} samples corrected for the effective \gls{TFF}.}
+        \caption{Reconstructed invariant mass of electron-positron pair for data and \gls{MC} samples corrected for the effective \gls{TFF}.}
         \label{fig:mee_mc_afteTFF}
     \end{figure}
 
@@ -249,7 +250,7 @@
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/counts_MC_Data.png}
         \linespread{1.0}
-        \caption{Reconstructed mass of electron-positron pair for data, individual \gls{MC} samples and the final combined MC.}
+        \caption{Reconstructed invariant mass of electron-positron pair for data, individual \gls{MC} samples and the final combined MC.}
         \label{fig:counts_mc_data}
     \end{figure}
     \begin{figure}[t]
@@ -345,7 +346,7 @@
         \mathcal{B}{\pi \to \gamma A} = \frac{N_{DP}}{N_K \mathcal{B}_{K_{2\pi}} A_{DP}(K_{2\pi})}
     \end{equation}
     where $N_K$ is the effective kaon flux defined in Section \ref{sec:kaonFlux}, $\mathcal{B}_{K_{2\pi}}$ is the branching fraction of $K^+ \to \pi^+ \pi^0$ \cite{Olive:2014pdg} and $A_{DP}(K_{2\pi})$ is the acceptance of the \gls{DP} signal. The acceptance $A_{DP}(K_{2\pi})$ is calculated using the acceptance of 
-    the $\pi^0_D$ decay shown in Figure~\ref{fig:accept}, parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass, shown in Figure~\ref{fig:acceptDP}. 
+    the $\pi^0_D$ decay shown in Figure~\ref{fig:accept} and is parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass, shown in Figure~\ref{fig:acceptDP}. 
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/accept_poly.png}
@@ -476,7 +477,7 @@
     
     \section{Prompt Limit Calculation}\label{sec:PromptLim}
     The lowest limit on the mixing parameter $\epsilon^2$ occurs at low \gls{DP} mass due to the limited kinematic suppression of the \gls{DP} decay. Key to this analysis is the assumption of the prompt decay, where the \gls{DP} decays instantly into the lepton-antilepton pair. A check on the \gls{DP} max mean path length is required to ensure that the calculated limits above are correct. 
-    To calculate the max mean path of the \gls{DP}, the max energy of the \gls{DP} is calculated. From a nominal beam energy at NA62 of \SI{75}{\giga\electronvolt\per\clight} the maximum energy of the $\pi^0$ from the $K_{2\pi}$ decay is calculated in the kaons rest reference frame,
+    To using the max energy of the \gls{DP}, the max mean path of the \gls{DP} is calculated. From a nominal beam energy at NA62 of \SI{75}{\giga\electronvolt\per\clight} the maximum energy of the $\pi^0$ from the $K_{2\pi}$ decay is calculated in the kaons rest reference frame,
     \begin{equation} \label{eq:2body}
         E_{\pi^0}^{rest} = \frac{M^2 + m_{\pi^0}^2 - m_{\pi^+}^2}{2M} = \SI{0.246}{\giga\electronvolt}
     \end{equation}
@@ -525,7 +526,7 @@
     \section{Conclusions}
     The search for \gls{DP} at NA62 has expanded from the study conducted at NA48/2 utilising the 2022 to 2024 datasets. Two methods for the background estimation have been presented: one utilising \gls{MC} samples and the other using the data.
     It was found that using the \gls{MC} background estimation method produced uncompetitive results due to the limited size of the samples produced. The data-driven background estimation, however, provided improved results, producing competitive limits for the mixing parameter across the 
-    \gls{DP} mass search range. The result covers an area that has yet to be covered by any other experiment at the time of writing. 
+    \gls{DP} mass search range. The result covers an area that has not been covered by any other experiment at the time of writing. 
     %% A final result will be available when NA62 completes data taking in 2026, and the full dataset is used for the analysis. 
     %% Say about like outside the prompt the acceptance does not change as the three track vertex is not to be created. However, the overlaps are okay as they only occur in extreme conditions.
 
