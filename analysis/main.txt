@@ -124,8 +124,8 @@ DEvent Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
 4.4 Background Estimation using Data . . . . . . . . . . . . . . . . . . . 101
 4.4.1 Fitting the Data Distribution . . . . . . . . . . . . . . . . . . 103
 4.4.2 Upper Limit on the Mixing Parameter . . . . . . . . . . . . . 105
-4.5 Prompt Limit Calculation . . . . . . . . . . . . . . . . . . . . . . . . 107
-4.6 Global Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 108
+4.5 Prompt Limit Calculation . . . . . . . . . . . . . . . . . . . . . . . . 106
+4.6 Global Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
 4.7 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
 5 Future Kaon Experiments 111
 5.1 HIKE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111
@@ -157,9 +157,9 @@ CEDAR-N CEDAR-North. 23, 44, 45, 52, 53
 CEDAR-W CEDAR-West. 23, 25, 44, 45, 47, 49, 51–54, 61, 67, 68, 79–83, 150
 CHANTI Charged particle Anti-coincidence detector. 27
 CKM Cabibbo-Kobayashi-Maskawa. 4–7, 11
-CLConfidence Level. 98–102, 105–107, 109, 110
+CLConfidence Level. 98–102, 105, 107, 109, 110
 CPCharge-Parity. 5, 9, 12–14
-DP Dark Photon. 1, 15, 16, 84, 91, 95, 97–100, 103–109, 150
+DP Dark Photon. 1, 15, 16, 84, 91, 95, 97–100, 103–110, 150
 viiList of Acronyms
 DSS Detector Safety System. 69
 FCNC Flavour Changing Neutral Current. 11, 13
@@ -174,7 +174,7 @@ Ke3K+→π0e+ν. 132–134, 136, 137
 LAV Large Angle Veto. 21, 33
 LKr Liquid Krypton Calorimeter. 21, 32, 34, 88
 LS3 CERN Long Shutdown 3. 111, 116
-MC Monte Carlo. 43, 67, 85, 86, 88–101, 103–105, 109, 116, 133, 134, 136, 137,
+MC Monte Carlo. 43, 67, 85, 86, 88–101, 103–106, 109, 116, 133, 134, 136, 137,
 139, 143
 MCP-PMT Micro-Channel Plate Photomultiplier. 123
 MUV Muon Veto System. 36
@@ -403,8 +403,8 @@ to a 90% confidence level. . . . . . . . . . . . . . . . . . . . . . . . . 98
 4.16 Local significance of Dark Photon (DP) signal across the search win-
 dow 9 ≤mA′≤120 MeV /c2. Left, in terms of DP mass and right,
 the Y projection of the top plot. . . . . . . . . . . . . . . . . . . . . . 100
-4.17 DP acceptance in terms of mass parametrised with a polynomial,
-shown in red. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100
+4.17 Acceptance of the DP signal for the MC background estimation method
+in terms of mass, parametrised with a polynomial shown in red. . . . 100
 4.18 Upper limit on the branching fraction of π0→γA′at a 90% Confi-
 dence Level (CL) for each Dark Photon mass value. . . . . . . . . . . 101
 4.19 Upper limit on the mixing parameter ϵ2at a 90% CL for each Dark
@@ -429,14 +429,17 @@ confidence level. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
 4.24 Local significance of DP signal across the mass search window 6 ≤
 mA′≤121.6 MeV /c2. Left, in terms of DP mass and right, the y
 projection of the DP mass plot. . . . . . . . . . . . . . . . . . . . . . 106
-4.25 Upper limit on the branching fraction of π0→γA′at a 90 % CL for
-each Dark Photon mass hypothesis. . . . . . . . . . . . . . . . . . . . 106
-4.26 Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
-mass hypothesis, with the result from NA48/2 for comparison [44]. . . 107
+4.25 Acceptance of the DP signal for the data driven background es-
+timation method. This acceptance is calculated with MC and is
+parametrised by a polynomial shown in red. . . . . . . . . . . . . . . 106
+4.26 Upper limit on the branching fraction of π0→γA′at a 90 % CL for
+each Dark Photon mass hypothesis. . . . . . . . . . . . . . . . . . . . 107
 4.27 Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
+mass hypothesis, with the result from NA48/2 for comparison [44]. . . 107
+4.28 Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
 mass hypothesis, with the result from NA48/2 for comparison [44]
 and the expected limit of the prompt decay. . . . . . . . . . . . . . . 109
-4.28 Upper limit at a 90% CL on the mixing parameter (Green) compared
+4.29 Upper limit at a 90% CL on the mixing parameter (Green) compared
 to published exclusions limits [44, 76, 77, 78, 79, 80, 81, 82]. . . . . . 110
 5.1 Diagram of HIKE Phase 1 detector setup [84]. . . . . . . . . . . . . . 112
 5.2 Diagram of the new STRAW spectrometer layout with 5 mm straw
@@ -449,12 +452,12 @@ tubes [84]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
 the simulation. Top, previous version with large outer volumes and
 bottom, new flexible version with reduced outer volumes. The red
 arrows represent the direction of the magnetic field in the volumes. . 120
+xviiLIST OF FIGURES
 5.8 Visualisation of the MNP33 magnet placed in front of the STRAW
 chamber 1 at Z=163 m from the target in the simulation. Originally,
 the magnet is placed at Z=198 m, which is after the STRAW chamber
 2. The red arrows represent the direction of the magnetic field in the
 volumes. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 121
-xviiLIST OF FIGURES
 5.9 Tracks for charged Geantinos with a 400 GeV /cmomentum through
 the NA62 detector. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 122
 5.10 Diagram describing the workings of a MCP-PMT. . . . . . . . . . . . 123
@@ -482,11 +485,11 @@ data-sheet [98] . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
 arrays produced from a MC sample of K+→π0e+ν(Ke3). The left
 column shows illumination on the Saleve side of the RICH detector,
 and the right column shows the Jura side. . . . . . . . . . . . . . . . 133
+xviiiLIST OF FIGURES
 5.23 Cherenkov light illumination of RICH SiPM arrays for the three dif-
 ferent sensor sizes produced from a MC sample of Ke3. The left
 column shows illumination on the Saleve side of the RICH detector,
 and the right column shows the Jura side. . . . . . . . . . . . . . . . 134
-xviiiLIST OF FIGURES
 5.24 Number of photo-electrons per ring candidate for NA62 PMTs and
 the three possible HIKE SiPMs produced from a MC sample of Ke3. . 136
 5.25 Reconstructed ring radius for electron candidates for NA62 PMTs
@@ -3069,8 +3072,8 @@ fraction of K+→π+π0[32] and ADP(K2π) is the acceptance of the DP signal. Th
 994.3 Dark Photon in π0decays MC Background Estimation Method
 Figure 4.16: Local significance of DP signal across the search window 9 ≤mA′≤
 120 MeV /c2. Left, in terms of DP mass and right, the Y projection of the top plot.
-Figure 4.17: DP acceptance in terms of mass parametrised with a polynomial, shown
-in red.
+Figure 4.17: Acceptance of the DP signal for the MC background estimation method
+in terms of mass, parametrised with a polynomial shown in red.
 acceptance ADP(K2π) is calculated using the acceptance of the π0
 Ddecay shown in
 Figure 4.4 and is parametrised with a polynomial to allow for the calculation of the
@@ -3224,13 +3227,13 @@ Nexp,δNobsandδNexpshown in Figure 4.23, the local significance of the DP signa
 is calculated with Equation 4.12 and is shown in Figure 4.24. The significance did
 not reach the threshold of three sigma, so no DP is observed.
 4.4.2 Upper Limit on the Mixing Parameter
-The UL on the number of DP shown in Figure 4.23 is used to calculate the UL of
-the branching ratio to a 90% CL, using Equation 4.18 and is shown in Figure 4.25.
-The resultant UL for the B(π0→γA) is a significant improvement compared to the
-result produced in the MC study shown in Figure 4.18.
-The resultant UL on the mixing parameter calculated with Equation 4.19 is
-compared to the result from NA48/2 [44] in Figure 4.26. The study significantly
-1054.5 Dark Photon in π0decays Background Estimation using Data
+The UL on the number of DP shown in Figure 4.23 is used to calculate the UL of the
+branching ratio to a 90% CL, using Equation 4.18 and is shown in Figure 4.26. The
+DP acceptance is determined through MC passing through the same DP selection as
+the data and is shown in Figure 4.25. The updated method for selecting DP mass
+hypotheses is more efficient than the previous MC study due to the overlapping
+search windows. The resultant UL for the B(π0→γA) is a significant improvement
+1054.5 Dark Photon in π0decays Prompt Limit Calculation
 20 40 60 80 100 120
 MA [MeV/c2]
 -4-2024DP signal local significance±3
@@ -3241,40 +3244,28 @@ DP signal local significance0510152025
 Figure 4.24: Local significance of DP signal across the mass search window 6 ≤
 mA′≤121.6 MeV /c2. Left, in terms of DP mass and right, the y projection of the
 DP mass plot.
-20 40 60 80 100 120
-MA [MeV/c2]
-109
-108
-107
-106
-Upper limit on B(0A) @ 90% CL
-Figure 4.25: Upper limit on the branching fraction of π0→γA′at a 90 % CL for
-each Dark Photon mass hypothesis.
+Figure 4.25: Acceptance of the DP signal for the data driven background estimation
+method. This acceptance is calculated with MC and is parametrised by a polynomial
+shown in red.
+compared to the result produced in the MC study shown in Figure 4.18.
+The resultant UL on the mixing parameter calculated with Equation 4.19 is
+compared to the result from NA48/2 [44] in Figure 4.27. The study significantly
 improves the UL of the square mixing parameter compared to the NA48/2 result
 by an order of magnitude. This is due to better statistics provided by NA62 and
 the improved method for using the data to estimate the background, reducing the
 errors that previously limited the study.
-1064.5 Dark Photon in π0decays Prompt Limit Calculation
-20 40 60 80 100 120
-MA [MeV/c2]
-1010
-109
-108
-107
-106
-105
-104
-Upper limit on 2 @ 90% CL
-NA62-2022/23/24
-NA48/2 Result
-Figure 4.26: Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
-mass hypothesis, with the result from NA48/2 for comparison [44].
 4.5 Prompt Limit Calculation
 The lowest limit on the mixing parameter ϵ2occurs at low DP mass due to the limited
 kinematic suppression of the DP decay. Key to this analysis is the assumption of
 the prompt decay, where the DP decays instantly into the lepton-antilepton pair.
+1064.5 Dark Photon in π0decays Prompt Limit Calculation
+Figure 4.26: Upper limit on the branching fraction of π0→γA′at a 90 % CL for
+each Dark Photon mass hypothesis.
+Figure 4.27: Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
+mass hypothesis, with the result from NA48/2 for comparison [44].
 A check on the DP max mean path length is required to ensure that the calculated
 limits above are correct. Using the max energy of the DP, the max mean path of the
+1074.6 Dark Photon in π0decays Prompt Limit Calculation
 DP is calculated. From a nominal beam energy at NA62 of 75 GeV /cthe maximum
 energy of the π0from the K2πdecay is calculated in the kaons rest reference frame,
 Erest
@@ -3290,7 +3281,6 @@ prest
 (Erest
 π0)2−m2
 π0. (4.21)
-1074.6 Dark Photon in π0decays Global Results
 The Equations 4.20 and 4.21 are used to calculate the maximum energy of the π0
 in the laboratory reference frame via a Lorentz boost,
 Elab
@@ -3314,50 +3304,29 @@ greater than 1 m, the reconstruction will create a three-track vertex. This will
 in the event being removed due to the requirement of a single three-track vertex
 during the selection, reducing the acceptance. However, this is only true in extreme
 cases where all the energy is propagated from the kaon to the DP. In this extreme
-case, it is possible to visualise the 1 m prompt limit, which is shown in Figure 4.27 as
+case, it is possible to visualise the 1 m prompt limit, which is shown in Figure 4.28 as
 the dashed lines. The two lines represent the 1 m limit for the maximum DP energy
 and 50 % of the maximum. The fluctuations of the UL on the mixing parameter fall
 between these two lines, suggesting that the prompt assumption is still valid except
 in the most extreme cases.
+1084.7 Dark Photon in π0decays Global Results
+Figure 4.28: Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
+mass hypothesis, with the result from NA48/2 for comparison [44] and the expected
+limit of the prompt decay.
 4.6 Global Results
 This result for the UL on the mixing parameter is compared to other experiments in
-Figure 4.28, produced using the software package DarkCast. DarkCast is a compan-
-ion software package to well-known papers [74, 75]. Figure 4.28 shows the results
+Figure 4.29, produced using the software package DarkCast. DarkCast is a compan-
+ion software package to well-known papers [74, 75]. Figure 4.29 shows the results
 from this study and a number of other collaborations: NA48/2 [44], BaBar [76],
 NA64 [77], KLOE [78], KLOE-2 [79], FASER [80] and others [81, 82]. The result
 from NA62 covers areas of the phase space not yet covered in previous experiments.
 With the UL on the mixing parameter for DP mass hypotheses past 25 MeV /c2
-1084.7 Dark Photon in π0decays Conclusions
-20 40 60 80 100 120
-MA [MeV/c2]
-1010
-109
-108
-107
-106
-105
-104
-Upper limit on 2 @ 90% CL
-EA=68.5GeV
-EA=34.23GeV
-NA62-2022/23/24
-NA48/2 Result
-Prompt Limits (=1m)
-Figure 4.27: Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
-mass hypothesis, with the result from NA48/2 for comparison [44] and the expected
-limit of the prompt decay.
 providing new limits. The UL for DP mass past 25 MeV /c2also satisfy the assump-
 tion that the DP decays promptly, even in extreme circumstances, as described in
 Section 4.5.
 4.7 Conclusions
 The search for DP at NA62 has been expanded from the study conducted at NA48/2,
 utilising the 2022 to 2024 datasets. Two methods for the background estimation have
-been presented: one utilising MC samples and the other using the data. The MC
-background estimation method produced uncompetitive results due to the limited
-size of the samples produced. The data-driven background estimation, however,
-provided improved results, producing competitive limits for the mixing parameter
-across the DP mass search range. The result covers an area not covered by any
-other experiment at the time of writing.
 1094.7 Dark Photon in π0decays Conclusions
 102
 101
@@ -3370,8 +3339,14 @@ FASERKLOE
 NA48/2
 NA64
 OrsayDavier
-Figure 4.28: Upper limit at a 90% CL on the mixing parameter (Green) compared
+Figure 4.29: Upper limit at a 90% CL on the mixing parameter (Green) compared
 to published exclusions limits [44, 76, 77, 78, 79, 80, 81, 82].
+been presented: one utilising MC samples and the other using the data. The MC
+background estimation method produced uncompetitive results due to the limited
+size of the samples produced. The data-driven background estimation, however,
+provided improved results, producing competitive limits for the mixing parameter
+across the DP mass search range. The result covers an area not covered by any
+other experiment at the time of writing.
 110Chapter 5
 Future Kaon Experiments
 Over the past 75 years the study of kaon physics has been integral to the develop-
