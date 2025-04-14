@@ -374,9 +374,9 @@
     the $\pi^0_D$ decay shown in Figure~\ref{fig:accept} and is parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass, shown in Figure~\ref{fig:acceptDP}. 
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.7\textwidth]{plots/accept_poly.png}
+        \includegraphics[width=0.7\textwidth]{plots/acceptance_mcM.png}
         \linespread{1.0}
-        \caption{\gls{DP} acceptance in terms of mass parametrised with a polynomial, shown in red.}
+        \caption{Acceptance of the \gls{DP} signal for the \gls{MC} background estimation method in terms of mass, parametrised with a polynomial shown in red.}
         \label{fig:acceptDP}
     \end{figure}
     The resultant branching fraction at a 90\% \gls{CL} across the \gls{DP} mass range is shown in Figure~\ref{fig:branchinFrac}. The reduction of the \gls{UL} at 
@@ -482,20 +482,27 @@
         \label{fig:local_sig_data}%
     \end{figure}
     \subsection{Upper Limit on the Mixing Parameter}
-    The \gls{UL} on the number of \gls{DP} shown in Figure~\ref{fig:datadrive_plot} is used to calculate the \gls{UL} of the branching ratio to a 90\% \gls{CL}, using Equation~\ref{eq:branching_frac} and is shown in Figure~\ref{fig:branchinFrac_data}. The resultant \gls{UL} for the $\mathcal{B}(\pi^0 \to \gamma A)$ is a significant improvement
-    compared to the result produced in the \gls{MC} study shown in Figure~\ref{fig:branchinFrac}.
+    The \gls{UL} on the number of \gls{DP} shown in Figure~\ref{fig:datadrive_plot} is used to calculate the \gls{UL} of the branching ratio to a 90\% \gls{CL}, using Equation~\ref{eq:branching_frac} and is shown in Figure~\ref{fig:branchinFrac_data}. The \gls{DP} acceptance is determined through \gls{MC} passing through the same \gls{DP} selection as the data and is shown in Figure~\ref{fig:dataD_accept}. The updated method for selecting \gls{DP} mass hypotheses is more efficient than the previous \gls{MC} study due to the overlapping search windows.
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.65\textwidth]{plots/acceptance_dataD.png}
+        \linespread{1.0}
+        \caption{Acceptance of the \gls{DP} signal for the data driven background estimation method. This acceptance is calculated with \gls{MC} and is parametrised by a polynomial shown in red.}
+        \label{fig:dataD_accept}
+    \end{figure}
+    The resultant \gls{UL} for the $\mathcal{B}(\pi^0 \to \gamma A)$ is a significant improvement compared to the result produced in the \gls{MC} study shown in Figure~\ref{fig:branchinFrac}.
 
     The resultant \gls{UL} on the mixing parameter calculated with Equation~\ref{eq:epsilonsq} is compared to the result from NA48/2 \cite{2015178} in Figure~\ref{fig:epsilon_sq_data}. The study significantly improves the \gls{UL} of the square mixing parameter compared to the NA48/2 result by an order of magnitude. This is due to better statistics provided by NA62 and the improved method for using the data to estimate the background, reducing the errors that previously limited the study.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/branchingFrac_data_24.pdf}
+        \includegraphics[width=0.65\textwidth]{plots/branchingFrac_data_24.png}
         \linespread{1.0}
         \caption{Upper limit on the branching fraction of $\pi^0 \to \gamma A'$ at a 90\,\% \gls{CL} for each Dark Photon mass hypothesis.}
         \label{fig:branchinFrac_data}
     \end{figure}
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24_wout.pdf}
+        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24_wout.png}
         \linespread{1.0}
         \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each Dark Photon mass hypothesis, with the result from NA48/2 for comparison \cite{2015178}.}
         \label{fig:epsilon_sq_data}
@@ -530,7 +537,7 @@
     %displaced decay is shown in Figure~\ref{fig:prompt}.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24.pdf}
+        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24.png}
         \linespread{1.0}
         \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each Dark Photon mass hypothesis, with the result from NA48/2 for comparison \cite{2015178} and the expected limit of the prompt decay.}
         \label{fig:prompt}
