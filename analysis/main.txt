@@ -12,20 +12,22 @@ Date
 iiAbstract
 The 2022-24 NA62 data has been used to search for the dark photon ( A′) from the
 π0→A′γand the subsequent prompt decay A′→e+e−. Within the mass range
-s 6≤mA′≤121.6 MeV /c2no signal was observed and an exclusion of the mixing
-parameter ϵ2across the mass range is obtained.
-The NA62 beam consists of only 6 % kaons, which require identification con-
-ducted by the KTAG. The KTAG comprises a Differential Cherenkov counter with
-Achromatic Ring focus (CEDAR) and a purpose-built photon-detection system.
-Since 2016, NA62 has employed a CEDAR with a Nitrogen gas (N 2) radiator gas.
-To reduce the amount of material in the beam’s path, a new CEDAR utilising Hy-
-drogen gas (H 2) as a radiator gas can be used. Its design, testing and commissioning
-at NA62 are presented.Acknowledgements
+6≤mA′≤121.6 MeV /c2no signal was observed and an exclusion limit on the
+mixing parameter ϵ2across the mass range is obtained.
+The NA62 beam consists of only 6 % kaons, therefore requiring beam parti-
+cle identification conducted by the KTAG. The KTAG comprises a Differential
+Cherenkov counter with Achromatic Ring focus (CEDAR) and a purpose-built
+photon-detection system. Since 2016, NA62 has employed a CEDAR with a Ni-
+trogen gas (N 2) radiator gas. To reduce the amount of material in the beam’s path,
+a new CEDAR utilising Hydrogen gas (H 2) as a radiator gas has been used since
+2024. Its design, testing and commissioning at NA62 are presented.
+Finally, software developments towards the design of a new High Intensity Kaon
+Experiments (HIKE) facility are presented.Acknowledgements
 I am tremendously grateful for the teaching and collaboration of my colleagues, for
 which I could not have completed this work without them. I want to mention a few
 in particular.
 I would like to thank my supervisors, Evgueni Goudzovski, Cristina Lazzeroni,
-and Angela Romero, for their guidance throughout my time at the University of
+and Angela Romano, for their guidance throughout my time at the University of
 Birmingham and during the writing process for this thesis.
 I also extend my gratitude to my fellow NA62 collaborators who have been a part
 of my work and for the successful operation of the NA62 experiment. I would like
@@ -38,40 +40,40 @@ long nights of work and periods away at CERN. I am immensely grateful for her
 support, and I couldn’t have done it without her.
 iDeclaration of author’s
 contributions
-Chapter 1 sets out the theoretical framework for the thesis. Topics include the
-background on the Standard Model and kaon physics to provide context for the
+Chapter 1 sets out the theoretical framework for the thesis. The Standard Model
+and the role of kaon physics within it are briefly reviewed to provide context for the
 NA62 experiment and future kaon experiments. The Chapter also include theoretical
-foundations for the Dark Photon. The NA62 experiment is described in Chapter
+foundations for the Dark Photon. The NA62 experiment is presented in Chapter
 2 with descriptions of the sub-detectors and the latest result for the K+→π+ν¯ν
 decay. During the periods 2021-2024 I completed data taking shifts as well as expert
 shifts for the KTAG and HLT to assist with the collection of data.
 Chapter 3 describes the development and commissioning of the CEDAR-H de-
-tector at CERN. Section 3.1 describes the theoretical background of the CEDAR
-as well as the basic construction of the vessel, of which is not my own. The design
-of the CEDAR-H is described in Section 3.1 which was completed prior to my in-
-volvement. The characterisation of the optical elements was completed by CERN
-engineers but was consolidated by myself and documented. The simulation data
-required for the alignment of the spherical mirror was completed by me. I was in-
-volved in the test-beam in Section 3.3 by completing a number of shifts through out
-the period. I conducted the analysis of the data from the test-beam shown in this
-Section. I was also involved in the installation described in Section 3.4 which was
-conducted at the start of my Long Term Attachment in 2023. I was also involved
-in the commissioning in 2023 described in Section 3.5 and produced all the data
-analysis shown in this Section. The commissioning in 2024 was also completed by
-myself and other members of the Birmingham group. I was also involved in the
-monitoring of the KTAG performance in the periods 2021-2024 by conducing shifts
-as the detector expert and is briefly described in Section 3.5
+tector at CERN. Section 3.1 describes the theoretical background of the CEDAR as
+well as the basic construction of the vessel. The design of the CEDAR-H is described
+in Section 3.1 which was completed prior to my involvement. The characterisation
+of the optical elements was completed by CERN engineers but was consolidated
+by myself and documented. The simulation data required for the alignment of the
+spherical mirror was completed by me. I was involved in the test-beam in Section 3.3
+by completing a number of shifts through out the period. I conducted the analysis
+of the data from the test-beam presented in Section 3.3. I was also involved in the
+installation of CEDAR-H in NA62 described in Section 3.4 which was conducted at
+the start of my Long Term Attachment in 2023. I was also involved in the commis-
+sioning in 2023 described in Section 3.5 and produced all the data analysis shown
+in this Section. The commissioning in 2024 was also completed by myself and other
+members of the Birmingham group. I was also involved in the monitoring of the
+KTAG performance in the periods 2021-2024 by conducing shifts as the detector
+expert and is briefly described in Section 3.5
 iiThe search of the Dark Photon described in Chapter 4 is entirely my work except
 for the results referenced from other experiments.
 Chapter 5 set outs the possibility for future kaon experiments. Section 5.1 de-
-scribes the aims for a High Intensity Kaon Experiments (HIKE) and the planned
-detector setups for three separate phases. Section 5.2 describes my contributions to
-the NA62 software were I developed and tested new flexible features to allow the de-
-velopment of new detectors. Section 5.3 follow on with development of an upgraded
+scribes the High Intensity Kaon Experiments (HIKE) and the planned detector
+setups for three separate phases. Section 5.2 describes my contributions to the
+NA62 software where I developed and tested new flexible features to allow the de-
+velopment of new detectors. Section 5.3 presents the development of an upgraded
 KTAG which I helped implement into the new software framework. In Section 5.4
 the upgraded RICH is described which I completed from design to implementation
 in the software framework. Section 5.5 provides the detector rates for HIKE Phase
-2 which I completed.
+2 which I evaluated.
 No other qualifications were obtained from the work completed within this thesis.
 iiiContents
 Introduction 1
