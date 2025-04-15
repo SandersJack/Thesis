@@ -522,7 +522,7 @@
     An array of input files are produced in BDSIM \cite{Nevay2020BDSIM} by the CERN beam group which contains the simulated HIKE beam components at a Z of 120\,m, which is the start of the fiducial volume.
     The files are used as an input to the NA62MC software as the primary beam instead of the turtle beam, which is the default for NA62. Each file contains 10000 events, corresponding to 10000 protons on target. As there are 18K files produced in total, this is equivalent to $1.8 \times 10^8$ protons on target. 
     The statistics are not enough to obtain a reasonable estimate of the rates, so each file is used 11 times as an input to the simulation with random seeds to increase the sample size. The simulation is run with the unforced flag allowing for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
-    After the simulation, the output is reconstructed using the NA62 Reconstruction software, and the rates are calculated by scaling the numbers in the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
+    After the simulation, the output is reconstructed using the NA62 reconstruction software. The rates are calculated by scaling the numbers in the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
 
     
     The $K_L$ rate at the entrance of the fiducial volume is calculated as 304.1 MHz. The rate of the four main $K_L$ decays inside the fiducial volume is shown in Table~\ref{tab:hikeDecayRates}.
@@ -541,7 +541,7 @@
         \label{tab:hikeDecayRates}%
     \end{table}
 
-    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using all the hits in each detector channel which are then converted to the expected rate. The rates are large, but this is to be expected with a high intensity. However, the rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is concerning as
+    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using all the hits in each detector channel which are then converted to the expected rate. The rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is concerning as
     a much lower rate is expected due to the lack of charged daughter particles. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions in the final state.
     
     \begin{table}[htbp] 
@@ -566,11 +566,11 @@
             HAC & \multicolumn{1}{c|}{10.0} & \multicolumn{1}{c|}{11.5} & \multicolumn{1}{c|}{0.3} & \multicolumn{1}{c|}{6.1} \\ \hline
             \end{tabular}
         }
-        \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$..}%
+        \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.}%
         \label{tab:totalRatesInDetectors}
     \end{table}
 
-    By using information from the \gls{MC}, the origin of the particles that produce the hits in the spectrometer are found. The production Z and radius of particles which results a hit in the Spectrometer is shown in Figure~\ref{fig:SpectroCheck}. 
+    By using information from the \gls{MC}, the origin of the particles that produce the hits in the spectrometer are found. The production Z and radius of particles which results a hit in the spectrometer is shown in Figure~\ref{fig:SpectroCheck}. 
     For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles are produced after Z=210\,m in the walls of the vacuum decay tube and the spectrometer chambers themselves. With only 20\,\% of particles produced before Z=210\,m, originating from the primary decay process.
     \begin{figure}[htbp]
         \centering
@@ -646,7 +646,7 @@
         \label{tab:maxChannelRates}
     \end{table}
 
-    As detailed previously in this section, the detectors that had finalised designs are implemented in the simulation, which allows for correct rate calculation. The other detectors that need to be upgraded to increase their granularity, were not yet finalised and, therefore, not implemented in the simulation. This results in an incorrect calculation for the channel rates as it is determined by the NA62 detector design and the layout of the channels in the detectors. 
+    The detectors that had finalised designs are implemented in the simulation, which allows for correct rate calculation. The other detectors that need to be upgraded to increase their granularity, were not yet finalised and therefore are not implemented in the simulation. This results in an incorrect calculation for the channel rates as it is determined by the NA62 detector design and the layout of the channels in the detectors. 
     %As the final designs for these detector are not finalised, it is impractical to implement the new detectors in the simulation. 
     However, the rates at the planes of the upgraded detectors are calculated by collecting particles passing through the Z plane of the detector. This is done using information from the \gls{MC} for particles at specific points along the \gls{HIKE} detector setup, called checkpoints. The rates for charged particles produced from the four $K_L$ decays at each checkpoint are shown in Table~\ref{tab:RatesAtZ}. This allows for the correct determination of the rates for the detectors not yet finalised. 
     The particle rates are collected not from the geometrical acceptance of the corresponding sub-detectors but from the cross-section of the outer volume for each sub-detector found in the Monte Carlo simulation. 
