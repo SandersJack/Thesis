@@ -82,7 +82,7 @@
     \end{equation}
     where $x_c$ and $y_c$ are the ellipse centre in the x and y directions. The angle $\theta$ is the rotation of the ellipse, and $a$ and $b$ are the lengths of the semi-major and the semi-minor axis, respectively. 
     The points $x$ and $y$ are the reconstructed mass values of the candidate event. The results from Figure~\ref{fig:reconMasses} and Equations \ref{eq:piee_sig} \& \ref{eq:gammaee_sig} are used as starting points for the parameter values. 
-    The parameters are optimised to produce a selection efficiency of at least 95\,\% while keeping the area of the ellipse as small as possible. The parameters for the ellipse are defined below: 
+    The parameters are optimised to produce a selection efficiency of at least 90\,\% while keeping the area of the ellipse as small as possible. The parameters for the ellipse are defined below: 
     \begin{itemize}
         \item $x_c = \SI{493.37}{\mega\electronvolt\per\clight\squared}$: The x-coordinate of the ellipse centre.
         \item $y_c = \SI{134.89}{\mega\electronvolt\per\clight\squared}$: The y-coordinate of the ellipse centre.
@@ -331,7 +331,7 @@
     \end{equation}
     and is shown in Figure~\ref{fig:local_sig}. Across the search window, the local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed. 
     The \gls{UL} for the number of \gls{DP} decays ($A' \to e^+e^-$) at a 90\% \gls{CL} for each \gls{DP} mass value is calculated with $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method. This method is recommended by the Particle Data Group \cite{Cowan:2018} and employs the process set out in \cite{Junk:1999kv, Read:2000ru}.
-    For setting an \gls{UL} on the signal $s$ from a counting experiment where $N$ events are observed, and there is a known expected background $b$, it can be considered a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
+    For setting an \gls{UL} on the signal $s$ from a counting experiment where $N$ events are observed, and there is a known expected background $b$, it is considered a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
     \begin{equation}\label{eq:test_stat}
         X = L_{s+b} / L_b = \frac{e^{-s+b}(s+b)^N}{N!} / \frac{e^{-b} b^N}{N!} = e^{-s}(1+\frac{s}{b})^N.
     \end{equation} 
@@ -531,7 +531,7 @@
     $\epsilon^2 m_{A'}^2 = 3.36 \times 10^{-6}$\,\si{\mega\electronvolt^2\per\clight^4}  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
     corresponding to a max \gls{DP} mean path length of $1.629$\,m. %$0.81\m$.
     Due to the construction of the 3-track trigger and offline reconstruction, the resolution of a decay vertex position is around 1\,m. With a vertex greater than 1\,m, the reconstruction will create a three-track vertex. This will result in the event being removed due to the requirement of a single three-track vertex during the selection, reducing the acceptance.
-    However, this is only true in extreme cases where all the energy is propagated from the kaon to the \gls{DP}. In this extreme case, it is possible to visualise the 1\,m prompt limit, which is shown in Figure~\ref{fig:prompt} as the dashed lines. The two lines represent the 1\,m limit for the maximum \gls{DP} energy and 50\,\% of the maximum. The fluctuations 
+    However, this is only true in extreme cases where all the energy is propagated from the kaon to the \gls{DP}. In this extreme case, the 1\,m prompt limit is shown in Figure~\ref{fig:prompt} as the dashed lines. The two lines represent the 1\,m limit for the maximum \gls{DP} energy and 50\,\% of the maximum. The fluctuations 
     of the \gls{UL} on the mixing parameter fall between these two lines, suggesting that the prompt assumption is still valid except in the most extreme cases.
     %Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
     %displaced decay is shown in Figure~\ref{fig:prompt}.
