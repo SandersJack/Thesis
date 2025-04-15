@@ -546,7 +546,7 @@ ume. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 138
 5.5 Total rates in the detectors for the four main KLdecays: KL→
 π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
-µ3),KL→π0π0π0andKL→π+π−π0..138
+µ3),KL→π0π0π0andKL→π+π−π0.138
 5.6 Detector rates for the four main KLdecays: KL→π±e∓νe(K0
 e3),
 KL→π±µ∓νµ(K0
@@ -3965,9 +3965,9 @@ four main KLdecays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0
 andKL→π+π−π0. After the simulation, the output is reconstructed using the
-NA62 Reconstruction software, and the rates are calculated by scaling the numbers
-in the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of
-4.8 seconds and a beam intensity of 2 ×1013protons per spill.
+NA62 reconstruction software. The rates are calculated by scaling the numbers in
+the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of 4.8
+seconds and a beam intensity of 2 ×1013protons per spill.
 TheKLrate at the entrance of the fiducial volume is calculated as 304.1 MHz.
 The rate of the four main KLdecays inside the fiducial volume is shown in Table 5.4.
 KL decay Rate [MHz]
@@ -3981,8 +3981,7 @@ Table 5.4: Rates of the four main KLdecays in the HIKE phase 2 fiducial volume.
 1375.5 Future Kaon Experiments Detector Rates
 The total particle rates from KLdecays in the FV are shown in Table 5.5. The
 rate is calculated using all the hits in each detector channel which are then converted
-to the expected rate. The rates are large, but this is to be expected with a high
-intensity. However, the rate in the spectrometer for the KL→π0π0π0decay is
+to the expected rate. The rate in the spectrometer for the KL→π0π0π0decay is
 concerning as a much lower rate is expected due to the lack of charged daughter
 particles. Even with a lower branching ratio, it is expected that the KL→π+π−π0
 decay should have a higher rate in the spectrometer due to the charged pions in the
@@ -4008,15 +4007,15 @@ HAC 10.0 11.5 0.3 6.1
 Table 5.5: Total rates in the detectors for the four main KLdecays: KL→π±e∓νe
 (K0
 e3),KL→π±µ∓νµ(K0
-µ3),KL→π0π0π0andKL→π+π−π0..
+µ3),KL→π0π0π0andKL→π+π−π0.
 By using information from the MC, the origin of the particles that produce the
 hits in the spectrometer are found. The production Z and radius of particles which
-results a hit in the Spectrometer is shown in Figure 5.27. For the KL→π0π0π0
+results a hit in the spectrometer is shown in Figure 5.27. For the KL→π0π0π0
 decay, the majority (80 %) of the particles are produced after Z=210 m in the walls of
 the vacuum decay tube and the spectrometer chambers themselves. With only 20 %
 of particles produced before Z=210 m, originating from the primary decay process.
-1385.5 Future Kaon Experiments Detector Rates
 Figure 5.28 illustrates this further, where the MC particle identification code of the
+1385.5 Future Kaon Experiments Detector Rates
 Figure 5.27: Production Z and radius of particles producing a hit in the Spectrometer
 with the fraction of particles produced before and after Z=210 m. Left, for the
 KL→π+π−π0decay and right, for the KL→π0π0π0decay.
@@ -4036,8 +4035,8 @@ Photon
 Figure 5.28: Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0
 decay.
-1395.5 Future Kaon Experiments Detector Rates
 The rate in the detectors produced by only the daughter particles of the KL
+1395.5 Future Kaon Experiments Detector Rates
 decays are collected. The daughter particles are selected as particles with a GEANT4
 production process of ”Decay”, which should include any subsequent decays of the
 daughter particles, e.g. π0→γγ. This excludes all hits from particles produced by
@@ -4073,8 +4072,8 @@ e3),KL→
 µ3),KL→π0π0π0andKL→π+π−π0, produced directly from the
 daughter particles of the KLdecays.
 It is essential to understand the rates of the detectors in order to determine the
-1405.5 Future Kaon Experiments Detector Rates
 overall detector design, especially for the electronics that would need to be designed
+1405.5 Future Kaon Experiments Detector Rates
 to meet the high rates for HIKE. The calculated rates will inform the development
 of the overall experiment data acquisition and trigger systems. Along with the
 overall rate, it is vital to know the max channel rates in the detectors to design
@@ -4103,25 +4102,25 @@ e3),
 KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0, produced directly from
 the daughter particles of the KLdecays.
-As detailed previously in this section, the detectors that had finalised designs
-are implemented in the simulation, which allows for correct rate calculation. The
-other detectors that need to be upgraded to increase their granularity, were not yet
-finalised and, therefore, not implemented in the simulation. This results in an incor-
-rect calculation for the channel rates as it is determined by the NA62 detector design
-and the layout of the channels in the detectors. However, the rates at the planes
-of the upgraded detectors are calculated by collecting particles passing through the
+The detectors that had finalised designs are implemented in the simulation, which
+allows for correct rate calculation. The other detectors that need to be upgraded to
+increase their granularity, were not yet finalised and therefore are not implemented
+in the simulation. This results in an incorrect calculation for the channel rates as
+it is determined by the NA62 detector design and the layout of the channels in the
+detectors. However, the rates at the planes of the upgraded detectors are calculated
+by collecting particles passing through the Z plane of the detector. This is done using
+information from the MC for particles at specific points along the HIKE detector
 1415.5 Future Kaon Experiments Detector Rates
-Z plane of the detector. This is done using information from the MC for particles
-at specific points along the HIKE detector setup, called checkpoints. The rates for
-charged particles produced from the four KLdecays at each checkpoint are shown in
-Table 5.8. This allows for the correct determination of the rates for the detectors not
-yet finalised. The particle rates are collected not from the geometrical acceptance of
-the corresponding sub-detectors but from the cross-section of the outer volume for
-each sub-detector found in the Monte Carlo simulation. For the Straw-1&3 the val-
-ues of the cross-section used are, a circle of radius of 141.5 mm, NCHOD a square of
-length 330 mm, CHOD a square of length 244 mm, IRC a square of length 122 mm,
-MEC a circle of radius 182.5 mm, MUV-1&2 a square of length 320 mm, MUV-3 a
-square of length 281 mm and HAC a square of length 281 mm.
+setup, called checkpoints. The rates for charged particles produced from the four
+KLdecays at each checkpoint are shown in Table 5.8. This allows for the correct
+determination of the rates for the detectors not yet finalised. The particle rates are
+collected not from the geometrical acceptance of the corresponding sub-detectors
+but from the cross-section of the outer volume for each sub-detector found in the
+Monte Carlo simulation. For the Straw-1&3 the values of the cross-section used are,
+a circle of radius of 141.5 mm, NCHOD a square of length 330 mm, CHOD a square
+of length 244 mm, IRC a square of length 122 mm, MEC a circle of radius 182.5 mm,
+MUV-1&2 a square of length 320 mm, MUV-3 a square of length 281 mm and HAC
+a square of length 281 mm.
 Checkpoints (Z Position)KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4149,8 +4148,8 @@ However, as the rates are collected from the cross-section at the expected detec
 position, without accounting for the beam hole to accommodate beam particles
 passing through the detector, the rates are higher than expected. An example cross-
 section at the entry of the first STRAW chamber is shown in Figure 5.29, where it
-1425.5 Future Kaon Experiments Detector Rates
 is clear that the highest rate from the decay particles is found at the centre. As
+1425.6 Future Kaon Experiments Detector Rates
 the detectors are not yet designed and the beam hole size is unknown. The size of
 the beam hole is estimated by calculating the beam divergence at the detector Z
 position. The beam divergence is calculated using the formula:
@@ -4168,7 +4167,9 @@ rate from charged particles suggests that the detectors could be designed and bu
 with current technologies.
 All rate information from the simulation shown in this section, will drive the
 design of the detectors that are not already upgraded. Table 5.10 is used in the HIKE
-1435.6 Future Kaon Experiments Detector Rates
+proposal to demonstrate the requirement for upgrading the detectors to handle the
+increased rates.
+1435.6 Future Kaon Experiments Conclusions
 KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4192,8 +4193,6 @@ decays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→
 π+π−π0, produced directly from the daughter particles of the KLdecays.
-proposal to demonstrate the requirement for upgrading the detectors to handle the
-increased rates.
 CheckpointsTotal Particle Rates kHz /cm2
 e+/−µ+/−π+/−γ Charged Particles
 Max Average Max Average Max Average Max Average Max Average
@@ -4209,13 +4208,12 @@ MUV3 Entry (245.3 m) 5 10−4115 0.89 3 10−43 10−3115 0.88
 HAC Entry (253.3 m) 11 0.02 120 0.89 5 10−33 10−3120 0.89
 Table 5.10: Average and Max particle rates per cm2for specified checkpoints along
 the length of the detector.
-1445.6 Future Kaon Experiments Conclusions
 5.6 Conclusions
 Unfortunately, in 2024, the CERN management did not approve HIKE for operation
 in ECN3. However, the development of the detectors, software and the subsequent
 physics studies is currently being utilised for studies within the KOTO II proposal
 [102].
-145Chapter 6
+144Chapter 6
 Conclusions
 The CEDAR-H was designed by The University of Birmingham and built at CERN
 where it was characterised and tested at a test-beam in 2022. CEDAR-H was in-
@@ -4239,9 +4237,9 @@ for use within HIKE Phase 1 and the detector rates for the expected positions
 for HIKE Phase 2 were presented. The results from the simulations were used in
 the HIKE proposal submitted in 2023 to the SPS committee. Unfortunately the
 HIKE experiment was not approved. However, the upgraded software and studies
-1466.0 Conclusions
+1456.0 Conclusions
 conducted were utilised for the KOTO II proposal submitted in 2024.
-147Bibliography
+146Bibliography
 [1] S. L. Glashow, “Partial-symmetries of weak interactions,” Nuclear Physics ,
 vol. 22, no. 4, pp. 579–588, 1961.
 [2] P. W. Higgs, “Broken Symmetries and the Masses of Gauge Bosons,” Phys.
@@ -4266,7 +4264,7 @@ Assessing the impact of the latest measurements,” Eur. Phys. J. C , vol. 41,
 pp. 1–131, 2005.
 [9]The Experimental Foundations of Particle Physics . Cambridge University
 Press, 2 ed., 2009.
-1486.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1476.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [10] B. Degrange, G. Fontaine, and P. Fleury, “Tracking louis leprince-ringuet’s
 contributions to cosmic-ray physics,” Physics Today , vol. 66, pp. 8–8, 06 2013.
 [11] C. M. G. Lattes, G. P. S. Occhialini, and C. F. Powell, “Observations on the
@@ -4294,7 +4292,7 @@ k mesons,” Annals of Physics , vol. 5, no. 2, pp. 156–181, 1958.
 [21] J. H. Christenson, J. W. Cronin, V. L. Fitch, and R. Turlay, “Evidence for the
 2πdecay of the k0
 2meson,” Phys. Rev. Lett. , vol. 13, pp. 138–140, Jul 1964.
-1496.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1486.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [22] G. Barr, , et al. , “A new measurement of direct cp violation in the neutral
 kaon system,” Physics Letters B , vol. 317, no. 1, pp. 233–242, 1993.
 [23] V. Fanti et al. , “A new measurement of direct cp violation in two pion decays
@@ -4322,7 +4320,7 @@ j-parc koto experiment,” Phys. Rev. Lett. , vol. 122, p. 021802, Jan 2019.
 Phys. C , vol. 38, p. 090001, 2014.
 [33] G. Buchalla, G. D’Ambrosio, and G. Isidori, “Extracting short distance physics
 from K(L,S) — >pi0 e+ e- decays,” Nucl. Phys. B , vol. 672, pp. 387–408, 2003.
-1506.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1496.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [34] G. Isidori, C. Smith, and R. Unterdorfer, “The rare k0
 l→π0µ+µ−decay within
 the sm,” The European Physical Journal C , vol. 36, pp. 57–66, 2004.
@@ -4351,7 +4349,7 @@ beyond the standard model working group report,” Journal of Physics G:
 Nuclear and Particle Physics , vol. 47, p. 010501, dec 2019.
 [43] B. Batell, M. Pospelov, and A. Ritz, “Exploring portals to a hidden sector
 through fixed targets,” Phys. Rev. D , vol. 80, p. 095024, Nov 2009.
-1516.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1506.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [44] J. Batley et al. , “Search for the dark photon in 0 decays,” Physics Letters B ,
 vol. 746, pp. 178–185, 2015.
 [45] E. Cortina Gil et al., “Observation of the K+→π+ν¯νdecay and measurement
@@ -4380,7 +4378,7 @@ vol. 02, p. 201, 2021.
 [54] V. Fanti and et al. [NA48 Collaboration], “The beam and detector for the
 na48 neutral kaon cp violation experiment at cern,” Nucl. Instrum. Meth. A ,
 vol. 574, p. 433, 2007.
-1526.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1516.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [55] S. Kholodenko, “Na62 charged particle hodoscope. design and performance in
 2016 run,” Journal of Instrumentation , vol. 12, p. C06042, jun 2017.
 [56] H. Danielsson, O. Gavrishchuk, P. A. Giudici, E. Goudzovski, S. Kholodenko,
@@ -4407,7 +4405,7 @@ the NA62 experiment at CERN,” JINST , vol. 19, no. 05, p. P05005, 2024.
 tuis, FRANCE.”
 [65] CERN Engineers, 2022. Personal communication.
 [66] Enrico Bravin (CERN), 2023. Personal communication.
-1536.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1526.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [67] K. O. Mikaelian and J. Smith, “Radiative corrections to the decay π0→
 γe+e−,”Phys. Rev. D , vol. 5, pp. 1763–1773, Apr 1972.
 [68] P. Lichard, “Vector meson dominance and the π0transition form factor,” Phys.
@@ -4436,7 +4434,7 @@ dark photon decaying into e+e−pairs,” 2019.
 [78] A. Anastasi et al. , “Limit on the production of a low-mass vector boson
 in e+e−oUγ, Uoe+e−with the KLOE experiment,” Phys. Lett. , vol. B750,
 pp. 633–637, 2015.
-1546.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1536.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [79] D. Babusci et al., “Limit on the production of a light vector gauge boson in phi
 meson decays with the KLOE detector,” Phys. Lett. , vol. B720, pp. 111–115,
 2013.
@@ -4465,7 +4463,7 @@ for CERN experiment NA62,” Journal of Physics G: Nuclear and Particle
 Physics , vol. 43, p. 125004, nov 2016.
 [89] N. Kishimoto, M. Nagamine, K. Inami, Y. Enari, and T. Ohshima, “Lifetime
 of mcp–pmt,” Nuclear Instruments and Methods in Physics Research Section
-1556.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1546.0 BIBLIOGRAPHY BIBLIOGRAPHY
 A: Accelerators, Spectrometers, Detectors and Associated Equipment , vol. 564,
 no. 1, pp. 204–211, 2006.
 [90] D. Beaulieu, D. Gorelikov, P. de Rouffignac, K. Saadatmand, K. Stenton,
@@ -4495,7 +4493,7 @@ September 2022. Presented at RICH 2022, Edinburgh, Scotland, September
 [96] D. Orlov, T. Ruardij, S. D. Pinto, R. Glazenborg, and E. Kernen, “High
 collection efficiency mcps for photon counting detectors,” Journal of Instru-
 mentation , vol. 13, p. C01047, jan 2018.
-1566.0 BIBLIOGRAPHY BIBLIOGRAPHY
+1556.0 BIBLIOGRAPHY BIBLIOGRAPHY
 [97] Photonis, “Specification MCP-PMT TYPE XP85112-S-BA PLANACON.”
 Technical Specification, Document No. 184-7774A1. Available from Photo-
 nis or related sources.
@@ -4509,4 +4507,4 @@ rich,” Journal of Instrumentation , vol. 15, p. P10025, oct 2020.
 [101] L. J. Nevay et al. , “Bdsim: An accelerator tracking code with particle-matter
 interactions,” Computer Physics Communications , vol. 252, p. 107200, 2020.
 [102] J. K. Ahn et al. , “Proposal of the koto ii experiment,” 2025.
-157
+156
