@@ -165,7 +165,7 @@ DP Dark Photon. 1, 15, 16, 84, 91, 95, 97–100, 103–110, 146
 viiList of Acronyms
 DSS Detector Safety System. 69
 FCNC Flavour Changing Neutral Current. 11, 13
-FVFiducial Volume. 18, 19, 21, 28, 89, 115, 137
+FVFiducial Volume. 18, 19, 21, 28, 89, 115, 137, 139
 GTK GigaTracker. 21, 26, 27, 137
 H2Hydrogen gas. i, 44, 45, 51–54, 56–58, 68–74, 76–79
 HASC Hadronic Sampling Calorimeter. 38
@@ -176,7 +176,7 @@ Ke3K+→π0e+ν. 130–134
 LAV Large Angle Veto. 21, 33
 LKr Liquid Krypton Calorimeter. 21, 32, 34, 88
 LS3 CERN Long Shutdown 3. 111, 116
-MC Monte Carlo. 43, 67, 85, 86, 88–101, 103–106, 109, 116, 132–135, 139, 142
+MC Monte Carlo. 43, 67, 85, 86, 88–101, 103–106, 109, 116, 132–135, 138, 139, 142
 MCP-PMT Micro-Channel Plate Photomultiplier. 122
 MUV Muon Veto System. 36
 N2Nitrogen gas. i, 44, 45, 51, 54, 57, 59, 69, 71–73, 79, 146
@@ -506,7 +506,7 @@ Left, for the KL→π+π−π0decay and right, for the KL→π0π0π0
 decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
 5.28 Monte Carlo particle code for the particles producing a hit in the
 Spectrometer. Left, for the KL→π+π−π0decay and right, for the
-KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 139
+KL→π0π0π0decay. . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
 5.29 Rate of particles across the cross section at the first STRAW chamber
 entrance at Z=213. m. . . . . . . . . . . . . . . . . . . . . . . . . . . 143
 xixList of Tables
@@ -568,7 +568,7 @@ four main KLdecays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),
 KL→π0π0π0andKL→π+π−π0, produced directly from the daugh-
-ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 143
+ter particles of the KLdecays. . . . . . . . . . . . . . . . . . . . . . 144
 5.10 Average and Max particle rates per cm2for specified checkpoints
 along the length of the detector. . . . . . . . . . . . . . . . . . . . . . 144
 xxiIntroduction
@@ -2769,7 +2769,7 @@ the rotation of the ellipse, and aandbare the lengths of the semi-major and the
 semi-minor axis, respectively. The points xandyare the reconstructed mass values
 of the candidate event. The results from Figure 4.2 and Equations 4.2 & 4.3 are
 used as starting points for the parameter values. The parameters are optimised to
-produce a selection efficiency of at least 95 % while keeping the area of the ellipse
+produce a selection efficiency of at least 90 % while keeping the area of the ellipse
 as small as possible. The parameters for the ellipse are defined below:
 xc= 493 .37 MeV /c2: The x-coordinate of the ellipse centre.
 yc= 134 .89 MeV /c2: The y-coordinate of the ellipse centre.
@@ -3029,8 +3029,8 @@ number of DP decays ( A′→e+e−) at a 90% Confidence Level (CL) for each DP
 mass value is calculated with Nobs,NexpandδNexpusing the CLs method. This
 method is recommended by the Particle Data Group [70] and employs the process
 set out in [71, 72]. For setting an UL on the signal sfrom a counting experiment
-where Nevents are observed, and there is a known expected background b, it can
-be considered a hypothesis test between the two cases: signal+background and just
+where Nevents are observed, and there is a known expected background b, it is
+considered a hypothesis test between the two cases: signal+background and just
 background. According to the Neyman-Pearson lemma [73], the most powerful test
 statistic for the hypothesis is the likelihood ratio,
 X=Ls+b/Lb=e−s+b(s+b)N
@@ -3296,20 +3296,20 @@ path is defined as,
 λmax=γmaxcτA′=Emax
 mA′c2cτA′, (4.23)
 where DP mean free path is inversely dependent on ϵ2m2
-A′. The lowest limit from the
-analysis is found as ϵ2m2
-A′= 3.36×10−6MeV2/c4corresponding to a max DP mean
-path length of 1 .629 m. Due to the construction of the 3-track trigger and offline
-reconstruction, the resolution of a decay vertex position is around 1 m. With a vertex
-greater than 1 m, the reconstruction will create a three-track vertex. This will result
-in the event being removed due to the requirement of a single three-track vertex
-during the selection, reducing the acceptance. However, this is only true in extreme
-cases where all the energy is propagated from the kaon to the DP. In this extreme
-case, it is possible to visualise the 1 m prompt limit, which is shown in Figure 4.28 as
-the dashed lines. The two lines represent the 1 m limit for the maximum DP energy
-and 50 % of the maximum. The fluctuations of the UL on the mixing parameter fall
-between these two lines, suggesting that the prompt assumption is still valid except
-in the most extreme cases.
+A′. The lowest limit from
+the analysis is found as ϵ2m2
+A′= 3.36×10−6MeV2/c4corresponding to a max DP
+mean path length of 1 .629 m. Due to the construction of the 3-track trigger and
+offline reconstruction, the resolution of a decay vertex position is around 1 m. With
+a vertex greater than 1 m, the reconstruction will create a three-track vertex. This
+will result in the event being removed due to the requirement of a single three-track
+vertex during the selection, reducing the acceptance. However, this is only true in
+extreme cases where all the energy is propagated from the kaon to the DP. In this
+extreme case, the 1 m prompt limit is shown in Figure 4.28 as the dashed lines.
+The two lines represent the 1 m limit for the maximum DP energy and 50 % of the
+maximum. The fluctuations of the UL on the mixing parameter fall between these
+two lines, suggesting that the prompt assumption is still valid except in the most
+extreme cases.
 1084.7 Dark Photon in π0decays Global Results
 Figure 4.28: Upper limit mixing parameter ϵ2at a 90 % CL for each Dark Photon
 mass hypothesis, with the result from NA48/2 for comparison [44] and the expected
@@ -3548,7 +3548,7 @@ simulation.
 To reduce the chance of overlaps and to clean up the simulation, the size of
 the unused space in all sub-detectors surrounding the physical geometry is reduced.
 The RR for all sub-detectors is reduced to just slightly larger than the physical
-detector. It is possible to see this change in figure 5.7, which depicts the direction
+detector. It is possible to see this change in Figure 5.7, which depicts the direction
 of the magnetic fields. As the magnetic fields are only calculated in volumes, it
 is possible to see the reduction in RR size around the geometry. In 5.7(top) the
 field is calculated outside of the actual physical sub-detector due to the larger RR,
@@ -3632,94 +3632,94 @@ a rapid reduction in the QE [89]. This is measured as degradation of PMT QE
 with the increasing IAC. MCP-PMTs are similar to normal PMTs except that the
 dynode section is replaced by a micro-channel plate. An example diagram is shown
 in Figure 5.10, where a photon hits the photocathode window, producing a single
-electron, which is then accelerated towards the MCP by an electric field provided by
-a voltage difference across the gap. The electron then collides with the walls of the
-MCP, producing secondary electrons, which results in a cascade collected by the an-
-odes below. The dual layer design, or chevron, adds additional benefits compared to
+electron, which is then accelerated towards the MCP by an electric field provided
+by a voltage difference across the gap. The electron then collides with the walls of
+the MCP, producing secondary electrons, which results in a cascade collected by the
+anodes below. The dual layer design, or chevron, adds additional benefits compared
 1225.3 Future Kaon Experiments The KTAG upgrades for HIKE
-a single layer design such as better gains due to the increased surface for secondary
-electrons to be produced. Major breakthroughs to improve the lifetime of the MCP-
+to a single layer design such as better gains due to the increased surface for sec-
+ondary electrons to be produced. Major breakthroughs to improve the lifetime of
 Photocathodeγe−Micro Channel Plate
 Anode
 Figure 5.10: Diagram describing the workings of a MCP-PMT.
-PMT have come with the method of Atomic Layer Deposition (ALD) [90], where the
-channels of the MCP are coated with a ultra-thin layer of Al 2O3or MgO. The layer
-prevents the out-gassing from the MCP glass substrate and drastically reduces the
-heavy ions reaching the photocathode resulting in significant increases in lifetime of
-the MCP-PMTs [91]. Utilising the method of ALD, MCP-PMTs from Photonis have
-been demonstrated to withstand an IAC greater than 20 C /cm2[92], corresponding
-to a lifetime improvement of a factor of 100 compared to standard MCP-PMTs,
-shown in Figure 5.11. An example of MCP-PMT model proposed for the KTAG is
-shown in Figure 5.12. The module consists of an 8x8 array of pixels which can indi-
-vidually be read out. Simulations of the KTAG with the upgraded photon-detection
-system for use in HIKE Phase 1 show that each of the eight KTAG sectors would
-use four of these MCP-PMT, shown in Figure 5.13. The four MCP-PMTs per sector
-are required for full coverage of the light spot produced when the light exiting the
-CEDAR is reflected by the spherical mirror. The schematic in Figure 5.12 shows
-there is some unused space around the active area of each MCP-PMT, which would
-result in reduced efficiency, especially in the centre, where the maximum amount of
-light would be expected. To mitigate this, reflective surfaces are attached to each
-side of the individual MCP-PMTs shown in Figure 5.13 to reflect the light onto the
-active surface. The resultant light spot for one of the sectors is shown in Figure
-5.14, where the inactive areas between the individual MCP-PMT and the increased
+the MCP-PMT have come with the method of Atomic Layer Deposition (ALD) [90],
+where the channels of the MCP are coated with a ultra-thin layer of Al 2O3or MgO.
+The layer prevents the out-gassing from the MCP glass substrate and drastically
+reduces the heavy ions reaching the photocathode resulting in significant increases
+in lifetime of the MCP-PMTs [91]. Utilising the method of ALD, MCP-PMTs from
+Photonis have been demonstrated to withstand an IAC greater than 20 C /cm2[92],
+corresponding to a lifetime improvement of a factor of 100 compared to standard
+MCP-PMTs, shown in Figure 5.11. An example of MCP-PMT model proposed for
+the KTAG is shown in Figure 5.12. The module consists of an 8x8 array of pixels
+which can individually be read out. Simulations of the KTAG with the upgraded
+photon-detection system for use in HIKE Phase 1 show that each of the eight KTAG
+sectors would use four of these MCP-PMT, shown in Figure 5.13. The four MCP-
+PMTs per sector are required for full coverage of the light spot produced when the
+light exiting the CEDAR is reflected by the spherical mirror. The schematic in
+Figure 5.12 shows there is some unused space around the active area of each MCP-
+PMT, which would result in reduced efficiency, especially in the centre, where the
+maximum amount of light would be expected. To mitigate this, reflective surfaces
+are attached to each side of the individual MCP-PMTs shown in Figure 5.13 to re-
+flect the light onto the active surface. The resultant light spot for one of the sectors
+is shown in Figure 5.14, where the inactive areas between the individual MCP-PMT
 1235.3 Future Kaon Experiments The KTAG upgrades for HIKE
 Figure 5.11: Lifetimes of available MCP-PMTs with the photocathode QE vs IAC for
 photons at 400 nm wavelength. Top, old ALD coated MCP-PMTs from Hamamatsu
 with non coated versions shown in the insert plot. Bottom, more recent ALD coated
 MCP-PMTs from PHOTONIS and Photek in the inserted plot. [93]
 Figure 5.12: Schematic of Photonis MCP-PMT [94].
-amount of light at the edges produced from the reflective surfaces are shown. The
-position of the MCP-PMT in the KTAG sector is optimised to produce the maximum
-number of photo-electrons per kaon candidate. HIKE Phase 1 required the MCP-
-PMTs installed within the KTAG photon-detection system to have a demonstrated
+and the increased amount of light at the edges produced from the reflective surfaces
+are shown. The position of the MCP-PMT in the KTAG sector is optimised to
+produce the maximum number of photo-electrons per kaon candidate. HIKE Phase
+1 required the MCP-PMTs installed within the KTAG photon-detection system to
 1245.3 Future Kaon Experiments The KTAG upgrades for HIKE
 Figure 5.13: Visualisation of the MCP-PMT array placed inside of the KTAG
 -60 -40 -20 0 20 40 60
 Y [mm]-60-40-2002040Z (Relative to Centre of Light Guide) [mm]
  0.20.40.60.81.0
 Figure 5.14: Collected light distribution for the MCP-PMT installed in the KTAG.
-lifetime of 50 C /cm2. Other requirements set by HIKE for the MCP-PMT is a sin-
-gle photon detection rate of 10 MHz /cm2without degradation to the signal due to
-charge saturation effects. The single photon detection requires a high amplification
-factor (gain) of O(106). The MCP-PMTs manufactured by Photonis with 2 layers
-of ALD provide the best lifetime with no degradation in QE after 30 C /cm2, shown
-in Figure 5.11. A candidate for MCP-PMT for HIKEis Photonis XP85012-S-R2D2
-of the PLANACON line. However, the Photonis MCP-PMT doesn’t match with
+have a demonstrated lifetime of 50 C /cm2. Other requirements set by HIKE for the
+MCP-PMT is a single photon detection rate of 10 MHz /cm2without degradation
+to the signal due to charge saturation effects. The single photon detection requires
+a high amplification factor (gain) of O(106). The MCP-PMTs manufactured by
+Photonis with 2 layers of ALD provide the best lifetime with no degradation in QE
+after 30 C /cm2, shown in Figure 5.11. A candidate for MCP-PMT for HIKEis Pho-
+tonis XP85012-S-R2D2 of the PLANACON line. However, the Photonis MCP-PMT
 1255.3 Future Kaon Experiments The KTAG upgrades for HIKE
-the HIKE Phase 1 rate requirements and result in reduced gain above 1 MHz /cm2,
-shown in Figure 5.15. It is possible to reach 10 MHz /cm2with smaller sensor size
-but would result in a quadrupling of the cost to cover the light spot. Future research
-looking at reducing the resistance, capacitance and gain for single photon detection
-could possibly allow the XP85012-S-R2D2 to accommodate up to 10 MHz /cm2. The
+doesn’t match with the HIKE Phase 1 rate requirements and result in reduced gain
+above 1 MHz /cm2, shown in Figure 5.15. It is possible to reach 10 MHz /cm2with
+smaller sensor size but would result in a quadrupling of the cost to cover the light
+spot. Future research looking at reducing the resistance, capacitance and gain for
+single photon detection could possibly allow the XP85012-S-R2D2 to accommodate
+up to 10 MHz /cm2. The Photonis MCP-PMT has a Collection Efficiency (CE) of
 Figure 5.15: Rate capability of state of the art MCP-PMTs [95].
-Photonis MCP-PMT has a Collection Efficiency (CE) of above 60 %, the probability
-of the photo-electron passing through the pours of the MCP and producing a signal.
-With current technologies it is possible for MCP-PMTs to reach CE of over to 90 %
-[96], however the Photonis MCP-PMT is selected as it better fits the HIKE Phase 1
-timing requirements as the higher CE models utilise late photo-electrons resulting in
-higher time resolutions. The XP85012-S-R2D2 MCP-PMT has a transit time spread
-of 50 ps with a timing precision RMS of 120 ps [97] and results in a time response,
-shown in Figure 5.16 which is implemented for the HIKE simulations. The QE for
-the MCP-PMT from Photonis is shown in Figure 5.17. There are two options for
-the photocathode of the MCP-PMT available: a standard Bialkali (Sb-Rb-Cs, Sb-
-K-Cs) or a Hi-QE Blue. The HI-QE are more recent models, however there is no
-lifetime data available so albeit being the preferred option the standard Bialkali is
-chosen for use in the simulation. Further studies at the University of Birmingham
-are planned to characterise the Photonis XP85012-S-R2D2 MCP-PMT by measur-
-ing the lifetime, QE, CE, and other characteristics in order to decide which type
-would be used for high-intensity kaon physics at HIKE. From the Monte Carlo sim-
-ulation, the implemented MCP-PMTs performed excellently with the result shown
+above 60 %, the probability of the photo-electron passing through the pours of the
+MCP and producing a signal. With current technologies it is possible for MCP-
+PMTs to reach CE of over to 90 % [96], however the Photonis MCP-PMT is selected
+as it better fits the HIKE Phase 1 timing requirements as the higher CE models
+utilise late photo-electrons resulting in higher time resolutions. The XP85012-S-
+R2D2 MCP-PMT has a transit time spread of 50 ps with a timing precision RMS of
+120 ps [97] and results in a time response, shown in Figure 5.16 which is implemented
+for the HIKE simulations. The QE for the MCP-PMT from Photonis is shown in
+Figure 5.17. There are two options for the photocathode of the MCP-PMT avail-
+able: a standard Bialkali (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. The HI-QE are
+more recent models, however there is no lifetime data available so albeit being the
+preferred option the standard Bialkali is chosen for use in the simulation. Further
+studies at the University of Birmingham are planned to characterise the Photonis
+XP85012-S-R2D2 MCP-PMT by measuring the lifetime, QE, CE, and other charac-
+teristics in order to decide which type would be used for high-intensity kaon physics
+at HIKE. From the Monte Carlo simulation, the implemented MCP-PMTs per-
 1265.4 Future Kaon Experiments The KTAG upgrades for HIKE
 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3
 Time [ns]0.00.20.40.60.81.0
 Figure 5.16: Time response of the Photonics XP85012-S-R2D2 MCP-PMT.
 Figure 5.17: Quantum Efficiency of Photonics MCP-PMT as a function of wave-
 length.
-in Figure 5.18. The MCP-PMT produced 24.3 photo-electrons per kaon candidate
-with a time resolution of 18 ps, taken from the Gaussian sigma of the distribution
-in Figure 5.18 (Right). The results surpassed the requirements for the KTAG in
-HIKE and the upgrades are ready to be used in the HIKE simulations providing the
-lifetime and rate capability are acceptable.
+formed excellently with the result shown in Figure 5.18. The MCP-PMT produced
+24.3 photo-electrons per kaon candidate with a time resolution of 18 ps, taken from
+the Gaussian sigma of the distribution in Figure 5.18 (Right). The results surpassed
+the requirements for the KTAG in HIKE and the upgrades are ready to be used in
+the HIKE simulations providing the lifetime and rate capability are acceptable.
 1275.4 Future Kaon Experiments RICH Upgrade
 0 10 20 30 40 50
 Number of Photo-electrons0.00.20.40.60.81.0
@@ -3939,10 +3939,10 @@ reducing the number of channels from 72,780 for the 3x3 mm2SiPMs compared to
 8,588 for the 9x9 mm2SiPMs.
 1365.5 Future Kaon Experiments Detector Rates
 5.5 Detector Rates
-After the new GTK and RICH detectors were implemented into the simulation, it is
-necessary to determine the expected particle rate in the upgraded and non-upgraded
-detectors. The upgraded STRAW detector utilising 5 mm diameter straws is also
-included in the HIKE simulations. The expected rate for Phase 1 is calculated
+After the upgraded GTK and RICH detectors were implemented into the simulation,
+it is necessary to determine the expected particle rate in the upgraded and non-
+upgraded detectors. The upgraded STRAW detector utilising 5 mm diameter straws
+is also included in the HIKE simulations. The expected rate for Phase 1 is calculated
 by scaling the known NA62 rates by the expected increase in beam intensity by a
 factor of 4 compared to NA62. The rates for Phase 2 are calculated using the new
 simulation software described in the previous sections.
@@ -3951,28 +3951,19 @@ which contains the simulated HIKE beam components at a Z of 120 m, which is
 the start of the fiducial volume. The files are used as an input to the NA62MC
 software as the primary beam instead of the turtle beam, which is the default for
 NA62. Each file contains 10000 events, corresponding to 10000 protons on target.
-As there are 18K files produced in total, this is equivalent to 1 .8×108protons
-on target. As the statistics are not enough to obtain a reasonable estimate of the
-rates, each file is used 11 times as an input to the simulation with random seeds to
+As there are 18K files produced in total, this is equivalent to 1 .8×108protons on
+target. The statistics are not enough to obtain a reasonable estimate of the rates,
+so each file is used 11 times as an input to the simulation with random seeds to
 increase the sample size. The simulation is run with the unforced flag allowing for
 four main KLdecays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0
-andKL→π+π−π0. After the simulation, the files are reconstructed using the
+andKL→π+π−π0. After the simulation, the output is reconstructed using the
 NA62 Reconstruction software, and the rates are calculated by scaling the numbers
 in the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of
 4.8 seconds and a beam intensity of 2 ×1013protons per spill.
-TheKLrate at the entrance of the fiducial volume is calculated to be 304.1 MHz.
-The rate of the four main KLdecays inside the fiducial volume is shown in Table
-5.4.
-The total particle rates from KLdecays in the FV are shown in Table 5.5. To
-calculate the rate, all hits in each detector channel are collected and converted to the
-expected rate. The rates are large, but this is to be expected with a high intensity.
-However, the rate in the spectrometer for the KL→π0π0π0decay is concerning
-as a much lower rate is expected compared to the other decays due to the lack of
-charged daughter particles. Even with a lower branching ratio, it is expected that
-theKL→π+π−π0decay should have a higher rate in the spectrometer due to the
-1375.5 Future Kaon Experiments Detector Rates
+TheKLrate at the entrance of the fiducial volume is calculated as 304.1 MHz.
+The rate of the four main KLdecays inside the fiducial volume is shown in Table 5.4.
 KL decay Rate [MHz]
 KL→π±e∓νe(K0
 e3)13.89
@@ -3981,7 +3972,15 @@ KL→π±µ∓νµ(K0
 KL→π0π0π06.60
 KL→π+π−π04.45
 Table 5.4: Rates of the four main KLdecays in the HIKE phase 2 fiducial volume.
-charged pions in the final state.
+1375.5 Future Kaon Experiments Detector Rates
+The total particle rates from KLdecays in the FV are shown in Table 5.5. The
+rate is calculated using all the hits in each detector channel which are then converted
+to the expected rate. The rates are large, but this is to be expected with a high
+intensity. However, the rate in the spectrometer for the KL→π0π0π0decay is
+concerning as a much lower rate is expected due to the lack of charged daughter
+particles. Even with a lower branching ratio, it is expected that the KL→π+π−π0
+decay should have a higher rate in the spectrometer due to the charged pions in the
+final state.
 DetectorKLDecay [MHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4004,22 +4003,22 @@ Table 5.5: Total rates in the detectors for the four main KLdecays: KL→π±e�
 (K0
 e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→π+π−π0..
-Directly using at the MC, the origin of the particles that produce the hits in
-the spectrometer are found. The production Z and radius of particles which results
-a hit in the Spectrometer is shown in Figure 5.27. For the KL→π0π0π0decay,
-the majority (80 %) of the particles are produced after Z=210 m in the walls of the
-vacuum decay tube and the spectrometer chambers themselves. With only 20 % of
-particles produced before Z=210 m, originating from the primary decay process.
+By using information from the MC, the origin of the particles that produce the
+hits in the spectrometer are found. The production Z and radius of particles which
+results a hit in the Spectrometer is shown in Figure 5.27. For the KL→π0π0π0
+decay, the majority (80 %) of the particles are produced after Z=210 m in the walls of
+the vacuum decay tube and the spectrometer chambers themselves. With only 20 %
+of particles produced before Z=210 m, originating from the primary decay process.
 1385.5 Future Kaon Experiments Detector Rates
+Figure 5.28 illustrates this further, where the MC particle identification code of the
 Figure 5.27: Production Z and radius of particles producing a hit in the Spectrometer
 with the fraction of particles produced before and after Z=210 m. Left, for the
 KL→π+π−π0decay and right, for the KL→π0π0π0decay.
-Figure 5.28 illustrates this further, where the MC particle identification code of
-the particles producing hits in the spectrometer is shown. For the KL→π0π0π0
-the majority of the particles are electron/positron pairs, produced in interactions of
-photons in the walls of the vacuum decay tube and in the spectrometer chambers.
+particles producing hits in the spectrometer is shown. For the KL→π0π0π0the
+majority of the particles are electron/positron pairs, produced in interactions of
+photons in the walls of the vacuum decay vessel and the spectrometer chambers.
 This is compared to the KL→π+π−π0decay where the majority of the particles
-are pions produced in the decay.
+are pions produced in the decay within the FV.
 -200 -100 0 100 200
 PDG ID0.000.050.100.150.200.250.30
 Electron Positron
@@ -4037,12 +4036,13 @@ decays are collected. The daughter particles are selected as particles with a GE
 production process of ”Decay”, which should include any subsequent decays of the
 daughter particles, e.g. π0→γγ. This excludes all hits from particles produced by
 ”gamma conversion”, which produce electron-positron pairs and impact the rate, as
-described above. The rates for each detector are shown in Table 5.6. The overall
-rates are lower when compared to the total rates in Table 5.5, and the rates in the
-spectrometer for the KL→π0π0π0decay are much lower which is expected. Overall,
-the rates are acceptable for the detectors as it is assumed that most of the hits not
-produced from the decay of the KLor other subsequent decays would be removed
-by the trigger system as they would be outside the time window of the KLdecay.
+described above. The rates for each detector are shown in Table 5.6. The rates from
+the decay daughter particles are lower when compared to the total rates in Table 5.5.
+The rates in the spectrometer for the KL→π0π0π0decay are much lower, which
+is expected. Overall, the rates are acceptable for the detectors. It is assumed that
+most of the hits not produced from the decay of the KLor other subsequent decays
+would be removed by the trigger system as they would be outside the time window
+of the KLdecay.
 DetectorKLDecay Particle Rates [MHz]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4067,8 +4067,8 @@ e3),KL→
 µ3),KL→π0π0π0andKL→π+π−π0, produced directly from the
 daughter particles of the KLdecays.
 It is essential to understand the rates of the detectors in order to determine the
-overall detector design, especially for the electronics that would need to be designed
 1405.5 Future Kaon Experiments Detector Rates
+overall detector design, especially for the electronics that would need to be designed
 to meet the high rates for HIKE. The calculated rates will inform the development
 of the overall experiment data acquisition and trigger systems. Along with the
 overall rate, it is vital to know the max channel rates in the detectors to design
@@ -4099,17 +4099,23 @@ KL→π±µ∓νµ(K0
 the daughter particles of the KLdecays.
 As detailed previously in this section, the detectors that had finalised designs
 are implemented in the simulation, which allows for correct rate calculation. The
-other detectors that need to be upgraded to increase their granularity, were not
-yet finalised and, therefore, not implemented in the simulation. This results in an
-incorrect calculation for the channel rates as it is determined by the NA62 detec-
-tor design and the layout of the channels in the detectors. However, the rates at
-the planes of the upgraded detectors are calculated by collecting particles passing
-through the Z of the detector. This is done by using information from the MC for
+other detectors that need to be upgraded to increase their granularity, were not yet
+finalised and, therefore, not implemented in the simulation. This results in an incor-
+rect calculation for the channel rates as it is determined by the NA62 detector design
+and the layout of the channels in the detectors. However, the rates at the planes
+of the upgraded detectors are calculated by collecting particles passing through the
 1415.5 Future Kaon Experiments Detector Rates
-particles at specific points along the HIKE detector setup, called checkpoints. The
-rates for charged particles produced from the four KLdecays at each checkpoint are
-shown in Table 5.8. This allows for the correct determination of the rates for the
-detectors not yet finalised.
+Z plane of the detector. This is done using information from the MC for particles
+at specific points along the HIKE detector setup, called checkpoints. The rates for
+charged particles produced from the four KLdecays at each checkpoint are shown in
+Table 5.8. This allows for the correct determination of the rates for the detectors not
+yet finalised. The particle rates are collected not from the geometrical acceptance of
+the corresponding sub-detectors but from the cross-section of the outer volume for
+each sub-detector found in the Monte Carlo simulation. For the Straw-1&3 the val-
+ues of the cross-section used are, a circle of radius of 141.5 mm, NCHOD a square of
+length 330 mm, CHOD a square of length 244 mm, IRC a square of length 122 mm,
+MEC a circle of radius 182.5 mm, MUV-1&2 a square of length 320 mm, MUV-3 a
+square of length 281 mm and HAC a square of length 281 mm.
 Checkpoints (Z Position)KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4135,20 +4141,28 @@ e3),KL→π±µ∓νµ(K0
 andKL→π+π−π0, produced directly from the daughter particles of the KLdecays.
 However, as the rates are collected from the cross-section at the expected detector
 position, without accounting for the beam hole to accommodate beam particles
-passing through the detector the rates are higher than expected. An example cross-
-section at the entry of the first STRAW chamber is shown in Figure 5.29, where it is
-shown that the highest rate from the decay particles is found at the centre. As the
-detectors are not designed and the beam hole size is unknown, the size is estimated
-by calculating the beam divergence at the detector Z position. The beam divergence
-is calculated using the formula:
-δbeam= 0.4mrad×Z. (5.1)
+passing through the detector, the rates are higher than expected. An example cross-
+section at the entry of the first STRAW chamber is shown in Figure 5.29, where it
 1425.5 Future Kaon Experiments Detector Rates
+is clear that the highest rate from the decay particles is found at the centre. As
+the detectors are not yet designed and the beam hole size is unknown. The size of
+the beam hole is estimated by calculating the beam divergence at the detector Z
+position. The beam divergence is calculated using the formula:
+δbeam= 0.4mrad×Z. (5.1)
 Figure 5.29: Rate of particles across the cross section at the first STRAW chamber
 entrance at Z=213. m.
 Using Equation 5.1, a mask simulating the beam hole is applied to remove any
 particles that would pass through the detector. The resultant rates with the beam
 hole mask applied are shown in Table 5.9. As expected, this reduced the max rate
 for most detectors without impacting the average rate across the detector plane.
+For the design of each detector, it is also important to calculate the total rates
+produced by different particles, which is shown in Table 5.10. The majority of the
+rates at the detector planes are from photons, especially in the spectrometer. The
+rate from charged particles suggests that the detectors could be designed and built
+with current technologies.
+All rate information from the simulation shown in this section, will drive the
+design of the detectors that are not already upgraded. Table 5.10 is used in the HIKE
+1435.6 Future Kaon Experiments Detector Rates
 KLDecay Particle Rates [kHz /cm2]
 KL→π±e∓νe
 (40.55±0.11)%KL→π±µ∓νµ
@@ -4172,25 +4186,8 @@ decays: KL→π±e∓νe(K0
 e3),KL→π±µ∓νµ(K0
 µ3),KL→π0π0π0andKL→
 π+π−π0, produced directly from the daughter particles of the KLdecays.
-1435.6 Future Kaon Experiments Detector Rates
-For the design of each detector, it is also important to calculate the total rates
-produced by different particles, which is shown in Table 5.10. The majority of the
-rates at the detector planes are from photons, especially in the spectrometer. The
-rate from charged particles suggests that the detectors could be designed and built
-with current technologies.
-All rates information from the simulation shown in this section, would drive the
-design of the detectors that are not already upgraded. Table 5.10 is used in the HIKE
 proposal to demonstrate the requirement for upgrading the detectors to handle the
-increased rates. The particle rates are collected not from the geometrical acceptance
-of the corresponding sub-detectors but from the cross-section of the outer volume
-for each sub-detector found in the Monte Carlo simulation. For the Straw-1&3 the
-values of the cross-section used are, a circle of radius of 141.5 mm, NCHOD a square
-of length 330 mm, CHOD a square of length 244 mm, IRC a square of length 122 mm,
-MEC a circle of radius 182.5 mm, MUV-1&2 a square of length 320 mm, MUV-3 a
-square of length 281 mm and HAC a square of length 281 mm. A geometrical cut
-has been made to remove particles that pass through the checkpoints within the
-expected beam dispersion radius calculated to be 0 .4×10−3×Z, where Z is the
-position of the checkpoint.
+increased rates.
 CheckpointsTotal Particle Rates kHz /cm2
 e+/−µ+/−π+/−γ Charged Particles
 Max Average Max Average Max Average Max Average Max Average
