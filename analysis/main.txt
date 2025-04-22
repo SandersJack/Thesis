@@ -405,7 +405,7 @@ resultant Upper Limit (UL) on the number of Dark Photon candidates
 to a 90% confidence level. . . . . . . . . . . . . . . . . . . . . . . . . 98
 4.16 Local significance of Dark Photon (DP) signal across the search win-
 dow 9 ≤mA′≤120 MeV /c2. Left, in terms of DP mass and right,
-the Y projection of the top plot. . . . . . . . . . . . . . . . . . . . . . 100
+the Y projection of the top plot. . . . . . . . . . . . . . . . . . . . . . 99
 4.17 Acceptance of the DP signal for the MC background estimation method
 in terms of mass, parametrised with a polynomial shown in red. . . . 100
 4.18 Upper limit on the branching fraction of π0→γA′at a 90% Confi-
@@ -2703,9 +2703,9 @@ the background for the DP search and determines the experiment’s sensitivity.
 DEvent Selection
 The analysis strategy for the DP search originated from the selection used for the
 search at NA48/2 [44]. As the K→π+π0
-D(K2πD) decay has the same event signature
-as the production and decay of the DP and involves the selection of the π+and an
-electron-positron pair. The selection is set out below:
+D(K2πD) decay has the same event sig-
+nature as the production and decay of the DP and involves the selection of the π+
+and an electron-positron pair. The selection is set out below:
 844.1 Dark Photon in π0decays π0
 DEvent Selection
 4.1.1 Vertex Selection
@@ -2893,14 +2893,6 @@ removed from the large sample at the selection stage. After the full selection, 
 914.3 Dark Photon in π0decays MC Background Estimation Method
 Figure 4.6: True invariant mass of the electron-positron pair divided by the π0mass
 of the K2πDMC sample, which is equal to the kinematic variable x.
-0 20 40 60 80 100 120 140
-Mee [MeV/c2]101102103104105106
-K+ +0
-D
-K+ 0
-D+
-Data
-0 20 40 60 80 100 120 1400.91.01.1
 Figure 4.7: Reconstructed invariant mass of electron-positron pair for 2022 data and
 MC samples.
 MC samples are combined into a single dataset to estimate the background. Using
@@ -2968,14 +2960,6 @@ mass for each MC sample are shown in Figure 4.11. It shows how the two K2πD
 samples have been combined to produce a continuous distribution and shows the
 contribution from the Kµ3Ddecay. The statistical errors are calculated for each
 944.3 Dark Photon in π0decays MC Background Estimation Method
-0 20 40 60 80 100 120 140
-Mee [MeV/c2]101102103104105106
-K+ +0
-D
-K+ 0
-D+
-Data
-0 20 40 60 80 100 120 1400.91.01.1
 Figure 4.10: Reconstructed invariant mass of electron-positron pair for data and
 MC samples corrected for the effective TFF.
 Figure 4.11: Reconstructed invariant mass of electron-positron pair for data, indi-
@@ -2999,11 +2983,11 @@ mass of the electron-positron pair is collected and shown in Figure 4.13. The Y
 projection of the distribution is taken for each mass bin, and a Gaussian fit is
 conducted. The sigma of the fit is calculated and used to produce Figure 4.14.
 The resultant points are fitted to a straight line, representing an equation for the
+reconstructed invariant mass resolution,
+σm(mee) = 0 .037 55 MeV /c2+ 0.00554 ×mee. (4.11)
 964.3 Dark Photon in π0decays MC Background Estimation Method
 Figure 4.14: Resolution of the reconstructed electron-positron invariant mass against
 true invariant mass.
-reconstructed invariant mass resolution,
-σm(mee) = 0 .037 55 MeV /c2+ 0.00554 ×mee. (4.11)
 Due to the improved detector design, the NA62 resolution is a significant improve-
 ment compared to NA48/2. The improvement in mass resolution allows for a smaller
 search mass window compared to the previous study at NA48/2. The window cen-
@@ -3022,13 +3006,13 @@ Nexp/sfwhere sfis
 the scale factor used to scale the MC sample. It would have been required to include
 statistical errors due to the trigger efficiencies. However, as mentioned previously,
 all MC samples employed a trigger emulator, so this is not required. For each DP
+mass window, the local significance of the DP signal is calculated as,
+Z=Nobs−Nexpp
+δNobs+δNexp(4.12)
 974.3 Dark Photon in π0decays MC Background Estimation Method
 Figure 4.15: Number of observed data events ( Nobs), expected number of events
 from MC ( Nexp), the respective errors ( δNobsandδNexp) and the resultant Upper
 Limit (UL) on the number of Dark Photon candidates to a 90% confidence level.
-mass window, the local significance of the DP signal is calculated as,
-Z=Nobs−Nexpp
-δNobs+δNexp(4.12)
 and is shown in Figure 4.16. Across the search window, the local significance is
 never greater than 3 σ, resulting in no DP signal being observed. The UL for the
 number of DP decays ( A′→e+e−) at a 90% Confidence Level (CL) for each DP
@@ -3043,10 +3027,12 @@ X=Ls+b/Lb=e−s+b(s+b)N
 N!/e−bbN
 N!=e−s(1 +s
 b)N. (4.13)
-984.3 Dark Photon in π0decays MC Background Estimation Method
 It is beneficial to denote the test statistic for the observed data as Xobs. A confidence
 level for the exclusion of the background hypothesis (CL s+b) is the probability that
 the test statistic defined in Equation 4.13 is less than or equal to the observed test
+984.3 Dark Photon in π0decays MC Background Estimation Method
+Figure 4.16: Local significance of DP signal across the search window 9 ≤mA′≤
+120 MeV /c2. Left, in terms of DP mass and right, the Y projection of the top plot.
 statistic,
 CLs+b=Ps+b(X≤Xobs). (4.14)
 To improve the computational efficiency, the test statistic defined in Equation 4.13
@@ -3069,6 +3055,9 @@ which satisfies the relation,
 CLs(s) = 1−α (4.17)
 which would be the UL on the signal for a confidence level of α. The resultant UL
 on the number of DP candidates ( NDP) at a 90% CL is shown in Figure 4.15.
+994.3 Dark Photon in π0decays MC Background Estimation Method
+Figure 4.17: Acceptance of the DP signal for the MC background estimation method
+in terms of mass, parametrised with a polynomial shown in red.
 The UL on the NDPis used to calculate the resultant 90% CL on the branching
 fraction of the decay π0→γA′, which is computed with Equation 4.18, with the
 assumption that B(A′→e+e−) = 1.
@@ -3076,11 +3065,6 @@ Bπ→γA=NDP
 NKBK2πADP(K2π)(4.18)
 where NKis the effective kaon flux defined in Section 4.2, BK2πis the branching
 fraction of K+→π+π0[32] and ADP(K2π) is the acceptance of the DP signal. The
-994.3 Dark Photon in π0decays MC Background Estimation Method
-Figure 4.16: Local significance of DP signal across the search window 9 ≤mA′≤
-120 MeV /c2. Left, in terms of DP mass and right, the Y projection of the top plot.
-Figure 4.17: Acceptance of the DP signal for the MC background estimation method
-in terms of mass, parametrised with a polynomial shown in red.
 acceptance ADP(K2π) is calculated using the acceptance of the π0
 Ddecay shown in
 Figure 4.4 and is parametrised with a polynomial to allow for the calculation of the
@@ -3101,11 +3085,11 @@ m2
 B(π0→γγ). (4.19)
 The UL for the mixing parameter ϵ2at a 90% CL across the DP mass range is shown
 in Figure 4.19. The NA62 result for the 2022 data is not competitive at low invariant
+mass ranges up to around 85 MeV /c2. This suggests that at low mass ranges, the
+UL is limited by the small MC sample size. If the main MC sample is produced
 1004.4 Dark Photon in π0decays Background Estimation using Data
 Figure 4.18: Upper limit on the branching fraction of π0→γA′at a 90% CL for
 each Dark Photon mass value.
-mass ranges up to around 85 MeV /c2. This suggests that at low mass ranges, the
-UL is limited by the small MC sample size. If the main MC sample is produced
 at the same statistical level as the biased sample, the UL could be improved by at
 least an order of magnitude. Without increased MC statistics, the study would not
 be competitive with the already published result from NA48/2 [44] except for high
@@ -3118,6 +3102,8 @@ To improve the error on the background estimation, a new method is employed that
 uses the data itself to estimate the background. In addition to the 2022 dataset
 used in the MC background study, the 2023 and 2024 datasets are included for this
 study with the number of effective kaon decays defined in Section 4.2. The resultant
+reconstructed invariant mass of the electron-positron pair for events passing the
+selection is shown in Figure 4.20. The data distribution is fitted with polynomials
 1014.4 Dark Photon in π0decays Background Estimation using Data
 Figure 4.19: Upper limit on the mixing parameter ϵ2at a 90% CL for each Dark
 Photon mass value with the result from NA48/2 for comparison [44].
@@ -3125,8 +3111,6 @@ Photon mass value with the result from NA48/2 for comparison [44].
 Mee [MeV/c2]012345Events / (1 MeV/c2)1e6
 Figure 4.20: Reconstructed invariant mass of electron-positron pair for events pass-
 ing the selection from the 2022 and 2023 NA62 datasets.
-reconstructed invariant mass of the electron-positron pair for events passing the
-selection is shown in Figure 4.20. The data distribution is fitted with polynomials
 using the process described below.
 1024.4 Dark Photon in π0decays Background Estimation using Data
 4.4.1 Fitting the Data Distribution
@@ -3166,36 +3150,36 @@ upper boundary for the search region is selected when the fits with the polynomi
 1034.4 Dark Photon in π0decays Background Estimation using Data
 5.0 5.5 6.0 6.5 7.0
 MA [MeV/c2]
-0100002000030000400005000060000
- Polynomial Fit
+0100002000030000400005000060000Events / (0.016 MeV/c2)
+Polynomial Fit
 Data
 5.0 5.5 6.0 6.5 7.0
 MA [MeV/c2]
-0100002000030000400005000060000
- Polynomial Fit
+0100002000030000400005000060000Events / (0.016 MeV/c2)
+Polynomial Fit
 Data
 5.0 5.5 6.0 6.5 7.0
 MA [MeV/c2]
-0100002000030000400005000060000
- Polynomial Fit
+0100002000030000400005000060000Events / (0.016 MeV/c2)
+Polynomial Fit
 Data
 Figure 4.21: Fits on the data distributions with polynomial for the first DP mass
 hypothesis. Left, the data fitted with 3rd order used for the systematic uncertainty
 calculation, the middle fitted with a 4th order polynomial for the background esti-
 mation and the right fitted with 5th order for the systematic uncertainty calculation.
-112.5 115.0 117.5 120.0 122.5 125.0 127.5 130.0
+115 120 125 130
 MA [MeV/c2]
-01000200030004000500060007000
+01000200030004000500060007000Events / (0.14 MeV/c2)
 Polynomial Fit
 Data
-112.5 115.0 117.5 120.0 122.5 125.0 127.5 130.0
+115 120 125 130
 MA [MeV/c2]
-01000200030004000500060007000
+01000200030004000500060007000Events / (0.14 MeV/c2)
 Polynomial Fit
 Data
-112.5 115.0 117.5 120.0 122.5 125.0 127.5 130.0
+115 120 125 130
 MA [MeV/c2]
-01000200030004000500060007000
+01000200030004000500060007000Events / (0.14 MeV/c2)
 Polynomial Fit
 Data
 Figure 4.22: Fits on the data distributions with polynomial for the final DP mass
@@ -3215,7 +3199,7 @@ calculate the UL on the number of DP candidates in each mass window shown in Fig
 1044.4 Dark Photon in π0decays Background Estimation using Data
 20 40 60 80 100 120
 MA [MeV/c2]
-100101102103104105106107
+100101102103104105106107Nobs, Nexp and their uncertainties; UL NDP at 90 % CL
 Nexp
 Nobs
 Nstat
@@ -3247,7 +3231,7 @@ MA [MeV/c2]
 ±2
 ±1
 -3 -2 -1 0 1 2 3
-DP signal local significance0510152025
+DP signal local significance051015202530Events
 Figure 4.24: Local significance of DP signal across the mass search window 6 ≤
 mA′≤121.6 MeV /c2. Left, in terms of DP mass and right, the y projection of the
 DP mass plot.
