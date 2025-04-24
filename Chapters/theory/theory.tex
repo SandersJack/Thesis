@@ -3,11 +3,11 @@
 \begin{document}
     \section{The Standard Model of Particle Physics}
 
-    The \gls{SM} of particle physics is a framework that contains the current understanding of the fundamental matter and three of the four forces in the universe. The matter content of the SM comprises 12 elementary fermions, 
-    Five vector bosons mediate the three fundamental forces, and a scalar boson is responsible for particle masses (Figure \ref{fig:SM}). 
+    The \gls{SM} of particle physics is a framework that contains the current understanding of the fundamental matter and three of the four forces in the universe. The matter content of the SM comprises 12 elementary fermions (and their anti-particles), 
+    Five vector bosons that mediate the three fundamental forces, and a scalar boson responsible for particle masses (Figure \ref{fig:SM}). 
     There are six quark flavours: up, down, charm, strange, top, and bottom. Depending on their charge, they can be characterised into three generations or two types. There are also three lepton flavours, each with a corresponding neutrino.
-    It is important to note that the SM is not a complete model of the universe. A great example of this is the gravitational force 
-    , which is not included in the \gls{SM}; however, at the small scales of particle physics, this force is neglected due to its weaker coupling compared to the other three forces (strong, electromagnetic and weak).
+    It is important to note that the SM is not a complete model of the universe. An example of this is the gravitational force 
+    , which is not included in the \gls{SM}. However, at the small scales of particle physics, this force is neglected due to its weaker coupling compared to the other three forces (strong, electromagnetic and weak).
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.5\textwidth]{imgs/SM.pdf}
@@ -49,7 +49,7 @@
     \begin{equation}
         s_{12} \ll s_{23} \ll s_{13}.
     \end{equation}
-    Employing this, the Wolfenstein parametrisation \cite{PhysRevLett.51.1945} describes the \gls{CKM} using the parameters,
+    Based on this hierarchy, the Wolfenstein parametrisation \cite{PhysRevLett.51.1945} describes the \gls{CKM} using the parameters,
     \begin{equation}
         \begin{split}
             s_{12} &= \lambda \\
@@ -68,7 +68,7 @@
         + O(\lambda^4).
     \end{equation}
     The \gls{CKM}, in Equation~\ref{eq:wolf}, is expanded in terms of $\lambda$ and provides a hierarchical structure which reflects the pattern where transitions between quarks of the same/adjacent generations are stronger compared to distant ones.
-    Expanding the \gls{CKM} in powers up to $O(\lambda^3)$ results in the loss of unitary. However, unity can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of Equation \ref{eq:wolf},
+    Expanding the \gls{CKM} in powers up to $O(\lambda^3)$ results in the loss of unitary. However, unity can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of \ref{eq:wolf},
     \begin{equation}
         V_{td} = A\lambda^3 (1 - \bar{\rho} - i\bar{\eta})
     \end{equation}
@@ -119,9 +119,7 @@
         0.00857^{+0.00018}_{-0.00037} & 0.04088^{+0.00066}_{-0.00119} & 0.999125^{+0.000052}_{-0.000027}
     \end{bmatrix}
     \end{equation}
-    As mentioned previously, a feature of the \gls{CKM} matrix is that the diagonal components which describe the transitions within the quark generations dominate. The off-diagonal elements describing  
-    transitions are suppressed between one generation and doubly suppressed for transitions between two generations. This suppression between two generations produces rare decays, such as $K^+ \to \pi^+ \nu \bar{\nu}$ described in Section \ref{sec:pinn_theory}. 
-
+    
     Through measurement of the \gls{CKM} matrix components, it is possible to constrain the unitary triangle of Figure \ref{fig:triange}, as depicted in Figure \ref{fig:excluded_tri},
     \begin{figure}[htbp]
         \centering
@@ -141,14 +139,17 @@
     \end{itemize}
     Each one of these parameters needs to be measured through experiment to the highest precision so that any discrepancies can be resolved. Any deviations from theoretical understanding could be a hint of 
     physics \gls{BSM}. 
+
+    As mentioned previously, a feature of the \gls{CKM} matrix is that the diagonal components which describe the transitions within the quark generations dominate. The off-diagonal elements describing  
+    transitions are suppressed between one generation and doubly suppressed for transitions between two generations. This suppression between two generations produces rare decays, such as $K^+ \to \pi^+ \nu \bar{\nu}$ described in Section \ref{sec:pinn_theory}. 
     \section{Kaon Physics}
-    The first possible observation of a heavy meson, a particle composed of a quark-antiquark pair, was in 1943 by Leprince-Ringuet and L'heritier \cite{Cahn_Goldhaber_2009, 10.1063/PT.3.1989} and predated even the discovery of the pion in 1947 \cite{Lattes1947}. Utilising a cloud chamber to measure cosmic rays, they found the first evidence of a particle with a mass of 
+    The first possible observation of a heavy meson, a particle composed of a quark-antiquark pair, was made in 1943 by Leprince-Ringuet and L'heritier \cite{Cahn_Goldhaber_2009, 10.1063/PT.3.1989} and predated even the discovery of the pion in 1947 \cite{Lattes1947}. Utilising a cloud chamber to measure cosmic rays, they found the first evidence of a particle with a mass of 
     990 times the mass of the electron (\SI{0.511}{\mega\electronvolt} \cite{Navas:2024}). However, given its uncertainty of the observation it was possible that the upper limit on the measured mass could reach the proton mass, so they were not credited for the discovery. In 1947, while similarly studying cosmic rays with cloud chambers, G. D. Rochester and C. C. Butler published a result which included
-    two pictures showing forked tracks \cite{Rochester1947}. One of the tracks proved to show the decay of a neutral particle into two charged daughter particles, which turned out to be a decay of the neutral kaon to two charged pions. The other track showed the decay of a charged particle into charged and neutral daughter particles.
+    two pictures showing forked tracks \cite{Rochester1947}. One of the tracks showed the decay of a neutral particle into two charged daughter particles, which turned out to be a decay of the neutral kaon to two charged pions. The other track showed the decay of a charged particle into charged and neutral daughter particles.
     This result was later confirmed in 1950 by a group in Cal-Tech who observed multiple instances of these decays \cite{Seriff:1950ajp}. However, between these publications, a group in Bristol used emulsion chambers to observe the decay of a charged particle into three charged particles \cite{Brown1949}, known then as the tau decay. 
     This resulted in what was known as the tau-theta problem, where seemingly the same particle was decaying into two different final states with different parities: Theta to two pions (+1) and Tau to three pions (-1). This eventually led to the discovery that parity is not conserved in weak interactions \cite{PhysRev.104.254}. 
 
-    In the early 1950s, these particles would be described as K-mesons, for which there are four interaction (weak) eigenstates ($K^+$, $K^-$, $K^0$ and $\bar{K^0}$). Experiments continued to measure the characteristics of the K mesons and found features such as unusually long lifetimes ($10^{-10}$ seconds) despite their rapid production \cite{PhysRev.86.663}. These features arise from the fact the output of $K$ mesons occurs through the strong interaction, whereas their decays proceed through the weak interaction.
+    In the early 1950s, these particles would be described as K-mesons, for which there are four interaction (weak) eigenstates ($K^+$, $K^-$, $K^0$ and $\bar{K^0}$). Experiments continued to measure the characteristics of the K mesons and found features such as unusually long lifetimes ($10^{-10}$ seconds) despite their rapid production \cite{PhysRev.86.663}. These features arise from the fact the production of $K$ mesons occurs through the strong interaction, whereas their decays proceed through the weak interaction.
     These deviations from the other previously discovered mesons, such as the pion, suggested the existence of a new quantum number named strangeness \cite{PhysRev.92.833, Gell-Mann:1956iqa}. 
     The strange quantum number applies to all strongly interacting particles and is conserved in strong interactions but violated in weak ones.
 
@@ -162,7 +163,7 @@
     %    \end{split}
     %\end{equation} 
     %where $K_1^0$ has a $CP = +1$ and $K_2^0$ has $CP = -1$. 
-    However, in 1964, it was observed that the $K_L$ decayed to two pions \cite{PhysRevLett.13.138} proving that the \gls{CP} symmetry was indeed violated in weak decays. This decay is an example of indirect \gls{CP} violation as it occurs through neural kaon mixing. The first evidence of direct \gls{CP} violation, where the violation occurs within the decay, was provided by the NA31 experiment in 1993 \cite{BARR1993233}. The process was conclusively observed by KTeV and NA48 collaborations in the latter 1990s \cite{1999335, PhysRevLett.83.22}.
+    However, in 1964, it was observed that the $K_L$ also decayed to two pions \cite{PhysRevLett.13.138} proving that the \gls{CP} symmetry is indeed violated in weak decays. This decay is an example of indirect \gls{CP} violation as it occurs through neural kaon mixing. The first evidence of direct \gls{CP} violation, where the violation occurs within the decay, was provided by the NA31 experiment in 1993 \cite{BARR1993233}. The process was conclusively observed by the KTeV and NA48 collaborations in the latter 1990s \cite{1999335, PhysRevLett.83.22}.
     \begin{table}[htbp]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -183,8 +184,8 @@
         \label{tab:kaons_types}
     \end{table}
 
-    Kaon physics has continued into the 21st century, with the NA62 collaboration at CERN conducting the study of positively charged kaon decays. 
-    NA62s main physics goal is to measure the branching fraction of the ultra-rare $K^+ \to \pi^+ \nu \bar{\nu}$ which has a $O(10^{-11})$ and is described in more detail in Section \ref{sec:pinn_theory}.
+    Kaon physics has continued to be investigated into the 21st century, with the NA62 collaboration at CERN conducting the study of positively charged kaon decays. 
+    NA62s main physics goal is to measure the branching fraction of the ultra-rare $K^+ \to \pi^+ \nu \bar{\nu}$, described in more detail in Section \ref{sec:pinn_theory}.
     The positively charged kaon consists of an up quark and an anti-strange quark, with the other kaon types described in Table \ref{tab:kaons_types}. 
     The six most common decay modes of the positively charged kaon, along with their shorthand notation, are shown in Table \ref{tab:kaon_decays}.
 
@@ -333,11 +334,17 @@
             \kappa_+ = (5.173 \pm 0.025) \times 10^{-11} \left(\frac{\lambda}{0.225}\right)^8, \Delta_{EM} = -0.003
         \end{split}
     \end{equation}    
-    where $x_t = m_t^2 / m_W^2$ which is the ratio of the mass of the top quark and the mass of the W boson, $\lambda$ originates from the Wolfenstein parametrisation of the \gls{CKM} matrix and $\lambda_i = V_{is}^*V_{id}$ where $V_{ij}$ are CKM matrix elements. The $\Delta_{EM}$ takes into account the correction from radiative photon exchanges, and $\kappa_+$ condenses the relevant hadronic matrix elements. 
+    where $x_t = m_t^2 / m_W^2$ is the ratio of the mass of the top quark and the mass of the W boson, $\lambda$ originates from the Wolfenstein parametrisation of the \gls{CKM} matrix and $\lambda_i = V_{is}^*V_{id}$ where $V_{ij}$ are CKM matrix elements. The $\Delta_{EM}$ takes into account the correction from radiative photon exchanges, and $\kappa_+$ condenses the relevant hadronic matrix elements. 
     The terms $X(x_t)$ and $P_c(X)$ are the loop functions which describe contributions from the top and charm quark. The $X(x_t)$ can be described by the equation \cite{PhysRevD.83.034030, Buras2015}, 
     \begin{equation}
-        X(x_t) = X^(0) + \frac{\alpha_s}{4\pi}X_t^{(1)} + \frac{\alpha}{4\pi}X_t^{(EW)} = 1.481 \pm 0.005 \pm 0.008.
+        X(x_t) = X^{(0)} + \frac{\alpha_s}{4\pi}X_t^{(1)} + \frac{\alpha}{4\pi}X_t^{(EW)} = 1.481 \pm 0.005 \pm 0.008
     \end{equation}
+    where $X^{(0)}$ is the leading order contribution, $X_t^{(1)}$ is the next-to-leading order \gls{QCD} correction and $X_t^{(EW)}$ is the electroweak correction.
+    The $P_c(X)$ term describes the contribution from the charm quark is defined as \cite{Buras_2015},
+    \begin{equation}
+        P_c(X) = P_c^{SD}(X) + \delta P_{c,u} = 0.404 \pm 0.024
+    \end{equation}
+    where $P_c^{SD}(X)$ is the short distance contribution and $\delta P_{c,u}$ is the long distance contribution.
     It is possible to represent $\lambda_t$ and $\lambda_c$ from Equation \ref{eq:pinn_theory_br} as \cite{Buchalla:1995vs}, %\cite{Buras2015}, 
     \begin{equation}
         %\mathfrak{Re}(\lambda_t) \simeq |V_{ub}||V_{cb}| \cos{\gamma}(1-2\lambda^2) + (|V_{ub}|^2 - |V_{cb}|^2)\lambda \left(1 - \frac{\lambda^2}{2}\right),
@@ -359,7 +366,7 @@
     \end{equation}
     where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1+ \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) shown in Figure \ref{fig:traingles_SM}, with centre at ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}\sigma}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$. The ellipse constrains the parameters ($\bar{\rho},\bar{\eta}$) and is depicted in Figure \ref{fig:traingles_SM_elip}. 
     
-    The $K_L \to \pi^0 \nu \bar{\nu}$ ($K_{\pi^0\nu\bar{\nu}}$) decay is dominated by contributions from Feynman diagrams similar to Figure \ref{fig:fey_pinn}, but with a down quark spectating the decay compared to an up quark for the charged mode. The $K_{\pi^0\nu\bar{\nu}}$ decay is almost entirely \gls{CP} violating and is dominated by top-quark loop contributions \cite{PhysRevD.39.3322}. This gives a branching fraction depending only on the imaginary part of the top loop from Equation \ref{eq:pinn_theory_br}, which is \gls{CP} violating,
+    The $K_L \to \pi^0 \nu \bar{\nu}$ ($K_{\pi^0\nu\bar{\nu}}$) decay is dominated by contributions from Feynman diagrams similar to Figure \ref{fig:fey_pinn}, but with a down quark spectating the decay compared to an up quark for the charged mode. The $K_{\pi^0\nu\bar{\nu}}$ decay is theoretically clean and almost entirely \gls{CP} violating, dominated by top-quark loop contributions \cite{PhysRevD.39.3322}. This gives a branching fraction depending only on the imaginary part of the top loop from Equation \ref{eq:pinn_theory_br}, which is \gls{CP} violating,
     \begin{equation}
         \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = \kappa_L \left(\frac{\mathfrak{Im}(\lambda_t)}{\lambda^5} X(x_t) \right)^2
     \end{equation}
@@ -383,7 +390,7 @@
         \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) = (2.94 \pm 0.15) \times 10^{-11}.
     \end{equation}
 
-    The first observation and measurement of the branching fraction for the $K_{\pi^+\nu\bar{\nu}}$ decay was obtained by NA62 in 2024 and is described in Section \ref{sec:na62res}. The leading experimental result for the branching fraction for the $K_L \to \pi^0 \nu \bar{\nu}$ decay is an upper limit obtained by the 
+    The first observation and measurement of the branching fraction for the $K_{\pi^+\nu\bar{\nu}}$ decay was obtained by NA62 in 2024 and is described in Section \ref{sec:na62res}. The leading experimental result for the branching fraction of the $K_L \to \pi^0 \nu \bar{\nu}$ decay is an upper limit obtained by the 
     KOTO experiment \cite{PhysRevLett.122.021802}, 
     \begin{equation}
         \mathcal{B}(K_L \to \pi^0 \nu \bar{\nu}) < 300 \times 10^{-11} (90\% \text{CL}).
@@ -420,7 +427,7 @@
     \begin{equation} \label{eq:kl_pimumu}
         \mathcal{B}(K^0_L \to \pi^0 \mu^+\mu^-) = \left(3.7|a_S|^2 \pm 1.6 |a_S| \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 1.0\left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 5.2 \right) \times 10^{-12}.
     \end{equation}
-    Equations \ref{eq:kl_piee} and \ref{eq:kl_pimumu} show the main difference between the two decay modes, that the \gls{CP} conserving contribution due to the two-photon intermediate state only occurs in the muon decay as it is negligible in the helicity-suppressed electron mode.
+    Equations \ref{eq:kl_piee} and \ref{eq:kl_pimumu} show the main difference between the two decay modes. The \gls{CP} conserving contribution due to the two-photon intermediate state only occurs in the muon decay as it is negligible in the helicity-suppressed electron mode.
 
     Utilising the above equations, the expected SM branching fractions can be described as \cite{Mescia:2006jd},
     \begin{equation}
@@ -441,22 +448,23 @@
     \end{equation}
     \section{Dark Photon} \label{sec:DarkP_th}
     As mentioned above, the \gls{SM} is not a complete theory of the universe. A significant component of the universe remains unexplained. For instance, the observed rise in the cosmic-ray positron fraction with energy, along with the anomaly in the muon's magnetic moment (g-2) \cite{Muong-2:2023cdq}, suggest the possible existence of a hidden sector. 
-    A possible extension of the \gls{SM} is the interaction of a new $U(1)$ gauge symmetry with an associated boson, the \gls{DP}, which kinematically mixes with the SM hypercharge $U(1)_Y$ \cite{Fabbrichesi:2020wbt}. There are three separate benchmark cases of the \gls{DP} specified by the Physics Beyond Colliders group for future study \cite{Beacham_2020}: 
+    A possible extension of the \gls{SM} foresees a new $U(1)$ gauge symmetry with an associated boson, the \gls{DP}, which kinematically mixes with the SM hypercharge $U(1)_Y$ \cite{Fabbrichesi:2020wbt}. There are three separate benchmark cases of the \gls{DP} specified by the Physics Beyond Colliders group for future study \cite{Beacham_2020}: 
     \begin{itemize}
         \item BC1 - The massive DP decays into only SM particles.
         \item BC2 - The DP is massive and decays into mostly Dark Matter.
         \item BC3 - The DP is massless and involves the existence of so-called milli-charged particles.
     \end{itemize}
-    For the BC1 case, the hypothetical \gls{DP} (denoted $A'$) with a \si{\giga\electronvolt\per\clight} scale mass could resolve some of the discrepancies between the SM prediction and measurements. The addition of the \gls{DP} introduces two previously unknown parameters: the mass $m_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the \gls{DP} interaction with SM particles. For \gls{DP} of mass less than a neutral pion, 
-    it can be produced in the $\pi^0$ decay $\pi^0 \to \gamma A'$. The resultant branching fraction for the $\pi^0$ decay is \cite{PhysRevD.80.095024},
+    For the BC1 case, the hypothetical \gls{DP} (denoted $A'$) with a \si{\giga\electronvolt} scale mass could resolve some of the discrepancies arising from the observations of the (g-2) muon gyromagnetic ratio measurement and the rise of cosmic-ray positron fraction with energy. The addition of the \gls{DP} introduces two unknown parameters: the mass $m_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the \gls{DP} interaction with SM particles. A \gls{DP} of mass less than a neutral pion, 
+    can be produced in the $\pi^0$ decay $\pi^0 \to \gamma A'$. The resultant branching fraction for the $\pi^0$ decay is \cite{PhysRevD.80.095024},
     \begin{equation}\label{eq:DP_branch}
         \mathcal{B}(\pi^0 \to \gamma A') = 2\epsilon^2 \left(1-\frac{m_{A'}^2}{m_{\pi^0}^2}^3\right) \mathcal{B}(\pi^0 \to \gamma \gamma).
     \end{equation}
-    The \gls{DP} then decays to SM particles $A' \to e^+e^-$. Within the DP mass range for the decay, the only kinematically allowed decay involving the first power of the coupling constant into SM particles is $A' \to e^+ e^-$ decay. 
+    Within the DP mass range for the decay, the only kinematically allowed decay involving the first power of the coupling constant into SM particles is $A' \to e^+ e^-$ decay. 
     The $A'$ would decay into three photons and two neutrinos proceeding through higher-order processes, which are highly suppressed for low $\eta$ values. Hence, it is safe to assume that the branching fraction for $A' \to e^+e^- \approx 1 $. This assumption allows the expected decay width to be described as \cite{PhysRevD.80.095024}, 
     \begin{equation}
         \Gamma_{A'} \approx \Gamma (A' \to e^+e^-) = \frac{1}{3} \alpha \epsilon^2 m_{A'} \sqrt{1 - \frac{4m_e^2}{m_{A'^2}}} \left( 1 + \frac{4m_e^2}{m_{A'^2}} \right)
     \end{equation}
+    where $\alpha$ is the fine structure constant.
     By utilising Equation \ref{eq:DP_branch}, it is possible to set limits on the branching ratio of the \gls{DP} production, with the final goal of setting limits on the mixing parameter. Within the \gls{DP} mass range $2m_e < m_{A'} < m_{\pi^0}$ the world leading result for the upper limit of $\epsilon^2$ is from the NA48/2 experiment \cite{2015178} and is shown in Figure \ref{fig:na48_dp_lim}.
     \begin{figure}[htbp]
         \centering
