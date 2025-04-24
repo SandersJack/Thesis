@@ -3,13 +3,14 @@
 
 \begin{document}
     \glsreset{ke3}
+    \glsreset{IAC}
     Over the past 75\,years the study of kaon physics has been integral to the development of the standard model. Since 2016, the NA62 experiment has been the leading experiment in the field of kaon physics. However, 
-    with the NA62 experiment scheduled up to \gls{LS3}, which is expected in autumn 2026, it is important to investigate future experiments. It is then required to investigate the future of kaon physics and the potential experiments that could succeed NA62. This chapter will discuss the potential future of kaon physics, the experiments that could be used to further the field, and the 
+    with the NA62 experiment scheduled up to \gls{LS3}, which is expected in autumn 2026, it is important to investigate future experiments. It is then required to investigate the future of kaon physics and the potential experiments that could succeed NA62. This chapter discusses the potential future of kaon physics, the experiments that could be used to further the field, and the 
     work I contributed to these experiments.
     \section[HIKE]{High Intensity Kaon Experiments (HIKE)}
-    \gls{HIKE} is a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represented a long-phased program after LS3. HIKE would profit from a four to six-fold increase in beam intensity compared to NA62 and included cutting-edge detector technologies that will be described in this 
-    section. The beam intensity requirements for HIKE are described in Table~\ref{tab:hikePhases}. To accommodate the higher intensities, upgrades are needed to the infrastructure that provided the beam to ECN3. A number of working groups such, as the ECN3 beam delivery group within the Physics Beyond Colliders community at CERN \cite{Gatignon:2650989}, was already conducting efforts to consolidate the work required to upgrade the infrastructure.
-    Three phases are foreseen within the HIKE program, the first being a continuation of NA62 charged kaon physics with the high-intensity beam and detector upgrades to accommodate the rate increase and the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to a 5\,\% precision. The second phase would involve neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$ with $l = e,\mu$. 
+    \gls{HIKE} is a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represented a phased program after LS3. HIKE is to profit from a four to six-fold increase in beam intensity compared to NA62 and including cutting-edge detector technologies as described in this 
+    section. The beam intensity requirements for HIKE are described in Table~\ref{tab:hikePhases}. To accommodate the higher intensities, upgrades are needed to the infrastructure that provide the beam to ECN3. A number of working groups such as the ECN3 beam delivery group within the Physics Beyond Colliders community at CERN \cite{Gatignon:2650989}, was already conducting efforts to consolidate the work required to upgrade the infrastructure.
+    Three phases are foreseen within the HIKE program, the first being a continuation of NA62 charged kaon physics with the high-intensity beam and detector upgrades to accommodate the rate increase and the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to a 5\,\% precision. The second phase involves neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$ with $l = e,\mu$. 
     The third phase is designed to observe the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay and measure its branching ratio to a 20\,\% precision. 
     \begin{table}[htbp]
         \centering
@@ -17,26 +18,26 @@
         \hline
         HIKE Phase & Protons on Target/Spill & \( K \) Decays/Year \\ \hline
         Phase 1 (\( K^+ \))         & \( 1.3 \times 10^{13} \) & \( 2 \times 10^{13} \) \\ \hline
-        Phase 2 (\( K_L + \) tracking) & \( 2 \times 10^{13} \)   & \( 3.8 \times 10^{13} \) \\ \hline
-        Phase 3 (\( K_L, \) KLEVER)   & \( 2 \times 10^{13} \)   & \( 1.3 \times 10^{13} \)\\ \hline
+        Phase 2 (\( K_L \) and tracking) & \( 2 \times 10^{13} \)   & \( 3.8 \times 10^{13} \) \\ \hline
+        Phase 3 (\( K_L, \))   & \( 2 \times 10^{13} \)   & \( 1.3 \times 10^{13} \)\\ \hline
         \end{tabular}
         \caption{Intensity requirements for three phases of HIKE. The number of kaon decays per year corresponds to those that decay within the HIKE fiducial volume.}
         \label{tab:hikePhases}
     \end{table}
     \subsection{Phase 1}
     The experimental design of NA62 has been proven as a successful setup for the precision measurement of the $K^{+} \to \pi^{+}\nu\bar{\nu}$ decay, described in Section \ref{sec:na62}. The HIKE Phase 1 detector setup, shown in Figure~\ref{fig:Phase1}, is similar to the NA62 setup described in Section \ref{sec:na62} with new and upgraded detectors. The HIKE detectors are required to withstand a
-    four times greater particle rate with respect to NA62 equating to $1.3\, \times 10^{13}$ protons per spill on the target. The expected HIKE Phase 1 beam had similar characteristics to the NA62 one, with a \SI{75}{\giga\electronvolt\per\clight} secondary hadron beam produced from a \SI{400}{\giga\electronvolt\per\clight} primary proton beam from the SPS accelerator onto a target at an angle of 0\,rad. 
+    four times greater particle rate with respect to NA62 equating to $1.3\, \times 10^{13}$ protons per spill on the target. The expected HIKE Phase 1 beam has similar characteristics to the NA62 one, with a \SI{75}{\giga\electronvolt\per\clight} secondary hadron beam produced from a \SI{400}{\giga\electronvolt\per\clight} primary proton beam from the SPS accelerator onto a target at an angle of 0\,rad. 
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.99\textwidth]{imgs/Phase1.png}
         \caption{Diagram of HIKE Phase 1 detector setup \cite{thehikecollaboration2023high}.}%
         \label{fig:Phase1}%
     \end{figure}  
-    The detectors before the fiducial volume included an upgraded photon-detection system for the KTAG, described in Section \ref{sec:ktag_upgrade}, and a new GTK chip design. It is proposed to upgrade the existing NA62 Vetocounter with scintillating fibre (SciFi) technologies to improve the granularity 
+    The detectors before the fiducial volume include an upgraded photon-detection system for the KTAG, described in Section \ref{sec:ktag_upgrade}, and a new GTK chip design. It is proposed to upgrade the existing NA62 Vetocounter with scintillating fibre (SciFi) technologies to improve the granularity 
     and to accommodate the increased beam intensity. 
 
     Major upgrades are envisioned to the LAV and STRAW detectors within the fiducial volume. A number of LAV stations are to be upgraded to a new lead scintillator design, similar to the Vacuum Veto System (VVS) planned for the CKM experiment \cite{frank2001ckm,ramberg2003photon}. The LAV detectors are crucial to the subsequent phases of HIKE, especially 
-    Phase 3, and are designed to fulfil the requirements of the $K_{L} \to \pi^{0}\nu\bar{\nu}$ measurement even when used in Phase 1. The STRAW spectrometer is to use an upgraded a novel 5\,mm straw design with a layout shown in Figure~\ref{fig:5mmstraw}. The reduction in the straw diameter would decrease drift times while increasing granularity and resulting in an 
+    Phase 3, and are designed to fulfil the requirements of the $K_{L} \to \pi^{0}\nu\bar{\nu}$ measurement even when used in Phase 1. The STRAW spectrometer is to use an upgraded a novel 5\,mm straw design with a layout shown in Figure~\ref{fig:5mmstraw}. The reduction in the straw diameter decreases the drift times while increasing granularity and resulting in an 
     expected improvement in the track angle and momentum resolution of 10-20\,\% compared to NA62.
     \begin{figure}[htbp]
         \centering
@@ -44,16 +45,16 @@
         \caption{Diagram of the new STRAW spectrometer layout with 5\,mm straw tubes \cite{thehikecollaboration2023high}.}%
         \label{fig:5mmstraw}%
     \end{figure} 
-    Downstream of the fiducial volume, the PMT arrays of the RICH detector are upgraded, as described in Section \ref{sec:rich_upgrade}. The HIKE timing detector would profit from the current NA62-CHOD detector with upgraded \glspl{PMT}, which are to be chosen from the outcome of 
+    Downstream of the fiducial volume, the PMT arrays of the RICH detector are upgraded, as described in Section \ref{sec:rich_upgrade}. The HIKE timing detector profits from the current NA62-CHOD detector with upgraded \glspl{PMT}, which are to be chosen from the outcome of 
     studies from other detectors such as KTAG, RICH and MUVs. For HIKE Phase 1, the LKr is proposed as the primary electromagnetic calorimeter given its excellent energy resolution, but the required timing resolution is to be achieved by upgrading 
     its readout system. A number of other detectors are to be upgraded or replaced with higher granularity, such as the hadronic calorimeter, MUVs, IRC, and SAC.
 
-    It is expected that HIKE Phase 1 would run between LS3 and LS4, with the exact years being undetermined. About $2.5 \times 10^{-6}$ kaon decays in the fiducial volume is expected per proton on target during HIKE phase 1. Given the expected protons per spill of $1.3 \times 10^{13}$ (four times NA62) and a nominal year of 200 data-taking days with an average of 3000 spills per day, would result in an 
-    expected $2 \times 10^{13}$ kaon decays per year foreseen during HIKE phase 1. As a consequence the Phase 1 goals could be completed in 5 years of data taking.
+    About $2.5 \times 10^{-6}$ kaon decays in the fiducial volume is expected per proton on target during HIKE phase 1. Given the expected protons per spill of $1.3 \times 10^{13}$ (four times NA62) and a nominal year of 200 data-taking days with an average of 3000 spills per day, results in an 
+    expected $2 \times 10^{13}$ kaon decays per year foreseen during HIKE phase 1. As a consequence the Phase 1 goals can be completed in 5 years of data taking.
     \subsection{Phase 2}
-    HIKE Phase 2 is a multi-purpose neutral $K_{L}$ decay experiment with the primary goal being to measure the branching ratios of the $K_{L} \to \pi^{0} l^{+} l^{-}$ decays. The detector setup for phase 2, shown in Figure~\ref{fig:Phase2}, would involve minimal modification to the experimental 
-    setup of Phase 1, with the removal of detectors that are only applicable to the charged kaon beam. The KTAG, GTK, RICH, and SAC detectors are to be removed, and the STRAW spectrometer would be shortened to account for a softer momentum of the secondary particles. The STRAW chambers would be reconfigured to have 
-    central beam holes to account for the neural beam. The MNP33 magnet requires a reduction in strength by 20\,\% to account for the shorter spectrometer, resulting in a momentum kick of \SI{210}{\mega\electronvolt\per\clight}. The fiducial volume would be increased to 90\,m compared to 75\,m in Phase 1.
+    HIKE Phase 2 is a multi-purpose neutral $K_{L}$ decay experiment with the primary goal of measuring the branching ratios of the $K_{L} \to \pi^{0} l^{+} l^{-}$ decays. The detector setup, shown in Figure~\ref{fig:Phase2}, would involve minimal modification to the experimental 
+    setup of Phase 1, with the removal of detectors that are only applicable to the charged kaon beam. The KTAG, GTK, RICH, and SAC detectors are to be removed, and the STRAW spectrometer is to be shortened. The STRAW chambers are to be reconfigured to have 
+    central beam holes to account for the neural beam. The MNP33 magnet requires a reduction in strength by 20\,\% to account for the shorter spectrometer, resulting in a momentum kick of \SI{210}{\mega\electronvolt\per\clight}. The fiducial volume is increased to 90\,m compared to 75\,m in Phase 1.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.99\textwidth]{imgs/Phase2.png}
@@ -63,8 +64,8 @@
     The design proposed a production angle of 2.4\,mrad on the target producing an expected $K_{L}$ yield of $5.4 \times 10^{-5}$ per proton. Assuming an integrated proton flux of $1.2 \times 10^{19}$ protons on target per year would result in $3.8 \times 10^{13}$ $K_{L}$ decays in the fiducial volume per year. The mean beam momentum at the entry of the fiducial volume is expected to be 
     \SI{79}{\giga\electronvolt\per\clight} with a mean beam momentum for $K_{L}$ which decay of \SI{46}{\giga\electronvolt\per\clight}. 
     
-    HIKE Phase 2 is planned to follow after Phase 1, which is scheduled after LS4 and to run up to LS5. The expected protons per spill in Phase 2 is six times that of NA62 at $2 \times 10^{13}$. 
-    Assuming 200 days of data taking and 3000 spills per day (as in Phase 1) and $3.2 \times 10^{-6}$ $K_L$ decays in the \gls{FV} per proton on target would result in $3.8 \times 10^{13}$ decays per year. The expected time to Phase 2 goals is 6 years of data taking. 
+    HIKE Phase 2 is planned to follow after Phase 1. The expected protons per spill in Phase 2 is six times that of NA62 at $2 \times 10^{13}$. 
+    Assuming 200 days of data taking, 3000 spills per day (as in Phase 1) and $3.2 \times 10^{-6}$ $K_L$ decays in the \gls{FV} per proton on target would result in $3.8 \times 10^{13}$ decays per year. The expected time to Phase 2 goals is 6 years of data taking. 
     \subsection{Phase 3 (KLEVER)}
     HIKE phase 3, previously known as KLEVER \cite{ambrosino2019klever}, is an experiment designed to measure the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay. The experimental setup is shown in Figure~\ref{fig:Phase3} and differs from the design used at NA62 and HIKE Phase1/2. The setup consists of a large number of photon veto detectors located around a 160\,m long vacuum volume to produce a complete 
     coverage of photons produced from $K_{L}$ decays. The detectors include coverage for photons emitted up to 100\,mrad and allow for photons emitted with an angle up to 7.5\,mrad to be detected by the main electromagnetic calorimeter (MEC). 
@@ -76,14 +77,14 @@
     \end{figure}  
     Due to the significantly different experimental setup, Phase 3 is separated from the HIKE proposal submitted in 2023 \cite{thehikecollaboration2023high}. However, some detectors would be shared between the two experiments as the granularity and efficiency requirements for Phase 3 have driven the detector requirements for the first two phases, reducing the overall costs. The LAVs, MEC, IRC, SAC and the hadronic calorimeters, which are to be built for HIKE Phase 1/2, 
     had all designs driven by their usage in Phase 3. The upstream veto, charged particle veto, and the pre-shower detectors are unique to Phase 3.
-    \section{Flexible Software}\label{sec:na62fw}
+    \section{Flexible Simulation Software}\label{sec:na62fw}
     As briefly described in Section \ref{sec:introSoft}, the software for NA62 is split into three main \sloppy\texttt{C++} packages. 
-    NA62MC is a GEANT4-based Monte Carlo simulation package that simulates the NA62 experiment. The \gls{MC} utilises functions within GEANT4 to construct the sub-detectors of NA62, including all their materials, volumes and structures. It is possible to select a number of kaon decays to simulate in order to create signals similar to what are produced in reality at the experiment. After the simulation is complete, the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
+    NA62MC is a GEANT4-based Monte Carlo simulation package that simulates the NA62 experiment. The \gls{MC} utilises functions within GEANT4 to construct the sub-detectors of NA62, including their materials, volumes and structures. It is possible to select a number of kaon decays to simulate in order to create signals similar to what are produced in reality at the experiment. After the simulation is complete, the software saves the signals in each detector in a ROOT file for use in reconstruction or analysis. 
     NA62Reconstruction is then used to reconstruct either the Monte Carlo data or collected data from the experiment, producing hits within the detectors and clustering them into candidates. NA62Analysis is used to analyse the data produced from the reconstruction to conduct all the physics studies that are performed at NA62. 
 
-    The NA62FW was designed for use only with the NA62 experimental setup, resulting in minimal configurability and flexibility. Within the simulation, the only option for users to modify was to enable/disable sub-detectors. With the experiment foreseen to run up to \gls{LS3}, an upgraded software package is required to allow for the development of new detectors for future kaon experiments. 
-    The software had to be flexible and configurable enough to allow for the simultaneous use for NA62 data taking and physics analysis, as well as for the development of new experiments.
-    To implement a flexible framework, all detector classes are refactored to inherit from a common class, which contained the essential functions and variables for all detectors. This allowed for all classes of the detectors to be parsed using the same machinery. The input to the simulation is changed from a simple text file, to a single configuration file for all the detectors. The configuration file contained any arguments required for individual detectors which are defined in Table~\ref{tab:config_variables}, including detectors upgraded later on in this Chapter. The X, Y, and Z placement of the back face of the detectors, along with the rotation, are also defined in this file. 
+    The NA62FW was designed for use only with the NA62 experimental setup, resulting in minimal configurability and flexibility. Within the simulation, the only option for users to modify was to enable/disable sub-detectors. An upgraded software package is required to allow for the development of new detectors for future kaon experiments. 
+    The software is needed to be flexible and configurable to allow for the simultaneous use for NA62 data taking and physics analysis, as well as for the development of new experiments.
+    To implement a flexible framework, all detector classes are refactored to inherit from a common class, which contains the essential functions and variables for all detectors. This allowed for all classes of the detectors to be parsed using the same machinery. The input file for the configuration of the detectors is changed from a simple text file, listing enabled detectors, to a one that includes information for the correct placement and construction of the detectors . The configuration file contained any arguments required for individual detectors which are defined in Table~\ref{tab:config_variables}, including detectors upgraded later on in this Chapter. The X, Y, and Z placement of the back face of the detectors, along with the rotation, are also defined in this file. 
     An example entry in the configuration file for a STRAW station is shown in Figure~\ref{fig:config}, where a name is given for the station ''STRAW0'', along with a chamber ID, chamber type defining the size of the straws, and the chamber geometry which determines if the beam hole is symmetric or not.  
 
     \begin{figure}[htbp]
@@ -99,24 +100,24 @@
         \begin{tabular}{|l|l|}
         \hline
         Detector Name & Arguments \\ \hline
-        STRAW & \begin{tabular}[c]{@{}l@{}}Chamber Name: "STRAW0", "STRAW1", "STRAW2" or "STRAW3" \\ Chamber ID: 0, 1, 2 or 3\\ Chamber Type:  0 (10mm) or 1 (5mm) \\ Chamber Mode: 0 (default) or 1 (symmetric)\end{tabular} \\ \hline
+        STRAW & \begin{tabular}[c]{@{}l@{}}Chamber Name: ``STRAW0", ``STRAW1", ``STRAW2" or ``STRAW3" \\ Chamber ID: 0, 1, 2 or 3\\ Chamber Type:  0 (10mm) or 1 (5mm) \\ Chamber Mode: 0 (default) or 1 (symmetric)\end{tabular} \\ \hline
         Spectrometer Magnet & Magnetic field intensity \\ \hline
-        Vessel & \begin{tabular}[c]{@{}l@{}}Length\\ InnerRadius\\ OuterRadius\\ Type: "BlueTube", "BlueTubeNoRails" or "GreyTube" \end{tabular} \\ \hline
-        GigaTracker & PixelType: 0 (NA62), 1 (NA62/2), 2 (NA62/3) \\ \hline
-        RICH & \begin{tabular}[c]{@{}l@{}} Type: "NA62" or "HIKE" \\ SiPMType: "3mm", "6mm" or "9mm"\end{tabular} \\ \hline
+        Vessel & \begin{tabular}[c]{@{}l@{}}Length\\ InnerRadius\\ OuterRadius\\ Type: ``BlueTube", ``BlueTubeNoRails" or ``GreyTube" \end{tabular} \\ \hline
+        GigaTracker & PixelType: 0 (NA62 sensor size), 1 (1/2 NA62 sensor size), 2 (1/3 NA62 sensor size) \\ \hline
+        RICH & \begin{tabular}[c]{@{}l@{}} Type: ``NA62'' or ``HIKE'' \\ SiPMType: ``3mm", ``6mm" or ``9mm"\end{tabular} \\ \hline
         \end{tabular}
         }
         \caption{Arguments for detectors in the geometry file for use within NA62MC.}
         \label{tab:config_variables}
     \end{table}
 
-    When constructed inside the simulation, each detector is contained within its own separate outer volume called the ''Responsibility Region'' (RR). 
+    When constructed inside the simulation, each detector is contained a separate outer volume called the '``Responsibility Region'' (RR). 
     The creation of the RR is a simple task for most detectors apart from the STRAW and LAV which are made up of multiple stations that are not continuous, resulting in multiple responsibility regions for each station.
 
     \subsection{Testing: Geometry and Magnetic Fields}
-    After the simulation was upgraded, all the geometries of each detector had to be validated to ensure that they are still correct with respect to the previous version. This is due to the complex nature of refactoring the detectors with a number of volume changes and the way the detectors are constructed. The validation is completed using a virtual particle within the GEANT4 framework called a Geantino. The Geantino is a particle that traverses the simulation in a straight line and interacts with all volumes 
-    present in the simulation but will not be affected by magnetic fields. A large square beam of these particles is sent through the simulation, and every time the particle passed across a boundary between two volumes, its position is saved. Using this information it is possible to reconstruct the entire geometry of each detector in order to check the placement and geometry to mm precision to ensure that the simulation is still accurate. An example of the Geantino hits on a single view of STRAW chamber 1 is shown in Figure~\ref{fig:geantino_plot}, where 
-    it is possible to see the features of the view, such as the missing straws within the centre used to produce the chamber beam hole. For the full validation, a larger sample of Geantinos is used to achieve the required precision. However, if there is a discrepancy between the new version and the previous, a smaller area is selected to create a more precise picture of what is incorrect. This information was then used to modify the software to fix any geometry issues.
+    After the simulation is upgraded, all the geometries of each detector are validated to ensure that they are still correct with respect to the previous version. This is due to the complex nature of refactoring the detectors with a number of volume changes and the way the detectors are constructed. The validation is completed using a virtual particle within the GEANT4 framework called a Geantino. The Geantino is a particle that traverses the simulation in a straight line and interacts with all volumes 
+    present in the simulation but will not be affected by magnetic fields. A square distribution of these particles is sent through the simulation, and every time the particle passed across a boundary between two volumes, its position is saved. Using this information it is possible to reconstruct the entire geometry of each detector in order to check the placement and geometry to ensure that the simulation is still accurate. An example of the Geantino hits on a single view of STRAW chamber 1 is shown in Figure~\ref{fig:geantino_plot}, where 
+    it is possible to see the features of the view, such as the missing straws within the centre used to produce the chamber beam hole. For the full validation, a larger sample of Geantinos is used to achieve the required precision. However, if there is a discrepancy between the new version and the previous, a smaller area is selected to create a more precise picture of what is incorrect. This information is used to modify the software to fix any geometry issues.
     This check is conducted for all sub-detectors within the simulation.
 
     \begin{figure}[htbp]
@@ -126,9 +127,9 @@
         \label{fig:geantino_plot}%
     \end{figure} 
 
-    To reduce the chance of overlaps and to clean up the simulation, the size of the unused space in all sub-detectors surrounding the physical geometry is reduced. The RR for all sub-detectors is reduced to just slightly larger than the physical detector. It is possible to see this change in Figure~\ref{fig:fields}, which depicts the direction of the magnetic fields. As the magnetic fields are only calculated in volumes, it is possible to see the reduction in RR size around the geometry. In \ref{fig:fields}(top) the field is calculated outside of the 
-    actual physical sub-detector due to the larger RR, whereas in \ref{fig:fields}(bottom) the RR has been reduced to a few mm larger than the actual physical detector. As well as reducing the chance of overlaps, reducing the RR would speed up the simulation slightly due to the reduction in unnecessary calculations for the magnetic field outside of the detector geometry.
-    To improve the usability for users a geometry check is completed every time before the simulation starts. Each outer detector volume is checked for any overlaps with other detectors in all three dimensions, taking into account any rotations and the shape of the outer volumes. If an overlap of two sub-detectors is found, the simulation does not start, and an error is produced to the user describing where the overlap is and what sub-detectors are involved. 
+    To reduce the chance of overlaps and to clean up the simulation, the size of the unused space in all sub-detectors surrounding the physical geometry are reduced. The RR for all sub-detectors is reduced to just slightly larger than the physical detector. It is possible to see this change in Figure~\ref{fig:fields}, which depicts the direction of the magnetic fields. As the magnetic fields are only calculated in volumes, it is possible to see the reduction in RR size around the geometry. In \ref{fig:fields}(top) the field is calculated outside of the 
+    actual physical sub-detector due to the larger RR, whereas in \ref{fig:fields}(bottom) the RR has been reduced to a few mm larger than the actual physical detector. As well as reducing the chance of overlaps, reducing the RR can speed up the simulation slightly due to the reduction in unnecessary calculations for the magnetic field outside of the detector geometry.
+    To improve the usability, a geometry check is completed every time before the simulation starts. Each outer detector volume is checked for any overlaps with other detectors, taking into account any rotations and the shape of the outer volumes. If an overlap of two sub-detectors is found, the simulation does not start, and an error is produced describing where the overlap is and what sub-detectors are involved. 
 
     \begin{figure}[htbp]
         \centering
@@ -140,8 +141,8 @@
         \label{fig:fields}%
     \end{figure}
 
-    The magnetic field in the simulation is based on measurements of the magnetic field at NA62 from hall probes \cite{Fry_2016}, with this information saved in the form of data files used as inputs to calculate the magnetic field at various points in the simulation. In NA62MC the magnetic field is split into three distinct regions: the Bluetube field within the decay region which is used for small corrections,
-    the fringe field located at the edges of the MNP33 magnetic field and the MNP33 field which is the main magnetic field defined in the simulation from the MNP33 dipole magnet. In the previous version of the simulation, the position of the magnetic fields is written within the static code. However, with the flexible version, it is possible to move the MNP33 magnet to any position via the geometry input file. This required the magnetic field to be calculated relative to the central position of the MNP33 dipole magnet. An example of this flexibility is shown in Figure~\ref{fig:moved_mag} where 
+    The magnetic field in the simulation is based on measurements of the magnetic field at NA62 from hall probes \cite{Fry_2016}, saved in the form of data files used as inputs to calculate the magnetic field at various points in the simulation. In NA62MC the magnetic field is split into three distinct regions: the Bluetube field within the decay region,
+    the fringe field located at the edges of the MNP33 magnetic field and the MNP33 field which is the main magnetic field from the MNP33 dipole magnet. In the previous version of the simulation, the position of the magnetic fields is written within the static code. However, with the flexible version, it is possible to move the MNP33 magnet to any position via the geometry input file. This requires the magnetic field to be calculated relative to the central position of the MNP33 dipole magnet. An example of this flexibility is shown in Figure~\ref{fig:moved_mag} where 
     the MNP33 magnet is moved from Z=198\,m to Z=163\,m, which is in front of the STRAW chamber 1. The MNP33 and fringe magnetic fields is recalculated from the new position at 163\,m to account for the placement of the MNP33 magnet.
     \begin{figure}[htbp]
         \centering
@@ -150,8 +151,8 @@
         \label{fig:moved_mag}%
     \end{figure} 
 
-    Similar to the changes in the sub-detector construction, the modification of the magnetic fields required validation. This is done using similar machinery to the geometry test completed previously but with a different GEANT particle, the charged Geantino. This is similar to a normal Geantino, where the particle traverses all volumes within its path but interacts with magnetic fields. As the charged Geantino enters a magnetic field, it is deflected as if it is a positively charged particle. This test ensured that the same tracks of the charged Geantinos between the previous version and the new flexible version are being produced within the magnetic fields. 
-    An example of the tracks taken by the charged Geantinos within the simulation is shown in Figure~\ref{fig:mag_check}, where it is possible to see the displacement of the particles within the magnetic field regions. The exact XY positions of the hits would then be validated against a sample of charged Geantinos with the exact same characteristics and starting parameters produced with the previous version of the software.
+    Similar to the changes in the sub-detector construction, the modification of the magnetic fields required validation. The validation done using similar machinery to the geometry test completed previously but with a different GEANT particle, the charged Geantino. This is similar to a normal Geantino, where the particle traverses all volumes within its path but interacts with magnetic fields. As the charged Geantino enters a magnetic field, it is deflected as if it is a positively charged particle. This test ensured that the same tracks of the charged Geantinos between the previous version and the new flexible version are being produced within the magnetic fields. 
+    An example of the tracks taken by the charged Geantinos within the simulation is shown in Figure~\ref{fig:mag_check}, where it is possible to see the displacement of the particles within the magnetic field regions. The exact XY positions when the particles traverses a detector volume would then be validated against a sample of charged Geantinos with the exact same characteristics and starting parameters produced with the previous version of the software.
 
     \begin{figure}[htbp]
         \centering
@@ -160,23 +161,24 @@
         \label{fig:mag_check}%
     \end{figure} 
 
-    With minimal modification it would also be possible to add the functionality to add multiple magnets within the simulation, producing a combined field. %However, this is not implemented into the framework as its use is not foreseen, but the machinery wisas developed and is ready for use when required. 
-    After the geometry and magnetic field tests are completed, full test productions of $K^+ \to \pi^+ \pi^0$,  $K^+ \to \pi^+ \pi^- \pi^+$ and $K^+ \to \mu^+ \bar{\nu}$, are produced to test the validity of the existing NA62 setup along with the entire software chain (MC$\to$Reconstruction$\to$Analysis). 
+    With minimal modification it is also possible to add the functionality to add multiple magnets within the simulation. %However, this is not implemented into the framework as its use is not foreseen, but the machinery wisas developed and is ready for use when required. 
+    After the geometry and magnetic field tests are completed, full test productions of $K^+ \to \pi^+ \pi^0$,  $K^+ \to \pi^+ \pi^- \pi^+$ and $K^+ \to \mu^+ \nu$, are produced to test the validity of the existing NA62 setup along with the entire software chain (MC$\to$Reconstruction$\to$Analysis). 
 
     After testing, the software is ready to be used to develop new detectors and produce physics studies for HIKE.
 
     \section{The KTAG upgrades for HIKE} \label{sec:ktag_upgrade}
-    To sustain the increased kaon rate, the KTAG required upgrades to the photon-detection and data acquisition systems, allowing to reach the required time resolution of 15-20\,ps and kaon identification efficiency of greater than 95\,\%. The expected kaon rate in HIKE Phase 1 is 200\,MHz, which corresponds to a maximum rate of \SI{10}{\mega\hertz\per\centi\meter\squared} for the detected photons at the PMT array. This rate takes into account the 
+    The contents of this sub-section contains work completed by the Birmingham group on the upgrades to the KTAG detector for HIKE Phase 1. 
+    To sustain the increased kaon rate, the KTAG requires upgrades to the photon-detection and data acquisition systems, allowing to reach the required time resolution of 15-20\,ps and kaon identification efficiency of greater than 95\,\%. The expected kaon rate in HIKE Phase 1 is 200\,MHz, which corresponds to a maximum rate of \SI{10}{\mega\hertz\per\centi\meter\squared} for the detected photons at the PMT array. This rate takes into account the 
     production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons on the PMT plane. It is proposed that the NA62 PMT arrays are replaced with arrays of \glspl{MCP-PMT}. The MCP-PMTs would provide a single photon time resolution of 50-70\,ps depending on the model, a low dark rate of \SI{1}{\kilo\hertz\per\centi\meter\squared} and the ability to sustain the required photon rate. 
     A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas resulting in a rapid reduction in the \gls{QE} \cite{KISHIMOTO2006204}. This is measured as degradation of PMT \gls{QE} with the increasing \gls{IAC}.
     %% Describe MCP-PMT with diagram
     MCP-PMTs are similar to normal PMTs except that the dynode section is replaced by a micro-channel plate. An example diagram is shown in Figure~\ref{fig:mcppmt_dia}, where a photon hits the photocathode window, producing a single electron, which is then accelerated towards the MCP by an electric field provided by a voltage difference across the gap. The electron then collides with the walls of the MCP, producing secondary electrons, which results in a cascade collected by the anodes below.
-    The dual layer design, or chevron, adds additional benefits compared to a single layer design such as better gains due to the increased surface for secondary electrons to be produced.
+    The dual layer design, or chevron, provides additional benefits compared to a single layer design such as improved gains due to the increased surface for secondary electrons to be produced.
     %and improved lifetime due to the suppression of ions produced in the amplification from reaching the photocathode. 
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{imgs/mcp_diag.pdf}
-        \caption{Diagram describing the workings of a MCP-PMT.}%
+        \caption{Diagram describing the inner workings of a MCP-PMT.}%
         \label{fig:mcppmt_dia}%
     \end{figure}  
     Major breakthroughs to improve the lifetime of the MCP-PMT have come with the method of \gls{ALD} \cite{BEAULIEU200981}, where the channels of the MCP are coated with a ultra-thin layer of \ce{Al2O3} or \ce{MgO}. The layer prevents the out-gassing from the MCP glass substrate and drastically reduces the heavy ions reaching the photocathode resulting in significant increases in lifetime of the MCP-PMTs \cite{Lehmann_2018}. 
@@ -188,7 +190,7 @@
         \caption{Lifetimes of available MCP-PMTs with the photocathode \gls{QE} vs \gls{IAC} for photons at 400\,nm wavelength. Top, old ALD coated MCP-PMTs from Hamamatsu with non coated versions shown in the insert plot. Bottom, more recent ALD coated MCP-PMTs from PHOTONIS and Photek in the inserted plot. \cite{Lehmann_2022}}%
         \label{fig:mcppmt_life}%
     \end{figure}  
-    An example of MCP-PMT model proposed for the KTAG is shown in Figure~\ref{fig:mcppmt}. The module consists of an 8x8 array of pixels which can individually be read out.
+    An example of MCP-PMT model proposed for the KTAG is shown in Figure~\ref{fig:mcppmt}. The module consists of an $8\times8$array of pixels which can individually be read out.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.5\textwidth]{imgs/mcp_pmt_dia.png}
@@ -200,7 +202,7 @@
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.6\textwidth]{imgs/array_diag.png}
-        \caption{Visualisation of the MCP-PMT array placed inside of the KTAG}%
+        \caption{Visualisation of the MCP-PMT array placed inside of the KTAG.}%
         \label{fig:mcp_ktag}%
     \end{figure}  
     The resultant light spot for one of the sectors is shown in Figure~\ref{fig:mcp_ktag_light}, where the inactive areas between the individual MCP-PMT and the increased amount of light at the edges produced from the reflective surfaces are shown. The position of the MCP-PMT in the KTAG sector is optimised to produce the maximum number of photo-electrons per kaon candidate.
@@ -210,8 +212,8 @@
         \caption{Collected light distribution for the MCP-PMT installed in the KTAG.}%
         \label{fig:mcp_ktag_light}%
     \end{figure}  
-    HIKE Phase 1 required the MCP-PMTs installed within the KTAG photon-detection system to have a demonstrated lifetime of \SI{50}{\coulomb\per\centi\meter\squared}. Other requirements set by HIKE for the MCP-PMT is a single photon detection rate of \SI{10}{\mega\hertz\per\centi\meter\squared} without degradation to the signal due to charge saturation effects. The single photon detection requires a high amplification factor (gain) of 
-    $\mathcal{O}(10^6)$. The MCP-PMTs manufactured by Photonis with 2 layers of ALD provide the best lifetime with no degradation in QE after \SI{30}{\coulomb\per\centi\meter\squared}, shown in Figure~\ref{fig:mcppmt_life}. A candidate for MCP-PMT for HIKEis Photonis XP85012-S-R2D2 of the PLANACON line. However, the Photonis MCP-PMT doesn't match with the HIKE Phase 1 rate requirements and 
+    HIKE Phase 1 requires the MCP-PMTs to be installed within the KTAG photon-detection system to have a demonstrated lifetime of \SI{50}{\coulomb\per\centi\meter\squared}. Other requirements set by HIKE for the MCP-PMT is a single photon detection rate of \SI{10}{\mega\hertz\per\centi\meter\squared} without degradation of the signal due to charge saturation effects. The single photon detection requires a high amplification factor (gain) of 
+    $\mathcal{O}(10^6)$. The MCP-PMTs manufactured by Photonis with two ALD layers provide the best lifetime with no degradation in QE after \SI{30}{\coulomb\per\centi\meter\squared}, shown in Figure~\ref{fig:mcppmt_life}. A candidate for MCP-PMT for HIKEis Photonis XP85012-S-R2D2 of the PLANACON line. However, the Photonis MCP-PMT does not match with the HIKE Phase 1 rate requirements and 
     result in reduced gain above \SI{1}{\mega\hertz\per\centi\meter\squared}, shown in Figure~\ref{fig:mcp_rate}. It is possible to reach \SI{10}{\mega\hertz\per\centi\meter\squared} with smaller sensor size but would result in a quadrupling of the cost to cover the light spot. Future research looking at reducing the resistance, capacitance and gain for single photon detection could possibly allow the
     XP85012-S-R2D2 to accommodate up to \SI{10}{\mega\hertz\per\centi\meter\squared}.
     %which has shown 
@@ -223,23 +225,23 @@
         \caption{Rate capability of state of the art MCP-PMTs \cite{Lehmann2022}.}%
         \label{fig:mcp_rate}%
     \end{figure} 
-    The Photonis MCP-PMT has a \gls{CE} of above 60\,\%, the probability of the photo-electron passing through the pours of the MCP and producing a signal. With current technologies it is possible for MCP-PMTs to reach CE of over to 90\,\% \cite{Orlov_2018}, however the Photonis MCP-PMT is selected as it better fits the HIKE Phase 1 timing requirements as the higher CE models utilise late photo-electrons resulting in higher time resolutions.
+    The Photonis MCP-PMT has a \gls{CE} of above 60\,\%, which is the probability of the photo-electron passing through the pours of the MCP and producing a signal. With current technologies it is possible for MCP-PMTs to reach CE of over to 90\,\% \cite{Orlov_2018}, however the Photonis MCP-PMT is selected as it better fits the HIKE Phase 1 timing requirements as the higher CE models utilise late photo-electrons resulting in higher time resolutions.
     %% Time resolution tts and rms
-    The XP85012-S-R2D2 MCP-PMT has a transit time spread of 50\,ps with a timing precision RMS of 120\,ps \cite{XP85112SBA} and results in a time response, shown in Figure~\ref{fig:mcp_time} which is implemented for the HIKE simulations.
+    The XP85012-S-R2D2 MCP-PMT has a transit time spread of 50\,ps with a timing precision RMS of 120\,ps \cite{XP85112SBA} and results in a time response shown in Figure~\ref{fig:mcp_time} which is implemented for the HIKE simulations.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.5\textwidth]{plots/timeresponse.pdf}
-        \caption{Time response of the Photonics XP85012-S-R2D2 MCP-PMT.}%
+        \caption{Time response of the Photonis XP85012-S-R2D2 MCP-PMT.}%
         \label{fig:mcp_time}%
     \end{figure} 
     The QE for the MCP-PMT from Photonis is shown in Figure~\ref{fig:mcp_qe}. There are two options for the photocathode of the MCP-PMT available: a standard Bialkali (Sb-Rb-Cs, Sb-K-Cs) or a Hi-QE Blue. 
-    The HI-QE are more recent models, however there is no lifetime data available so albeit being the preferred option the standard Bialkali is chosen for use in the simulation.
+    The HI-QE are more recent models, however there is no lifetime data available so the standard Bialkali is chosen for use in the simulation.
     Further studies at the University of Birmingham are planned to characterise the Photonis XP85012-S-R2D2 MCP-PMT by measuring the lifetime, QE, CE, and other characteristics in order to decide which type would be used 
     for high-intensity kaon physics at HIKE.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/mcp_qe.png}
-        \caption{Quantum Efficiency of Photonics MCP-PMT as a function of wavelength.}%
+        \caption{Quantum Efficiency of Photonis MCP-PMT as a function of wavelength.}%
         \label{fig:mcp_qe}%
     \end{figure}  
     From the Monte Carlo simulation, the implemented MCP-PMTs performed excellently with the result shown in Figure~\ref{fig:time_hits}. The MCP-PMT produced 24.3 photo-electrons per kaon candidate with a time resolution of 18\,ps, taken from the Gaussian sigma of the distribution in Figure~\ref{fig:time_hits} (Right). 
@@ -287,58 +289,59 @@
 
 
     \section{RICH Upgrade} \label{sec:rich_upgrade}
-    The overall design of the NA62 RICH described in section \ref{sec:RICH} is well suited for re-use within HIKE with an upgrade to the photon-detection system. The NA62 RICH photon detection system comprises two arrays on either side of the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern described in Figure~\ref{fig:richPMTArray}. 
-    The PMTs have a single hit time resolution of 240\,ps and a quantum efficiency of 20\,\%. Due to the placement of the PMTs, the distance between the centre of each PMT is 18\,mm, which is constrained by the sensor size and the geometry of the PMT itself. This distance between sensors is the main contributor to the single hit position resolution of 4.7\,mm, 
-    resulting in an overall ring radius resolution of 1.5\,mm. The number of hits per ring candidate and the single hit time resolution produced a time resolution of 80\,ps. Due to the increased beam intensity, the main requirement of the RICH for HIKE is a time resolution of 20 - 30\,ps.
+    The overall design of the NA62 RICH described in Section \ref{sec:RICH} is well suited for re-use within HIKE with an upgrade to the photon-detection system. The NA62 RICH photon detection system comprises two arrays on either side of the beam pipe, equipped with Hamamatsu R7400-U03 PMTs placed in a pattern described in Figure~\ref{fig:richPMTArray}. 
+    The PMTs have a single hit time resolution of 240\,ps and a maximum quantum efficiency of 20\,\%. Due to the placement of the PMTs, the distance between the centre of each PMT is 18\,mm, which is constrained by the sensor size and the geometry of the PMT itself. This distance between sensors is the main contributor to the single hit position resolution of 4.7\,mm, 
+    resulting in an overall ring radius resolution of 1.5\,mm. The number of hits per ring candidate and the single hit time resolution results in a ring time resolution of 80\,ps. Due to the increased beam intensity, the main requirement of the RICH for HIKE is a time resolution of 20-30\,ps.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/NA62_RICH.pdf}
-        \caption{Diagram of RICH PMT array}%
+        \caption{Diagram of the NA62 RICH PMT array.}%
         \label{fig:richPMTArray}%
     \end{figure}  
-    The proposed RICH photon detection system upgrade would replace the current PMTs with a smaller sensor size, allowing for a smaller distance between sensor centres and reducing the hit position resolution. An excellent candidate for a sensor replacement are silicon photomultipliers (SiPMs). SiPMs with small sensor sizes, high quantum efficiency of 40\,\% and a single hit time resolution 
-    of at least 100\,ps are available from major manufacturers. Three sensor sizes are selected for further investigation, $9 \times 9$\,\si{\milli\metre\squared}, $6 \times 6$\,\si{\milli\metre\squared}, and $3 \times 3$\,\si{\milli\metre\squared}. Each SiPM sensor size had apparent benefits and downsides, and a balance between performance and complexity/price had to be taken into account. The smaller sensors would produce a better hit position resolution but at an increased cost and complexity. Whereas the larger sensors have worse hit position resolution but at reduced complexity and cost. 
+    The proposed RICH photon detection system upgrade is to replace the NA62 PMTs with a smaller sensor size, allowing for a reduced distances between sensor centres and reducing the hit position resolution. An excellent candidate for a sensor replacement are silicon photomultipliers (SiPMs). SiPMs with small sensor sizes, a maximum quantum efficiency of 40\,\% and a single hit time resolution 
+    of at least 100\,ps are available from major manufacturers. Three sensor sizes are selected for further investigation, $9 \times 9$\,\si{\milli\metre\squared}, $6 \times 6$\,\si{\milli\metre\squared}, and $3 \times 3$\,\si{\milli\metre\squared}. Each SiPM sensor size had apparent benefits and downsides, and a balance between performance and complexity/price had to be taken into account. The smaller sensors would produce a better hit position resolution but at an increased cost and complexity.
     A study is conducted to determine the optimal sensor size for the SiPMs, balancing overall detector performance with cost and complexity. 
 
-    Using the upgraded NA62 software package described in Section \ref{sec:na62fw}, it is possible to implement the new PMTs into the RICH Monte Carlo simulation with the implemented arrays shown in Figure~\ref{fig:RICH_PMTs}. Compared to the PMT arrays currently used in NA62, the PMs are aligned on the vertical axis to simplify the placement, allowed by the square geometry of the new PMTs. The area of the expected light spot, shown in Figure~\ref{fig:RICH_PMTs}, as a grey circle, is completely covered by the SiPMs with 
+    Using the upgraded NA62 software package described in Section \ref{sec:na62fw}, the new SiPMs are implemented into the RICH Monte Carlo simulation, with the arrays shown in Figure~\ref{fig:RICH_PMTs}. Compared to the PMT arrays currently used in NA62, the PMs are aligned on the vertical axis to simplify the placement, allowed by the square geometry of the new PMTs. The area of the expected light spot, shown in Figure~\ref{fig:RICH_PMTs}, as a grey circle, is completely covered by the SiPMs with 
     no gaps between the sensors which is an improvement compared to the NA62 setup shown in Figure~\ref{fig:richPMTArray}.
     \begin{figure}[htbp]
-        \begin{minipage}[b]{0.32\textwidth}
+        \begin{minipage}[b]{0.5\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_2.pdf}
         \end{minipage}%
-        \hfill
-        \begin{minipage}[b]{0.32\textwidth}
+        %\hfill
+        \begin{minipage}[b]{0.5\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_1.pdf}
         \end{minipage}
-        \hfill
-        \begin{minipage}[b]{0.32\textwidth}
+        %\hfill
+        \centering
+        \begin{minipage}[b]{0.5\textwidth}
             \centering
             \includegraphics[width=\textwidth]{plots/SiPM_0.png}
         \end{minipage}
-        \caption{Diagram of proposed RICH SiPM arrays for use in HIKE. Left, 9x9\,mm, center 6x6\,mm and right 3x3\,mm SiPMs.}
+        \caption{Diagram of proposed placement of the RICH SiPM arrays for use in HIKE using different sensor sizes. Left, 9x9\,mm, center 6x6\,mm and right 3x3\,mm SiPMs.}
         \label{fig:RICH_PMTs}
     \end{figure}
-    The performance for HIKE required a SiPM with a Quantum Efficiency (QE) of at least 40\,\% \cite{thehikecollaboration2023high}. The Hamamatsu S13360-**50CS series is selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected for its improved Ultra Violet (UV) sensitivity and high quantum efficiency of 40\,\% at 460\,nm, 
+    The performance for HIKE requires a SiPM with a Quantum Efficiency (QE) of at least 40\,\% \cite{thehikecollaboration2023high}. The Hamamatsu S13360-**50CS series is selected as the preliminary candidate for the RICH PMT upgrade to achieve this requirement. Hamamatsu offers a number of SiPMs in the S13360 series, with the **50CS selected for its improved Ultra Violet (UV) sensitivity and high quantum efficiency of 40\,\% at 460\,nm, 
     shown in Figure~\ref{fig:RICH_PMT_QE}. 
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/PMT_QE.png}
-        \caption{Selected SiPM quantum efficiency taken from Hamamatsu S13360 data-sheet \cite{MPPC}}%
+        \caption{SiPM quantum efficiency taken from Hamamatsu S13360 data-sheet \cite{MPPC}}%
         \label{fig:RICH_PMT_QE}%
     \end{figure}  
-    Along with the QE efficiency, a single hit time resolution of 100\,ps is required \cite{thehikecollaboration2023high}. The manufacturer stated the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value is given. The time resolution also depends on the final design of the RICH readout electronics and would have to be measured in a test setup. The SiPMs from Hamamatsu have previously been tested and have reached a single hit time resolution below 100\,ps \cite{CARNESECCHI2020164484}. 
-    For use in the simulation a conservative simple Gaussian time response curve with a sigma of 100\,ps is used, which would be updated later on for a specific model to be implemented when chosen.
+    Along with the QE efficiency, a single hit time resolution of 100\,ps is required \cite{thehikecollaboration2023high}. The manufacturer states the Hamamatsu S13360-**50CS series has excellent time resolution, but no definite value is given. The time resolution also depends on the final design of the RICH readout electronics and is to be measured in a test setup. The SiPMs from Hamamatsu have previously been tested and have reached a single hit time resolution below 100\,ps \cite{CARNESECCHI2020164484}. 
+    For use in the simulation a conservative simple Gaussian time response curve with a width of 100\,ps is used, to be updated in the future for a specific model to be implemented when selected.
     
-    The expected performance of the RICH detector with the new SiPMs is compared to the current NA62 RICH detector in Table~\ref{tab:hikeRICH}. With the increased \gls{QE}, the expected number hits per $\pi^{+}$ between \SI{15}{\giga\electronvolt\per\clight} and \SI{45}{\giga\electronvolt\per\clight} was expected to increase by a factor of two. This, along with the improved time resolution of the new SIPMs resulted in an expected $\pi^+$ time resolution of 27\,ps at \SI{15}{\giga\electronvolt\per\clight} and 20\,ps at \SI{45}{\giga\electronvolt\per\clight}.
+    The expected performance of the RICH detector with SiPMs is compared to the current NA62 RICH detector in Table~\ref{tab:hikeRICH}. With the increased \gls{QE}, the expected number hits per $\pi^{+}$ is expected to increase by a factor of two. This, along with the improved time resolution of the new SIPMs resulted in an expected $\pi^+$ time resolution of 27\,ps at \SI{15}{\giga\electronvolt\per\clight} and 20\,ps at \SI{45}{\giga\electronvolt\per\clight}.
     \begin{table}[]
         \centering
         \begin{tabular}{|l|l|l|}
         \hline
          & NA62 RICH & HIKE RICH \\ \hline
         Sensor time resolution & 240ps & 100ps \\ \hline
-        Sensor quantum efficiency & 20\% & 40\% \\ \hline
+        Sensor maximum quantum efficiency & 20\% & 40\% \\ \hline
         Number of photo-electrons for $\pi^+$ at 15 $GeV/c$ & 7 & 14 \\ \hline
         Number of photo-electrons for $\pi^+$ at 45 $GeV/c$ & 12 & 24 \\ \hline
         Time resolution for $\pi^+$ at 15 $GeV/c$ & 90ps & 27ps \\ \hline
@@ -347,25 +350,10 @@
         \caption{Comparisons of the expected performance of the NA62 and HIKE RICH detectors \cite{thehikecollaboration2023high}}
         \label{tab:hikeRICH}
     \end{table}
-    Using the implemented upgrades to the RICH detectors, the above expectations are confirmed by a Monte Carlo sample of \gls{ke3}.  
+    Using the upgrades to the RICH detectors, the above expectations are confirmed by a Monte Carlo sample of \gls{ke3}.  
 
-    For the three sensor sizes, a test production of 1M \gls{ke3} is used to determine the preliminary performance of the detector and compare this to the current NA62 setup. The plots in Figure~\ref{fig:HikeRICHIlum} show the light distribution on the arrays for the three sensor sizes: 3\,mm \ref{fig:HikeRICHIlum}\,(a,b), 6\,mm \ref{fig:HikeRICHIlum}\,(c,d), and 9\,mm \ref{fig:HikeRICHIlum}\,(e,f) compared to the illumination on the current NA62 arrays \ref{fig:NA62RICHIlum}. 
-    Due to the better placement of the square sensors, it is possible to see a more uniform illumination of the PMT arrays and better coverage of the light ring, especially in the Jura side. It is clear to see that either sensor size would be an improvement on the current NA62 setup.
-    \begin{figure}[htbp]
-        \centering
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/RICH_na62_Saleve.pdf}
-        \end{minipage}
-        \begin{minipage}[b]{0.49\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
-        \end{minipage}
-        \caption{Cherenkov light illumination of RICH PMT arrays for the NA62 SiPM arrays produced from a \gls{MC} sample of \gls{ke3}. The 
-        left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
-        \label{fig:NA62RICHIlum}
-    \end{figure}
-
+    For the three sensor sizes, a test production of 1M \gls{ke3} is used to determine the preliminary performance of the detector and compare to the NA62 setup. The plots in Figure~\ref{fig:HikeRICHIlum} show the light distribution on the arrays for the three sensor sizes: 3\,mm \ref{fig:HikeRICHIlum}\,(a,b), 6\,mm \ref{fig:HikeRICHIlum}\,(c,d), and 9\,mm \ref{fig:HikeRICHIlum}\,(e,f) compared to the illumination on the current NA62 arrays \ref{fig:NA62RICHIlum}. 
+    Due to the better placement of the square sensors, there is improved coverage of the light ring, especially in the Jura side which is the side in the positive x direction. The negative x is defined as the Saleve side. It is clear to see that either sensor size would be an improvement on the current NA62 setup.
     \begin{figure}[htbp]
         \centering
         \begin{minipage}[b]{0.45\textwidth}
@@ -410,10 +398,25 @@
         \label{fig:HikeRICHIlum}
     \end{figure}
 
+    \begin{figure}[htbp]
+        \centering
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_na62_Saleve.pdf}
+        \end{minipage}
+        \begin{minipage}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
+        \end{minipage}
+        \caption{Cherenkov light illumination of the NA62 RICH PMT arrays produced from a \gls{MC} sample of \gls{ke3}. The 
+        left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
+        \label{fig:NA62RICHIlum}
+    \end{figure}
+
     %%% Files /afs/cern.ch/work/j/jsanders/Software/na62fw/NA62Analysis/PathToUser
     %%% N Hit in Ring candidate
-    In the reconstruction, the photo-electrons are clustered into ring candidates. The number of reconstructed photo-electrons is shown in Figure~\ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons is due to the enhanced quantum efficiency of the SiPMs and the sensors' better placement. This reduced the probability of multiple photons hitting the same sensor.
-    There are minimal differences between the three sensor sizes shown in Figure~\ref{fig:NA62RICHNHITs}\,(b-d), with the 3\,mm sensors having a slightly higher number of hits per ring candidate when compared to the 9\,mm sensors. 
+    In the reconstruction, the photo-electrons are clustered into ring candidates. The distribution of the number number of reconstructed photo-electrons is shown in Figure~\ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons is due to the enhanced quantum efficiency of the SiPMs.
+    There are minimal differences between the three sensor sizes shown in Figure~\ref{fig:NA62RICHNHITs}\,(b-d), with the 3\,mm sensors having a higher number of hits per ring candidate when compared to the 9\,mm sensors. 
 
     \begin{figure}[htbp]
         \centering
@@ -445,8 +448,18 @@
         \label{fig:NA62RICHNHITs}
     \end{figure}
 
-    The subsequent reconstructed ring candidate radius is shown in Figure~\ref{fig:NARICHRINGRAD}, with the NA62 PMT array producing a resolution of 1.68\,mm compared to 0.72\,mm for the HIKE array with 9\,mm SiPMs. With
-    the smallest sensor size at 3\,mm improving further to 0.41\,mm. However, it would not be possible to obtain this resolution in reality due to small misalignments in the mirror and dispersion in the radiator gas. It is accepted that the 9\,mm sensor size would provide the best possible resolution obtainable.
+    The distribution of reconstructed ring candidate radius is shown in Figure~\ref{fig:NARICHRINGRAD}, with the NA62 PMT array producing a resolution of 1.68\,mm compared to 0.72\,mm for the HIKE array with 9\,mm SiPMs. With
+    the smallest sensor size at 3\,mm improving further to 0.41\,mm. However, at this small sensor size the ring radius resolution is no longer dominated by the sensor size, but the due to errors produced by small misalignments in the mirror and chromatic dispersion in the radiator gas. 
+    the expected resolution of the ring radius for 3\,mm sensor is calculated from the single hit position resolution,
+    \begin{equation}
+        \sigma_{t_{hit}} = \frac{3}{\sqrt{12}} = \SI{0.87}{\milli\metre}
+    \end{equation}
+    where 3\,mm is the distance between the centre of the sensors and $\sqrt{12}$ is the standard deviation of the uniform distribution. The single hit time resolution is then used with the number of photo-electrons per ring candidate to estimate the time resolution of the ring candidate, 
+    \begin{equation}
+        \sigma^{3\,mm}_{t} = \frac{\sigma_{t_{hit}}}{\sqrt{N_{hits}}} = \frac{0.87}{\sqrt{28.86}} = \SI{0.16}{\pico\second}
+    \end{equation}
+    The value of the ring radius resolutions are produced in ideal circumstances in the \gls{MC} where the placement of the mirrors is perfect. In reality the ring resolutions are expected to be worse. The expected resolution is calculated for the 6\,mm $\sigma^{6\,mm}_{t} = 0.329$ and the 9\,mm $\sigma^{6\,mm}_{t} = 0.49$ sensor sizes.
+    As all the sensor sizes are dominated by the mirror misalignment and the chromatic dispersion, the ideal candidate would be the 9\,mm sensor size due to its reduced cost and complexity. The 3\,mm sensor size would be the best choice if the mirror misalignment and chromatic dispersion could be reduced, however this is not possible with the current design of the RICH detector.
     \begin{figure}[htbp]
         \centering
         \begin{minipage}[b]{0.49\textwidth}
@@ -478,8 +491,8 @@
     \end{figure}
 
     %%% Ring Radius Resolution
-    The time resolution of the RICH detector is calculated using the \gls{ke3} sample by equally splitting the reconstructed photo-electrons of the ring candidates into two sets and calculating the time difference between them, with the results are shown in Figure~\ref{fig:NA62RICHTIMERes}. This method is used to remove any dependence on the reference time with respect to the single hit times. The 3x3\,mm sensors produced the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
-    However, there is little difference between the SiPMs, with each sensor size producing a time resolution of less than 30\,ps, fulfilling the requirements of HIKE. 
+    The time resolution of the RICH detector is calculated using the \gls{ke3} sample by equally splitting the photo-electrons of the ring candidates into two sets and calculating the mean time difference between them, with the results are shown in Figure~\ref{fig:NA62RICHTIMERes}. This method is used to remove any dependence on the reference time with respect to the single hit times. The $3\times3$\,mm sensors produced the best time resolution of 20.04\,ps compared to the 9x9\,mm sensors with a time resolution of 21.22\,ps.
+    However, each sensor size produces a time resolution of less than 30\,ps, fulfilling the requirements of HIKE. 
     The improvement is clear with using the SiPMs when compared with the NA62 PMTs in Figure~\ref{fig:NA62RICHTIMERes}, with a time resolution of 61.35\,ps. 
 
     \begin{figure}[htbp]
@@ -512,20 +525,20 @@
         A detailed description of the procedure is provided here \cite{Anzivino_2020}}%
         \label{fig:NA62RICHTIMERes}
     \end{figure}
-    After the RICH \gls{MC} study, it is proven that introducing SiPMs would dramatically increase the granularity of the detector. All three SiPM sensor sizes produced results which exceeded the requirements for HIKE with a time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. From the results of the HIKE simulation, the 9x9\,mm SiPMs would be used as they provided excellent performance and 
-    would reduce the cost and complexity of implementing the smaller sensor sizes in the detector when it is constructed. A clear benefit is reducing the number of channels from 72,780 for the 3x3\,\si{\milli\metre\squared} SiPMs compared to 8,588 for the 9x9\,\si{\milli\metre\squared} SiPMs.
-    \section{Detector Rates}
-    After the upgraded \gls{GTK} and \gls{RICH} detectors were implemented into the simulation, it is necessary to determine the expected particle rate in the upgraded and non-upgraded detectors. The upgraded STRAW detector utilising 5\,mm diameter straws is also included in the HIKE simulations.  
+    All three SiPM sensor sizes produced results which exceeded the requirements for HIKE with a time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. From the results of the HIKE simulation, the $9\times9$\,mm SiPMs are to be used as they provided excellent performance at a
+    reduced cost and complexity compared to implementing the smaller sensor sizes in the detector. A clear benefit is reducing the number of channels from 72,780 for the $3\times3$\,\si{\milli\metre\squared} SiPMs to 8,588 for the $9\times9$\,\si{\milli\metre\squared} SiPMs.
+    \section{Detector Particle Rates for HIKE Phase 2}
+    It is necessary to determine the expected particle rate in the upgraded and yet to be upgraded detectors. The upgraded STRAW detector utilising 5\,mm diameter straws is also included in the HIKE simulations.  
     The expected rate for Phase 1 is calculated by scaling the known NA62 rates by the expected increase in beam intensity by a factor of 4 compared to NA62. 
     The rates for Phase 2 are calculated using the new simulation software described in the previous sections. 
     
-    An array of input files are produced in BDSIM \cite{Nevay2020BDSIM} by the CERN beam group which contains the simulated HIKE beam components at a Z of 120\,m, which is the start of the fiducial volume.
-    The files are used as an input to the NA62MC software as the primary beam instead of the turtle beam, which is the default for NA62. Each file contains 10000 events, corresponding to 10000 protons on target. As there are 18K files produced in total, this is equivalent to $1.8 \times 10^8$ protons on target. 
-    The statistics are not enough to obtain a reasonable estimate of the rates, so each file is used 11 times as an input to the simulation with random seeds to increase the sample size. The simulation is run with the unforced flag allowing for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
+    An array of input files are produced in BDSIM \cite{Nevay2020BDSIM} of the target and the expected beam components by the CERN beam group. Each file contains the simulated HIKE beam components at a Z position of 120\,m from the target, which is the start of the fiducial volume. 
+    The files are used as an input to the NA62MC software as the primary beam. Each file contains 10000 events, corresponding to 10000 protons on target. As there are 18,000 files produced in total, which is equivalent to $1.8 \times 10^8$ protons on target. 
+    The statistics are not enough to obtain a reasonable estimate of the rates, so each file is used 11 times as an input to the simulation with random seeds to increase the sample size. The simulation is run allowing for four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.
     After the simulation, the output is reconstructed using the NA62 reconstruction software. The rates are calculated by scaling the numbers in the output by the expected HIKE Phase 2 beam conditions, i.e, a spill time of 4.8 seconds and a beam intensity of $2 \times 10^{13}$ protons per spill.
 
     
-    The $K_L$ rate at the entrance of the fiducial volume is calculated as 304.1 MHz. The rate of the four main $K_L$ decays inside the fiducial volume is shown in Table~\ref{tab:hikeDecayRates}.
+    From the simulation the $K_L$ rate at the entrance of the fiducial volume is calculated as 304.1 MHz. The rate of the four main $K_L$ decays inside the fiducial volume is shown in Table~\ref{tab:hikeDecayRates}.
 
     \begin{table}[htbp]
         \centering
@@ -537,11 +550,11 @@
         $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ & 6.60 \\ \hline
         $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ & 4.45 \\ \hline
         \end{tabular}
-        \caption{Rates of the four main $K_L$ decays in the HIKE phase 2 fiducial volume. }%
+        \caption{Rates of the four main $K_L$ decays in the HIKE Phase 2 fiducial volume. }%
         \label{tab:hikeDecayRates}%
     \end{table}
 
-    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using all the hits in each detector channel which are then converted to the expected rate. The rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is concerning as
+    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using the hits in each detector channel which are then converted to the expected rate. The rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is unexpected as
     a much lower rate is expected due to the lack of charged daughter particles. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions in the final state.
     
     \begin{table}[htbp] 
@@ -551,7 +564,7 @@
             \hline
             \multirow{2}{*}{Detector} & \multicolumn{4}{c|}{$K_L$ Decay [MHz]} \\ \cline{2-5} 
             \rule{0pt}{4ex}
-            & \multicolumn{1}{c|}{{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} e^{\mp} \nu_{e}$ \\ $(40.55 \pm 0.11 ) \%$\end{tabular}} } & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} \mu^{\mp} \nu_{\mu}$ \\  $(27.04 \pm 0.07 ) \%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{0} \pi^{0} \pi^{0}$ \\ $(19.52 \pm 0.12 )\%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{+} \pi^{-} \pi^{0}$\\ $(12.54 \pm 0.05 )\%$\end{tabular}} \\ [2ex]\hline
+            & \multicolumn{1}{c|}{{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} e^{\mp} \nu_{e}$ \\ BR = $(40.55 \pm 0.11 ) \%$\end{tabular}} } & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{\pm} \mu^{\mp} \nu_{\mu}$ \\ BR = $(27.04 \pm 0.07 ) \%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{0} \pi^{0} \pi^{0}$ \\ BR = $(19.52 \pm 0.12 )\%$\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}$K_{L} \rightarrow \pi^{+} \pi^{-} \pi^{0}$\\ BR = $(12.54 \pm 0.05 )\%$\end{tabular}} \\ [2ex]\hline
             STRAW-1 & \multicolumn{1}{c|}{126.8} & \multicolumn{1}{c|}{79.9} & \multicolumn{1}{c|}{50.5} & \multicolumn{1}{c|}{49.2} \\ \hline
             STRAW-2 & \multicolumn{1}{c|}{162.8} & \multicolumn{1}{c|}{85.1} & \multicolumn{1}{c|}{80.7} & \multicolumn{1}{c|}{58.0} \\ \hline
             STRAW-3 & \multicolumn{1}{c|}{165.7} & \multicolumn{1}{c|}{89.3} & \multicolumn{1}{c|}{67.7} & \multicolumn{1}{c|}{56.1} \\ \hline
@@ -566,7 +579,7 @@
             HAC & \multicolumn{1}{c|}{10.0} & \multicolumn{1}{c|}{11.5} & \multicolumn{1}{c|}{0.3} & \multicolumn{1}{c|}{6.1} \\ \hline
             \end{tabular}
         }
-        \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$.}%
+        \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$, along with their Branching Ratios (BR).}%
         \label{tab:totalRatesInDetectors}
     \end{table}
 
