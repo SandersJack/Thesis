@@ -457,20 +457,23 @@
     For the BC1 case, the hypothetical \gls{DP} (denoted $A'$) with a \si{\giga\electronvolt} scale mass could resolve some of the discrepancies arising from the observations of the (g-2) muon gyromagnetic ratio measurement and the rise of cosmic-ray positron fraction with energy. The addition of the \gls{DP} introduces two unknown parameters: the mass $m_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the \gls{DP} interaction with SM particles. A \gls{DP} of mass less than a neutral pion, 
     can be produced in the $\pi^0$ decay $\pi^0 \to \gamma A'$. The resultant branching fraction for the $\pi^0$ decay is \cite{PhysRevD.80.095024},
     \begin{equation}\label{eq:DP_branch}
-        \mathcal{B}(\pi^0 \to \gamma A') = 2\epsilon^2 \left(1-\frac{m_{A'}^2}{m_{\pi^0}^2}^3\right) \mathcal{B}(\pi^0 \to \gamma \gamma).
+        \mathcal{B}(\pi^0 \to \gamma A') = 2\epsilon^2 \left(1-\frac{M_{A'}^2}{M_{\pi^0}^2}^3\right) \mathcal{B}(\pi^0 \to \gamma \gamma).
     \end{equation}
     Within the DP mass range for the decay, the only kinematically allowed decay involving the first power of the coupling constant into SM particles is $A' \to e^+ e^-$ decay. 
     The $A'$ would decay into three photons and two neutrinos proceeding through higher-order processes, which are highly suppressed for low $\eta$ values. Hence, it is safe to assume that the branching fraction for $A' \to e^+e^- \approx 1 $. This assumption allows the expected decay width to be described as \cite{PhysRevD.80.095024}, 
     \begin{equation}
-        \Gamma_{A'} \approx \Gamma (A' \to e^+e^-) = \frac{1}{3} \alpha \epsilon^2 m_{A'} \sqrt{1 - \frac{4m_e^2}{m_{A'^2}}} \left( 1 + \frac{4m_e^2}{m_{A'^2}} \right)
+        \Gamma_{A'} \approx \Gamma (A' \to e^+e^-) = \frac{1}{3} \alpha \epsilon^2 M_{A'} \sqrt{1 - \frac{4M_e^2}{M_{A'^2}}} \left( 1 + \frac{4M_e^2}{M_{A'^2}} \right)
     \end{equation}
-    where $\alpha$ is the fine structure constant.
+    where $\alpha$ is the fine structure constant. For the \gls{DP} mass range $2m_e < m_{A'} < m_{\pi^0}$, the life time of the \gls{DP} is calculated, 
+    \begin{equation}\label{eq:DP_lifetime}
+        c \tau_{A'} = \frac{\hbar c}{\Gamma_{A'}} \approx \SI{0.8}{\micro\meter} \times \frac{10^{-6}}{\epsilon^2} \frac{\SI{100}{\mega\electronvolt\per\clight}}{M_{A'}}
+    \end{equation}
     By utilising Equation \ref{eq:DP_branch}, it is possible to set limits on the branching ratio of the \gls{DP} production, with the final goal of setting limits on the mixing parameter. Within the \gls{DP} mass range $2m_e < m_{A'} < m_{\pi^0}$ the world leading result for the upper limit of $\epsilon^2$ is from the NA48/2 experiment \cite{2015178} and is shown in Figure \ref{fig:na48_dp_lim}.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{imgs/na48_limits.png}
         \linespread{1.0}
-        \caption{Experimental constraints for the existence of a BC1 dark photon in the $\eta$ (mixing parameter) and $m_{A'}$ (dark photon mass) phase-space \cite{2015178}.}%
+        \caption{Experimental constraints for the existence of a BC1 dark photon in the $\eta$ (mixing parameter) and $M_{A'}$ (dark photon mass) phase-space \cite{2015178}.}%
         \label{fig:na48_dp_lim}%
     \end{figure}
     The study described in Section \ref{sec:darkP} sets out to improve the limits on the \gls{DP} mixing parameter set by NA48/2 with data collected from the NA62 experiment.
