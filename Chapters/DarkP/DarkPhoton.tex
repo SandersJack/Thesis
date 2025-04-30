@@ -34,7 +34,7 @@
         \item Require that at least one of the following trigger conditions is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the Electron Multi-Track (eMT) trigger, described in Chapter~\ref{sec:na62}.
         \item A three-track vertex is selected if the total momentum is below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of $Q=1$, a $\chi^{2} < 40$ and a vertex position between $\SI{105}{\meter} < Z_{vtx} < \SI{180}{\meter}$.
         \item The tracks within the vertex are checked if they are in acceptance of all four Straw spectrometer chambers and the CHOD. The track momentum must be $\SI{5}{\giga\electronvolt\per\clight} < p < \SI{60}{\giga\electronvolt\per\clight}$ with a $\chi^2 < 30$. All three tracks must traverse the first STRAW chamber with a separation of 20\,mm from each other.
-        \item A selected photon is also required. The missing momentum of the vertex is the difference between the kaon 4-momentum and the total vertex 4-momentum. It is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
+        \item A selected photon is also required. The missing momentum of the vertex is the difference between the kaon 4-momentum and the total vertex 4-momentum. The momentum is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
         with a minimum energy of \SI{5}{\giga\electronvolt} is selected as a photon from the decay. The photon energy must be within \SI{5}{\giga\electronvolt} of the calculated missing vertex momentum.
     \end{itemize}
 
@@ -55,7 +55,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/kaonpion.png}
         \linespread{1.0}
-        \caption{Reconstructed missing mass of kaon and charged pion compared to the known neutral pion mass fitted with a Crystal Ball function. The blue distribution is the \gls{kpid} \gls{MC} sample, fitted with a Crystal ball function in red and compared against the 2022 data in green. The \gls{MC} sample is scaled to match the number of events in the data.}
+        \caption{Reconstructed missing mass of kaon and charged pion compared to the known neutral pion mass. The blue distribution is the \gls{kpid} \gls{MC} sample, fitted with a crystal ball function in red and compared against the 2022 data in green. The \gls{MC} sample is scaled to match the number of events in the data.}
         \label{fig:kaonpion}
     \end{figure}
     If both positive tracks satisfy the condition, the event is vetoed. From \gls{MC}, only approximately $0.1\,\%$ of Dalitz decays have both positive tracks satisfying the selection of the charged pion.
@@ -109,6 +109,15 @@
     \end{figure}
     
     \subsection{Selection Acceptance}
+    The dominate trigger line for the analysis is the eMT. As described in Section~\ref{sec:TDAQ} the eMT contains the E20 L0 condition which requires at least 20\,GeV deposited in the LKr. However, the selection uses kinematic \gls{PID} to identify the charged pion, electron and positron. The efficiency of the E20 trigger condition for \gls{kpid} the decay is measured with \gls{MC} at 70.71\,\% and is shown as a function of total LKr energy in Figure~\ref{fig:e20effciency}.
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.9\textwidth]{plots/e20_efficiency.png}
+        \linespread{1.0}
+        \caption{Efficiency of the E20 trigger line for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy. The efficiency is calculated using the number of events passing the selection divided by the number of events passing the trigger emulator.}
+        \label{fig:e20effciency}
+    \end{figure}
+
     The acceptance of the selection for the \gls{kpid} \gls{MC} sample in terms of the reconstructed electron-positron mass in the range $2m_e < M_{ee} < M_{\pi^0}$ and is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure~\ref{fig:accept}.
    % Introducing the kinematic selection compared to the calorimeter PID improved the overall acceptance. 
     The difference between the selection used for the NA62 and the NA48/2 study is the \gls{PID}. The study at NA48/2 uses calorimetric \gls{PID} where the \gls{LKr} is utilised to reconstruct the energy of the pion, electron and positron. The reconstructed energy to momentum ratio is used to distinguish 
@@ -125,11 +134,41 @@
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/accept.png}
         \linespread{1.0}
-        \caption{Acceptance for $\pi^0_D$ with the NA62 selection with E/p \gls{PID} and kinematic \gls{PID}, compared against the acceptance from the NA48/2 analysis \cite{2015178}.}
+        \caption{Acceptance for \gls{kpid} with the NA62 selection with E/p \gls{PID} and kinematic \gls{PID}, compared against the acceptance from the NA48/2 analysis \cite{2015178}.}
         \label{fig:accept}
     \end{figure}
     % Include acceptance for the kmu3 and explain why we use
+    The \gls{kmu3D} decay mode is important to include as there is a chance that the $\mu$ is misidentified as a pion, passes the selection and contributes to the background. The acceptance of the selection for the \gls{kmu3D} decay is shown in Figure~\ref{fig:accept_kmu3}.
+    \begin{figure}[t]
+        \centering 
+        \includegraphics[width=0.9\textwidth]{plots/kmu3_acceptance.png}
+        \linespread{1.0}
+        \caption{Acceptance for \gls{kmu3D} with the NA62 selection.}
+        \label{fig:accept_kmu3}
+    \end{figure}
+    The overall acceptances for the \gls{kpid} and \gls{kmu3D} decays are shown in Table~\ref{tab:acceptances}. 
+    \begin{table}[t]
+        \centering
+        \begin{tabular}{|c|c|c|}
+            \hline
+            \textbf{\gls{MC} Sample} & \textbf{Acceptance} & \textbf{Branching Ratio} \\ \hline
+            $K_{2\pi D}$   & (0.565 \pm 0.006)\,\%     & (0.243 \pm 0.007)\,\% \\ \hline
+            $K_{\mu 3D}$   & (5.47 \pm 0.11) \times 10^{-3}\,\%   & (3.94 \pm 0.12) \times 10^{-3}\,\% \\ \hline
+        \end{tabular}
+        \caption{Acceptances and branching ratios of $K_{2\pi_D}$ and $K_{\mu 3D}$ samples for the $K_{2\pi_D}$ selection. The branching ratios are taken from PDG \cite{Olive:2014pdg}.}
+        \label{tab:acceptances}
+    \end{table}
 
+    The overall E20 L0 trigger condition efficiency for the selected \gls{kpid} events is 0.80\,\%. The efficiency as a function of the total LKr energy is shown in Figure~\ref{fig:e20_selected}. The total LKr energy deposited for the \gls{kpid} \gls{MC} and 2022 data is also shown. The \gls{MC} sample is scaled to match the number of events in the data.
+    \begin{figure}[t]
+        \centering 
+        \subfloat{{\includegraphics[width=0.5\textwidth]{plots/e20_sel_efficiency.png} }}%
+        \subfloat{{\includegraphics[width=0.5\textwidth]{plots/lkr_emul_sel.png} }}%
+        \linespread{1.0}
+        \caption{Left: E20 L0 trigger efficiency for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy. Right: Total LKr energy deposited for the \gls{kpid} \gls{MC} and 2022 data.}
+        \label{fig:e20_selected}
+    \end{figure}
+     
     \section{Integrated Kaon Flux}\label{sec:kaonFlux}
     The total number of data events passing the selection for the 2022--24 datasets is $N_{selected} = 172,222,962$. The effective number of $K^+$ decays within the \gls{FV} is computed as 
     \begin{equation}\label{eq:nk}
@@ -137,17 +176,7 @@
     \end{equation}
     where $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the selection shown in Table~\ref{tab:acceptances} and are evaluated using \gls{MC} samples and $\mathcal{B}_{2 \pi_D}$, $\mathcal{B}_{\mu 3D}$ are the branching fractions of the \gls{kpid} and \gls{kmu3D} decay chains \cite{Olive:2014pdg}. The \gls{MC} samples employ trigger emulators provided by the NA62 Framework.
     The inclusion of the trigger emulators results in the trigger efficiencies for both L0 and L1 being accounted for within the acceptances defined in Table~\ref{tab:acceptances}.  
-    \begin{table}[t]
-        \centering
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{\gls{MC} Sample} & \textbf{Acceptance} & \textbf{Branching Ratio} \\ \hline
-            $K_{2\pi D}$   & (0.59 \pm 0.006)\,\%     & (0.243 \pm 0.007)\,\% \\ \hline
-            $K_{\mu 3D}$   & (5.74 \pm 0.11) \times 10^{-3}\,\%   & (3.94 \pm 0.12) \times 10^{-3}\,\% \\ \hline
-        \end{tabular}
-        \caption{Acceptances and branching ratios of $K_{2\pi_D}$ and $K_{\mu 3D}$ samples for the $K_{2\pi_D}$ selection.}
-        \label{tab:acceptances}
-    \end{table}
+    
     %Only the 2022 sample was available when the \gls{MC} background method was employed. The data-driven background estimation method uses the 2022, 2023 and 2024 datasets. Utilising the same method in Equation~\ref{eq:nk}, the integrated number of kaons is calculated using the % 
      %This was an 8-fold increase compared to the 2022 dataset. 
     %This large increase by adding 2023 and 2024 data was due to a change in the defined downscaling for the eMT trigger line, which was reduced from 3 to 1, resulting in a total effective $N_K$ calculated with Equation~\ref{eq:nk},
@@ -204,9 +233,9 @@
     \end{figure}
     A Gaussian fit is conducted for the $M_{ee}^{True-Reco}$ distribution at each $M_{ee}$ mass bin. The width of the fit is calculated and used to produce Figure~\ref{fig:mass_res}. A linear function is fitted, resulting in an equation for the invariant mass resolution, 
     \begin{equation}\label{eq:mass_res}
-        \sigma_m(M_{ee}) = 3.76 \times 10^{-2}\Si{}{\mega\electronvolt\per\clight^2} + 5.54 \times 10^-{3} \times M_{ee}.  
+        \sigma_m(M_{ee}) = 3.76 \times 10^{-2}\, \SI{}{\mega\electronvolt\per\clight\squared} + 5.54 \times 10^{-3} \times M_{ee}.  
     \end{equation}
-    Due to the increased spectrometer length and increased B-field, there is a significant improvement with th NA62 resolution compared to NA48/2. The improvement in mass resolution allows for a smaller search mass window compared to the previous study at NA48/2.
+    Due to the increased spectrometer length and increased B-field, there is a significant improvement with the NA62 resolution compared to NA48/2. The improvement in mass resolution allows for a smaller search mass window compared to the previous study at NA48/2.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.8\textwidth]{plots/mass_res.png}
@@ -214,9 +243,9 @@
         \caption{Resolution of the reconstructed electron-positron invariant mass against true invariant mass.}
         \label{fig:mass_res}
     \end{figure}
-    The window centres are separated by $1\sigma_m(M_{A'})$, with a window width of $\pm 1.5 \sigma_m(M_{A'})$ rounded to the nearest 0.01\,\si{\mega\electronvolt\per\clight^2}.
+    The window centres are separated by $1\sigma_m(M_{A'})$, with a window width of $\pm 1.5 \sigma_m(M_{A'})$ rounded to the nearest 0.01\,\si{\mega\electronvolt\per\clight\squared}.
 
-    The \gls{DP} selection acceptance is calculated using true $M_ee$ mass bins of \SI{1}{\mega\electronvolt\per\clight\sqaured}. Each event is checked if it fulfils $|M^{Reco}_{ee} - M^{True}_{ee}| < 1.5 \sigma_m(M^{True}_{ee})$ and if the event passes the \gls{kpid} selection. The acceptance is shown in Figure~\ref{fig:accept_dp} as a function of $M_{A'}$ mass. 
+    The \gls{DP} selection acceptance is calculated using $M_{ee}$ mass bins of \SI{1}{\mega\electronvolt\per\clight\squared}. Each event is checked if it fulfils $|M^{Reco}_{ee} - M^{True}_{ee}| < 1.5 \sigma_m(M^{True}_{ee})$ and if it passes the \gls{kpid} selection. The acceptance is shown in Figure~\ref{fig:accept_dp} as a function of $M_{A'}$ mass. 
     The acceptance is then parametrised using a polynomial for use in the calculation of the branching fraction.
     \begin{figure}[t]
         \centering 
@@ -232,7 +261,7 @@
     The limited size of the \gls{MC} samples impact the final result when used for the background estimate. However, due to computing time, it is not feasible to increase the statistics on the samples to improve the final result. Utilising a feature of the NA62 framework, the statistics across a portion of the reconstructed $M_{ee}$ range are increased.
     The true mass of the electron-positron pair is used to calculate the kinematic variable $x$,
     \begin{equation}\label{eq:XParam}
-        x = \frac{(Q_{e^-} + Q_{e^+})^2}{M_{\pi^0}^2} = \frac{M_{ee}^2}{M_{\pi^0}^2}
+        x = \frac{(Q_{e^-} + Q_{e^+})^2}{M_{\pi^0}^2} = \frac{M_{ee}^2}{M_{\pi^0}^2},
     \end{equation}
     where $Q_{e^-}$ and $Q_{e^+}$ are the four-momenta of the electron and positron, and $M_{\pi^0}$ is the mass of the neutral pion.
     The resultant distribution in terms of the kinematic variable $x$ is shown in Figure~\ref{fig:trueMC_X}. The NA62 software framework allows for the simulation of the Dalitz decay only when the kinematic variable $x > 0.5$. From the true \gls{MC} distribution in 
@@ -248,7 +277,7 @@
     \begin{itemize}
         \item 200\,M $K \to \pi^+ \pi^0_D $ ($x < 0.5$) (Main);
         \item 5\,M $K \to \pi^+ \pi^0_D  $ ($x > 0.5$);
-        \item 50\,M $K \to \pi^0_D \mu^+ \nu_{\mu}$.
+        \item 50\,M $K \to  \mu^+ \pi^0_D \nu_{\mu}$.
     \end{itemize}
     To improve the combination of the two \gls{kpid} \gls{MC} samples, events where $x > 0.5$ are removed from the main sample at the selection stage. 
     After the full selection, the \gls{MC} samples are combined into a single dataset to estimate the background. Using the known $N_K$ value, computed in Section \ref{sec:kaonFlux} for the 2022 dataset the \gls{MC} 
@@ -272,9 +301,9 @@
         x = \frac{(Q_{e^-} + Q_{e^+})^2}{M_{\pi^0}^2} \quad \text{and} \quad y = \frac{2Q_{\pi^+}(Q_{e^-} - Q_{e^+})}{M_{\pi^0}^2 (1-x)}.
     \end{equation}
     The variables $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^+}$ are the four-momenta of the electron, positron and charged pion. Within the kinematic region of Dalitz decay, the \gls{TFF} is approximated as $F(x) = 1 + ax$. The variable $a$ is the slope factor, which has been set through theoretical predictions and a number of experiments. 
-    The Vector Meson Dominance (VMD) model expects that \mbox{$a = M_{\pi^0} (M_{\rho}^-2 + M_{\omega}^-2) / 2 = 0.03$ \cite{PhysRevD.83.037503}}.
+    The Vector Meson Dominance (VMD) model expects that \mbox{$a = M_{\pi^0} (M_{\rho}^{-2} + M_{\omega}^{-2}) / 2 = 0.03$ \cite{PhysRevD.83.037503}}.
     The \gls{PDG} average for all experiments is \mbox{$a = 0.0335 \pm 0.0031$} \cite{Tanabashi:2018oca}. It is not possible to rely on external values for the slope factor for the MC due to unknown biases within the simulation.  
-    In the NA62 framework, the slope is defined as $a_{FW} =  0.032$ by default. 
+    In the NA62 framework, the slope is defined as $a_{Fw} =  0.032$ by default. 
     
     The comparison in Figure~\ref{fig:MCDATAFF} shows the ratio of data and \gls{MC} from Figure~\ref{fig:mee_mc} in terms of the kinematic variable $x$. The ratio shows a slight discrepancy between the expected background and data. The dependence along $x$ suggests that the TFF found in the framework is incompatible with the background estimate for this data set.
     A correction is required to modify the \gls{MC} sample with an effective \gls{TFF}. %The \gls{MC} is re-weighted using the events passing the selection compared against the expected number of events from \gls{MC} across the reconstructed mass range.
@@ -288,7 +317,7 @@
     % Need to update the tfff section to use ratio and new plot
     The the effective \gls{TFF} for this study is found by fitting the data/\gls{MC} ratio to the \gls{TFF} equation,
     \begin{equation} \label{eq:TFFsq}
-        F(x)^2 = \frac{(1 + ax)^2}{(1 + a_{FW}x)^2}
+        F(x)^2 = \frac{(1 + ax)^2}{(1 + a_{Fw}x)^2}
     \end{equation}
     which removes the effect of the framework \gls{TFF}.
     The line shown in Figure~\ref{fig:MCDATAFF} is fitted with Equation~\ref{eq:TFFsq} using a least $\chi^2$ method. Producing a slope of
@@ -314,6 +343,8 @@
     \subsection{Dark Photon Search Window}
     The events passing the selection across the $M_{ee}$ spectrum, for each \gls{MC} sample are shown in Figure~\ref{fig:counts_mc_data}. It shows how the two \gls{kpid} samples have been combined to produce a continuous distribution and 
     shows the contribution from the \gls{kmu3D} decay.
+    The statistical errors on the number of events in each bin are calculated for the \gls{MC} samples and combined, shown in Figure~\ref{fig:error_mc_data}. Implementing the biased $K_{2\pi_D}$ $x > 0.5$ \gls{MC} sample
+    significantly reduces the statistical error of the combined sample by an order of magnitude compared to using only the original sample.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/counts_MC_Data.png}
@@ -328,15 +359,12 @@
         \caption{Statistical error for the \gls{MC} samples in terms of the reconstructed mass of electron-positron pair.}
         \label{fig:error_mc_data}
     \end{figure}
-    The statistical errors on the number of events in each bin are calculated for the \gls{MC} samples and combined, shown in Figure~\ref{fig:error_mc_data}. Implementing the biased $K_{2\pi_D}$ $x > 0.5$ \gls{MC} sample
-    significantly reduces the statistical error of the combined sample by an order of magnitude compared to using only the original sample.
-
 
     %Now talk about procedure
     The range of the \gls{DP} search is defined as $7 \leq M_{A'} \leq 110$\,\si{\mega\electronvolt\per\clight^2}. The lower mass boundary is defined because of the falling geometric acceptance. The upper boundary is also defined due to the falling geometrical acceptance. 
     Using the method described in Section~\ref{sec:dp_method}, the $M_{ee}$ are converted to $M_{A'}$ mass hypotheses. This results in 379 \gls{DP} mass values tested.
     \subsection{Upper Limit on the Mixing Parameter}
-    For each \gls{DP} mass value, the number of data events ($N_{obs}$) is compared to the number of expected events obtained from \gls{MC} ($N_{exp}$), which is scaled by factor $s$ calculated from $N_K$. The $N_{obs}$, $N_{exp}$ and their subsequent errors are shown in Figure~\ref{fig:searchwindow_vals}. The error on the observed events $\delta N_{obs}$, which is used for the significance calculation is defined as 
+    For each \gls{DP} mass value, the number of data events ($N_{obs}$) is compared to the number of expected events obtained from \gls{MC} ($N_{exp}$), which is scaled by factor $s$, which is calculated from $N_K$. The $N_{obs}$, $N_{exp}$ and their subsequent errors are shown in Figure~\ref{fig:searchwindow_vals}. The error on the observed events $\delta N_{obs}$, which is used for the significance calculation is defined as 
     $\delta N_{obs} = \sqrt{N_{obs}}$. The error on the number of expected events is due to the statistical error of \gls{MC} events within the search window.  A correction is required due to the scale factor imposed on the \gls{MC} to equate for the correct effective kaon flux, defined in Section \ref{sec:kaonFlux}. The error for $N_{exp}$ is defined as 
     $\delta N_{exp} = s \times \sqrt{N_{exp} / s}$.
     \begin{figure}[t]
@@ -390,7 +418,7 @@
     \end{figure}
     The \gls{UL} on the $N_{DP}$ is used to calculate the 90\,\% \gls{CL} on the branching fraction of the decay $\pi^0 \to \gamma A'$, which is computed with Equation~\ref{eq:branching_frac}, with the assumption that $\mathcal{B}(A' \to e^+e^-) = 1$:
     \begin{equation}\label{eq:branching_frac}
-        \mathcal{B}{(\pi^0 \to \gamma A')} = \frac{N_{DP}}{N_K \mathcal{B}_{K_{2\pi}} A_{DP}}
+        \mathcal{B}{(\pi^0 \to \gamma A')} = \frac{N_{DP}}{N_K \mathcal{B}_{K_{2\pi}} A_{DP}},
     \end{equation}
     where $N_K$ is the effective kaon flux defined in Section \ref{sec:kaonFlux}, $\mathcal{B}_{K_{2\pi}}$ is the branching fraction of $K^+ \to \pi^+ \pi^0$ \cite{Olive:2014pdg} and $A_{DP}$ is the acceptance of the \gls{DP} signal. 
     The acceptance $A_{DP}$ is defined in Section~\ref{sec:dp_method}. %is calculated using the acceptance of the $\pi^0_D$ decay shown in Figure~\ref{fig:accept} and is parametrised with a polynomial to allow for the calculation of the acceptance in terms of \gls{DP} mass, shown in Figure~\ref{fig:acceptDP}. 
@@ -434,7 +462,7 @@
     defined in Section \ref{sec:kaonFlux}. The resultant reconstructed $M_{ee}$ spectrum passing the selection is shown in Figure~\ref{fig:22_23_data}.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.5\textwidth]{plots/22_23_24_data.pdf}
+        \includegraphics[width=0.7\textwidth]{plots/22_23_24_data.png}
         \linespread{1.0}
         \caption{Reconstructed invariant mass of electron-positron pair for events passing the selection from the 2022, 2023 and 2024 NA62 datasets.}
         \label{fig:22_23_data}
@@ -444,10 +472,12 @@
 
     \subsection{Fitting the Data Distribution}
     The method described in Section~\ref{sec:dp_method} is used to convert bins of $M_{ee}$ to \gls{DP} candidate windows.
-    The \gls{DP} mass range is defined as $6 \leq M_{A'} \leq 121.6$\,\si{\mega\electronvolt\per\clight\squared}. The mass ranges is extended compared to the previous \gls{MC} study. This is due to the large number of events in the mass bins at the edges of the distribution afforded by only using the data sample rather than the MC. Each \gls{DP} mass hypothesis is defined by steps of $1\sigma_m(M_{A'})$, resulting in 428 \gls{DP} mass hypotheses tested. 
+    The \gls{DP} mass range is defined as $6 \leq M_{A'} \leq 121.6$\,\si{\mega\electronvolt\per\clight\squared}. The mass ranges is extended compared to the previous \gls{MC} study. This is due to the large number of events in the mass bins at the edges of the distribution afforded by only using the data sample rather than the MC. 
+    %Each \gls{DP} mass hypothesis is defined by steps of $1\sigma_m(M_{A'})$
+    Using the method defined in Section~\ref{sec:dp_method} results in 428 \gls{DP} mass hypotheses tested. 
     %This deviated from the \gls{MC} study where the window's width is the size of the mass centre step. 
     %This is  compared to the \gls{MC} study. %How many?
-    A 4th-order polynomial is fitted to the data distribution using a least $\chi^2$ method. The fitting region for each mass hypothesis is defined as $\pm 15\sigma_m(M_{A'})$ from the mass hypothesis, and the distribution is re-binned with a bin width of $\sigma_m(M_{A'} / 5)$. 
+    A 4th-order polynomial is fitted to the data distribution using a least $\chi^2$ method. The fitting region for each mass hypothesis is defined as $\pm 15\sigma_m(M_{A'})$ from the mass hypothesis, and the distribution is re-binned with a bin width of $\sigma_m(M_{A'}) / 5$. 
     Data events in the mass bins above \SI{125}{\mega\electronvolt\per\clight\squared} are removed. This is because the small counts at the edge of the mass range cause instability with the fitting.
     Events in the mass bins $\pm 1.5 \sigma_m(M_{A'})$
     of the mass hypothesis are excluded from the fit as the possible presence of a \gls{DP} signal would result in a biased background estimate.
@@ -481,7 +511,7 @@
     The upper boundary for the search region is selected when the fits with the polynomials become unstable due to the reduced number of data events. %when fitting became unstable due to the reduced number of data points on the right side of the mass window, which would have inevitably increased the error in this region.
     
     The $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ are shown in Figure~\ref{fig:datadrive_plot}. The combined expected error $\delta N_{obs}$ is has reduced compared to the \gls{MC} background presented in Figure~\ref{fig:searchwindow_vals}. 
-    The error $\delta N_{exp}^{syst}$ is lower compared to the statistical until above \SI{100}{\mega\electronvolt\per\clight\squared}, where it spikes above. The increase in the systematic uncertainties is caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
+    The error $\delta N_{exp}^{syst}$ is lower compared to the statistical until above \SI{100}{\mega\electronvolt\per\clight\squared}. The increase in the systematic uncertainties is caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
     Using the same method used in the \gls{MC} study, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ are used as inputs to the CLs method to calculate the \gls{UL} on the number of \gls{DP} candidates in each mass window shown in Figure~\ref{fig:datadrive_plot}. The combined error on the number of expected \gls{DP} candidates is reduced compared to the \gls{MC} study, which is shown in Figure~\ref{fig:searchwindow_vals}.
     The reduction in the uncertainties is from the new background estimation method. It is not possible to see the true reduction in uncertainties due to increase in statistics from including the 2023 and 2024 datasets.
     \begin{figure}[t]
@@ -513,17 +543,17 @@
     %\end{figure}
     The resultant \gls{UL} for the $\mathcal{B}(\pi^0 \to \gamma A')$ is a significant improvement compared to the result produced in the \gls{MC} study shown in Figure~\ref{fig:branchinFrac}.
 
-    The \gls{UL} on the mixing parameter calculated with Equation~\ref{eq:epsilonsq} is compared to the result from NA48/2 \cite{2015178} in Figure~\ref{fig:epsilon_sq_data}. This result significantly improves the \gls{UL} of the square mixing parameter compared to the NA48/2 result by an order of magnitude. This is due to 75 times more kaon decays in the \gls{FV} provided by NA62 and the improved method for using the data to estimate the background, reducing the errors that previously limited the study.
+    The \gls{UL} on the mixing parameter calculated with Equation~\ref{eq:epsilonsq} is compared to the result from NA48/2 \cite{2015178} in Figure~\ref{fig:epsilon_sq_data}. This result significantly improves the \gls{UL} of the square mixing parameter compared to the NA48/2 result by an order of magnitude. This is due to a factor of 75 more kaon decays in the \gls{FV} provided by NA62 and the improved method for using the data to estimate the background, reducing the errors that previously limited the study.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/branchingFrac_data_24.png}
+        \includegraphics[width=0.7\textwidth]{plots/branchingFrac_data_24.png}
         \linespread{1.0}
         \caption{Upper limit on the \mathcal{B}($\pi^0 \to \gamma A'$) at a 90\,\% \gls{CL} for each dark photon mass hypothesis.}
         \label{fig:branchinFrac_data}
     \end{figure}
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24_wout.png}
+        \includegraphics[width=0.7\textwidth]{plots/eplisonsq_data_24_wout.png}
         \linespread{1.0}
         \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each dark photon mass hypothesis, with the result from NA48/2 for comparison \cite{2015178}.}
         \label{fig:epsilon_sq_data}
@@ -551,15 +581,15 @@
     \end{equation}
     where \gls{DP} mean free path is inversely dependent on $\epsilon^2 M_{A'}^2$ and $\tau_{A'}$ is defined by Equation~\ref{eq:DP_lifetime}. The lowest limit from the analysis is found as 
     $\epsilon^2 M_{A'}^2 = 4.59 \times 10^{-6}$\,\si{\mega\electronvolt^2\per\clight^4}  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
-    corresponding to $\lambda_{max} = SI{1.19}{\meter}$. %$0.81\m$.
-    Due to the construction of the 3-track trigger and offline reconstruction, the resolution of a decay vertex position is around 1\,m. With a vertex greater than 1\,m, the reconstruction the probability that the a three-track vertex is not produced is increased. This results in the event being removed due to the requirement of a single three-track vertex during the selection, reducing the acceptance.
+    corresponding to $\lambda_{max} = \SI{1.19}{\meter}$. %$0.81\m$.
+    Due to the construction of the 3-track trigger and offline reconstruction, the resolution of a decay vertex position is around 1\,m. With a vertex greater than 1\,m, the probability that a three-track vertex is not produced increases. This results in the event being removed due to the requirement of a single three-track vertex during the selection, reducing the acceptance.
     However, this is only true in extreme cases the \gls{DP} has the maximum energy calculated above. In this extreme case, the $\lambda = \SI{1}{\meter}$ is shown in Figure~\ref{fig:prompt} as the dashed lines for the maximum \gls{DP} energy and 50\,\% of the maximum. The fluctuations 
     of the \gls{UL} on the mixing parameter fall between these two lines, suggesting that the prompt assumption is still valid except in the most extreme cases.
     %Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
     %displaced decay is shown in Figure~\ref{fig:prompt}.
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/eplisonsq_data_24.png}
+        \includegraphics[width=0.7\textwidth]{plots/eplisonsq_data_24.png}
         \linespread{1.0}
         \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each dark photon mass hypothesis, with the result from NA48/2 for comparison \cite{2015178}. Lines showing the \lambda = \SI{1}{\meter} for the maximum and half of the maximum \gls{DP} energy.}
         \label{fig:prompt}
@@ -572,7 +602,7 @@
 
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.65\textwidth]{plots/globalfit_24.pdf}
+        \includegraphics[width=0.7\textwidth]{plots/globalfit_24.pdf}
         \linespread{1.0}
         \caption{Upper limit at a 90\% \gls{CL} on the mixing parameter (Green) compared to published exclusion limits \cite{2015178, Lees:2014xha,Banerjee:2019hmi,Anastasi:2015qla,Babusci:2012cr,Petersen:2023hgm,Davier:1989wz,Bodas:2021fsy}.}
         \label{fig:global_exclusion}
