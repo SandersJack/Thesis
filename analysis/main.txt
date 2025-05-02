@@ -123,7 +123,7 @@ DEvent Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
 4.1.3 Selection Acceptance . . . . . . . . . . . . . . . . . . . . . . . 88
 4.2 Integrated Kaon Flux . . . . . . . . . . . . . . . . . . . . . . . . . . . 91
 4.3 Dark Photon (DP) Search Method . . . . . . . . . . . . . . . . . . . 92
-4.4 Monte Carlo (MC) Background Estimation Method . . . . . . . . . . 93
+4.4 Monte Carlo (MC) Background Estimation Method . . . . . . . . . . 94
 4.4.1 The π0Transition Form Factor . . . . . . . . . . . . . . . . . 96
 4.4.2 Dark Photon Search Window . . . . . . . . . . . . . . . . . . 97
 4.4.3 Upper Limit on the Mixing Parameter . . . . . . . . . . . . . 99
@@ -131,7 +131,7 @@ DEvent Selection . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85
 4.5.1 Fitting the Data Distribution . . . . . . . . . . . . . . . . . . 103
 4.5.2 Upper Limit on the Mixing Parameter . . . . . . . . . . . . . 107
 4.6 Prompt Limit Calculation . . . . . . . . . . . . . . . . . . . . . . . . 107
-4.7 Global Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109
+4.7 Global Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
 4.8 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110
 5 Future Kaon Experiments 112
 5.1 HIKE . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112
@@ -165,11 +165,11 @@ CHANTI Charged particle Anti-coincidence detector. 28
 CKM Cabibbo-Kobayashi-Maskawa. 4–8, 11
 CLConfidence Level. 13, 15, 99, 101–103, 106–111
 CPCharge-Parity. 4, 9, 12–14
-DP Dark Photon. 1, 15, 16, 85, 92–94, 98, 99, 101–110, 147
+DP Dark Photon. 1, 15, 16, 85, 92–94, 98, 99, 101–111, 147
 viiList of Acronyms
 DSS Detector Safety System. 70
 FCNC Flavour Changing Neutral Current. 10, 13
-FVFiducial Volume. 19, 20, 22, 29, 91, 103, 107, 116, 139, 140
+FVFiducial Volume. 19, 20, 22, 29, 91, 92, 103, 107, 116, 139, 140
 GTK GigaTracker. 22, 27, 28
 H2Hydrogen gas. i, 45, 46, 52–55, 57–59, 69–75, 77–80
 HASC Hadronic Sampling Calorimeter. 39
@@ -200,7 +200,7 @@ SM Standard Model. 1, 3, 6, 7, 13, 15, 19
 SPS Super Proton Synchrotron. 1, 18, 24, 45
 TDAQ Trigger and Data Acquisition system. 19
 TFF Transition Form Factor. 96–98
-ULUpper Limit. 99, 101, 102, 106, 107, 109, 147
+ULUpper Limit. 99, 101, 102, 106, 107, 109, 110, 147
 VC VetoCounter. 39
 ixList of Figures
 1.1 The Standard Model of particle physics with the 12 fermions shown
@@ -372,26 +372,29 @@ to match the number of events in the data. . . . . . . . . . . . . . . . 87
 4.2 Reconstructed mass Mπeeγcompared against Meeγ, from a K2πDMC
 sample on the left and 2022 data on the right, with the defined ellip-
 tical cut used in the selection. . . . . . . . . . . . . . . . . . . . . . . 88
-4.3 Efficiency of the E20 trigger line for the K2πDMC sample as a function
-of the total LKr energy. The efficiency is calculated using the number
-of events passing the selection divided by the number of events passing
-the trigger emulator. . . . . . . . . . . . . . . . . . . . . . . . . . . . 89
+4.3 Efficiency of the E20 trigger condition for the K2πDMC sample as a
+function of the total LKr energy. The efficiency is calculated using
+the number of events passing the trigger emulator divided by the total
+number of K2πDdecays in the MC. . . . . . . . . . . . . . . . . . . . 89
 4.4 Acceptance for K2πDwith the NA62 selection with E/p Particle Iden-
 tification (PID) and kinematic PID, compared against the acceptance
 from the NA48/2 analysis [45]. . . . . . . . . . . . . . . . . . . . . . . 90
 4.5 Acceptance for K→µ+π0
 Dνµ(Kµ3D) with the NA62 selection. . . . . 90
-4.6 Left: E20 L0 trigger efficiency for the K2πDMC sample as a function
-of the total LKr energy. Right: Total LKr energy deposited for the
-K2πDMC and 2022 data. . . . . . . . . . . . . . . . . . . . . . . . . . 91
+4.6 Left: The E20 L0 trigger efficiency for selected K2πDevents calculated
+from MC as a function of the total LKr energy. Right: Total LKr
+energy deposited for selected K2πDevents from MC and 2022 data.
+The E20 selected efficiency is calculated using the number of events
+passing the K2πDselection divided by the number of events passing
+the E20 trigger emulator . . . . . . . . . . . . . . . . . . . . . . . . . 91
 4.7 Reconstructed masses for the decay components of K2πDandKµ3D
 decays, for MC and data at the end of the selection. . . . . . . . . . . 92
 4.8 True invariant mass minus reconstructed invariant mass of the electron-
 positron pair in terms of true invariant mass. . . . . . . . . . . . . . . 93
 4.9 Resolution of the reconstructed electron-positron invariant mass against
 true invariant mass. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 94
-4.10 Acceptance for DP selection for NA62 across the MA′spectrum. . . . 94
 xvLIST OF FIGURES
+4.10 Acceptance for DP selection for NA62 across the MA′spectrum. . . . 94
 4.11 True invariant mass of the electron-positron pair divided by the π0
 mass of the K2πDMC sample, which is equal to the kinematic variable
 x. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95
@@ -2824,9 +2827,10 @@ condition for K2πDthe decay is measured with MC at 70.71 % and is shown as a
 function of total LKr energy in Figure 4.3.
 884.1 Dark Photon in π0decays π0
 DEvent Selection
-Figure 4.3: Efficiency of the E20 trigger line for the K2πDMC sample as a function
-of the total LKr energy. The efficiency is calculated using the number of events
-passing the selection divided by the number of events passing the trigger emulator.
+Figure 4.3: Efficiency of the E20 trigger condition for the K2πDMC sample as a
+function of the total LKr energy. The efficiency is calculated using the number of
+events passing the trigger emulator divided by the total number of K2πDdecays in
+the MC.
 The acceptance of the selection for the K2πDMC sample in terms of the recon-
 structed electron-positron mass in the range 2 me< M ee< M π0and is compared
 against the acceptance of the NA48/2 analysis [45] in Figure 4.4. The difference be-
@@ -2863,9 +2867,11 @@ acceptance of the selection for the Kµ3Ddecay is shown in Figure 4.5. The overa
 acceptances for the K2πDandKµ3Ddecays are shown in Table 4.1.
 The overall E20 L0 trigger condition efficiency for the selected K2πDevents is
 904.2 Dark Photon in π0decays Integrated Kaon Flux
-Figure 4.6: Left: E20 L0 trigger efficiency for the K2πDMC sample as a function
-of the total LKr energy. Right: Total LKr energy deposited for the K2πDMC and
-2022 data.
+Figure 4.6: Left: The E20 L0 trigger efficiency for selected K2πDevents calculated
+from MC as a function of the total LKr energy. Right: Total LKr energy deposited
+for selected K2πDevents from MC and 2022 data. The E20 selected efficiency is
+calculated using the number of events passing the K2πDselection divided by the
+number of events passing the E20 trigger emulator
 0.80 %. The efficiency as a function of the total LKr energy is shown in Figure 4.6.
 The total LKr energy deposited for the K2πDMC and 2022 data is also shown. The
 MC sample is scaled to match the number of events in the data.
@@ -2883,7 +2889,6 @@ the NA62 Framework. The inclusion of the trigger emulators results in the trigge
 efficiencies for both L0 and L1 being accounted for within the acceptances defined
 in Table 4.1.
 The number of kaon decays in the FV for each year of data taking is shown
-in Table 4.2. The increase in data events passing the selection in 2023 and 2024
 914.3 Dark Photon in π0decays DP Search Method
 Year NK
 2022 (1.67±0.07)×1012
@@ -2893,6 +2898,7 @@ Table 4.2: Effective number of kaon decays for each year of data taking between
 2022 and 2024.
 Figure 4.7: Reconstructed masses for the decay components of K2πDandKµ3D
 decays, for MC and data at the end of the selection.
+in Table 4.2. The increase in data events passing the selection in 2023 and 2024
 datasets compared to 2022 is due to the change in downscaling for the eMT trigger
 from 3 to 1. The reconstructed masses for data and MC passing the K2πDselection
 are shown in Figure 4.7. The MC samples are scaled using the calculated NKvalue.
@@ -2901,11 +2907,11 @@ To convert from MeetoMA′mass hypothesis, the reconstructed mass resolution is
 considered when selecting the search window centres and the size of the windows.
 The mass resolution is calculated using MC, where the difference between the A′
 particle mass and the reconstructed mass of the electron-positron pair is calculated
-and shown in Figure 4.8. A Gaussian fit is conducted for the MTrue−Reco
-ee distribution
-924.4 Dark Photon in π0decays MC Background Estimation Method
+924.4 Dark Photon in π0decays DP Search Method
 Figure 4.8: True invariant mass minus reconstructed invariant mass of the electron-
 positron pair in terms of true invariant mass.
+and shown in Figure 4.8. A Gaussian fit is conducted for the MTrue−Reco
+ee distribution
 at each Meemass bin. The width of the fit is calculated and used to produce
 Figure 4.9. A linear function is fitted, resulting in an equation for the invariant
 mass resolution,
@@ -2923,13 +2929,13 @@ ee) and if it passes the
 K2πDselection. The acceptance is shown in Figure 4.10 as a function of MA′mass.
 The acceptance is then parametrised using a polynomial for use in the calculation
 of the branching fraction.
-4.4 MC Background Estimation Method
-The MC background method only uses the 2022 NA62 dataset. As described above,
-the background for the search for DP is K2πDandKµ3D. These decays are modelled
 934.4 Dark Photon in π0decays MC Background Estimation Method
 Figure 4.9: Resolution of the reconstructed electron-positron invariant mass against
 true invariant mass.
 Figure 4.10: Acceptance for DP selection for NA62 across the MA′spectrum.
+4.4 MC Background Estimation Method
+The MC background method only uses the 2022 NA62 dataset. As described above,
+the background for the search for DP is K2πDandKµ3D. These decays are modelled
 by MC and compared against the data to determine the sensitivity of the search.
 The MC samples are produced using the NA62 framework, which simulates the
 full detector response and the trigger system. The K2πDandKµ3Dsamples are
@@ -2937,6 +2943,9 @@ produced with 2 ×108and 5×106events, respectively. The limited size of the MC
 samples impact the final result when used for the background estimate. However,
 due to computing time, it is not feasible to increase the statistics on the samples to
 improve the final result. Utilising a feature of the NA62 framework, the statistics
+944.4 Dark Photon in π0decays MC Background Estimation Method
+Figure 4.11: True invariant mass of the electron-positron pair divided by the π0
+mass of the K2πDMC sample, which is equal to the kinematic variable x.
 across a portion of the reconstructed Meerange are increased. The true mass of the
 electron-positron pair is used to calculate the kinematic variable x,
 x=(Qe−+Qe+)2
@@ -2945,9 +2954,6 @@ M2
 ee
 M2
 π0, (4.6)
-944.4 Dark Photon in π0decays MC Background Estimation Method
-Figure 4.11: True invariant mass of the electron-positron pair divided by the π0
-mass of the K2πDMC sample, which is equal to the kinematic variable x.
 where Qe−andQe+are the four-momenta of the electron and positron, and Mπ0is
 the mass of the neutral pion. The resultant distribution in terms of the kinematic
 variable xis shown in Figure 4.11. The NA62 software framework allows for the
@@ -3283,7 +3289,7 @@ Erest
 1074.6 Dark Photon in π0decays Prompt Limit Calculation
 Figure 4.26: Upper limit on the B( π0→γA′) at a 90 % CL for each dark photon
 mass hypothesis.
-where M,Mπ0andMπ+are the kaon, neutral pion and charged pion masses, with
+where MK,Mπ0andMπ+are the kaon, neutral pion and charged pion masses, with
 the equation derived from basic two-body decay kinematics. The π0momentum in
 the kaon rest frame is defined as
 prest
@@ -3296,25 +3302,33 @@ and 4.20 the maximum energy of the π0in the laboratory reference frame via a
 Lorentz boost is,
 Elab
 π0=γK(Erest
-π0+βprest
+π0+βKprest
 π0) = 68 .5 GeV , (4.21)
-with γK=EK/MK. In the decay π0→γA′the maximum energy of the DP occurs
-when all the energy of the neutral pion is transferred to the DP and the photon is
-emitted backwards resulting in a max DP energy of Elab
-A′= 68.5 GeV. The max DP
-mean free path is defined as,
-λmax=γmaxcτA′=Emax
+with γK=EK/MKandβK=pK/EK. In the decay π0→γA′the maximum energy
+of the DP occurs when the DP is emitted in the direction of the pions motion and
+the photon is emitted backwards, resulting in a maximum DP energy,
+Emax
+A′=γπ0(Erest
+A′+βπ0prest
+A′) = 68 .5 GeV , (4.22)
+where γπ0=Eπ0/Mπ0andβπ0=pπ0/Eπ0. The maximum DP energy and momentum
+at rest is when the DP mass tends to zero, resulting in Erest
+A′=Mπ0/2 and prest
+A′=
+1084.7 Dark Photon in π0decays Prompt Limit Calculation
+Figure 4.27: Upper limit mixing parameter ϵ2at a 90 % CL for each dark photon
+mass hypothesis, with the result from NA48/2 for comparison [45].
+Erest
+A′respectively. The max DP mean free path is defined as,
+λmax=Emax
 MA′cτA′= 0.054×10−6
 ϵ2×100 MeV /c2
 M2
-A′(4.22)
+A′(4.23)
 where DP mean free path is inversely dependent on ϵ2M2
 A′andτA′is defined by Equa-
 tion 1.36. The lowest limit from the analysis is found as ϵ2M2
 A′= 4.59×10−6MeV2/c4
-1084.7 Dark Photon in π0decays Global Results
-Figure 4.27: Upper limit mixing parameter ϵ2at a 90 % CL for each dark photon
-mass hypothesis, with the result from NA48/2 for comparison [45].
 corresponding to λmax= 1.19 m. Due to the construction of the 3-track trigger and
 offline reconstruction, the resolution of a decay vertex position is around 1 m. With
 a vertex greater than 1 m, the probability that a three-track vertex is not produced
@@ -3325,14 +3339,14 @@ In this extreme case, the λ= 1 m is shown in Figure 4.28 as the dashed lines fo
 the maximum DP energy and 50 % of the maximum. The fluctuations of the UL
 on the mixing parameter fall between these two lines, suggesting that the prompt
 assumption is still valid except in the most extreme cases.
+1094.8 Dark Photon in π0decays Global Results
+Figure 4.28: Upper limit mixing parameter ϵ2at a 90 % CL for each dark photon
+mass hypothesis, with the result from NA48/2 for comparison [45]. Lines showing
+theλ= 1 m forthemaximumandhalfofthemaximumDPenergy.
 4.7 Global Results
 This result for the UL on the mixing parameter is compared to other experiments
 in Figure 4.29, produced using the software package DarkCast [75, 76]. It shows
 the results from this study and a number of other collaborations: NA48/2 [45],
-1094.8 Dark Photon in π0decays Conclusions
-Figure 4.28: Upper limit mixing parameter ϵ2at a 90 % CL for each dark photon
-mass hypothesis, with the result from NA48/2 for comparison [45]. Lines showing
-theλ= 1 m forthemaximumandhalfofthemaximumDPenergy.
 BaBar [77], NA64 [78], KLOE [79], KLOE-2 [80], FASER [81] and others [82, 83].
 The result from NA62 covers areas of the phase space not yet covered in previous
 experiments.
@@ -3342,9 +3356,6 @@ utilising the 2022–2024 dataset. Two methods for the background estimation are
 presented: one utilising MC samples and the other using the data. The MC back-
 ground estimation method produces uncompetitive results due to the limited size of
 MC samples produced. The data-driven background estimation, however, provides
-improved results, producing competitive limits for the mixing parameter across the
-DP mass search range. The result sets limits in an area of phase space not yet
-covered by any other experiment.
 1104.8 Dark Photon in π0decays Conclusions
 102
 101
@@ -3359,6 +3370,9 @@ NA64
 OrsayDavier
 Figure 4.29: Upper limit at a 90% CL on the mixing parameter (Green) compared
 to published exclusion limits [45, 77, 78, 79, 80, 81, 82, 83].
+improved results, producing competitive limits for the mixing parameter across the
+DP mass search range. The result sets limits in an area of phase space not yet
+covered by any other experiment.
 111Chapter 5
 Future Kaon Experiments
 Over the past 75 years the study of kaon physics has been integral to the develop-
