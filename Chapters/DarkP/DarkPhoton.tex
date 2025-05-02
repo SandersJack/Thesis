@@ -114,7 +114,7 @@
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/e20_efficiency.png}
         \linespread{1.0}
-        \caption{Efficiency of the E20 trigger line for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy. The efficiency is calculated using the number of events passing the selection divided by the number of events passing the trigger emulator.}
+        \caption{Efficiency of the E20 trigger condition for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy. The efficiency is calculated using the number of events passing the trigger emulator divided by the total number of \gls{kpid} decays in the \gls{MC}.}
         \label{fig:e20effciency}
     \end{figure}
 
@@ -165,7 +165,7 @@
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/e20_sel_efficiency.png} }}%
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/lkr_emul_sel.png} }}%
         \linespread{1.0}
-        \caption{Left: E20 L0 trigger efficiency for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy. Right: Total LKr energy deposited for the \gls{kpid} \gls{MC} and 2022 data.}
+        \caption{Left: The E20 L0 trigger efficiency for selected \gls{kpid} events calculated from \gls{MC} as a function of the total LKr energy. Right: Total LKr energy deposited for selected \gls{kpid} events from \gls{MC} and 2022 data. The E20 selected efficiency is calculated using the number of events passing the \gls{kpid} selection divided by the number of events passing the E20 trigger emulator}
         \label{fig:e20_selected}
     \end{figure}
      
@@ -566,18 +566,22 @@
     \begin{equation} \label{eq:2body}
         E_{\pi^0}^{rest} = \frac{M^2 + M_{\pi^0}^2 - M_{\pi^+}^2}{2M} = \SI{0.246}{\giga\electronvolt}
     \end{equation}
-    where $M$, $M_{\pi^0}$ and $M_{\pi^+}$ are the kaon, neutral pion and charged pion masses, with the equation derived from basic two-body decay kinematics. The $\pi^0$ momentum in the kaon rest frame is defined as
+    where $M_K$, $M_{\pi^0}$ and $M_{\pi^+}$ are the kaon, neutral pion and charged pion masses, with the equation derived from basic two-body decay kinematics. The $\pi^0$ momentum in the kaon rest frame is defined as
     \begin{equation} \label{eq:pi0mom}
         p_{\pi^0}^{rest} = \sqrt{(E_{\pi^0}^{rest})^2 - M_{\pi^0}^2} = \SI{0.205}{\giga\electronvolt\per\clight}.
     \end{equation}
     From a nominal beam energy at NA62 of $E_{K} = \SI{75}{\giga\electronvolt\per\clight}$ and the Equations \ref{eq:2body} and \ref{eq:pi0mom} the maximum energy of the $\pi^0$ in the laboratory reference frame via a Lorentz boost is,
     \begin{equation}
-        E^{lab}_{\pi^0} = \gamma_K (E_{\pi^0}^{rest} + \beta p_{\pi^0}^{rest}) = \SI{68.5}{\giga\electronvolt},
+        E^{lab}_{\pi^0} = \gamma_K (E_{\pi^0}^{rest} + \beta_K p_{\pi^0}^{rest}) = \SI{68.5}{\giga\electronvolt},
     \end{equation}
-    with $\gamma_K = E_{K} / M_K$. In the decay $\pi^0 \to \gamma A'$ the maximum energy of the \gls{DP} occurs when all the energy of the neutral pion is transferred to the \gls{DP} and the photon is emitted backwards resulting in a max \gls{DP} energy of $E^{lab}_{A'} = \SI{68.5}{\giga\electronvolt}$. 
+    with $\gamma_K = E_{K} / M_K$ and $\beta_K = p_{K} / E_K$. In the decay $\pi^0 \to \gamma A'$ the maximum energy of the \gls{DP} occurs when the \gls{DP} is emitted in the direction of the pions motion and the photon is emitted backwards, resulting in a maximum \gls{DP} energy,
+    \begin{equation}
+        E^{max}_{A'} = \gamma_{\pi^0} (E_{A'}^{rest} + \beta_{\pi^0} p_{A'}^{rest}) = \SI{68.5}{\giga\electronvolt},
+    \end{equation} 
+    where $\gamma_{\pi^0} = E_{\pi^0} / M_{\pi^0}$ and $\beta_{\pi^0} = p_{\pi^0} / E_{\pi^0}$. The maximum \gls{DP} energy and momentum at rest is when the \gls{DP} mass tends to zero, resulting in $E_{A'}^{rest} = M_{\pi^0} / 2$ and $p_{A'}^{rest} = E_{A'}^{rest}$ respectively.
     The max \gls{DP} mean free path is defined as, 
     \begin{equation}
-        \lambda_{max} = \gamma_{max}c\tau_{A'} = \frac{E_{max}}{M_{A'} c} \tau_{A'} =  0.054 \times \frac{10^{-6}}{\epsilon^2} \times \frac{\SI{100}{\mega\electronvolt\per\clight\squared}}{M_{A'}^2}
+        \lambda_{max} = \frac{E_{max}}{M_{A'} c} \tau_{A'} =  0.054 \times \frac{10^{-6}}{\epsilon^2} \times \frac{\SI{100}{\mega\electronvolt\per\clight\squared}}{M_{A'}^2}
     \end{equation}
     where \gls{DP} mean free path is inversely dependent on $\epsilon^2 M_{A'}^2$ and $\tau_{A'}$ is defined by Equation~\ref{eq:DP_lifetime}. The lowest limit from the analysis is found as 
     $\epsilon^2 M_{A'}^2 = 4.59 \times 10^{-6}$\,\si{\mega\electronvolt^2\per\clight^4}  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
