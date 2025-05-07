@@ -4,12 +4,13 @@ by
 Jack Dylan Sanders
 A thesis submitted to the University of Birmingham for the degree of
 DOCTOR OF PHILOSOPHY.
-Particle Physics Research Group
+Supervisors:
+Prof. Evgueni Goudzovski
+Prof. Cristina Lazzeroni
+Dr. Angela RomanoParticle Physics Research Group
 School of Physics and Astronomy
-College of Engineering and Physical Sciences
 University of Birmingham
-Date
-iiAbstract
+May 2025Abstract
 The 2022-24 NA62 data has been used to search for the dark photon ( A′) from the
 π0→A′γand the subsequent prompt decay A′→e+e−. Within the mass range
 6≤mA′≤121.6 MeV /c2no signal was observed and an exclusion limit on the
@@ -68,14 +69,16 @@ expert and is briefly described in Section 3.5
 iiThe search of the Dark Photon described in Chapter 4 is entirely my work except
 for the results referenced from other experiments.
 Chapter 5 set outs the possibility for future kaon experiments. Section 5.1 de-
-scribes the High Intensity Kaon Experiments (HIKE) and the planned detector
-setups for three separate phases. Section 5.2 describes my contributions to the
-NA62 software where I developed and tested new flexible features to allow the de-
-velopment of new detectors. Section 5.3 presents the development of an upgraded
-KTAG which I helped implement into the new software framework. In Section 5.4
-the upgraded RICH is described which I completed from design to implementation
-in the software framework. Section 5.5 provides the detector rates for HIKE Phase
-2 which I evaluated.
+scribes the High Intensity Kaon Experiments (HIKE) and the planned detector se-
+tups for three separate phases. Section 5.2 describes my contributions to the NA62
+software where I developed and tested new flexible features to allow the develop-
+ment of new detectors. Section 5.3 presents the development of an upgraded KTAG
+developed by the University Birmingham group. I have collected information from
+reports and presentations to describe the development of the upgrade. I completed
+the implementation and testing of the upgrades into the new software framework,
+producing some expected performance results. In Section 5.4 the upgraded RICH is
+described which I completed from design to implementation in the software frame-
+work. Section 5.5 provides the detector rates for HIKE Phase 2 which I evaluated.
 No other qualifications were obtained from the work completed within this thesis.
 iiiContents
 Introduction 1
@@ -156,7 +159,7 @@ ASIC Application-Specific Integrated Circuits. 28
 BSM Beyond the Standard Model. 1, 8
 CECollection Efficiency. 125
 CEDAR Differential Cherenkov counter with Achromatic Ring focus. i, 21, 24–26,
-45–55, 58, 60–62, 69, 70, 72–74, 80, 81
+45–55, 58, 60–62, 69, 70, 72–74, 80, 81, 146
 CEDAR-H CEDAR-Hydrogen. 26, 51–75, 77–84, 146
 CEDAR-N CEDAR-North. 24, 45, 46, 53, 54
 CEDAR-W CEDAR-West. 24, 26, 45, 46, 48, 50, 52–55, 62, 68, 69, 80–84, 146
@@ -170,9 +173,9 @@ DSS Detector Safety System. 70
 FCNC Flavour Changing Neutral Current. 10, 13
 FVFiducial Volume. 19, 20, 22, 29, 91, 102, 107, 115, 138, 139
 GTK GigaTracker. 22, 27, 28
-H2Hydrogen gas. i, 45, 46, 52–55, 57–59, 69–75, 77–80
+H2Hydrogen gas. i, 45, 46, 52–55, 57–59, 69–75, 77–80, 146
 HASC Hadronic Sampling Calorimeter. 39
-HIKE High-intensity Kaon Experiments. 2, 10, 111, 141, 142, 146
+HIKE High-intensity Kaon Experiments. 2, 10, 111, 141, 142, 146, 147
 IAC Integrated Anode Charge. 122, 123
 IRC Intermediate-Ring Calorimeter. 33
 Ke3K+→π0e+ν. 132–135
@@ -4254,30 +4257,34 @@ physics studies is currently being utilised for studies within the KOTO II propo
 [106].
 145Chapter 6
 Conclusions
-The CEDAR-H was designed by The University of Birmingham and built at CERN
-where it was characterised and tested at a test-beam in 2022. CEDAR-H was in-
-stalled and commissioned in the NA62 beam-line for the 2023 run where a number
-of pressure scans and other tests were completed to ensure that the detector was
-ready for data taking. The detector produced excellent results with 13 % greater
-light yield compared with CEDAR-W with N 2. CEDAR-H has been in operation
-since 2023 and has perform flawlessly through out.
+A new CEDAR with H 2as a radiator gas was designed by The University of Birm-
+ingham and built at CERN where it was characterised and tested at a test-beam
+in 2022. CEDAR-H was installed and commissioned in the NA62 beam-line for the
+2023 run where a number of pressure scans and other tests were completed to ensure
+that the detector was ready for data taking. The detector produced excellent results
+with 13 % greater light yield compared with CEDAR-W with N 2. CEDAR-H has
+been in operation since 2023 and has perform flawlessly through out. The KTAG
+with CEDAR-H produced a kaon identification efficiency of 99.7 % and a kaon time
+resolution of 66 ps.
 The search for DP at NA62 was conducted with two studies with different back-
 ground estimation methods: MC and data-driven. The MC study did not produce
-competitive results when compared to previous experiments in the search region so
-the data-driven background method was used. Utilising the data-driven method the
-UL of the mixing parameter squared was set and provides coverage across a region
-which has not been covered by any other experiments. It is planned that this search
-will continue by implementing data collected in the two final years of data taking
-at NA62 to further enhance the result.
-The NA62 software package was overhauled to allow for more flexibility. Thi
-allowed for the implementation and testing of new detectors for future experiments
-such as HIKE. The upgrades planned for the KTAG and RICH were presented
-for use within HIKE Phase 1 and the detector rates for the expected positions
-for HIKE Phase 2 were presented. The results from the simulations were used in
-the HIKE proposal submitted in 2023 to the SPS committee. Unfortunately the
-HIKE experiment was not approved. However, the upgraded software and studies
+competitive results when compared to previous experiments in the search region.
+Utilising the data-driven method the UL of the mixing parameter squared was set
+and provides improved coverage across the phase space not provided by any other
+experiments. It is planned that this search will continue by implementing data
+collected in 2025 at NA62 to further enhance the result.
+The NA62 software package was upgraded to allow for more flexibility. The
+upgrade was rigorously tested to ensure stability and compatibility with existing
+software versions. This allowed for the implementation and testing of new detectors
+for future experiments such as HIKE. The upgrades planned for the KTAG and
+RICH and their performances were presented for use within HIKE Phase 1. The
+detector rates for the expected detectors for HIKE Phase 2 were presented. These
 1466.0 Conclusions
-conducted were utilised for the KOTO II proposal submitted in 2024.
+rates aided the development of the HIKE detectors. The results from the simulations
+were used in the HIKE proposal submitted in 2023 to the SPS committee. Unfor-
+tunately the HIKE experiment was not approved by the SPS committee. However,
+the upgraded software and detector studies conducted were utilised for the KOTOII
+proposal submitted in 2024.
 147Bibliography
 [1] Glashow S L 1961 Nuclear Physics 22579–588 ISSN 0029-5582 URL https:
 //www.sciencedirect.com/science/article/pii/0029558261904692
