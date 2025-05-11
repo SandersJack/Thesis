@@ -29,18 +29,18 @@
 
     \section{\boldmath $\pi^0_D$ \unboldmath Event Selection}
     %The analysis started using the same procedure used in the NA48/2 \cite{2015178} %ADD na48 context
-    The analysis selection for the \gls{DP} search originates from the search at NA48/2 \cite{2015178}. The \gls{kpid} decay has the same event signature as the production and decay of the \gls{DP}. The event selection comprises the identification of the $\pi^+$, electron, positron and photon. The selection is set out below:
+    The analysis selection for the \gls{DP} search originates from the search at NA48/2 \cite{2015178}. The \gls{kpid} decay has the same event signature as the production and decay of the \gls{DP}. The event selection comprises the identification of the $\pi^+$, electron, positron and photon. The selection is set out below.
     \subsection{Vertex Selection}
     \begin{itemize}
         \item It is required that at least one of the following trigger conditions is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the Electron Multi-Track (eMT) trigger, described in Chapter~\ref{sec:na62}.
-        \item A single three-track vertex is required, with a total momentum below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of $Q = 1$, a vertex fit $\chi^2 < 40$, and a position within the range $\SI{105}{\meter} < Z_{\text{vtx}} < \SI{180}{\meter}$.
+        \item A single three-track vertex is required. The vertex must have a total momentum below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of $Q = 1$, a vertex fit $\chi^2 < 40$ as well as a position within the range $\SI{105}{\meter} < Z_{\text{vtx}} < \SI{180}{\meter}$.
         \item The tracks within the vertex are checked if they are in acceptance of all four STRAW spectrometer chambers and the CHOD. The track momentum must be $\SI{5}{\giga\electronvolt\per\clight} < p < \SI{60}{\giga\electronvolt\per\clight}$ with a $\chi^2 < 30$. All three tracks must traverse the first STRAW chamber with a separation of 20\,mm from each other.
         \item A selected photon is also required. The missing momentum of the vertex is the difference between the kaon 3-momentum and the total vertex 3-momentum. The momentum is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
         with a minimum energy of \SI{5}{\giga\electronvolt} is required. The photon energy must be within \SI{5}{\giga\electronvolt} of the missing vertex momentum.
     \end{itemize}
 
     \subsection{Kinematic PID}    
-    The three-track vertex is required to consist of a positively charged pion ($\pi^+$) an electron and positron ($e^{\pm}$). The pion is identified from the two positively charged tracks using the missing mass between the kaon 4-momentum and the track 4-momentum, 
+    The three-track vertex is required to consist of a positively charged pion ($\pi^+$), an electron and positron ($e^{\pm}$). The pion is identified from the two positively charged tracks using the missing mass between the kaon 4-momentum and the track 4-momentum, 
     \begin{equation}
         M_{miss}^2 = (P_{K^+} - P_{\pi^+})^2.
     \end{equation}
@@ -129,10 +129,10 @@
         \label{fig:e20effciency}
     \end{figure}
 
-    The acceptance of the selection for the \gls{kpid} \gls{MC} sample in terms of the reconstructed electron-positron mass in the range $2M_e < M_{ee} < M_{\pi^0}$ is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure~\ref{fig:accept}.
+    The acceptance of the selection for the \gls{kpid} \gls{MC} sample in terms of the reconstructed electron and positron mass in the range $2M_e < M_{ee} < M_{\pi^0}$ is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure~\ref{fig:accept}.
    % Introducing the kinematic selection compared to the calorimeter PID improved the overall acceptance. 
     The difference between the selections used for the NA62 and the NA48/2 study is the \gls{PID}. The study at NA48/2 uses calorimetric \gls{PID} where the \gls{LKr} is utilised to reconstruct the energy of the pion, electron and positron. The reconstructed energy to momentum ratio is used to distinguish 
-    between the electron/positron and pion. In the NA62 study, \gls{PID} uses the track momentum measurements to reconstruct the invariant masses, which are compared against the nominal PDG masses \cite{Olive:2014pdg}. This approach is driven by the difference in experimental setup between NA48/2 and NA62. The NA62 setup is longer, as it requires enhanced \gls{PID}, satisfied by the \gls{RICH} and improved momentum measurements provided by the longer spectrometer.
+    between the pion, electron and positron. In the NA62 study, \gls{PID} uses the track momentum measurements to reconstruct the invariant masses, which are compared against the nominal PDG masses \cite{Olive:2014pdg}. This approach is driven by the difference in experimental setup between NA48/2 and NA62. The NA62 setup is longer, as it requires enhanced \gls{PID}, satisfied by the \gls{RICH} and improved momentum measurements provided by the longer spectrometer.
     This results in the \gls{LKr} placed further from the decay volume, reducing the acceptance of the \gls{kpid} decay at NA62 compared to NA48/2. The \gls{LKr} is used in the analysis to reconstruct the photon energy.%, which is required to prevent other backgrounds from passing the selection. 
     
     The impact of the different experimental setups is apparent at low $M_{ee}$ where NA48/2 has an acceptance advantage.
@@ -295,7 +295,7 @@
     \begin{equation}
         log(X) = N log\left(\frac{s}{b}\right).
     \end{equation}
-    The \gls{CL} is calculated using a \gls{MC} integration method where a large number of trials are used to calculate the probability defined in Equation~\ref{eq:prob_test}. For each trial, the value N is sampled from a Poisson distribution with a mean of $s+b$ where $b$ is the background sampled from a normal distribution with a mean equal to the expected number of events ($N_{exp}$) and width equal to the error on the expected value ($\delta N_{exp}$).
+    The \gls{CL} is calculated using a \gls{MC} integration method where a large number of trials are used to calculate the probability defined in Equation~\ref{eq:prob_test}. For each trial, the value N is sampled from a Poisson distribution with a mean of $s+b$. Where $b$ is the background sampled from a normal distribution with a mean equal to the expected number of events ($N_{exp}$) and width equal to the error on the expected value ($\delta N_{exp}$).
     The test statistic is computed and compared with $X_{obs}$. Similarly, the confidence level is also calculated for the exclusion of the signal+background ($\text{CL}_{b}$) is calculated, with the difference being that N is sampled from a Poisson distribution with a mean of $b$ instead of $s+b$. 
     After the trials the modified frequentist confidence level ($\text{CL}_s$) is calculated as,
     \begin{equation}
@@ -308,7 +308,7 @@
     which would be the \gls{UL} on the signal for a confidence level of $\alpha$.
     
     \section{\gls{MC} Background Estimation Method}
-    The \gls{MC} background method only uses the 2022 NA62 dataset and for this study, only the statistical errors on the \gls{MC} are considered.
+    The \gls{MC} background method only uses the 2022 NA62 dataset and for this study only the statistical errors on the \gls{MC} are considered.
     As described above, the background for the search for \gls{DP} comes from the \gls{kpid} and \gls{kmu3D} decays. These decays are modelled by \gls{MC} and compared against the data to determine the sensitivity of the search. The \gls{MC} samples are produced using the NA62 framework, which simulates the full detector response and the trigger system. The \gls{kpid} and \gls{kmu3D} samples are produced with $2\times10^8$ and $5\times10^6$ events, respectively.
     The limited size of the \gls{MC} samples impacts the final result. However, due to computing time, it is not feasible to increase the statistics on the samples. Utilising a feature of the NA62 framework, the statistics across a portion of the reconstructed $M_{ee}$ range are increased.
     The true mass of the electron and positron is used to calculate the kinematic variable $x$,
@@ -394,7 +394,7 @@
         \label{fig:MCDATAFF}
     \end{figure}
     % Need to update the tfff section to use ratio and new plot
-    The the effective \gls{TFF} slope for this study is found by fitting the data/\gls{MC} ratio to,
+    The effective \gls{TFF} slope for this study is found by fitting the data/\gls{MC} ratio to,
     \begin{equation} \label{eq:TFFsq}
         f(x)^2 = \frac{(1 + ax)^2}{(1 + a_{Fw}x)^2},
     \end{equation}
@@ -409,7 +409,7 @@
     %    \caption{Data/\gls{MC} in terms of the reconstructed kinematic variable $x$ with the framework \gls{TFF} removed. The red line shows the fit of the \gls{TFF} equation, described by Equation~\ref{eq:TFFsq}.}
     %    \label{fig:MCDATANOFF}
     %\end{figure}
-    The after the applied correction to the \gls{TFF} slope the \gls{MC} sample is re-scaled to match the data as the total number of \gls{MC} events has increased.
+    After the applied correction to the \gls{TFF} slope the \gls{MC} sample is re-scaled to match the data as the total number of \gls{MC} events has increased.
     This results in an improved \gls{MC} background estimation of the data, shown in Figure~\ref{fig:mee_mc_afteTFF} compared to Figure~\ref{fig:mee_mc}. The \gls{TFF} correction is used throughout the study for the \gls{MC} samples.
     \begin{figure}[t]
         \centering 
@@ -541,7 +541,7 @@
         \label{fig:exampleend_fit}%
     \end{figure}
 
-    The polynomial fits for the final \gls{DP} mass hypothesis at \SI{121.6}{\mega\electronvolt\per\clight\squared} are shown in Figure~\ref{fig:exampleend_fit}, showing all events above \SI{125}{\mega\electronvolt\per\clight\squared} being removed from the fitting region. 
+    The polynomial fits for the final \gls{DP} mass hypothesis at \SI{121.6}{\mega\electronvolt\per\clight\squared} are shown in Figure~\ref{fig:exampleend_fit}, showing all events above \SI{125}{\mega\electronvolt\per\clight\squared} being removed from the fitting region.
     The upper boundary of the search region is set at the point where the polynomial fits become unstable due to the reduced number of data events. %when fitting became unstable due to the reduced number of data points on the right side of the mass window, which would have inevitably increased the error in this region.
     
     The obtained $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ values obtained for each $M_{A'}$ hypothesis are shown in Figure~\ref{fig:datadrive_plot}. The combined expected error $\delta N_{obs}$ is reduced compared to the \gls{MC} background presented in Figure~\ref{fig:searchwindow_vals}. 
