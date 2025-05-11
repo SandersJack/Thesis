@@ -167,7 +167,8 @@
     After testing, the software is ready to be used to develop new detectors and produce physics studies for HIKE.
 
     \section{The KTAG Upgrades for HIKE} \label{sec:ktag_upgrade}
-    The contents of this sub-section contains work completed by the Birmingham group on the upgrades to the KTAG detector for HIKE Phase 1. 
+    The contents of this section contains work completed by the Birmingham group on the upgrades to the KTAG detector for HIKE Phase 1 and its implementation into the NA62 software framework.
+
     To sustain the increased kaon rate, the KTAG requires upgrades to the photon-detection and data acquisition systems, allowing to reach the required time resolution of 15-20\,ps and kaon identification efficiency of greater than 95\,\%. The expected kaon rate in HIKE Phase 1 is 200\,MHz, which corresponds to a maximum rate of \SI{10}{\mega\hertz\per\centi\meter\squared} for the detected photons at the PMT array. This rate takes into account the 
     production of Cherenkov photons in CEDAR-H and the resultant acceptance of the photons on the PMT plane. It is proposed that the NA62 PMT arrays are replaced with arrays of \glspl{MCP-PMT}. The MCP-PMTs would provide a single photon time resolution of 50-70\,ps depending on the model, a low dark rate of \SI{1}{\kilo\hertz\per\centi\meter\squared} and the ability to sustain the required photon rate. 
     A downside of the MCP-PMTs is their limited lifetime from the ageing of the photocathode caused by feedback ions from the residual gas resulting in a rapid reduction in the \gls{QE} \cite{KISHIMOTO2006204}. This is measured as degradation of PMT \gls{QE} with the increasing \gls{IAC}.
@@ -415,6 +416,7 @@
 
     %%% Files /afs/cern.ch/work/j/jsanders/Software/na62fw/NA62Analysis/PathToUser
     %%% N Hit in Ring candidate
+    The reconstruction for the RICH was modified to accept the new configurations of the \glspl{SiPM} and made flexible to allow for new designs in the future.
     In the reconstruction, the photo-electrons are clustered into ring candidates. The distribution of the number number of reconstructed photo-electrons is shown in Figure~\ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons is due to the enhanced quantum efficiency of the SiPMs.
     There are minimal differences between the three sensor sizes shown in Figure~\ref{fig:NA62RICHNHITs}\,(b-d), with the 3\,mm sensors having a higher number of hits per ring candidate when compared to the 9\,mm sensors. 
 
@@ -554,9 +556,8 @@
         \label{tab:hikeDecayRates}%
     \end{table}
 
-    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using the hits in each detector channel which are then converted to the expected rate. The rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is unexpected as
-    a much lower rate is expected due to the lack of charged daughter particles. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions in the final state.
-    
+    The total particle rates from $K_L$ decays in the \gls{FV} are shown in Table~\ref{tab:totalRatesInDetectors}. The rate is calculated using the hits in each detector channel which are then converted to the expected rate. 
+    The large particle rate in the spectrometer for the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay is unexpected. A much lower rate is expected due to the lack of charged daughter particles from the decay. Even with a lower branching ratio, it is expected that the $ K_L \to \pi^{+} \pi^{-} \pi^{0}$ decay should have a higher rate in the spectrometer due to the charged pions in the final state. This is due to the large number of particles produced from secondary interactions.
     \begin{table}[htbp] 
         \centering
         \resizebox{\textwidth}{!}{
@@ -582,7 +583,6 @@
         \caption{Total rates in the detectors for the four main $K_L$ decays: $ K_L \to \pi^{\pm} e^{\mp} \nu_e$ ($K_{e3}^{0}$), $ K_L \to \pi^{\pm} \mu^{\mp} \nu_{\mu}$ ($K_{\mu 3}^{0}$), $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ and $ K_L \to \pi^{+} \pi^{-} \pi^{0}$, along with their Branching Ratios (BR).}%
         \label{tab:totalRatesInDetectors}
     \end{table}
-
     By using information from the \gls{MC}, the origin of the particles that produce the hits in the spectrometer are found. The production Z and radius of particles which results a hit in the spectrometer is shown in Figure~\ref{fig:SpectroCheck}. 
     For the $ K_L \to \pi^{0} \pi^{0} \pi^{0}$ decay, the majority (80\,\%) of the particles are produced after Z=210\,m in the walls of the vacuum decay tube and the spectrometer chambers themselves. With only 20\,\% of particles produced before Z=210\,m, originating from the primary decay process.
     \begin{figure}[htbp]
