@@ -35,7 +35,7 @@
         \item It is required that at least one of the following trigger conditions is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the Electron Multi-Track (eMT) trigger, described in Chapter~\ref{sec:na62}.
         \item A single three-track vertex is required. The vertex must have a total momentum below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of $Q = 1$, a vertex fit $\chi^2 < 40$ as well as a position within the range $\SI{105}{\meter} < Z_{\text{vtx}} < \SI{180}{\meter}$.
         \item The tracks within the vertex are checked if they are in acceptance of all four STRAW spectrometer chambers and the CHOD. The track momentum must be $\SI{5}{\giga\electronvolt\per\clight} < p < \SI{60}{\giga\electronvolt\per\clight}$ with a $\chi^2 < 30$. All three tracks must traverse the first STRAW chamber with a separation of 20\,mm from each other.
-        \item A selected photon is also required. The missing momentum of the vertex is the difference between the kaon 3-momentum and the total vertex 3-momentum. The momentum is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
+        \item A selected photon is also required. The missing momentum of the vertex is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. The missing momentum is the difference between the kaon 3-momentum and the total vertex 3-momentum. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
         with a minimum energy of \SI{5}{\giga\electronvolt} is required. The photon energy must be within \SI{5}{\giga\electronvolt} of the missing vertex momentum.
     \end{itemize}
 
@@ -45,7 +45,7 @@
         M_{miss}^2 = (P_{K^+} - P_{\pi^+})^2.
     \end{equation}
     If the missing mass is consistent with the $\pi^0$ mass hypothesis, the track is identified as a charged pion. 
-    The cut on the reconstructed missing mass of is calculated using a \gls{kpid} \gls{MC} sample and is shown in Figure~\ref{fig:kaonpion}.
+    The cut on $M_{miss}$ is calculated using a \gls{kpid} \gls{MC} sample and is shown in Figure~\ref{fig:kaonpion}.
     The width of the distribution is found to be,
     \begin{equation}
         %\sigma = 3.984 \pm 0.007_{Stat}\, \SI{}{\mega\electronvolt}.
@@ -59,7 +59,7 @@
         \caption{Reconstructed missing mass of kaon and charged pion compared to the known neutral pion mass. The blue distribution is the \gls{kpid} \gls{MC} sample, fitted with a Crystal Ball function in red and compared against the 2022 data in green. The Crystal Ball function is a function that models a Gaussian peak with a power-law tail on one side. The \gls{MC} sample is scaled to match the number of events in the data.}
         \label{fig:kaonpion}
     \end{figure}
-    If both positive tracks satisfy the condition, the event is vetoed. From \gls{MC}, approximately $0.1\,\%$ of \gls{kpid} decays have both positive tracks satisfying the selection of the charged pion.
+    If both positive tracks satisfy the condition, the event is vetoed. According to \gls{MC}, approximately $0.1\,\%$ of \gls{kpid} decays have both positively charged tracks satisfying the charged pion selection criteria.
     The electron is associated to the negative track. The positive track which does not pass the charged pion selection is identified as the positron.
     
     %An elliptical cut is introduced to reduce the background that would otherwise pass the selection. The reconstructed mass of the electron, positron and photon is compared against the reconstructed mass of the electron, positron, photon and charged pion.
@@ -185,7 +185,7 @@
     \begin{equation}\label{eq:nk}
         N_K^{2022-24} = \frac{N_{selected}}{A_{2 \pi D} \mathcal{B}_{2 \pi D} + A_{\mu 3D} \mathcal{B}_{\mu 3D}} =  (1.19 \pm 0.05) \times 10^{13}, %(1.65 \pm 0.05) \times 10^{12}.
     \end{equation}
-    where $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the \gls{kpid} and \gls{kmu3D} decays for the \gls{kpid} selection shown in Table~\ref{tab:acceptances} and are evaluated using \gls{MC} samples. The $\mathcal{B}_{2 \pi D}$ and $\mathcal{B}_{\mu 3D}$ are the branching fractions of the \gls{kpid} and \gls{kmu3D} decay chains \cite{Olive:2014pdg}. 
+    where $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the \gls{kpid} and \gls{kmu3D} decays for the \gls{kpid} selection, shown in Table~\ref{tab:acceptances}. The $\mathcal{B}_{2 \pi D}$ and $\mathcal{B}_{\mu 3D}$ are the branching fractions of the \gls{kpid} and \gls{kmu3D} decay chains \cite{Olive:2014pdg}. 
     The errors on $N_K$ originate from the statistical uncertainty of the number of selected events, the error on the acceptance and the errors on the branching ratios.
     
     %Only the 2022 sample was available when the \gls{MC} background method was employed. The data-driven background estimation method uses the 2022, 2023 and 2024 datasets. Utilising the same method in Equation~\ref{eq:nk}, the integrated number of kaons is calculated using the % 
@@ -296,7 +296,7 @@
         log(X) = N log\left(\frac{s}{b}\right).
     \end{equation}
     The \gls{CL} is calculated using a \gls{MC} integration method where a large number of trials are used to calculate the probability defined in Equation~\ref{eq:prob_test}. For each trial, the value N is sampled from a Poisson distribution with a mean of $s+b$. Where $b$ is the background sampled from a normal distribution with a mean equal to the expected number of events ($N_{exp}$) and width equal to the error on the expected value ($\delta N_{exp}$).
-    The test statistic is computed and compared with $X_{obs}$. Similarly, the confidence level is also calculated for the exclusion of the signal+background ($\text{CL}_{b}$) is calculated, with the difference being that N is sampled from a Poisson distribution with a mean of $b$ instead of $s+b$. 
+    The test statistic is computed and compared with $X_{obs}$. The confidence level for the exclusion of the $s+b$ hypothesis ($\text{CL}_{b}$) is calculated, with N sampled from a Poisson distribution with a mean of $b$ instead of $s+b$. 
     After the trials the modified frequentist confidence level ($\text{CL}_s$) is calculated as,
     \begin{equation}
         CL_s = CL_{s+b} / CL_b.
@@ -345,7 +345,7 @@
     The number of events passing the selection across the $M_{ee}$ spectrum, for each \gls{MC} sample are shown in Figure~\ref{fig:counts_mc_data}. It shows how the two \gls{kpid} samples have been combined to produce a continuous distribution and 
     shows the contribution from the \gls{kmu3D} decay.
     The statistical errors on the number of events in each bin are calculated for the \gls{MC} samples and combined, shown in Figure~\ref{fig:error_mc_data}. Implementing the biased \gls{kpid} $x > 0.5$ \gls{MC} sample
-    significantly reduces the statistical error of the combined sample by an order of magnitude compared to using only the main \gls{kpid} sample.
+    significantly reduces the statistical error of the combined sample by an compared to only using the main \gls{kpid} sample.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.9\textwidth]{plots/counts_MC_Data.png}
@@ -545,7 +545,7 @@
     The upper boundary of the search region is set at the point where the polynomial fits become unstable due to the reduced number of data events. %when fitting became unstable due to the reduced number of data points on the right side of the mass window, which would have inevitably increased the error in this region.
     
     The obtained $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ values obtained for each $M_{A'}$ hypothesis are shown in Figure~\ref{fig:datadrive_plot}. The combined expected error $\delta N_{obs}$ is reduced compared to the \gls{MC} background presented in Figure~\ref{fig:searchwindow_vals}. 
-    The error $\delta N_{exp}^{syst}$ is lower compared to the statistical below \SI{100}{\mega\electronvolt\per\clight\squared}. Above \SI{100}{\mega\electronvolt\per\clight\squared} the spikes in the systematic uncertainties is caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
+    The statistical error is dominant over $\delta N_{exp}^{syst}$ below \SI{100}{\mega\electronvolt\per\clight\squared}. Above \SI{100}{\mega\electronvolt\per\clight\squared} the spikes in the systematic uncertainties is caused by the reduced fitting window due to the removed data events past \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
 
     With $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ shown in Figure~\ref{fig:datadrive_plot}, the local significance of the \gls{DP} signal is calculated with Equation~\ref{eq:localSig} is shown in Figure~\ref{fig:local_sig_data}. The significance does not reach the threshold of three sigma, so no \gls{DP} is observed.
     \begin{figure}[t]
@@ -632,7 +632,7 @@
     $\epsilon^2 M_{A'}^2 = 4.59 \times 10^{-6}$\,\si{\mega\electronvolt^2\per\clight^4}  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
     corresponding to $\lambda^{max}_{A'} = \SI{1.19}{\meter}$. %$0.81\m$.
     Due to the construction of the 3-track trigger and offline reconstruction, the resolution of a decay vertex position is 1\,m. As the distance between the production vertex and the $A'$ decay point increases, the probability of reconstructing a single three-track vertex decreases. This results in the event being removed due to the requirement of a single three-track vertex during the selection, reducing the acceptance.
-    However, this is only true in extreme cases the \gls{DP} has the maximum energy calculated above. In this extreme case, a dashed line corresponding to a decay length of $\lambda = \SI{1}{\meter}$ is shown in Figure~\ref{fig:prompt} for both the maximum \gls{DP} energy and for 50\% of that maximum. The fluctuations 
+    For a \gls{DP} with the maximum energy, a dashed line corresponding to a decay length of $\lambda = \SI{1}{\meter}$ is shown in Figure~\ref{fig:prompt} for both the maximum \gls{DP} energy and for 50\% of that maximum. The fluctuations 
     of the \gls{UL} on the mixing parameter fall between these two lines, suggesting that the prompt assumption is still valid except in the most extreme cases.
     %Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
     %displaced decay is shown in Figure~\ref{fig:prompt}.
