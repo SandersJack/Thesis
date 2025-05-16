@@ -1,6 +1,7 @@
 \documentclass[../../main.tex]{subfiles}
 %% NEED TO ADD NA62 RATES
 \begin{document}
+    \glsresetall
     \section{Overview}
     The NA62 experiment is a fixed target experiment located in the ECN3 experimental hall in the North Area of CERN where a \SI{400}{\giga\electronvolt\per\clight} particle beam is provided by the \gls{SPS}. The main goal of the experiment is to measure the 
     branching fraction of the ultra-rare charged kaon decay $K^+ \rightarrow \pi^+ \nu \bar{\nu}$. Alongside, there is an expansive physics program of 
@@ -19,7 +20,7 @@
     \begin{equation}
         \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = (13^{+3.3}_{-3.0}) \times 10^{-11}.
     \end{equation}
-    This represents the rarest particle decay measured to data, agreeing with the \gls{SM} predictions (Equation~\ref{eq:PNN_theory_val}) within $1.7\,\sigma$. With more data to be analysed NA62 plans to obtain a precision of better than 20\,\%.
+    This represents the rarest particle decay measured to date, agreeing with the \gls{SM} predictions (Equation~\ref{eq:PNN_theory_val}) within $1.7\,\sigma$. With more data to be analysed NA62 plans to obtain a precision of better than 20\,\%.
     \begin{figure}[t]
         \centering
         \includegraphics[width=13cm]{imgs/missingmasss_signal.png}
@@ -61,10 +62,10 @@
     The GTK stations are installed so that the space between GTK1 and GTK3 is occupied by a second achromat (A2), which comprises four dipole magnets that deflect the beam 60\,mm vertically, allowing for the beam particle momenta to be measured. 
     The return yokes of the third and fourth magnets and a magnetised iron collimator (SCR1) defocus beam muons, which are ejected from the beam between the second and third magnets. A pair of cleaning collimators (C6 and C7) used to absorb beam particles outside of the acceptance are located before the final GTK station (GTK3), 
     which is at the entrance to the decay region ($Z = 102.4$\,m). A steering magnet (TRIM5) is then used to deflect the beam in the horizontal direction by an angle of +1.2\,mrad.
-    \newline\indent At $Z = 102.4$\,m begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo-pumps along its length. The Bluetube, shown in Figure~\ref{fig:na62-det}, is made up of 19 cylindrical sections ranging in diameter, from 1.92\,m in the first section after GTK3 to 2.4\,m in the middle section and then 2.8\,m
+    \newline\indent At $Z = 102.4$\,m begins a large 117\,m vacuum pipe (Bluetube), evacuated to a pressure of $~\,10^{-6}$\,mbar by several cryo-pumps along its length. The Bluetube, shown in Figure~\ref{fig:na62-det-run2}, is made up of 19 cylindrical sections ranging in diameter, from 1.92\,m in the first section after GTK3 to 2.4\,m in the middle section and then 2.8\,m
     in the region containing the STRAW spectrometer.
     The first section is defined as the decay region or \gls{FV} between $Z = 105$\,m and $Z = 180$\,m. Further downstream, the Bluetube hosts a number of detectors: 
-    Eleven \gls{LAV} stations and four STRAW spectrometer chambers. The \gls{LAV} stations are used in the Photon detection system described in Section \ref{sec:PDS}. The STRAW spectrometer chambers along with a large aperture dipole magnet (MNP33) provide kinematic measurements of the charged products of kaons decaying within the decay region, described in Section \ref{sec:STRAW}.  
+    eleven \gls{LAV} stations and four STRAW spectrometer chambers. The \gls{LAV} stations are used in the photon detection system described in Section \ref{sec:PDS}. The STRAW spectrometer chambers along with a large aperture dipole magnet (MNP33) provide kinematic measurements of the charged products of kaons decaying within the decay region, described in Section \ref{sec:STRAW}.  
     The MNP33 magnet provides a \SI{270}{\mega\electronvolt\per\clight} momentum kick in the horizontal direction, deflecting the \SI{75}{\giga\electronvolt\per\clight} beam by $-3.6$\,mrad, so that combined with the TRIM5 deflection, the beam passes through the central aperture of the \gls{LKr}. The path of the beam is shown in Figure~\ref{fig:AFTER-GTK-beam-line}, showing the deflection in the horizontal direction.
     After the final STRAW spectrometer chamber (STRAW4), the Bluetube is closed off with a thin aluminium window (except for the beam hole), separating the vacuum from the 17\,m long, neon-filled \gls{RICH}. The \gls{RICH} is designed to distinguish between secondary pions and muons produced in kaon decays and is part of the \gls{PID} system as described in Section \ref{sec:RICH}. 
     The beam is transported through the remaining downstream detectors in a vacuum and is deflected $-13.2$\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the \gls{SAC} acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
@@ -87,7 +88,7 @@
     \end{figure}
     \subsection{KTAG}\label{sec:KTAG}
     As the NA62 beam is unseparated and kaons only account for 6\,\% of the beam composition, the kaons must be identified. Kaon identification is provided by the KTAG located at $Z=69.4$\,m. It comprises a \gls{CEDAR} vessel and a purpose-built
-    photon detection system. \glspl{CEDAR} were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS} and come in two types: \glsentrylong{cw} and \gls{cn}. Until the NA62 2023 run, the \gls{CEDAR} vessel was a \gls{cw} filled with a Nitrogen radiator.
+    photon detection system. \glspl{CEDAR} were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS} and come in two types: \glsentrylong{cw} and \gls{cn}. Until the NA62 2023 run, the \gls{CEDAR} vessel was a \gls{cw} filled with a nitrogen radiator.
     The \gls{CEDAR} exploits the properties of the produced Cherenkov light which is dependent on the beam particle speed $\beta$, 
     \begin{equation}\label{eq:Cherenkov}
         cos(\theta) = \frac{1}{\beta n},
@@ -95,7 +96,7 @@
     where $\theta$ is the angle of the Cherenkov light produced, $\beta = \frac{p}{\gamma m}$ where $p$ is the particle momentum, $\gamma$ is the Lorentz factor and $m$ is the mass of the particle.
     %In a beam of set momentum and a radiator with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particle. 
     The \gls{CEDAR} is designed so that when a beam of charged particles with fixed momenta enters the radiator gas with a constant refractive index, the angle of Cherenkov light is only affected by the mass of the beam particles.
-    The pressure is set at 1.7\,bar of Nitrogen in the \gls{cw} so that the light from the 
+    The pressure is set at 1.7\,bar of nitrogen in the \gls{cw} so that the light from the 
     kaon is focused by a set of lenses through exit windows which are then detected by photo detectors. The light from the other beam components does not reach the PMT arrays but other particles can be selected by altering the pressure within the vessel. %A more detailed description of CEDARs can be found in Section \ref{sec:cedarH}.
     %A diagram showing the internal optics of the CEDAR is shown in Figure~\ref{fig:Cedar_dia}.
     %\begin{figure}[H]
@@ -115,9 +116,9 @@
     \newline\indent In the original CERN design, the Cherenkov light exiting each \gls{CEDAR} exit window was detected by a single ET-9820QB \gls{PMT} placed directly on the exit window. A particle was identified if there was a coincidence of at least six PMTs out of eight. 
     However, these PMTs would not fulfil the timing ($\leq 100$\,ps) and rate requirements (45\,MHz of kaons) at NA62. 
     %% Describe the KTAG more in depth with photos and diagrams
-    \newline \indent For NA62, a photon-detection system shown in Figure~\ref{fig:ktag} was designed, constructed and mounted to the upstream end of the \gls{CEDAR} Vessel.
+    \newline \indent For NA62, a photon-detection system shown in Figure~\ref{fig:ktag} was designed, constructed and mounted to the upstream end of the \gls{CEDAR} vessel.
     The photon light from the \gls{CEDAR} exit windows is reflected radially 90 degrees by eight spherical mirrors onto eight PMT matrices, referred to as sectors.  
-    Each PMT matrix is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 of type R9880-110 and 16 of type R7400. The \gls{QE} for both Hamamatsu PMTs are shown in Figure~\ref{fig:pmtQE}. The QE is the probability of a PMTs photocathode to convert a photon of a specific wavelength and emit a photo-electron into the vacuum of the PMT.
+    Each PMT matrix is equipped with an array of 48 single-anode Hamamatsu PMTs of two types: 32 of type R9880-110 and 16 of type R7400. The \gls{QE} is the probability of a PMTs photocathode to convert a photon of a specific wavelength and emit a photo-electron into the vacuum of the PMT. The \gls{QE} for both Hamamatsu PMTs are shown in Figure~\ref{fig:pmtQE}. 
     %% Input QE plots for the PMTs
     \begin{figure}[H]
         \centering 
@@ -127,7 +128,7 @@
         \label{fig:pmtQE}
     \end{figure}
     The signals from the PMT arrays are clustered by the reconstruction algorithm into kaon candidates within a nominal 2\,ns time window. A kaon is identified when there are at least five sectors in coincidence (5-fold coincidence). 
-    The clustering results with, on average, 18 photo-electrons per kaon candidate.
+    The clustering provides, on average, 18 photo-electrons per kaon candidate.
     The PMTs can achieve a single hit time resolution of 300\,ps, resulting in a reconstructed kaon time resolution of 70\,ps. A kaon identification efficiency above $99\,\%$ was achieved with the KTAG and \gls{cw} \cite{GOUDZOVSKI201586}.
     \newline\indent In 2023, a new \gls{CEDAR} with a hydrogen radiator \gls{ch} was installed in the NA62 beam-line after design at the University of Birmingham and construction and testing at CERN. The new \gls{CEDAR} uses the basic principles as previous CEDARs but uses hydrogen as a radiator gas to reduce the material within the path of the beam. 
     This required the design of new optical elements in the \gls{CEDAR} and the photon detection system. A detailed description of the \gls{CEDAR} and its optical elements, along with the design, testing and installation of the new \gls{ch}, can be found in Section \ref{sec:cedarH}.
@@ -194,7 +195,7 @@
         \label{tab:chamber_info}
     \end{table}
     \indent The straws are 2.1\,m long drift tubes that are 9.82\,mm in diameter, made from $36$\,\si{\micro\meter} thick \gls{PET}, coated on the inside with 50\,nm of
-    copper and 20\,nm of gold. The straws are filled with a mixture of 70\,\% Argon and 30\,\% CO\textsubscript{2} at atmospheric pressure and have a central gold-plated tungsten anode wire. The straws act like 
+    copper and 20\,nm of gold. The straws are filled with a mixture of 70\,\% argon and 30\,\% CO\textsubscript{2} at atmospheric pressure and have a central gold-plated tungsten anode wire. The straws act like 
     proportional counters: when a charged particle passes through the gas, it is ionised, creating electron-ion pairs that drift to the opposite electrodes, inducing a charge on the anode wire. 
     When the electron approaches the anode wire, the electric field strength increases dramatically, producing Townsend avalanches. This provides a large multiplication of the signal, producing a
     charge pulse, which is read out by the detector electronics.
@@ -211,7 +212,7 @@
             \centering
             \includegraphics[width=\textwidth]{imgs/Straw_views.png}
             \linespread{1.0}
-            \caption{Diapgram showing placement of views in a straw chamber. Edited from \cite{SERGI2012530}}
+            \caption{Diagram showing placement of views in a straw chamber. Edited from \cite{SERGI2012530}}
             \label{fig:Straw_views}
         \end{minipage}
         \label{fig:both_figures}
@@ -233,7 +234,7 @@
         \label{fig:rich}
     \end{figure}
     \newline\indent A mosaic of 20 spherical mirrors (18 hexagonal and two semi-hexagonal) with a focal length of 17\,m is located at the downstream end of the vessel as shown in Figure~\ref{fig:rich}. This mirror system reflects and focuses the Cherenkov light toward two PMT arrays located at the upstream end of the vessel. The two PMT arrays are located on either side of the entrance window (see Figure~\ref{fig:rich}), each consisting of 
-    976 Hamamatsu R7400-U03 PMTs. The PMTs have an \SI{8}{\milli\meter\squared} active area and are packed into a hexagonal lattice, with a individual Winston cones directing light onto the active areas. 
+    976 Hamamatsu R7400-U03 PMTs. The PMTs have an \SI{8}{\milli\meter\squared} active area and are packed into a hexagonal lattice, with individual Winston cones directing light onto the active areas. 
     \newline\indent The particles are identified using a cut on the particle mass, calculated from the particle velocity using the reconstructed Cherenkov ring radius shown in Figure~\ref{fig:rich_ring} and 
     momentum measured by the spectrometer. It is clear that separating pions and muons within the desired momentum range is possible.
     \begin{figure}[H]
@@ -246,13 +247,13 @@
     \subsection{Photon Detection System}\label{sec:PDS}
     The photon detection system provides a rejection power of $10^8$ for the main decay background $K_{2\pi}$ for \gls{PNN}. It is made up of four calorimeters used to detect and reject kaon decays with photons in the final state, with coverage from 0 to 50\,mrad. 
 
-    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. The \gls{LKr} is a quasi-homogeneous calorimeter consisting of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, allowing for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13248 longitudinal cells, depicted in Figure~\ref{fig:lkrDiag}, consisting each of a central anode and cathodes on either side.
-    Each anode ribbon is connected at the downstream end to preamplifiers and to a high voltage of 3000V to provide the drift field required for the ionisation.
+    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. The \gls{LKr} is a quasi-homogeneous calorimeter consisting of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, allowing for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13,248 longitudinal cells, depicted in Figure~\ref{fig:lkrDiag}, each consisting of a central anode and cathodes on either side.
+    Each anode ribbon is connected at the downstream end to preamplifiers and to a high voltage of \SI{3}{\kilo\volt} to provide the drift field required for the ionisation.
     \begin{figure}[H]
         \centering 
         \includegraphics[width=\textwidth]{imgs/lkrDiag.png}
         \linespread{1.0}
-        \caption{Left, a schematic of the structure of a single quadrant of the Lkr.  Right, the layout of cells within the quadrant. \cite{Bizzeti:2017dqh}}
+        \caption{Left, a schematic of the structure of a single quadrant of the LKr.  Right, the layout of cells within the quadrant. \cite{Bizzeti:2017dqh}}
         \label{fig:lkrDiag}
     \end{figure}
     The \gls{LKr} energy resolution can be parametrised as, 
@@ -261,11 +262,11 @@
     \end{equation}
     where $E$ is the energy in \si{\giga\electronvolt}.
 
-    Photons with small production angles between 0 and 1\,mrad are detected by the \gls{IRC} and \glsentrylong{SAC}. %Describe SAC and IRC
+    Photons with small production angles between 0 and 1\,mrad are detected by the \gls{IRC} and \gls{SAC}. %Describe SAC and IRC
     The IRC wraps around the beam pipe and consists of layers of lead and scintillating material. The light is collected by WLS fibres bundled into four groups which is readout by a Hamamatsu PM.
     The SAC, which is located just upstream of the beam dump within the beam vacuum, comprises of 70 lead plates with 70 plastic scintillators in between readout by WLS fibres resulting in a total material of 19\,$X_0$. The fibres are bundled into four groups which are then read out by Hamamatsu PMs, resulting in four channels.
 
-    The \gls{LAV} provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed upstream of the LKr. A LAV station consists of a barrel of lead glass blocks surrounding the boundary of the vacuum volume \cite{OPALCollaboration1991}, see LAV1 picture in Figure~\ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
+    The \gls{LAV} provides coverage from 8.5 to 50\,mrad, with 12 stations positioned along and beyond the decay volume. Eleven of the LAV stations are along the vacuum volume with the final station placed upstream of the LKr. An LAV station consists of a barrel of lead glass blocks surrounding the boundary of the vacuum volume \cite{OPALCollaboration1991}, see LAV1 picture in Figure~\ref{fig:LAV1}. The electromagnetic showers produced in each of the glass blocks result in the emission of Cherenkov light, which is then detected by a Hamamatsu R2238 76 mm diameter photomultiplier attached to the back side. 
     %% Performance plots!!
     \begin{figure}[H]
         \centering 
@@ -281,7 +282,7 @@
         \caption{Detection efficiency of a photon as a function of the photon energy for the photon veto detectors: LAV (top left), LKr (top right), IRC (bottom left) and SAC (bottom right) \cite{NA62:2020pwi}. }
         \label{fig:pv_ineff}
     \end{figure}
-    The single photon detection efficiencies for the photon veto detectors at NA62 are shown in Figure~\ref{fig:pv_ineff}. The efficiencies were calculated using a tag-and-probe method where $K^+ \to \pi^+ \pi^0$, $\pi^0 \to \gamma \gamma$ with one or two photons were reconstructed by the LKr were selected. The tagged photons energy and position and other kinematic information from the decay was used to determine which photon detector should detect the probed photon. 
+    The single photon detection efficiencies for the photon veto detectors at NA62 are shown in Figure~\ref{fig:pv_ineff}. The efficiencies were calculated using a tag-and-probe method. This is where $K^+ \to \pi^+ \pi^0$, $\pi^0 \to \gamma \gamma$ decays with one or two photons were reconstructed by the LKr are used to measure the efficiency of the photon detectors. One photon is classed as a tagged photon and its energy, position and other kinematic information from the decay is used to determine which photon detector should detect the other photon (probed). 
     \subsection{Charged Particle Hodoscopes}
     The charged particle hodoscopes comprise a pair of scintillator detectors which cover the acceptance downstream of the \gls{RICH} and upstream of the \gls{LKr}. The main function of the charged particle hodoscopes is to provide input to the first level of the NA62 trigger system.
     
@@ -313,7 +314,7 @@
 
 
     \subsection{Muon Veto System}
-    The \gls{MUV} is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising steel as an absorber material. MUV1 is a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24 iron plates with a thickness of 26.8\,mm and 23 layers of scintillator strips placed in between that are 9\,mm thick with a width of 60\,mm, as shown in Figure~\ref{fig:MUV1}. The scintillator strips alternate between horizontal and vertical, resulting in 12 horizontal and 13 vertical. 
+    The \gls{MUV} is used to discriminate between pions and muons in conjunction with the RICH and LKr. The system comprises a hadronic sampling calorimeter made from two modules, MUV1 and MUV2, utilising steel as an absorber material. MUV1 is a newly designed module for NA62, and MUV2 was repurposed from the front of the NA48 hadronic calorimeter \cite{Fantietal2007}. MUV1 consists of 24 iron plates with a thickness of 26.8\,mm and 23 layers of scintillator strips placed in between that are 9\,mm thick with a width of 60\,mm, as shown in Figure~\ref{fig:MUV1}. The scintillator strips alternate between horizontal and vertical, resulting with 12 horizontal and 13 vertical. 
     The material of MUV1 produces a total material of 4.1\,$X_0$. The light produced within the strips is collected by WLS fibres and read out by PMTs. 
     \begin{figure}[H]
         \centering 
