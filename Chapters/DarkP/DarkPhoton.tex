@@ -33,7 +33,7 @@
     The analysis selection for the \gls{DP} search originates from the search at NA48/2 \cite{2015178}. The \gls{kpid} decay has the same event signature as the production and decay of the \gls{DP}. The event selection comprises the identification of the $\pi^+$, electron, positron and photon. The selection is set out below.
     \subsection{Vertex Selection}
     \begin{itemize}
-        \item It is required that at least one of the following trigger conditions is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the Electron Multi-Track (eMT) trigger, described in Chapter~\ref{sec:na62}.
+        \item It is required that at least one of the following trigger conditions is satisfied: the Control Trigger (also referred to as the Minimum Bias Trigger), the Multi-Track (MT) trigger, or the electron Multi-Track (eMT) trigger, described in Chapter~\ref{sec:na62}.
         \item A single three-track vertex is required. The vertex must have a total momentum below \SI{78}{\giga\electronvolt\per\clight}, a total positive charge of $Q = 1$, a vertex fit $\chi^2 < 40$ as well as a position within the range $\SI{105}{\meter} < Z_{\text{vtx}} < \SI{180}{\meter}$.
         \item The tracks within the vertex are checked if they are in acceptance of all four STRAW spectrometer chambers and the CHOD. The track momentum must be $\SI{5}{\giga\electronvolt\per\clight} < p < \SI{60}{\giga\electronvolt\per\clight}$ with a $\chi^2 < 30$. All three tracks must traverse the first STRAW chamber with a separation of 20\,mm from each other.
         \item A selected photon is also required. The missing vertex momentum of the vertex is used to extrapolate a straight line from the vertex position to the z-plane of the LKr calorimeter. The missing momentum is the difference between the kaon 3-momentum and the total vertex 3-momentum. Within a radius of 15\,cm of the extrapolated position, a single \gls{LKr} energy deposit
@@ -241,7 +241,7 @@
     %Both methods are described below.
     \section{\gls{DP} Search Method}\label{sec:dp_method}
     %%%% Include DP search method and DP acceptance
-    This section will describe the \gls{DP} search method used by both the \gls{MC} and data-driven background estimation methods.
+    This section describes the \gls{DP} search method used by both the \gls{MC} and data-driven background estimation methods.
     To conduct the \gls{DP} search the $M_{ee}$ values must be converted to ${A'}$ mass hypotheses, the reconstructed mass resolution is considered when selecting the search window centres and the size of the windows. Each centre corresponds to a specific $A'$ mass hypothesis with a window of a narrow mass range around that centre where a signal would be expected to appear.
     The mass resolution is calculated using \gls{kpid} \gls{MC}, where the difference between the true and reconstructed $M_{ee}$ is calculated as shown in Figure~\ref{fig:true_reco}.
     \begin{figure}[t]
@@ -428,7 +428,7 @@
 
     %Now talk about procedure
     \subsection{Upper Limit on the Mixing Parameter}
-    The range of the \gls{DP} search is defined as $7 \leq M_{A'} \leq 120$\,\si{\mega\electronvolt\per\clight^2}. The lower mass boundary is defined because of the falling geometric acceptance and the upper boundary is due to the inability of the \gls{MC} to model the non-gaussian tails of the track reconstruction. 
+    The range of the \gls{DP} search is defined as $7 \leq M_{A'} \leq 120$\,\si{\mega\electronvolt\per\clight^2}. The lower mass boundary is defined because of the falling geometric acceptance and the upper boundary is due to the inability of the \gls{MC} to model the non-Gaussian tails of the track reconstruction. 
     Using the method described in Section~\ref{sec:dp_method}, results in 379 DP mass values tested. 
     The local significance of the \gls{DP} signal is shown in Figure~\ref{fig:local_sig}. The local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed.
     The $N_{obs}$, $N_{exp}$ and their errors for the \gls{MC} background estimation are shown in Figure~\ref{fig:searchwindow_vals}.
@@ -477,7 +477,7 @@
         \epsilon^2 = \frac{B(\pi^{0} \to \gamma A^{'})}{2 \left(1-\frac{m^2_{A'}}{m^2_{\pi^{0}}}\right)^3 B(\pi^{0} \to \gamma \gamma )}.
     \end{equation}
     The \gls{UL} of the mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} across the \gls{DP} mass range is shown in Figure~\ref{fig:epsilon_sq}. This result is not competitive at $M_{A'} < \SI{85}{\mega\electronvolt\per\clight^2}$.
-    If the main \gls{MC} sample is produced at the same statistical level as the biased sample, the \gls{UL} could be improved by at least an order of magnitude. This is as long as the systematic errors do not dominate if included into the study.
+    If the main \gls{MC} sample is produced at the same statistical level as the biased sample, the \gls{UL} could be improved by at least an order of magnitude. This is as long as the systematic errors do not dominate if included in the study.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/eplisonsq_mc.png}

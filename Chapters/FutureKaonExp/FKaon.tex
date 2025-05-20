@@ -5,11 +5,11 @@
     \glsresetall
     \glsreset{ke3}
     \glsreset{IAC}
-    Over the past 75\,years the study of kaon physics has been integral to the development of the standard model. Since 2016, the NA62 experiment has been the leading experiment in the field of kaon physics. However, 
+    Over the past 75\,years the study of kaon physics has been integral to the development of the \gls{SM}. Since 2016, the NA62 experiment has been the leading experiment in the field of kaon physics. However, 
     with the NA62 experiment scheduled up to \gls{LS3}, which is expected in autumn 2026, it is important to investigate future experiments. It is then required to investigate the future of kaon physics and the potential experiments that could succeed NA62. This chapter discusses the potential future of kaon physics, the experiments that could be used to further the field, and the 
     work I contributed to these experiments.
     \section[HIKE]{High Intensity Kaon Experiments (HIKE)}
-    \gls{HIKE} is a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represents a phased program after LS3. HIKE is to profit from a four to six-fold increase in beam intensity compared to NA62 and includes cutting-edge detector technologies as described in this 
+    \gls{HIKE} is a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represents a phased program after LS3. HIKE is to benefit from a four to six-fold increase in beam intensity compared to NA62 and includes cutting-edge detector technologies as described in this 
     section. The beam intensity requirements for HIKE are described in Table~\ref{tab:hikePhases}. To accommodate the higher intensities, upgrades are needed to the infrastructure that provide the beam to ECN3. A number of working groups such as the ECN3 beam delivery group within the Physics Beyond Colliders community at CERN \cite{Gatignon:2650989}, have already been conducting efforts to consolidate the work required to upgrade the infrastructure.
     
     Three phases are foreseen within the HIKE program. The first being a continuation of NA62 charged kaon physics with the high-intensity beam upgrades. This includes detector upgrades to accommodate for the rate increase and the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to a 5\,\% precision. The second phase involves neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$ with $l = e,\mu$. 
@@ -114,7 +114,7 @@
         \label{tab:config_variables}
     \end{table}
 
-    When constructed inside the simulation, each detector is contained in a separate outer volume called the '``Responsibility Region'' (RR). 
+    When constructed inside the simulation, each detector is contained in a separate outer volume called the ``Responsibility Region'' (RR). 
     The creation of the RR is a simple task for most detectors apart from the STRAW and LAV which are made up of multiple stations that are not continuous, resulting in multiple responsibility regions for each station.
 
     \subsection{Testing: Geometry and Magnetic Fields}
@@ -425,7 +425,7 @@
     %%% Files /afs/cern.ch/work/j/jsanders/Software/na62fw/NA62Analysis/PathToUser
     %%% N Hit in Ring candidate
     The reconstruction for the RICH was modified to accept the new configurations of the \glspl{SiPM} and made flexible to allow for new designs in the future.
-    In the reconstruction, the photo-electrons are clustered into ring candidates. The distribution of the number number of reconstructed photo-electrons is shown in Figure~\ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons is due to the enhanced quantum efficiency of the SiPMs.
+    In the reconstruction, the photo-electrons are clustered into ring candidates. The distribution of the number of reconstructed photo-electrons is shown in Figure~\ref{fig:NA62RICHNHITs}, with the SiPM sensors resulting in a two-times increase in the number of hits per ring candidate. The improved number of reconstructed photo-electrons is due to the enhanced quantum efficiency of the SiPMs.
     There are minimal differences between the three sensor sizes shown in Figure~\ref{fig:NA62RICHNHITs}\,(b-d), with the 3\,mm sensors having a higher number of hits per ring candidate when compared to the 9\,mm sensors. 
 
     \begin{figure}[htbp]
@@ -460,7 +460,7 @@
 
     The distribution of reconstructed ring candidate radius is shown in Figure~\ref{fig:NARICHRINGRAD}, with the NA62 PMT array producing a resolution of 1.68\,mm compared to 0.72\,mm for the HIKE array with 9\,mm SiPMs. With
     the smallest sensor size at 3\,mm improving further to 0.41\,mm. However, with the small sensor sizes the ring radius resolution is no longer dominated by the sensor size, but due to errors produced by small misalignments in the mirror and the chromatic dispersion in the radiator gas. 
-    the expected resolution of the ring radius for 3\,mm sensor is calculated from the single hit position resolution
+    The expected resolution of the ring radius for 3\,mm sensor is calculated from the single hit position resolution
     \begin{equation}
         \sigma_{t_{hit}} = \frac{3}{\sqrt{12}} = \SI{0.87}{\milli\metre},
     \end{equation}
