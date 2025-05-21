@@ -126,11 +126,11 @@
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/e20_efficiency.png} }}%
         \subfloat{{\includegraphics[width=0.5\textwidth]{plots/lkr_emul_sel.png} }}%
         \linespread{1.0}
-        \caption{Left: The efficiency of the E20 trigger condition for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy before the selection. Right: Total LKr energy deposited for selected \gls{kpid} events from \gls{MC} and 2022 data. The E20 efficiency is calculated using the number of events passing the E20 trigger emulator divided by the total number of \gls{kpid} decays in the \gls{MC}.}
+        \caption{Left: The efficiency of the E20 trigger condition for the \gls{kpid} \gls{MC} sample as a function of the total LKr energy before the selection. Right: Total LKr energy deposited for all (blue) \gls{kpid} \gls{MC} events, selected \gls{kpid} events from \gls{MC} (orange) and 2022 data (green). The E20 efficiency is calculated using the number of events passing the E20 trigger emulator divided by the total number of \gls{kpid} decays in the \gls{MC}.}
         \label{fig:e20effciency}
     \end{figure}
 
-    The acceptance of the selection for the \gls{kpid} \gls{MC} sample as a function of $M_{ee}$ is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure~\ref{fig:accept}.
+    The acceptance of the selection for the \gls{kpid} \gls{MC} sample as a function of $M_{ee}$ is compared against the acceptance of the NA48/2 analysis \cite{2015178} in Figure~\ref{fig:accept}. The acceptance is calculated from the number of events passing the selection divided by the number of events in the \gls{kpid} \gls{MC} sample which decay within $\SI{105}{\meter} < Z_{\text{vtx}} < \SI{180}{\meter}$.
    % Introducing the kinematic selection compared to the calorimeter PID improved the overall acceptance. 
     The difference between the selections used for the NA62 and the NA48/2 study is the \gls{PID}. The study at NA48/2 uses calorimetric \gls{PID} where the \gls{LKr} is utilised to reconstruct the energies of the pion, electron and positron. The reconstructed energy to momentum ratio is used to distinguish 
     between the pion and positron. In the NA62 study, \gls{PID} uses the track momentum measurements to reconstruct the invariant masses, which are compared against the nominal PDG masses \cite{Olive:2014pdg}. This approach is driven by the difference in experimental setup between NA48/2 and NA62. The NA62 setup is longer, as it requires enhanced \gls{PID} satisfied by the \gls{RICH}, and improved momentum measurements provided by the longer spectrometer.
@@ -438,7 +438,7 @@
         \includegraphics[width=0.7\textwidth]{plots/searchwindow_val.png}
         \linespread{1.0}
         \caption{Number of observed data events ($N_{obs}$), expected number of events from \gls{MC} ($N_{exp}$), the respective errors ($\delta N_{obs}$ and $\delta N_{exp}$) 
-        and the resultant upper limit of the number of dark photon candidates to a 90\% confidence level.}
+        and the resultant upper limit of the number of dark photon candidates to a 90\% confidence level for the \gls{MC} background estimation method.}
         \label{fig:searchwindow_vals}
     \end{figure}
     
@@ -558,7 +558,7 @@
         \includegraphics[width=0.7\textwidth]{plots/datadrive_plot_24.png}
         \linespread{1.0}
         \caption{Numbers of observed data events ($N_{obs}$), expected numbers of background events ($N_{exp}$), their respective errors ($\delta N_{obs}$ and $\delta N_{exp}$) 
-        and the resultant \gls{UL} of the number of dark photon candidates at a 90\% \gls{CL}.}
+        and the resultant \gls{UL} of the number of dark photon candidates at a 90\% \gls{CL} for the data-driven background method.}
         \label{fig:datadrive_plot}
     \end{figure}
 
@@ -588,7 +588,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/branchingFrac_data_24.png}
         \linespread{1.0}
-        \caption{Upper limit of the \mathcal{B}($\pi^0 \to \gamma A'$) at a 90\,\% \gls{CL} for each dark photon mass hypothesis.}
+        \caption{Upper limit of the \mathcal{B}($\pi^0 \to \gamma A'$) at a 90\,\% \gls{CL} for each dark photon mass hypothesis using the data-driven background estimation. The result from NA48/2 is shown for comparison \cite{2015178}..}
         \label{fig:branchinFrac_data}
     \end{figure}
     %\begin{figure}[t]
@@ -602,7 +602,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/eplisonsq_data_24.png}
         \linespread{1.0}
-        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each dark photon mass hypothesis, with the result from NA48/2 for comparison \cite{2015178}. Lines showing the $\lambda = \SI{1}{\meter}$ for the maximum and half of the maximum \gls{DP} energy.}
+        \caption{Upper limit mixing parameter $\epsilon^2$ at a 90\,\% \gls{CL} for each dark photon mass hypothesis for the data-driven background estimation method, with the result from NA48/2 for comparison \cite{2015178}. Lines showing the $\lambda = \SI{1}{\meter}$ for the maximum and half of the maximum \gls{DP} energy.}
         \label{fig:prompt}
     \end{figure}
 
@@ -635,7 +635,7 @@
     $\epsilon^2 M_{A'}^2 = 4.59 \times 10^{-6}$\,\si{\mega\electronvolt^2\per\clight^4}  %$\epsilon^2 m_{A'}^2 = 6.80 \times 10^{-6} MeV^2 /c^4$ 
     corresponding to $\lambda^{max}_{A'} = \SI{1.19}{\meter}$. %$0.81\m$.
     Due to the design of the three-track trigger and offline reconstruction, the resolution of a decay vertex position is about 1\,m. As the distance between the production vertex and the $A'$ decay point increases, the probability of reconstructing a single three-track vertex decreases. This results in the event being removed due to the requirement of a single three-track vertex during the selection, reducing the acceptance and reducing the sensitivity of the analysis.
-    of the \gls{UL} of the mixing parameter fall just below the line for the maximum energy, suggesting that the prompt assumption is still valid except in the most extreme cases.
+    For a \gls{DP} with the maximum energy, a dashed line corresponding to a decay length of $\lambda = \SI{1}{\meter}$ is shown in Figure~\ref{fig:prompt}. The fluctuations of the \gls{UL} of the mixing parameter are just below the line for the maximum energy, suggesting that the prompt assumption is still valid except in the most extreme cases.
     %Suggesting that the current status of the analysis is consistent with the prompt decay mode. From the max energy of the DP, the point at which the mixing parameter for each mass bin would correspond to a 
     %displaced decay is shown in Figure~\ref{fig:prompt}.
 
