@@ -7,14 +7,14 @@
     The \gls{SM} of particle physics is a \gls{QFT} that describes the fundamental matter and three of the four forces in the universe. The matter content of the SM comprises 12 elementary fermions (and their anti-particles), 
     five vector bosons that mediate the three fundamental forces, and a scalar boson responsible for particle masses (Figure~\ref{fig:SM}). 
     There are six quark flavours: up, down, charm, strange, top and bottom. Depending on their charge, they are separated into three generations or two types. There are also three lepton flavours, each with a corresponding neutrino.
-    It is important to note that the SM is not a complete theory. An example of this is the gravitational force
-    , which is not included in the \gls{SM}. However, at the small scales of particle physics, this force is neglected due to its weaker coupling compared to the other three forces (strong, electromagnetic and weak).
+    It is important to note that the SM is not a complete theory. An example of this is the gravitational force, which is not included in the \gls{SM}. However, at the small scales of particle physics, this force is neglected due to its weaker coupling compared to the other three forces (strong, electromagnetic and weak).
     \begin{figure}[t]
         \centering
         \includegraphics[width=0.5\textwidth]{imgs/SM.pdf}
         \caption{The Standard Model of particle physics with the 12 fermions shown in purple and green, the five vector bosons shown in red and the Higgs scalar boson shown in yellow.}%
         \label{fig:SM}%
     \end{figure}
+    
     The \gls{SM} has a total non-Abelian gauge symmetry group of SU(3)×SU(2)×U(1). 
     The SU(3) group governs the strong interactions between quarks in the form of \gls{QCD}. The strong force is mediated by the gluon.
     The SU(2)×U(1) groups describe the electroweak interactions \cite{GLASHOW1961579}, which are mediated by the photon and $W^{\pm}$, $Z^{0}$ bosons. The SU(3) is an exact gauge symmetry while the electroweak symmetry is spontaneously broken by the Higgs field \cite{Higgs:1964pj}, resulting 
@@ -37,7 +37,7 @@
     %Utilising the elements of the \gls{CKM} matrix, it is possible to calculate the probability that a quark type i will transition into type j with $|V_{ij}|^2$.
 
     As a unitary $3\times3$ matrix, the \gls{CKM} matrix can be described by four parameters: three mixing angles ($\theta_{12}$, $\theta_{13}$, $\theta_{23}$) which dictate the couplings between each generation of quarks and one phase ($\delta$) which introduces \gls{CP} violation \cite{10.1143/PTP.49.652}. 
-    A number of different parametrisations of the matrix are possible, but the 3-angle and one-phase formalism is the standard choice \cite{PhysRevLett.53.1802}, 
+    A number of different parametrisations of the matrix are possible, but the three-angle and one-phase formalism is the standard choice \cite{PhysRevLett.53.1802}, 
     \begin{equation}\label{eq:angles}
     V_{\text{CKM}} =
     \begin{bmatrix}
@@ -52,7 +52,7 @@
     \begin{equation}
         s_{12} \ll s_{23} \ll s_{13}.
     \end{equation}
-    Based on this hierarchy, the Wolfenstein parametrisation \cite{PhysRevLett.51.1945} describes the \gls{CKM} using the parameters
+    Based on this hierarchy, the Wolfenstein parametrisation \cite{PhysRevLett.51.1945} describes the \gls{CKM} using the parameters:
     \begin{equation}
         \begin{split}
             s_{12} &= \lambda, \\
@@ -70,6 +70,7 @@
         \end{bmatrix}
         + O(\lambda^4).
     \end{equation}
+    
     The \gls{CKM} matrix is expanded in terms of $\lambda$ and provides a hierarchical structure which reflects the pattern where transitions between quarks of the same/adjacent generations are stronger compared to distant ones.
     Expanding the \gls{CKM} matrix in powers up to $O(\lambda^3)$ results in the loss of unitary. However, unitary can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of \ref{eq:wolf},
     \begin{equation}
@@ -146,7 +147,7 @@
     flavour-changing charged current transitions are suppressed between one generation and doubly suppressed for transitions between two generations. This suppression between two generations produces rare decays, such as $K^+ \to \pi^+ \nu \bar{\nu}$ described in Section \ref{sec:pinn_theory}. 
     \section{Kaon Physics}
     The first possible observation of a meson, a particle composed of a quark-antiquark pair, was made in 1943 by Leprince-Ringuet and L'heritier \cite{Cahn_Goldhaber_2009, 10.1063/PT.3.1989} and predated the discovery of the pion in 1947 \cite{Lattes1947}. Utilising a cloud chamber to measure cosmic rays, they found the first evidence of a particle with a mass of 
-    990 times the mass of the electron \cite{Navas:2024}. However, given the uncertainty of the observation it was possible that the upper limit on the measured mass could reach the proton mass, so it was not credited for the discovery. In 1947, while similarly studying cosmic rays with cloud chambers, G. D. Rochester and C. C. Butler published a result which included
+    990 times the mass of the electron \cite{Navas:2024}. However, given the uncertainty of the observation it was possible that the upper limit on the measured mass could reach the proton mass, therefore it was not credited for the discovery. In 1947, while similarly studying cosmic rays with cloud chambers, G. D. Rochester and C. C. Butler published a result which included
     two pictures showing forked tracks \cite{Rochester1947}. One of the tracks showed the decay of a neutral particle into two charged daughter particles, which turned out to be a decay of the neutral kaon to two charged pions. The other track showed the decay of a charged particle into charged and neutral daughter particles.
     This result was later confirmed in 1950 by a group in Cal-tech who observed multiple instances of these decays \cite{Seriff:1950ajp}. Between these publications, a group in Bristol used emulsion chambers to observe the decay of a charged particle into three charged particles \cite{Brown1949}, known then as the tau decay. 
     This resulted in what was known as the tau-theta problem, where seemingly the same particle was decaying into final states with different parities: Theta to two pions (+1) and Tau to three pions (-1). This eventually led to the discovery that parity is not conserved in weak interactions \cite{PhysRev.104.254}. 
@@ -188,7 +189,7 @@
 
     Kaon physics has continued to be investigated into the 21st century, with the NA62 collaboration at CERN conducting the study of $K^+$ decays. 
     The main NA62 physics goal is to measure the branching fraction of the ultra-rare $K^+ \to \pi^+ \nu \bar{\nu}$, described in more detail in Section \ref{sec:pinn_theory}.
-    The $K^+$ consists of an up quark and an anti-strange quark, the other kaon types described in Table \ref{tab:kaons_types}. 
+    The $K^+$ consists of an up quark and an anti-strange quark, with the other kaon types described in Table \ref{tab:kaons_types}. 
     The six most common decay modes of the positively charged kaon, along with their shorthand notation, are shown in Table \ref{tab:kaon_decays}.
 
     \begin{table}[t]
@@ -342,7 +343,7 @@
         X(x_t) = X^{(0)} + \frac{\alpha_s}{4\pi}X_t^{(1)} + \frac{\alpha}{4\pi}X_t^{(EW)} = 1.481 \pm 0.005 \pm 0.008
     \end{equation}
     where $X^{(0)}$ is the leading order contribution, $X_t^{(1)}$ is the next-to-leading order (NLO) \gls{QCD} correction and $X_t^{(EW)}$ is the electroweak correction.
-    The $P_c(X)$ term describes the contribution from the charm quark is defined as \cite{Buras_2015},
+    The $P_c(X)$ term describes the contribution from the charm quark which is defined as \cite{Buras_2015},
     \begin{equation}
         P_c(X) = P_c^{SD}(X) + \delta P_{c,u} = 0.404 \pm 0.024
     \end{equation}
@@ -455,24 +456,25 @@
     \section{Dark Photon} \label{sec:DarkP_th}
     As mentioned above, the \gls{SM} is not a complete theory. A significant component of the universe remains unexplained. For instance, the observed rise in the cosmic-ray positron fraction with energy, along with the anomaly in the muon's magnetic moment $(g-2)$ \cite{Muong-2:2023cdq}, suggest the possible existence of hidden sectors. 
     The hidden sectors is a collection of theories that propose the existence of new particles and forces that are not part of the \gls{SM}.
-    A possible extension of the \gls{SM} foresees a new $U(1)$ gauge symmetry with an associated boson, the \gls{DP}, which kinematically mixes with the SM hypercharge $U(1)_Y$ \cite{Fabbrichesi:2020wbt}. There are three separate benchmark cases of the \gls{DP} specified by the Physics Beyond Colliders group for future study \cite{Beacham_2020}: 
+    A possible extension of the \gls{SM} foresees a new $U(1)$ gauge symmetry with an associated boson, the \gls{DP}, which kinematically mixes with the SM hypercharge $U(1)_Y$ \cite{Fabbrichesi:2020wbt}. There are two separate benchmark cases of the \gls{DP} specified by the Physics Beyond Colliders group for future study \cite{Beacham_2020}: 
     \begin{itemize}
         \item BC1 - The massive DP decays into only SM particles.
         \item BC2 - The DP is massive and decays mostly into dark-sector particles.
     \end{itemize}
-    For the BC1 case, the hypothetical \gls{DP} (denoted $A'$) with a \si{\giga\electronvolt} scale mass could resolve some of the discrepancies arising from the observations of the $(g-2)$ muon gyromagnetic ratio measurement and the rise of cosmic-ray positron fraction with energy. The addition of the \gls{DP} introduces two unknown parameters: the mass $M_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the \gls{DP} interaction with SM particles. A \gls{DP} with a mass less than a neutral pion, 
+    For the BC1 case, the hypothetical \gls{DP} (denoted $A'$) with a \si{\giga\electronvolt} scale mass could resolve some of the discrepancies arising from the observations of the $(g-2)$ muon gyromagnetic ratio measurement and the rise of cosmic-ray positron fraction with energy. The addition of the \gls{DP} introduces two unknown parameters: the mass $M_{A'}$ and a kinetic mixing parameter $\epsilon$ denoting the strength of the \gls{DP} interaction with SM particles. A \gls{DP} with a mass that is less than a neutral pion
     can be produced in the $\pi^0 \to \gamma A'$ decay. The branching fraction for the $\pi^0$ decay is \cite{PhysRevD.80.095024}
     \begin{equation}\label{eq:DP_branch}
         \mathcal{B}(\pi^0 \to \gamma A') = 2\epsilon^2 \left(1-\frac{M_{A'}^2}{M_{\pi^0}^2}\right)^3 \mathcal{B}(\pi^0 \to \gamma \gamma).
     \end{equation}
-    Within the DP mass range for the decay, the only kinematically allowed decay involving the first power of the coupling constant into SM particles is $A' \to e^+ e^-$. 
+    
+    Within the mass range considered for the \gls{DP}, the only decay into \gls{SM} particles that is both kinematically allowed and occurs at leading order in the coupling constant is $A' \to e^+ e^-$. 
     The $A'$ would decay via $A' \to \gamma \gamma \gamma$ and $A' \to \nu \bar{\nu}$ proceeding through higher-order processes, which are highly suppressed for low $\epsilon$ values. Hence, it is safe to assume that \mathcal{B}($A' \to e^+e^- = 1$). This assumption allows the expected decay width to be described as \cite{PhysRevD.80.095024}
     \begin{equation}
         \Gamma_{A'} \approx \Gamma (A' \to e^+e^-) = \frac{1}{3} \alpha \epsilon^2 M_{A'} \sqrt{1 - \frac{4M_e^2}{M_{A'^2}}} \left( 1 + \frac{4M_e^2}{M_{A'^2}} \right),
     \end{equation}
     where $\alpha$ is the fine structure constant. For the \gls{DP} mass range $2M_e < M_{A'} < M_{\pi^0}$, the life time of the \gls{DP} is calculated, 
     \begin{equation}\label{eq:DP_lifetime}
-        c \tau_{A'} = \frac{\hbar c}{\Gamma_{A'}} \approx \SI{0.8}{\micro\meter} \times \frac{10^{-6}}{\epsilon^2} \frac{\SI{100}{\mega\electronvolt\per\clight}}{M_{A'}}
+        c \tau_{A'} = \frac{\hbar c}{\Gamma_{A'}} \approx \SI{0.8}{\micro\meter} \times \left(\frac{10^{-6}}{\epsilon^2}\right) \left(\frac{\SI{100}{\mega\electronvolt\per\clight}}{M_{A'}}\right)
     \end{equation}
     Through experiment it is possible to set limits on the branching ratio of the \gls{DP} production, with the final goal of setting limits on the mixing parameter. Within the \gls{DP} mass range $2M_e < M_{A'} < M_{\pi^0}$, the leading result for the upper limit of $\epsilon^2$ is from the NA48/2 experiment \cite{2015178}, shown in Figure~\ref{fig:na48_dp_lim}.
     The study described in Section \ref{sec:darkP} sets out to improve the limits on the \gls{DP} mixing parameter set by NA48/2 with data collected from the NA62 experiment.
