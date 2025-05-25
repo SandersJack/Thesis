@@ -8,7 +8,7 @@
     \glsreset{cn}
 
     As described in Section~\ref{sec:na62}, until 2022 NA62, has utilised a \gls{cw} filled with \gls{n2} at a nominal gas pressure of 1.71\,bar (absolute pressure) to identify kaons from the unseparated hadron beam.
-    For the searches for ultra-rare decays it is essential to reduce backgrounds from dominant kaon decays and from upstream sources produced by scattered beam particles. Minimising the amount of material in the path of the beam is essential to reduce the upstream backgrounds. 
+    For the searches for ultra-rare decays it is essential to reduce backgrounds from dominant kaon decays and from upstream sources produced by scattered beam particles. Minimising the amount of material in the path of the beam is required to reduce the upstream backgrounds. 
     It is possible to design a new \gls{CEDAR} with hydrogen as the radiator gas to reduce the amount of multiple scattering of beam particles within the vessel. The design, testing and commissioning of this new detector is detailed in this chapter.
 
     
@@ -22,7 +22,7 @@
         \centering
         \begin{tabular}{lcc}
         \toprule
-        \textbf{Parameter} & \textbf{\gls{n2}} & \textbf{\gls{h2}} \\
+        \textbf{Parameter} & \textbf{$\text{N}_2$} & \textbf{$\text{H}_2$} \\
         \midrule
         Gas pressure (absolute) & 1.71\,bar & 3.8\,bar \\
         Total material ($X_0$) & $39 \times 10^{-3}$ & $7.3 \times 10^{-3}$ \\
@@ -34,6 +34,7 @@
         \caption{Comparison of material budget and beam divergence for \gls{CEDAR} filled with \gls{n2} and \gls{h2}.}
         \label{tab:cedar_material_comparison}
     \end{table}
+    
     The \gls{cw} with \gls{n2}, contributes the most significant amount of material in the path of the beam, corresponding to $39 \times 10^{-3}\,X_0$, 
     where $X_0$ is one radiation length. The \gls{CEDAR} vessel contributes $3.9 \times 10^{-3}\,X_0$ and the \gls{n2} gas $35 \times 10^{-3}\,X_0$.
     The material from the \gls{cw} with \gls{n2} results in the multiple scattering of beam particles, introducing an angular divergence in the beam of \SI{32}{\micro\radian}. 
@@ -69,7 +70,7 @@
     \begin{equation}\label{eq:Cherenkov2}
     \cos{\theta_c} = \frac{1}{\beta n}
     \end{equation}
-    with $n$ being the refractive index of the radiator gas, $\theta_c$ is the semi-aperture angle and $\beta$ the beam particle velocity defined as $\beta = (1 + \frac{M}{p})^{-1/2}$ where $m$ is the particles mass and $p$ is the momentum. A differential counter is designed to focus the Cherenkov light to a ring image in order to distinguish particles of different masses. Particles of different masses 
+    with $n$ being the refractive index of the radiator gas, $\theta_c$ is the semi-aperture angle and $\beta$ the beam particle velocity defined as $\beta = \frac{p}{\sqrt{p^2 + M^2}}$ where $M$ is the particles mass and $p$ is the momentum. A differential counter is designed to focus the Cherenkov light to a ring image in order to distinguish particles of different masses. Particles of different masses 
     produce ring images of different radii. 
     %The momentum ($p$) is constant for all beam particles in NA62, and for a constant refractive index, different particles produce slightly different Cherenkov angles due to their differing mass.
     %\newline\indent The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis, passing through the radiator gas. When the beam passes through the vessel, Cherenkov
@@ -82,11 +83,11 @@
     The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}. This is a lens comprising two spherical surfaces, with the downstream surface cemented onto a concave mirror having an identical radius of curvature.
     The radius at which the light is focused at the focal point is defined as, 
     \begin{equation}
-        R_{focal} = f_m \theta_c
+        R_{focal} = f \theta_c
     \end{equation}
-    where $f_m$ is the focal length for the Mangin mirror. The focal length of a Mangin mirror with two spherical surfaces is defined as, 
+    where $f_m$ is the focal length for the entire system. The focal length of a Mangin mirror with two spherical surfaces is defined as, 
     \begin{equation} 
-        \frac{1}{f_m} = \frac{2(n_m - 1)}{r_1} + \frac{2}{r_1}
+        \frac{1}{f_m} = \frac{2n_m}{r_2} - \frac{2(n_m - 1)}{r_1} 
     \end{equation}
     where $n_m$ is the refractive index of the Mangin mirror, $r_1$ and $r_2$ are the radii of curvature of the refracting and reflecting surfaces. 
     %A mirror comprising two spherical surfaces with the downstream lens cemented onto a concave mirror. 
@@ -97,14 +98,14 @@
     \begin{equation}
         \frac{1}{f_{cc}} = \frac{(n_{cc}-1)}{r_{cc}}
     \end{equation}
-    where $n_{cc}$ is the refractive index of the Chromatic Corrector and $r_{cc}$ is the radius of curvature of the convex side. Combined with the Mangin mirror the final focal distance is found as
+    where $n_{cc}$ is the refractive index of the Chromatic Corrector and $r_{cc}$ is the radius of curvature of the convex side. Combined with the Mangin mirror the final focal distance for the system is calculated as
     \begin{equation}
-        \frac{1}{f_{Total}} = \frac{1}{f_m} + \frac{1}{f_{cc}} - \frac{d}{f_{m}f_{cc}}
+        \frac{1}{f} = \frac{1}{f_m} + \frac{1}{f_{cc}} - \frac{d}{f_{m}f_{cc}}
     \end{equation}
     where $d$ is the distance between the Mangin mirror and the corrector lens. Both the Mangin mirror and the Chromatic corrector have a hole in the centre to allow for the beam to pass through without impacting the optics. The optical parameters for the \gls{cw} are found in Table \ref{table:CedarParameterValues}.
     
     \newline\indent The diaphragm is shown in Figure~\ref{fig:cedarpics}, as a disk with eight separate apertures and is located at the focal distance of the Mangin mirror. Each aperture has an inner and outer element which allows the aperture to open to  
-    20\,mm and close to 0\,mm symmetrically about a radius of 100\,mm. These elements can be seen in Figure~\ref{fig:cedarpics} (right), where the aperture was set at a small value, used only to select a single Cherenkov ring of radius 100\,mm.  
+    20\,mm and close to 0\,mm symmetrically about a radius of 100\,mm. These elements can be seen in Figure~\ref{fig:cedarpics} (right), where the aperture is set at a small value, used only to select a single Cherenkov ring of radius 100\,mm.  
     The mechanism is operated by a stepper motor connected to the shaft shown in Figure~\ref{fig:cedarpics} (left). Turning the shaft clockwise opens the diaphragm, and counter-clockwise closes it. The 
     shaft is connected to a potentiometer that measures the rotation, which is used to convert to an aperture in millimetres after calibration. A pair of end switches are in place at the extreme ends of the rotation to alert the user if the aperture 
     is fully open or fully closed, which is essential to avoid any damage to the mechanical system.
@@ -137,7 +138,7 @@
         \caption{Image showing the exit windows and nose at the upstream end of the \gls{cw}.}
         \label{fig:exit-windows}
     \end{figure}
-    In the original \gls{CEDAR} design \cite{Bovet:1982xf}, light exiting the \gls{CEDAR} through the exit windows was detected by eight ET-9820QB \glspl{PMT}, with one attached to each window. 
+    In the original \gls{CEDAR} design \cite{Bovet:1982xf}, light exiting the \gls{CEDAR} through the exit windows is detected by eight ET-9820QB \glspl{PMT}, with one attached to each window. 
     A particle is identified when there is a coincidence of signals in at least six \glspl{PMT}.
     However, as original \glspl{CEDAR} are designed for beam fluxes of kHz, they would not be applicable for NA62 which operates with beam fluxes of 10s of MHz. This implies strict timing requirements on the selection of kaons of less than 100\,ps. % a kaon identification efficiency greater than 95\,\% and a pion miss-identification probability of less than $10^{-4}$. 
     To achieve these strict requirements, a photon detection system called the KTAG was purpose-built \cite{GOUDZOVSKI201586} and attached to the 
@@ -214,11 +215,13 @@
 
     The full GEANT4 simulation at a pressure of 3.8\,bar and a diaphragm aperture of 2\,mm with the optimised optical parameters results in an expected kaon identification probability (at least five sectors) of 99.5\,\% and a pion misidentification probability of less than $10^{-4}$, which satisfy, and exceed
     the requirements set for operation at NA62. 
-    \begin{table}[tp]
+    \begin{table}[htbp]
         \linespread{1.0}
         \centering
+        \scriptsize
+        \resizebox{\textwidth}{!}{
         \begin{tabular}{@{}llrr@{}}
-        \textbf{\gls{CEDAR} type} &   & \textbf{\gls{cw}} & \textbf{\gls{ch}} \\ 
+        \textbf{\gls{CEDAR} Type} &   & \textbf{\gls{cw}} & \textbf{\gls{ch}} \\ 
         \bottomrule
         
         Nominal gas type &   & \gls{n2} & \gls{h2} \\
@@ -274,6 +277,7 @@
         & Diameter                      & 50  & 50 \\
         & Radial distance to mirror centre & 106 & 106 \\ 
         \end{tabular}
+        }
         \small\caption{Optical and mechanical parameters of \gls{cw} and \gls{ch}. All values are in millimetres unless otherwise stated. 
         Positions along the beam axis are quoted with respect to the upstream end of the \gls{CEDAR}. Double horizontal lines separate optical elements inside and outside the \gls{CEDAR} vessel \cite{NA62:2023mud}.}
         \label{table:CedarParameterValues}
@@ -402,7 +406,7 @@
     To determine the kaon operating pressure, a pressure scan is performed. Before the scan, the pressure of the \gls{ch} is set at the highest pressure (4.4\,bar), where there are no selected beam particles. A selected beam particle is defined when there is signal in at least 6 \glspl{PMT} in coincidence.
     The scan consists of reducing the pressure in small steps and collecting data at each step. This is completed at a diaphragm width of 2.3\,mm, larger than the standard operating setting used with the \gls{cw} at NA62. The aperture is chosen to maximise the light yield of the detector. This is to 
     compare the computed beam composition to the expected for the H6 beamline. The results of the pressure scan are found in Figure~\ref{fig:1presscan_testbeam}, with each beam component visible in the plots. The protons produce a maximum light yield at 4.26\,bar with 0.232 coincidences per trigger, with the build-up in coincidences caused by the gradual entrance of 
-    the Cherenkov ring into the aperture of the diaphragm. The kaon has a maximum light yield at 3.844, with 0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69\,bar, with 0.721 coincidences per trigger. The fraction of triggers is within 1-2\,\% of the expected beam composition, resulting in the selection of a particle in 99.1\,\% of the triggers.
+    the Cherenkov ring into the aperture of the diaphragm. The kaon has a maximum light yield at 3.844, with 0.037 coincidences per trigger, and the pion has a maximum light yield at 3.69\,bar, with 0.721 coincidences per trigger. The fraction of triggers is within 1--2\,\% of the expected beam composition, resulting in the selection of a particle in 99.1\,\% of the triggers.
     It is expected that not all light from the proton ring would pass through the 2.3\,mm diaphragm aperture due to its large Gaussian width and distorted shape, shown in Figure~\ref{fig:cedarHsim}.
     \begin{figure}[t]
         \centering
@@ -466,15 +470,30 @@
         \resizebox{\textwidth}{!}{%
             \begin{tabular}{|c|cll|lll|lll|}
             \hline
-            \multicolumn{1}{|l|}{\multirow{2}{*}{Diaphragm Aperture [mm]}} & \multicolumn{3}{l|}{Proton} & \multicolumn{3}{l|}{Kaon} & \multicolumn{3}{l|}{Pion} \\ \cline{2-10} 
-            \multicolumn{1}{|l|}{} & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE & \multicolumn{1}{l|}{$\eta_{6}/\eta_{8}$} & \multicolumn{1}{l|}{$\eta_{7}/\eta_{8}$} & Avg PE \\ \hline
+            \multicolumn{1}{|l|}{\multirow{2}{*}{\textbf{Diaphragm Aperture [mm]}}} & 
+            \multicolumn{3}{l|}{\textbf{Proton}} & 
+            \multicolumn{3}{l|}{\textbf{Kaon}} & 
+            \multicolumn{3}{l|}{\textbf{Pion}} \\ \cline{2-10} 
+            
+            \multicolumn{1}{|l|}{} & 
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{6}/\eta_{8}$}} & 
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{7}/\eta_{8}$}} & 
+            \textbf{Avg PE} & 
+            
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{6}/\eta_{8}$}} & 
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{7}/\eta_{8}$}} & 
+            \textbf{Avg PE} & 
+            
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{6}/\eta_{8}$}} & 
+            \multicolumn{1}{l|}{\textbf{\boldmath$\eta_{7}/\eta_{8}$}} & 
+            \textbf{Avg PE} \\ \hline
             2.0 & \multicolumn{1}{c|}{0.825} & \multicolumn{1}{l|}{0.510} & 17.84 & \multicolumn{1}{l|}{0.869} & \multicolumn{1}{l|}{0.568} & 19.46 & \multicolumn{1}{l|}{0.853} & \multicolumn{1}{l|}{0.544} & 18.83 \\ \hline
             1.7 & \multicolumn{1}{c|}{0.790} & \multicolumn{1}{l|}{0.471} & 16.70 & \multicolumn{1}{l|}{0.859} & \multicolumn{1}{l|}{0.558} & 19.13 & \multicolumn{1}{l|}{0.843} & \multicolumn{1}{l|}{0.534} & 18.52 \\ \hline
             1.2 & \multicolumn{1}{c|}{0.695} & \multicolumn{1}{l|}{0.388} & 14.37 & \multicolumn{1}{l|}{0.827} & \multicolumn{1}{l|}{0.517} & 18.00 & \multicolumn{1}{l|}{0.813} & \multicolumn{1}{l|}{0.500} & 17.54 \\ \hline
             1.0 & \multicolumn{1}{c|}{0.581} & \multicolumn{1}{l|}{0.385} & 13.12 & \multicolumn{1}{l|}{0.759} & \multicolumn{1}{l|}{0.448} & 16.03 & \multicolumn{1}{l|}{0.757} & \multicolumn{1}{l|}{0.446} & 16.00 \\ \hline
             \end{tabular}%
         }
-        \caption{Table containing the ratios of $\eta_{6}/\eta_{8}$ and $\eta_{7}/\eta_{8}$, as well as the max photo-electrons per beam particle at the peak values from the pressure scans at different diaphragm apertures.}
+        \caption{Table containing the ratios of $\eta_{6}/\eta_{8}$ and $\eta_{7}/\eta_{8}$, as well as the average number photo-electrons per beam particle at the peak values from the pressure scans at different diaphragm apertures.}
         \label{tab:testbeam_val}
     \end{table}
     %% Diaphragm scans
@@ -564,6 +583,7 @@
         \caption{\gls{ch} installed in the NA62 beamline (left) and the KTAG photon-detection system reassembled at the upstream end of the vessel (right).}%
         \label{fig:cedarpics_ns62}%
     \end{figure}
+    
     Dedicated flammable gas detectors are installed on the top of the metal pavilions at both upstream and downstream ends of the \gls{ch} vessel, shown in Figure~\ref{fig:cedarpics_ns62}. The detectors monitor the concentration of \gls{h2} levels outside the vessel 
     and result in a warning if the concentration exceeds 10\,\% of the LEL. The gas detectors are connected to the \gls{ch} \gls{DSS}. A concentration of 20\,\% of the LEL generates a level 3 alarm, which would cut the power in the area if the alarm is triggered, and the CERN fire brigade would be informed.
     The main metal pavilion covers the upstream end of the \gls{ch} vessel, the KTAG photon-detection system, and the gas distribution panel, and it is designed to guide any leaking gas to the \gls{h2} sensor. Another smaller metal pavilion is installed at the downstream end of the vessel.
@@ -612,7 +632,7 @@
         \label{fig:cedarAlignNN}%
     \end{figure}
 
-    The \gls{ch} is filled with \gls{h2} to 4.3\,bar where a small pressure scan is conducted to find the best value to collect Cherenkov light from the proton. The pressure is adjusted by $\pm\SI{0.2}{\bar}$ and the light yield is recorded. The maximum light yield was found at a pressure of 4.3\,bar.
+    The \gls{ch} is filled with \gls{h2} to 4.3\,bar where a small pressure scan is conducted to find the best value to collect Cherenkov light from the proton. The pressure is adjusted by $\pm\SI{0.2}{\bar}$ and the light yield is recorded. The maximum light yield is found at a pressure of 4.3\,bar.
 
 
     %The first alignment of \gls{ch} with \gls{h2} is conducted at 4.3\,bar, where the proton peak is found from the small pressure scan. 
@@ -656,8 +676,8 @@
     A pressure scan is completed across the pion and kaon peak with a diaphragm aperture of 1.5\,mm with the results shown in Figure~\ref{fig:cedarH_2}. The separation compared to the previous pressure scan in Figure~\ref{fig:cedarH_1} is greater, with the pion contribution to the 5-fold coincidence estimated to be consistent with a zero misidentification probability.
     However, the number of photo-electrons per kaon candidate is $21.47 \pm 0.04$, a lower light yield compared to the previous pressure scan completed with a 1.8\,mm diaphragm aperture. 
     
-    The results show that the \gls{ch} was made operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. 
-    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability was acceptable for use at NA62.
+    The results show that the \gls{ch} is operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. 
+    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability is acceptable for use at NA62.
     \begin{figure}[t]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm.png} }}%
@@ -681,6 +701,7 @@
         \item kaon Pressure: 3.88\,bar;
         \item diaphragm Aperture: 1.8\,mm.
       \end{itemize}
+    
     The commissioning procedure described above is extensive but is required due to the new detector installation in 2023. At the start of each data taking run, the commissioning has to be repeated with alignment and pressure scans to ensure the detector is still operational and to find the working point for the run. Though the detector does not move between years, the beam position can move compared to previous years. 
     Slight movements of the vessel can be possible at each \gls{h2} filling due to possible deformation of the beam-pipe when the detector is brought in and out of vacuum. Also, it is possible that the pressure set points for the beam particles could differ due to the environmental changes in ECN3.
     %%% 2024 Commissioning?????
@@ -698,10 +719,10 @@
     back of the \gls{CEDAR} are recorded and shown in Figure~\ref{fig:PoverT_23} for the 2023 run and Figure~\ref{fig:PoverT_24} for the 2024 run. The pressure is divided by temperature ($p/T$), as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio is multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
     %During data taking with \gls{cw} with \gls{n2} at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. 
     Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. The insulation does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure is allowed to vary.
-    While operating with the \gls{cw} with \gls{n2} it was possible to operate without monitoring due to minimal gas leakage from the vessel. However, for \gls{ch} it is now essential to monitor the $p/T$ due to the increased leakage of the \gls{h2} gas from the vessel.
+    While operating with the \gls{cw} with \gls{n2} it is possible to operate without monitoring due to minimal gas leakage from the vessel. However, for \gls{ch} it is now essential to monitor the $p/T$ due to the increased leakage of the \gls{h2} gas from the vessel.
     
     An example of how the $p/T$ method is utilised is in the final days of the 2023 run in Figure~\ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stay constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
-    However, as \gls{ch} is not perfectly sealed, especially for hydrogen, a small leak is expected, so there is a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate are used to decide if the \gls{CEDAR} requires extra filling during the run due to the small loss of gas, which can be seen in Figures~\ref{fig:PoverT_23} and~\ref{fig:PoverT_23} as the large 
+    However, as \gls{ch} is not perfectly sealed, especially for hydrogen, a small leak is expected, so there is a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate are used to decide if the \gls{CEDAR} requires extra filling during the run due to the small loss of gas, which can be seen in Figures~\ref{fig:PoverT_23} and~\ref{fig:PoverT_24} as the large 
     spikes in pressure at various points. 
     
 
