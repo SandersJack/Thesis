@@ -20,16 +20,14 @@
     %% Describe the previous performance of \gls{cw} with Nitrogen
     \begin{table}[t]
         \centering
-        \begin{tabular}{lcc}
-        \toprule
-        \textbf{Parameter} & \textbf{$\text{N}_2$} & \textbf{$\text{H}_2$} \\
-        \midrule
-        Gas pressure (absolute) & 1.71\,bar & 3.8\,bar \\
+        \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Parameter} & \textbf{$\text{N}_2$} & \textbf{$\text{H}_2$} \\ \hline
+        Gas pressure (absolute) & 1.71\,bar & 3.8\,bar \\ \hline
         Total material ($X_0$) & $39 \times 10^{-3}$ & $7.3 \times 10^{-3}$ \\
         \quad -- Vessel contribution ($X_0$) & $3.9 \times 10^{-3}$ & $3.9 \times 10^{-3}$ \\
-        \quad -- Gas contribution ($X_0$) & $35 \times 10^{-3}$ & $3.4 \times 10^{-3}$ \\
-        Beam angular divergence & \SI{32}{\micro\radian}  & \SI{13}{\micro\radian} \\
-        \bottomrule
+        \quad -- Gas contribution ($X_0$) & $35 \times 10^{-3}$ & $3.4 \times 10^{-3}$ \\ \hline
+        Beam angular divergence & \SI{32}{\micro\radian}  & \SI{13}{\micro\radian} \\ \hline
         \end{tabular}
         \caption{Comparison of material budget and beam divergence for \gls{CEDAR} filled with \gls{n2} and \gls{h2}.}
         \label{tab:cedar_material_comparison}
@@ -571,7 +569,7 @@
     for a \gls{h2} leak is designated as an ATEX zone 2. In the ATEX zones, there are no electrical connectors, and metal parts of the \gls{ch} are grounded to prevent any ignition sources. 
     During \gls{h2} operation, the diaphragm end switches are manually isolated through a key located by the KTAG electronics rack, as these are not ATEX rated and have the potential to create a spark. The ATEX zones extend 80\,cm from the \gls{ch} vessel and require 
     experts to have ATEX training in order to access.
-    Any confined space where the \gls{h2} can accumulate, such as the KTAG enclosure and the box containing the diaphragm potentiometer and motor is flushed with a constant supply of nitrogen to prevent the build-up of \gls{h2}. A safety interlock is installed to turn off the KTAG electronics 
+    Any confined space where the \gls{h2} can accumulate, such as the KTAG enclosure and the box containing the diaphragm potentiometer and motor is flushed with a constant supply of \gls{n2} to prevent the build-up of \gls{h2}. A safety interlock is installed to turn off the KTAG electronics 
     in the event the supply of \gls{n2} is interrupted. Another interlock is in place to turn off the KTAG electronics if there is a sizeable pressure drop in the \gls{ch} vessel. The pressure sensor precision limits the defined pressure drop for the interlock. A small leak is defined to be a measured drop in pressure of 0.02\,mbar per minute 
     measured by a rolling average across an hour. A major leak interlock, which would represent a rupture of the aluminium windows, would be triggered if the pressure drops by 0.1\ mbar per second. 
     This major leak interlock would cut power to the \gls{CEDAR} and neighbouring areas, turning off vacuum pumps and the GTK. To avoid the possibility of the window rupture, the \gls{ch} has a safety valve attached to the exhaust on top of a \gls{CEDAR} vessel, which limits the pressure in the vessel to a maximum value of 5\,bar. 
@@ -698,8 +696,8 @@
     After the successful commissioning of \gls{ch} in NA62, the operational parameters for the 2023 run are as follows:
     \begin{itemize}
         \item alignment: $X = -2.258$\,mm and $Y = -0.591$\,mm;
-        \item kaon Pressure: 3.88\,bar;
-        \item diaphragm Aperture: 1.8\,mm.
+        \item kaon pressure: 3.88\,bar;
+        \item diaphragm aperture: 1.8\,mm.
       \end{itemize}
     
     The commissioning procedure described above is extensive but is required due to the new detector installation in 2023. At the start of each data taking run, the commissioning has to be repeated with alignment and pressure scans to ensure the detector is still operational and to find the working point for the run. Though the detector does not move between years, the beam position can move compared to previous years. 
@@ -718,11 +716,11 @@
     Due to the changes to the working point pressure between the test-beam and between the 2023 and 2024 runs, a new method is developed to monitor the \gls{ch} and to take into account the environmental variables to ensure the refractive index of the radiator gas does not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
     back of the \gls{CEDAR} are recorded and shown in Figure~\ref{fig:PoverT_23} for the 2023 run and Figure~\ref{fig:PoverT_24} for the 2024 run. The pressure is divided by temperature ($p/T$), as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio is multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
     %During data taking with \gls{cw} with \gls{n2} at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. 
-    Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. The insulation does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasons. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure is allowed to vary.
+    Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. The insulation does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasonal variations. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure is allowed to vary.
     While operating with the \gls{cw} with \gls{n2} it is possible to operate without monitoring due to minimal gas leakage from the vessel. However, for \gls{ch} it is now essential to monitor the $p/T$ due to the increased leakage of the \gls{h2} gas from the vessel.
     
     An example of how the $p/T$ method is utilised is in the final days of the 2023 run in Figure~\ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stay constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
-    However, as \gls{ch} is not perfectly sealed, especially for hydrogen, a small leak is expected, so there is a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate are used to decide if the \gls{CEDAR} requires extra filling during the run due to the small loss of gas, which can be seen in Figures~\ref{fig:PoverT_23} and~\ref{fig:PoverT_24} as the large 
+    However, as \gls{ch} is not perfectly sealed, especially for \gls{h2}, a small leak is expected, so there is a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate are used to decide if the \gls{CEDAR} requires extra filling during the run due to the small loss of gas, which can be seen in Figures~\ref{fig:PoverT_23} and~\ref{fig:PoverT_24} as the large 
     spikes in pressure at various points. 
     
 

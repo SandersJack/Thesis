@@ -162,7 +162,7 @@
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.7\textwidth]{plots/chargedGeo.png}
-        \caption{Tracks for charged Geantinos with a \SI{75}{\giga\electronvolt\per\clight} momentum through the NA62 detector. The magnetic field from the MNP33 dipole magnet and the Bluetube field regions are shown.}%
+        \caption{Tracks for charged Geantinos with a \SI{75}{\giga\electronvolt\per\clight} momentum through the NA62 detector. The extent of the magnetic fields from the MNP33 dipole magnet and the Bluetube field regions are shown.}%
         \label{fig:mag_check}%
     \end{figure} 
      %However, this is not implemented into the framework as its use is not foreseen, but the machinery wisas developed and is ready for use when required. 
@@ -471,10 +471,10 @@
     \end{equation}
     where 3\,mm is the distance between the centre of the sensors and $\sqrt{12}$ is the standard deviation of the uniform distribution. The single hit time resolution is then used with the number of photo-electrons per ring candidate to estimate the time resolution of the ring candidate
     \begin{equation}
-        \sigma^{\SI{3}{\milli\metre}}_{ring} = \frac{\sigma_{t_{hit}}}{\sqrt{N_{hits}}} = \frac{0.87}{\sqrt{28.86}} = \SI{0.16}{\milli\metre},
+        \sigma^{\SI{3}{\milli\metre}}_{ring} = \frac{\sigma_{hit}}{\sqrt{N_{hits}}} = \frac{0.87}{\sqrt{28.86}} = \SI{0.16}{\milli\metre},
     \end{equation}
     where $N_{hits}$ is the average number of hits per ring candidate.
-    The ring radius resolutions are produced in ideal circumstances in the \gls{MC} where the placement of the mirrors is perfect. In reality the ring resolutions are expected to be worse. The expected resolution is calculated for the 6\,mm $\sigma^{\SI{6}{\milli\metre}}_{ring} = \SI{0.329}{\milli\metre}$ and the 9\,mm $\sigma^{\SI{9}{\milli\metre}}_{ring} = \SI{0.49}{\milli\metre}$ sensor sizes.
+    The ring radius resolutions are produced in ideal circumstances in the \gls{MC} where the placement of the mirrors is perfect. In reality the ring resolutions are expected to be worse. The expected resolution is calculated for the 6\,mm $\sigma^{\SI{6}{\milli\metre}}_{ring} = \SI{0.33}{\milli\metre}$ and the 9\,mm $\sigma^{\SI{9}{\milli\metre}}_{ring} = \SI{0.51}{\milli\metre}$ sensor sizes.
     As all the sensor sizes are dominated by the mirror misalignment and the chromatic dispersion, the ideal candidate would be the 9\,mm sensor size due to its reduced cost and complexity. The 3\,mm sensor size would be the best choice if the mirror misalignment and chromatic dispersion could be reduced, however this is not possible with the current design of the RICH detector.
     \begin{figure}[htbp]
         \centering
