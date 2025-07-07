@@ -52,7 +52,7 @@
         %\sigma = 3.984 \pm 0.007_{Stat}\, \SI{}{\mega\electronvolt}.
         \sigma = (10.30 \pm 1.43)\,\SI{}{\mega\electronvolt\per\clight\squared},
     \end{equation} 
-    which results in the cut $| M_{miss} - M_{\pi^0} | < 5/,\sigma = \SI{51.5}{\mega\electronvolt\per\clight\squared}$.
+    which results in the cut $| M_{miss} - M_{\pi^0} | < 5\,\sigma = \SI{51.5}{\mega\electronvolt\per\clight\squared}$.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/kaonpion.png}
@@ -290,7 +290,7 @@
     The \gls{UL} for the number of \gls{DP} decays ($A' \to e^+e^-$) at a 90\% \gls{CL} for each \gls{DP} mass value is calculated with $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method. This method is recommended by the Particle Data Group \cite{Cowan:2018} and employs the process set out in \cite{Junk:1999kv, Read:2000ru}.
     For setting an \gls{UL} of the signal $s$ from a counting experiment where $N$ events are observed ($N_{obs}$), and there is a known expected background $b$, it is a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
     \begin{equation}\label{eq:test_stat}
-        X = L_{s+b} / L_b = \frac{e^{-s+b}(s+b)^N}{N!} / \frac{e^{-b} b^N}{N!} = e^{-s}\left(1+\frac{s}{b}\right)^N.
+        X = L_{s+b} / L_b = \frac{e^{-(s+b)}(s+b)^N}{N!} / \frac{e^{-b} b^N}{N!} = e^{-s}\left(1+\frac{s}{b}\right)^N.
     \end{equation} 
     It is beneficial to denote the test statistic for the observed data as $X_{obs}$.
     A confidence level for the exclusion of the background hypothesis ($\text{CL}_{s+b}$) is the probability that the test statistic defined in Equation~\ref{eq:test_stat} is less than or equal to the observed test statistic, 
@@ -299,7 +299,7 @@
     \end{equation}
     To improve the computational efficiency, the test statistic defined in Equation~\ref{eq:test_stat} used for comparison is simplified to, 
     \begin{equation}
-        log(X) = N log\left(\frac{s}{b}\right).
+        log(X) = N log\left(\frac{s+b}{b}\right).
     \end{equation}
     The \gls{CL} is calculated using a \gls{MC} integration method where a large number of trials are used to calculate the probability defined in Equation~\ref{eq:prob_test}. For each trial, the value N is sampled from a Poisson distribution with a mean of $s+b$. Where $b$ is the background sampled from a normal distribution with a mean equal to the expected number of events ($N_{exp}$) and width equal to the error on the expected value ($\delta N_{exp}$).
     The test statistic is computed and compared with $X_{obs}$. The confidence level for the exclusion of the $s+b$ hypothesis ($\text{CL}_{b}$) is calculated, with N sampled from a Poisson distribution with a mean of $b$ instead of $s+b$. 
