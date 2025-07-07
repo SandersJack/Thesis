@@ -12,7 +12,7 @@
     \gls{HIKE} is a proposed project to continue kaon physics at CERN in the ECN3 experimental hall and represents a phased program after LS3. HIKE is to benefit from a four to six-fold increase in beam intensity compared to NA62 and includes cutting-edge detector technologies as described in this 
     section. The beam intensity requirements for HIKE are described in Table~\ref{tab:hikePhases}. To accommodate the higher intensities, upgrades are needed to the infrastructure that provide the beam to ECN3. A number of working groups such as the ECN3 beam delivery group within the Physics Beyond Colliders community at CERN \cite{Gatignon:2650989}, have already been conducting efforts to consolidate the work required to upgrade the infrastructure.
     
-    Three phases are foreseen within the HIKE program. The first being a continuation of NA62 charged kaon physics with the high-intensity beam upgrades. This includes detector upgrades to accommodate for the rate increase and the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to a 5\,\% precision. The second phase involves neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$ with $l = e,\mu$. 
+    Three phases are foreseen within the HIKE program. The first being a continuation of NA62 charged kaon physics with the high-intensity beam upgrades. This includes detector upgrades to accommodate for the rate increase and the goal of measuring the branching ratio of $K^+ \to \pi^+ \nu \bar\nu$ to a 5\,\% precision in order to match the theoretical uncertainty in Equation~\ref{eq:PNN_theory_val}. The second phase involves neutral kaon physics with charged secondary particle tracking with the goal to measure the branching ratio of $K_L \to \pi^0 l^+ l^-$ with $l = e,\mu$. 
     The third phase is designed to observe the $K_{L} \to \pi^{0}\nu\bar{\nu}$ decay and measure its branching ratio to a 20\,\% precision. 
     \begin{table}[htbp]
         \centering
@@ -385,7 +385,7 @@
         \end{minipage}
         
         \caption{Cherenkov light illumination of RICH \gls{SiPM} arrays for the three different sensor sizes produced from a \gls{MC} sample of \gls{ke3}. 
-        The left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
+        The left column shows illumination on the Saleve side of the RICH detector, which is the South-East side, towards Geneva. The right column shows the Jura side, which is the North-West side of the detector.}%
         \label{fig:HikeRICHIlum}
     \end{figure}
 
@@ -399,8 +399,8 @@
             \centering
             \includegraphics[width=\textwidth]{plots/RICH_na62_Jura.pdf}
         \end{minipage}
-        \caption{Cherenkov light illumination of the NA62 RICH PMT arrays produced from a \gls{MC} sample of \gls{ke3}. The 
-        left column shows illumination on the Saleve side of the RICH detector, and the right column shows the Jura side.}%
+        \caption{Cherenkov light illumination of the NA62 RICH PMT arrays produced from a \gls{MC} sample of \gls{ke3}. 
+        The left column shows illumination on the Saleve side of the RICH detector, which is the South-East side of the detector, towards Geneva. The right column shows the Jura side, which is the North-West side of the detector.}%
         \label{fig:NA62RICHIlum}
     \end{figure}
 
@@ -459,7 +459,7 @@
             \caption*{(d) 9\,mm \glspl{SiPM}.}
         \end{minipage}
 
-        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE \glspl{SiPM} produced from a \gls{MC} sample of \gls{ke3}.}%
+        \caption{Number of photo-electrons per ring candidate for NA62 PMTs and the three possible HIKE \glspl{SiPM} produced from a \gls{MC} sample of \gls{ke3}. The distribution is normalized such that the maximum bin has a value of 1.}%
         \label{fig:NA62RICHNHITs}
     \end{figure}
 
@@ -469,7 +469,7 @@
     \begin{equation}
         \sigma_{hit} = \frac{3}{\sqrt{12}} = \SI{0.87}{\milli\metre},
     \end{equation}
-    where 3\,mm is the distance between the centre of the sensors and $\sqrt{12}$ is the standard deviation of the uniform distribution. The single hit time resolution is then used with the number of photo-electrons per ring candidate to estimate the time resolution of the ring candidate
+    where 3\,mm is the distance between the centre of the sensors and $\sqrt{12}$ is the standard deviation of the uniform distribution. The single hit position resolution is then used with the number of photo-electrons per ring candidate to estimate the ring radius resolution of the ring candidate
     \begin{equation}
         \sigma^{\SI{3}{\milli\metre}}_{ring} = \frac{\sigma_{hit}}{\sqrt{N_{hits}}} = \frac{0.87}{\sqrt{28.86}} = \SI{0.16}{\milli\metre},
     \end{equation}
@@ -499,7 +499,7 @@
             \includegraphics[width=\textwidth]{plots/RICH_9mm_radius.pdf}
             \caption*{(d) 9\,mm \glspl{SiPM}.}
         \end{minipage}
-        \caption{Reconstructed ring radius for electron candidates for NA62 PMTs and the three possible HIKE \glspl{SiPM} produced from a \gls{MC} sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3).}%
+        \caption{Reconstructed ring radius for electron candidates for NA62 PMTs and the three possible HIKE \glspl{SiPM} produced from a \gls{MC} sample of $K^+ \to \pi^0 e^+ \nu$ (Ke3). The distribution is normalized such that the maximum bin has a value of 1.}%
         \label{fig:NARICHRINGRAD}
     \end{figure}
 
@@ -535,7 +535,7 @@
         \end{minipage}
 
         \caption{Time resolution for NA62 PMTs and the three possible HIKE \glspl{SiPM}, calculated from the time difference between two equally populated subsets of hits within the ring candidate. 
-        A detailed description of the procedure is provided here \cite{Anzivino_2020}.}%
+        A detailed description of the procedure is provided here \cite{Anzivino_2020}. The distribution is normalized such that the maximum bin has a value of 1.}%
         \label{fig:NA62RICHTIMERes}
     \end{figure}
     All three \gls{SiPM} sensor sizes produce results which exceed the requirements for HIKE with a time resolution of around 20\,ps and improvements on the reconstructed ring radius resolution. From the results of the HIKE simulation, the $9\times9$\,mm \glspl{SiPM} are to be used as they provide excellent performance at a
@@ -730,7 +730,7 @@
     However, the rates are collected from the cross-section at the expected detector position, without accounting for the beam hole to accommodate beam particles passing through the detector. This results in higher maximum rates. An example cross-section at the entry of the first STRAW chamber is shown in Figure~\ref{fig:STRAW1_rate}, where it is clear that the highest rate is found at the centre. As the detectors are not yet designed and the beam hole size is unknown, the size of the beam hole is estimated by calculating the beam divergence at the detector Z position.
     The beam divergence is calculated using the formula
     \begin{equation}\label{eq:beamDivergence}
-        \delta_{beam} = 0.4\,mrad \times Z.
+        \delta_{beam} = \SI{0.4}{\milli\radian} \times Z.
     \end{equation}
     \begin{figure}[htbp]
         \centering

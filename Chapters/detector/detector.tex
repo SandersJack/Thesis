@@ -156,7 +156,7 @@
     \end{figure}
     
     Each station consists of 18,000 pixels of size $300\times300$\,\si{\micro\meter\squared} in a matrix of $200\times90$, covering a total area of  $62.8\times27$\,\si{\milli\meter\squared} and is read out by \gls{ASIC}. 
-    As the tracker is placed directly within the beam, the number of interactions with the beam must be minimised by utilising the smallest material possible. The material budget for each station was set at 0.5\,\%, corresponding to \SI{500}{\micro\meter} of Silicon.
+    As the tracker is placed directly within the beam, the number of interactions with the beam must be minimised by utilising the smallest material possible. The material budget for each station was set at $0.5\,\% X_0$, corresponding to \SI{500}{\micro\meter} of Silicon.
     \subsection{Charged Particle Anti-coincidence detector (CHANTI)}
     The \gls{CHANTI} is located downstream of the \gls{GTK}, and its primary goal is to provide the rejection of charged particles produced from inelastic collisions of beam particles with the final \gls{GTK} station. Vetoing these particles is imperative as they enter the decay volume and result in background for $K^+ \to \pi^+ \nu \bar\nu$. The detector is also used to identify the muon halo close to the beam.
     The CHANTI detector is a set of six square hodoscope stations comprising two planes, one placed vertically and the other horizontally, with a fully constructed station shown in Figure~\ref{fig:CHANTI}. The planes are comprised of polystyrene-based scintillator bars equipped with fast wavelength-shifting (WLS) fibres. The fibres are then readout by \glspl{SiPM}.
@@ -170,7 +170,7 @@
     \subsection{Straw Spectrometer (STRAW)}\label{sec:STRAW}
     The STRAW spectrometer provides measurements of the momenta of charged particles produced in $K^+$ decays within the \gls{FV}. It comprises four chambers and a large aperture dipole magnet (MNP33), providing measurement of secondary particle momentum with a resolution of
     \begin{equation}
-        \frac{\sigma(p)}{p} = 0.30\% \oplus 0.005\%,
+        \frac{\sigma(p)}{p} = 0.30\% \oplus 0.005\% \cdot p,
     \end{equation} 
     where $p$ is the track momentum in \si{\giga\electronvolt\per\clight}.
     The chambers are downstream from the decay region, with the first chamber located at $Z = 183$\,m and the second 10\,m further downstream.  The MNP33 magnet is situated downstream of chamber two at $Z=197.6$\,m and provides an integrated field of 0.9\,Tm. 
@@ -253,7 +253,7 @@
     \subsection{Photon Detection System}\label{sec:PDS}
     The photon detection system provides a rejection power of $10^8$ for the main decay background $K_{2\pi}$ for \gls{PNN}. It is made up of four calorimeters used to detect and reject kaon decays with photons in the final state, with coverage from 0 to 50\,mrad. 
 
-    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. The \gls{LKr} is a quasi-homogeneous calorimeter consisting of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to a radiation length of 27\,$X_0$, allowing for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13,248 longitudinal cells, depicted in Figure~\ref{fig:lkrDiag}, each consisting of a central anode and cathodes on either side.
+    Photons with production angles between 1 and 8.5\,mrad are covered by the NA48 \gls{LKr}. The \gls{LKr} is a quasi-homogeneous calorimeter consisting of a large cryostat containing 9000 litres of liquid krypton, which extends from the beam-pipe to a radius of 128\,cm and has a depth of 127\,cm. This corresponds to 27 radiation lengths, allowing for the full capture of electromagnetic showers produced. Thin beryllium-copper ribbons make up the 13,248 longitudinal cells, depicted in Figure~\ref{fig:lkrDiag}, each consisting of a central anode and cathodes on either side.
     Each anode ribbon is connected at the downstream end to preamplifiers and to a high voltage of \SI{3}{\kilo\volt} to provide the drift field required for the ionisation.
     \begin{figure}[t]
         \centering 

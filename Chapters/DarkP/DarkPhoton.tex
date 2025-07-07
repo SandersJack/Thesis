@@ -18,9 +18,11 @@
     The NA62 experiment, described in Section \ref{sec:na62}, provides a clean sample of $\pi^0$ particles through the decay \mbox{$K^+ \to \pi^+\pi^0$} with a branching ratio of 20.67\,\%. With the assumption that the \gls{DP} decays promptly, the decay signature is identical to the Dalitz decay 
     $\pi^0_D \to \gamma e^+e^-$. The Dalitz decay represents the background for the \gls{DP} search and determines the sensitivity. 
 
+    Using the Dalitz decay to model the signal of the \gls{DP} requires an assumption of the quantum numbers of $A'$. This model assumes that the \gls{DP} is a vector boson $J^{PC} = 1^{--}$, matching the quantum numbers of the \gls{SM} photon. 
+    The spin of the $A'$ directly affects the kinematics and angular distribution of the final-state particles. The use of the Dalitz signal model is only valid for this specific assumption about the quantum numbers of the \gls{DP}.
+
     %Two methods were used for background estimation, a \gls{MC} method and a data-driven method, which are described below.
 
-    
     %\section{MC Samples Used}
     %The main MC samples used in the analysis are as follows,
     %\begin{itemize}
@@ -64,7 +66,7 @@
     The positive track which does not pass the charged pion selection is identified as the positron. The electron is identified as the negative track. 
     
     %An elliptical cut is introduced to reduce the background that would otherwise pass the selection. The reconstructed mass of the electron, positron and photon is compared against the reconstructed mass of the electron, positron, photon and charged pion.
-    An elliptical cut on the reconstructed masses $M_{ee \gamma}$ and $M_{\pi ee \gamma}$ is defined using a \gls{kpid} \gls{MC} sample. 
+    An elliptical cut on the reconstructed masses $M_{ee \gamma}$ and $M_{\pi ee \gamma}$ is defined using a \gls{kpid} \gls{MC} sample. An elliptical cut is required in order to account for the correlated uncertainties in the reconstructed masses $M_{\pi e e \gamma}$ and $M_{ee \gamma}$. This allows for efficient signal event selection while suppressing background contributions.
     %The reconstructed mass distributions are shown in Figure~\ref{fig:reconMasses}. 
     %The widths of the distributions are calculated by fitting with Gaussian functions.
     %The calculated width for the reconstructed mass $M_{\pi ee \gamma}$ is found to be,
@@ -281,11 +283,16 @@
 
     For each \gls{DP} mass hypothesis, the number of data events ($N_{obs}$) is compared to the number of expected background events ($N_{exp}$). The error on the number of observed events $\delta N_{obs}$, used for the significance calculation is defined as 
     \mbox{$\delta N_{obs} = \sqrt{N_{obs}}$}. The error on the number of expected events ($\delta N_{exp}$) is dependent on the background estimation method. 
-    For each \gls{DP} mass hypothesis, the local significance of the \gls{DP} signal is calculated as
+    For each \gls{DP} mass hypothesis, the local significance of the \gls{DP} signal is calculated as 
     \begin{equation}\label{eq:localSig}
         Z = \frac{N_{obs} - N_{exp}}{\sqrt{\delta N_{obs}^2 + \delta N_{exp}^2}}.
     \end{equation} 
+    
     If the local significance is not greater than $ 3 \sigma$, no \gls{DP} signal is observed.
+    However, as there are a large number of \gls{DP} mass hypotheses, it is necessary to account for the \gls{LEE}. The \gls{LEE} is essential, as when searching across many mass hypotheses statistical fluctuations can produce locally significant results. 
+    To correct for this, toy \gls{MC} simulations are generated under the background only hypothesis. For each toy dataset, the maximum local significance across all the tested mass hypotheses is calculated. This yields a distribution of expected fluctuations in the absence of any signal. 
+    The observed maximum local significance, calculated using Equation \ref{eq:localSig}, is compared against the distribution of fluctuations and a global p-value is computed. The p-value quantifies the probability of observing the maximum local significance from the analysis.
+    This p-value is then converted into a global significance by evaluating the inverse of the standard normal distribution. If the global significance does not exceed $3\,\sigma$, the maximum deviation is not statistically significant and no \gls{DP} signal is observed.
     
     The \gls{UL} for the number of \gls{DP} decays ($A' \to e^+e^-$) at a 90\% \gls{CL} for each \gls{DP} mass value is calculated with $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ using the CLs method. This method is recommended by the Particle Data Group \cite{Cowan:2018} and employs the process set out in \cite{Junk:1999kv, Read:2000ru}.
     For setting an \gls{UL} of the signal $s$ from a counting experiment where $N$ events are observed ($N_{obs}$), and there is a known expected background $b$, it is a hypothesis test between the two cases: signal+background and just background. According to the Neyman-Pearson lemma \cite{NeymanPearson1933}, the most powerful test statistic for the hypothesis is the likelihood ratio, 
@@ -437,7 +444,9 @@
     The range of the \gls{DP} search is defined as $7 \leq M_{A'} \leq 120$\,\si{\mega\electronvolt\per\clight^2}. The lower mass boundary is defined because of the falling geometric acceptance. The upper boundary is set due to the inability of the \gls{MC} to model the non-Gaussian tails of the track reconstruction. 
     Using the method described in Section~\ref{sec:dp_method}, results in 379 DP mass values tested. The error on the number of expected background events is due to the statistical error of the expected events within the search window \mbox{$\delta N_{exp} = \sqrt{N_{exp}}$}. A correction is required due to the factor $f_{scale}$ imposed on the \gls{MC} to scale the sample to match the effective kaon flux.
     The $N_{obs}$, $N_{exp}$ and their errors for the \gls{MC} background estimation are shown in Figure~\ref{fig:searchwindow_vals}.
-    The local significance of the \gls{DP} signal (Equation~\ref{eq:localSig}) is shown in Figure~\ref{fig:local_sig}. The local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed.
+    The local significance of the \gls{DP} signal (Equation~\ref{eq:localSig}) is shown in Figure~\ref{fig:local_sig}. 
+    The maximum local significance is $2.79\,\sigma$. After accounting for the \gls{LEE} the corresponding global p-value is found to be $0.0150$, which translates to a global significance of $2.17\sigma$. As this does not exceed the $3\,\sigma$ threshold, no \gls{DP} signal is observed.
+    %The local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/searchwindow_val.png}
@@ -554,7 +563,9 @@
     The $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ values obtained for each $M_{A'}$ hypothesis are shown in Figure~\ref{fig:datadrive_plot}. The combined expected error $\delta N_{obs}$ is reduced compared to the \gls{MC} background presented in Figure~\ref{fig:searchwindow_vals}. 
     The statistical error is dominant over the systematic below \SI{100}{\mega\electronvolt\per\clight\squared}. Above \SI{100}{\mega\electronvolt\per\clight\squared} the spikes in the systematic uncertainties are caused by the reduced fitting window due to the removed data events above \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
 
-    With $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ shown in Figure~\ref{fig:datadrive_plot}, the local significance of the \gls{DP} signal is calculated with Equation~\ref{eq:localSig} is shown in Figure~\ref{fig:local_sig_data}. The significance does not reach the threshold of $3 \sigma$, so no \gls{DP} signal is observed.
+    With $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ shown in Figure~\ref{fig:datadrive_plot}, the local significance of the \gls{DP} signal is calculated with Equation~\ref{eq:localSig} is shown in Figure~\ref{fig:local_sig_data}. 
+    The maximum local significance for the data driven method is $2.88\,\sigma$. Accounting for the \gls{LEE} using toy \gls{MC} simulations across the 428 \gls{DP} mass hypotheses yields in a global p-value of 0.6011. This global p-value corresponds to a global significance of $0.26\,\sigma$, which is lower than the $3\,\sigma$ threshold. Therefore, no \gls{DP} signal is observed. 
+    %The significance does not reach the threshold of $3 \sigma$, so no \gls{DP} signal is observed.
 
     Using the same method as for the \gls{MC} study and described in Section~\ref{sec:dp_method}, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ are used as inputs into the CLs method to calculate the \gls{UL} of the number of \gls{DP} candidates in each mass window shown in Figure~\ref{fig:datadrive_plot}. The error on the expected number of events is reduced compared to the \gls{MC} study, which is shown in Figure~\ref{fig:searchwindow_vals}.
     The reduction in $\delta N_{exp}$ is from the new background estimation method. It is not possible to see the true reduction in uncertainties due to increase in statistics when including the 2023 and 2024 datasets.

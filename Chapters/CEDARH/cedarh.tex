@@ -58,7 +58,7 @@
         \label{fig:CEDAR_DIA}
     \end{figure}
 
-    The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis through the radiator gas and aluminium windows. When the beam particle's pass through the vessel at a velocity $v$ between
+    The beam is designed to pass through the \gls{CEDAR} vessel along the longitudinal axis through the radiator gas and aluminium windows. When the beam particles pass through the vessel at a velocity $v$ between
     %When charged particles travel faster than the speed of light in a medium, Cherenkov radiation is produced at an angle of,
     %When the beam particles pass through the vessel Cherenkov at a velocity $v$ between,
     \begin{equation}
@@ -76,6 +76,12 @@
     %\begin{equation}\label{eq:Cherenkov2}
     %cos(\theta) = \frac{1}{\beta n}
     %\end{equation}
+
+    The number of photons produced by a particle ($N$) per unit distance traversed within the radiator ($x$), per unit wavelength ($\lambda$)is defined by the Frank-Tamm formula \cite{Frank:1937fk},
+    \begin{equation}
+        \frac{d^2N}{dxd\lambda} = \frac{2\pi \alpha}{\lambda^2} \sin^2{\theta_c} = \frac{2\pi \alpha}{\lambda^2}\left(1 - \frac{1}{\beta^2 n^2(\lambda)}\right),
+    \end{equation}
+    where $n(\lambda)$ is the wavelength dependent refractive index and $\alpha$ is the fine structure constant.
 
     The \gls{CEDAR} contains optical elements inside the vessel to allow the reflection and focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm, as displayed in Figure~\ref{fig:CEDAR_DIA} as the orange lines. 
     The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}. This is a lens comprising two spherical surfaces, with the downstream surface cemented onto a concave mirror having an identical radius of curvature.
@@ -600,7 +606,7 @@
 
     As the \gls{CEDAR} has been removed from H6, then moved to ECN3 and installed into the beamline, the first step of the commissioning is to validate that the detector is functional using \gls{n2} before filling the vessel with \gls{h2}. 
     %This was because any work that could have been conducted due to any issues caused by the transport to ECN3, would have been complicated by the presence of \gls{h2}. 
-    This allows for the confirmation of the basic functionality of the detector without the complications added by \gls{h2}, in case a hardware intervention is needed.
+    This allows for the confirmation of the basic functionality of the detector without the complications added by \gls{h2}, in case a hardware intervention is needed. The basic functionality includes the ability for the new \gls{CEDAR} to collect Cherenkov light from the beam components, confirming that the optics are still operational and that the KTAG was reassembled successfully.
     It is important to note that any results from this phase are preliminary due to the distorted nature of the Cherenkov light in the \gls{ch} with a \gls{n2} radiator gas. 
     
     The \gls{ch} vessel is filled with \gls{n2} to 1.5\,bar. A pressure scan is then completed going up in pressure to 2.12\,bar, at a diaphragm aperture of 1.45\,mm with the results shown in Figure~\ref{fig:cedarHNN}. This pressure scan is used to determine the pressure at which each beam element can be selected. 
@@ -616,7 +622,7 @@
    
     A coarse alignment is conducted at a diaphragm aperture of 1.45\,mm and at the proton pressure of 2.03\,bar. It is done at the proton pressure as it is an isolated peak and is more efficient for alignment, with the results shown in Figure~\ref{fig:cedarAlignNN}. The procedure is the same as the one done in the test-beam where the motors on the upstream end of the vessel moved in both X and Y dimensions, pivoting the vessel about the downstream end.
     %The alignment was completed in suboptimal conditions due to the small aperture as it was desired to first align with a large diaphragm. 
-    The detector is positioned at $Y=-1.943$ and $X=-2.219$, resulting in an average of 20.6 photo-electrons per candidate. 
+    The detector is positioned at $Y=-1.943$\,mm and $X=-2.219$\,mm, resulting in an average of 20.6 photo-electrons per candidate. 
     The alignment results are shown in Figure~\ref{fig:cedarAlignNN}, where the Y motor position is first moved in the positive direction, which causes a decrease in the number of photo-electrons per candidate. The Y motor position is then moved in the negative direction until the maximum is found at $Y=-2.051$\,mm. The gaps in the results 
     show the instability of the motors, as it is not possible to return to the same point after moving due to the inaccuracy in the control system. The X motor position is modified until a maximum is found at $X=-2.155$\,mm. The final position of the \gls{ch} with \gls{n2} is $X=-2.155$\,mm and $Y=-2.051$\,mm, with an average of 20.9 photo-electrons per candidate. However, the maximum is found at the edge of the usable range in the Y direction, 
     it is possible that the maximum light yield is not found and is further in negative Y. As this would be much harder to conduct with \gls{h2} in the \gls{CEDAR}, the vessel is manually lowered 2\,mm by reducing the height of the upstream foot. The maximum photo-electrons per candidate is now located at $Y = -0.05$\,mm, while the $X$ is unchanged. The Y motor values from now on are not comparable to these alignment results. 
@@ -675,7 +681,7 @@
     However, the number of photo-electrons per kaon candidate is $21.47 \pm 0.04$, a lower light yield compared to the previous pressure scan completed with a 1.8\,mm diaphragm aperture. 
     
     The results show that the \gls{ch} is operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. 
-    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability is acceptable for use at NA62.
+    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability is estimated to be at least $10^{-4}$, which is acceptable for use at NA62.
     \begin{figure}[t]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm.png} }}%
