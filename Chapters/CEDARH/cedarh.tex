@@ -52,7 +52,7 @@
     
     \begin{figure}[t]
         \centering 
-        \includegraphics[width=0.7\textwidth]{imgs/cedar_diagram_jack.pdf}
+        \includegraphics[width=0.7\textwidth]{imgs/CEDAR.pdf}
         \linespread{1.0}
         \caption{Diagram describing the optics of the \gls{CEDAR}+KTAG photon-detection system and the expected Cherenkov light ring path in orange.}
         \label{fig:CEDAR_DIA}
@@ -77,14 +77,14 @@
     %cos(\theta) = \frac{1}{\beta n}
     %\end{equation}
 
-    The number of photons produced by a particle ($N$) per unit distance traversed within the radiator ($x$), per unit wavelength ($\lambda$)is defined by the Frank-Tamm formula \cite{Frank:1937fk},
+    The number of photons produced by a particle ($N$) per unit distance traversed within the radiator ($x$), per unit wavelength ($\lambda$) is defined by the Frank-Tamm formula \cite{Frank:1937fk}
     \begin{equation}
         \frac{d^2N}{dxd\lambda} = \frac{2\pi \alpha}{\lambda^2} \sin^2{\theta_c} = \frac{2\pi \alpha}{\lambda^2}\left(1 - \frac{1}{\beta^2 n^2(\lambda)}\right),
     \end{equation}
     where $n(\lambda)$ is the wavelength dependent refractive index and $\alpha$ is the fine structure constant.
 
     The \gls{CEDAR} contains optical elements inside the vessel to allow the reflection and focusing of the produced Cherenkov light to reach the diaphragm at a radius of 100\,mm, as displayed in Figure~\ref{fig:CEDAR_DIA} as the orange lines. 
-    The light produced is reflected back upstream by a Mangin mirror \cite{Riedl:74}. This is a lens comprising two spherical surfaces, with the downstream surface cemented onto a concave mirror having an identical radius of curvature.
+    Photons are produced throughout the length of the vessel towards the downstream end and the light is reflected back upstream by a Mangin mirror \cite{Riedl:74}. This is a lens comprising two spherical surfaces, with the downstream surface cemented onto a concave mirror having an identical radius of curvature.
     The radius at which the light is focused at the focal point is defined as, 
     \begin{equation}
         R_{focal} = f \theta_c
@@ -130,7 +130,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/Condensers-W.pdf}
         \linespread{1.0}
-        \caption{Drawing showing the placement of the \gls{CEDAR} condenser lenses.}
+        \caption{Engineering drawing showing the placement of the \gls{CEDAR} condenser lenses which are shaded in grey. The lenses are arranged symmetrically around the beam axis and are used to focus the Cherenkov light at the \gls{CEDAR} exit windows.}
         \label{fig:condenser}
     \end{figure}
     The light exits the \gls{CEDAR} through eight quartz exit windows placed around the beam pipe at the upstream end of the \gls{CEDAR}, shown in Figure~\ref{fig:exit-windows}. Attached to the exit windows are quartz filters designed to 
@@ -377,14 +377,14 @@
     \end{figure}
     A coarse alignment is completed first, where the gas pressure is set at 4.2\,bar and the diaphragm set at the widest aperture of 19\,mm to 
     allow the light from all beam particles to pass through the diaphragm, with the results shown in Figure~\ref{fig:alignment_res1}. The motor positions are moved until the counts on the \gls{PMT} per trigger are around 100\,\% and are balanced (shown on the right of Figure~\ref{fig:alignment_res1}).
-    A large aperture allows for the rough calculation of the \gls{PMT} efficiency, as a fully efficient detector would expect the number of photo-electrons on each \gls{PMT} to equal the number of triggers. From Figure~\ref{fig:alignment_res1}
-    it is clear that the \glspl{PMT} are at least 95\,\% efficiency with the average being 98.3\,\%.
+    A large aperture allows for the rough calculation of the \gls{PMT} efficiency, as a fully efficient detector would expect the number of photo-electrons on each \gls{PMT} to equal the number of triggers. 
+    In Figure~\ref{fig:alignment_res1} the percentage efficiency for the eight \glspl{PMT} is shown on the right. It shows that the \glspl{PMT} are at least 95\,\% efficiency with the average being 98.3\,\%.
     \begin{figure}[t]
         \centering 
         \includegraphics[width=0.7\textwidth]{imgs/test_beamalingment1.png}
         \linespread{1.0}
         \caption{Output of data collection for \gls{ch} at the end of the first alignment. From left, the mean number of detected photons per group of two \glspl{PMT} normalised to the trigger, the positions of the XY motors, the diaphragm aperture (DIA), the gas pressure (PRESS), the average number of 
-        detected photons (NPE) per PM, the number of triggers (TRIG) and the spacial alignment of the \glspl{PMT}.}
+        detected photons (NPE) per PM, the number of triggers (TRIG). The spacial alignment of the \glspl{PMT} is shown on the right, showing the position pon each \gls{CEDAR} exit window.}
         \label{fig:alignment_res1}
     \end{figure}
     
@@ -429,7 +429,7 @@
     \begin{equation}\label{eq:Lamb2}
         \lambda= \ln \left[ 1 + \frac{14}{ \sqrt{4 - 7(1-\eta_{6}/\eta_{8})}-2} \right],
     \end{equation}
-    where $\eta_{N}$ is defined as the probability of an N-fold coincidence and $\lambda$ is the number of photo-electrons per \gls{PMT}. The ratios $\eta_{8}/\eta_{7}$ and $\eta_{8}/\eta_{6}$ are shown in Figure~\ref{fig:alignment_res2_ratio} and the resultant photons per \gls{PMT}. 
+    where $\eta_{N}$ is defined as the probability of an N-fold coincidence and $\lambda$ is the number of photo-electrons per \gls{PMT}. The ratios $\eta_{8}/\eta_{7}$ and $\eta_{8}/\eta_{6}$ are shown in Figure~\ref{fig:alignment_res2_ratio} together with the resultant photons per \gls{PMT}. 
     The two equations~\ref{eq:Lamb1} and~\ref{eq:Lamb2} are used to cross-check the result and then averaged. At the pion pressure (3.68\,bar), $\eta_{8}/\eta_{6} = 0.435$ and $\eta_{8}/\eta_{7} = 0.500$, which produces an average light yield of $\lambda = 2.37$ photons per \gls{PMT}. 
     The proton yields slightly less light with $\eta_{8}/\eta_{6} = 0.420$ and $\eta_{8}/\eta_{7} = 0.525$ producing an average of $\lambda = 2.30$. At the kaon pressure (3.844\,bar), the ratios of $\eta_{8}/\eta_{6} = 0.500$ and $\eta_{8}/\eta_{7} = 0.535$ produce an average yield of $\lambda = 2.45$, which
     results in a total of 19.63 photo-electrons per kaon. This suggests that the optics have been correctly manufactured and installed. However, the diaphragm is wider with respect to the normal NA62 setting. It is clear that the 2.3\,mm diaphragm can not be used 
@@ -510,7 +510,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/DiaScan_CoincidencesAvgPointspTrigger_log.pdf}
         \linespread{1.0}
-        \caption{Plot showing the results of the diaphragm scan during the H6 test-beam at a pressure of 3.85\,bar.}
+        \caption{Plot showing the results of the diaphragm scan during the H6 test-beam at a pressure of 3.85\,bar (kaon pressure).}
         \label{fig:Diascan}
     \end{figure}
     %% Then comparison with 2011 test-beam \gls{cw}
@@ -656,7 +656,7 @@
     The first pressure scan is completed with a diaphragm aperture of 1.8\,mm. The pressure is set above the proton pressure at 4.4\,bar and the pressure is slowly decreased as data is recorded. The data is reconstructed using a 4\,ns time window, with the results shown in Figure~\ref{fig:cedarH_1}. Compared to the test-beam, the y-axis of Figure~\ref{fig:cedarH_1} is 
     arbitrary as the total number of triggers is not recorded. Instead, the number of coincidences is normalised to the beam intensity, which in NA62 is measured through counts in an argonion chamber detector located at the end of the experiment. This made the direct beam composition difficult to calculate, but the ratios of the three peaks are used to check if the composition is what was expected. Figure~\ref{fig:cedarH_1} shows the proton pressure at 4.3\,bar and the kaon 
     pressure at 3.88\,bar. At the kaon pressure the maximum light yield corresponds to $21.71 \pm 0.02$ photo-electrons per kaon candidate. The kaon pressure in NA62 is higher than what was found at the test-beam, 3.88\,bar compared to 3.85\,bar due to a 2\,K temperature difference of the radiator gas in ECN3. The pion pressure can not be precisely determined due to the large flux of pions in the beam which overwhelms the NA62 readout system, producing inconsistent results between 3.68 and 3.76\,bar. However, the falling edge of the pion peak is not effected, allowing for the estimation of the pion misidentification probability. At the kaon pressure of 3.88\,bar the measured normalised 5-fold coincidence value is 0.0956 (see Figure~\ref{fig:cedarH_1}). %The pion contribution is then estimated using the fit of a super-Gaussian on the falling edge and extrapolated to the kaon pressure.
-    The estimated pion contribution to the normalised 5-fold coincidence is $5.36 \times 10^{-6}$, which resulted in a pion misidentification probability of $0.6\times 10^{-5}$ at the kaon pressure.
+    The estimated pion contribution to the normalised 5-fold coincidence is $5.36 \times 10^{-6}$. The pion misidentification probability is estimated from the ratio of the kaon and pion contribution, and is found to be $0.6\times 10^{-5}$ at the kaon pressure.
     
     The light yield obtained with a 1.8\,mm diaphragm aperture compared with the results from the test-beam at a 2\,mm aperture (Figure~\ref{fig:testbeamPresures}), produces an increase of over 10\,\%. This increase is due to the addition of the KTAG photon-detection system compared to the single \glspl{PMT} used in the test-beam. %, which is predicted from the simulations.
 
@@ -681,7 +681,7 @@
     However, the number of photo-electrons per kaon candidate is $21.47 \pm 0.04$, a lower light yield compared to the previous pressure scan completed with a 1.8\,mm diaphragm aperture. 
     
     The results show that the \gls{ch} is operational in NA62 and is able to separate the kaon and pion peaks with a high level of confidence. 
-    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability is estimated to be at least $10^{-4}$, which is acceptable for use at NA62.
+    It is decided that the pressure scan from the 1.8\,mm diaphragm aperture produces the best results for use at NA62 due to the superior light yield, resulting in a better kaon identification efficiency. The pion misidentification probability is estimated to be less than $10^{-4}$, which is acceptable for use at NA62.
     \begin{figure}[t]
         \centering
         \subfloat{{\includegraphics[width=0.49\textwidth]{plots/H_15mm.png} }}%
@@ -722,10 +722,10 @@
     Due to the changes to the working point pressure between the test-beam and between the 2023 and 2024 runs, a new method is developed to monitor the \gls{ch} and to take into account the environmental variables to ensure the refractive index of the radiator gas does not change by large amounts which would result in lower kaon detection efficiency. The pressure of the vessel and temperature at both the front and
     back of the \gls{CEDAR} are recorded and shown in Figure~\ref{fig:PoverT_23} for the 2023 run and Figure~\ref{fig:PoverT_24} for the 2024 run. The pressure is divided by temperature ($p/T$), as the ratio should be consistent for a sealed vessel like the \gls{CEDAR}, and the ratio is multiplied by a room temperature of 293.15\,K, resulting in the pressure at normalised room temperature. 
     %During data taking with \gls{cw} with \gls{n2} at NA62, the \gls{CEDAR} would be kept at a fixed pressure and regulated to stay at the desired pressure, which would be correct if the \gls{CEDAR} vessel did not change in temperature. If the temperature of the gas changed with the pressure regulated to a fixed value, the resultant refractive index of the radiator gas would diverge from the desired value, reducing the detector efficiency. 
-    Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. The insulation does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasonal variations. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure is allowed to vary.
+    Even though the \gls{CEDAR} is extensively insulated, it is designed to mitigate sharp temperature changes. However, the insulation does not stop the \gls{CEDAR} vessel from slowly changing temperature with the environment due to seasonal variations. To mitigate this, the \gls{CEDAR} is sealed with a fixed amount of gas and the pressure is allowed to vary.
     While operating with the \gls{cw} with \gls{n2} it is possible to operate without monitoring due to minimal gas leakage from the vessel. However, for \gls{ch} it is now essential to monitor the $p/T$ due to the increased leakage of the \gls{h2} gas from the vessel.
     
-    An example of how the $p/T$ method is utilised is in the final days of the 2023 run in Figure~\ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stay constant, suggesting that the temperature in ECN3 increased, reiterating that the pressure should not be automatically maintained at a specific pressure. 
+    An example of how the $p/T$ method is utilised is in the final days of the 2023 run in Figure~\ref{fig:PoverT_23} where the actual pressure increased by nearly 10\,mbar, whereas the normalised pressures stay constant, suggesting that the temperature in ECN3 increased, reinforcing that the pressure should not be automatically maintained at a fixed pressure. 
     However, as \gls{ch} is not perfectly sealed, especially for \gls{h2}, a small leak is expected, so there is a gradual decrease in the normalised pressure. The normalised pressure and the resultant number of photo-electrons per candidate are used to decide if the \gls{CEDAR} requires extra filling during the run due to the small loss of gas, which can be seen in Figures~\ref{fig:PoverT_23} and~\ref{fig:PoverT_24} as the large 
     spikes in pressure at various points. 
     

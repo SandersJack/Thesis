@@ -11,7 +11,7 @@
     \begin{figure}[t]
         \centering
         \includegraphics[width=0.5\textwidth]{imgs/SM.pdf}
-        \caption{The Standard Model of particle physics with the 12 fermions shown in purple and green, the five vector bosons shown in red and the Higgs scalar boson shown in yellow.}%
+        \caption{The particle content of the Standard Model of particle physics with the 12 fermions shown in purple and green, the five vector bosons shown in red and the Higgs scalar boson shown in yellow.}%
         \label{fig:SM}%
     \end{figure}
     
@@ -20,8 +20,8 @@
     The SU(2)×U(1) groups describe the electroweak interactions \cite{GLASHOW1961579}, which are mediated by the photon and $W^{\pm}$, $Z^{0}$ bosons. The SU(3) is an exact gauge symmetry while the electroweak symmetry is spontaneously broken by the Higgs field \cite{Higgs:1964pj}, resulting 
     in the massive electroweak bosons ($W^{\pm}$ and $Z^{0}$). 
     \section{Quark Mixing and the CKM Matrix}
-    This broken symmetry gives rise to massive quarks, with the strong and weak eigenstates diverging. The weak eigenstates ($d'$, $s'$, $b'$) of down, strange and bottom quarks, which are associated with the weak interaction, are related to the mass
-    eigenstates ($d$, $s$, $b$) through the \gls{CKM} matrix $V_{\text{CKM}}$ \cite{PhysRevLett.10.531,10.1143/PTP.49.652}. 
+    Electroweak symmetry breaking gives rise to massive quarks, with the strong and weak eigenstates diverging. The weak eigenstates ($d'$, $s'$, $b'$) of down, strange and bottom quarks, which are associated with the weak interaction, are related to the mass
+    eigenstates ($d$, $s$, $b$) through the \gls{CKM} matrix $V_{\text{CKM}}$ \cite{PhysRevLett.10.531,10.1143/PTP.49.652}, with the following relation:
     \begin{equation}
     \begin{bmatrix} d' \\ s' \\ b' \end{bmatrix} =
         V_{\text{CKM}}
@@ -31,9 +31,9 @@
             V_{cd} & V_{cs} & V_{cb} \\ 
             V_{td} & V_{ts} & V_{tb} 
         \end{bmatrix}
-        \begin{bmatrix} d \\ s \\ b \end{bmatrix}
+        \begin{bmatrix} d \\ s \\ b \end{bmatrix}.
     \end{equation}
-    The elements of the CKM matrix determine the strength of the interaction between quark flavours. Interaction vertices involving the transition from a quark type $i$ to $j$ introduce a coupling factor of $|V_{ij}|$ and a corresponding transition probability given by $|V_{ij}|^2$.
+    The elements of the CKM matrix determine the strength of the interaction between quark flavours. Interaction vertices involving the transition from a quark type $i$ to $j$ introduce a coupling factor of $V_{ij}$ and a corresponding transition probability given by $|V_{ij}|^2$.
     %Utilising the elements of the \gls{CKM} matrix, it is possible to calculate the probability that a quark type i will transition into type j with $|V_{ij}|^2$.
 
     As a unitary $3\times3$ matrix, the \gls{CKM} matrix can be described by four parameters: three mixing angles ($\theta_{12}$, $\theta_{13}$, $\theta_{23}$) which dictate the couplings between each generation of quarks and one phase ($\delta$) which introduces \gls{CP} violation \cite{10.1143/PTP.49.652}. 
@@ -72,7 +72,7 @@
     \end{equation}
     
     The \gls{CKM} matrix is expanded in terms of $\lambda$ and provides a hierarchical structure which reflects the pattern where transitions between quarks of the same/adjacent generations are stronger compared to distant ones.
-    Expanding the \gls{CKM} matrix in powers up to $O(\lambda^3)$ results in the loss of unitary. However, unitary can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of \ref{eq:wolf},
+    Expanding the \gls{CKM} matrix in powers up to $O(\lambda^3)$ results in the loss of unitary. However, unitary can be restored by including $O(\lambda^5)$ \cite{PhysRevD.50.3433} correction to the bottom left component of Equation~\ref{eq:wolf},
     \begin{equation}
         V_{td} = A\lambda^3 (1 - \bar{\rho} - i\bar{\eta}),
     \end{equation}
@@ -82,7 +82,6 @@
             \bar{\rho} = \rho \left(1 - \frac{\lambda^2}{2}\right), \\
             \bar{\eta} = \eta \left(1 - \frac{\lambda^2}{2}\right).
         \end{split}
-        .
     \end{equation}
 
     The unitary nature of the CKM matrix imposes conditions on the rows and columns:
@@ -136,15 +135,15 @@
         \item Four \gls{CKM} matrix parameters: three mixing angles and one CP-violating phase.
         \item Six quark masses: up, down, charm, strange, top, and bottom: $M_u$, $M_d$, $M_c$, $M_s$, $M_t$ and $M_b$.
         \item Three charged lepton masses: $M_e$, $M_\mu$, and $M_\tau$.
-        \item Three gauge couplings associated with the Standard Model gauge group $\mathrm{SU}(3)_C \times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$: $g_s$, $g$, and $g'$.
+        \item Three gauge couplings associated with the Standard Model gauge group $\mathrm{SU}(3)_C \times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y$, which correspond to the strong, weak, and hypercharge interaction and are denoted by, $g_s$, $g$, and $g'$.
         \item Two Higgs sector parameters: the vacuum expectation value ($v$) and the Higgs boson mass ($M_H$).
         \item One \gls{QCD} vacuum angle ($\theta_{\text{QCD}}$), related to CP violation in the strong interaction.
     \end{itemize}
-    Each of these parameters needs to be measured through experiment to the highest precision. Any deviations from theoretical understanding could be a hint of 
-    \gls{BSM} physics. 
+    Each of these parameters must be determined through experiment to the highest possible precision as the \gls{SM} does not predict their values. However, relations between the parameters, such as the unitary \gls{CKM} matrix, allows for internal consistency tests within the \gls{SM}.
+    Any statistically significant deviations between experimental results and theoretical understanding or inconsistencies between different determinations of the parameters could be a hint of \gls{BSM} physics. 
 
     As mentioned previously, a feature of the \gls{CKM} matrix is that the diagonal components which describe the transitions within the quark generations dominate. The off-diagonal elements describing  
-    flavour-changing charged current transitions are suppressed between one generation and doubly suppressed for transitions between two generations. This suppression between two generations produces rare decays, such as $K^+ \to \pi^+ \nu \bar{\nu}$ described in Section \ref{sec:pinn_theory}. 
+    flavour-changing charged current transitions are suppressed between one generation and doubly suppressed for transitions between two generations. This suppression between two generations leads to rare processes, such as decay $K^+ \to \pi^+ \nu \bar{\nu}$, discussed in Section \ref{sec:pinn_theory}. 
     \section{Kaon Physics}
     The first possible observation of a meson, a particle composed of a quark-antiquark pair, was made in 1943 by Leprince-Ringuet and L'heritier \cite{Cahn_Goldhaber_2009, 10.1063/PT.3.1989} and predated the discovery of the pion in 1947 \cite{Lattes1947}. Utilising a cloud chamber to measure cosmic rays, they found the first evidence of a particle with a mass of 
     990 times the mass of the electron \cite{Navas:2024}. However, given the uncertainty of the observation it was possible that the upper limit on the measured mass could reach the proton mass, therefore it was not credited for the discovery. In 1947, while similarly studying cosmic rays with cloud chambers, G. D. Rochester and C. C. Butler published a result which included
@@ -351,11 +350,11 @@
     \begin{equation}
         P_c^{SD}(X) = \frac{1}{\lambda^4} \left(\frac{2}{3}X^e_{NNL} + \frac{1}{3} X^{\tau}_{NNL} \right)
     \end{equation}
-    where $X^{l}_{NNL}$ are produced from NLO \gls{QCD} and NNLO calculations.
+    where $X^{l}_{NNL}$ are loop functions from the charm quark interacting with electron and tau neutrinos, produced from NLO \gls{QCD} and NNLO calculations .
     It is possible to represent $\lambda_t$ and $\lambda_c$ from Equation \ref{eq:pinn_theory_br} as \cite{Buchalla:1995vs}, %\cite{Buras2015}, 
     \begin{equation}
         %\mathfrak{Re}(\lambda_t) \simeq |V_{ub}||V_{cb}| \cos{\gamma}(1-2\lambda^2) + (|V_{ub}|^2 - |V_{cb}|^2)\lambda \left(1 - \frac{\lambda^2}{2}\right),
-        \mathfrak{Re}(\lambda_t) = -(1-\frac{\lambda}{2})A^2\lambda^5(1-\bar{\rho}),
+        \mathfrak{Re}(\lambda_t) = -(1-\frac{\lambda^2}{2})A^2\lambda^5(1-\bar{\rho}),
     \end{equation}
     \begin{equation}
         %\mathfrak{Im}(\lambda_t) \simeq |V_{ub}||V_{cb}|\sin{\gamma},
@@ -363,7 +362,7 @@
     \end{equation}
     \begin{equation}
         %\mathfrak{Re}(\lambda_c) \simeq -\lambda \left(1-\frac{\lambda^2}{2}\right),
-        \mathfrak{Re}(\lambda_c) = -\lambda \left(1-\frac{\lambda}{2}\right),
+        \mathfrak{Re}(\lambda_c) = -\lambda \left(1-\frac{\lambda^2}{2}\right),
     \end{equation}
     yielding the following prediction for the $K^+ \to \pi^+ \nu \bar{\nu}$ branching fraction (\ref{eq:pinn_theory_br}) in terms of the Wolfenstein parameters
     %and can be used to parametrise the $K_{\pi\nu\bar{\nu}}$ branching fraction (\ref{eq:pinn_theory_br}) with the CKM Wolfenstein parameters as \cite{Buchalla:1998ba}
@@ -371,7 +370,7 @@
         %\mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \frac{\kappa_+}{\lambda^8}|V_{cb}|^4X(x_t)^2 \left(\sigma R_t^2\sin{\beta}^2 + 1/\sigma \left(R_t\cos{\beta} + \frac{\lambda^4P_c(X)}{|V_{cb}|^2 X(x_t)} \right)\right).
         \mathcal{B}(K^+ \to \pi^+ \nu \bar{\nu}) = \kappa_+ A^4X(x_t)^2\frac{1}{\sigma}((\sigma\bar{\eta})^2 + (\rho_0 - \bar{\rho})^2),
     \end{equation}
-    where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1 + \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) shown in Figure~\ref{fig:traingles_SM_elip}, with centre at ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$. The ellipse constrains the parameters ($\bar{\rho},\bar{\eta}$) and is depicted in Figure~\ref{fig:traingles_SM_elip}. 
+    where $\sigma = (1 / (1-\frac{\lambda^2}{2}))^2$ and $\rho_0 = 1 + \frac{P_0(X)}{A^2 X(x_t)}$. Equation \ref{eq:branch_kpinunu} represents an ellipse in the unitary triangle plane ($\bar{\rho},\bar{\eta}$) shown in Figure~\ref{fig:traingles_SM}, with centre at ($\rho_0, 0$), a semi-major axis equal to $\sqrt{\frac{\mathcal{B}}{\kappa_+ A^4X(x_t)^2}}$ and a semi-minor axis of $\sqrt{\frac{\mathcal{B}}{\sigma\kappa_+ A^4X(x_t)^2}}$. The ellipse constrains the parameters ($\bar{\rho},\bar{\eta}$) and is depicted in Figure~\ref{fig:traingles_SM_elip}. 
     
     The $K_L \to \pi^0 \nu \bar{\nu}$ decay is dominated by contributions from Feynman diagrams similar to Figure~\ref{fig:fey_pinn}, but with a down quark spectating the decay compared to an up quark for the charged mode. The decay is theoretically clean and almost entirely \gls{CP} violating, dominated by top-quark loop contributions \cite{PhysRevD.39.3322}. This gives a branching fraction depending only on the imaginary part of the top loop from Equation \ref{eq:pinn_theory_br}, which is \gls{CP} violating,
     \begin{equation}
@@ -424,7 +423,7 @@
     \begin{equation}
         \mathcal{B}(K^0_L \to \pi^0 l^+l^-) = \left(C^l_{mix} \pm C^l_{int} \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + C^l_{dir} \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + C^l_{CPC} \right) \times 10^{-12},
     \end{equation}
-    where $C^l_{mix}$ represents the contributions due to $K_S - K_L$ mixing, $C^l_{int}$ the interference of the indirect and direct \gls{CP} violating decays, $C^l_{dir}$ the contribution of direct \gls{CP} violating and $C^l_{CPC}$ is the long distance \gls{CP} conserving contribution. 
+    where $C^l_{mix}$ represents the contributions due to $K_S - K_L$ mixing, $C^l_{int}$ the interference of the indirect and direct \gls{CP} violating decays. The $\pm$ represents the constructive and destructive interference. The $C^l_{dir}$ is the contribution of direct \gls{CP} violating and $C^l_{CPC}$ is the long distance \gls{CP} conserving contribution. 
     This results in the branching fractions for the $K^0_L \to \pi^0 e^+e^-$ and $K^0_L \to \pi^0 \mu^+\mu^-$ decays, 
     \begin{equation} \label{eq:kl_piee}
         \mathcal{B}(K^0_L \to \pi^0 e^+e^-) = \left(15.7|a_S|^2 \pm 6.2 |a_S| \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) + 2.4 \left(\frac{\mathfrak{Im}(\lambda_t)}{10^{-4}}\right) \right) \times 10^{-12}

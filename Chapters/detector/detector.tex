@@ -4,18 +4,19 @@
     \glsresetall
     \section{Overview}
     The NA62 experiment is a fixed target experiment located in the ECN3 experimental hall in the North Area of CERN where a \SI{400}{\giga\electronvolt\per\clight} particle beam is provided by the \gls{SPS}. The main goal of the experiment is to measure the 
-    branching fraction of the ultra-rare charged kaon decay $K^+ \rightarrow \pi^+ \nu \bar{\nu}$. Alongside, there is an expansive physics program of 
+    branching fraction of the ultra-rare charged kaon decay $K^+ \rightarrow \pi^+ \nu \bar{\nu}$. Alongside, there is an extensive physics program of 
     precision and rare decay measurements, as well as searches for forbidden processes and exotic particles.  
     %A target of 100 events has been set to obtain this precision, requiring the exposure of kaon decays in the order of $10^{13}$.
     \newline\indent The experiment employs a decay-in-flight technique to obtain a large number of charged kaon decays, in the order of $10^{13}$ within the time frame of a 
     few years. The experimental setup was designed to fulfil the requirements for the challenging measurement of $K^+ \rightarrow \pi^{+} \nu \bar{\nu}$, which involves the 
     detection of the $K^{+}$ upstream and the detection of the product $\pi^{+}$, with a missing energy-momentum carried away by the undetected neutrino-antineutrino pair. 
-    The missing mass calculation, defined by Equation~\ref{eq:missingmass}, requires precise spacial measurement of the $K^{+}$ and $\pi^{+}$ candidates, provided by the beam (section \ref{sec:GTK}) and secondary (section \ref{sec:STRAW}) particle spectrometers. 
-    The measurement of the missing mass is used for kinematic rejection of the main background $K^{+}$ decays; $K^+ \rightarrow \pi^{+} \pi^{0}$, $K^+ \rightarrow \pi^{+} \pi^{+} \pi^{-} $ and $K^+ \rightarrow \mu^{+} \nu_{\mu}$ by selecting two regions shown in Figure~\ref{fig:missing-mass-signal}.
-    The measured 3-momenta of the candidates allows for the reconstruction of the 4-momenta of the kaon $P_{K^{+}}$ and the pion $P_{\pi^{+}}$ and the calculation of the missing mass
+    The reconstructed 4-momenta of the kaon $P_{K^{+}}$ and the pion $P_{\pi^{+}}$ are used to calculate the squared missing mass:
     \begin{equation}\label{eq:missingmass}
         m_{miss}^2 = (P_{K^{+}} - P_{\pi^{+}})^2.
-    \end{equation}
+    \end{equation} 
+    This requires precise spacial measurement of the $K^{+}$ and $\pi^{+}$ candidates, provided by the beam (section \ref{sec:GTK}) and secondary (section \ref{sec:STRAW}) particle spectrometers. 
+    The measurement of the missing mass is used for kinematic rejection of the main background $K^{+}$ decays; $K^+ \rightarrow \pi^{+} \pi^{0}$, $K^+ \rightarrow \pi^{+} \pi^{+} \pi^{-} $ and $K^+ \rightarrow \mu^{+} \nu_{\mu}$ by selecting two regions shown in Figure~\ref{fig:missing-mass-signal}.
+    
     
     The NA62 collaboration has observed the $K^+ \rightarrow \pi^+ \nu \bar{\nu}$ \cite{NA62:2024pjp}, measuring the branching ratio, 
     \begin{equation}
@@ -72,6 +73,13 @@
     The beam is transported through the remaining downstream detectors in a vacuum and is deflected $-13.2$\,mrad in the negative direction by a dipole magnet (BEND) to sweep the beam away from the \gls{SAC} acceptance, located within the vacuum beam pipe. Finally, the beam is absorbed in a beam dump.
     \newline\indent 
     \begin{figure}[t]
+        \centering
+        \includegraphics[width=13cm]{imgs/na62-2021_Xview.pdf}
+        \linespread{1.0}
+        \caption{X-Z diagram of NA62 detector setup.}
+        \label{fig:na62-det-run2}
+    \end{figure}
+    \begin{figure}[t]
         \centering 
         \includegraphics[width=\textwidth]{imgs/After_GTK3.png}
         \linespread{1.0}
@@ -80,13 +88,7 @@
     \end{figure}
     \section{NA62 Detectors}\label{sec:sub-det}
     The setup of the sub-detectors are shown in Figure~\ref{fig:na62-det-run2} and are described below.
-    \begin{figure}[t]
-        \centering
-        \includegraphics[width=13cm]{imgs/na62-2021_Xview.pdf}
-        \linespread{1.0}
-        \caption{X-Z diagram of NA62 detector setup.}
-        \label{fig:na62-det-run2}
-    \end{figure}
+    
     \subsection{KTAG}\label{sec:KTAG}
     As the NA62 beam is unseparated and kaons only account for 6\,\% of the beam composition, the kaons must be identified. Kaon identification is provided by the KTAG located at $Z=69.4$\,m. It comprises a \gls{CEDAR} vessel and a purpose-built
     photon detection system. \glspl{CEDAR} were developed at CERN in the 1970s \cite{Bovet:1982xf} for secondary beam particle detection at the \gls{SPS} and come in two types: \gls{cw} and \gls{cn}. Until the NA62 2023 run, the \gls{CEDAR} vessel was a \gls{cw} filled with a nitrogen radiator.
@@ -193,7 +195,7 @@
             \bottomrule
         \end{tabular}
         \linespread{1.0}
-        \caption{Straw spectrometer chamber beam-hole positions}
+        \caption{Straw spectrometer chamber beam-hole positions.}
         \label{tab:chamber_info}
     \end{table}
     
@@ -208,7 +210,7 @@
             \centering
             \includegraphics[width=\textwidth]{imgs/straw_diagram.png}
             \linespread{1.0}
-            \caption{Diagram of straw placement in each view \cite{SERGI2012530}}
+            \caption{Top down diagram of the straw placement in each view \cite{SERGI2012530}.}
             \label{fig:straw_diagram}
         \end{minipage}%
         \hfill
@@ -216,7 +218,7 @@
             \centering
             \includegraphics[width=\textwidth]{imgs/Straw_views.png}
             \linespread{1.0}
-            \caption{Diagram showing placement of views in a straw chamber. Edited from \cite{SERGI2012530}}
+            \caption{Diagram showing placement of views in a straw chamber. Edited from \cite{SERGI2012530}.}
             \label{fig:Straw_views}
         \end{minipage}
         \label{fig:both_figures}
@@ -313,7 +315,7 @@
         \centering 
         \includegraphics[width=0.5\textwidth]{imgs/CHOD_rate.png}
         \linespread{1.0}
-        \caption{Channel rates of the CHOD at a beam intensity of 750\,MHz \cite{Gil_2017}.}
+        \caption{Channel rates of the CHOD at a nominal beam intensity of 750\,MHz (in MHz) \cite{Gil_2017}.}
         \label{fig:chod_rate}
     \end{figure}
     The CHOD sustains a particle rate of 13\,MHz at a nominal beam intensity with the individual channel rates shown in Figure~\ref{fig:chod_rate}.
@@ -408,6 +410,28 @@
     \end{table}
     The L1 trigger then uses a number of algorithms for three more detectors, which are described in Table \ref{tab:detector_conditions_HLT}. The L1 trigger conditions can be combined to produce a L1 trigger stream shown in Table \ref{tab:detector_conditions_stream}. L0 and L1 trigger streams are combined to form a trigger mask defined in Table \ref{tab:detector_conditions_stream} to fulfil the experiments numerous physics goals. For an event to be saved to permanent storage, the event has to satisfy at least one mask.
     Each mask can have a corresponding downscaling, which reduces the rate of events passing that trigger to minimise the amount saved to permanent storage. However, this results in the loss of interesting physics data so the downscaling is minimised as much as possible.
+     \begin{table}[t]
+        \centering
+        \resizebox{\textwidth}{!}{%
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        \textbf{Trigger}    &  \textbf{L0 Conditions}           &   \textbf{L1 Conditions}                        & \textbf{Downscaling}     \\ \hline
+        Normalisation       &  RICH$\times$RICH3$\times$!M1$\times$Q1                &   KTAG$\times$STRAW-1TRK                               & 400             \\ \hline
+        \gls{PNN}                 &  RICH$\times$RICH3$\times$!M1$\times$!QX$\times$UTMC$\times$!E40     &   KTAG$\times$!LAV2-11$\times$STRAW-MUV3                      & 1               \\ \hline
+        Min-Bias             &  RICH$\times$Q1                          &                                                 & 400             \\ \hline
+        $\text{RK}_{norm}$                   &  RICH$\times$RICH3$\times$!QX$\times$UTMC$\times$!E40         &   KTAG$\times$!LAV2-11$\times$STRAW                           & 500             \\ \hline
+        Electron Multi-Track &  RICH$\times$RICH8$\times$QX$\times$H3$\times$E20$\times$C2E5        &   STRAW-MM                                      & 1               \\ \hline
+        Multi-Track          &  RICH$\times$RICH8$\times$QX$\times$H3                 &   KTAG$\times$STRAW-ExoTight                           & 100             \\ \hline
+        Muon Multi-Track     &  RICH$\times$RICH8$\times$MO2$\times$QX$\times$H3             &   KTAG$\times$STRAW-ExoTight                           & 1               \\ \hline
+        Multi Cluster                   &  RICH$\times$Q1$\times$E30                      &   KTAG$\times$STRAW                                    & 10              \\ \hline
+        Pion Charge Exchange                   &  RICH$\times$RICH8$\times$Q2$\times$E30$\times$C2D5           &   STRAW-ExoTight                                & 4               \\ \hline
+        Neutrino            &  !RICH16$\times$MOQX$\times$!Q2$\times$UTMC$\times$E5         &   KTAG$\times$STRAW-1TRK                               & 1               \\ \hline
+        \end{tabular}
+        }
+        \caption{List of triggers used for the NA62 2024 run, along with the L0 and L1 conditions and the relevant downscaling factors.}
+        \label{tab:detector_conditions_stream}
+    \end{table}
+
     \begin{table}[t]
         \centering
         \resizebox{\textwidth}{!}{%
@@ -431,27 +455,7 @@
         \label{tab:detector_conditions_HLT}
     \end{table}
 
-    \begin{table}[t]
-        \centering
-        \resizebox{\textwidth}{!}{%
-        \begin{tabular}{|l|l|l|l|}
-        \hline
-        \textbf{Trigger}    &  \textbf{L0 Conditions}           &   \textbf{L1 Conditions}                        & \textbf{Downscaling}     \\ \hline
-        Normalisation       &  RICH$\times$RICH3$\times$!M1$\times$Q1                &   KTAG$\times$STRAW-1TRK                               & 400             \\ \hline
-        \gls{PNN}                 &  RICH$\times$RICH3$\times$!M1$\times$!QX$\times$UTMC$\times$!E40     &   KTAG$\times$!LAV2-11$\times$STRAW-MUV3                      & 1               \\ \hline
-        Min-Bias             &  RICH$\times$Q1                          &                                                 & 400             \\ \hline
-        $\text{RK}_{norm}$                   &  RICH$\times$RICH3$\times$!QX$\times$UTMC$\times$!E40         &   KTAG$\times$!LAV2-11$\times$STRAW                           & 500             \\ \hline
-        Electron Multi-Track &  RICH$\times$RICH8$\times$QX$\times$H3$\times$E20$\times$C2E5        &   STRAW-MM                                      & 1               \\ \hline
-        Multi-Track          &  RICH$\times$RICH8$\times$QX$\times$H3                 &   KTAG$\times$STRAW-ExoTight                           & 100             \\ \hline
-        Muon Multi-Track     &  RICH$\times$RICH8$\times$MO2$\times$QX$\times$H3             &   KTAG$\times$STRAW-ExoTight                           & 1               \\ \hline
-        Multi Cluster                   &  RICH$\times$Q1$\times$E30                      &   KTAG$\times$STRAW                                    & 10              \\ \hline
-        Pion Charge Exchange                   &  RICH$\times$RICH8$\times$Q2$\times$E30$\times$C2D5           &   STRAW-ExoTight                                & 4               \\ \hline
-        Neutrino            &  !RICH16$\times$MOQX$\times$!Q2$\times$UTMC$\times$E5         &   KTAG$\times$STRAW-1TRK                               & 1               \\ \hline
-        \end{tabular}
-        }
-        \caption{List of triggers used for the NA62 2024 run, along with the L0 and L1 conditions and the relevant downscaling factors.}
-        \label{tab:detector_conditions_stream}
-    \end{table}
+   
     A more detailed explanation of the full NA62 trigger system and the resultant performance can be found here \cite{NA62_trigger_2023}.
     \section{NA62 Software}\label{sec:introSoft}
     The NA62 collaboration maintains an offline software framework (na62fw) which is used for the physics analysis of data collected from the experiment. The software framework comprises of three packages: 

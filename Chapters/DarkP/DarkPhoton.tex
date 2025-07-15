@@ -13,13 +13,19 @@
     \glsreset{CL}
     \glsreset{TFF}
     %% Intro with background on NA48/2
-    This chapter describes the search for the \gls{DP}, also denoted $A'$, at NA62 with the data collected in 2022--2024.
+    This chapter describes the search for the \gls{DP}, also denoted $A'$, at NA62 with the data collected in 2022--2024. It outlines the selection criteria for the analysis and provides the acceptances at NA62. The search strategy for the \gls{DP} is then presented, followed by two different methods used to estimate the background. The first method relies 
+    on \gls{MC} simulations to model the background. However, due to large statistical uncertainties associated with the \gls{MC}, a second method is introduced, which uses the side bands of the observed data to model the background. Both background methods are used as inputs in the \gls{DP} method to produce two separate results for the analysis.
+
+
     The analysis aims to set limits on the mixing parameter of the \gls{DP}, utilising production through the decay of $\pi^0 \to \gamma A'$ and subsequent prompt decay into \gls{SM} particles $A' \to e^+e^-$. The theoretical background for this hypothetical \gls{DP} is described in Section \ref{sec:DarkP_th}. 
-    The NA62 experiment, described in Section \ref{sec:na62}, provides a clean sample of $\pi^0$ particles through the decay \mbox{$K^+ \to \pi^+\pi^0$} with a branching ratio of 20.67\,\%. With the assumption that the \gls{DP} decays promptly, the decay signature is identical to the Dalitz decay 
+    The NA62 experiment, described in Section \ref{sec:na62}, provides a clean sample of $\pi^0$ particles through the decay \mbox{$K^+ \to \pi^+\pi^0$} with a branching ratio of 20.67\,\%. With the assumption that the \gls{DP} decays promptly, the decay signature is identical to the $\pi^0$ Dalitz decay 
     $\pi^0_D \to \gamma e^+e^-$. The Dalitz decay represents the background for the \gls{DP} search and determines the sensitivity. 
 
-    Using the Dalitz decay to model the signal of the \gls{DP} requires an assumption of the quantum numbers of $A'$. This model assumes that the \gls{DP} is a vector boson $J^{PC} = 1^{--}$, matching the quantum numbers of the \gls{SM} photon. 
-    The spin of the $A'$ directly affects the kinematics and angular distribution of the final-state particles. The use of the Dalitz signal model is only valid for this specific assumption about the quantum numbers of the \gls{DP}.
+    %Using the Dalitz decay to model the signal of the \gls{DP} requires an assumption of the quantum numbers of $A'$. 
+    By definition, the dark photon is the mediator of the vector portal~\cite{Beacham_2020} and therefore shares the quantum numbers of the \gls{SM} photon, $J^{PC} = 1^{--}$. As a result the Dalitz decay is used to model the signal.
+    The spin of the $A'$ directly affects the kinematics and angular distribution of the final-state particles.
+    %The \gls{DP} is a vector boson $J^{PC} = 1^{--}$, matching the quantum numbers of the \gls{SM} photon. 
+    
 
     %Two methods were used for background estimation, a \gls{MC} method and a data-driven method, which are described below.
 
@@ -189,7 +195,7 @@
         N_K^{2022-24} = \frac{N_{selected}}{A_{2 \pi D} \mathcal{B}_{2 \pi D} + A_{\mu 3D} \mathcal{B}_{\mu 3D}} =  (1.20 \pm 0.05) \times 10^{13}, %(1.65 \pm 0.05) \times 10^{12}.
     \end{equation}
     where $A_{2 \pi D}$ and $A_{\mu 3D}$ are the acceptances of the \gls{kpid} and \gls{kmu3D} decays for the \gls{kpid} selection, shown in Table~\ref{tab:acceptances} and $\mathcal{B}_{2 \pi D}$ and $\mathcal{B}_{\mu 3D}$ are the branching fractions of the \gls{kpid} and \gls{kmu3D} decay chains \cite{Navas:2024}. 
-    The errors in $N_K$ originate from the statistical uncertainty of the number of selected events, which are negligible, the errors on the acceptance and the external errors on the branching ratios which are dominate.
+    The errors in $N_K$ originate from the statistical uncertainty of the number of selected events, which are negligible, the errors on the acceptance and the external errors on the branching ratios which dominate.
     
     %Only the 2022 sample was available when the \gls{MC} background method was employed. The data-driven background estimation method uses the 2022, 2023 and 2024 datasets. Utilising the same method in Equation~\ref{eq:nk}, the integrated number of kaons is calculated using the % 
      %This was an 8-fold increase compared to the 2022 dataset. 
@@ -321,10 +327,11 @@
     which would be the \gls{UL} of the signal for a confidence level of $\alpha$.
     
     \section{\gls{MC} Background Estimation Method}
-    The \gls{MC} background method is only used for the 2022 dataset, and only the statistical errors on the \gls{MC} are considered.
+    The \gls{MC} background method is only used for the 2022 dataset, and only the statistical errors on the \gls{MC} are considered. If the method was to produce competitive result with just the statistical errors, the systematic errors introduced from the \gls{MC} estimation would be investigated. However, as this is not the case only statistical errors are included.
+
     As described above, the background for the search for \gls{DP} comes from the \gls{kpid} and \gls{kmu3D} decays. These decays are modelled and compared against the data to determine the sensitivity of the search. The \gls{MC} samples are produced using the NA62 framework, which simulates the full detector response and the trigger system. The \gls{kpid} and \gls{kmu3D} samples are produced with $2\times10^8$ and $5\times10^6$ events, respectively.
     The limited size of the \gls{MC} samples impacts the final result. However, due to computing time, it is not feasible to significantly increase the statistics on the samples. Utilising a feature of the NA62 framework, the statistics across a portion of the reconstructed $M_{ee}$ range are increased.
-    The the kinematic variable $x$ is defined as
+    The kinematic variable $x$ is defined as
     \begin{equation}\label{eq:XParam}
         x = \frac{(Q_{e^-} + Q_{e^+})^2}{M_{\pi^0}^2} = \frac{M_{ee}^2}{M_{\pi^0}^2},
     \end{equation}
@@ -396,7 +403,10 @@
     The variables $Q_{e^-}$, $Q_{e^+}$ and $Q_{\pi^0}$ are the four-momenta of the electron, positron and pion. Within the kinematic region of \gls{kpid} decay, the \gls{TFF} is approximated as $F(x) = 1 + ax$. The parameter $a$ is the slope factor, which has been set through theoretical predictions and a number of experiments. 
     The Vector Meson Dominance (VMD) model expects that \mbox{$a = M_{\pi^0}^2 (M_{\rho}^{-2} + M_{\omega}^{-2}) / 2 = 0.03$ \cite{PhysRevD.83.037503}}.
     The \gls{PDG} average for all experiments is \mbox{$a = 0.0335 \pm 0.0031$} \cite{Navas:2024}.
-    In the NA62 framework, the slope is defined as \mbox{$a_{Fw} =  0.032$} by default. It is not possible to rely on external values for the slope factor for the MC due to unknown biases within the simulation.  
+    In the NA62 framework, the slope is defined as \mbox{$a_{Fw} =  0.032$} by default. 
+    It is not possible to rely on external values for the slope factor as this would assume that the \gls{MC} perfectly models effects such as detector responses, resolutions and kinematic distributions. 
+    Relying on external slope factor can result in discrepancies between data and \gls{MC}. To mitigate this and ensure an accurate background model an effective slope is defined using the data itself.
+    %due to unknown biases within the simulation.  
     
     Figure~\ref{fig:MCDATAFF} shows the ratio of data and \gls{MC} from Figure~\ref{fig:mee_mc} in bins of $x$. %The ratio shows a slight discrepancy between the expected background and data. The dependence along $x$ suggests that the TFF found in the framework is incompatible with the background estimate for this data set.
     A correction is applied to modify the \gls{MC} sample with an effective \gls{TFF} slope. %The \gls{MC} is re-weighted using the events passing the selection compared against the expected number of events from \gls{MC} across the reconstructed mass range.
@@ -445,7 +455,8 @@
     Using the method described in Section~\ref{sec:dp_method}, results in 379 DP mass values tested. The error on the number of expected background events is due to the statistical error of the expected events within the search window \mbox{$\delta N_{exp} = \sqrt{N_{exp}}$}. A correction is required due to the factor $f_{scale}$ imposed on the \gls{MC} to scale the sample to match the effective kaon flux.
     The $N_{obs}$, $N_{exp}$ and their errors for the \gls{MC} background estimation are shown in Figure~\ref{fig:searchwindow_vals}.
     The local significance of the \gls{DP} signal (Equation~\ref{eq:localSig}) is shown in Figure~\ref{fig:local_sig}. 
-    The maximum local significance is $2.79\,\sigma$. After accounting for the \gls{LEE} the corresponding global p-value is found to be $0.0150$, which translates to a global significance of $2.17\sigma$. As this does not exceed the $3\,\sigma$ threshold, no \gls{DP} signal is observed.
+    The maximum local significance is $2.79\,\sigma$, which is below the $3\,\sigma$ threshold required for evidence of a signal. After accounting for the \gls{LEE}, the corresponding global p-value is estimated to be approximately $0.02$, which translates to a global significance of $2.1\,\sigma$. This value is obtained using the toy \gls{MC} method defined in Section~\ref{sec:dp_method}. 
+    It indicates that under the background-only hypothesis, there is a 2\,\% probability that a statistical fluctuation anywhere in the scanned mass range would produce a local significance at least as large as the one observed. These results indicate that no \gls{DP} signal is observed.
     %The local significance is never greater than $3 \sigma$, resulting in no \gls{DP} signal being observed.
     \begin{figure}[t]
         \centering 
@@ -528,8 +539,7 @@
     %This is  compared to the \gls{MC} study. %How many?
     A 4th-order polynomial is fitted to the data distribution shown in Figure~\ref{fig:22_23_data}, using a least $\chi^2$ method. The fitting region for each mass hypothesis is defined as $\pm 15\sigma_m(M_{A'})$ from the mass hypothesis, and the distribution is re-binned with a bin width of $\sigma_m(M_{A'}) / 5$. 
     Data events in the mass bins above \SI{125}{\mega\electronvolt\per\clight\squared} are removed. This is because the small counts at the edge of the mass range cause instability with the fitting.
-    Events in the mass bins $\pm 1.5 \sigma_m(M_{A'})$
-    from the mass hypothesis are excluded from the fit as it would result in a biased background estimate.
+    Events in the mass bins $\pm 1.5 \sigma_m(M_{A'})$ from the mass hypothesis are excluded from the fit. This reduces the chance of a biased background estimate from potential signal contamination while preserving sensitivity across the scanned mass range.
     
     The number of expected events $N_{exp}$ is evaluated as the integral of the fitted function within the $\pm 1.5 \sigma_m(M_{A'})$ mass window divided by the bin width. The error on the number of expected events $\delta N_{exp}$ combines statistical and systematic uncertainties. The statistical component $\delta N_{exp}^{stat}$ is computed from the propagation of the 
     statistical errors of the polynomial parameters, provided in the form of a covariance matrix and calculated using an error propagation method available in the ROOT package (TF1::IntegralError()) \cite{Brun1997} . 
@@ -564,7 +574,8 @@
     The statistical error is dominant over the systematic below \SI{100}{\mega\electronvolt\per\clight\squared}. Above \SI{100}{\mega\electronvolt\per\clight\squared} the spikes in the systematic uncertainties are caused by the reduced fitting window due to the removed data events above \SI{125}{\mega\electronvolt\per\clight\squared}. %However, this does not significantly impact the analysis due to the competitive acceptance at this high mass range.
 
     With $N_{obs}$, $N_{exp}$, $\delta N_{obs}$ and $\delta N_{exp}$ shown in Figure~\ref{fig:datadrive_plot}, the local significance of the \gls{DP} signal is calculated with Equation~\ref{eq:localSig} is shown in Figure~\ref{fig:local_sig_data}. 
-    The maximum local significance for the data driven method is $2.88\,\sigma$. Accounting for the \gls{LEE} using toy \gls{MC} simulations across the 428 \gls{DP} mass hypotheses yields in a global p-value of 0.6011. This global p-value corresponds to a global significance of $0.26\,\sigma$, which is lower than the $3\,\sigma$ threshold. Therefore, no \gls{DP} signal is observed. 
+    The maximum local significance for the data driven method is $2.88\,\sigma$, which does not exceed the $3\,\sigma$ threshold for evidence of a signal. Accounting for the \gls{LEE} using toy \gls{MC} simulations across the 428 \gls{DP} mass hypotheses results in a global p-value estimated at $0.60$. This global p-value corresponds to a global significance of $0.25\,\sigma$. 
+    These results indicate that no \gls{DP} signal is observed. 
     %The significance does not reach the threshold of $3 \sigma$, so no \gls{DP} signal is observed.
 
     Using the same method as for the \gls{MC} study and described in Section~\ref{sec:dp_method}, $N_{obs}$, $N_{exp}$ and $\delta N_{exp}$ are used as inputs into the CLs method to calculate the \gls{UL} of the number of \gls{DP} candidates in each mass window shown in Figure~\ref{fig:datadrive_plot}. The error on the expected number of events is reduced compared to the \gls{MC} study, which is shown in Figure~\ref{fig:searchwindow_vals}.
@@ -604,7 +615,7 @@
         \centering 
         \includegraphics[width=0.7\textwidth]{plots/branchingFrac_data_24.png}
         \linespread{1.0}
-        \caption{Upper limit of the \mathcal{B}($\pi^0 \to \gamma A'$) at a 90\,\% \gls{CL} for each dark photon mass hypothesis using the data-driven background estimation. The result from NA48/2 is shown for comparison \cite{2015178}..}
+        \caption{Upper limit of the \mathcal{B}($\pi^0 \to \gamma A'$) at a 90\,\% \gls{CL} for each dark photon mass hypothesis using the data-driven background estimation. The result from NA48/2 is shown for comparison \cite{2015178}.}
         \label{fig:branchinFrac_data}
     \end{figure}
     %\begin{figure}[t]
