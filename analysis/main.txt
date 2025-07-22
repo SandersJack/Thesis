@@ -255,7 +255,7 @@ the downstream end of the vessel [51]. . . . . . . . . . . . . . . . . . . 31
 2.13 Ring Imaging Cherenkov counter (RICH) Cherenkov ring radius as a
 function of the particle momentum [51]. . . . . . . . . . . . . . . . . . 32
 2.14 Left, a schematic of the structure of a single quadrant of the LKr.
-Right, the layout of cells within the quadrant. [51] . . . . . . . . . . . 33
+Right, the layout of cells within the quadrant [51]. . . . . . . . . . . . 33
 2.15 Photo of the installation of LAV1 at NA62 in 2008. . . . . . . . . . . 33
 2.16 Detection efficiency of a photon as a function of the photon energy
 for the photon veto detectors: LAV (top left), LKr (top right), IRC
@@ -264,8 +264,8 @@ for the photon veto detectors: LAV (top left), LKr (top right), IRC
 2.18 Layout of the NA62 CHOD. Left, the front cross-section of scintillat-
 ing tiles with the support structure. Right, side cross-section of the
 scintillating tiles [55]. . . . . . . . . . . . . . . . . . . . . . . . . . . . 35
-2.19 Channel rates of the CHOD at a nominal beam intensity of 750 MHz
-(in MHz) [46]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+2.19 Channel rates of the CHOD in MHz at a nominal beam intensity of
+750 MHz [46]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
 2.20 Schematic of the MUV1 module used in the Muon Veto System at
 NA62. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
 xiLIST OF FIGURES
@@ -339,7 +339,7 @@ aperture of 2.3 mm. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63
 beam. Top left is conducted with a diaphragm aperture of 2 mm,
 top right with a diaphragm aperture of 1.7 mm, bottom left with a
 diaphragm aperture of 1.2 mm and bottom right with a diaphragm
-aperture of 1 mm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+aperture of 1 mm. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
 3.21 Plot showing the results of the diaphragm scan during the H6 test-
 beam at a pressure of 3.85 bar (kaon pressure). . . . . . . . . . . . . . 65
 3.22 CEDAR-H being installed on the NA62 beamline 2023. . . . . . . . . 66
@@ -508,12 +508,12 @@ MCP-PMTs from PHOTONIS and Photek in the inserted plot [96]. . 125
 5.14 Collected light distribution for the MCP-PMT installed in the KTAG. 126
 5.15 Rate capability of state of the art MCP-PMTs [98]. . . . . . . . . . . 127
 5.16 Time response of the Photonis XP85012-S-R2D2 MCP-PMT. The
-distribution is normalized such that the maximum bin has a value of 1128
+distribution is normalized such that the maximum bin has a value of 1.128
 5.17 Quantum Efficiency of Photonis MCP-PMT as a function of wavelength.128
 5.18 Results from the Monte Carlo simulation of CEDAR-H and MCP-
 PMT. Left, the number of photo-electrons per kaon candidate and
 right, the Kaon Candidate time. The distribution is normalized such
-that the maximum bin has a value of 1 . . . . . . . . . . . . . . . . . 129
+that the maximum bin has a value of 1. . . . . . . . . . . . . . . . . . 129
 5.19 Diagram of the NA62 RICH PMT array. The blue circle depicts the
 extent of the Cherenkov light spot at the PMT array. The two colours
 are to aid viewing and do not represent physical differences between
@@ -528,13 +528,12 @@ shows the expected light spot at the PMT array. . . . . . . . . . . . . 131
 5.22 Cherenkov light illumination of RICH SiPM arrays for the three dif-
 ferent sensor sizes produced from a MC sample of K+→π0e+ν(Ke3).
 The left column shows illumination on the Saleve side of the RICH
-detector, which is the South-East side, towards Geneva. The right
-column shows the Jura side, which is the North-West side of the de-
-tector. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 133
+detector, which is the South-East side, facing Geneva. The right col-
+umn shows the Jura side, which is the North-West side of the detector.133
 5.23 Cherenkov light illumination of the NA62 RICH PMT arrays pro-
 duced from a MC sample of Ke3. The left plot shows illumination on
 the Saleve side of the RICH detector, which is the South-East side
-of the detector, towards Geneva. The right plot shows the Jura side,
+of the detector, facing Geneva. The right plot shows the Jura side,
 which is the North-West side of the detector. . . . . . . . . . . . . . . 134
 5.24 Number of photo-electrons per ring candidate for NA62 PMTs and
 the three possible HIKE SiPMs produced from a MC sample of Ke3.
@@ -837,7 +836,7 @@ ponents which describe the transitions within the quark generations dominate. Th
 off-diagonal elements describing flavour-changing charged current transitions are
 suppressed between one generation and doubly suppressed for transitions between
 two generations. This suppression between two generations leads to rare processes,
-such as decay K+→π+ν¯ν, discussed in Section 1.3.1.
+such as the decay K+→π+ν¯ν, discussed in Section 1.3.1.
 1.3 Kaon Physics
 The first possible observation of a meson, a particle composed of a quark-antiquark
 pair, was made in 1943 by Leprince-Ringuet and L’heritier [9, 10] and predated the
@@ -993,10 +992,12 @@ NNL
 (1.16)
 where Xl
 NNLare loop functions from the charm quark interacting with electron and
-tau neutrinos, produced from NLO QCD and NNLO calculations . It is possible to
+tau neutrinos, produced from NLO QCD and NNLO calculations. It is possible to
 represent λtandλcfrom Equation 1.12 as [29],
-Re(λt) =−(1−λ2
-2)A2λ5(1−¯ρ), (1.17)
+Re(λt) =−
+1−λ2
+2
+A2λ5(1−¯ρ), (1.17)
 Im(λt) =A2λ5η, (1.18)
 Re(λc) =−λ
 1−λ2
@@ -1562,7 +1563,7 @@ fibres resulting in a total material of 19 X0. The fibres are bundled into four 
 which are then read out by Hamamatsu PMs, resulting in four channels.
 322.3 The NA62 Experiment NA62 Detectors
 Figure 2.14: Left, a schematic of the structure of a single quadrant of the LKr.
-Right, the layout of cells within the quadrant. [51]
+Right, the layout of cells within the quadrant [51].
 Figure 2.15: Photo of the installation of LAV1 at NA62 in 2008.
 The LAV provides coverage from 8.5 to 50 mrad, with 12 stations positioned along
 and beyond the decay volume. Eleven of the LAV stations are along the vacuum
@@ -1611,8 +1612,8 @@ intensity with the individual channel rates shown in Figure 2.19.
 The Muon Veto System (MUV) is used to discriminate between pions and muons
 in conjunction with the RICH and LKr. The system comprises a hadronic sam-
 352.3 The NA62 Experiment NA62 Detectors
-Figure 2.19: Channel rates of the CHOD at a nominal beam intensity of 750 MHz
-(in MHz) [46].
+Figure 2.19: Channel rates of the CHOD in MHz at a nominal beam intensity of
+750 MHz [46].
 Figure 2.20: Schematic of the MUV1 module used in the Muon Veto System at
 NA62.
 pling calorimeter made from two modules, MUV1 and MUV2, utilising steel as an
@@ -1824,10 +1825,10 @@ reduction in interactions would result in higher kaon transmission (number of ka
 reaching the decay volume) and reduced signal rates in the downstream detectors.
 This results in improved performance of the hardware trigger designed to collect
 K+→π+ν¯ν. Simulations show that the introduction of H 2instead of N 2as a
-radiator gas reduces the number of elastically scattered particles interacting with
-detectors downstream of the Fiducial Volume (FV) by 40 %. The reduction in
-particle flux reduces the trigger rate by 15 %, which will improve the stability of
-data acquisition [60].
+radiator gas in the CEDAR reduces the number of elastically scattered particles
+originating upstream of GTK3 which interact with detectors downstream of the
+Fiducial Volume (FV) by 40 %. The reduction in particle flux reduces the trigger
+rate by 15 %, which will improve the stability of data acquisition [60].
 443.1 The CEDAR-H Detector CEDAR Design
 Diaphragm Mangin Mirror Chromatic Corrector
 Condenser PMT Array Spherical Mirror
@@ -1877,7 +1878,7 @@ The CEDAR contains optical elements inside the vessel to allow the reflection
 and focusing of the produced Cherenkov light to reach the diaphragm at a radius
 of 100 mm, as displayed in Figure 3.1 as the orange lines. Photons are produced
 throughout the length of the vessel towards the downstream end and the light is
-reflected back upstream by a Mangin mirror [62]. This is a lens comprising two
+reflected back upstream by a Mangin mirror [62]. The Mangin mirror comprises two
 spherical surfaces, with the downstream surface cemented onto a concave mirror
 having an identical radius of curvature. The radius at which the light is focused at
 the focal point is defined as,
@@ -2403,7 +2404,7 @@ Pressure [bar]106
 Figure 3.20: Results of the CEDAR-H pressure scans taken during the 2022 test-
 beam. Top left is conducted with a diaphragm aperture of 2 mm, top right with a
 diaphragm aperture of 1.7 mm, bottom left with a diaphragm aperture of 1.2 mm
-and bottom right with a diaphragm aperture of 1 mm
+and bottom right with a diaphragm aperture of 1 mm.
 the diaphragm aperture. The scan is completed by shutting the diaphragm as much
 as possible and then increasing the diaphragm aperture while recording the 6, 7,
 and 8-fold coincidences. From Figure 3.21, it is clear that diaphragm apertures of
@@ -3116,7 +3117,7 @@ which would be the UL of the signal for a confidence level of α.
 The MC background method is only used for the 2022 dataset, and only the statis-
 tical errors on the MC are considered. If the method was to produce competitive
 result with just the statistical errors, the systematic errors introduced from the MC
-estimation would be investigated. However, as this is not the case only statistical
+estimation would be investigated. However, as this is not the case, only statistical
 errors are included.
 As described above, the background for the search for DP comes from the K2πD
 andKµ3Ddecays. These decays are modelled and compared against the data to
@@ -3897,10 +3898,10 @@ other characteristics in order to decide which type would be used for high-inten
 -0.3 -0.2 -0.1 0.0 0.1 0.2 0.3
 Time [ns]0.00.20.40.60.81.0Arbitrary Scale
 Figure 5.16: Time response of the Photonis XP85012-S-R2D2 MCP-PMT. The dis-
-tribution is normalized such that the maximum bin has a value of 1
-kaon physics at HIKE.
+tribution is normalized such that the maximum bin has a value of 1.
 Figure 5.17: Quantum Efficiency of Photonis MCP-PMT as a function of wave-
 length.
+kaon physics at HIKE.
 From the MC simulation, the implemented MCP-PMTs results are shown in
 Figure 5.18. The MCP-PMT produced 24.3 photo-electrons per kaon candidate
 with a time resolution of 18 ps, taken from the Gaussian sigma of the distribution
@@ -3915,7 +3916,7 @@ Kaon Candidate Time [ns]0.00.20.40.60.81.0Arbitrary Scale
 Figure 5.18: Results from the Monte Carlo simulation of CEDAR-H and MCP-
 PMT. Left, the number of photo-electrons per kaon candidate and right, the Kaon
 Candidate time. The distribution is normalized such that the maximum bin has a
-value of 1
+value of 1.
 5.4 RICH Upgrade
 The overall design of the NA62 RICH described in Section 2.3.5 is well suited for re-
 use within HIKE, but with an upgrade to the photon-detection system. The NA62
@@ -4002,8 +4003,8 @@ X [mm]-400-300-200-1000100200300400Y [mm]
 Figure 5.22: Cherenkov light illumination of RICH SiPM arrays for the three dif-
 ferent sensor sizes produced from a MC sample of K+→π0e+ν(Ke3). The left
 column shows illumination on the Saleve side of the RICH detector, which is the
-South-East side, towards Geneva. The right column shows the Jura side, which is
-the North-West side of the detector.
+South-East side, facing Geneva. The right column shows the Jura side, which is the
+North-West side of the detector.
 1335.4 Future Kaon Experiments RICH Upgrade
 -400 -300 -200 -100 0 100 200 300 400
 X [mm]-400-300-200-1000100200300400Y [mm]
@@ -4012,9 +4013,9 @@ X [mm]-400-300-200-1000100200300400Y [mm]
 X [mm]-400-300-200-1000100200300400Y [mm]
 0.20.40.60.81.0
 Figure 5.23: Cherenkov light illumination of the NA62 RICH PMT arrays produced
-from a MC sample of Ke3. The left plot shows illumination on the Saleve side of
-the RICH detector, which is the South-East side of the detector, towards Geneva.
-The right plot shows the Jura side, which is the North-West side of the detector.
+from a MC sample of Ke3. The left plot shows illumination on the Saleve side of the
+RICH detector, which is the South-East side of the detector, facing Geneva. The
+right plot shows the Jura side, which is the North-West side of the detector.
 NA62 RICH HIKE RICH
 Sensor time resolution 240ps 100ps
 Sensor maximum quantum efficiency 20% 40%
